@@ -1,0 +1,23 @@
+# Introduction to Digital Libraries, Archives & Repositories
+
+yadda
+
+## Command Line Methods for Working with APIs
+
+yadda
+
+## Working with Open Context
+
+yadda
+
+## Working with Omeka
+
+yadda
+
+## Working with tDAR
+
+yadda
+
+## Working with ADS 
+
+yadda

@@ -1,0 +1,15 @@
+#  Project management basics
+
+blah
+
+## Github & Version control
+
+blah
+
+## Failing Productively
+
+blah
+
+## Open Notebook Research & Scholarly Communication
+
+blah

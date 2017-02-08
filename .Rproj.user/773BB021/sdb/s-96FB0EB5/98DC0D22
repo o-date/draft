@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Introduction to Digital Libraries, Archives & Repositories\n\nyadda\n\n## Command Line Methods for Working with APIs\n\nyadda\n\n## Working with Open Context\n\nyadda\n\n## Working with Omeka\n\nyadda\n\n## Working with tDAR\n\nyadda\n\n## Working with ADS \n\nyadda\n",
+    "created" : 1486571865521.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "965745959",
+    "id" : "98DC0D22",
+    "lastKnownWriteTime" : 1486571940,
+    "last_content_update" : 1486571940856,
+    "path" : "~/odate/draft/012-introduction-to-digital-libaries-archives.rmd",
+    "project_path" : "012-introduction-to-digital-libaries-archives.rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
