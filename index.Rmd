@@ -3,7 +3,6 @@ title: "The Open Digital Archaeology Textbook Environment"
 author: "Shawn Graham, Neha Gupta, Michael Carter, & Beth Compton"
 date: "`r Sys.Date()`"
 output:bookdown::gitbook:
-output_dir: "book"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
