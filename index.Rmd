@@ -4,7 +4,7 @@ author: "Shawn Graham, Neha Gupta, Michael Carter, & Beth Compton"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
-documentclass: krantz
+documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
