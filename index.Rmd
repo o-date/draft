@@ -1,10 +1,8 @@
 ---
-title: "ODATE"
+title: "The Open Digital Archaeology Textbook Environment"
 author: "Shawn Graham, Neha Gupta, Michael Carter, & Beth Compton"
 date: "`r Sys.Date()`"
-output: bookdown::gitbook
-includes:
-      in_header: hypothesis.html
+output:bookdown::gitbook:
 output_dir: "book"
 site: bookdown::bookdown_site
 documentclass: book
@@ -12,7 +10,7 @@ bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: o-date/draft
-description: "The Open Digital Archaeology Textbook Environment combines instructive text with the computational DA laboratory"
+description: "The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory"
 ---
 
 # Forward
