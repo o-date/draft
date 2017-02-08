@@ -4,12 +4,25 @@ blah
 
 ## Github & Version control
 
-blah
+blah 
+### discussion
+
+### exercises
+
 
 ## Failing Productively
 
 blah
 
+### discussion
+
+### exercises
+
+
 ## Open Notebook Research & Scholarly Communication
 
 blah
+
+### discussion
+
+### exercises

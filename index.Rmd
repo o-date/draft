@@ -18,6 +18,19 @@ Digital archaeology as a field rests upon the creative use of primarily open-sou
 
 To that end, this document you are reading is integrated with a cloud-based digital exploratory laboratory of multiple cloud-computing tools with teaching materials that instructors will be able to use 'out-of-the-box' with a single click, or to remix as circumstances dictate.  Part of our inspiration comes from the ‘DHBox’ project from CUNY (City University of New York, [(link)](http://dhbox.org), a project that is creating a ‘digital humanities laboratory’ in the cloud. While the tools of the digital humanities are congruent with those of digital archaeology, they are typically configured to work with texts rather than material culture in which archaeologists specialise. The second inspiration is the open-access guide ‘The Programming Historian’, which is a series of how-tos and tutorials [(link)](http://programminghistorian.org) pitched at historians confronting digital sources for the first time. A key challenge scholars face in carrying out novel digital analysis is how to install or configure software; each 'Programming Historian' tutorial therefore explains in length and in detail how to configure software. The present e-textbook merges the best of both approaches to create a singular experience for instructors and students: a one-click digital laboratory approach, where installation of materials is not an issue, and with carefully designed tutorials and lessons on theory and practice in digital archaeology.
 
-# Introduction
+## How to use this text
 
 yadda
+
+## How to contribute changes, or make your own version
+
+bigglybeep
+
+## How to access and use the computational environment
+
+link to site, instructions, also repo, also dhbox-on-a-stick
+
+## Colophon
+
+how this site was made
+
