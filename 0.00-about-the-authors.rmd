@@ -1,0 +1,41 @@
+\frontmatter
+
+# About the Authors {-}
+
+### Shawn Graham ### {-}
+
+blah
+
+### Neha Gupta ### {-}
+ 
+blah
+
+### Michael Carter ### {-}
+
+blah
+
+### Beth Compton ### {-}
+
+blah 
+
+# Getting Started
+
+## How to use this text
+
+yadda
+
+## How to contribute changes, or make your own version
+
+bigglybeep
+
+## How to access and use the computational environment
+
+link to site, instructions, also repo, also dhbox-on-a-stick
+
+## Colophon
+
+how this site was made
+
+#Introduction: Why Digital Archaeology?
+
+blah blah blah
