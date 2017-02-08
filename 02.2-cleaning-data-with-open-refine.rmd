@@ -1,3 +1,7 @@
 # Cleaning Data with Open Refine
 
 blahde blah blah
+
+### discussion
+
+### exercises

@@ -10,6 +10,6 @@ bookdown::gitbook:
       before: |
         <li><a href="./">ODATE</a></li>
       after: |
-        <li>CC-BY 4.0</li>
+        <li><a href="https://creativecommons.org/licenses/by/4.0/" target="blank">CC-BY 4.0</a></li>
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Made with bookdown</a></li>
-        <li>Funded by <a href="https://www.ecampusontario.ca/" target+"blank">Ecampus Ontario</a></li>
+        <li><a href="https://www.ecampusontario.ca/" target+"blank">Funded by Ecampus Ontario</a></li>
