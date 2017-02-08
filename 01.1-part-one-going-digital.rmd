@@ -7,3 +7,4 @@ In this section, blah blah blah.
 ### discussion
 
 ### exercises
+blah
