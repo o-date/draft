@@ -18,7 +18,7 @@ blah
 
 blah 
 
-# Getting Started
+# Getting Started {-}
 
 ## How to use this text
 
@@ -36,6 +36,3 @@ link to site, instructions, also repo, also dhbox-on-a-stick
 
 how this site was made
 
-#Introduction: Why Digital Archaeology?
-
-blah blah blah
