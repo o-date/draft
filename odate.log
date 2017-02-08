@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  8 FEB 2017 17:30
+=======
+<<<<<<< HEAD
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  8 FEB 2017 17:31
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  8 FEB 2017 17:30
+>>>>>>> gh-pages
+>>>>>>> master
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1076,7 +1084,15 @@ ve/2015basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/201
 5basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2015basic
 /texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texm
 f-dist/fonts/type1/public/lm/lmro10.pfb>
+<<<<<<< HEAD
 Output written on odate.pdf (57 pages, 206646 bytes).
+=======
+<<<<<<< HEAD
+Output written on odate.pdf (59 pages, 207448 bytes).
+=======
+Output written on odate.pdf (57 pages, 206646 bytes).
+>>>>>>> gh-pages
+>>>>>>> master
 PDF statistics:
  548 PDF objects out of 1000 (max. 8388607)
  476 compressed objects within 5 object streams
