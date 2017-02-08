@@ -2,10 +2,7 @@
 title: "ODATE"
 author: "Shawn Graham, Neha Gupta, Michael Carter, & Beth Compton"
 date: "`r Sys.Date()`"
-output:
-  bookdown::gitbook:
-    includes:
-      in_header: hypothesis.html
+output: bookdown::gitbook
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]

@@ -1,0 +1,14 @@
+bookdown::pdf_book: default
+bookdown::epub_book: default
+bookdown::gitbook:
+  config:
+    includes:
+      in_header: hypothesis.html
+    toc:
+      number_sections: false
+      collapse: subsection
+      before: |
+        <li><a href="./">ODATE</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/o-date/draft/edit/master/%s

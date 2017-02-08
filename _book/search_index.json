@@ -4,5 +4,10 @@
 ["introduction-why-digital-archaeology.html", "3 Introduction: Why Digital Archaeology?", " 3 Introduction: Why Digital Archaeology? blah blah blah "],
 ["part-one-going-digital.html", "4 Part One: Going Digital", " 4 Part One: Going Digital In this section, blah blah blah. "],
 ["project-management-basics.html", "5 Project management basics 5.1 Github &amp; Version control 5.2 Failing Productively 5.3 Open Notebook Research &amp; Scholarly Communication", " 5 Project management basics blah 5.1 Github &amp; Version control blah 5.2 Failing Productively blah 5.3 Open Notebook Research &amp; Scholarly Communication blah "],
-["introduction-to-digital-libraries-archives-repositories.html", "6 Introduction to Digital Libraries, Archives &amp; Repositories 6.1 Command Line Methods for Working with APIs 6.2 Working with Open Context 6.3 Working with Omeka 6.4 Working with tDAR 6.5 Working with ADS", " 6 Introduction to Digital Libraries, Archives &amp; Repositories yadda 6.1 Command Line Methods for Working with APIs yadda 6.2 Working with Open Context yadda 6.3 Working with Omeka yadda 6.4 Working with tDAR yadda 6.5 Working with ADS yadda "]
+["the-ethics-of-big-data-in-archaeology.html", "6 The Ethics of Big Data in Archaeology", " 6 The Ethics of Big Data in Archaeology Ethics! Lots of Ethics! "],
+["introduction-to-digital-libraries-archives-repositories.html", "7 Introduction to Digital Libraries, Archives &amp; Repositories 7.1 Command Line Methods for Working with APIs 7.2 Working with Open Context 7.3 Working with Omeka 7.4 Working with tDAR 7.5 Working with ADS", " 7 Introduction to Digital Libraries, Archives &amp; Repositories yadda 7.1 Command Line Methods for Working with APIs yadda 7.2 Working with Open Context yadda 7.3 Working with Omeka yadda 7.4 Working with tDAR yadda 7.5 Working with ADS yadda "],
+["part-two-making-data-useful.html", "8 Part Two: Making Data Useful", " 8 Part Two: Making Data Useful blah blah introd "],
+["designing-data-collection.html", "9 Designing Data Collection", " 9 Designing Data Collection yada yada "],
+["cleaning-data-with-open-refine.html", "10 Cleaning Data with Open Refine", " 10 Cleaning Data with Open Refine blahde blah blah "],
+["linked-open-data-and-data-publishing.html", "11 Linked Open Data and Data Publishing", " 11 Linked Open Data and Data Publishing yargble blarble floss "]
 ]
