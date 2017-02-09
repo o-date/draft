@@ -1,0 +1,28 @@
+#  Project management basics 
+
+blah
+
+## Github & Version control
+
+blah 
+### discussion
+
+### exercises
+
+
+## Failing Productively
+
+blah
+
+### discussion
+
+### exercises
+
+
+## Open Notebook Research & Scholarly Communication
+
+blah
+
+### discussion
+
+### exercises

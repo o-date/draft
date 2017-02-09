@@ -16,6 +16,19 @@ blah
 
 blah 
 
+### Editorial Board {-}
+
+Katharine Cook, University of Victoria
+
+Ethan Watrall, Michigan State University 
+
+Daniel Pett, The British Museum 
+
+Eric Kansa, Open Context & The Alexandria Archive Institute
+
+Kathleen Fitzpatrick, Modern Language Association 
+
+
 # Getting Started {-}
 
 ## How to use this text {-}

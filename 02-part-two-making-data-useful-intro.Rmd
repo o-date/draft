@@ -1,3 +1,27 @@
-# Part Two: Making Data Useful {-}
+# Making Data Useful 
 
 blah blah introd
+
+## Designing Data Collection
+
+yada yada
+
+### discussion
+
+### exercises
+
+## Cleaning Data with Open Refine
+
+blahde blah blah
+
+### discussion
+
+### exercises
+
+## Linked Open Data and Data Publishing
+
+yargble blarble floss
+
+### discussion
+
+### exercises

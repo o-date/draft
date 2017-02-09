@@ -1,3 +1,43 @@
-# Part Four: Eliding the Digital and the Physical {-}
+# Eliding the Digital and the Physical
 
 crazytown
+
+## 3D Photogrammetry & Structure from Motion
+
+vsfm
+
+### discussion
+
+### exercises
+
+## 3D Printing, the Internet of Things and “Maker” Archaeology
+
+yay
+
+### discussion
+
+### exercises
+
+## Artificial Intelligence in Digital Archaeology 
+
+### agent models
+
+blah
+
+### discussion
+
+blah
+
+### exercises
+
+blah 
+
+### machine learning for image captioning and other classificatory tasks
+
+blah
+
+### discussion
+
+blah
+
+### exercises

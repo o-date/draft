@@ -1,7 +1,71 @@
-# Part One: Going Digital {-}
+# Going Digital
 
 In this section, blah blah blah.
 
 blah
 
 more blah
+
+##  Project management basics 
+
+blah
+
+## Github & Version control
+
+blah 
+
+### discussion
+
+### exercises
+
+
+## Failing Productively
+
+blah
+
+### discussion
+
+### exercises
+
+
+## Open Notebook Research & Scholarly Communication
+
+blah
+
+### discussion
+
+### exercises
+
+## Introduction to Digital Libraries, Archives & Repositories
+
+yadda
+
+## Command Line Methods for Working with APIs
+
+yadda
+
+### Working with Open Context
+
+yadda
+
+### Working with Omeka
+
+yadda
+
+### Working with tDAR
+
+yadda
+
+### Working with ADS 
+
+### Exercises
+
+yadda
+
+## The Ethics of Big Data in Archaeology 
+
+Ethics! Lots of Ethics!
+
+### discussion
+
+### exercises
