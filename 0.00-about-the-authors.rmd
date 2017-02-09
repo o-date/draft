@@ -1,5 +1,3 @@
-\frontmatter
-
 # About the Authors {-}
 
 ### Shawn Graham ### {-}

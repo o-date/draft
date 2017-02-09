@@ -5,6 +5,8 @@ bookdown::epub_book:
 bookdown::html_chapters:
   css: [css/style.css, css/toc.css]
 bookdown::gitbook:
+  sharing:
+      github: yes
   css: css/style.css
   split_by: section
   includes:
