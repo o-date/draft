@@ -1,5 +1,5 @@
 book_filename: "odate"
-edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+edit: https://github.com/o-date/draft/%s
 output_dir: "book"
 ui:
     edit: "Edit"
