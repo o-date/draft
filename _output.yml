@@ -6,6 +6,7 @@ bookdown::html_chapters:
   css: [css/style.css, css/toc.css]
 bookdown::gitbook:
   css: css/style.css
+  split_by: section
   includes:
       in_header: hypothesis.html
   config:
