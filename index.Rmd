@@ -8,7 +8,7 @@ output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
-link-citations: yes
+link-citations: true
 github-repo: o-date/draft
 description: "The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory"
 cover-image: images/pig.gif
