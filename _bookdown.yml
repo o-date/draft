@@ -1,5 +1,5 @@
 book_filename: "odate"
-edit: https://github.com/o-date/edit/draft/%s
+edit: https://github.com/o-date/draft/edit/gh-pages/%s
 output_dir: "book"
 ui:
     edit: "Edit"
