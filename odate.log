@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  10 FEB 2017 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  11 FEB 2017 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -943,11 +943,11 @@ Package rerunfilecheck Info: File `odate.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 492.
  ) 
 Here is how much of TeX's memory you used:
- 12512 strings out of 494501
- 182603 string characters out of 6167030
+ 12516 strings out of 494501
+ 182649 string characters out of 6167030
  283842 words of memory out of 5000000
  15458 multiletter control sequences out of 15000+600000
- 60394 words of font info for 67 fonts, out of 8000000 for 9000
+ 60607 words of font info for 69 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  32i,4n,35p,497b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/l
@@ -958,7 +958,7 @@ ve/2015basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/201
 /texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015basic/texm
 f-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texmf-dis
 t/fonts/type1/public/lm/lmro10.pfb>
-Output written on odate.pdf (27 pages, 209592 bytes).
+Output written on odate.pdf (27 pages, 209655 bytes).
 PDF statistics:
  429 PDF objects out of 1000 (max. 8388607)
  387 compressed objects within 4 object streams
