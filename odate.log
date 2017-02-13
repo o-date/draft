@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  13 FEB 2017 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  13 FEB 2017 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -916,7 +916,7 @@ Package pdftex.def Info: images/by-nc-sa.png used on input line 110.
 ]
 Chapter 1.
 [13] [14]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 415.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 433.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -943,22 +943,35 @@ Chapter 6.
 [27] [28
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 688.
+Overfull \hbox (31.67389pt too wide) in paragraph at lines 731--734
+\T1/lmr/m/it/10 (-20) ward Glance\T1/lmr/m/n/10 (-20) . []$http : / / lincolnmu
+llen . com / blog / a-[]con^^\rmation-[]of-[]andrew-[]goldstone-[]on-[]teaching
+-[]quantitative-[]methods/$[]. 
+ []
+
+
+Overfull \hbox (54.49132pt too wide) in paragraph at lines 736--739
+\T1/lmr/m/it/10 (-20) Owens\T1/lmr/m/n/10 (-20) . []$http : / / www . trevorowe
+ns . org / 2012 / 11 / discovery-[]and-[]justi^^\cation-[]are-[]di^^[erent-[]no
+tes-[]on-[]sciencing-[]the-[]humanities/$[]. 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 750.
 [29]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 688.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 750.
 (./odate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 688.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 688.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 750.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 750.
 Package rerunfilecheck Info: File `odate.out' has not changed.
-(rerunfilecheck)             Checksum: 8DB57455102D0C5091C717485746158F;9189.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 688.
+(rerunfilecheck)             Checksum: EF3451F811B05B740D546F0496F462AA;9169.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 750.
  ) 
 Here is how much of TeX's memory you used:
- 12603 strings out of 494501
- 184304 string characters out of 6167030
- 284166 words of memory out of 5000000
+ 12618 strings out of 494501
+ 184592 string characters out of 6167030
+ 284162 words of memory out of 5000000
  15497 multiletter control sequences out of 15000+600000
- 62513 words of font info for 88 fonts, out of 8000000 for 9000
+ 62856 words of font info for 91 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  32i,5n,35p,497b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/
@@ -970,10 +983,10 @@ exmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2015basic/texmf-d
 ist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015basic/texmf-dist/f
 onts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/
 type1/public/lm/lmro10.pfb>
-Output written on odate.pdf (29 pages, 260673 bytes).
+Output written on odate.pdf (29 pages, 268919 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 407 compressed objects within 5 object streams
- 129 named destinations out of 1000 (max. 500000)
+ 482 PDF objects out of 1000 (max. 8388607)
+ 436 compressed objects within 5 object streams
+ 138 named destinations out of 1000 (max. 500000)
  12603 words of extra memory for PDF output out of 14400 (max. 10000000)
 
