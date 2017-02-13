@@ -4,6 +4,8 @@
 
 While we agree with the first part of the sentiment, the second part is rather up for debate. Digital tools exist in a meshwork of legal and cultural obligations, and moreso than any other tool humans have yet come up with, have the capability to exert their own agency upon the user. Digital tools and their use are not theory-free or without theoretical implications. There is no such thing as neutral, when digital tools are employed.
 
+In this section, we suggest that digital archaeology is akin to work at the intersection of art and public archaeology and digital humanities. We then provide you the necessary basics for setting up your own digital archaeological practice.
+
 ## So what is Digital Archaeology?
 
 If you are holding this book in your hands, via a device or on paper, or looking at it on your desktop, you might wonder why we feel it necessary to even ask the question. It is important at the outset to make the argument that digital archaeology is not about 'mere' tool use. Andrew Goldstone in _Debates in the Digital Humanities_ discusses this tension. He has found (and Lincoln Mullen concurs with regard to his own teaching) that our current optimism about teaching technical facility is misplaced. Tools first, context second doesn't work. Alternatively, theory first doesn't seem to work either. And finally, for anything to work at all, datasets have to be curated and carefully pruned for their pedagogical value. We can't simply turn students loose on a dataset (or worse, ask them to build their own) and expect 'learning' to happen. INSERT GOLDSTONE and MULLEN REFERENCES
