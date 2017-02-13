@@ -124,22 +124,24 @@ blah
 ### exercises
 
 
-## Failing Productively
-
-blah
-
-### discussion
-
-### exercises
-
-
 ## Open Notebook Research & Scholarly Communication
 
-blah
+ - in this section, discuss people like caleb mcdaniels, lincoln mullen, ben marwick, other archaeologists, 
+ - develop exercise to use lincoln's framework for simple notebooks, Ben's examples for complex notebooks
+ - discuss the role of blogging in this, and how a blog doesn't necessarily have to be reflective or narrative, brings back to original roots of the term, web log.
+ - discuss the dangers inherent in doing this kind of thing in the open, especially given hot mess that the web is
+ - be as open as it is safe for you to be. one could set up an owncloud via reclaim hosting, and push materials there in both open and closed versions: here at least you've got LOCKSS
 
 ### discussion
 
 ### exercises
+
+## Failing Productively
+
+- video from msudai ?
+
+### discussion
+
 
 ## Introduction to Digital Libraries, Archives & Repositories
 
