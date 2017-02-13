@@ -11,13 +11,15 @@ biblio-style: apalike
 link-citations: true
 github-repo: o-date/draft
 description: "The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory"
-cover-image: images/pig.gif
+cover-image: images/word-cloud-proposal.jpg
 ---
 # notice {-}
 
 This volume goes hand-in-glove with a computational environnent built on the DHBox. 
 
 THIS IS A DRAFT VERSION
+
+![A word cloud image of the original ODATE proposal, arranged to mimic a photograph of the temple of Athena Pronaos at Delphi](images/word-cloud-proposal.jpg)
 
 ![Creative Commons License](images/by-nc-sa.png)  
 The online version of this book is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
