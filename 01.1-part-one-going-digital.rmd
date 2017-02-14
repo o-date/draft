@@ -200,7 +200,7 @@ You might also wish to dip into the [archived live stream](https://www.youtube.c
 
 ### exercises
 
-1. How do you turn a folder into a repository? With the `git innit` command. At the command line (remember, the `$` just shows you the prompt; you don't have to type it!):
+1. How do you turn a folder into a repository? With the `git init` command. At the command line (remember, the `$` just shows you the prompt; you don't have to type it!):
   a. make a new director: `$ mkdir first-repo`
   b. type `$ ls` (list) to see that the director exists. Then change directory into it: `cd first-repo`. (remember: if you're ever not sure what directory you're in, type `$ pwd`, or print working directory).
   c. make a new file called `readme.md`. You do this by calling the text editor: `nano readme.md`. Type an explanation of what this exercise is about. The `.md` signals that you're writing a text file that uses the markdown format of signalling things like headings, lists, tables, etc. (A guide to [markdown syntax is here](https://daringfireball.net/projects/markdown/basics.php)). Hit ctrl+x to exit, then y to save, leave the file name as it is.
@@ -245,6 +245,7 @@ b. We typed `git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43
 a. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.
 
 
+NEXT - PUBLISH A REPO, PUSH CHANGES TO A REPO, CLONING REPO (HAVE THEM COPY THIS BOOK)
 
 
 ## Open Notebook Research & Scholarly Communication
