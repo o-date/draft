@@ -110,16 +110,93 @@ Divide that by the number of weeks your course runs. That's how many hours per w
 
 Assuming that this textbook is being used for one of those courses, that's how much time you would have to spend on a digital archaeology project. It's not an awful lot, which means that the more energy you put into planning, the more effective your labour is going to be.
 
+### Take-aways
+
++ Separate your _content_ from your _presentation_
++ future-proof your materials through the use of simple text formats wherever possible
++ be explicit about how collaboration will be managed
++ be explicit about how your research goals intersect with your audience
++ be brutally honest about your time and guard it jealously
+
 ### exercises
 
 1. (to be refined) Open a new textfile in the Archaebox. Call it 'initial-project-idea.md'. Using `#` to indicate headings, sketch out a question, problem, or provocation of your own that occurs to you as you browse the Kenen Tepe materials housed at [OpenContext.org](https://opencontext.org/projects/3DE4CD9C-259E-4C14-9B03-8B10454BA66E). Save that file.
-2. create a project management plan.
+2. create a project management plan. (to be fleshed out in more detail)
 
 ## Github & Version control
 
-blah 
+It's a familiar situation - you've been working on a paper. It's where you want it to be, and you're certain you're done. You save it as 'final.doc'. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as 'final-w-changes.doc'. Later that day it occurs to you that you don't like those changes, and you go back to the original 'final.doc', make some changes, and just overwrite the previous version. Soon, you have a folder like:
 
-### discussion
+```
+|-project
+    |-'finalfinal.doc'
+    |-'final-w-changes.doc'
+    |-'final-w-changes2.doc'
+    |-'isthisone-changes.doc'
+    |-'this.doc'
+```
+Things can get messy quite quickly. Imagine that you also have several spreadsheets in there as well, images, snippets of code... we don't want this. What we want is a way of managing the evolution of your files. We do this with a program called [Git](https://git-scm.com/). Git is not a user-friendly piece of software, and it takes some work to get your head around. Git is also very powerful, but fortunately, the basic uses to which most of us put it to are more or less straightforward. There are many other programs that make use of Git for version control; these programs weld a graphical user interface on top of the main Git program. It is better however to become familiar with the basic uses of git from the command line *first* before learning the idiosyncracies of these helper programs. The exercises in this section will take you through the basics of using Git from the command line.
+
+### The core functions of Git
+
+![Alice Bartlett's summary of what Git does](images/what-git-does.png)
+
+At its heart, Git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, see Alice Bartlett's [presentation here](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In Git's lingo, a folder on your computer is known as a `repository`. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a Git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
+
+```
+|-project
+    |-'final.doc'
+```    
+
+BUT its commit history could be visualized like this:
+
+![A visualization of the history of commits](images/commit-history.png)
+
+Each one of those circles represents a point in time when you the writer made a commit; Git compared the state of the file to the earlier state, and saved a snapshot of the `differences`. What is particularly useful about making a commit is that Git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about *why* the commit is being made. In our hypothetical situation, your first commit message might look like this:
+
+```
+Fixed conclusion
+
+Julie pointed out that I had missed 
+the critical bit in the assignment 
+regarding stratigraphy. This was 
+added in the concluding section.
+```
+This information is stored in the history of the commits. In this way, you can see exactly how the project evolved and why. Each one of these commits has what is called a `hash`. This is a unique fingerprint that you can use to 'time travel' (in Bartlett's felicitous phrasing). If you want to see what your project looked like a few months ago, you `checkout` that commit. This has the effect of 'rewinding' the project. Once you've checked out a commit, don't be alarmed when you look at the folder: your folder (your repository) looks like how it once did all those weeks ago! Any files written after that commit seem as if they've disappeared. Don't worry: they still exist! 
+
+What would happen if you wanted to experiment or take your project in a new direction from that point forward? Git lets you do this. What you will do is create a new `branch` of your project from that point. You can think of a branch as like the branch of a tree, or perhaps better, a branch of a river that eventually merges back to the source. (Another way of thinking about branches is that it is a label that sticks with these particular commits.) It is generally considered 'best practice' to leave your `master` branch alone, in the sense that it represents the best version of your project. When you want to experiment or do something new, you create a `branch` and work there. If the work on the branch ultimately proves fruitless, you can discard it. *But*, if you decide that you like how it's going, you can `merge` that branch back into your master. A merge is a commit that folds all of the commits from the branch with the commits from the master.
+
+Git is also a powerful tool for backing up your work. You can work quite happily with Git on your own machine, but when you store those files and the history of commits somewhere remote, you open up the possibility of collaboration *and* a safe place where your materials can be recalled if -perish the thought- something happened to your computer. In Git-speak, the remote location is, well, the `remote`. There are many different places on the web that can function as a remote for Git repositories. You can even set one up on your own server, if you want. One of the most popular (and the one that we use for ODATE) is [Github](http://github.com). There are many useful repositories shared via Github of interest to archaeologists - [OpenContext](http://opencontext.org) for instance shares a lot of material that way. To get material *out* of Github and onto your own computer, you `clone` it. If that hypothetical paper you were writing was part of a group project, your partners could clone it from your Github space, and work on it as well!
+
+You and Anna are working together on the project. You have made a new project repository in your Github space, and you have cloned it to your computer. Anna has cloned it to hers. Let's assume that you have a very productive weekend and you make some real headway on the project. You `commit` your changes, and then `push` them from your computer to the Github version of your repository. That repository is now one commit *ahead* of Anna's version. Anna `pulls` those changes from Github to her own version of the repository, which now looks *exactly* like your version. What happens if you make changes to the exact same part of the exact same file? This is called a `conflict`. Git will make a version of the file that contains text clearly marking off the part of the file where the conflict occurs, with the conflicting information marked out as well. The way to `resolve` the conflict is to open the file (typically with a text editor) and to delete the added Git text, making a decision on which information is the correct information.
+
+### Key Terms
+
++ repository: a single folder that holds all of the files and subfolders of your project
++ commit: this means, 'take a snapshot of the current state of my repostiory'
++ publish: take my folder on my computer, and copy it and its contents to the web as a repository at github.com/myusername/repositoryname
++ sync: update the web repository with the latest commit from my local folder
++ branch: make a copy of my repository with a 'working name'
++ merge: fold the changes I have made on a branch into another branch (typically, either master or gh-pages)
++ fork: to make a copy of someone else's repo
++ clone: to copy a repo online onto your own computer
++ pull request: to ask the original maker of a repo to 'pull' your changes into their master, original, repository
++ push: to move your changes from your computer to the online repo
++ conflict: when two commits describe different changes to the same part of a file
+
+### Take-aways
+
++ Git keeps track of all of the differences in your files, when you take a 'snapshot' of the state of your folder (repository) with the `commit` command
++ Git allows you to roll back changes
++ Git allows you to experiment by making changes that can be deleted or incorporated as desired
++ Git allows you to manage collaboration safely
++ Git allows you to distribute your materials
+
+### Further Reading
+
+We alluded above to the presence of 'helper' programs that are designed to make it easier to use Git to its full potential. An excellent introduction to Github's desktop GUI is at this [Programming Historian lesson on Github](http://programminghistorian.org/lessons/getting-started-with-github-desktop). A follow-up lesson explains the way Github itself can be used to host entire websites! You may explore it [here](http://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages). In the section of this chapter on open notebooks, we will also use Git and Github to create a simple open notebook for your research projects.
+
+You might also wish to dip into the [archived live stream](https://www.youtube.com/watch?v=D0_j04BnVeA) from the first day of the NEH funded Institute on Digital Archaeology Method and Practice (2015) where Prof. Ethan Watrall discusses project management fundamentals and, towards the last part of the stream, introduces Git.
 
 ### exercises
 
