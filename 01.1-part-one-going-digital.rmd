@@ -200,6 +200,52 @@ You might also wish to dip into the [archived live stream](https://www.youtube.c
 
 ### exercises
 
+1. How do you turn a folder into a repository? With the `git innit` command. At the command line (remember, the `$` just shows you the prompt; you don't have to type it!):
+  a. make a new director: `$ mkdir first-repo`
+  b. type `$ ls` (list) to see that the director exists. Then change directory into it: `cd first-repo`. (remember: if you're ever not sure what directory you're in, type `$ pwd`, or print working directory).
+  c. make a new file called `readme.md`. You do this by calling the text editor: `nano readme.md`. Type an explanation of what this exercise is about. The `.md` signals that you're writing a text file that uses the markdown format of signalling things like headings, lists, tables, etc. (A guide to [markdown syntax is here](https://daringfireball.net/projects/markdown/basics.php)). Hit ctrl+x to exit, then y to save, leave the file name as it is.
+  d. type `$ ls` again to check that the file is there.
+  e. type `$ git init` to tell the Git program that this folder is to be tracked as a repository. If all goes correctly, you should see a variation on this message: `Initialized empty Git repository in /home/demonstration/first-repo/.git/`. But type `$ ls` again. What do you (not) see?
+
+The changes in your repo will now be stored in that *hidden* directory, `.git`. Most of the time, you will never have reason to search that folder out. But know that the config file that describes your repo is in that folder. There might come a time in the future where you want to alter some of the default behaviour of the git program. You do that by opening the config file (which you can read with a text editor). Google 'show hidden files and folders' for your operating system when that time comes. 
+
+2. Open your readme.md file again with the nano text editor, from the command line. Add some more information to it, then save and exit the text editor.
+  a. type `$ git status`
+  b. Git will respond with a couple of pieces of information. It will tell you which `branch` you are on. It will list any untracked files present or new changes that are unstaged. We now will `stage` those changes to be added to our commit history by typing `$ git add -A`. (This adds any new, modified, or deleted files to your commit when you make it. There are [other options or flags](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660) - the bit that says `-A` -  where you add *only* the new and modified files, *or* only the modified and deleted files)
+  c. Let's check our git status again: type `$ git status`
+  d. You should see something like this:
+
+```
+On branch master
+Initial commit
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   readme.md```
+```
+  e. Let's take a snapshot: type `$ git commit -m "My first commit"`. What happened? Remember, Git keeps track not only of the changes, but *who* is making them. If this is your first time working with Git in the Archaebox, Git will ask you for your name and email. Helpfully, the Git error message tells you exactly what to do: type `$ git config --global user.email "you\@example.com"` and then type `$ git config --global user.name "Your Name"`. Now try making your first commit.
+  f. The command above represents a bit of a shortcut for making commit messages by using the `-m` flag to associate the text in the quotation marks with the commit. Open up your readme.md file again, and add some more text to it. Save and exit the text editor. Add the new changes to the snapshot that we will take. Then, type `$ git commit`. Git automatically opens up the text editor so you can type a longer, more substantive commit message. In this message (unlike in markdown) the `#` indicates a line to be ignored. You'll see that there is already some default text in there telling you what to do. Type a message indicating the nature of the changes you have made. Then save and exit the text editor. DO NOT change the filename!
+  
+Congratulations, you are now able to track your changes, and keep your materials under version control!
+
+3. Go ahead and make some more changes to your repository. Add some new files. Commit your changes after each new file is created. Now we're going to view the history of your commits. Type `$ git log`. What do you notice about this list of changes? Look at the time stamps. You'll see that the entries are listed in reverse chronological order. Each entry has its own 'hash' or unique ID, the person who made the commit and time are listed, as well as the commit message eg:
+
+```
+commit 253506bc23070753c123accbe7c495af0e8b5a43
+Author: Shawn Graham <shawn.graham@carleton.ca>
+Date:   Tue Feb 14 18:42:31 2017 +0000
+
+Fixed the headings that were broken in the about section of readme.md
+
+```
+
+a. We're going to go back in time and create a new branch. Here's how the command will look: `$ git checkout -b branchname <commit>` where `branch` is the name you want the branch to be called, and `<commit>` is that unique ID. Make a new branch from your second last commit (don't use < or >). 
+b. We typed `git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43`. The response: `Switched to a new branch 'experiment'` Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you've time travelled! Those files are not missing; but they *are* on a different branch (the master branch) and you can't harm them now. Add a number of new files, making commits after each one. Check your git status, and check your git log as you go to make sure you're getting everything. Make sure there are no unstaged changes - everything's been committed.
+
+4. Now let's assume that your `experiment` branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your `master` branch. We're going to merge things. To merge, we have to go back to the master branch: `$ git checkout master`.
+a. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.
+
+
+
 
 ## Open Notebook Research & Scholarly Communication
 
@@ -208,6 +254,7 @@ You might also wish to dip into the [archived live stream](https://www.youtube.c
  - discuss the role of blogging in this, and how a blog doesn't necessarily have to be reflective or narrative, brings back to original roots of the term, web log.
  - discuss the dangers inherent in doing this kind of thing in the open, especially given hot mess that the web is
  - be as open as it is safe for you to be. one could set up an owncloud via reclaim hosting, and push materials there in both open and closed versions: here at least you've got LOCKSS
+ - Ben Marwick's demo repos for archae projects
 
 ### discussion
 
