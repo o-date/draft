@@ -59,6 +59,7 @@ All of these aspects of digital archaeology exist along a continuum. In the rema
 ##  Project management basics 
 
 A digital project, whether in archaeology or in other fields, iterates through the same basic steps. There is
+	
 	1. finding data
 	2. fixing data
 	3. analyzing the data
@@ -67,6 +68,7 @@ A digital project, whether in archaeology or in other fields, iterates through t
 Eighty percent of your time on any digital project will be invested in cleaning up the data and documenting what you've done to it. But in truth, a digital project begins long before we ever look at a data set (or are given data to work with, if we're part of a larger project). How do we formulate a research question or our exploration more generally? How do we translate a gut feeling or intution or curiosity into something that is _operable_? REF Moretti on operationalizing things
 
 Firstly, we have to develop some basic good habits.
+
 	1. separate what your write from _how_ you write it.
 	2. keep what you write under version control.
 
@@ -96,7 +98,7 @@ We could frame a problem: 'Mickel's exploration of social networks considered x,
 
 We could frame a provocation: 'Social Network Analysis promises to revolutionize our knowledge of the social contexts that underpin archaeological fieldwork, putting this power in the hands of everyone from the site director on down.'
 
-![Creating and/or refining your research question](images/creating-refinining-question.png)
+![Creating and/or refining your research question, per DevDH.org](images/creating-refinining-question.png)
 
 Following Appleford and Guiliano, we can refine our question, or our problem, or our provocation down to its essence in order to figure out the next parts of the the process. Knowing exactly what kind of question, problem, or provocation we're after, we then have a better sense of what to do when confronted with a mass of data (for instance, the excavation diaries from Kenen Tepe held in [OpenContext.org, deposited by Parker and Cobb, 2012](https://opencontext.org/projects/3DE4CD9C-259E-4C14-9B03-8B10454BA66E)). Once the question is well-drawn out, questions 3 and 4 take care of themselves.
 
@@ -104,9 +106,7 @@ One other element that we might add is 'collaboration'. How do you plan to colla
 
 Finally, how much time would you have to work on your digital archaeology project? All of us have multiple demands on our time. Let's be realistic about how much time you have available. How many hours, total, do you spend in class, at work, asleep, and socializing? Add that up for a week, then multiply by the number of weeks in your term. There are 384 hours in a 16 week term. Subtract to find out how many 'spare' hours you can devote to homework, this project, or a hobbby. 
 
-Divide that by the number of weeks your course runs. That's how many hours per week you can spend on all your non in-class course work.
-
-2. Divide those hours by the number of courses you have. 
+Divide that by the number of weeks your course runs. That's how many hours per week you can spend on all your non in-class course work. Then, divide those hours by the number of courses you have. 
 
 Assuming that this textbook is being used for one of those courses, that's how much time you would have to spend on a digital archaeology project. It's not an awful lot, which means that the more energy you put into planning, the more effective your labour is going to be.
 
