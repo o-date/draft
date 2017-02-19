@@ -31,13 +31,27 @@ Kathleen Fitzpatrick, Modern Language Association
 
 # Getting Started {-}
 
+We wrote this text with a particular kind of student in mind. We imagined this student as having already taken a first year introductory course to archaeology, of the kind that surveys the field, its history, and its principle methods and theoretical positions. Very few courses of that kind include any depth in digital methods and theory, which is understandable when we look at the incredible variety of archaeological work, skills, and interests! Digital work is every bit as diverse as other kinds of archaeology, but it also presents its own particular challenges. One of these is the anxiety that comes when one first approaches the computer for anything more complex than word processing or a bit of social media. 'What happens if I break it?'; 'I'm not techy!'; 'If I wanted to do computers, I wouldn't have gone into this!' are all actual student concerns that we have heard in our various classrooms. 
+
+It'll be ok.
+
+We take a pedagogical perspective that focuses on the learning that happens when we make things, when we experiment or otherwise play around with materials and computing, and especially, when/if things break. It's a perspective that finds value in 'failing gloriously', in trying to push ourselves beyond our comfort level. The only thing that you will need therefore to be successful in learning some of the basic issues around digital archaeology is a willingness to consider why things didn't work the way they ought to have, and a web browser. We built this textbook with its very own digital archaeology computer built right in! There's nothing you can break on your own machine, nor does your machine have to be very powerful. If you want, you can even download and install ODATE on a desktop computer to use as your very own digital archaeology laboratory.  
+
 ## How to use this text {-}
 
-yadda
+Each section in this book is broken down into an overview or discussion of the main concepts, and then followed up with skill-building exercises. The computational environment, when you log into it, is set to expire after three hours - so you really ought to work through the sections on Version Control (using Git) and Open Notebook Science so you'll be able to get your work and data out of ODATE and onto space that you control. The best way to use this book is to make sure you have at least one hour blocked out to read through a section, and then two hours to go through the section again if you're working on the exercises.
+
+Do you notice that stripe down the side of the screen at the right? That's a tool-bar for annotating the text, using a tool called `Hypothes.is`. If you highlight any text (go ahead, highlight that phrase right now by right-clicking and dragging your mouse!) a little pop-up will ask you if you want to annotate or highlight the text. If you choose annotate, a writing pane will open on the right. Using the Hypothesis tool requires a reader to create a login and account with Hypothesis, which is managed by the Hypothesis site, not us.
+
+By default, such annotations are made public. Private annotations can only be viewed by the particular individual who made them. All annotations (both public and private) have their own unique URL and can be collated in various ways using the Hypothesis API (here's an [example](http://jonudell.net/h/facet.html)). Please tag your annotation with `odate` to allow easy curating of the public annotations.
+
+Please note that any public annotations can be read by any other reader. These can also be responded to, as well - which might make a great classroom activity! A class can create group annotations which are only visible to participants in that group. Annotation is a tool for research; personal reaction to anything we've written in ODATE  should be done via the reader’s blog while leaving an annotation on ODATE linking to the blog piece.
+
+Over time, the parts of the text that are heavily annotated will look as if someone has gone over them with a yellow highlighter. You can use this to help guide your reading - perhaps that's a part where many people had problems, or perhaps it's a part that sparked a really interesting discussion! Group annotation like this promotes 'active reading', which means that you're more likely to retain the discussion.
 
 ## How to contribute changes, or make your own version {-}
 
-bigglybeep
+Perhaps your professor has assigned a portion of this text to your class, with the instruction to improve it. Do you see the edit button at the top of the screen? If you click on that, and you have an account on Github (and you're signed in), you will grab a copy of this entire text (but not the computational part; the source code for that is [here instead](insert-the-link) that you can then edit. If you want, you can also make a `pull-request` (see section on Git and version control INSERT CROSSREF) to use to fold your changes into our textbook. We welcome these suggestions! Since this book has a creative-commons license, you're welcome to expand and build upon this as you wish, but do cite and link back to the original version.
 
 ## How to access and use the computational environment {-}
 

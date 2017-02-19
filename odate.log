@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  14 FEB 2017 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  19 FEB 2017 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,46 +909,46 @@ Package pdftex.def Info: images/by-nc-sa.png used on input line 110.
 
 ] [7] [8
 
-] [9] [10
+]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 201.
 
-] [11] [12
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [9] [10] [11
+
+] [12
 
 ]
 Chapter 1.
 [13] [14]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 433.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 516.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [15]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 455.
-
-(/usr/local/texlive/2015basic/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [16] <images/creating-refinining-question.png, id=320, 1119.18124pt x 591.208
-76pt>
+) [15] [16] <images/creating-refinining-question.png, id=322, 1119.18124pt x 59
+1.20876pt>
 File: images/creating-refinining-question.png Graphic file (type png)
 <use images/creating-refinining-question.png>
 Package pdftex.def Info: images/creating-refinining-question.png used on input 
-line 554.
+line 637.
 (pdftex.def)             Requested size: 469.7626pt x 248.15262pt.
 [17 <./images/creating-refinining-question.png>]
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 651
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 734
 .
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) <images/what-git-does.png, id=333, 567.11874pt x 270.00874pt>
+) <images/what-git-does.png, id=335, 567.11874pt x 270.00874pt>
 File: images/what-git-does.png Graphic file (type png)
 <use images/what-git-does.png>
-Package pdftex.def Info: images/what-git-does.png used on input line 672.
+Package pdftex.def Info: images/what-git-does.png used on input line 755.
 (pdftex.def)             Requested size: 469.77385pt x 223.66223pt.
-[18] <images/commit-history.png, id=345, 293.095pt x 34.1275pt>
+[18] <images/commit-history.png, id=347, 293.095pt x 34.1275pt>
 File: images/commit-history.png Graphic file (type png)
 <use images/commit-history.png>
-Package pdftex.def Info: images/commit-history.png used on input line 697.
+Package pdftex.def Info: images/commit-history.png used on input line 780.
 (pdftex.def)             Requested size: 293.09427pt x 34.1274pt.
 [19 <./images/what-git-does.png> <./images/commit-history.png>] [20] [21]
-Underfull \vbox (badness 6510) has occurred while \output is active []
+Underfull \vbox (badness 1715) has occurred while \output is active []
 
 [22] [23] [24]
 Chapter 2.
@@ -973,34 +973,34 @@ Chapter 6.
 [33] [34
 
 ]
-Overfull \hbox (31.67389pt too wide) in paragraph at lines 1344--1347
+Overfull \hbox (31.67389pt too wide) in paragraph at lines 1447--1450
 \T1/lmr/m/it/10 (-20) ward Glance\T1/lmr/m/n/10 (-20) . []$http : / / lincolnmu
 llen . com / blog / a-[]con^^\rmation-[]of-[]andrew-[]goldstone-[]on-[]teaching
 -[]quantitative-[]methods/$[]. 
  []
 
 
-Overfull \hbox (54.49132pt too wide) in paragraph at lines 1349--1352
+Overfull \hbox (54.49132pt too wide) in paragraph at lines 1452--1455
 \T1/lmr/m/it/10 (-20) Owens\T1/lmr/m/n/10 (-20) . []$http : / / www . trevorowe
 ns . org / 2012 / 11 / discovery-[]and-[]justi^^\cation-[]are-[]di^^[erent-[]no
 tes-[]on-[]sciencing-[]the-[]humanities/$[]. 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1363.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1466.
 [35]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1363.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1466.
 (./odate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1363.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1363.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1466.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1466.
 
 Package rerunfilecheck Info: File `odate.out' has not changed.
 (rerunfilecheck)             Checksum: AF6B47CDA70A1D136798EB2344473FA4;9169.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1363.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1466.
  ) 
 Here is how much of TeX's memory you used:
  12778 strings out of 494501
  187020 string characters out of 6167030
- 284361 words of memory out of 5000000
+ 284364 words of memory out of 5000000
  15584 multiletter control sequences out of 15000+600000
  64794 words of font info for 106 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -1015,10 +1015,10 @@ ist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015basic/texmf-dist/f
 onts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/
 type1/public/lm/lmro10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
 /public/lm/lmtt10.pfb>
-Output written on odate.pdf (35 pages, 598745 bytes).
+Output written on odate.pdf (35 pages, 601292 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 517 compressed objects within 6 object streams
+ 582 PDF objects out of 1000 (max. 8388607)
+ 522 compressed objects within 6 object streams
  176 named destinations out of 1000 (max. 500000)
  12618 words of extra memory for PDF output out of 14400 (max. 10000000)
 
