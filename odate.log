@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  21 FEB 2017 12:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  21 FEB 2017 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -925,90 +925,90 @@ File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ]
 Chapter 1.
-[15] [16]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 631.
+[15] [16] [17]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 657.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [17] [18] <images/creating-refinining-question.png, id=353, 1119.18124pt x 59
-1.20876pt>
+) [18] <images/creating-refinining-question.png, id=351, 1119.18124pt x 591.208
+76pt>
 File: images/creating-refinining-question.png Graphic file (type png)
 <use images/creating-refinining-question.png>
 Package pdftex.def Info: images/creating-refinining-question.png used on input 
-line 752.
+line 778.
 (pdftex.def)             Requested size: 469.7626pt x 248.15262pt.
-[19 <./images/creating-refinining-question.png>] <images/what-git-does.png, id=
-367, 567.11874pt x 270.00874pt>
+[19 <./images/creating-refinining-question.png>] [20] <images/what-git-does.png
+, id=378, 567.11874pt x 270.00874pt>
 File: images/what-git-does.png Graphic file (type png)
 <use images/what-git-does.png>
-Package pdftex.def Info: images/what-git-does.png used on input line 871.
+Package pdftex.def Info: images/what-git-does.png used on input line 897.
 (pdftex.def)             Requested size: 469.77385pt x 223.66223pt.
-[20] <images/commit-history.png, id=378, 293.095pt x 34.1275pt>
+<images/commit-history.png, id=380, 293.095pt x 34.1275pt>
 File: images/commit-history.png Graphic file (type png)
 <use images/commit-history.png>
-Package pdftex.def Info: images/commit-history.png used on input line 896.
+Package pdftex.def Info: images/commit-history.png used on input line 922.
 (pdftex.def)             Requested size: 293.09427pt x 34.1274pt.
 [21 <./images/what-git-does.png> <./images/commit-history.png>] [22] [23] [24] 
-[25] <images/pullrequest-send.png, id=453, 774.895pt x 403.5075pt>
+[25] <images/pullrequest-send.png, id=454, 774.895pt x 403.5075pt>
 File: images/pullrequest-send.png Graphic file (type png)
 <use images/pullrequest-send.png>
-Package pdftex.def Info: images/pullrequest-send.png used on input line 1438.
+Package pdftex.def Info: images/pullrequest-send.png used on input line 1467.
 (pdftex.def)             Requested size: 469.76476pt x 244.61842pt.
-[26 <./images/pullrequest-send.png>] [27] [28]
-Chapter 2.
-[29
+[26] [27 <./images/pullrequest-send.png>] [28] [29] [30
 
-] [30
+]
+Chapter 2.
+[31] [32
 
 ]
 Chapter 3.
-[31] [32]
+[33] [34]
 Chapter 4.
-[33
-
-] [34]
-Chapter 5.
 [35
 
-] [36
+] [36]
+Chapter 5.
+[37
+
+] [38
 
 ]
 Chapter 6.
-[37] [38
+[39] [40
 
 ]
-Overfull \hbox (31.67389pt too wide) in paragraph at lines 1803--1806
+Overfull \hbox (31.67389pt too wide) in paragraph at lines 1836--1839
 \T1/lmr/m/it/10 (-20) ward Glance\T1/lmr/m/n/10 (-20) . []$http : / / lincolnmu
 llen . com / blog / a-[]con^^\rmation-[]of-[]andrew-[]goldstone-[]on-[]teaching
 -[]quantitative-[]methods/$[]. 
  []
 
 
-Overfull \hbox (54.49132pt too wide) in paragraph at lines 1808--1811
+Overfull \hbox (54.49132pt too wide) in paragraph at lines 1841--1844
 \T1/lmr/m/it/10 (-20) Owens\T1/lmr/m/n/10 (-20) . []$http : / / www . trevorowe
 ns . org / 2012 / 11 / discovery-[]and-[]justi^^\cation-[]are-[]di^^[erent-[]no
 tes-[]on-[]sciencing-[]the-[]humanities/$[]. 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1822.
-[39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1822.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1855.
+[41]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1855.
 (./odate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1822.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1822.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1855.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1855.
 
 Package rerunfilecheck Info: File `odate.out' has not changed.
 (rerunfilecheck)             Checksum: 0DACDAF81516B9664145D6E01A06DBD6;9169.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1822.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1855.
  ) 
 Here is how much of TeX's memory you used:
- 12827 strings out of 494501
- 187593 string characters out of 6167030
+ 12829 strings out of 494501
+ 187607 string characters out of 6167030
  284461 words of memory out of 5000000
  15590 multiletter control sequences out of 15000+600000
  65184 words of font info for 109 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 32i,5n,35p,497b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,5n,35p,497b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/
 local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/tex
 live/2015basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/
@@ -1019,10 +1019,10 @@ ist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015basic/texmf-dist/f
 onts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/
 type1/public/lm/lmro10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
 /public/lm/lmtt10.pfb>
-Output written on odate.pdf (39 pages, 645217 bytes).
+Output written on odate.pdf (41 pages, 649221 bytes).
 PDF statistics:
- 666 PDF objects out of 1000 (max. 8388607)
- 600 compressed objects within 6 object streams
- 213 named destinations out of 1000 (max. 500000)
+ 679 PDF objects out of 1000 (max. 8388607)
+ 610 compressed objects within 7 object streams
+ 215 named destinations out of 1000 (max. 500000)
  12623 words of extra memory for PDF output out of 14400 (max. 10000000)
 

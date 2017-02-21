@@ -73,7 +73,7 @@ install.packages("devtools")
 devtools::install_github("rstudio/bookdown")
 ```
 
-3. create a new textfile with `metadata` that describe how the book will be built. The metadata is in a format called `YAML` ('yet another markup language'` that uses keys and values that get passed into other parts of Bookdown:
+3. create a new textfile with `metadata` that describe how the book will be built. The metadata is in a format called `YAML` ('yet another markup language') that uses keys and values that get passed into other parts of Bookdown:
 
 ```
 title: "The archaeology of spoons"
