@@ -196,9 +196,9 @@ You and Anna are working together on the project. You have made a new project re
 
 We alluded above to the presence of 'helper' programs that are designed to make it easier to use Git to its full potential. An excellent introduction to Github's desktop GUI is at this [Programming Historian lesson on Github](http://programminghistorian.org/lessons/getting-started-with-github-desktop). A follow-up lesson explains the way Github itself can be used to host entire websites! You may explore it [here](http://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages). In the section of this chapter on open notebooks, we will also use Git and Github to create a simple open notebook for your research projects.
 
-You might also wish to dip into the [archived live stream](https://www.youtube.com/watch?v=D0_j04BnVeA) from the first day of the NEH funded Institute on Digital Archaeology Method and Practice (2015) where Prof. Ethan Watrall discusses project management fundamentals and, towards the last part of the stream, introduces Git.
+You might also wish to dip into the [archived live stream; link here](https://www.youtube.com/watch?v=D0_j04BnVeA) from the first day of the NEH funded Institute on Digital Archaeology Method and Practice (2015) where Prof. Ethan Watrall discusses project management fundamentals and, towards the last part of the stream, introduces Git.
 
-### exercises
+### Exercises
 
 1. How do you turn a folder into a repository? With the `git init` command. At the command line (remember, the `$` just shows you the prompt; you don't have to type it!):
   a. make a new director: `$ mkdir first-repo`
@@ -241,7 +241,7 @@ Fixed the headings that were broken in the about section of readme.md
 a. We're going to go back in time and create a new branch. Here's how the command will look: `$ git checkout -b branchname <commit>` where `branch` is the name you want the branch to be called, and `<commit>` is that unique ID. Make a new branch from your second last commit (don't use < or >). 
 b. We typed `git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43`. The response: `Switched to a new branch 'experiment'` Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you've time travelled! Those files are not missing; but they *are* on a different branch (the master branch) and you can't harm them now. Add a number of new files, making commits after each one. Check your git status, and check your git log as you go to make sure you're getting everything. Make sure there are no unstaged changes - everything's been committed.
 
-4. Now let's assume that your `experiment` branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your `master` branch. We're going to merge things. To merge, we have to go back to the master branch: `$ git checkout master`.
+4. Now let's assume that your `experiment` branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your `master` branch. We're going to merge things. To merge, we have to go back to the master branch: `$ git checkout master`. (Good practice is to keep separate branches for all major experiments or directions you go. In case you lose track of the names of the branches you've created, this command: `git branch -va` will list them for you.)
 
 a. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.
 
@@ -312,9 +312,9 @@ $ git pull origin master
 
 ### Warnings
 
-It is possible to make changes to files directly via the edit button on Github. Be careful if you do this, because things rapidly can become out of sync, resulting in conflicts between differing versions of the same file. Get in the habit of making your changes on your own machine, and making sure things are committed and up-to-date (`git status` is your friend) before beginning work. At this point, you might want to investigate some of the graphical interfaces for Git (such as [Github Desktop](https://desktop.github.com/)). Knowing as you do how things work from the command line, the idiosyncracies of the graphical interfaces will make more sense. For further practice on the ins-and-outs of Git and Github Desktop, we recommend trying [the Git-it app](https://github.com/jlord/git-it-electron/) by Jessica Lord.
+It is possible to make changes to files directly via the edit button on Github. Be careful if you do this, because things rapidly can become out of sync, resulting in conflicts between differing versions of the same file. Get in the habit of making your changes on your own machine, and making sure things are committed and up-to-date (`git status`, `git pull origin master`, `git fetch upstream` are your friends) before beginning work. At this point, you might want to investigate some of the graphical interfaces for Git (such as [Github Desktop](https://desktop.github.com/)). Knowing as you do how things work from the command line, the idiosyncracies of the graphical interfaces will make more sense. For further practice on the ins-and-outs of Git and Github Desktop, we recommend trying [the Git-it app](https://github.com/jlord/git-it-electron/) by Jessica Lord.
 
-For help in resolving merge conflicts, see the [Github help documentation](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/).
+For help in resolving merge conflicts, see the [Github help documentation](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/). For a quick reminder of how the workflow should go, see [this cheat-sheet by Chase Pettit](https://gist.github.com/shawngraham/513d4b2860d52fdac6bd783e4387957e).
 
 
 ## Open Notebook Research & Scholarly Communication
