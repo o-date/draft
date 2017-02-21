@@ -26,7 +26,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2017-02-19">
+<meta name="date" content="2017-02-21">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -80,7 +80,9 @@
 <li class="chapter" data-level="" data-path="how-to-use-this-text.html"><a href="how-to-use-this-text.html"><i class="fa fa-check"></i>How to use this text</a></li>
 <li class="chapter" data-level="" data-path="how-to-contribute-changes-or-make-your-own-version.html"><a href="how-to-contribute-changes-or-make-your-own-version.html"><i class="fa fa-check"></i>How to contribute changes, or make your own version</a></li>
 <li class="chapter" data-level="" data-path="how-to-access-and-use-the-computational-environment.html"><a href="how-to-access-and-use-the-computational-environment.html"><i class="fa fa-check"></i>How to access and use the computational environment</a></li>
-<li class="chapter" data-level="" data-path="colophon.html"><a href="colophon.html"><i class="fa fa-check"></i>Colophon</a></li>
+<li class="chapter" data-level="" data-path="colophon.html"><a href="colophon.html"><i class="fa fa-check"></i>Colophon</a><ul>
+<li class="chapter" data-level="" data-path="colophon.html"><a href="colophon.html#the-computational-environment"><i class="fa fa-check"></i>The computational environment</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i>Welcome!</a></li>
 <li class="chapter" data-level="1" data-path="going-digital.html"><a href="going-digital.html"><i class="fa fa-check"></i><b>1</b> Going Digital</a><ul>
@@ -220,8 +222,37 @@
             <section class="normal" id="section-">
 <div id="colophon" class="section level2 unnumbered">
 <h2>Colophon</h2>
-<p>how this site was made</p>
+<p>This text was created using the <a href="http://bookdown.org">Bookdown</a> package for R Markdown. <a href="http://rmarkdown.rstudio.com/">R Markdown</a> is a variant of the simple <a href="https://daringfireball.net/projects/markdown/">Markdown format</a> created by John Gruber. That is to say, at its core this text is a series of simple text-files marked up with simple markers of syntax like <code>#</code> marks to indicate headings and so on. R Markdown allows us to embed code snippets within the text that an interpreter, like <a href="https://www.rstudio.com/">R Studio</a>, knows how to run, such that the results of the calculations become embedded in the surrounding discussion! This is a key part of making research more open and more reproducible, and which you’ll learn more about in chapter one.</p>
+<p>The sequence of steps to produce a Bookdown-powered site looks like this:</p>
+<ol style="list-style-type: decimal">
+<li>create a new project in RStudio (we typically create a new project in a brand new folder)</li>
+<li>run the following script to install Bookdown:</li>
+</ol>
+<pre><code>install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;rstudio/bookdown&quot;)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>create a new textfile with <code>metadata</code> that describe how the book will be built. The metadata is in a format called <code>YAML</code> (‘yet another markup language’` that uses keys and values that get passed into other parts of Bookdown:</li>
+</ol>
+<pre><code>title: &quot;The archaeology of spoons&quot;
+author: &quot;Graham, Gupta, Carter, &amp; Compton&quot;
+date: &quot;July 1 2017&quot;
+description: &quot;A book about cocleararchaeology.&quot;
+github-repo: &quot;my-github-account/my-project&quot;
+cover-image: &quot;images/cover.png&quot;
+url: &#39;https\://my-domain-ex/my-project/&#39;
+bibliography: myproject.bib
+biblio-style: apa-like
+link-citations: yes</code></pre>
+<p>This is the only thing you need to have in this file, which is saved in the project folder as <code>index.Rmd</code>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Write! We write the content of this book as text files, saving the parts in order. Each file should be numbered <code>01-introduction.Rmd</code>, <code>02-a-history-of-spoons.Rmd</code>, <code>03-the-spoons-of-site-x.Rmd</code> and so on.</p></li>
+<li><p>Build the book. With Bookdown installed, there will be a ‘Build Book’ button in the R Studio build pane. This will generate the static html files for the book, the pdf, and the epub. All of these will be found in a new folder in your project, <code>_book</code>. There are many more customizations that can be done, but that is sufficient to get one started.</p></li>
+</ol>
+<div id="the-computational-environment" class="section level3 unnumbered">
+<h3>The computational environment</h3>
+<p>The computational environment we are using is a fork of the <a href="http://dhbox.org">DhBox</a> project from CUNY, led by Stephen Zweibel, Patrick Smyth Developer, Jojo Karlin, and Matthew K. Gold. DHBox requires Ubuntu &gt;= 14.04 and Python 2.7x. We run it at Carleton courtesy of the School of Computer Science, Andrew Pullin, Peter Choynowski, and Doug Howe, via <a href="https://www.openstack.org/">OpenStack</a> and <a href="https://www.docker.com/">Docker</a>. A version of DHBox that can be run from a USB stick can be found <a href="https://github.com/DH-Box/dh-usb">here</a> and is worth exploring!</p>
 
+</div>
 </div>
 <!-- </div> -->
             </section>

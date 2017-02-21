@@ -2,7 +2,7 @@
 
 ### Shawn Graham ### {-}
 
-At Carleton etc
+Shawn Graham trained in Roman archaeology but has become over the years a digital archaeologist and digital humanist. He is currently an associate professor in the [Department of History at Carleton University in Ottawa Canada](http://carleton.ca). He keeps an open lab notebook of his research and experiments in digital history and archaeology at his research blog, [electricarchaeology](http://electricarchaeology.ca). He can be found on Twitter at [electricarchaeo](http://twitter.com/electricarchaeo). His teaching explores  methods and digital approaches at all levels, including seminars in the collaborative MA Digital Humanities program as well as in the MA Public History program. His research interests include augmented reality and virtual reality in the service of landscape archaeology, video games about the past, and agent based modeling.
 
 ### Neha Gupta ### {-}
  
@@ -49,9 +49,11 @@ Please note that any public annotations can be read by any other reader. These c
 
 Over time, the parts of the text that are heavily annotated will look as if someone has gone over them with a yellow highlighter. You can use this to help guide your reading - perhaps that's a part where many people had problems, or perhaps it's a part that sparked a really interesting discussion! Group annotation like this promotes 'active reading', which means that you're more likely to retain the discussion.
 
+Finally, if you'd rather not read this as a web page, you can grab a pdf copy by pressing the download button above (the downwards-facing arrow icon) and printing out just the bits you want or need. If you'd rather read this text via an e-reader or iBooks or similar, the download link will also give you an ePub version. Individuals who use a screenreader or other assistive device might prefer to work with the pdf or epub versions. Please do let us know if there is any way we can make this text more accessible for users with particular needs. Since this text is fundamentally a series of plain-text files that we then manipulate to create these different outputs, it should be straightforward for us to adapt accordingly!
+
 ## How to contribute changes, or make your own version {-}
 
-Perhaps your professor has assigned a portion of this text to your class, with the instruction to improve it. Do you see the edit button at the top of the screen? If you click on that, and you have an account on Github (and you're signed in), you will grab a copy of this entire text (but not the computational part; the source code for that is [here instead](insert-the-link) that you can then edit. If you want, you can also make a `pull-request` (see section on Git and version control INSERT CROSSREF) to use to fold your changes into our textbook. We welcome these suggestions! Since this book has a creative-commons license, you're welcome to expand and build upon this as you wish, but do cite and link back to the original version.
+Perhaps your professor has assigned a portion of this text to your class, with the instruction to improve it. Do you see the edit button at the top of the screen (it looks like a little square with a pencil)? If you click on that, and you have an account on Github (and you're signed in), you will grab a copy of this entire text (but not the computational part; the source code for that is [here instead](insert-the-link)) that you can then edit. If you want, you can also make a `pull-request` (see section on Git and version control INSERT CROSSREF) to us, asking us to fold your changes into our textbook. We welcome these suggestions! Since this book has a creative-commons license, you are welcome to expand and build upon this as you wish, but do cite and link back to the original version.
 
 ## How to access and use the computational environment {-}
 
@@ -59,5 +61,43 @@ link to site, instructions, also repo, also dhbox-on-a-stick
 
 ## Colophon {-}
 
-how this site was made
+This text was created using the [Bookdown](http://bookdown.org) package for R Markdown. [R Markdown](http://rmarkdown.rstudio.com/) is a variant of the simple [Markdown format](https://daringfireball.net/projects/markdown/) created by John Gruber. That is to say, at its core this text is a series of simple text-files marked up with simple markers of syntax like `#` marks to indicate headings and so on. R Markdown allows us to embed code snippets within the text that an interpreter, like [R Studio](https://www.rstudio.com/), knows how to run, such that the results of the calculations become embedded in the surrounding discussion! This is a key part of making research more open and more reproducible, and which you'll learn more about in chapter one. 
+
+The sequence of steps to produce a Bookdown-powered site looks like this:
+
+1. create a new project in RStudio (we typically create a new project in a brand new folder)
+2. run the following script to install Bookdown:
+
+```
+install.packages("devtools")
+devtools::install_github("rstudio/bookdown")
+```
+
+3. create a new textfile with `metadata` that describe how the book will be built. The metadata is in a format called `YAML` ('yet another markup language'` that uses keys and values that get passed into other parts of Bookdown:
+
+```
+title: "The archaeology of spoons"
+author: "Graham, Gupta, Carter, & Compton"
+date: "July 1 2017"
+description: "A book about cocleararchaeology."
+github-repo: "my-github-account/my-project"
+cover-image: "images/cover.png"
+url: 'https\://my-domain-ex/my-project/'
+bibliography: myproject.bib
+biblio-style: apa-like
+link-citations: yes
+```
+
+This is the only thing you need to have in this file, which is saved in the project folder as `index.Rmd`. 
+
+4. Write! We write the content of this book as text files, saving the parts in order. Each file should be numbered `01-introduction.Rmd`, `02-a-history-of-spoons.Rmd`, `03-the-spoons-of-site-x.Rmd` and so on. 
+
+5. Build the book. With Bookdown installed, there will be a 'Build Book' button in the R Studio build pane. This will generate the static html files for the book, the pdf, and the epub. All of these will be found in a new folder in your project, `_book`. There are many more customizations that can be done, but that is sufficient to get one started.
+
+### The computational environment {-}
+
+The computational environment we are using is a fork of the [DhBox](http://dhbox.org) project from CUNY, led by Stephen Zweibel, Patrick Smyth Developer, Jojo Karlin, and Matthew K. Gold. DHBox requires Ubuntu >= 14.04 and Python 2.7x. We run it at Carleton courtesy of the School of Computer Science, Andrew Pullin, Peter Choynowski, and Doug Howe, via [OpenStack](https://www.openstack.org/) and [Docker](https://www.docker.com/). A version of DHBox that can be run from a USB stick can be found [here](https://github.com/DH-Box/dh-usb) and is worth exploring!
+
+
+
 
