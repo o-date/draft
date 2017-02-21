@@ -123,7 +123,7 @@ Assuming that this textbook is being used for one of those courses, that's how m
 1. (to be refined) Open a new textfile in the Archaebox. Call it 'initial-project-idea.md'. Using `#` to indicate headings, sketch out a question, problem, or provocation of your own that occurs to you as you browse the Kenen Tepe materials housed at [OpenContext.org](https://opencontext.org/projects/3DE4CD9C-259E-4C14-9B03-8B10454BA66E). Save that file.
 2. create a project management plan. (to be fleshed out in more detail)
 
-## Github & Version control
+## Github & Version Control
 
 It's a familiar situation - you've been working on a paper. It's where you want it to be, and you're certain you're done. You save it as 'final.doc'. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as 'final-w-changes.doc'. Later that day it occurs to you that you don't like those changes, and you go back to the original 'final.doc', make some changes, and just overwrite the previous version. Soon, you have a folder like:
 
@@ -211,7 +211,7 @@ The changes in your repo will now be stored in that *hidden* directory, `.git`. 
 
 2. Open your readme.md file again with the nano text editor, from the command line. Add some more information to it, then save and exit the text editor.
   a. type `$ git status`
-  b. Git will respond with a couple of pieces of information. It will tell you which `branch` you are on. It will list any untracked files present or new changes that are unstaged. We now will `stage` those changes to be added to our commit history by typing `$ git add -A`. (This adds any new, modified, or deleted files to your commit when you make it. There are [other options or flags](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660) - the bit that says `-A` -  where you add *only* the new and modified files, *or* only the modified and deleted files)
+  b. Git will respond with a couple of pieces of information. It will tell you which `branch` you are on. It will list any untracked files present or new changes that are unstaged. We now will `stage` those changes to be added to our commit history by typing `$ git add -A`. (the bit that says `-A` adds any new, modified, or deleted files to your commit when you make it. There are [other options or flags](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660) where you add *only* the new and modified files, *or* only the modified and deleted files.)
   c. Let's check our git status again: type `$ git status`
   d. You should see something like this:
 
@@ -242,12 +242,79 @@ a. We're going to go back in time and create a new branch. Here's how the comman
 b. We typed `git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43`. The response: `Switched to a new branch 'experiment'` Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you've time travelled! Those files are not missing; but they *are* on a different branch (the master branch) and you can't harm them now. Add a number of new files, making commits after each one. Check your git status, and check your git log as you go to make sure you're getting everything. Make sure there are no unstaged changes - everything's been committed.
 
 4. Now let's assume that your `experiment` branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your `master` branch. We're going to merge things. To merge, we have to go back to the master branch: `$ git checkout master`.
+
 a. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.
 
+5. One of the most powerful aspects of using Git is the possibility of using it to manage collaborations. To do this, we have to make a copy of your repository available to others as a `remote`. There are a variety of places on the web where this can be done; one of the most popular at the moment is [Github](http://github.com). Github allows a user to have an unlimited number of `public` repositories. Public repositories can be viewed and copied by anyone. `Private` repositories require a paid account, and access is controlled. If you are working on sensitive materials that can only be shared amongst the collaborators on a project, you should invest in an upgraded account (note that you can also control which files get included in commit; see [this help file](https://help.github.com/articles/ignoring-files/). In essence, you simply list the file names you do not want committed; here's an [example](https://gist.github.com/octocat/9257657)). Let's assume that your materials are not sensitive. 
+a. Go to Github, register for an account. 
+b. On the upper right part of the screen there is a large + sign. Click on that, and select `new public repository`
+c. On the following screen, give your repo a name. 
+d. DO NOT 'initialize this repo with a readme.md'. Leave `add .gitignore` and `add license` set to NONE. 
+e. Clic the green 'Create Repository' button.
+f. You now have a space into which you will publish the repository on your machine. At the command line, we now need to tell Git the location of this space. We do that with the following command, where you will change `your-username` and `your-new-repo` appropriately:
+```
+$ git remote add origin https://github.com/YOUR-USERNAME/YOUR-NEW-REPO.git
+```
+g. Now we push your local copy of the repository onto the web, to the Github version of your repo:
+```
+git push -u origin master
+```
 
-NEXT - PUBLISH A REPO, PUSH CHANGES TO A REPO, CLONING REPO (HAVE THEM COPY THIS BOOK)
+*NB* If you wanted to push a `branch` to your repository on the web instead, do you see how you would do that? If your branch was called `experiment`, the command would look like this:
 
-also - dangers when you edit things directly in github and forget to update your local etc
+```
+$ git push origin experiment
+
+```
+
+h. The changes can sometimes take a few minutes to show up on the website. Now, the next time you make changes to this repository, you can push them to your Github account - which is the 'origin' in the command above.  Add a new text file. Commit the changes. Push the changes to your account.
+
+6. Imagine you are collaborating with one of your classmates. Your classmate is in charge of the project, and is keeping track of the 'official' folder of materials (eg, the repo). You wish to make some changes to the files in that repository. You can manage that collaboration via Github by making a copy, what Github calls a `fork`. 
+a. Make sure you're logged into your Github account on the Github website. We're going to fork an example repository right now by going to [https://github.com/octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife). Click the 'fork' button at top-right. Github now makes a copy of the repository in your own Github account! 
+b. To make a copy of that repository on your own machine, you will now clone it with the `git clone` command. (Remember: a 'fork' copies someone's Github repo into a repo in your OWN Github account; a 'clone' makes a copy on your own MACHINE). Type:
+```
+$ cd.. 
+$ pwd
+```
+We do that to make sure you're not _inside_ any other repo you've made! Make sure you're not inside the repository we used in exercises 1 to 5, then proceed:
+
+```
+$ git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+$ ls
+```
+You now have a folder called 'Spoon-Knife' on your machine! Any changes you make inside that folder can be tracked with commits. You can also `git push -u origin master` when you're inside it, and the changes will show up on your OWN copy (your fork) on Github.com. 
+c. Make a fork of, and then clone, one of your classmates' repositories. Create a new branch. Add a new file to the repository on your machine, and then push it to your fork on Github. Remember, your new file will appear on the new branch you created, NOT the master branch.
+
+7. Now, you let your collaborator know that you've made a change that you want her to `merge` into the original repository. You do this by issuing a `pull request`. But first, we have to tell Git to keep an eye on that original repository, which we will call `upstream`. You do this by adding that repository's location like so:
+a. type (but change the address appropriately):
+
+```
+$ git remote add upstream THE-FULL-URL-TO-THEIR-REPO-ENDING-WITH-.git
+```
+b. You can keep your version of the remote up-to-date by fetching any new changes your classmate has done:
+```
+$ git fetch upstream
+```
+c. Now let's make a `pull` request (you might want to bookmark this [help document](https://help.github.com/articles/creating-a-pull-request/)). Go to your copy of your classmate's repository at your Github account. Make sure you've selected the correct branch you pushed your changes to, by selecting it from the Branches menu drop down list. 
+d. Click the 'new pull request' button.
+e. The new page that appears can be confusing, but it is trying to double check with you which changes you want to make, and where. *'Base Branch'* is the branch where you want your changes to go, ie, your classmate's repository. *'head branch'* is the branch where you made *your* changes. Make sure these are set properly. Remember: the first one is the TO, the second one is the FROM: the place where you want your changes to go TO, FROM the place where you made the changes.
+f. A pull request has to have a message attached to it, so that your classmate knows what kind of change you're proposing. Fill in the message fields appropriately, then hit the 'create pull request' button.
+
+![A pull request message; Image from Github.com](images/pullrequest-send.png)
+
+8. Finally, the last bit of work to be done is to accept the pull request and `merge` the changes into the original repository.
+a. Go to your repository on your Github account. Check to see if there are any 'pull requests' - these will be listed under the 'pull requests' tab. Click on that tab.
+b. You can merge from the command line, but for now, you can simply click on the green 'merge pull request' button, and then the 'confirm merge' button. The changes your classmate has made have now been folded into your repository.
+c. To get the updates on your local machine, go back to the command line and type
+```
+$ git pull origin master
+```
+
+### Warnings
+
+It is possible to make changes to files directly via the edit button on Github. Be careful if you do this, because things rapidly can become out of sync, resulting in conflicts between differing versions of the same file. Get in the habit of making your changes on your own machine, and making sure things are committed and up-to-date (`git status` is your friend) before beginning work. At this point, you might want to investigate some of the graphical interfaces for Git (such as [Github Desktop](https://desktop.github.com/)). Knowing as you do how things work from the command line, the idiosyncracies of the graphical interfaces will make more sense. For further practice on the ins-and-outs of Git and Github Desktop, we recommend trying [the Git-it app](https://github.com/jlord/git-it-electron/) by Jessica Lord.
+
+For help in resolving merge conflicts, see the [Github help documentation](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/).
 
 
 ## Open Notebook Research & Scholarly Communication
@@ -259,6 +326,7 @@ also - dangers when you edit things directly in github and forget to update your
  - be as open as it is safe for you to be. one could set up an owncloud via reclaim hosting, and push materials there in both open and closed versions: here at least you've got LOCKSS
  - Ben Marwick's demo repos for archae projects https://github.com/benmarwick/researchcompendium
  - reproducibility case studies project: https://github.com/benmarwick/repro-case-studies
+ - https://www.practicereproducibleresearch.org/case-studies/benmarwick.html
 
 ### discussion
 

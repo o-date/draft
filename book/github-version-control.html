@@ -96,12 +96,13 @@
 <li class="chapter" data-level="1.2.1" data-path="project-management-basics.html"><a href="project-management-basics.html#take-aways"><i class="fa fa-check"></i><b>1.2.1</b> Take-aways</a></li>
 <li class="chapter" data-level="1.2.2" data-path="project-management-basics.html"><a href="project-management-basics.html#exercises"><i class="fa fa-check"></i><b>1.2.2</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="github-version-control.html"><a href="github-version-control.html"><i class="fa fa-check"></i><b>1.3</b> Github &amp; Version control</a><ul>
+<li class="chapter" data-level="1.3" data-path="github-version-control.html"><a href="github-version-control.html"><i class="fa fa-check"></i><b>1.3</b> Github &amp; Version Control</a><ul>
 <li class="chapter" data-level="1.3.1" data-path="github-version-control.html"><a href="github-version-control.html#the-core-functions-of-git"><i class="fa fa-check"></i><b>1.3.1</b> The core functions of Git</a></li>
 <li class="chapter" data-level="1.3.2" data-path="github-version-control.html"><a href="github-version-control.html#key-terms"><i class="fa fa-check"></i><b>1.3.2</b> Key Terms</a></li>
 <li class="chapter" data-level="1.3.3" data-path="github-version-control.html"><a href="github-version-control.html#take-aways-1"><i class="fa fa-check"></i><b>1.3.3</b> Take-aways</a></li>
 <li class="chapter" data-level="1.3.4" data-path="github-version-control.html"><a href="github-version-control.html#further-reading"><i class="fa fa-check"></i><b>1.3.4</b> Further Reading</a></li>
 <li class="chapter" data-level="1.3.5" data-path="github-version-control.html"><a href="github-version-control.html#exercises-1"><i class="fa fa-check"></i><b>1.3.5</b> exercises</a></li>
+<li class="chapter" data-level="1.3.6" data-path="github-version-control.html"><a href="github-version-control.html#warnings"><i class="fa fa-check"></i><b>1.3.6</b> Warnings</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html"><i class="fa fa-check"></i><b>1.4</b> Open Notebook Research &amp; Scholarly Communication</a><ul>
 <li class="chapter" data-level="1.4.1" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html#discussion"><i class="fa fa-check"></i><b>1.4.1</b> discussion</a></li>
@@ -221,7 +222,7 @@
 
             <section class="normal" id="section-">
 <div id="github-version-control" class="section level2">
-<h2><span class="header-section-number">1.3</span> Github &amp; Version control</h2>
+<h2><span class="header-section-number">1.3</span> Github &amp; Version Control</h2>
 <p>It’s a familiar situation - you’ve been working on a paper. It’s where you want it to be, and you’re certain you’re done. You save it as ‘final.doc’. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as ‘final-w-changes.doc’. Later that day it occurs to you that you don’t like those changes, and you go back to the original ‘final.doc’, make some changes, and just overwrite the previous version. Soon, you have a folder like:</p>
 <pre><code>|-project
     |-&#39;finalfinal.doc&#39;
@@ -305,7 +306,7 @@ added in the concluding section.</code></pre>
 </ol>
 <ol style="list-style-type: lower-alpha">
 <li>type <code>$ git status</code></li>
-<li>Git will respond with a couple of pieces of information. It will tell you which <code>branch</code> you are on. It will list any untracked files present or new changes that are unstaged. We now will <code>stage</code> those changes to be added to our commit history by typing <code>$ git add -A</code>. (This adds any new, modified, or deleted files to your commit when you make it. There are <a href="https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660">other options or flags</a> - the bit that says <code>-A</code> - where you add <em>only</em> the new and modified files, <em>or</em> only the modified and deleted files)</li>
+<li>Git will respond with a couple of pieces of information. It will tell you which <code>branch</code> you are on. It will list any untracked files present or new changes that are unstaged. We now will <code>stage</code> those changes to be added to our commit history by typing <code>$ git add -A</code>. (the bit that says <code>-A</code> adds any new, modified, or deleted files to your commit when you make it. There are <a href="https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660">other options or flags</a> where you add <em>only</em> the new and modified files, <em>or</em> only the modified and deleted files.)</li>
 <li>Let’s check our git status again: type <code>$ git status</code></li>
 <li>You should see something like this:</li>
 </ol>
@@ -338,8 +339,72 @@ Fixed the headings that were broken in the about section of readme.md
 <ol style="list-style-type: lower-alpha">
 <li>Now, we merge with <code>$ git merge experiment</code>. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.</li>
 </ol>
-<p>NEXT - PUBLISH A REPO, PUSH CHANGES TO A REPO, CLONING REPO (HAVE THEM COPY THIS BOOK)</p>
-<p>also - dangers when you edit things directly in github and forget to update your local etc</p>
+<ol start="5" style="list-style-type: decimal">
+<li>One of the most powerful aspects of using Git is the possibility of using it to manage collaborations. To do this, we have to make a copy of your repository available to others as a <code>remote</code>. There are a variety of places on the web where this can be done; one of the most popular at the moment is <a href="http://github.com">Github</a>. Github allows a user to have an unlimited number of <code>public</code> repositories. Public repositories can be viewed and copied by anyone. <code>Private</code> repositories require a paid account, and access is controlled. If you are working on sensitive materials that can only be shared amongst the collaborators on a project, you should invest in an upgraded account (note that you can also control which files get included in commit; see <a href="https://help.github.com/articles/ignoring-files/">this help file</a>. In essence, you simply list the file names you do not want committed; here’s an <a href="https://gist.github.com/octocat/9257657">example</a>). Let’s assume that your materials are not sensitive.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Go to Github, register for an account.</li>
+<li>On the upper right part of the screen there is a large + sign. Click on that, and select <code>new public repository</code></li>
+<li>On the following screen, give your repo a name.</li>
+<li>DO NOT ‘initialize this repo with a readme.md’. Leave <code>add .gitignore</code> and <code>add license</code> set to NONE.</li>
+<li>Clic the green ‘Create Repository’ button.</li>
+<li><p>You now have a space into which you will publish the repository on your machine. At the command line, we now need to tell Git the location of this space. We do that with the following command, where you will change <code>your-username</code> and <code>your-new-repo</code> appropriately:</p>
+<pre><code>$ git remote add origin https://github.com/YOUR-USERNAME/YOUR-NEW-REPO.git</code></pre></li>
+<li><p>Now we push your local copy of the repository onto the web, to the Github version of your repo:</p>
+<pre><code>git push -u origin master</code></pre></li>
+</ol>
+<p><em>NB</em> If you wanted to push a <code>branch</code> to your repository on the web instead, do you see how you would do that? If your branch was called <code>experiment</code>, the command would look like this:</p>
+<pre><code>$ git push origin experiment
+</code></pre>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>The changes can sometimes take a few minutes to show up on the website. Now, the next time you make changes to this repository, you can push them to your Github account - which is the ‘origin’ in the command above. Add a new text file. Commit the changes. Push the changes to your account.</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>Imagine you are collaborating with one of your classmates. Your classmate is in charge of the project, and is keeping track of the ‘official’ folder of materials (eg, the repo). You wish to make some changes to the files in that repository. You can manage that collaboration via Github by making a copy, what Github calls a <code>fork</code>.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Make sure you’re logged into your Github account on the Github website. We’re going to fork an example repository right now by going to <a href="https://github.com/octocat/Spoon-Knife" class="uri">https://github.com/octocat/Spoon-Knife</a>. Click the ‘fork’ button at top-right. Github now makes a copy of the repository in your own Github account!</li>
+<li><p>To make a copy of that repository on your own machine, you will now clone it with the <code>git clone</code> command. (Remember: a ‘fork’ copies someone’s Github repo into a repo in your OWN Github account; a ‘clone’ makes a copy on your own MACHINE). Type:</p>
+<pre><code>$ cd.. 
+$ pwd</code></pre>
+<p>We do that to make sure you’re not <em>inside</em> any other repo you’ve made! Make sure you’re not inside the repository we used in exercises 1 to 5, then proceed:</p></li>
+</ol>
+<pre><code>$ git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+$ ls</code></pre>
+<p>You now have a folder called ‘Spoon-Knife’ on your machine! Any changes you make inside that folder can be tracked with commits. You can also <code>git push -u origin master</code> when you’re inside it, and the changes will show up on your OWN copy (your fork) on Github.com. c. Make a fork of, and then clone, one of your classmates’ repositories. Create a new branch. Add a new file to the repository on your machine, and then push it to your fork on Github. Remember, your new file will appear on the new branch you created, NOT the master branch.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Now, you let your collaborator know that you’ve made a change that you want her to <code>merge</code> into the original repository. You do this by issuing a <code>pull request</code>. But first, we have to tell Git to keep an eye on that original repository, which we will call <code>upstream</code>. You do this by adding that repository’s location like so:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>type (but change the address appropriately):</li>
+</ol>
+<pre><code>$ git remote add upstream THE-FULL-URL-TO-THEIR-REPO-ENDING-WITH-.git</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>You can keep your version of the remote up-to-date by fetching any new changes your classmate has done:</p>
+<pre><code>$ git fetch upstream</code></pre></li>
+<li>Now let’s make a <code>pull</code> request (you might want to bookmark this <a href="https://help.github.com/articles/creating-a-pull-request/">help document</a>). Go to your copy of your classmate’s repository at your Github account. Make sure you’ve selected the correct branch you pushed your changes to, by selecting it from the Branches menu drop down list.</li>
+<li>Click the ‘new pull request’ button.</li>
+<li>The new page that appears can be confusing, but it is trying to double check with you which changes you want to make, and where. <em>‘Base Branch’</em> is the branch where you want your changes to go, ie, your classmate’s repository. <em>‘head branch’</em> is the branch where you made <em>your</em> changes. Make sure these are set properly. Remember: the first one is the TO, the second one is the FROM: the place where you want your changes to go TO, FROM the place where you made the changes.</li>
+<li><p>A pull request has to have a message attached to it, so that your classmate knows what kind of change you’re proposing. Fill in the message fields appropriately, then hit the ‘create pull request’ button.</p></li>
+</ol>
+<div class="figure">
+<img src="images/pullrequest-send.png" alt="A pull request message; Image from Github.com" />
+<p class="caption">A pull request message; Image from Github.com</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Finally, the last bit of work to be done is to accept the pull request and <code>merge</code> the changes into the original repository.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Go to your repository on your Github account. Check to see if there are any ‘pull requests’ - these will be listed under the ‘pull requests’ tab. Click on that tab.</li>
+<li>You can merge from the command line, but for now, you can simply click on the green ‘merge pull request’ button, and then the ‘confirm merge’ button. The changes your classmate has made have now been folded into your repository.</li>
+<li><p>To get the updates on your local machine, go back to the command line and type</p>
+<pre><code>$ git pull origin master</code></pre></li>
+</ol>
+</div>
+<div id="warnings" class="section level3">
+<h3><span class="header-section-number">1.3.6</span> Warnings</h3>
+<p>It is possible to make changes to files directly via the edit button on Github. Be careful if you do this, because things rapidly can become out of sync, resulting in conflicts between differing versions of the same file. Get in the habit of making your changes on your own machine, and making sure things are committed and up-to-date (<code>git status</code> is your friend) before beginning work. At this point, you might want to investigate some of the graphical interfaces for Git (such as <a href="https://desktop.github.com/">Github Desktop</a>). Knowing as you do how things work from the command line, the idiosyncracies of the graphical interfaces will make more sense. For further practice on the ins-and-outs of Git and Github Desktop, we recommend trying <a href="https://github.com/jlord/git-it-electron/">the Git-it app</a> by Jessica Lord.</p>
+<p>For help in resolving merge conflicts, see the <a href="https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/">Github help documentation</a>.</p>
 </div>
 </div>
             </section>
