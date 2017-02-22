@@ -226,7 +226,71 @@
 <p>yadda … maybe do this in R (since we have an Rserver in the box) and use the rcats tutorial as a model? <a href="https://rforcats.net/" class="uri">https://rforcats.net/</a> which might fit into the section below</p>
 <div id="working-with-open-context" class="section level3">
 <h3><span class="header-section-number">1.7.1</span> Working with Open Context</h3>
-<p>yadda</p>
+<p><a href="http://opencontext.org">Open Context, http://opencontext.org</a> operates under the idea that every element of an archaeological research project should be published. To that end, they publish <em>everything</em> with its own unique URI.</p>
+<p>Search for something interesting. I put ‘poggio’ in the search box, and then clicked on the various options to get the architectural fragments. Look at the URL: <a href="https://opencontext.org/subjects-search/?prop=oc-gen-cat-object&amp;q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite" class="uri">https://opencontext.org/subjects-search/?prop=oc-gen-cat-object&amp;q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite</a> See all that stuff after the word ‘Poggio’? That’s to generate the map view. We don’t need it.</p>
+<p>We’re going to ask for the search results w/o all of the website extras, no maps, no shiny interface. To do that, we take advantage of the API. With open context, if you have a search with a ‘?’ in the URL, you can put .json in front of the question mark, and delete all of the stuff from the # sign on, like so:</p>
+<p><a href="https://opencontext.org/subjects-search/.json?prop=oc-gen-cat-object&amp;q=Poggio" class="uri">https://opencontext.org/subjects-search/.json?prop=oc-gen-cat-object&amp;q=Poggio</a></p>
+<p>Put that in the address bar. Boom! lots of stuff! But only one page’s worth, which isn’t lots of data. To get a lot more data, we have to add another parameter, the number of rows: ?rows=100&amp;. Slot that in just before the p in prop= and see what happens.</p>
+<p>Now, that isn’t all of the records though. Remove the .json and see what happens when you click on the arrows to page through the NEXT 100 rows. You get a URL like this:</p>
+<p><a href="https://opencontext.org/subjects-search/?rows=100&amp;prop=oc-gen-cat-object&amp;start=100&amp;q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite" class="uri">https://opencontext.org/subjects-search/?rows=100&amp;prop=oc-gen-cat-object&amp;start=100&amp;q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite</a></p>
+<p>So – to recap, the URL is searching for 100 rows at a time, in the general object category, starting from row 100, and grabbing materials from Poggio. We now know enough about how open context’s api works to grab material.</p>
+<p>Couple of ways one could grab it:</p>
+<ol style="list-style-type: decimal">
+<li>You could copy n’ paste -&gt; but that will only get you one page’s worth of data (and if you tried to put, say, 10791 into the ‘rows’ parameter, you’ll just get a time-out error). You’d have to go back to the search page, hit the ‘next’ button, reinsert the .json etc over and over again.</li>
+<li>Automatically. We’ll use a program called wget to do this. (To install wget on your machine, see the programming historian Wget will interact with the Open Context site to retrieve the data. We feed wget a file that contains all of the urls that we wish to grab, and it saves all of the data into a single file. So, open a new text file and paste our search URL in there like so:</li>
+</ol>
+<pre><code>https://opencontext.org/subjects-search/.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;q=Poggio
+https://opencontext.org/subjects-search/.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;start=100&amp;q=Poggio
+https://opencontext.org/subjects-search/.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;start=200&amp;q=Poggio</code></pre>
+<p>…and so on until we’ve covered the full 4000 objects. Tedious? You bet. So we’ll get the computer to generate those URLS for us. Open a new text file, and copy the following in:</p>
+<pre><code>#URL-Generator.py
+
+urls = &#39;&#39;;
+f=open(&#39;urls.txt&#39;,&#39;w&#39;)
+for x in range(1, 4000, 100):
+    urls = &#39;https://opencontext.org/subjects-search/.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;start=%d&amp;q=Poggio/\n&#39; % (x)
+    f.write(urls)
+f.close</code></pre>
+<p>and save it as url-generator.py. This program is in the python language. Type at the prompt:</p>
+<pre><code>$ python url-generator.py</code></pre>
+<p>This little program defines an empty container called ‘urls’; it then creates a new file called ‘urls.txt’; then we tell it to write the address of our search into the urls container. See the %d in there? The program writes a number between 1 and 4000; each time it does that, it counts by 100 so that the next time it goes through the loop, it adds a new address with the correct starting point! Then it saves that container of URLs into the file urls.txt. Go ahead, open it up, and you’ll see.</p>
+<p>Now we’ll feed it to wget like so. At the prompt type</p>
+<pre><code>$ wget -i urls.txt -r --no-parent -nd –w 2 --limit-rate=10k</code></pre>
+<p>You’ll end up with a lot of files that have no file extension in your folder, eg</p>
+<pre><code>.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;start=61&amp;q=Poggio%2F</code></pre>
+<p>Rename them so that they have <code>.json</code> file extensions. Now we concatenate them together</p>
+<pre><code># As simple as this. Output file should be last
+$ json-concat file1.json file2.json file3.json file4.json ouput.json</code></pre>
+<p>SG MAKE SURE THAT JSON-CONCAT CAN BE HAD ON DHBOX, OTHERWISE FIND ALTERNATIVE</p>
+<p>ALSO MAKE SURE TO TALK THROUGH THIS: <a href="https://github.com/ropensci/opencontext" class="uri">https://github.com/ropensci/opencontext</a></p>
+<p>json is a text file where keys are paired with values. JQ is a piece of software that enables us to reach into a json file, grab the data we want, and create either new json or csv. If you intend to visualize and explore data using some sort of spreadsheet program, then you’ll need to extract the data you want into a csv that your spreadsheet can digest. If you wanted to try something like d3 or some other dynamic library for generating web-based visualizations (eg p5js), you’ll need json.</p>
+<p>jqplay</p>
+<p>JQ lets us do some fun filtering and parsing, but we won’t download and install it yet. Instead, we’ll load some sample data into a web-toy called jqplay. This will let us try different ideas out and see the results immediately. In the this file called sample.json I have the query results from Open Context – Github recognizes that it is json and that it has geographic data within it, and turns it automatically into a map! To see the raw json, click on the &lt; &gt; button. Copy that data into the json box at jqplay.org.</p>
+<p>JQPlay will colour-code the json. Everything in red is a key, everything in black is a value. Keys can be nested, as represented by the indentation. Scroll down through the json – do you see any interesting key:value pairs? Matthew Lincoln’s tutorial at the programming historian is one of the most cogent explanations of how this works, and I do recommend you read that piece. Suffice to say, for now, that if you see an interesting key:value pair that you’d like to extract, you need to figure out just how deeply nested it is. For instance, there is a properties key that seems to have interesting information within it about dates, wares, contexts and so on. Perhaps we’d like to build a query using JQ that extracts that information into a csv. It’s within the features key pair, so try entering the following in the filter box:</p>
+<pre><code>.features [ ] | .properties</code></pre>
+<p>You should get something like this:</p>
+<pre><code>{
+  &quot;id&quot;: &quot;#geo-disc-tile-12023202222130313322&quot;,
+  &quot;href&quot;: &quot;https://opencontext.org/search/?disc-geotile=12023202222130313322&amp;prop=oc-gen-cat-object&amp;rows=5&amp;q=Poggio&quot;,
+  &quot;label&quot;: &quot;Discovery region (1)&quot;,
+  &quot;feature-type&quot;: &quot;discovery region (facet)&quot;,
+  &quot;count&quot;: 12,
+  &quot;early bce/ce&quot;: -700,
+  &quot;late bce/ce&quot;: -535
+}
+{
+  &quot;id&quot;: &quot;#geo-disc-tile-12023202222130313323&quot;,
+  &quot;href&quot;: &quot;https://opencontext.org/search/?disc-geotile=12023202222130313323&amp;prop=oc-gen-cat-object&amp;rows=5&amp;q=Poggio&quot;,
+  &quot;label&quot;: &quot;Discovery region (2)&quot;,
+  &quot;feature-type&quot;: &quot;discovery region (facet)&quot;,
+  &quot;count&quot;: 25,
+  &quot;early bce/ce&quot;: -700,
+  &quot;late bce/ce&quot;: -535
+}</code></pre>
+<p>For the exact syntax of why that works, see Lincoln’s tutorial. I’m going to just jump to the conclusion now. Let’s say we wanted to grab some of those keys within properties, and turn into a csv. We tell it to look inside features and find properties; then we tell it to make a new array with just those keys within properties we want; and then we tell it to pipe that information into comma-separated values. Try the following on the sample data:</p>
+<pre><code>.features [ ] | .properties | [.label, .href, .&quot;context label&quot;, .&quot;early bce/ce&quot;, .&quot;late bce/ce&quot;, .&quot;item category&quot;, .snippet] | @csv</code></pre>
+<p>…and make sure to tick the ‘raw output’ box at the top right. Ta da! You’ve culled the information of interest from a json file, into a csv. There’s a lot more you can do with jq, but this will get you started. Finally, we move back to the command line and invoke JQ to format the data how we want it:</p>
+<pre><code>jq -r &#39;.features [ ] | .properties | [.label, .href, .&quot;context label&quot;, .&quot;early bce/ce&quot;, .&quot;late bce/ce&quot;, .&quot;item category&quot;, .snippet] | @csv&#39; data.json &gt; data.csv</code></pre>
 </div>
 <div id="working-with-omeka" class="section level3">
 <h3><span class="header-section-number">1.7.2</span> Working with Omeka</h3>

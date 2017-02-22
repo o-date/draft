@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  22 FEB 2017 13:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  22 FEB 2017 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -952,63 +952,114 @@ Package pdftex.def Info: images/commit-history.png used on input line 922.
 [25] <images/pullrequest-send.png, id=454, 774.895pt x 403.5075pt>
 File: images/pullrequest-send.png Graphic file (type png)
 <use images/pullrequest-send.png>
-Package pdftex.def Info: images/pullrequest-send.png used on input line 1467.
+Package pdftex.def Info: images/pullrequest-send.png used on input line 1466.
 (pdftex.def)             Requested size: 469.76476pt x 244.61842pt.
-[26] [27 <./images/pullrequest-send.png>] [28] [29] [30]
-Chapter 2.
-[31
+[26] [27 <./images/pullrequest-send.png>] [28] [29]
+Overfull \hbox (118.24327pt too wide) in paragraph at lines 1803--1803
+[]\T1/lmtt/m/n/10 https://opencontext.org/subjects-search/.json?rows=100&prop=o
+c-gen-cat-object---oc-gen-cat-arch-element&q=Poggio[] 
+ []
 
-] [32
+
+Overfull \hbox (170.74312pt too wide) in paragraph at lines 1803--1803
+[]\T1/lmtt/m/n/10 https://opencontext.org/subjects-search/.json?rows=100&prop=o
+c-gen-cat-object---oc-gen-cat-arch-element&start=100&q=Poggio[] 
+ []
+
+
+Overfull \hbox (170.74312pt too wide) in paragraph at lines 1803--1803
+[]\T1/lmtt/m/n/10 https://opencontext.org/subjects-search/.json?rows=100&prop=o
+c-gen-cat-object---oc-gen-cat-arch-element&start=200&q=Poggio[] 
+ []
+
+[30]
+Overfull \hbox (280.9928pt too wide) in paragraph at lines 1818--1818
+[]    \T1/lmtt/m/n/10 urls = \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 https://opencont
+ext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch
+-element&start=%d&q=Poggio/\n\TS1/lmtt/m/n/10 ' \T1/lmtt/m/n/10 % (x)[] 
+ []
+
+[31]
+Overfull \hbox (144.4932pt too wide) in paragraph at lines 1920--1920
+[]  \T1/lmtt/m/n/10 "href": "https://opencontext.org/search/?disc-geotile=12023
+202222130313322&prop=oc-gen-cat-object&rows=5&q=Poggio",[] 
+ []
+
+
+Overfull \hbox (144.4932pt too wide) in paragraph at lines 1920--1920
+[]  \T1/lmtt/m/n/10 "href": "https://opencontext.org/search/?disc-geotile=12023
+202222130313323&prop=oc-gen-cat-object&rows=5&q=Poggio",[] 
+ []
+
+
+Overfull \hbox (217.99298pt too wide) in paragraph at lines 1932--1932
+[]\T1/lmtt/m/n/10 .features [ ] | .properties | [.label, .href, ."context label
+", ."early bce/ce", ."late bce/ce", ."item category", .snippet] | @csv[] 
+ []
+
+
+Overfull \hbox (370.24254pt too wide) in paragraph at lines 1942--1942
+[]\T1/lmtt/m/n/10 jq -r \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 .features [ ] | .prop
+erties | [.label, .href, ."context label", ."early bce/ce", ."late bce/ce", ."i
+tem category", .snippet] | @csv\TS1/lmtt/m/n/10 ' \T1/lmtt/m/n/10 data.json > d
+ata.csv[] 
+ []
+
+[32] [33] [34
+
+]
+Chapter 2.
+[35] [36
 
 ]
 Chapter 3.
-[33] [34]
+[37] [38]
 Chapter 4.
-[35
+[39
 
-] [36]
+] [40]
 Chapter 5.
-[37
+[41
 
-] [38
+] [42
 
 ]
 Chapter 6.
-[39] [40
+[43] [44
 
 ]
-Overfull \hbox (31.67389pt too wide) in paragraph at lines 1962--1965
+Overfull \hbox (31.67389pt too wide) in paragraph at lines 2198--2201
 \T1/lmr/m/it/10 (-20) ward Glance\T1/lmr/m/n/10 (-20) . []$http : / / lincolnmu
 llen . com / blog / a-[]con^^\rmation-[]of-[]andrew-[]goldstone-[]on-[]teaching
 -[]quantitative-[]methods/$[]. 
  []
 
 
-Overfull \hbox (54.49132pt too wide) in paragraph at lines 1967--1970
+Overfull \hbox (54.49132pt too wide) in paragraph at lines 2203--2206
 \T1/lmr/m/it/10 (-20) Owens\T1/lmr/m/n/10 (-20) . []$http : / / www . trevorowe
 ns . org / 2012 / 11 / discovery-[]and-[]justi^^\cation-[]are-[]di^^[erent-[]no
 tes-[]on-[]sciencing-[]the-[]humanities/$[]. 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1981.
-[41]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1981.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2217.
+[45]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2217.
 (./odate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1981.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1981.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2217.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2217.
 
 Package rerunfilecheck Info: File `odate.out' has not changed.
 (rerunfilecheck)             Checksum: 0DACDAF81516B9664145D6E01A06DBD6;9169.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1981.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2217.
  ) 
 Here is how much of TeX's memory you used:
- 12832 strings out of 494501
- 187655 string characters out of 6167030
+ 12838 strings out of 494501
+ 187697 string characters out of 6167030
  284461 words of memory out of 5000000
  15590 multiletter control sequences out of 15000+600000
  65314 words of font info for 110 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 32i,5n,35p,497b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,5n,35p,497b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/
 local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/tex
 live/2015basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/
@@ -1019,10 +1070,10 @@ ist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015basic/texmf-dist/f
 onts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/
 type1/public/lm/lmro10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
 /public/lm/lmtt10.pfb>
-Output written on odate.pdf (41 pages, 654671 bytes).
+Output written on odate.pdf (45 pages, 669189 bytes).
 PDF statistics:
- 693 PDF objects out of 1000 (max. 8388607)
- 624 compressed objects within 7 object streams
- 216 named destinations out of 1000 (max. 500000)
+ 728 PDF objects out of 1000 (max. 8388607)
+ 655 compressed objects within 7 object streams
+ 222 named destinations out of 1000 (max. 500000)
  12623 words of extra memory for PDF output out of 14400 (max. 10000000)
 

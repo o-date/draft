@@ -182,9 +182,9 @@ You and Anna are working together on the project. You have made a new project re
 + publish: take my folder on my computer, and copy it and its contents to the web as a repository at github.com/myusername/repositoryname
 + sync: update the web repository with the latest commit from my local folder
 + branch: make a copy of my repository with a 'working name'
-+ merge: fold the changes I have made on a branch into another branch (typically, either master or gh-pages)
++ merge: fold the changes I have made on a branch into another branch
 + fork: to make a copy of someone else's repo
-+ clone: to copy a repo online onto your own computer
++ clone: to copy an online repo onto your own computer
 + pull request: to ask the original maker of a repo to 'pull' your changes into their master, original, repository
 + push: to move your changes from your computer to the online repo
 + conflict: when two commits describe different changes to the same part of a file
@@ -336,15 +336,15 @@ Major funding bodies are starting to require a similar transparency in the resea
 
 > All research data collected with the use of SSHRC funds must be preserved and made available for use by others within a reasonable period of time. SSHRC considers “a reasonable period” to be within two years of the completion of the research project for which the data was collected.
 
-Annecdotally, we have also heard of work being denied funding because the data management plan, and/or the plan for knowledge mobilization, made only the briefest of nods towards these issues: 'we shall have a blog and will save the data onto a usb stick' does not cut it any more.
-
-A parallel development is the growing practice of placing materials online as pre-prints or even as drafts, for sharing and for soliciting comments. Graham for instance uses a blog as a place to share longer-form discursive writing in progress; with his collaborators Ian Milligan and Scott Weingart, he even wrote a book 'live' on the web, warts and all (which you may still view at [The Macroscope](http://themacroscope.org)). Sharing the draft in progress allowed them to identify errors and ommissions as they wrote, and for their individual chapters and sections to be incorporated into class syllabi right away. In their particular case, they came to an arrangment with their publisher to permit the draft to remain online even after the formal publication of the 'finished' book - which was fortunate, as they ended up writing another chapter immediately after publication! In this, they were building on the work of scholars such as Kathleen Fitzpatrick, whose [_Planned Obsolescence_](http://mcpress.media-commons.org/plannedobsolescence/) was one of the first to use the Media Commons 'comment press' website to support the writing. 
+Annecdotally, we have also heard of work being denied funding because the data management plan, and/or the plan for knowledge mobilization, made only the briefest of nods towards these issues: 'we shall have a blog and will save the data onto a usb stick' does not cut it any more. A recent volume of case-studies in 'reproducible research' includes a contribution from Ben Marwick that details not only the benefits of such an approach, but also the 'pain points'. Key amongst them was that not everyone participating in the project was on board using scripted code to perform the analysis (preferring instead to use the point-and-click of Excel), the duplication of effort that emerged as a result, and the complexities that arose from what he calls the 'dual universes' of Microsoft tools versus the open source tools. (MARWICK REF). On the other hand, the advantages outweighed the pain. For Marwick's team, because their results and analysis can be re-queried and re-interrogated, they have an unusually high degree of confidence in what they've produced. Their data, and their results have a complete history of revisions that can be examined by reviewers. Their code can be re-used and re-purposed, thus making their subsequent research more efficient. Marwick goes on to create an entire 'compendium' of code, notes, data, and software dependencies that can be duplicated by other researchers. Indeed, we will be re-visiting their compendium in Section XXXXXXXXX.
 
 Ultimately, McDaniels says it best about keeping open notebooks of research in progress when he writes,
 
 > The truth is that we often don’t realize the value of what we have until someone else sees it. By inviting others to see our work in progress, we also open new avenues of interpretation, uncover new linkages between things we would otherwise have persisted in seeing as unconnected, and create new opportunities for collaboration with fellow travelers. These things might still happen through the sharing of our notebooks after publication, but imagine how our publications might be enriched and improved if we lifted our gems to the sunlight before we decided which ones to set and which ones to discard? What new flashes in the pan might we find if we sifted through our sources in the company of others?
 
-In an ideal world, we would recommend that everyone should push for such radical transparency in their research and teaching. But what is safe for a group of (mostly) white, tenured, men is not safe for everyone online. In which case, what we recommend is for individuals to assess what is safest for them to do, while still making use of the affordances of Git, remote repositories, and simple text files. 
+A parallel development is the growing practice of placing materials online as pre-prints or even as drafts, for sharing and for soliciting comments. Graham for instance uses a blog as a place to share longer-form discursive writing in progress; with his collaborators Ian Milligan and Scott Weingart, he even wrote a book 'live' on the web, warts and all (which you may still view at [The Macroscope](http://themacroscope.org)). Sharing the draft in progress allowed them to identify errors and ommissions as they wrote, and for their individual chapters and sections to be incorporated into class syllabi right away. In their particular case, they came to an arrangment with their publisher to permit the draft to remain online even after the formal publication of the 'finished' book - which was fortunate, as they ended up writing another chapter immediately after publication! In this, they were building on the work of scholars such as Kathleen Fitzpatrick, whose [_Planned Obsolescence_](http://mcpress.media-commons.org/plannedobsolescence/) was one of the first to use the Media Commons 'comment press' website to support the writing. Commentpress is a plugin for the widely used Wordpress blogging system, which allows comments to be made at the level of individual paragraphs. This textbook you are currently reading uses another solution, the [hypothes.is](http://hypothes.is) plugin that fosters communal reading and annotation of electronic texts. This points to another happy by-product of sharing one's work this way - the ability to generate communities of interest around one's research. The Kitz et al. volume is written with the [Gitbook](http://gitbook.com) platform, which is a graphical interface for writing using Git at its core with markdown text files to manage the collaboration. The commit history for the book then also is a record of how the book evolved, and who did what to it when. In a way, it functions a bit like 'track changes' in Word, with the significant difference that the evolution of the book can be rewound and taken down different branches when desired.  
+
+In an ideal world, we would recommend that everyone should push for such radical transparency in their research and teaching. But what is safe for a group of (mostly) white, tenured, men is not safe for everyone online. In which case, what we recommend is for individuals to assess what is safest for them to do, while still making use of the affordances of Git, remote repositories, and simple text files. [Bitbucket](http://bitbucket.org) at the time of writing offers free private repositories (so you can push your changes to a remote repository without fear of others looking or cloning your materials); [ReclaimHosting](http://reclaimhosting.com) supports academic webhosting and allows one to set up the private 'dropbox' like file-sharing service [Owncloud](https://owncloud.org/).  
  
  - in this section, discuss people like caleb mcdaniels, lincoln mullen, ben marwick, other archaeologists, 
  - develop exercise to use lincoln's framework for simple notebooks, Ben's examples for complex notebooks
@@ -369,7 +369,7 @@ In an ideal world, we would recommend that everyone should push for such radical
 
 ## Introduction to Digital Libraries, Archives & Repositories
 
-yadda
+yadda linked open data in here?
 
 ## Command Line Methods for Working with APIs
 
@@ -377,7 +377,123 @@ yadda ... maybe do this in R (since we have an Rserver in the box) and use the r
 
 ### Working with Open Context
 
-yadda
+[Open Context, http://opencontext.org](http://opencontext.org) operates under the idea that every element of an archaeological research project should be published. To that end, they publish *everything* with its own unique URI.
+
+Search for something interesting. I put ‘poggio’ in the search box, and then clicked on the various options to get the architectural fragments. Look at the URL:
+https://opencontext.org/subjects-search/?prop=oc-gen-cat-object&q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite
+See all that stuff after the word ‘Poggio’? That’s to generate the map view. We don’t need it.
+
+We’re going to ask for the search results w/o all of the website extras, no maps, no shiny interface. To do that, we take advantage of the API. With open context, if you have a search with a ‘?’ in the URL, you can put .json in front of the question mark, and delete all of the stuff from the # sign on, like so:
+
+https://opencontext.org/subjects-search/.json?prop=oc-gen-cat-object&q=Poggio
+
+Put that in the address bar. Boom! lots of stuff! But only one page’s worth, which isn’t lots of data. To get a lot more data, we have to add another parameter, the number of rows: ?rows=100&. Slot that in just before the p in prop= and see what happens.
+
+Now, that isn’t all of the records though. Remove the .json and see what happens when you click on the arrows to page through the NEXT 100 rows. You get a URL like this:
+
+https://opencontext.org/subjects-search/?rows=100&prop=oc-gen-cat-object&start=100&q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite
+
+So – to recap, the URL is searching for 100 rows at a time, in the general object category, starting from row 100, and grabbing materials from Poggio. We now know enough about how open context’s api works to grab material.
+
+Couple of ways one could grab it:
+
+1. You could copy n’ paste -> but that will only get you one page’s worth of data (and if you tried to put, say, 10791 into the ‘rows’ parameter, you’ll just get a time-out error). You’d have to go back to the search page, hit the ‘next’ button, reinsert the .json etc over and over again.
+2. Automatically. We’ll use a program called wget to do this. (To install wget on your machine, see the programming historian Wget will interact with the Open Context site to retrieve the data. We feed wget a file that contains all of the urls that we wish to grab, and it saves all of the data into a single file. So, open a new text file and paste our search URL in there like so:
+
+```
+https://opencontext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&q=Poggio
+https://opencontext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&start=100&q=Poggio
+https://opencontext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&start=200&q=Poggio
+```
+
+…and so on until we’ve covered the full 4000 objects. Tedious? You bet. So we’ll get the computer to generate those URLS for us. Open a new text file, and copy the following in:
+
+```
+#URL-Generator.py
+
+urls = '';
+f=open('urls.txt','w')
+for x in range(1, 4000, 100):
+    urls = 'https://opencontext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&start=%d&q=Poggio/\n' % (x)
+    f.write(urls)
+f.close
+```
+
+and save it as url-generator.py. This program is in the python language. Type at the prompt:
+
+```
+$ python url-generator.py
+```
+This little program defines an empty container called ‘urls’; it then creates a new file called ‘urls.txt’; then we tell it to write the address of our search into the urls container. See the %d in there? The program writes a number between 1 and 4000; each time it does that, it counts by 100 so that the next time it goes through the loop, it adds a new address with the correct starting point! Then it saves that container of URLs into the file urls.txt. Go ahead, open it up, and you’ll see.
+
+Now we’ll feed it to wget like so. At the prompt type
+
+```
+$ wget -i urls.txt -r --no-parent -nd –w 2 --limit-rate=10k
+```
+You’ll end up with a lot of files that have no file extension in your folder, eg
+
+```
+.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&start=61&q=Poggio%2F
+```
+
+Rename them so that they have `.json` file extensions. Now we concatenate them together
+
+```
+# As simple as this. Output file should be last
+$ json-concat file1.json file2.json file3.json file4.json ouput.json
+```
+SG MAKE SURE THAT JSON-CONCAT CAN BE HAD ON DHBOX, OTHERWISE FIND ALTERNATIVE
+
+ALSO MAKE SURE TO TALK THROUGH THIS: https://github.com/ropensci/opencontext
+
+json is a text file where keys are paired with values. JQ is a piece of software that enables us to reach into a json file, grab the data we want, and create either new json or csv. If you intend to visualize and explore data using some sort of spreadsheet program, then you’ll need to extract the data you want into a csv that your spreadsheet can digest. If you wanted to try something like d3 or some other dynamic library for generating web-based visualizations (eg p5js), you’ll need json.
+
+jqplay
+
+JQ lets us do some fun filtering and parsing, but we won’t download and install it yet. Instead, we’ll load some sample data into a web-toy called jqplay. This will let us try different ideas out and see the results immediately. In the this file  called sample.json I have the query results from Open Context – Github recognizes that it is json and that it has geographic data within it, and turns it automatically into a map! To see the raw json, click on the < > button. Copy that data into the json box at jqplay.org.
+
+JQPlay will colour-code the json. Everything in red is a key, everything in black is a value. Keys can be nested, as represented by the indentation. Scroll down through the json – do you see any interesting key:value pairs? Matthew Lincoln’s tutorial at the programming historian is one of the most cogent explanations of how this works, and I do recommend you read that piece. Suffice to say, for now, that if you see an interesting key:value pair that you’d like to extract, you need to figure out just how deeply nested it is. For instance, there is a properties key that seems to have interesting information within it about dates, wares, contexts and so on. Perhaps we’d like to build a query using JQ that extracts that information into a csv. It’s within the features key pair, so try entering the following in the filter box:
+
+```
+.features [ ] | .properties
+```
+
+You should get something like this:
+
+```
+{
+  "id": "#geo-disc-tile-12023202222130313322",
+  "href": "https://opencontext.org/search/?disc-geotile=12023202222130313322&prop=oc-gen-cat-object&rows=5&q=Poggio",
+  "label": "Discovery region (1)",
+  "feature-type": "discovery region (facet)",
+  "count": 12,
+  "early bce/ce": -700,
+  "late bce/ce": -535
+}
+{
+  "id": "#geo-disc-tile-12023202222130313323",
+  "href": "https://opencontext.org/search/?disc-geotile=12023202222130313323&prop=oc-gen-cat-object&rows=5&q=Poggio",
+  "label": "Discovery region (2)",
+  "feature-type": "discovery region (facet)",
+  "count": 25,
+  "early bce/ce": -700,
+  "late bce/ce": -535
+}
+```
+For the exact syntax of why that works, see Lincoln’s tutorial. I’m going to just jump to the conclusion now. Let’s say we wanted to grab some of those keys within properties, and turn into a csv. We tell it to look inside features and find properties; then we tell it to make a new array with just those keys within properties we want; and then we tell it to pipe that information into comma-separated values. Try the following on the sample data:
+
+```
+.features [ ] | .properties | [.label, .href, ."context label", ."early bce/ce", ."late bce/ce", ."item category", .snippet] | @csv
+```
+…and make sure to tick the ‘raw output’ box at the top right. Ta da! You’ve culled the information of interest from a json file, into a csv. There’s a lot more you can do with jq, but this will get you started. Finally, we move back to the command line and invoke JQ to format the data how we want it:
+
+```
+jq -r '.features [ ] | .properties | [.label, .href, ."context label", ."early bce/ce", ."late bce/ce", ."item category", .snippet] | @csv' data.json > data.csv
+```
+
+
+
 
 ### Working with Omeka
 
