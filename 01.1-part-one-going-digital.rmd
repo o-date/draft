@@ -74,7 +74,7 @@ We need to be making art. Digital archaeology naturally pushes in that direction
 
 All of these aspects of digital archaeology exist along a continuum. In the remainder of this chapter, we give you a 'boot-camp' to get you to the point where you can begin to wonder about deformation and the public entanglement with your work. 
 
-##  Project management basics 
+##  Project Management Basics 
 
 A digital project, whether in archaeology or in other fields, iterates through the same basic steps. There is
 	
@@ -361,15 +361,8 @@ In an ideal world, we would recommend that everyone should push for such radical
  
 In this section, we will explore how to make a simple open notebook via a combination of markdown files and a repository on Github. Ultimately, we endorse the model developed by Ben Marwick, of creating an entire 'research compendium' that can be installed on another researcher's machine, but a good place to start are with the historian Lincoln Mullen's simple notebook templates. This will introduce to you another tool in the digital archaeologist's toolkit, the open source R programming language and the R Studio 'IDE' ('integrated development environment).
 
- - in this section, discuss people like caleb mcdaniels, lincoln mullen, ben marwick, other archaeologists, 
- - develop exercise to use lincoln's framework for simple notebooks, Ben's examples for complex notebooks
- - discuss the role of blogging in this, and how a blog doesn't necessarily have to be reflective or narrative, brings back to original roots of the term, web log.
- - discuss the dangers inherent in doing this kind of thing in the open, especially given hot mess that the web is
- - be as open as it is safe for you to be. one could set up an owncloud via reclaim hosting, and push materials there in both open and closed versions: here at least you've got LOCKSS
- - Ben Marwick's demo repos for archae projects https://github.com/benmarwick/researchcompendium
- - reproducibility case studies project: https://github.com/benmarwick/repro-case-studies
- - https://www.practicereproducibleresearch.org/case-studies/benmarwick.html
- - the dangers of excel
+
+ - the dangers of excel <- maybe talk about that in the earlier section about csv files?
 
 ### discussion
 
@@ -383,6 +376,53 @@ Questions for discussion:
 6. In what ways are terms like 'open access', 'open source', and 'open science' synonyms for a similar approach, and in what ways are they different?
 
 ### exercises
+
+In this series of exercises, we are going to take you through the process of setting up an open research notebook, where you control all of the code and all of the data. (While we recommend an open notebook, one could equally use what follows with a private website or Git repo. Readers may also want to explore an Evernote alternative, [Laverna](https://laverna.cc/) which stores your notes in your web-browser's cache hence making them private, but also allows sync to services such as Dropbox).
+
+1. Let us set up a template open-notebook based on [Lincoln Mullen's Simple RmD Notebook](https://github.com/lmullen/rmd-notebook). If you go to [https://lmullen.github.io/rmd-notebook/](https://lmullen.github.io/rmd-notebook/) you'll see a 'live' version of this template on the web. It is being served to us from a special branch in Mullen's Github account, called `gh-pages`. When you have a `gh-branches` branch in very nearly any repo associated with your own Github account, Github.com will treat that repository *not* as a repository but as an actual website. This allows us to update or experiment with changes on other branches, and show a 'polished' version to the world via the `gh-pages` branch. That branch will have a special address, in the form `your-account-name.github.io/your-repo`. Whenever you see `github.io` in a URL, you know that the source for that website will be found at `github.com/account-name/repo`. Do you see the difference? (For more on `gh-pages`, see the [Github documentation](https://pages.github.com/)).
+
+a. Begin sketching out on paper an idea for a digital archaeological project, perhaps the one you imagined at the end of our section on [Project Management Basics]. Imagine its file structure. In the top level folder are going to go all of your notecards. Sub-folders are going to hold diagrams that you create in the course of your reserch; source-data that you leave untouched; data that you've cleaned or manipulated; any helper code that you might create; and so on. You will use this structure to help organize your open notebook once we've installed it.
+
+b. Make a fork of our copy of Mullen's notebook (we've added [hypothes.is](http://hypothes.is) to it). You can find our copy at [https://github.com/o-date/rmd-notebook](https://github.com/o-date/rmd-notebook).
+
+c. `Clone` your copy to the ODATE environment at the command line. (Review [Github & Version Control] if necessary first).
+
+d. Type `ls` to make sure the `rmd-notebook` directory is present; then `cd rmd-notebook`.
+
+e. Check which branch you are on, and make sure it is the `gh-pages` branch. (Hint: check the status)
+
+f. Now you're ready to start adding notes! Remember, `.Rmd` files are just markdown files into which you can insert working R code. We're not ready to do that yet, but for now, you can think of these files as simple notecards where one card = one idea. Note the existing `.rmd` files in this folder. Their filenames all begin with a number. Yours should be numbered as well. You can create a new card by typing `nano filename.rmd` where `filename` is whatever you want it to be. Your notecard can include images by using the markdown syntax, `![image tile](path/to/image/filename.jpg)`; those images can be on the web or in an image folder. (A good place to practice markdown is at [Dillinger.io](http://dillinger.io)).
+
+Your note *must* contain some descriptive metadata at the top. This is good practice no matter what kind of note-taking system you use. In our case here, we use the `yaml` approach. This is what a minimum example looks like:
+
+```
+---
+title: "First page of the notebook"
+author: "Lincoln Mullen"
+date: "December 3, 2015"
+---
+```
+Title, author, and date. These will get passed to the `<meta>` tags in the eventual HTML we are going to generate. This information makes your site easier to find and to archive and to associate with you as a scholar.
+
+g. Now we make the public-facing website for your notebook. Mullen has bundled a series of commands into a `make` file, which acts as a short-cut for us and also ensures that the same sequence of operations is carried out everytime. (You can read more about makefiles [here](https://bost.ocks.org/mike/make/).) At the command prompt type `$ make`.   
+
+```
+SG <- note pandoc and rmarkdown have to be bundled into the box before hand. Otherwise, the following commands have to be run:
+$ wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
+to get pandoc and then $ sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb` to unzip and install it. Rmarkdown has to be installed from the R Server code pane. The first sample rmd file has a leaflet webapp in it; I modified the R to install leaflet first, but I dunno. This'll have to be tested. Probably easier at this point to just remove it.
+```
+
+h. The make file is pushing all of your `.Rmd` files through a program called `pandoc`, and adding various styling options to make an entire website. 
+
+```
+As an aside, Pandoc is an extremely useful piece of software for converting files from one format to another. A series of examples can be found at [http://www.pandoc.org/demos.html](http://www.pandoc.org/demos.html). At the command line, type `$ pandoc` and then your source file, then indicate the kind of output you want using the `-o` flag, eg: `$ pandoc MANUAL.txt -o example1.html`. One of the outputs Pandoc can generate is a Word document - which means, your source text is kept in a very simple, future-proof format, and Word can be used just for typography.
+```
+
+Commit your changes and push them to your remote repository. Visit the `live` version of your repository - ie, the one at `github.io` *not* `github.com` to see your live open research notebook!
+
+i. Write a new note for your notebook recording your work, the problems you encountered, and the solutions you found. Save, `make`, commit, and push your note to the web.
+
+2. Another approach, using mdwiki and prose.io
 
 ## Failing Productively
 

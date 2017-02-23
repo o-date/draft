@@ -92,7 +92,7 @@
 <li class="chapter" data-level="1.1.3" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#the-cool-factor"><i class="fa fa-check"></i><b>1.1.3</b> The ‘cool’ factor</a></li>
 <li class="chapter" data-level="1.1.4" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#takeaways"><i class="fa fa-check"></i><b>1.1.4</b> Takeaways</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="project-management-basics.html"><a href="project-management-basics.html"><i class="fa fa-check"></i><b>1.2</b> Project management basics</a><ul>
+<li class="chapter" data-level="1.2" data-path="project-management-basics.html"><a href="project-management-basics.html"><i class="fa fa-check"></i><b>1.2</b> Project Management Basics</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="project-management-basics.html"><a href="project-management-basics.html#take-aways"><i class="fa fa-check"></i><b>1.2.1</b> Take-aways</a></li>
 <li class="chapter" data-level="1.2.2" data-path="project-management-basics.html"><a href="project-management-basics.html#exercises"><i class="fa fa-check"></i><b>1.2.2</b> exercises</a></li>
 </ul></li>
@@ -242,15 +242,7 @@
 <p>In an ideal world, we would recommend that everyone should push for such radical transparency in their research and teaching. But what is safe for a group of (mostly) white, tenured, men is not safe for everyone online. In which case, what we recommend is for individuals to assess what is safest for them to do, while still making use of the affordances of Git, remote repositories, and simple text files. <a href="http://bitbucket.org">Bitbucket</a> at the time of writing offers free private repositories (so you can push your changes to a remote repository without fear of others looking or cloning your materials); <a href="http://reclaimhosting.com">ReclaimHosting</a> supports academic webhosting and allows one to set up the private ‘dropbox’ like file-sharing service <a href="https://owncloud.org/">Owncloud</a>.</p>
 <p>In this section, we will explore how to make a simple open notebook via a combination of markdown files and a repository on Github. Ultimately, we endorse the model developed by Ben Marwick, of creating an entire ‘research compendium’ that can be installed on another researcher’s machine, but a good place to start are with the historian Lincoln Mullen’s simple notebook templates. This will introduce to you another tool in the digital archaeologist’s toolkit, the open source R programming language and the R Studio ‘IDE’ (’integrated development environment).</p>
 <ul>
-<li>in this section, discuss people like caleb mcdaniels, lincoln mullen, ben marwick, other archaeologists,</li>
-<li>develop exercise to use lincoln’s framework for simple notebooks, Ben’s examples for complex notebooks</li>
-<li>discuss the role of blogging in this, and how a blog doesn’t necessarily have to be reflective or narrative, brings back to original roots of the term, web log.</li>
-<li>discuss the dangers inherent in doing this kind of thing in the open, especially given hot mess that the web is</li>
-<li>be as open as it is safe for you to be. one could set up an owncloud via reclaim hosting, and push materials there in both open and closed versions: here at least you’ve got LOCKSS</li>
-<li>Ben Marwick’s demo repos for archae projects <a href="https://github.com/benmarwick/researchcompendium" class="uri">https://github.com/benmarwick/researchcompendium</a></li>
-<li>reproducibility case studies project: <a href="https://github.com/benmarwick/repro-case-studies" class="uri">https://github.com/benmarwick/repro-case-studies</a></li>
-<li><a href="https://www.practicereproducibleresearch.org/case-studies/benmarwick.html" class="uri">https://www.practicereproducibleresearch.org/case-studies/benmarwick.html</a></li>
-<li>the dangers of excel</li>
+<li>the dangers of excel &lt;- maybe talk about that in the earlier section about csv files?</li>
 </ul>
 <div id="discussion" class="section level3">
 <h3><span class="header-section-number">1.4.1</span> discussion</h3>
@@ -266,6 +258,42 @@
 </div>
 <div id="exercises-2" class="section level3">
 <h3><span class="header-section-number">1.4.2</span> exercises</h3>
+<p>In this series of exercises, we are going to take you through the process of setting up an open research notebook, where you control all of the code and all of the data. (While we recommend an open notebook, one could equally use what follows with a private website or Git repo. Readers may also want to explore an Evernote alternative, <a href="https://laverna.cc/">Laverna</a> which stores your notes in your web-browser’s cache hence making them private, but also allows sync to services such as Dropbox).</p>
+<ol style="list-style-type: decimal">
+<li>Let us set up a template open-notebook based on <a href="https://github.com/lmullen/rmd-notebook">Lincoln Mullen’s Simple RmD Notebook</a>. If you go to <a href="https://lmullen.github.io/rmd-notebook/" class="uri">https://lmullen.github.io/rmd-notebook/</a> you’ll see a ‘live’ version of this template on the web. It is being served to us from a special branch in Mullen’s Github account, called <code>gh-pages</code>. When you have a <code>gh-branches</code> branch in very nearly any repo associated with your own Github account, Github.com will treat that repository <em>not</em> as a repository but as an actual website. This allows us to update or experiment with changes on other branches, and show a ‘polished’ version to the world via the <code>gh-pages</code> branch. That branch will have a special address, in the form <code>your-account-name.github.io/your-repo</code>. Whenever you see <code>github.io</code> in a URL, you know that the source for that website will be found at <code>github.com/account-name/repo</code>. Do you see the difference? (For more on <code>gh-pages</code>, see the <a href="https://pages.github.com/">Github documentation</a>).</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Begin sketching out on paper an idea for a digital archaeological project, perhaps the one you imagined at the end of our section on <a href="project-management-basics.html#project-management-basics">Project Management Basics</a>. Imagine its file structure. In the top level folder are going to go all of your notecards. Sub-folders are going to hold diagrams that you create in the course of your reserch; source-data that you leave untouched; data that you’ve cleaned or manipulated; any helper code that you might create; and so on. You will use this structure to help organize your open notebook once we’ve installed it.</p></li>
+<li><p>Make a fork of our copy of Mullen’s notebook (we’ve added <a href="http://hypothes.is">hypothes.is</a> to it). You can find our copy at <a href="https://github.com/o-date/rmd-notebook" class="uri">https://github.com/o-date/rmd-notebook</a>.</p></li>
+<li><p><code>Clone</code> your copy to the ODATE environment at the command line. (Review <a href="github-version-control.html#github-version-control">Github &amp; Version Control</a> if necessary first).</p></li>
+<li><p>Type <code>ls</code> to make sure the <code>rmd-notebook</code> directory is present; then <code>cd rmd-notebook</code>.</p></li>
+<li><p>Check which branch you are on, and make sure it is the <code>gh-pages</code> branch. (Hint: check the status)</p></li>
+<li><p>Now you’re ready to start adding notes! Remember, <code>.Rmd</code> files are just markdown files into which you can insert working R code. We’re not ready to do that yet, but for now, you can think of these files as simple notecards where one card = one idea. Note the existing <code>.rmd</code> files in this folder. Their filenames all begin with a number. Yours should be numbered as well. You can create a new card by typing <code>nano filename.rmd</code> where <code>filename</code> is whatever you want it to be. Your notecard can include images by using the markdown syntax, <code>![image tile](path/to/image/filename.jpg)</code>; those images can be on the web or in an image folder. (A good place to practice markdown is at <a href="http://dillinger.io">Dillinger.io</a>).</p></li>
+</ol>
+<p>Your note <em>must</em> contain some descriptive metadata at the top. This is good practice no matter what kind of note-taking system you use. In our case here, we use the <code>yaml</code> approach. This is what a minimum example looks like:</p>
+<pre><code>---
+title: &quot;First page of the notebook&quot;
+author: &quot;Lincoln Mullen&quot;
+date: &quot;December 3, 2015&quot;
+---</code></pre>
+<p>Title, author, and date. These will get passed to the <code>&lt;meta&gt;</code> tags in the eventual HTML we are going to generate. This information makes your site easier to find and to archive and to associate with you as a scholar.</p>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Now we make the public-facing website for your notebook. Mullen has bundled a series of commands into a <code>make</code> file, which acts as a short-cut for us and also ensures that the same sequence of operations is carried out everytime. (You can read more about makefiles <a href="https://bost.ocks.org/mike/make/">here</a>.) At the command prompt type <code>$ make</code>.</li>
+</ol>
+<pre><code>SG &lt;- note pandoc and rmarkdown have to be bundled into the box before hand. Otherwise, the following commands have to be run:
+$ wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
+to get pandoc and then $ sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb` to unzip and install it. Rmarkdown has to be installed from the R Server code pane. The first sample rmd file has a leaflet webapp in it; I modified the R to install leaflet first, but I dunno. This&#39;ll have to be tested. Probably easier at this point to just remove it.</code></pre>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>The make file is pushing all of your <code>.Rmd</code> files through a program called <code>pandoc</code>, and adding various styling options to make an entire website.</li>
+</ol>
+<pre><code>As an aside, Pandoc is an extremely useful piece of software for converting files from one format to another. A series of examples can be found at [http://www.pandoc.org/demos.html](http://www.pandoc.org/demos.html). At the command line, type `$ pandoc` and then your source file, then indicate the kind of output you want using the `-o` flag, eg: `$ pandoc MANUAL.txt -o example1.html`. One of the outputs Pandoc can generate is a Word document - which means, your source text is kept in a very simple, future-proof format, and Word can be used just for typography.</code></pre>
+<p>Commit your changes and push them to your remote repository. Visit the <code>live</code> version of your repository - ie, the one at <code>github.io</code> <em>not</em> <code>github.com</code> to see your live open research notebook!</p>
+<ol style="list-style-type: lower-roman">
+<li>Write a new note for your notebook recording your work, the problems you encountered, and the solutions you found. Save, <code>make</code>, commit, and push your note to the web.</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Another approach, using mdwiki and prose.io</li>
+</ol>
 </div>
 </div>
             </section>
