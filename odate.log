@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  23 FEB 2017 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  27 FEB 2017 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -925,14 +925,8 @@ File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ]
 Chapter 1.
-[15]
-Underfull \vbox (badness 1325) has occurred while \output is active []
-
-[16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[17] [18]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 754.
+[15] [16] [17] [18]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 759.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -941,39 +935,39 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: images/creating-refinining-question.png Graphic file (type png)
 <use images/creating-refinining-question.png>
 Package pdftex.def Info: images/creating-refinining-question.png used on input 
-line 876.
+line 881.
 (pdftex.def)             Requested size: 469.7626pt x 248.15262pt.
 [20] [21 <./images/creating-refinining-question.png>] <images/what-git-does.png
 , id=397, 567.11874pt x 270.00874pt>
 File: images/what-git-does.png Graphic file (type png)
 <use images/what-git-does.png>
-Package pdftex.def Info: images/what-git-does.png used on input line 995.
+Package pdftex.def Info: images/what-git-does.png used on input line 1000.
 (pdftex.def)             Requested size: 469.77385pt x 223.66223pt.
 <images/commit-history.png, id=399, 293.095pt x 34.1275pt>
 File: images/commit-history.png Graphic file (type png)
 <use images/commit-history.png>
-Package pdftex.def Info: images/commit-history.png used on input line 1020.
+Package pdftex.def Info: images/commit-history.png used on input line 1025.
 (pdftex.def)             Requested size: 293.09427pt x 34.1274pt.
 [22 <./images/what-git-does.png>] [23 <./images/commit-history.png>] [24] [25] 
 [26] <images/pullrequest-send.png, id=472, 774.895pt x 403.5075pt>
 File: images/pullrequest-send.png Graphic file (type png)
 <use images/pullrequest-send.png>
-Package pdftex.def Info: images/pullrequest-send.png used on input line 1564.
+Package pdftex.def Info: images/pullrequest-send.png used on input line 1569.
 (pdftex.def)             Requested size: 469.76476pt x 244.61842pt.
 [27] [28 <./images/pullrequest-send.png>] [29] [30] [31]
-Overfull \hbox (191.74306pt too wide) in paragraph at lines 1940--1940
+Overfull \hbox (191.74306pt too wide) in paragraph at lines 1945--1945
 []\T1/lmtt/m/n/10 SG <- note pandoc and rmarkdown have to be bundled into the b
 ox before hand. Otherwise, the following commands have to be run:[] 
  []
 
 
-Overfull \hbox (7.99359pt too wide) in paragraph at lines 1940--1940
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 1945--1945
 []\T1/lmtt/m/n/10 $ wget https://github.com/jgm/pandoc/releases/download/1.19.2
 .1/pandoc-1.19.2.1-1-amd64.deb[] 
  []
 
 
-Overfull \hbox (1294.23985pt too wide) in paragraph at lines 1940--1940
+Overfull \hbox (1294.23985pt too wide) in paragraph at lines 1945--1945
 []\T1/lmtt/m/n/10 to get pandoc and then $ sudo dpkg -i pandoc-1.19.2.1-1-amd64
 .deb\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 to unzip and install it. Rmarkdown has t
 o be installed from the R Server code pane. The first sample rmd file has a lea
@@ -982,65 +976,51 @@ flet webapp in it; I modified the R to install leaflet first, but I dunno. This
  point to just remove it.[] 
  []
 
-
-Overfull \hbox (2501.73634pt too wide) in paragraph at lines 1954--1954
-[]\T1/lmtt/m/n/10 As an aside, Pandoc is an extremely useful piece of software 
-for converting files from one format to another. A series of examples can be fo
-und at [http://www.pandoc.org/demos.html](http://www.pandoc.org/demos.html). At
- the command line, type \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 $ pandoc\TS1/lmtt/m/n
-/10 ` \T1/lmtt/m/n/10 and then your source file, then indicate the kind of outp
-ut you want using the \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 -o\TS1/lmtt/m/n/10 ` \T
-1/lmtt/m/n/10 flag, eg: \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 $ pandoc MANUAL.txt -
-o example1.html\TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 . One of the outputs Pandoc ca
-n generate is a Word document - which means, your source text is kept in a very
- simple, future-proof format, and Word can be used just for typography.[] 
- []
-
 [32]
-Overfull \hbox (118.24327pt too wide) in paragraph at lines 2062--2062
+Overfull \hbox (118.24327pt too wide) in paragraph at lines 2075--2075
 []\T1/lmtt/m/n/10 https://opencontext.org/subjects-search/.json?rows=100&prop=o
 c-gen-cat-object---oc-gen-cat-arch-element&q=Poggio[] 
  []
 
 
-Overfull \hbox (170.74312pt too wide) in paragraph at lines 2062--2062
+Overfull \hbox (170.74312pt too wide) in paragraph at lines 2075--2075
 []\T1/lmtt/m/n/10 https://opencontext.org/subjects-search/.json?rows=100&prop=o
 c-gen-cat-object---oc-gen-cat-arch-element&start=100&q=Poggio[] 
  []
 
 
-Overfull \hbox (170.74312pt too wide) in paragraph at lines 2062--2062
+Overfull \hbox (170.74312pt too wide) in paragraph at lines 2075--2075
 []\T1/lmtt/m/n/10 https://opencontext.org/subjects-search/.json?rows=100&prop=o
 c-gen-cat-object---oc-gen-cat-arch-element&start=200&q=Poggio[] 
  []
 
 
-Overfull \hbox (280.9928pt too wide) in paragraph at lines 2077--2077
+Overfull \hbox (280.9928pt too wide) in paragraph at lines 2090--2090
 []    \T1/lmtt/m/n/10 urls = \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 https://opencont
 ext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch
 -element&start=%d&q=Poggio/\n\TS1/lmtt/m/n/10 ' \T1/lmtt/m/n/10 % (x)[] 
  []
 
 [33]
-Overfull \hbox (144.4932pt too wide) in paragraph at lines 2179--2179
+Overfull \hbox (144.4932pt too wide) in paragraph at lines 2192--2192
 []  \T1/lmtt/m/n/10 "href": "https://opencontext.org/search/?disc-geotile=12023
 202222130313322&prop=oc-gen-cat-object&rows=5&q=Poggio",[] 
  []
 
 
-Overfull \hbox (144.4932pt too wide) in paragraph at lines 2179--2179
+Overfull \hbox (144.4932pt too wide) in paragraph at lines 2192--2192
 []  \T1/lmtt/m/n/10 "href": "https://opencontext.org/search/?disc-geotile=12023
 202222130313323&prop=oc-gen-cat-object&rows=5&q=Poggio",[] 
  []
 
 [34]
-Overfull \hbox (217.99298pt too wide) in paragraph at lines 2191--2191
+Overfull \hbox (217.99298pt too wide) in paragraph at lines 2204--2204
 []\T1/lmtt/m/n/10 .features [ ] | .properties | [.label, .href, ."context label
 ", ."early bce/ce", ."late bce/ce", ."item category", .snippet] | @csv[] 
  []
 
 
-Overfull \hbox (370.24254pt too wide) in paragraph at lines 2201--2201
+Overfull \hbox (370.24254pt too wide) in paragraph at lines 2214--2214
 []\T1/lmtt/m/n/10 jq -r \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 .features [ ] | .prop
 erties | [.label, .href, ."context label", ."early bce/ce", ."late bce/ce", ."i
 tem category", .snippet] | @csv\TS1/lmtt/m/n/10 ' \T1/lmtt/m/n/10 data.json > d
@@ -1070,38 +1050,38 @@ Chapter 6.
 [45] [46
 
 ]
-Overfull \hbox (31.67389pt too wide) in paragraph at lines 2482--2485
+Overfull \hbox (31.67389pt too wide) in paragraph at lines 2495--2498
 \T1/lmr/m/it/10 (-20) ward Glance\T1/lmr/m/n/10 (-20) . []$http : / / lincolnmu
 llen . com / blog / a-[]con^^\rmation-[]of-[]andrew-[]goldstone-[]on-[]teaching
 -[]quantitative-[]methods/$[]. 
  []
 
 
-Overfull \hbox (54.49132pt too wide) in paragraph at lines 2501--2504
+Overfull \hbox (54.49132pt too wide) in paragraph at lines 2514--2517
 \T1/lmr/m/it/10 (-20) Owens\T1/lmr/m/n/10 (-20) . []$http : / / www . trevorowe
 ns . org / 2012 / 11 / discovery-[]and-[]justi^^\cation-[]are-[]di^^[erent-[]no
 tes-[]on-[]sciencing-[]the-[]humanities/$[]. 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2506.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2519.
 [47] [48]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2506.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2519.
 (./odate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2506.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2506.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2519.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2519.
 
 Package rerunfilecheck Info: File `odate.out' has not changed.
 (rerunfilecheck)             Checksum: F07476704FBDDB6AEC72F08289D2DC30;9169.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2506.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2519.
  ) 
 Here is how much of TeX's memory you used:
- 12871 strings out of 494501
- 188098 string characters out of 6167030
+ 12873 strings out of 494501
+ 188120 string characters out of 6167030
  284461 words of memory out of 5000000
  15590 multiletter control sequences out of 15000+600000
- 65704 words of font info for 113 fonts, out of 8000000 for 9000
+ 65834 words of font info for 114 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 32i,5n,35p,578b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,5n,35p,497b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/
 local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/tex
 live/2015basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/
@@ -1112,10 +1092,10 @@ ist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015basic/texmf-dist/f
 onts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/
 type1/public/lm/lmro10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
 /public/lm/lmtt10.pfb>
-Output written on odate.pdf (48 pages, 685690 bytes).
+Output written on odate.pdf (48 pages, 691609 bytes).
 PDF statistics:
- 796 PDF objects out of 1000 (max. 8388607)
- 719 compressed objects within 8 object streams
+ 797 PDF objects out of 1000 (max. 8388607)
+ 720 compressed objects within 8 object streams
  249 named destinations out of 1000 (max. 500000)
  12623 words of extra memory for PDF output out of 14400 (max. 10000000)
 

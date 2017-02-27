@@ -2,9 +2,9 @@
 
 > Digital archaeology should exist to assist us in the performance of archaeology as a whole. It should not be a secret knowledge, nor a distinct school of thought, but rather simply seen as archaeology done well, using all of the tools available to and in better recovering, understanding and presenting the past. In the end, there is no such thing as digital archaeology. What exists, or at least what should exist, are intelligent and practical ways of applying the use of computers to archaeology that better enable us to pursue both our theoretical questions and our methodological applications. [@evans_digital_2006]
 
-While we agree with the first part of the sentiment, the second part is rather up for debate. Digital tools exist in a meshwork of legal and cultural obligations, and moreso than any other tool humans have yet come up with, have the capability to exert their own agency upon the user. Digital tools and their use are not theory-free or without theoretical implications. There is no such thing as neutral, when digital tools are employed.
+While we agree with the first part of the sentiment, the second part is rather up for debate. There _is_ such a thing as digital archaeology. Digital tools exist in a meshwork of legal and cultural obligations, and moreso than any other tool humans have yet come up with, have the capability to exert their own agency upon the user. Digital tools and their use are not theory-free nor without theoretical implications. There is no such thing as neutral, when digital tools are employed.
 
-In this section, we suggest that digital archaeology is akin to work at the intersection of art and public archaeology and digital humanities. We then provide you the necessary basics for setting up your own digital archaeological practice.
+In this section, we suggest that digital archaeology is akin to work at the intersection of art and public archaeology and digital humanities. We provide you the necessary basics for setting up your own digital archaeological practice. Entrance into the world of digital archaeology requires organizational ability and facility with versioning files. It is allied with the practice of open notebook science, and it attempts to future-proof by using the simplest file formats and avoiding proprietary software where possible.
 
 ## So what is Digital Archaeology?
 
@@ -68,7 +68,7 @@ We need to be making art. Digital archaeology naturally pushes in that direction
 ### Takeaways
 
 + Digital archaeology is a public archaeology
-+ Digital archaeology is more often about deformance rather than justification
++ Digital archaeology is often about deformance rather than justification
 + In that deformative practice, it is in some ways extremely aligned with artistic ways of knowing
 + Digital archaeology is part of the digital humanities, and in many ways, presaged current debates and trends in that field.
 
@@ -414,9 +414,7 @@ to get pandoc and then $ sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb` to unzip and 
 
 h. The make file is pushing all of your `.Rmd` files through a program called `pandoc`, and adding various styling options to make an entire website. 
 
-```
-As an aside, Pandoc is an extremely useful piece of software for converting files from one format to another. A series of examples can be found at [http://www.pandoc.org/demos.html](http://www.pandoc.org/demos.html). At the command line, type `$ pandoc` and then your source file, then indicate the kind of output you want using the `-o` flag, eg: `$ pandoc MANUAL.txt -o example1.html`. One of the outputs Pandoc can generate is a Word document - which means, your source text is kept in a very simple, future-proof format, and Word can be used just for typography.
-```
+> As an aside, Pandoc is an extremely useful piece of software for converting files from one format to another. A series of examples can be found at [http://www.pandoc.org/demos.html](http://www.pandoc.org/demos.html). At the command line, type `$ pandoc` and then your source file, then indicate the kind of output you want using the `-o` flag, eg: `$ pandoc MANUAL.txt -o example1.html`. One of the outputs Pandoc can generate is a Word document - which means, your source text is kept in a very simple, future-proof format, and Word can be used just for typography.
 
 Commit your changes and push them to your remote repository. Visit the `live` version of your repository - ie, the one at `github.io` *not* `github.com` to see your live open research notebook!
 
