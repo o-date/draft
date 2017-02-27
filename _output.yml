@@ -11,7 +11,6 @@ bookdown::gitbook:
   split_by: section
   includes:
       in_header: hypothesis.html
-      before_body: open_review_block.html
   config:
     toc:
       number_sections: null
