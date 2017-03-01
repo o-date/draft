@@ -17,7 +17,7 @@
 
 <meta name="author" content="Shawn Graham, Neha Gupta, Michael Carter, &amp; Beth Compton" />
 
-<meta name="date" content="2017-02-27" />
+<meta name="date" content="2017-03-01" />
 
 
 <meta name="description" content="The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory">
@@ -311,7 +311,7 @@ Date:   Tue Feb 14 18:42:31 2017 +0000
 Fixed the headings that were broken in the about section of readme.md
 </code></pre>
 <ol style="list-style-type: lower-alpha">
-<li>We’re going to go back in time and create a new branch. Here’s how the command will look: <code>$ git checkout -b branchname &lt;commit&gt;</code> where <code>branch</code> is the name you want the branch to be called, and <code>&lt;commit&gt;</code> is that unique ID. Make a new branch from your second last commit (don’t use &lt; or &gt;).</li>
+<li>We’re going to go back in time and create a new branch. You can escape the <code>git log</code> by typing <code>q</code>. Here’s how the command will look: <code>$ git checkout -b branchname &lt;commit&gt;</code> where <code>branch</code> is the name you want the branch to be called, and <code>&lt;commit&gt;</code> is that unique ID. Make a new branch from your second last commit (don’t use &lt; or &gt;).</li>
 <li>We typed <code>git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43</code>. The response: <code>Switched to a new branch 'experiment'</code> Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you’ve time travelled! Those files are not missing; but they <em>are</em> on a different branch (the master branch) and you can’t harm them now. Add a number of new files, making commits after each one. Check your git status, and check your git log as you go to make sure you’re getting everything. Make sure there are no unstaged changes - everything’s been committed.</li>
 </ol>
 <ol start="4" style="list-style-type: decimal">
