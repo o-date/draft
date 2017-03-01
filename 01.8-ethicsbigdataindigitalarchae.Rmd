@@ -1,0 +1,14 @@
+## The Ethics of Big Data in Archaeology 
+
+Ethics! Lots of Ethics!
+- include discussion of privacy
+- ethics of crowdfunding
+- ethics of crowdsourcing (& dubious ethics of using amazon's mechanical turk)
+- ethics of public archaeology & social media
+
+### discussion
+
+### exercises
+
+- maybe some sort of personal audit of what traces the student is leaving online
+- some sort of case study?

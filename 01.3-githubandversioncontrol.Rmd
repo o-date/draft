@@ -1,0 +1,194 @@
+## Github & Version Control
+
+It's a familiar situation - you've been working on a paper. It's where you want it to be, and you're certain you're done. You save it as 'final.doc'. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as 'final-w-changes.doc'. Later that day it occurs to you that you don't like those changes, and you go back to the original 'final.doc', make some changes, and just overwrite the previous version. Soon, you have a folder like:
+
+```
+|-project
+    |-'finalfinal.doc'
+    |-'final-w-changes.doc'
+    |-'final-w-changes2.doc'
+    |-'isthisone-changes.doc'
+    |-'this.doc'
+```
+Things can get messy quite quickly. Imagine that you also have several spreadsheets in there as well, images, snippets of code... we don't want this. What we want is a way of managing the evolution of your files. We do this with a program called [Git](https://git-scm.com/). Git is not a user-friendly piece of software, and it takes some work to get your head around. Git is also very powerful, but fortunately, the basic uses to which most of us put it to are more or less straightforward. There are many other programs that make use of Git for version control; these programs weld a graphical user interface on top of the main Git program. It is better however to become familiar with the basic uses of git from the command line *first* before learning the idiosyncracies of these helper programs. The exercises in this section will take you through the basics of using Git from the command line.
+
+### The core functions of Git
+
+![Alice Bartlett's summary of what Git does](images/what-git-does.png)
+
+At its heart, Git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, see Alice Bartlett's [presentation here](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In Git's lingo, a folder on your computer is known as a `repository`. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a Git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
+
+```
+|-project
+    |-'final.doc'
+```    
+
+BUT its commit history could be visualized like this:
+
+![A visualization of the history of commits](images/commit-history.png)
+
+Each one of those circles represents a point in time when you the writer made a commit; Git compared the state of the file to the earlier state, and saved a snapshot of the `differences`. What is particularly useful about making a commit is that Git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about *why* the commit is being made. In our hypothetical situation, your first commit message might look like this:
+
+```
+Fixed conclusion
+
+Julie pointed out that I had missed 
+the critical bit in the assignment 
+regarding stratigraphy. This was 
+added in the concluding section.
+```
+This information is stored in the history of the commits. In this way, you can see exactly how the project evolved and why. Each one of these commits has what is called a `hash`. This is a unique fingerprint that you can use to 'time travel' (in Bartlett's felicitous phrasing). If you want to see what your project looked like a few months ago, you `checkout` that commit. This has the effect of 'rewinding' the project. Once you've checked out a commit, don't be alarmed when you look at the folder: your folder (your repository) looks like how it once did all those weeks ago! Any files written after that commit seem as if they've disappeared. Don't worry: they still exist! 
+
+What would happen if you wanted to experiment or take your project in a new direction from that point forward? Git lets you do this. What you will do is create a new `branch` of your project from that point. You can think of a branch as like the branch of a tree, or perhaps better, a branch of a river that eventually merges back to the source. (Another way of thinking about branches is that it is a label that sticks with these particular commits.) It is generally considered 'best practice' to leave your `master` branch alone, in the sense that it represents the best version of your project. When you want to experiment or do something new, you create a `branch` and work there. If the work on the branch ultimately proves fruitless, you can discard it. *But*, if you decide that you like how it's going, you can `merge` that branch back into your master. A merge is a commit that folds all of the commits from the branch with the commits from the master.
+
+Git is also a powerful tool for backing up your work. You can work quite happily with Git on your own machine, but when you store those files and the history of commits somewhere remote, you open up the possibility of collaboration *and* a safe place where your materials can be recalled if -perish the thought- something happened to your computer. In Git-speak, the remote location is, well, the `remote`. There are many different places on the web that can function as a remote for Git repositories. You can even set one up on your own server, if you want. One of the most popular (and the one that we use for ODATE) is [Github](http://github.com). There are many useful repositories shared via Github of interest to archaeologists - [OpenContext](http://opencontext.org) for instance shares a lot of material that way. To get material *out* of Github and onto your own computer, you `clone` it. If that hypothetical paper you were writing was part of a group project, your partners could clone it from your Github space, and work on it as well!
+
+You and Anna are working together on the project. You have made a new project repository in your Github space, and you have cloned it to your computer. Anna has cloned it to hers. Let's assume that you have a very productive weekend and you make some real headway on the project. You `commit` your changes, and then `push` them from your computer to the Github version of your repository. That repository is now one commit *ahead* of Anna's version. Anna `pulls` those changes from Github to her own version of the repository, which now looks *exactly* like your version. What happens if you make changes to the exact same part of the exact same file? This is called a `conflict`. Git will make a version of the file that contains text clearly marking off the part of the file where the conflict occurs, with the conflicting information marked out as well. The way to `resolve` the conflict is to open the file (typically with a text editor) and to delete the added Git text, making a decision on which information is the correct information.
+
+### Key Terms
+
++ repository: a single folder that holds all of the files and subfolders of your project
++ commit: this means, 'take a snapshot of the current state of my repostiory'
++ publish: take my folder on my computer, and copy it and its contents to the web as a repository at github.com/myusername/repositoryname
++ sync: update the web repository with the latest commit from my local folder
++ branch: make a copy of my repository with a 'working name'
++ merge: fold the changes I have made on a branch into another branch
++ fork: to make a copy of someone else's repo
++ clone: to copy an online repo onto your own computer
++ pull request: to ask the original maker of a repo to 'pull' your changes into their master, original, repository
++ push: to move your changes from your computer to the online repo
++ conflict: when two commits describe different changes to the same part of a file
+
+### Take-aways
+
++ Git keeps track of all of the differences in your files, when you take a 'snapshot' of the state of your folder (repository) with the `commit` command
++ Git allows you to roll back changes
++ Git allows you to experiment by making changes that can be deleted or incorporated as desired
++ Git allows you to manage collaboration safely
++ Git allows you to distribute your materials
+
+### Further Reading
+
+We alluded above to the presence of 'helper' programs that are designed to make it easier to use Git to its full potential. An excellent introduction to Github's desktop GUI is at this [Programming Historian lesson on Github](http://programminghistorian.org/lessons/getting-started-with-github-desktop). A follow-up lesson explains the way Github itself can be used to host entire websites! You may explore it [here](http://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages). In the section of this chapter on open notebooks, we will also use Git and Github to create a simple open notebook for your research projects.
+
+You might also wish to dip into the [archived live stream; link here](https://www.youtube.com/watch?v=D0_j04BnVeA) from the first day of the NEH funded Institute on Digital Archaeology Method and Practice (2015) where Prof. Ethan Watrall discusses project management fundamentals and, towards the last part of the stream, introduces Git.
+
+### Exercises
+
+1. How do you turn a folder into a repository? With the `git init` command. At the command line (remember, the `$` just shows you the prompt; you don't have to type it!):
+  a. make a new director: `$ mkdir first-repo`
+  b. type `$ ls` (list) to see that the director exists. Then change directory into it: `cd first-repo`. (remember: if you're ever not sure what directory you're in, type `$ pwd`, or print working directory).
+  c. make a new file called `readme.md`. You do this by calling the text editor: `nano readme.md`. Type an explanation of what this exercise is about. The `.md` signals that you're writing a text file that uses the markdown format of signalling things like headings, lists, tables, etc. (A guide to [markdown syntax is here](https://daringfireball.net/projects/markdown/basics.php)). Hit ctrl+x to exit, then y to save, leave the file name as it is.
+  d. type `$ ls` again to check that the file is there.
+  e. type `$ git init` to tell the Git program that this folder is to be tracked as a repository. If all goes correctly, you should see a variation on this message: `Initialized empty Git repository in /home/demonstration/first-repo/.git/`. But type `$ ls` again. What do you (not) see?
+
+The changes in your repo will now be stored in that *hidden* directory, `.git`. Most of the time, you will never have reason to search that folder out. But know that the config file that describes your repo is in that folder. There might come a time in the future where you want to alter some of the default behaviour of the git program. You do that by opening the config file (which you can read with a text editor). Google 'show hidden files and folders' for your operating system when that time comes. 
+
+2. Open your readme.md file again with the nano text editor, from the command line. Add some more information to it, then save and exit the text editor.
+  a. type `$ git status`
+  b. Git will respond with a couple of pieces of information. It will tell you which `branch` you are on. It will list any untracked files present or new changes that are unstaged. We now will `stage` those changes to be added to our commit history by typing `$ git add -A`. (the bit that says `-A` adds any new, modified, or deleted files to your commit when you make it. There are [other options or flags](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660) where you add *only* the new and modified files, *or* only the modified and deleted files.)
+  c. Let's check our git status again: type `$ git status`
+  d. You should see something like this:
+
+```
+On branch master
+Initial commit
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   readme.md```
+```
+  e. Let's take a snapshot: type `$ git commit -m "My first commit"`. What happened? Remember, Git keeps track not only of the changes, but *who* is making them. If this is your first time working with Git in the Archaebox, Git will ask you for your name and email. Helpfully, the Git error message tells you exactly what to do: type `$ git config --global user.email "you\@example.com"` and then type `$ git config --global user.name "Your Name"`. Now try making your first commit.
+  f. The command above represents a bit of a shortcut for making commit messages by using the `-m` flag to associate the text in the quotation marks with the commit. Open up your readme.md file again, and add some more text to it. Save and exit the text editor. Add the new changes to the snapshot that we will take. Then, type `$ git commit`. Git automatically opens up the text editor so you can type a longer, more substantive commit message. In this message (unlike in markdown) the `#` indicates a line to be ignored. You'll see that there is already some default text in there telling you what to do. Type a message indicating the nature of the changes you have made. Then save and exit the text editor. DO NOT change the filename!
+  
+Congratulations, you are now able to track your changes, and keep your materials under version control!
+
+3. Go ahead and make some more changes to your repository. Add some new files. Commit your changes after each new file is created. Now we're going to view the history of your commits. Type `$ git log`. What do you notice about this list of changes? Look at the time stamps. You'll see that the entries are listed in reverse chronological order. Each entry has its own 'hash' or unique ID, the person who made the commit and time are listed, as well as the commit message eg:
+
+```
+commit 253506bc23070753c123accbe7c495af0e8b5a43
+Author: Shawn Graham <shawn.graham@carleton.ca>
+Date:   Tue Feb 14 18:42:31 2017 +0000
+
+Fixed the headings that were broken in the about section of readme.md
+
+```
+
+a. We're going to go back in time and create a new branch. You can escape the `git log` by typing `q`. Here's how the command will look: `$ git checkout -b branchname <commit>` where `branch` is the name you want the branch to be called, and `<commit>` is that unique ID. Make a new branch from your second last commit (don't use < or >). 
+b. We typed `git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43`. The response: `Switched to a new branch 'experiment'` Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you've time travelled! Those files are not missing; but they *are* on a different branch (the master branch) and you can't harm them now. Add a number of new files, making commits after each one. Check your git status, and check your git log as you go to make sure you're getting everything. Make sure there are no unstaged changes - everything's been committed.
+
+4. Now let's assume that your `experiment` branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your `master` branch. We're going to merge things. To merge, we have to go back to the master branch: `$ git checkout master`. (Good practice is to keep separate branches for all major experiments or directions you go. In case you lose track of the names of the branches you've created, this command: `git branch -va` will list them for you.)
+
+a. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.
+
+5. One of the most powerful aspects of using Git is the possibility of using it to manage collaborations. To do this, we have to make a copy of your repository available to others as a `remote`. There are a variety of places on the web where this can be done; one of the most popular at the moment is [Github](http://github.com). Github allows a user to have an unlimited number of `public` repositories. Public repositories can be viewed and copied by anyone. `Private` repositories require a paid account, and access is controlled. If you are working on sensitive materials that can only be shared amongst the collaborators on a project, you should invest in an upgraded account (note that you can also control which files get included in commit; see [this help file](https://help.github.com/articles/ignoring-files/). In essence, you simply list the file names you do not want committed; here's an [example](https://gist.github.com/octocat/9257657)). Let's assume that your materials are not sensitive. 
+a. Go to Github, register for an account. 
+b. On the upper right part of the screen there is a large + sign. Click on that, and select `new public repository`
+c. On the following screen, give your repo a name. 
+d. DO NOT 'initialize this repo with a readme.md'. Leave `add .gitignore` and `add license` set to NONE. 
+e. Clic the green 'Create Repository' button.
+f. You now have a space into which you will publish the repository on your machine. At the command line, we now need to tell Git the location of this space. We do that with the following command, where you will change `your-username` and `your-new-repo` appropriately:
+```
+$ git remote add origin https://github.com/YOUR-USERNAME/YOUR-NEW-REPO.git
+```
+g. Now we push your local copy of the repository onto the web, to the Github version of your repo:
+```
+git push -u origin master
+```
+
+*NB* If you wanted to push a `branch` to your repository on the web instead, do you see how you would do that? If your branch was called `experiment`, the command would look like this:
+
+```
+$ git push origin experiment
+
+```
+
+h. The changes can sometimes take a few minutes to show up on the website. Now, the next time you make changes to this repository, you can push them to your Github account - which is the 'origin' in the command above.  Add a new text file. Commit the changes. Push the changes to your account.
+
+6. Imagine you are collaborating with one of your classmates. Your classmate is in charge of the project, and is keeping track of the 'official' folder of materials (eg, the repo). You wish to make some changes to the files in that repository. You can manage that collaboration via Github by making a copy, what Github calls a `fork`. 
+a. Make sure you're logged into your Github account on the Github website. We're going to fork an example repository right now by going to [https://github.com/octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife). Click the 'fork' button at top-right. Github now makes a copy of the repository in your own Github account! 
+b. To make a copy of that repository on your own machine, you will now clone it with the `git clone` command. (Remember: a 'fork' copies someone's Github repo into a repo in your OWN Github account; a 'clone' makes a copy on your own MACHINE). Type:
+```
+$ cd.. 
+$ pwd
+```
+We do that to make sure you're not _inside_ any other repo you've made! Make sure you're not inside the repository we used in exercises 1 to 5, then proceed:
+
+```
+$ git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+$ ls
+```
+You now have a folder called 'Spoon-Knife' on your machine! Any changes you make inside that folder can be tracked with commits. You can also `git push -u origin master` when you're inside it, and the changes will show up on your OWN copy (your fork) on Github.com. 
+c. Make a fork of, and then clone, one of your classmates' repositories. Create a new branch. Add a new file to the repository on your machine, and then push it to your fork on Github. Remember, your new file will appear on the new branch you created, NOT the master branch.
+
+7. Now, you let your collaborator know that you've made a change that you want her to `merge` into the original repository. You do this by issuing a `pull request`. But first, we have to tell Git to keep an eye on that original repository, which we will call `upstream`. You do this by adding that repository's location like so:
+a. type (but change the address appropriately):
+
+```
+$ git remote add upstream THE-FULL-URL-TO-THEIR-REPO-ENDING-WITH-.git
+```
+b. You can keep your version of the remote up-to-date by fetching any new changes your classmate has done:
+```
+$ git fetch upstream
+```
+c. Now let's make a `pull` request (you might want to bookmark this [help document](https://help.github.com/articles/creating-a-pull-request/)). Go to your copy of your classmate's repository at your Github account. Make sure you've selected the correct branch you pushed your changes to, by selecting it from the Branches menu drop down list. 
+d. Click the 'new pull request' button.
+e. The new page that appears can be confusing, but it is trying to double check with you which changes you want to make, and where. *'Base Branch'* is the branch where you want your changes to go, ie, your classmate's repository. *'head branch'* is the branch where you made *your* changes. Make sure these are set properly. Remember: the first one is the TO, the second one is the FROM: the place where you want your changes to go TO, FROM the place where you made the changes.
+f. A pull request has to have a message attached to it, so that your classmate knows what kind of change you're proposing. Fill in the message fields appropriately, then hit the 'create pull request' button.
+
+![A pull request message; Image from Github.com](images/pullrequest-send.png)
+
+8. Finally, the last bit of work to be done is to accept the pull request and `merge` the changes into the original repository.
+a. Go to your repository on your Github account. Check to see if there are any 'pull requests' - these will be listed under the 'pull requests' tab. Click on that tab.
+b. You can merge from the command line, but for now, you can simply click on the green 'merge pull request' button, and then the 'confirm merge' button. The changes your classmate has made have now been folded into your repository.
+c. To get the updates on your local machine, go back to the command line and type
+```
+$ git pull origin master
+```
+
+### Warnings
+
+It is possible to make changes to files directly via the edit button on Github. Be careful if you do this, because things rapidly can become out of sync, resulting in conflicts between differing versions of the same file. Get in the habit of making your changes on your own machine, and making sure things are committed and up-to-date (`git status`, `git pull origin master`, `git fetch upstream` are your friends) before beginning work. At this point, you might want to investigate some of the graphical interfaces for Git (such as [Github Desktop](https://desktop.github.com/)). Knowing as you do how things work from the command line, the idiosyncracies of the graphical interfaces will make more sense. For further practice on the ins-and-outs of Git and Github Desktop, we recommend trying [the Git-it app](https://github.com/jlord/git-it-electron/) by Jessica Lord.
+
+For help in resolving merge conflicts, see the [Github help documentation](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/). For a quick reminder of how the workflow should go, see [this cheat-sheet by Chase Pettit](https://gist.github.com/shawngraham/513d4b2860d52fdac6bd783e4387957e).
+
+

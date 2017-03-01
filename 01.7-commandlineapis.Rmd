@@ -1,0 +1,138 @@
+## Command Line Methods for Working with APIs
+
+yadda ... maybe do this in R (since we have an Rserver in the box) and use the rcats tutorial as a model? https://rforcats.net/  which might fit into the section below
+
+### Working with Open Context
+
+[Open Context, http://opencontext.org](http://opencontext.org) operates under the idea that every element of an archaeological research project should be published. To that end, they publish *everything* with its own unique URI.
+
+Search for something interesting. I put ‘poggio’ in the search box, and then clicked on the various options to get the architectural fragments. Look at the URL:
+https://opencontext.org/subjects-search/?prop=oc-gen-cat-object&q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite
+See all that stuff after the word ‘Poggio’? That’s to generate the map view. We don’t need it.
+
+We’re going to ask for the search results w/o all of the website extras, no maps, no shiny interface. To do that, we take advantage of the API. With open context, if you have a search with a ‘?’ in the URL, you can put .json in front of the question mark, and delete all of the stuff from the # sign on, like so:
+
+https://opencontext.org/subjects-search/.json?prop=oc-gen-cat-object&q=Poggio
+
+Put that in the address bar. Boom! lots of stuff! But only one page’s worth, which isn’t lots of data. To get a lot more data, we have to add another parameter, the number of rows: ?rows=100&. Slot that in just before the p in prop= and see what happens.
+
+Now, that isn’t all of the records though. Remove the .json and see what happens when you click on the arrows to page through the NEXT 100 rows. You get a URL like this:
+
+https://opencontext.org/subjects-search/?rows=100&prop=oc-gen-cat-object&start=100&q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite
+
+So – to recap, the URL is searching for 100 rows at a time, in the general object category, starting from row 100, and grabbing materials from Poggio. We now know enough about how open context’s api works to grab material.
+
+Couple of ways one could grab it:
+
+1. You could copy n’ paste -> but that will only get you one page’s worth of data (and if you tried to put, say, 10791 into the ‘rows’ parameter, you’ll just get a time-out error). You’d have to go back to the search page, hit the ‘next’ button, reinsert the .json etc over and over again.
+2. Automatically. We’ll use a program called wget to do this. (To install wget on your machine, see the programming historian Wget will interact with the Open Context site to retrieve the data. We feed wget a file that contains all of the urls that we wish to grab, and it saves all of the data into a single file. So, open a new text file and paste our search URL in there like so:
+
+```
+https://opencontext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&q=Poggio
+https://opencontext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&start=100&q=Poggio
+https://opencontext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&start=200&q=Poggio
+```
+
+…and so on until we’ve covered the full 4000 objects. Tedious? You bet. So we’ll get the computer to generate those URLS for us. Open a new text file, and copy the following in:
+
+```
+#URL-Generator.py
+
+urls = '';
+f=open('urls.txt','w')
+for x in range(1, 4000, 100):
+    urls = 'https://opencontext.org/subjects-search/.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&start=%d&q=Poggio/\n' % (x)
+    f.write(urls)
+f.close
+```
+
+and save it as url-generator.py. This program is in the python language. Type at the prompt:
+
+```
+$ python url-generator.py
+```
+This little program defines an empty container called ‘urls’; it then creates a new file called ‘urls.txt’; then we tell it to write the address of our search into the urls container. See the %d in there? The program writes a number between 1 and 4000; each time it does that, it counts by 100 so that the next time it goes through the loop, it adds a new address with the correct starting point! Then it saves that container of URLs into the file urls.txt. Go ahead, open it up, and you’ll see.
+
+Now we’ll feed it to wget like so. At the prompt type
+
+```
+$ wget -i urls.txt -r --no-parent -nd –w 2 --limit-rate=10k
+```
+You’ll end up with a lot of files that have no file extension in your folder, eg
+
+```
+.json?rows=100&prop=oc-gen-cat-object---oc-gen-cat-arch-element&start=61&q=Poggio%2F
+```
+
+Rename them so that they have `.json` file extensions. Now we concatenate them together
+
+```
+# As simple as this. Output file should be last
+$ json-concat file1.json file2.json file3.json file4.json ouput.json
+```
+SG MAKE SURE THAT JSON-CONCAT CAN BE HAD ON DHBOX, OTHERWISE FIND ALTERNATIVE
+
+ALSO MAKE SURE TO TALK THROUGH THIS: https://github.com/ropensci/opencontext
+
+json is a text file where keys are paired with values. JQ is a piece of software that enables us to reach into a json file, grab the data we want, and create either new json or csv. If you intend to visualize and explore data using some sort of spreadsheet program, then you’ll need to extract the data you want into a csv that your spreadsheet can digest. If you wanted to try something like d3 or some other dynamic library for generating web-based visualizations (eg p5js), you’ll need json.
+
+jqplay
+
+JQ lets us do some fun filtering and parsing, but we won’t download and install it yet. Instead, we’ll load some sample data into a web-toy called jqplay. This will let us try different ideas out and see the results immediately. In the this file  called sample.json I have the query results from Open Context – Github recognizes that it is json and that it has geographic data within it, and turns it automatically into a map! To see the raw json, click on the < > button. Copy that data into the json box at jqplay.org.
+
+JQPlay will colour-code the json. Everything in red is a key, everything in black is a value. Keys can be nested, as represented by the indentation. Scroll down through the json – do you see any interesting key:value pairs? Matthew Lincoln’s tutorial at the programming historian is one of the most cogent explanations of how this works, and I do recommend you read that piece. Suffice to say, for now, that if you see an interesting key:value pair that you’d like to extract, you need to figure out just how deeply nested it is. For instance, there is a properties key that seems to have interesting information within it about dates, wares, contexts and so on. Perhaps we’d like to build a query using JQ that extracts that information into a csv. It’s within the features key pair, so try entering the following in the filter box:
+
+```
+.features [ ] | .properties
+```
+
+You should get something like this:
+
+```
+{
+  "id": "#geo-disc-tile-12023202222130313322",
+  "href": "https://opencontext.org/search/?disc-geotile=12023202222130313322&prop=oc-gen-cat-object&rows=5&q=Poggio",
+  "label": "Discovery region (1)",
+  "feature-type": "discovery region (facet)",
+  "count": 12,
+  "early bce/ce": -700,
+  "late bce/ce": -535
+}
+{
+  "id": "#geo-disc-tile-12023202222130313323",
+  "href": "https://opencontext.org/search/?disc-geotile=12023202222130313323&prop=oc-gen-cat-object&rows=5&q=Poggio",
+  "label": "Discovery region (2)",
+  "feature-type": "discovery region (facet)",
+  "count": 25,
+  "early bce/ce": -700,
+  "late bce/ce": -535
+}
+```
+For the exact syntax of why that works, see Lincoln’s tutorial. I’m going to just jump to the conclusion now. Let’s say we wanted to grab some of those keys within properties, and turn into a csv. We tell it to look inside features and find properties; then we tell it to make a new array with just those keys within properties we want; and then we tell it to pipe that information into comma-separated values. Try the following on the sample data:
+
+```
+.features [ ] | .properties | [.label, .href, ."context label", ."early bce/ce", ."late bce/ce", ."item category", .snippet] | @csv
+```
+…and make sure to tick the ‘raw output’ box at the top right. Ta da! You’ve culled the information of interest from a json file, into a csv. There’s a lot more you can do with jq, but this will get you started. Finally, we move back to the command line and invoke JQ to format the data how we want it:
+
+```
+jq -r '.features [ ] | .properties | [.label, .href, ."context label", ."early bce/ce", ."late bce/ce", ."item category", .snippet] | @csv' data.json > data.csv
+```
+
+
+
+
+### Working with Omeka
+
+yadda
+
+### Working with tDAR
+
+yadda
+
+### Working with ADS 
+
+### Exercises
+
+yadda
+

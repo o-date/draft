@@ -1,0 +1,87 @@
+## Open Notebook Research & Scholarly Communication
+
+Digital archaeology necessarily generates a lot of files. Many of those files are data; many more are manipulations of that data, or the data in various stages of cleaning and analysis. Without any sort of version control or revision history (as detailed in the previous section), these files quickly replicate to the point where a project can be in serious danger of failing. Which file contains the 'correct' data? The correct analysis? Even worse, imagine coming back to a project after a few months' absence. Worse still, after a major operating system update of the kind foisted on Windows users from Windows 7 to Windows 10. The bad news continues: magnetic storage can fail; online cloud services can be hacked; a key person on the project can die.
+ 
+Even if the data makes it to publication, there is the problem of the data not being available to others for re-interrogation or re-analysis. Requests for data from the authors of journal articles are routinely ignored, whether by accident or design. Researchers may sit on data for years. We have all of us had the experience of working on a collection of material, and then writing to the author of the original article, requesting an explanation for some aspect of the data schema used, only to find out that the author has either died, kept no notes, left the field entirely, or simply doesn't remember.
+
+There is no excuse for this any longer. `Open notebook science` is a gathering movement across a number of fields to make the entire research process transparent by sharing materials online as they are generated. These include everything from the data files themselves, to the code used to manipulated it, to notes and observations in various archives. Variations on this 'strong' position include data-publishing of the materials after the main paper has been published (see for instance [OpenContext](http://opencontext.org) or the [Journal of Open Archadological Data](http://openarchaeologydata.metajnl.com/)). Researchers such as [Ben Marwick](https://faculty.washington.edu/bmarwick/) and [Mark E. Madsen](http://notebook.madsenlab.org/labnotebook.html) are leading the field in archaeology, while scholars such as [Caleb McDaniel](http://wcm1.web.rice.edu/open-notebook-history.html) are pushing the boundaries in history. The combination of simple text files (whether written text or tabular data such as .csv files) with static website generators (ie, html rather than dynamically generated database websites like Wordpress) enables the live publishing of in-progress work. [Carl Boettiger](http://www.carlboettiger.info/2012/09/28/Welcome-to-my-lab-notebook.html) is often cited as one of the godfathers of this movement. He makes an important distinction:
+
+> This [notebook, not blog] is the active, permanent record of my scientific research, standing in place of the traditional paper bound lab notebook. The notebook is primarily a tool for me to do science, not communicate it. I write my entries with the hope that they are intelligible to my future self; and maybe my collaborators and experts in my field. Only the occasional entry will be written for a more general audience. […] In these pages you will find not only thoughts and ideas, but references to the literature I read, the codes or manuscripts I write, derivations I scribble and graphs I create and mistakes I make. [@boettiger_welcome_0000]
+
+Major funding bodies are starting to require a similar transparency in the research that they support. Recently, the Social Sciences and Humanities Research Council of Canada published guidance on [data management plans](http://www.sshrc-crsh.gc.ca/about-au_sujet/policies-politiques/statements-enonces/edata-donnees_electroniques-eng.aspx):
+
+> All research data collected with the use of SSHRC funds must be preserved and made available for use by others within a reasonable period of time. SSHRC considers “a reasonable period” to be within two years of the completion of the research project for which the data was collected.
+
+Annecdotally, we have also heard of work being denied funding because the data management plan, and/or the plan for knowledge mobilization, made only the briefest of nods towards these issues: 'we shall have a blog and will save the data onto a usb stick' does not cut it any more. A recent volume of case-studies in 'reproducible research' includes a contribution from Ben Marwick that details not only the benefits of such an approach, but also the 'pain points'. Key amongst them was that not everyone participating in the project was on board using scripted code to perform the analysis (preferring instead to use the point-and-click of Excel), the duplication of effort that emerged as a result, and the complexities that arose from what he calls the 'dual universes' of Microsoft tools versus the open source tools. (MARWICK REF). On the other hand, the advantages outweighed the pain. For Marwick's team, because their results and analysis can be re-queried and re-interrogated, they have an unusually high degree of confidence in what they've produced. Their data, and their results have a complete history of revisions that can be examined by reviewers. Their code can be re-used and re-purposed, thus making their subsequent research more efficient. Marwick goes on to create an entire 'compendium' of code, notes, data, and software dependencies that can be duplicated by other researchers. Indeed, we will be re-visiting their compendium in Section XXXXXXXXX.
+
+Ultimately, McDaniels says it best about keeping open notebooks of research in progress when he writes,
+
+> The truth is that we often don’t realize the value of what we have until someone else sees it. By inviting others to see our work in progress, we also open new avenues of interpretation, uncover new linkages between things we would otherwise have persisted in seeing as unconnected, and create new opportunities for collaboration with fellow travelers. These things might still happen through the sharing of our notebooks after publication, but imagine how our publications might be enriched and improved if we lifted our gems to the sunlight before we decided which ones to set and which ones to discard? What new flashes in the pan might we find if we sifted through our sources in the company of others?
+
+A parallel development is the growing practice of placing materials online as pre-prints or even as drafts, for sharing and for soliciting comments. Graham for instance uses a blog as a place to share longer-form discursive writing in progress; with his collaborators Ian Milligan and Scott Weingart, he even wrote a book 'live' on the web, warts and all (which you may still view at [The Macroscope](http://themacroscope.org)). Sharing the draft in progress allowed them to identify errors and ommissions as they wrote, and for their individual chapters and sections to be incorporated into class syllabi right away. In their particular case, they came to an arrangment with their publisher to permit the draft to remain online even after the formal publication of the 'finished' book - which was fortunate, as they ended up writing another chapter immediately after publication! In this, they were building on the work of scholars such as Kathleen Fitzpatrick, whose [_Planned Obsolescence_](http://mcpress.media-commons.org/plannedobsolescence/) was one of the first to use the Media Commons 'comment press' website to support the writing. Commentpress is a plugin for the widely used Wordpress blogging system, which allows comments to be made at the level of individual paragraphs. This textbook you are currently reading uses another solution, the [hypothes.is](http://hypothes.is) plugin that fosters communal reading and annotation of electronic texts. This points to another happy by-product of sharing one's work this way - the ability to generate communities of interest around one's research. The Kitz et al. volume is written with the [Gitbook](http://gitbook.com) platform, which is a graphical interface for writing using Git at its core with markdown text files to manage the collaboration. The commit history for the book then also is a record of how the book evolved, and who did what to it when. In a way, it functions a bit like 'track changes' in Word, with the significant difference that the evolution of the book can be rewound and taken down different branches when desired.  
+
+In an ideal world, we would recommend that everyone should push for such radical transparency in their research and teaching. But what is safe for a group of (mostly) white, tenured, men is not safe for everyone online. In which case, what we recommend is for individuals to assess what is safest for them to do, while still making use of the affordances of Git, remote repositories, and simple text files. [Bitbucket](http://bitbucket.org) at the time of writing offers free private repositories (so you can push your changes to a remote repository without fear of others looking or cloning your materials); [ReclaimHosting](http://reclaimhosting.com) supports academic webhosting and allows one to set up the private 'dropbox' like file-sharing service [Owncloud](https://owncloud.org/).  
+ 
+In this section, we will explore how to make a simple open notebook via a combination of markdown files and a repository on Github. Ultimately, we endorse the model developed by Ben Marwick, of creating an entire 'research compendium' that can be installed on another researcher's machine, but a good place to start are with the historian Lincoln Mullen's simple notebook templates. This will introduce to you another tool in the digital archaeologist's toolkit, the open source R programming language and the R Studio 'IDE' ('integrated development environment).
+
+
+ - the dangers of excel <- maybe talk about that in the earlier section about csv files?
+
+### discussion
+
+Questions for discussion:
+
+1. Search the archaeological literature (via [jstor](http://jstor.org) or [Google Scholar](https://scholar.google.ca/)) for examples of open notebook science 'in the wild'. Are you finding anything, and if so, where? Do there seem to be impediments *from the journals* regarding this practice?
+2. What excites you about the possibilities of open notebook archaeology? What are the advantages?
+3. What frightens you? What are the disadvantages?
+4. Search online for the 'replicability crisis in science'. Is there any such thing in archaeology?
+5. Study Marwick's paper REF and compare it to its supporting Github repository. What *new* questions could be asked of this data?
+6. In what ways are terms like 'open access', 'open source', and 'open science' synonyms for a similar approach, and in what ways are they different?
+
+### exercises
+
+In this series of exercises, we are going to take you through the process of setting up an open research notebook, where you control all of the code and all of the data. (While we recommend an open notebook, one could equally use what follows with a private website or Git repo. Readers may also want to explore an Evernote alternative, [Laverna](https://laverna.cc/) which stores your notes in your web-browser's cache hence making them private, but also allows sync to services such as Dropbox).
+
+1. Let us set up a template open-notebook based on [Lincoln Mullen's Simple RmD Notebook](https://github.com/lmullen/rmd-notebook). If you go to [https://lmullen.github.io/rmd-notebook/](https://lmullen.github.io/rmd-notebook/) you'll see a 'live' version of this template on the web. It is being served to us from a special branch in Mullen's Github account, called `gh-pages`. When you have a `gh-branches` branch in very nearly any repo associated with your own Github account, Github.com will treat that repository *not* as a repository but as an actual website. This allows us to update or experiment with changes on other branches, and show a 'polished' version to the world via the `gh-pages` branch. That branch will have a special address, in the form `your-account-name.github.io/your-repo`. Whenever you see `github.io` in a URL, you know that the source for that website will be found at `github.com/account-name/repo`. Do you see the difference? (For more on `gh-pages`, see the [Github documentation](https://pages.github.com/)).
+
+a. Begin sketching out on paper an idea for a digital archaeological project, perhaps the one you imagined at the end of our section on [Project Management Basics]. Imagine its file structure. In the top level folder are going to go all of your notecards. Sub-folders are going to hold diagrams that you create in the course of your reserch; source-data that you leave untouched; data that you've cleaned or manipulated; any helper code that you might create; and so on. You will use this structure to help organize your open notebook once we've installed it.
+
+b. Make a fork of our copy of Mullen's notebook (we've added [hypothes.is](http://hypothes.is) to it). You can find our copy at [https://github.com/o-date/rmd-notebook](https://github.com/o-date/rmd-notebook).
+
+c. `Clone` your copy to the ODATE environment at the command line. (Review [Github & Version Control] if necessary first).
+
+d. Type `ls` to make sure the `rmd-notebook` directory is present; then `cd rmd-notebook`.
+
+e. Check which branch you are on, and make sure it is the `gh-pages` branch. (Hint: check the status)
+
+f. Now you're ready to start adding notes! Remember, `.Rmd` files are just markdown files into which you can insert working R code. We're not ready to do that yet, but for now, you can think of these files as simple notecards where one card = one idea. Note the existing `.rmd` files in this folder. Their filenames all begin with a number. Yours should be numbered as well. You can create a new card by typing `nano filename.rmd` where `filename` is whatever you want it to be. Your notecard can include images by using the markdown syntax, `![image tile](path/to/image/filename.jpg)`; those images can be on the web or in an image folder. (A good place to practice markdown is at [Dillinger.io](http://dillinger.io)).
+
+Your note *must* contain some descriptive metadata at the top. This is good practice no matter what kind of note-taking system you use. In our case here, we use the `yaml` approach. This is what a minimum example looks like:
+
+```
+---
+title: "First page of the notebook"
+author: "Lincoln Mullen"
+date: "December 3, 2015"
+---
+```
+Title, author, and date. These will get passed to the `<meta>` tags in the eventual HTML we are going to generate. This information makes your site easier to find and to archive and to associate with you as a scholar.
+
+g. Now we make the public-facing website for your notebook. Mullen has bundled a series of commands into a `make` file, which acts as a short-cut for us and also ensures that the same sequence of operations is carried out everytime. (You can read more about makefiles [here](https://bost.ocks.org/mike/make/).) At the command prompt type `$ make`.   
+
+```
+SG <- note pandoc and rmarkdown have to be bundled into the box before hand. Otherwise, the following commands have to be run:
+$ wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
+to get pandoc and then $ sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb` to unzip and install it. Rmarkdown has to be installed from the R Server code pane. The first sample rmd file has a leaflet webapp in it; I modified the R to install leaflet first, but I dunno. This'll have to be tested. Probably easier at this point to just remove it.
+```
+
+h. The make file is pushing all of your `.Rmd` files through a program called `pandoc`, and adding various styling options to make an entire website. 
+
+> As an aside, Pandoc is an extremely useful piece of software for converting files from one format to another. A series of examples can be found at [http://www.pandoc.org/demos.html](http://www.pandoc.org/demos.html). At the command line, type `$ pandoc` and then your source file, then indicate the kind of output you want using the `-o` flag, eg: `$ pandoc MANUAL.txt -o example1.html`. One of the outputs Pandoc can generate is a Word document - which means, your source text is kept in a very simple, future-proof format, and Word can be used just for typography.
+
+Commit your changes and push them to your remote repository. Visit the `live` version of your repository - ie, the one at `github.io` *not* `github.com` to see your live open research notebook!
+
+i. Write a new note for your notebook recording your work, the problems you encountered, and the solutions you found. Save, `make`, commit, and push your note to the web.
+
+2. Another approach, using mdwiki and prose.io
+
