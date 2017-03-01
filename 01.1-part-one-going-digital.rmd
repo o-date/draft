@@ -74,6 +74,31 @@ We need to be making art. Digital archaeology naturally pushes in that direction
 
 All of these aspects of digital archaeology exist along a continuum. In the remainder of this chapter, we give you a 'boot-camp' to get you to the point where you can begin to wonder about deformation and the public entanglement with your work. 
 
+### Exercises
+
+The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:
+
+	1. separate _what_ your write/create from _how_ you write it.
+	2. keep what you write/create under version control.
+	3. break tasks down into their smallest manageable bits
+
+Have you ever fought with Word or another wordprocessor, trying to get things just right? Word processing is a mess. It conflates writing with typesetting and layout. Sometimes, you just want to get the words out. Othertimes, you want to make your writing as accessible as possible... but your intended recipient can't open your file, because they don't use the same wordprocessor. Or perhaps you wrote up some great notes that you'd love to have in a slideshow; but you can't, because copying and pasting preserves a whole lot of extra gunk that messes up your materials. Similarly, while many archaeologists will use Microsoft Excel to manipulate tabular data (artifact measurements, geochemistry data, and so on), Excel is well known for both [corrupting data](https://github.com/jennybc/scary-excel-stories) and for being impossible to replicate (ie, the series of clicks to manipulate or perform an analysis differ depending on the individual's particular installation of Excel).
+
+The answer is to separate your content from your tool, and your analytical processes separate from your data. This can help keep your thinking clear, but it also has a more nuts-and-bolts practical dimension. *A computer will always be able to read a text file*. That is to say: you've futureproofed your material. Any researcher will have old physical discs or disc drives or obsolete computers lying around. It is not uncommon for a colleague to remark, 'I wrote this in Wordperfect and I can't open this any more'. Graham's MA thesis is trapped on a 3.5" disc drive that was compressed using a now-obsolete algorithm and it cannot be recovered. If, on the other hand, he had written the text as a .txt file, and saved the data as .csv tables, those materials would *continue* to be accessible. If the way you have manipulated or cleaned the data is written out as a `script`, then a subsequent investigator (or even your future self) can re-run the exact sequence of analysis, or re-write the script into the equivalent steps in another analytical language. 
+
+A .txt file is simply a text file; a .csv is a text file that uses commas to separate the text into columns. Similarly, a .md file is a text file that uses things like `#` to indicate headers, and `_` to show where italicized text starts and stops. A script, in a play, tells you what to say and do. A `script` for a language like `R` or `Python` does the same thing for the computer, and has the advantage that it is human-readable and annotatable as well, because its format *is still a simple text file*. Scripts you might encounter could have the `.r` or `.py` or `.sh` file extensions. You can open these in a text editor and see what the computer is being instructed to do. Annotations or comments in the script can be set off in various ways, and help the researcher know what is happening or is intended to happen at various points. Let's begin by creating some simple text files to document our research process, in the Markdown format.
+
+1. A nice place to practice writing in markdown that shows you immediately how your text might be rendered when turned into html, pdf, or Word doc is [Dillinger.io](http://dillinger.io). Go there now to try it out. Write a short piece on why you're interested in Digital Archaeology. 
+a. Include a blockquote from the introduction to this book. 
+b. Include two links to an external site. 
+c. Embed an image.
+
+2. In ODATE at the command line, you'll now write a markdown file using the built-in text editor `nano`. Everywhere in this book where you see the `$` symbol, we mean for you to type whatever follows _after_ the `$` at the command line. The `$` is the _prompt_. Enter the command `$ nano my-first-md-file.md`. This tells the machine to use the nano text editor to make a new file called `my-first-md-file.md` and to allow you to edit it right away. (If you just wanted to create an empty file, you could use `$ touch my-first-md-file.md`). The screen that opens is a simple text editor. Re-write what you wrote for `1` but add subheadings this time. To save your work, hit `ctrl+x`. Nano will ask you if you want to save changes; select `y`. It will then prompt you for a file name, but `my-first-md-file.md` will *already* be inserted there, so just hit enter.
+
+3. Make a new markdown file called 'todo list' or similar. Use bullet points to break down what else you need to do this week. Each bullet point should have a sub-bullet with an actual `ACTION` listed, something that you can accomplish to get things done.
+
+** As you work through this book, we encourage you to write your thoughts, observations, or results in simple text files**. This is good practice whether or not you embark on a full-blown digital project, because ultimately, if you use a computer in your research, you *have* gone digital.
+
 ##  Project Management Basics 
 
 A digital project, whether in archaeology or in other fields, iterates through the same basic steps. There is
@@ -85,19 +110,6 @@ A digital project, whether in archaeology or in other fields, iterates through t
 
 Eighty percent of your time on any digital project will be invested in cleaning up the data and documenting what you've done to it. But in truth, a digital project begins long before we ever look at a data set (or are given data to work with, if we're part of a larger project). How do we formulate a research question or our exploration more generally? How do we translate a gut feeling or intution or curiosity into something that is _operable_? REF Moretti on operationalizing things
 
-Firstly, we have to develop some basic good habits.
-
-	1. separate what your write from _how_ you write it.
-	2. keep what you write under version control.
-
-Have you ever fought with Word or another wordprocessor, trying to get things just right? Word processing is a mess. It conflates writing with typesetting and layout. Sometimes, you just want to get the words out. Othertimes, you want to make your writing as accessible as possible... but your intended recipient can't open your file, because they don't use the same wordprocessor. Or perhaps you wrote up some great notes that you'd love to have in a slideshow; but you can't, because copying and pasting preserves a whole lot of extra gunk that messes up your materials.
-
-The answer is to separate your content from your tool. This can help keep your thinking clear, but it also has a more nuts-and-bolts practical dimension. *A computer will always be able to read a text file*. That is to say: you've futureproofed your material. Any researcher will have old physical discs or disc drives or obsolete computers lying around. It is not uncommon for a colleague to remark, 'I wrote this in Wordperfect and I can't open this any more'. Graham's MA thesis is trapped on a 3.5" disc drive that was compressed using a now-obsolete algorithm and it cannot be recovered. If, on the other hand, he had written the text as a .txt file, and saved the data as .csv tables, those materials would *continue* to be accessible. 
-
-(a .txt file is simply a text file; a .csv is a text file that uses commas to separate the text into columns. Similarly, a .md file is a text file that uses things like `#` to indicate headers, and `_` to show where italicized text starts and stops.)
-
-As you work through this book, we encourage you to write your thoughts, observations, or results in simple text files. You can always open a text file in the latest version of Word; sometimes, you can't open old Word files in the latest version of Word! We will discuss more about this below, where we will have you do some exercises in marking up a text file with 'markdown'.
-
 The four steps we identified above are cyclical; at any one time you might be at a different stage of the process. Indeed, those four steps could easily be subsumed under what Simon Appleford and Jennifer Guiliano of [devdh.org](http://devdh.org) identify as the 'Best Practice Principles Of Designing Your First Project.' For Appleford and Guiliano, the outline of a project involves figuring out:
 
 1. the question, problem, or provocation
@@ -108,7 +120,7 @@ The four steps we identified above are cyclical; at any one time you might be at
 
 Note that 4, audience, comes before 5, product. You must think of your reader/user! 
 
-Let us imagine that we were inspired by Allison Mickel's piece, 'Tracing Teams, Texts, and Topics: Applying Social Network Analysis to Understand Archaeological Knowledge Production at Çatalhöyük'. 
+Let us imagine that we were inspired by Allison Mickel's piece, 'Tracing Teams, Texts, and Topics: Applying Social Network Analysis to Understand Archaeological Knowledge Production at Çatalhöyük' [@mickel_tracing_2016]. 
 
 We could frame a question: 'What role do social networks play in the development of knowledge production at my site?'
 
