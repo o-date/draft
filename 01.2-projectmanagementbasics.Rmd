@@ -41,8 +41,6 @@ That's how much time you have for your project. It's not an awful lot, which mea
 
 ### Take-aways
 
-+ Separate your _content_ from your _presentation_
-+ future-proof your materials through the use of simple text formats wherever possible
 + be explicit about how collaboration will be managed
 + be explicit about how your research goals intersect with your audience
 + be brutally honest about your time and guard it jealously
