@@ -1,0 +1,23 @@
+## Artificial Intelligence in Digital Archaeology 
+
+## agent models
+
+blah
+
+### discussion
+
+blah
+
+### exercises
+
+blah 
+
+### Machine learning for image captioning and other classificatory tasks
+
+blah
+
+### discussion
+
+blah
+
+### exercises

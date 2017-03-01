@@ -1,7 +1,0 @@
-# 3D Photogrammetry & Structure from Motion
-
-vsfm
-
-### discussion
-
-### exercises

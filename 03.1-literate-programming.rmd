@@ -1,0 +1,7 @@
+## Statistical Computing with R and Python Notebooks; Reproducible code
+
+blah
+
+### discussion
+
+### exercises

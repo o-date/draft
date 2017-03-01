@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  1 MAR 2017 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  1 MAR 2017 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -892,13 +892,13 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 \tf@toc=\write4
 \openout4 = `odate.toc'.
 
-[4] <images/word-cloud-proposal.jpg, id=219, 401.5pt x 265.99374pt>
+[4] <images/word-cloud-proposal.jpg, id=224, 401.5pt x 265.99374pt>
 File: images/word-cloud-proposal.jpg Graphic file (type jpg)
 <use images/word-cloud-proposal.jpg>
 Package pdftex.def Info: images/word-cloud-proposal.jpg used on input line 105.
 
 (pdftex.def)             Requested size: 401.5235pt x 266.00931pt.
-<images/by-nc-sa.png, id=220, 88.33pt x 31.11626pt>
+<images/by-nc-sa.png, id=225, 88.33pt x 31.11626pt>
 File: images/by-nc-sa.png Graphic file (type png)
 <use images/by-nc-sa.png>
 Package pdftex.def Info: images/by-nc-sa.png used on input line 110.
@@ -930,7 +930,7 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 768.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [19] [20] <images/creating-refinining-question.png, id=391, 1119.18124pt x 59
+) [19] [20] <images/creating-refinining-question.png, id=396, 1119.18124pt x 59
 1.20876pt>
 File: images/creating-refinining-question.png Graphic file (type png)
 <use images/creating-refinining-question.png>
@@ -938,18 +938,18 @@ Package pdftex.def Info: images/creating-refinining-question.png used on input
 line 965.
 (pdftex.def)             Requested size: 469.7626pt x 248.15262pt.
 [21 <./images/creating-refinining-question.png>] <images/what-git-does.png, id=
-406, 567.11874pt x 270.00874pt>
+411, 567.11874pt x 270.00874pt>
 File: images/what-git-does.png Graphic file (type png)
 <use images/what-git-does.png>
 Package pdftex.def Info: images/what-git-does.png used on input line 1087.
 (pdftex.def)             Requested size: 469.77385pt x 223.66223pt.
-[22] <images/commit-history.png, id=416, 293.095pt x 34.1275pt>
+[22] <images/commit-history.png, id=421, 293.095pt x 34.1275pt>
 File: images/commit-history.png Graphic file (type png)
 <use images/commit-history.png>
 Package pdftex.def Info: images/commit-history.png used on input line 1112.
 (pdftex.def)             Requested size: 293.09427pt x 34.1274pt.
 [23 <./images/what-git-does.png> <./images/commit-history.png>] [24] [25] [26] 
-[27] <images/pullrequest-send.png, id=492, 774.895pt x 403.5075pt>
+[27] <images/pullrequest-send.png, id=497, 774.895pt x 403.5075pt>
 File: images/pullrequest-send.png Graphic file (type png)
 <use images/pullrequest-send.png>
 Package pdftex.def Info: images/pullrequest-send.png used on input line 1657.
@@ -1050,35 +1050,35 @@ Chapter 6.
 [45] [46
 
 ]
-Overfull \hbox (31.67389pt too wide) in paragraph at lines 2590--2593
+Overfull \hbox (31.67389pt too wide) in paragraph at lines 2582--2585
 \T1/lmr/m/it/10 (-20) ward Glance\T1/lmr/m/n/10 (-20) . []$http : / / lincolnmu
 llen . com / blog / a-[]con^^\rmation-[]of-[]andrew-[]goldstone-[]on-[]teaching
 -[]quantitative-[]methods/$[]. 
  []
 
 [47]
-Overfull \hbox (54.49132pt too wide) in paragraph at lines 2609--2612
+Overfull \hbox (54.49132pt too wide) in paragraph at lines 2601--2604
 \T1/lmr/m/it/10 (-20) Owens\T1/lmr/m/n/10 (-20) . []$http : / / www . trevorowe
 ns . org / 2012 / 11 / discovery-[]and-[]justi^^\cation-[]are-[]di^^[erent-[]no
 tes-[]on-[]sciencing-[]the-[]humanities/$[]. 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2614.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2606.
 [48]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2614.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2606.
 (./odate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2614.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2614.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2606.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2606.
 
 Package rerunfilecheck Info: File `odate.out' has not changed.
-(rerunfilecheck)             Checksum: F07476704FBDDB6AEC72F08289D2DC30;9169.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2614.
+(rerunfilecheck)             Checksum: EC7D9B15210A07F8C80BEE47B0E72A78;9287.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2606.
  ) 
 Here is how much of TeX's memory you used:
- 12892 strings out of 494501
- 188331 string characters out of 6167030
- 285505 words of memory out of 5000000
- 15591 multiletter control sequences out of 15000+600000
+ 12887 strings out of 494501
+ 188264 string characters out of 6167030
+ 285375 words of memory out of 5000000
+ 15589 multiletter control sequences out of 15000+600000
  66484 words of font info for 119 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  32i,5n,35p,497b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1092,10 +1092,10 @@ ist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015basic/texmf-dist/f
 onts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/
 type1/public/lm/lmro10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
 /public/lm/lmtt10.pfb>
-Output written on odate.pdf (48 pages, 690758 bytes).
+Output written on odate.pdf (48 pages, 690113 bytes).
 PDF statistics:
- 813 PDF objects out of 1000 (max. 8388607)
- 736 compressed objects within 8 object streams
- 257 named destinations out of 1000 (max. 500000)
- 12623 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 814 PDF objects out of 1000 (max. 8388607)
+ 737 compressed objects within 8 object streams
+ 254 named destinations out of 1000 (max. 500000)
+ 12631 words of extra memory for PDF output out of 14400 (max. 10000000)
 

@@ -23,7 +23,7 @@
 ["finding-and-communicating-the-compelling-story.html", "3 Finding and Communicating the Compelling Story", " 3 Finding and Communicating the Compelling Story blah blah blah "],
 ["statistical-computing-with-r-and-python-notebooks-reproducible-code.html", "3.1 Statistical Computing with R and Python Notebooks; Reproducible code", " 3.1 Statistical Computing with R and Python Notebooks; Reproducible code blah 3.1.1 discussion 3.1.2 exercises "],
 ["d3-processing-and-data-driven-documents.html", "3.2 D3, Processing, and Data Driven Documents", " 3.2 D3, Processing, and Data Driven Documents blerg 3.2.1 discussion 3.2.2 exercises "],
-["storytelling-and-the-archaeological-cms-omeka-kora.html", "3.3 Storytelling and the Archaeological CMS: Omeka, Kora", " 3.3 Storytelling and the Archaeological CMS: Omeka, Kora blargle 3.3.1 Omeka bla 3.3.2 Kora 3.3.3 Exercises "],
+["storytelling-and-the-archaeological-cms-omeka-kora.html", "3.3 Storytelling and the Archaeological CMS: Omeka, Kora", " 3.3 Storytelling and the Archaeological CMS: Omeka, Kora blargle "],
 ["web-mapping-with-leaflet.html", "3.4 Web Mapping with Leaflet", " 3.4 Web Mapping with Leaflet …I wonder if we should talk about GIS &amp; Pandas, etc… or in R? 3.4.1 discussion 3.4.2 exercises "],
 ["place-based-interpretation-with-locative-augmented-reality.html", "3.5 Place-based Interpretation with Locative Augmented Reality", " 3.5 Place-based Interpretation with Locative Augmented Reality yep. 3.5.1 discussion 3.5.2 exercises "],
 ["archaeogaming-and-virtual-archaeology.html", "3.6 Archaeogaming and Virtual Archaeology", " 3.6 Archaeogaming and Virtual Archaeology yay archaeogaming 3.6.1 discussion 3.6.2 exercises "],
@@ -31,11 +31,11 @@
 ["eliding-the-digital-and-the-physical.html", "4 Eliding the Digital and the Physical", " 4 Eliding the Digital and the Physical crazytown "],
 ["d-photogrammetry-structure-from-motion.html", "4.1 3D Photogrammetry &amp; Structure from Motion", " 4.1 3D Photogrammetry &amp; Structure from Motion vsfm 4.1.1 discussion 4.1.2 exercises "],
 ["d-printing-the-internet-of-things-and-maker-archaeology.html", "4.2 3D Printing, the Internet of Things and “Maker” Archaeology", " 4.2 3D Printing, the Internet of Things and “Maker” Archaeology yay 4.2.1 discussion 4.2.2 exercises "],
-["artificial-intelligence-in-digital-archaeology.html", "4.3 Artificial Intelligence in Digital Archaeology", " 4.3 Artificial Intelligence in Digital Archaeology 4.3.1 agent models blah 4.3.2 discussion blah 4.3.3 exercises blah 4.3.4 machine learning for image captioning and other classificatory tasks blah 4.3.5 discussion blah 4.3.6 exercises -->"],
+["artificial-intelligence-in-digital-archaeology.html", "4.3 Artificial Intelligence in Digital Archaeology", " 4.3 Artificial Intelligence in Digital Archaeology "],
+["agent-models.html", "4.4 agent models", " 4.4 agent models blah 4.4.1 discussion blah 4.4.2 exercises blah 4.4.3 Machine learning for image captioning and other classificatory tasks blah 4.4.4 discussion blah 4.4.5 exercises -->"],
 ["digital-archaeologys-place-in-the-world.html", "5 Digital Archaeology’s Place in the World", " 5 Digital Archaeology’s Place in the World blerg "],
 ["marketing-digital-archaeology.html", "5.1 Marketing Digital Archaeology", " 5.1 Marketing Digital Archaeology blag 5.1.1 discussion 5.1.2 exercises "],
 ["sustainability-power-in-digital-archaeology.html", "5.2 Sustainability &amp; Power in Digital Archaeology", " 5.2 Sustainability &amp; Power in Digital Archaeology the big ticket item. 5.2.1 discussion 5.2.2 exercises -->"],
 ["on-the-horizons-where-digital-archaeology-might-go-next.html", "6 On the Horizons: Where Digital Archaeology Might Go Next", " 6 On the Horizons: Where Digital Archaeology Might Go Next blargble "],
-["references.html", "References", " References "],
-["references-1.html", "References", " References "]
+["references.html", "References", " References "]
 ]

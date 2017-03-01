@@ -1,0 +1,7 @@
+## Web Mapping with Leaflet
+
+...I wonder if we should talk about GIS & Pandas, etc... or in R?
+
+### discussion
+
+### exercises
