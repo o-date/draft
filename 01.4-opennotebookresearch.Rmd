@@ -24,9 +24,6 @@ In an ideal world, we would recommend that everyone should push for such radical
  
 In this section, we will explore how to make a simple open notebook via a combination of markdown files and a repository on Github. Ultimately, we endorse the model developed by Ben Marwick, of creating an entire 'research compendium' that can be installed on another researcher's machine, but a good place to start are with the historian Lincoln Mullen's simple notebook templates. This will introduce to you another tool in the digital archaeologist's toolkit, the open source R programming language and the R Studio 'IDE' ('integrated development environment).
 
-
- - the dangers of excel <- maybe talk about that in the earlier section about csv files?
-
 ### discussion
 
 Questions for discussion:
@@ -40,7 +37,7 @@ Questions for discussion:
 
 ### exercises
 
-In this series of exercises, we are going to take you through the process of setting up an open research notebook, where you control all of the code and all of the data. (While we recommend an open notebook, one could equally use what follows with a private website or Git repo. Readers may also want to explore an Evernote alternative, [Laverna](https://laverna.cc/) which stores your notes in your web-browser's cache hence making them private, but also allows sync to services such as Dropbox).
+In this series of exercises, we are going to take you through the process of setting up an open research notebook, where you control all of the code and all of the data. A good rule-of-thumb in terms of keeping a notebook is 'one notecard per thought`, here adapted as 'one file per thought, one folder per project'.
 
 1. Let us set up a template open-notebook based on [Lincoln Mullen's Simple RmD Notebook](https://github.com/lmullen/rmd-notebook). If you go to [https://lmullen.github.io/rmd-notebook/](https://lmullen.github.io/rmd-notebook/) you'll see a 'live' version of this template on the web. It is being served to us from a special branch in Mullen's Github account, called `gh-pages`. When you have a `gh-branches` branch in very nearly any repo associated with your own Github account, Github.com will treat that repository *not* as a repository but as an actual website. This allows us to update or experiment with changes on other branches, and show a 'polished' version to the world via the `gh-pages` branch. That branch will have a special address, in the form `your-account-name.github.io/your-repo`. Whenever you see `github.io` in a URL, you know that the source for that website will be found at `github.com/account-name/repo`. Do you see the difference? (For more on `gh-pages`, see the [Github documentation](https://pages.github.com/)).
 
@@ -83,5 +80,34 @@ Commit your changes and push them to your remote repository. Visit the `live` ve
 
 i. Write a new note for your notebook recording your work, the problems you encountered, and the solutions you found. Save, `make`, commit, and push your note to the web.
 
-2. Another approach, using mdwiki and prose.io
+2. Another approach involves writing markdown files, putting them online, and then using a kind of 'helper' file to manage their display as html. In this particular case, we are going to use something called `mdwiki`. [Mdwiki](https://dynalon.github.io/mdwiki/#!index.md) involves a single html file which, when put in the same folder as a series of markdown files, acts as a kind of wrapper to turn the markdown files into pages of a wiki-style website. There is a lot of customization possible, but for now we're going to make a basic notebook out of a mdwiki template.
+a. Fork the minimal mdwiki template to your Github account; [md wiki template is linked here](https://github.com/exalted/mdwiki-seed)
+b. At this point, any markdown file you create and save into the `mdwiki-seed\ll_CC\` folder will become a webpage, although _the .md extension should still be used in the URL_ . If you study the folder structure, you'll see that there are pre-made folders for pages, for pdfs, for images, and so on (if you clone the repo, you can then add or remove these folders as you like using the file manager). Remembering to frame any internal links as relative links. That is to say, if you saved a markdown file in `ll_CC/pages/observation1.md` but wanted to link to `ll_CC/pages/observation2.md`, it is enough to just add `[Click here](observation2.md)`. Because the `mdwiki-seed` you forked was *already* on a `gh-pages` branch, your notebook will be visible at `YOURUSERNAME.github.io/mdwiki-seed/`. But note: the page will reload and you'll see `#!` or 'hashbang' inserted at the end of the URL. This is expected behaviour 
+c. Let's customize this a bit. Via Github, click on the `ll_CC` directory. One of the files that will be listed is `config.json`. If you click on that file, you'll see:
+
+```
+{
+  "additionalFooterText": "All content and images &copy; by Your Name Goes Here&nbsp;",
+  "anchorCharacter": "#",
+  "lineBreaks": "gfm",
+  "title": "Your wiki name",
+  "useSideMenu": true
+}
+```
+
+Change the title so that it says something like `Your-name Open Research Notebook`. You can do this by clicking on the pencil icon at the top right of the file viewer (if you don't see a pencil icon, you might not be logged into github). Scroll to the bottom and click on the 'commit changes' button when you're done. 
+
+d. Let's add notes to this notebook. You can do this in two ways. In the first, you clone your mdwiki-seed via the command line, and use the text editor to create new pages in the appropriate folder (in this case, `ll_CC\pages`), then `git commit`, `git add .`, and `git push` to get your changes live online. You can create a kind of table of contents by directing the `ls` command into a new file, like so:
+
+````$ ls > index.md````
+
+and then editing that file to turn the filenames into markdown links like so: `[display text for link](filename.md)`.
+
+Alternatively, a more elegant approach is to use [Prose.io](http://prose.io) and keep your notebook live on the web. Prose.io is an editor for files hosted in Github. You log into Prose.io with your github credentials, and select the repository you wish to edit, in this case, `mdwiki-seed`. Then, click on the 'new file' button. This will give you a markdown text editor, and allow you to commit changes to your notebook! **Warning** do not make changes to `index.html` when using `mdwiki`. If you want a particular markdown file to appear as the default page in a folder, call it `index.md` instead. You could then periodically update your cloned copy on your own machine for back up purposes.
+
+Either way, add some notes to the notebook, and make them available online. 
+
+Far more complicated notebooks are possible, inasmuch as they combine more features and ways of compiling your research. Scholars such as [Mark Madsen](http://notebook.madsenlab.org/) use a combination of Github pages and the Jekyll blog generator (for more on using Jekyll to create static websites, see Amanda Visconti's [Programming Historian tutorial](http://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages).) A simple Github repository and Wordpress blog can be used in tandem, where the blog serves for the _narrative_ part of a notebook, the part that tries to make sense of the notes contained in the repository. You will need to work out what combination of tools works best for you. Some of our students have had success using [Scrivener](https://www.literatureandlatte.com/scrivener.php) as a way of keeping notes, where Scrivener writes to a repository folder or some other folder synced across the web (like Dropbox, for instance). In this workflow, you have one Scrivener file per project. Scrivener uses the visual conceit of actual 3 x 5 notecards. Within Scrivener, one would make one card per note, and keep them in a 'research' folder. Then, when it becomes time to write up the project, those notecards can be moved into the draft and rearranged as necessary so that the writing flows naturally from them. 
+
+While we argue for open notebooks, there may be circumstances where this is not desireable or safe to do. Readers may also want to explore an Evernote alternative, [Laverna](https://laverna.cc/) which stores your notes in your web-browser's cache hence making them private, but also allows sync to services such as Dropbox. Another similar possibility is [Classeur](http://classeur.io/) a web abb that integrates with various blogging platforms, allows for syncing and collaboration, and includes the ability to sort notes into various notebooks. It does *not* save locally, so be warned that your information is on their servers. There is an API (application programming interface) that allows you to download your materials. 
 
