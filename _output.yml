@@ -14,7 +14,7 @@ bookdown::gitbook:
   config:
     toc:
       number_sections: null
-      collapse: subsection
+      collapse: section
       before: |
         <li><a href="./">ODATE</a></li>
       after: |
