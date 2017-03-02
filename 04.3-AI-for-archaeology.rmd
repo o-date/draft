@@ -1,6 +1,9 @@
 ## Artificial Intelligence in Digital Archaeology 
 
-## agent models
+### agent models
+
+- remember to talk about https://www.openabm.org/
+- agent model in python? in R? in Netlogo?
 
 blah
 
