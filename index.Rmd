@@ -17,7 +17,7 @@ cover-image: images/word-cloud-proposal.jpg
 
 This volume goes hand-in-glove with a computational environnent built on the DHBox. 
 
-THIS IS A DRAFT VERSION
+THIS IS A DRAFT VERSION; it's not even version 0.1 yet. It is filled with errors, omissions, and non-sequiturs. 
 
 ![A word cloud image of the original ODATE proposal, arranged to mimic a photograph of the temple of Athena Pronaos at Delphi](images/word-cloud-proposal.jpg)
 

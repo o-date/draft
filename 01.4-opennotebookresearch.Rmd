@@ -28,6 +28,12 @@ Far more complicated notebooks are possible, inasmuch as they combine more featu
 
 Ultimately, tou will need to work out what combination of tools works best for you. Some of our students have had success using [Scrivener](https://www.literatureandlatte.com/scrivener.php) as a way of keeping notes, where Scrivener writes to a repository folder or some other folder synced across the web (like Dropbox, for instance). In this workflow, you have one Scrivener file per project. Scrivener uses the visual conceit of actual 3 x 5 notecards. Within Scrivener, one would make one card per note, and keep them in a 'research' folder. Then, when it becomes time to write up the project, those notecards can be moved into the draft and rearranged as necessary so that the writing flows naturally from them. 
 
+### How to Ask Questions
+
+- stuff here on how to ask a question on sites like stackoverflow etc. 
+- also this https://speakerdeck.com/jennybc/reprex-help-me-help-you, although perhaps move it to 3.1 literate programming. perhaps use it to create actual examples that can be copied over to R though. In which case, talk about it in both places.
+- the idea being ways in which your open notebook becomes an invitation to others to help you, and also, a way of making sure you find the answer you're looking for when the inevitable troubles emerge
+
 ### discussion
 
 Questions for discussion:
@@ -39,7 +45,7 @@ Questions for discussion:
 5. Study Marwick's paper REF and compare it to its supporting Github repository. What *new* questions could be asked of this data?
 6. In what ways are terms like 'open access', 'open source', and 'open science' synonyms for a similar approach, and in what ways are they different?
 
-### takeaways
+### Take-aways
 
 Keeping an open notebook (or if necessary, a closed notebook) is a habit that must be cultivated. As a target to aim for, try to have
 
@@ -50,6 +56,10 @@ Keeping an open notebook (or if necessary, a closed notebook) is a habit that mu
 - a plan to write as you go, on a fail log or blog or what-have-you. Obtain a DOI for this, too.
 
 We haven't mentioned DOIs in this section, but when your notebook and your narrative about your research has a DOI, it becomes easier for your colleagues to cite your work - even this work in progress! 
+
+### Further Reading
+
+Baker, James. 'Preserving Your Research Data', _The Programming Historian_ [http://programminghistorian.org/lessons/preserving-your-research-data](http://programminghistorian.org/lessons/preserving-your-research-data)
 
 
 ### On Privilege and Open Notebooks
