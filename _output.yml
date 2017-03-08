@@ -2,8 +2,6 @@ bookdown::pdf_book: default
 bookdown::epub_book:
   dev: svglite
   stylesheet: css/style.css
-bookdown::html_chapters:
-  css: [css/style.css, css/toc.css]
 bookdown::gitbook:
   sharing:
       github: yes
