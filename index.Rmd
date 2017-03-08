@@ -12,6 +12,7 @@ link-citations: true
 github-repo: o-date/draft
 description: "The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory"
 cover-image: images/word-cloud-proposal.jpg
+lang: "en"
 ---
 # notice {-}
 
