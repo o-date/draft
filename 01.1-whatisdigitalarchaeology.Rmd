@@ -89,5 +89,5 @@ c. Embed an image.
 
 3. Make a new markdown file called 'todo list' or similar. Use bullet points to break down what else you need to do this week. Each bullet point should have a sub-bullet with an actual `ACTION` listed, something that you can accomplish to get things done.
 
-** As you work through this book, we encourage you to write your thoughts, observations, or results in simple text files**. This is good practice whether or not you embark on a full-blown digital project, because ultimately, if you use a computer in your research, you *have* gone digital.
+** As you work through this book, we encourage you to write your thoughts, observations, or results in simple text files.** This is good practice whether or not you embark on a full-blown digital project, because ultimately, if you use a computer in your research, you *have* gone digital.
 
