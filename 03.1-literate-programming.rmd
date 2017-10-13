@@ -8,6 +8,17 @@ Compare what they've created, with what you created. How close of a match is the
 
 Now you might begin to see some of the issues involved in relying on a point-and-click graphical user interface and a black-box like Excel with your archaeological data.
 
+Marwick (2017) writes with regard to this problem,
+
+> This is a substantial barrier to progress in archaeology, both in establishing the veracity of previous claims and promoting the growth of new interpretations. Furthermore, if we are to contribute to contemporary conversations outside of archaeology (as we are supposedly well-positioned to do, cf. Kintigh et al. (2014)), we need to become more efficient, interoperative, and flexible in our research. We have to be able to invite researchers from other fields into our research pipelines to collaborate in answering interesting and broad questions about past societies.
+
+Marwick lists four principles for reproducible archaeology. Note that 'reproducible' here means being able to re-do the analysis and obtain the same results; 'replicable' means using the same methods on a new data set collected and analyzed with the published methods of an earlier study. The principles that we should follow are:
+
+- make the data and the methods that generated the results openly available
+- script the stastical analysis (that is, no more point-and-click statistics). More on this below.
+- use version control
+- record the computational environment employed
+
 ### discussion
 
 ### exercises
