@@ -21,7 +21,7 @@ Marwick lists four principles for reproducible archaeology. Note that 'reproduci
 
 - how R addresses these issues
 - how R works with version control
-  - point to Marwick's more complex book on R for archaeologists
+  - point to Marwick's more complex book on [R for archaeologists](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/)
 - R markdown and jupyter notebooks : literate programming
 - what goes in 'discussion' below?
 
