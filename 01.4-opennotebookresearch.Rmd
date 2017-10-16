@@ -26,13 +26,45 @@ In this exercises below, we will explore how to make a simple open notebook via 
 
 Far more complicated notebooks are possible, inasmuch as they combine more features and ways of compiling your research. Scholars such as [Mark Madsen](http://notebook.madsenlab.org/) use a combination of Github pages and the Jekyll blog generator (for more on using Jekyll to create static websites, see Amanda Visconti's [Programming Historian tutorial](http://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages).) A simple Github repository and Wordpress blog can be used in tandem, where the blog serves for the _narrative_ part of a notebook, the part that tries to make sense of the notes contained in the repository. This aspect of open notebook science is critically important in that it serves to signal your _bona fides_ as a serious scholarly person. Research made available online is *findable*; given the way web search works, if something cannot be found easily, it might as well not exist.
 
-Ultimately, tou will need to work out what combination of tools works best for you. Some of our students have had success using [Scrivener](https://www.literatureandlatte.com/scrivener.php) as a way of keeping notes, where Scrivener writes to a repository folder or some other folder synced across the web (like Dropbox, for instance). In this workflow, you have one Scrivener file per project. Scrivener uses the visual conceit of actual 3 x 5 notecards. Within Scrivener, one would make one card per note, and keep them in a 'research' folder. Then, when it becomes time to write up the project, those notecards can be moved into the draft and rearranged as necessary so that the writing flows naturally from them. 
+Ultimately, you will need to work out what combination of tools works best for you. Some of our students have had success using [Scrivener](https://www.literatureandlatte.com/scrivener.php) as a way of keeping notes, where Scrivener writes to a repository folder or some other folder synced across the web (like Dropbox, for instance). In this workflow, you have one Scrivener file per project. Scrivener uses the visual conceit of actual 3 x 5 notecards. Within Scrivener, one would make one card per note, and keep them in a 'research' folder. Then, when it becomes time to write up the project, those notecards can be moved into the draft and rearranged as necessary so that the writing flows naturally from them. 
 
 ### How to Ask Questions
 
-- stuff here on how to ask a question on sites like stackoverflow etc. 
-- also this https://speakerdeck.com/jennybc/reprex-help-me-help-you, although perhaps move it to 3.1 literate programming. perhaps use it to create actual examples that can be copied over to R though. In which case, talk about it in both places.
-- the idea being ways in which your open notebook becomes an invitation to others to help you, and also, a way of making sure you find the answer you're looking for when the inevitable troubles emerge
+"I tried it and it didn't work", read the email. Tried what? What didn't work? What did the code actually say? What did you actually type? There is an art to asking questions when code or computing is involved. A lot of the issues involved in trying to get help ultimately stem from our natural reluctance, our natural reticence, to appear foolish or ignorant. Admitting in a public forum, or to a classmate or peer, or professor or colleague that you don't know how to x is intimidating. In which case, we invite you to reflect on this comic by [Randall Munroe](https://www.xkcd.com/1053/):
+
+![XKCD comic 'Ten Thousand'](https://imgs.xkcd.com/comics/ten_thousand.png)
+
+Learning 'how to ask questions' involves also learning 'how to answer questions'. This in turn is related to what Kathleen Fitzpatrick calls ['Generous Thinking'](http://www.plannedobsolescence.net/generous-thinking-the-university-and-the-public-good/):
+
+> Generous Thinking [begins] by proposing that rooting the humanities in generosity, and in particular in the practices of thinking with rather than reflexively against both the people and the materials with which we work, might invite more productive relationships and conversations not just among scholars but between scholars and the surrounding community - Kathleen Fitzpatrick
+
+This means that when your peer or colleague has a question or issue in their code or their process (or in their journey to become more digitally inflected in their work) you egage with them _at face value_, in the same spirit that the stickpeople in Munroe's cartoon do. Nothing will be more detrimental to the progression of digital archaeology than the appearance of gatekeepeers and hidden knowledge. 
+
+When you run into a problem - when you first become aware that something is going awry - stop. Collect your breath. Do not click madly about in all directions, hoping that something might work.
+
+1. Step away from your computer. Shut it down, put it to sleep, go outside. Sometimes, what you need more than anything else is just fresh eyeballs. Come back to the machine after a 30 minute break. You will be surprised at how often all that you really needed was a break.
+
+2. If that doesn't solve the issue, your next step is to help other people **reproduce** what's happening on your machine. There are a variety of ways of doing this. To start, open your text editor and make a new 'date-my-problem.md' file with the following headings:
+
+``` 
+# what I wanted to do
+  - include links to any websites or articles you were reading
+    # what I did
+  - include the history of commands you've typed by passing your command line history to a new text file with $ history > mycommands.txt . Open that file, annotate it / copy and paste it to your problem document
+    # expected outcome
+  - describe what you think ought to be happening
+  - describe or list the software, the libraries, the packages you're working with
+  - share the actual code you're using
+    # actual outcome
+  - what actually seems to be happening. 
+  - copy all error messages
+  - take screenshots and put them online somewhere; include here the URL to the screenshot
+  - sometimes even a video can be handy; screen-cast-o-matic.com lets you take a video with narration of what's going on, and can be shared via their servers
+```
+
+With time, you will become better at describing the issue succinctly. You will also learn that many of your issues have been encountered before - one good strategy is to Google the actual text of your error message. You will discover [Stack Overflow](stackoverflow.com), who also have [excellent advice on asking for help](https://stackoverflow.com/help/how-to-ask). There is even [code to help you create code](http://reprex.tidyverse.org/) that shows other people what you're experiencing! 
+
+Your help query can also go into your open notebook. In this way, your open notebook becomes not just the record of your research, but also an invitation to others to join you.
 
 ### discussion
 

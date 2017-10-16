@@ -1,0 +1,7 @@
+# Open Review {#open}
+
+We are writing this textbook in the open, warts and all. We would be glad of all feedback, which you can make by using the Hypothes.is annotation bar on the right hand side of the screen. You will need an [Hypothes.is](http://web.hypothes.is) account. Then, when you spot something that needs work or is in error or could be better (or even you just want to leave us an encouraging word) highlight the relevant text, hit the 'annotate' button, and leave your remark. Please also use the tagging function in Hypothesis to tag your comment with 'ODATE' so that we can collect the annotations together.
+
+All annotations are public, and will be visible to other visitors on this site. If you have any questions about this, please get in touch with Shawn: shawn dot graham at carleton dot ca.
+
+If you are comfortable with Git and Github, feel free to fork the source code, or leave issues or pull requests as appropriate.

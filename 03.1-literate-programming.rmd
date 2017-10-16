@@ -25,6 +25,8 @@ Marwick lists four principles for reproducible archaeology. Note that 'reproduci
 - R markdown and jupyter notebooks : literate programming
 - what goes in 'discussion' below?
 
+- marwick's compendium
+
 ### discussion
 
 ### exercises
