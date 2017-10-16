@@ -32,7 +32,7 @@ Ultimately, you will need to work out what combination of tools works best for y
 
 "I tried it and it didn't work", read the email. Tried what? What didn't work? What did the code actually say? What did you actually type? There is an art to asking questions when code or computing is involved. A lot of the issues involved in trying to get help ultimately stem from our natural reluctance, our natural reticence, to appear foolish or ignorant. Admitting in a public forum, or to a classmate or peer, or professor or colleague that you don't know how to x is intimidating. In which case, we invite you to reflect on this comic by [Randall Munroe](https://www.xkcd.com/1053/):
 
-![XKCD comic 'Ten Thousand'](https://imgs.xkcd.com/comics/ten_thousand.png)
+![XKCD comic 'Ten Thousand'](images/ten_thousand.png)
 
 Learning 'how to ask questions' involves also learning 'how to answer questions'. This in turn is related to what Kathleen Fitzpatrick calls ['Generous Thinking'](http://www.plannedobsolescence.net/generous-thinking-the-university-and-the-public-good/):
 
@@ -79,7 +79,7 @@ Questions for discussion:
 
 ### Take-aways
 
-Keeping an open notebook (or if necessary, a closed notebook) is a habit that must be cultivated. As a target to aim for, try to have
+Keeping an open notebook (or if necessary, a closed notebook; see below) is a habit that must be cultivated. As a target to aim for, try to have
 
 - each experiment|project in its own folder
 - each experiment|project with regular pattern of subfolders `data` and `figures` and `text` and `bib` etc
@@ -98,7 +98,7 @@ Baker, James. 'Preserving Your Research Data', _The Programming Historian_ [http
 
 While we argue for open notebooks, there may be circumstances where this is not desireable or safe to do. Readers may also want to explore an Evernote alternative, [Laverna](https://laverna.cc/) which stores your notes in your web-browser's cache hence making them private, but also allows sync to services such as Dropbox (versioning and backup are still absolutely critical). If you work primarily on a Mac computer, [nvAlt by Brett Terpstra](http://brettterpstra.com/projects/nvalt/) is an excellent note-taking application that can sync remotely. Another possibility is [Classeur](http://classeur.io/) a web abb that integrates with various blogging platforms, allows for syncing and collaboration, the choice of what to make public and what to keep private, and includes the ability to sort notes into various notebooks. It does *not* save locally, so be warned that your information is on their servers. There is an API (application programming interface) that allows you to download your materials (for more on APIs, see [Introduction to Digital Libraries, Archives & Repositories]). 
 
-A final word on the privilege involved in keeping an open notebook is warranted. To make one's research available openly on the web, to discuss openly the things that worked, the things that haven't, the experiments tried and the dead ends explored, is at the current moment something that depends on the perceived race, class, and gender of the person doing it. What passes without comment when I (Shawn Graham, a white, tenured, professor) do something could attract unwarranted, unwanted, and unfair attention if a woman of colour undergraduate tried. This is not to say this always happens; but disgracefully it happens far too often. It is important and necessary to fight back against the so-called 'internet culture' in these things, but it is not worth risking one's safety. To those who benefit from privilege, it is incumbent upon them to make things safe for others, to recognize that open science, open humanities, represents a net boon to our field. In which case, it is up to them to normalize such practices, to make it safe to try things out. We discuss more in the following section on what [Failing Productively] means, why it matters, and why it is integral not only to digital archaeology, but the culture of academic research, teaching, and outreach more generally. 
+A final word on the privilege involved in keeping an open notebook is warranted. To make one's research available openly on the web, to discuss openly the things that worked, the things that haven't, the experiments tried and the dead ends explored, is at the current moment something that depends on the perceived race, class, and gender of the person doing it. What passes without comment when I (Shawn Graham, a white, tenured, professor) do something, could attract unwarranted, unwanted, and unfair attention if a woman of colour undergraduate tried. This is not to say this always happens; but disgracefully it happens far too often. It is important and necessary to fight back against the so-called 'internet culture' in these things, but it is not worth risking one's safety. To those who benefit from privilege, it is incumbent upon them to make things safe for others, to recognize that open science, open humanities, represents a net boon to our field. In which case, it is up to them to normalize such practices, to make it safe to try things out. We discuss more in the following section on what [Failing Productively] means, why it matters, and why it is integral not only to digital archaeology, but the culture of academic research, teaching, and outreach more generally. 
 
 ### exercises
 

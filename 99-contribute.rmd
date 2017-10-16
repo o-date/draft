@@ -1,6 +1,0 @@
-# Contribute {#contribute}
-
-While the majority of this book is being written by Graham, Gupta, Carter and Compton, we know that we are leaving a great deal of material un-discussed. We would be delighted to consider additions to this present work, if you have particular expertise that you would like to share. Keep in mind that we are writing for an introductory audience, and that we are writing for a linux-based environment. Whether you are an academic, a professional archaeologist, a graduate student, or a friend of archaeology more generally, we'd be delighted to hear from you.
-
-Please write to Shawn at shawn dot graham at carleton dot ca to discuss your idea and how it might fit into the overall arc of the present work by **January 31st 2018**. The primary authors will discuss whether or not to invite a full draft. A full draft will need to be submitted by **March 15th 2018**. We will then offer feedback. The piece will go up on this draft site by the end of the month, whereupon it will enjoy the same open review as the other parts. Accepted contributors will be listed as full authors, eg 'Graham, Gupta, Carter, Compton, <YOUR NAME>, 2018 The Open Digital Archaeology Textbook Environment'. 
-
