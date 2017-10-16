@@ -17,16 +17,14 @@ We believe that digital archaeology can offer insights into the social context o
 3) a digital ‘thing’ is built and reflects the culture of its maker(s) and thereby invites critical study by anthropologists, archaeologists, historians, etc
 4) digital things are entangled in the practices and ethics of contemporary society
 
-
 .. concerning digital things & what they do, see Morgan 2011 https://www.academia.edu/2997156/Emancipatory_Digital_Archaeology esp p160
 
+### discussion
 
 - include discussion of privacy
 - ethics of crowdfunding
 - ethics of crowdsourcing (& dubious ethics of using amazon's mechanical turk)
 - ethics of public archaeology & social media
-
-### discussion
 
 ### exercises
 
