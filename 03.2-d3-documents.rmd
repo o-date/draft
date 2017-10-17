@@ -4,4 +4,6 @@ blerg
 
 ### discussion
 
+sample text added
+
 ### exercises
