@@ -20,7 +20,7 @@ blah
 blah
 ### Transparency
 blah
-### Paradata
+#### Paradata
 blah
 ## Practice
 
@@ -33,11 +33,10 @@ blah
 
 
 
-### Archaeogaming
-yay Archaeogaming
-### This is a test
+## Archaeogaming
+Guest section by Andrew Reinhard, Meghan Dennis, Tara Copplestone, Colleen Morgan?
 
 
-### discussion
+### Discussion
 
-### exercises
+### Exercises
