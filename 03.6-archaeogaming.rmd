@@ -1,36 +1,34 @@
 ## Virtual Archaeology
 What is Virtual Archaeology (VA)?
-## Theory
+### Theory
 blah
-### Making
+
+#### Making
 blah
-### Materiality
+#### Materiality
 blah
-### Phenomenology
+#### Phenomenology
 blah
-## Method
+### Method
 blah
-### The London & Seville Charters
+
+#### The London & Seville Charters
 blah
-### Agency
+#### Agency
 blah
-### Authority
+#### Authority
 blah
-### Authenticity
+#### Authenticity
 blah
-### Transparency
+#### Transparency
 blah
 #### Paradata
 blah
-## Practice
+### Practice
+blah
 
-
-
-
-
-
-
-
+#### The Good, The Bad, The Ugly
+blah
 
 
 ## Archaeogaming
@@ -38,5 +36,6 @@ Guest section by Andrew Reinhard, Meghan Dennis, Tara Copplestone, Colleen Morga
 
 
 ### Discussion
-
+blah
 ### Exercises
+blah
