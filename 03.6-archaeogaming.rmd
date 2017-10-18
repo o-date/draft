@@ -1,7 +1,28 @@
 ## Virtual Archaeology
 What is Virtual Archaeology (VA)?
-This is a test
-
+## Theory
+blah
+### Making
+blah
+### Materiality
+blah
+### Phenomenology
+blah
+## Method
+blah
+### The London & Seville Charters
+blah
+### Agency
+blah
+### Authority
+blah
+### Authenticity
+blah
+### Transparency
+blah
+### Paradata
+blah
+## Practice
 
 
 
