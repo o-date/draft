@@ -7,9 +7,9 @@ Overview
 
 #### Models, simulation, and the precursors of ABM
 
->"Essentially, all models are wrong, but some are useful"
->George Box, 1987
->**Empirical Model-Building and Response Surfaces**, p. 424
+>"Essentially, all models are wrong, but some are useful"  
+>George Box, 1987  
+>*Empirical Model-Building and Response Surfaces*, p. 424
 
 - def system, model, formal model
 - The origins of computer simulation
@@ -51,9 +51,9 @@ ABMs fall somewhere inbetween these two spectra, though normally leanning toward
 
 - The Pond Trade (coastal settlements of variable size around a pond; cultural vectors; trade ships travel between the settlements, re-evaluating afterwards if the trip is worse or better than other previous trips (make table); they carry economic value and cultural traits from between the base and destination settlements)
 
-```{r}
+```{r, echo = FALSE}
 library(DiagrammeR)
-grViz("boxes.dot")
+grViz("diagrams/boxes.dot")
 ```
 
 - Implement the model based on general definition (agents, variables, parameters)
