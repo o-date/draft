@@ -51,6 +51,10 @@ ABMs fall somewhere in-between these two spectra, though normally leaning toward
 
 - The Pond Trade (coastal settlements of variable size around a pond; cultural vectors; trade ships travel between the settlements, re-evaluating afterwards if the trip is worse or better than other previous trips (make table); they carry economic value and cultural traits from between the base and destination settlements)
 
+- Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
+
+![Interface of step 13](https://github.com/Andros-Spica/PondTrade/blob/master/PondTrade_step13_output-statistics-interface.png)
+
 ```{r, echo = FALSE}
 library(DiagrammeR)
 grViz("diagrams/boxes.dot")
