@@ -60,6 +60,11 @@ grViz("diagrams/boxes.dot")
 - Walkthrough the implementation in NetLogo
 - Simulations and experiment design
 - Analysis and display of results (R example)
+
+```{r, echo = FALSE}
+plot(1:10, 1:10)
+```
+
 - Next steps
 
 ### Machine learning for image captioning and other classificatory tasks
