@@ -1,19 +1,75 @@
 ## Artificial Intelligence in Digital Archaeology 
 
-### agent models
+### Agent-based modeling (ABM)
 
-- remember to talk about https://www.openabm.org/
-- agent model in python? in R? in Netlogo?
+>Andreas: "Hello World!"
+Overview
 
-blah
+#### Models, simulation, and the precursors of ABM
+
+>"Essentially, all models are wrong, but some are useful"  
+>George Box, 1987  
+>*Empirical Model-Building and Response Surfaces*, p. 424
+
+- def system, model, formal model
+- The origins of computer simulation
+- Equation-based modeling, System Dynamics - ODE systems as models (mention Lorenz attractor, end with the idea of iteration of a process)
+- Algorithm-based modeling, Algorithms as behavioral models (mention cellular automata, Van Neumann, Schelling, etc)
+- The variety of algorithm-based models, much coincides with the variety of programming paradigm.
+a. Flow: spectrum between centralized (iteration of a single process, e.g. event) and distributed (multiple processes are iterated contextually by multiple entities).
+b. Schedule: spectrum between fully-scheduled (processes are initiated in a predetermined order) and event-driven (processes are initiated given a certain input).
+ABMs fall somewhere in-between these two spectra, though normally leaning towards distributed (e.g., using Monte Carlo methods) and fully-scheduled. Applications in several disciplines (see Wikipedia)
+
+#### ABM in History and Social Sciences
+
+- Emergence... Life game, deterministic chaos
+- Saving the gap between atomism and holism, or individual and social structure
+- Virtual laboratory for social sciences
+- Examples
+- Mention the cycles of enthusiasm and skepticism, and the tendency to develop closed circles
+- Challenges and pitfalls 
 
 ### discussion
 
-blah
+#### Why model with ABM?
+
+- open with the idea that we are always modeling
+- Mention review article 'Why model?'
+
+#### How to model with ABM?
+
+- Parts of an ABM model
+ (re-visit presentations)
+- Define hypotheses, questions or simply the phenomenon of interest (identify the system)
+- Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam's razor vs. emergence
+- Express the chosen elements and processes as computer code (implement the model)
+- Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step.  The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new  modeling effort (and that is actually the main usefulness of models in the long run). 
+- ABM in python, Java, C#, or C++? in R? in NetLogo? (Any language can do it, really). Pros and cons, talk in terms of higher/lower level programming languages (still, they are all quite high-level).
+- remember to talk about https://www.openabm.org/
 
 ### exercises
 
-blah 
+- The Pond Trade (coastal settlements of variable size around a pond; cultural vectors; trade ships travel between the settlements, re-evaluating afterwards if the trip is worse or better than other previous trips (make table); they carry economic value and cultural traits from between the base and destination settlements)
+
+- Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
+
+![Interface of step 13](https://github.com/Andros-Spica/PondTrade/blob/master/PondTrade_step13_output-statistics-interface.png)
+
+```{r, echo = FALSE}
+library(DiagrammeR)
+grViz("diagrams/boxes.dot")
+```
+
+- Implement the model based on general definition (agents, variables, parameters)
+- Walk-through the implementation in NetLogo
+- Simulations and experiment design
+- Analysis and display of results (R example)
+
+```{r, echo = FALSE}
+plot(1:10, 1:10)
+```
+
+- Next steps
 
 ### Machine learning for image captioning and other classificatory tasks
 
