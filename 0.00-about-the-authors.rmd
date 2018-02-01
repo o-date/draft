@@ -6,15 +6,15 @@ Shawn Graham trained in Roman archaeology but has become over the years a digita
 
 ### Neha Gupta ### {-}
  
-blah
+[Neha Gupta](https://dngupta.github.io/) is an anthropologist and recent postdoctoral fellow at Memorial University. Her research specialties include geovisualization and GIS, landscape and settlement archaeology and the archaeology of India. She recently launched [MINA | Map Indian Archaeology](https://mapindianarch.wordpress.com/), a public digital project to promote the archaeology of India and to encourage collaboration in the development of digital tools and technologies appropriate for archaeology. Her projects regularly center on the themes of colonial practices, web maps, Indigenous peoples and archaeology’s relationship with society.
 
 ### Michael Carter ### {-}
 
-blah
+Michael Carter is an Assistant Professor in  the School of Creative Industries at Ryerson University. He is also Director of Industry Relations - Master in Digital Media Program/Yeates School of Graduate Studies. His research is primarily centred around the Theory, Method and Practice of Virtual Archaeology, which flows naturally from his previous career in animation and visual special effects. More about his research can be explored [on his Research Gate profile](https://www.researchgate.net/profile/Michael_Carter20)
 
 ### Beth Compton ### {-}
 
-blah 
+Beth Compton is a PhD student at the University of Western Ontario's Department of Anthropology. Her research examines critically the implications and assumptions of digital approaches to repatriation, and uses archaeological ethnographic approaches to evaluate artifact sharing policies. She study archaeological representation and replication, particularly the use of digital photography, 3D modeling, and 3D printing. She is interested in all aspects of meaning-making and knowledge sharing in digital archaeological heritage practice. She is a Co-Founder of the [DH Maker Bus project](http://www.makerbus.ca/) and is an Ontario Trillium Scholar.
 
 ### Editorial Board {-}
 
@@ -26,7 +26,7 @@ Daniel Pett, The British Museum
 
 Eric Kansa, Open Context & The Alexandria Archive Institute
 
-Kathleen Fitzpatrick, Modern Language Association 
+Kathleen Fitzpatrick, Michigan State University
 
 
 # Getting Started {-}
@@ -57,7 +57,20 @@ Perhaps your professor has assigned a portion of this text to your class, with t
 
 ## How to access and use the computational environment {-}
 
-link to site, instructions, also repo, also dhbox-on-a-stick
+The computational part of this textbook is a version of the [DHBox](http://dhbox.org) created by a team from the CUNY Graduate Centre:
+
++ Stephen Zweibel Lead Developer
++ Patrick Smyth Developer, Writer
++ Jojo Karlin Outreach Coordinator
++ Matthew K. Gold Academic Advisor
+
+The DHBox is a linux-powered computer accessible to anyone. It has a number of common digital humanities tools preinstalled for use, including command line access, a file manager, an R Studio Environment, and Brackets (for web development). It also includes Jupyter Notebooks, an environment for 'literate computing' (or when the analytical code and supporting scholarship are integrated into a document that allows the research to be reproduced). Our version of DHBox also includes a few more elements pre-installed explicitly for archaeological use, such as visual structure-from-motion photogrammetry and QGIS. 
+
+Open a new browser tab at [http://134.117.26.132:5000/](http://134.117.26.132:5000/) to access the ODATE box. **NB as this work is in development, that box is only currently available to users with VPN access to Carleton University servers. It will be made publically available in due course.**
+
+Create a new user account; select the maximum amount of time available for your box. Each time you login, the box will tell you how much time remains for your account. You can use the file manager to download your work from the box to your own machine.
+
+(Each account has a time limit so that our computing resources do not become overwhelmed with dormant accounts and data).
 
 ## Colophon {-}
 

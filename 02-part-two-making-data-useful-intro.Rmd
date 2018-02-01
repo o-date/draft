@@ -1,4 +1,32 @@
-# Making Data Useful 
+# Making Data Durable
 
-blah blah introd
+
+Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three great habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “futureproof” your digital work.
+
+The concept of Paradata as implemented in events like the Heritage Jam link/reference can be applied broadly to analytical and technical digital projects to great effect. Originally documented in the London Charter for Computer-based Visualization of Cultural Heritage [source and link], paradata (literally data alongside the data) are narrative descriptions of process. No matter how well-structured your files and how reproducible.
+
+Most archaeological researchers have encountered “bad” data in the past when trying to understand or reconstruct someone’s conclusions from field notes and excavation reports. What makes a dataset bad?
+
+![A Useful Warning from Kenny Brophy](images/regret-tweet-data.png)
+
+*It’s not understandable.* The dataset may be illegible (poor handwriting, or a bad scan of a hard copy document). It might be made up of codes with no way to decipher their meaning. It might be a digital binary file that can no longer be read by available software (or on a physical format that’s now obsolete).
+do
+
+INCLUDE SOME IMAGES
+
+*It can’t be easily accessed.* The dataset might be saved in a format that only expensive, proprietary software can read. It might be comprised of a lot of fascinating information but challenging to extract from a format like PDF. 
+
+*It’s difficult to reuse.* The dataset might use inconsistent terminology. 
+
+With these frustrations in mind, you have the tools to create good data. Good data are stable, human readable, and accessible. They can be rearranged and remixed. The same qualities that make data useful can also help to protect against the ravages of time.
+
+You’ll notice that quality data (however you define the term) take planning. The structure of your data and the practicalities of how you’ll handle and store it should be woven into your research design. A reality to confront, however, is that there will be tradeoffs. 
+
+Up front, right at the beginning, when you’re working out your research questions and goals, ask yourself some questions. What do I want my data to do? How much detail do I need to collect? Do I have a plan for curating datasets I’ve created? Is there space somewhere to do so? Will I need to be selective? 
+
+lots of references to Marwick paper(s) go here…
+
+Perfection is unattainable. No dataset will ever be truly “complete.” You could collect, measure, and produce data at finer and finer resolutions, ad infinitum. But you don’t want to do that. And even if you think you're being comprehensive, all data you collect is only a specific, bounded representation of the real world surely there's a reference or a better way to put this.
+
+
 
