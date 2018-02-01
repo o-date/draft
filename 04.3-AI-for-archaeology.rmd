@@ -1,3 +1,7 @@
+---
+always_allow_html: yes
+---
+
 ## Artificial Intelligence in Digital Archaeology 
 
 ### Agent-based modeling (ABM)
@@ -53,21 +57,26 @@ ABMs fall somewhere in-between these two spectra, though normally leaning toward
 
 - Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
 
-![Interface of step 13](https://github.com/Andros-Spica/PondTrade/blob/master/PondTrade_step13_output-statistics-interface.png)
+![Interface of step 13](images/PondTrade_step13_output-statistics-interface.png)
 
-```{r, echo = FALSE}
+```
 library(DiagrammeR)
 grViz("diagrams/boxes.dot")
 ```
+![andros-first-diagram](images/andros-diagram.png)
+
+SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
 
 - Implement the model based on general definition (agents, variables, parameters)
 - Walk-through the implementation in NetLogo
 - Simulations and experiment design
 - Analysis and display of results (R example)
 
-```{r, echo = FALSE}
+```
 plot(1:10, 1:10)
 ```
+![andros-second-diagram](images/andros-2.png)
+
 
 - Next steps
 
