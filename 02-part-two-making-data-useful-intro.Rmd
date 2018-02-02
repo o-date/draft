@@ -1,16 +1,15 @@
 # Making Data Durable
 
 
-Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three great habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “futureproof” your digital work.
+Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three great habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “future-proof” your digital work.
 
-The concept of Paradata as implemented in events like the Heritage Jam link/reference can be applied broadly to analytical and technical digital projects to great effect. Originally documented in the London Charter for Computer-based Visualization of Cultural Heritage [source and link], paradata (literally data alongside the data) are narrative descriptions of process. No matter how well-structured your files and how reproducible.
+The Ghost of Research Data Future:
+In a dreamlike state, you find that you have traveled to a point in the not-so-distant future. You arrive to find a group of researchers puzzling over the information you created, trying to reconstruct your conclusions and make some kind of sense of it all. "What are these strange codes?" "Does this thing go with that? It looks like there's a bit missing, but we can't be sure." "What was on all those corrupted flash drives? Does anyone even have a flash-drive-to-skull-jack converter around here?" It doesn't have to be this way. Most archaeological researchers have encountered “bad” data in the past when trying to understand or reconstruct someone’s conclusions from field notes and excavation reports. What makes a dataset bad?
 
 ![A Useful Warning from Kenny Brophy](images/regret-tweet-data.png)
 
 *It’s not understandable.* The dataset may be illegible (poor handwriting, or a bad scan of a hard copy document). It might be made up of codes with no way to decipher their meaning. It might be a digital binary file that can no longer be read by available software (or on a physical format that’s now obsolete).
 do
-
-INCLUDE SOME IMAGES
 
 INCLUDE SOME IMAGES
 
