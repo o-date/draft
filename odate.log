@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.26)  16 OCT 2017 10:55
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.24)  8 FEB 2017 17:40
+>>>>>>> 7af38d2cac3dc41f6c41789802e6f9b54c4df1c5
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1242,6 +1246,7 @@ Here is how much of TeX's memory you used:
  16331 multiletter control sequences out of 15000+600000
  67134 words of font info for 124 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
+<<<<<<< HEAD
  32i,5n,38p,497b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/l
 ocal/texlive/2017basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/tex
@@ -1254,6 +1259,17 @@ onts/type1/public/lm/lmri12.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/
 type1/public/lm/lmro10.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1
 /public/lm/lmtt10.pfb>
 Output written on odate.pdf (60 pages, 1030475 bytes).
+=======
+ 32i,4n,35p,486b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/l
+ocal/texlive/2015basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/
+texlive/2015basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texli
+ve/2015basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/201
+5basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2015basic
+/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015basic/texm
+f-dist/fonts/type1/public/lm/lmro10.pfb>
+Output written on odate.pdf (57 pages, 206025 bytes).
+>>>>>>> 7af38d2cac3dc41f6c41789802e6f9b54c4df1c5
 PDF statistics:
  942 PDF objects out of 1000 (max. 8388607)
  849 compressed objects within 9 object streams
