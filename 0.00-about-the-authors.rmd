@@ -20,6 +20,10 @@ Beth Compton is a PhD student at the University of Western Ontario's Department 
 
 [Jolene Smith](https://www.jolenesmith.net) is an archaeologist who manages statewide digital archives and archaeological data at the Virginia Department of Historic Resources. She is interested in open data, preservation, and developing easy-to-use tools to help small organizations create, use, and manage archaeological data. 
 
+### Andreas Angourakis ### {-}
+
+Brief Bio
+
 ### Editorial Board {-}
 
 Katharine Cook, University of Victoria
