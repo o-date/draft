@@ -5,7 +5,7 @@
 Shawn Graham trained in Roman archaeology but has become over the years a digital archaeologist and digital humanist. He is currently an associate professor in the [Department of History at Carleton University in Ottawa Canada](http://carleton.ca). He keeps an open lab notebook of his research and experiments in digital history and archaeology at his research blog, [electricarchaeology](http://electricarchaeology.ca). He can be found on Twitter at [electricarchaeo](http://twitter.com/electricarchaeo). His teaching explores  methods and digital approaches at all levels, including seminars in the collaborative MA Digital Humanities program as well as in the MA Public History program. His research interests include augmented reality and virtual reality in the service of landscape archaeology, video games about the past, and agent based modeling.
 
 ### Neha Gupta ### {-}
- 
+
 [Neha Gupta](https://dngupta.github.io/) is an anthropologist and recent postdoctoral fellow at Memorial University. Her research specialties include geovisualization and GIS, landscape and settlement archaeology and the archaeology of India. She recently launched [MINA | Map Indian Archaeology](https://mapindianarch.wordpress.com/), a public digital project to promote the archaeology of India and to encourage collaboration in the development of digital tools and technologies appropriate for archaeology. Her projects regularly center on the themes of colonial practices, web maps, Indigenous peoples and archaeology’s relationship with society.
 
 ### Michael Carter ### {-}
@@ -14,15 +14,19 @@ Michael Carter is an Assistant Professor in  the School of Creative Industries a
 
 ### Beth Compton ### {-}
 
-Beth Compton is a PhD student at the University of Western Ontario's Department of Anthropology. Her research examines critically the implications and assumptions of digital approaches to repatriation, and uses archaeological ethnographic approaches to evaluate artifact sharing policies. She study archaeological representation and replication, particularly the use of digital photography, 3D modeling, and 3D printing. She is interested in all aspects of meaning-making and knowledge sharing in digital archaeological heritage practice. She is a Co-Founder of the [DH Maker Bus project](http://www.makerbus.ca/) and is an Ontario Trillium Scholar.
+Beth Compton is a PhD student at the University of Western Ontario's Department of Anthropology. Her research examines critically the implications and assumptions of digital approaches to repatriation, and uses archaeological ethnographic approaches to evaluate artifact sharing policies. She studies archaeological representation and replication, particularly the use of digital photography, 3D modeling, and 3D printing. She is interested in all aspects of meaning-making and knowledge sharing in digital archaeological heritage practice. She is a Co-Founder of the [DH Maker Bus project](http://www.makerbus.ca/) and is an Ontario Trillium Scholar.
+
+### Jolene Smith ### {-}
+
+[Jolene Smith](https://www.jolenesmith.net) is an archaeologist who manages statewide digital archives and archaeological data at the Virginia Department of Historic Resources. She is interested in open data, preservation, and developing easy-to-use tools to help small organizations create, use, and manage archaeological data. 
 
 ### Editorial Board {-}
 
 Katharine Cook, University of Victoria
 
-Ethan Watrall, Michigan State University 
+Ethan Watrall, Michigan State University
 
-Daniel Pett, The British Museum 
+Daniel Pett, The British Museum
 
 Eric Kansa, Open Context & The Alexandria Archive Institute
 
@@ -31,7 +35,7 @@ Kathleen Fitzpatrick, Michigan State University
 
 # Getting Started {-}
 
-We wrote this text with a particular kind of student in mind. We imagined this student as having already taken a first year introductory course to archaeology, of the kind that surveys the field, its history, and its principle methods and theoretical positions. Very few courses of that kind include any depth in digital methods and theory, which is understandable when we look at the incredible variety of archaeological work, skills, and interests! Digital work is every bit as diverse as other kinds of archaeology, but it also presents its own particular challenges. One of these is the anxiety that comes when one first approaches the computer for anything more complex than word processing or a bit of social media. 'What happens if I break it?'; 'I'm not techy!'; 'If I wanted to do computers, I wouldn't have gone into this!' are all actual student concerns that we have heard in our various classrooms. 
+We wrote this text with a particular kind of student in mind. We imagined this student as having already taken a first year introductory course to archaeology, of the kind that surveys the field, its history, and its principle methods and theoretical positions. Very few courses of that kind include any depth in digital methods and theory, which is understandable when we look at the incredible variety of archaeological work, skills, and interests! Digital work is every bit as diverse as other kinds of archaeology, but it also presents its own particular challenges. One of these is the anxiety that comes when one first approaches the computer for anything more complex than word processing or a bit of social media. 'What happens if I break it?'; 'I'm not techy!'; 'If I wanted to do computers, I wouldn't have gone into this!' are all actual student concerns that we have heard in our various classrooms.
 
 It'll be ok.
 
@@ -64,7 +68,7 @@ The computational part of this textbook is a version of the [DHBox](http://dhbox
 + Jojo Karlin Outreach Coordinator
 + Matthew K. Gold Academic Advisor
 
-The DHBox is a linux-powered computer accessible to anyone. It has a number of common digital humanities tools preinstalled for use, including command line access, a file manager, an R Studio Environment, and Brackets (for web development). It also includes Jupyter Notebooks, an environment for 'literate computing' (or when the analytical code and supporting scholarship are integrated into a document that allows the research to be reproduced). Our version of DHBox also includes a few more elements pre-installed explicitly for archaeological use, such as visual structure-from-motion photogrammetry and QGIS. 
+The DHBox is a linux-powered computer accessible to anyone. It has a number of common digital humanities tools preinstalled for use, including command line access, a file manager, an R Studio Environment, and Brackets (for web development). It also includes Jupyter Notebooks, an environment for 'literate computing' (or when the analytical code and supporting scholarship are integrated into a document that allows the research to be reproduced). Our version of DHBox also includes a few more elements pre-installed explicitly for archaeological use, such as visual structure-from-motion photogrammetry and QGIS.
 
 Open a new browser tab at [http://134.117.26.132:5000/](http://134.117.26.132:5000/) to access the ODATE box. **NB as this work is in development, that box is only currently available to users with VPN access to Carleton University servers. It will be made publically available in due course.**
 
@@ -74,7 +78,7 @@ Create a new user account; select the maximum amount of time available for your 
 
 ## Colophon {-}
 
-This text was created using the [Bookdown](http://bookdown.org) package for R Markdown. [R Markdown](http://rmarkdown.rstudio.com/) is a variant of the simple [Markdown format](https://daringfireball.net/projects/markdown/) created by John Gruber. That is to say, at its core this text is a series of simple text-files marked up with simple markers of syntax like `#` marks to indicate headings and so on. R Markdown allows us to embed code snippets within the text that an interpreter, like [R Studio](https://www.rstudio.com/), knows how to run, such that the results of the calculations become embedded in the surrounding discussion! This is a key part of making research more open and more reproducible, and which you'll learn more about in chapter one. 
+This text was created using the [Bookdown](http://bookdown.org) package for R Markdown. [R Markdown](http://rmarkdown.rstudio.com/) is a variant of the simple [Markdown format](https://daringfireball.net/projects/markdown/) created by John Gruber. That is to say, at its core this text is a series of simple text-files marked up with simple markers of syntax like `#` marks to indicate headings and so on. R Markdown allows us to embed code snippets within the text that an interpreter, like [R Studio](https://www.rstudio.com/), knows how to run, such that the results of the calculations become embedded in the surrounding discussion! This is a key part of making research more open and more reproducible, and which you'll learn more about in chapter one.
 
 The sequence of steps to produce a Bookdown-powered site looks like this:
 
@@ -101,16 +105,12 @@ biblio-style: apa-like
 link-citations: yes
 ```
 
-This is the only thing you need to have in this file, which is saved in the project folder as `index.Rmd`. 
+This is the only thing you need to have in this file, which is saved in the project folder as `index.Rmd`.
 
-4. Write! We write the content of this book as text files, saving the parts in order. Each file should be numbered `01-introduction.Rmd`, `02-a-history-of-spoons.Rmd`, `03-the-spoons-of-site-x.Rmd` and so on. 
+4. Write! We write the content of this book as text files, saving the parts in order. Each file should be numbered `01-introduction.Rmd`, `02-a-history-of-spoons.Rmd`, `03-the-spoons-of-site-x.Rmd` and so on.
 
 5. Build the book. With Bookdown installed, there will be a 'Build Book' button in the R Studio build pane. This will generate the static html files for the book, the pdf, and the epub. All of these will be found in a new folder in your project, `_book`. There are many more customizations that can be done, but that is sufficient to get one started.
 
 ### The computational environment {-}
 
 The computational environment we are using is a fork of the [DhBox](http://dhbox.org) project from CUNY, led by Stephen Zweibel, Patrick Smyth Developer, Jojo Karlin, and Matthew K. Gold. DHBox requires Ubuntu >= 14.04 and Python 2.7x. We run it at Carleton courtesy of the School of Computer Science, Andrew Pullin, Peter Choynowski, and Doug Howe, via [OpenStack](https://www.openstack.org/) and [Docker](https://www.docker.com/). A version of DHBox that can be run from a USB stick can be found [here](https://github.com/DH-Box/dh-usb) and is worth exploring!
-
-
-
-
