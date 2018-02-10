@@ -1,4 +1,7 @@
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.26)  1 FEB 2018 12:31
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.26)  4 FEB 2018 09:05
+>>>>>>> 24e2ef4e4525d67beb2d69e969a520fde8e74bfe
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -779,9 +782,9 @@ File: switch.def 2017/06/29 3.12 Babel switching mechanism
 \babel@savecnt=\count115
 \U@D=\dimen125
 )
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+\l@canadian = a dialect from \language\l@american
+\l@australian = a dialect from \language\l@british
+\l@newzealand = a dialect from \language\l@british
 ) (/usr/local/texlive/2017basic/texmf-dist/tex/generic/babel-english/english.ld
 f
 Language: english 2017/06/06 v3.3r English support from the babel system
@@ -870,34 +873,34 @@ Package: amsthm 2015/03/04 v2.20.2
 (./odate.aux)
 \openout1 = `odate.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 106.
 
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 106.
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 105.
+LaTeX Info: Redefining \microtypecontext on input line 106.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -908,7 +911,7 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 *geometry* driver: auto-detecting
@@ -918,7 +921,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: twoside
 * h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
 * v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
@@ -946,7 +949,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 105.
+Package hyperref Info: Link coloring OFF on input line 106.
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -956,9 +959,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 105.
-LaTeX Info: Redefining \pageref on input line 105.
-LaTeX Info: Redefining \nameref on input line 105.
+LaTeX Info: Redefining \ref on input line 106.
+LaTeX Info: Redefining \pageref on input line 106.
+LaTeX Info: Redefining \nameref on input line 106.
 (./odate.out) (./odate.out)
 \@outlinefile=\write3
 \openout3 = `odate.out'.
@@ -997,37 +1000,37 @@ e
 {/usr/local/texlive/2017basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ] (./odate.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 10.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 12.
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 10.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 12.
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 10.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 12.
 
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 10.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 12.
 
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 10.
+(Font)              <10> on input line 12.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 10.
+(Font)              <7> on input line 12.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 10.
-LaTeX Font Info:    Try loading font information for U+msa on input line 10.
+(Font)              <5> on input line 12.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2017basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 10.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2017basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1040,35 +1043,35 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 <images/word-cloud-proposal.jpg, id=234, 401.5pt x 265.99374pt>
 File: images/word-cloud-proposal.jpg Graphic file (type jpg)
 <use images/word-cloud-proposal.jpg>
-Package pdftex.def Info: images/word-cloud-proposal.jpg  used on input line 123
-. on input line 123.
+Package pdftex.def Info: images/word-cloud-proposal.jpg  used on input line 124
+. on input line 124.
 Package pdftex.def Info: Requested size: 401.5235pt x 266.00931pt on input line
- 123.
+ 124.
 <images/by-nc-sa.png, id=235, 88.33pt x 31.11626pt>
 File: images/by-nc-sa.png Graphic file (type png)
 <use images/by-nc-sa.png>
-Package pdftex.def Info: images/by-nc-sa.png  used on input line 128. on input 
-line 128.
-Package pdftex.def Info: Requested size: 88.33112pt x 31.11664pt on input line 
-128.
+Package pdftex.def Info: images/by-nc-sa.png  used on input line 129. on input
+line 129.
+Package pdftex.def Info: Requested size: 88.33112pt x 31.11664pt on input line
+129.
 [5
 
  <./images/word-cloud-proposal.jpg> <./images/by-nc-sa.png>] [6
 
 ] [7] [8]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 260.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 271.
 
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [9
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 341.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 352.
 
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [10]
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 429
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 440
 .
 (/usr/local/texlive/2017basic/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1078,13 +1081,13 @@ File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ]
 Chapter 1.
-<images/treeverse-what-is-da.png, id=330, 728.7225pt x 594.22pt>
+<images/treeverse-what-is-da.png, id=332, 728.7225pt x 594.22pt>
 File: images/treeverse-what-is-da.png Graphic file (type png)
 <use images/treeverse-what-is-da.png>
-Package pdftex.def Info: images/treeverse-what-is-da.png  used on input line 57
-3. on input line 573.
+Package pdftex.def Info: images/treeverse-what-is-da.png  used on input line 58
+4. on input line 584.
 Package pdftex.def Info: Requested size: 469.74998pt x 383.04681pt on input lin
-e 573.
+e 584.
 [15] [16 <./images/treeverse-what-is-da.png>] [17]
 Underfull \vbox (badness 4556) has occurred while \output is active []
 
@@ -1092,90 +1095,90 @@ Underfull \vbox (badness 4556) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [19] [20] [21] [22]
-<images/creating-refinining-question.png, id=430, 1119.18124pt x 591.20876pt>
+<images/creating-refinining-question.png, id=432, 1119.18124pt x 591.20876pt>
 File: images/creating-refinining-question.png Graphic file (type png)
 <use images/creating-refinining-question.png>
 Package pdftex.def Info: images/creating-refinining-question.png  used on input
- line 1154. on input line 1154.
+ line 1165. on input line 1165.
 Package pdftex.def Info: Requested size: 469.7626pt x 248.15262pt on input line
- 1154.
+ 1165.
 [23 <./images/creating-refinining-question.png>]
-<images/what-git-does.png, id=446, 567.11874pt x 270.00874pt>
+<images/what-git-does.png, id=448, 567.11874pt x 270.00874pt>
 File: images/what-git-does.png Graphic file (type png)
 <use images/what-git-does.png>
-Package pdftex.def Info: images/what-git-does.png  used on input line 1271. on 
-input line 1271.
+Package pdftex.def Info: images/what-git-does.png  used on input line 1282. on
+input line 1282.
 Package pdftex.def Info: Requested size: 469.77385pt x 223.66223pt on input lin
-e 1271.
+e 1282.
 [24]
-<images/commit-history.png, id=456, 293.095pt x 34.1275pt>
+<images/commit-history.png, id=458, 293.095pt x 34.1275pt>
 File: images/commit-history.png Graphic file (type png)
 <use images/commit-history.png>
-Package pdftex.def Info: images/commit-history.png  used on input line 1296. on
- input line 1296.
-Package pdftex.def Info: Requested size: 293.09427pt x 34.1274pt on input line 
-1296.
-[25 <./images/what-git-does.png> <./images/commit-history.png>] [26] [27] [28] 
+Package pdftex.def Info: images/commit-history.png  used on input line 1307. on
+ input line 1307.
+Package pdftex.def Info: Requested size: 293.09427pt x 34.1274pt on input line
+1307.
+[25 <./images/what-git-does.png> <./images/commit-history.png>] [26] [27] [28]
 [29]
-<images/pullrequest-send.png, id=531, 774.895pt x 403.5075pt>
+<images/pullrequest-send.png, id=533, 774.895pt x 403.5075pt>
 File: images/pullrequest-send.png Graphic file (type png)
 <use images/pullrequest-send.png>
-Package pdftex.def Info: images/pullrequest-send.png  used on input line 1841. 
-on input line 1841.
+Package pdftex.def Info: images/pullrequest-send.png  used on input line 1852.
+on input line 1852.
 Package pdftex.def Info: Requested size: 469.76476pt x 244.61842pt on input lin
-e 1841.
+e 1852.
 [30 <./images/pullrequest-send.png>] [31] [32]
-<images/ten_thousand.png, id=584, 463.7325pt x 317.185pt>
+<images/ten_thousand.png, id=586, 463.7325pt x 317.185pt>
 File: images/ten_thousand.png Graphic file (type png)
 <use images/ten_thousand.png>
-Package pdftex.def Info: images/ten_thousand.png  used on input line 2110. on i
-nput line 2110.
+Package pdftex.def Info: images/ten_thousand.png  used on input line 2121. on i
+nput line 2121.
 Package pdftex.def Info: Requested size: 463.73842pt x 317.18904pt on input lin
-e 2110.
+e 2121.
 [33] [34 <./images/ten_thousand.png>]
-Overfull \hbox (637.99176pt too wide) in paragraph at lines 2167--2167
+Overfull \hbox (637.99176pt too wide) in paragraph at lines 2178--2178
 []  \T1/lmtt/m/n/10 - include the history of commands you\TS1/lmtt/m/n/10 '\T1/
 lmtt/m/n/10 ve typed by passing your command line history to a new text file wi
 th $ history > mycommands.txt . Open that file, annotate it / copy and paste it
- to your problem document[] 
+ to your problem document[]
  []
 
 
-Overfull \hbox (2.7436pt too wide) in paragraph at lines 2167--2167
+Overfull \hbox (2.7436pt too wide) in paragraph at lines 2178--2178
 []  \T1/lmtt/m/n/10 - take screenshots and put them online somewhere; include h
-ere the URL to the screenshot[] 
+ere the URL to the screenshot[]
  []
 
 
-Overfull \hbox (354.49258pt too wide) in paragraph at lines 2167--2167
+Overfull \hbox (354.49258pt too wide) in paragraph at lines 2178--2178
 []  \T1/lmtt/m/n/10 - sometimes even a video can be handy; screen-cast-o-matic.
 com lets you take a video with narration of what\TS1/lmtt/m/n/10 '\T1/lmtt/m/n/
-10 s going on, and can be shared via their servers[] 
+10 s going on, and can be shared via their servers[]
  []
 
 
 Underfull \vbox (badness 1571) has occurred while \output is active []
 
 [35] [36]
-Overfull \hbox (191.74306pt too wide) in paragraph at lines 2398--2398
+Overfull \hbox (191.74306pt too wide) in paragraph at lines 2409--2409
 []\T1/lmtt/m/n/10 SG <- note pandoc and rmarkdown have to be bundled into the b
-ox before hand. Otherwise, the following commands have to be run:[] 
+ox before hand. Otherwise, the following commands have to be run:[]
  []
 
 
-Overfull \hbox (7.99359pt too wide) in paragraph at lines 2398--2398
+Overfull \hbox (7.99359pt too wide) in paragraph at lines 2409--2409
 []\T1/lmtt/m/n/10 $ wget https://github.com/jgm/pandoc/releases/download/1.19.2
-.1/pandoc-1.19.2.1-1-amd64.deb[] 
+.1/pandoc-1.19.2.1-1-amd64.deb[]
  []
 
 
-Overfull \hbox (1294.23985pt too wide) in paragraph at lines 2398--2398
+Overfull \hbox (1294.23985pt too wide) in paragraph at lines 2409--2409
 []\T1/lmtt/m/n/10 to get pandoc and then $ sudo dpkg -i pandoc-1.19.2.1-1-amd64
 .deb\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 to unzip and install it. Rmarkdown has t
 o be installed from the R Server code pane. The first sample rmd file has a lea
 flet webapp in it; I modified the R to install leaflet first, but I dunno. This
 \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 ll have to be tested. Probably easier at this
- point to just remove it.[] 
+ point to just remove it.[]
  []
 
 [37] [38] [39] [40]
@@ -1188,13 +1191,13 @@ Underfull \vbox (badness 3375) has occurred while \output is active []
 
 ]
 Chapter 2.
-<images/regret-tweet-data.png, id=722, 1031.855pt x 554.07pt>
+<images/regret-tweet-data.png, id=724, 1031.855pt x 554.07pt>
 File: images/regret-tweet-data.png Graphic file (type png)
 <use images/regret-tweet-data.png>
-Package pdftex.def Info: images/regret-tweet-data.png  used on input line 2916.
- on input line 2916.
+Package pdftex.def Info: images/regret-tweet-data.png  used on input line 2927.
+ on input line 2927.
 Package pdftex.def Info: Requested size: 469.74667pt x 252.23752pt on input lin
-e 2916.
+e 2927.
 [45 <./images/regret-tweet-data.png>]
 Underfull \vbox (badness 1478) has occurred while \output is active []
 
@@ -1202,82 +1205,96 @@ Underfull \vbox (badness 1478) has occurred while \output is active []
 
 ]
 Chapter 3.
-[49] [50] [51] [52]
-Chapter 4.
-[53
+[49] [50] [51] [52] [53] [54
 
 ]
-<images/PondTrade_step13_output-statistics-interface.png, id=798, 1372.12625pt 
+Chapter 4.
+
+Overfull \hbox (49.99347pt too wide) in paragraph at lines 3420--3421
+[]\T1/lmtt/m/n/10 wget https://downloads.sourceforge.net/projects/regard3d/file
+s/Regard3D/0.9.5/Regard3D_src_0.9.5.7z
+ []
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 3447--3448
+[]\T1/lmtt/m/n/10 $ mv "Aerial views of the ancient city of Pompeii HD Stock Fo
+otage-nSB2VeTeXXg.mp4"
+ []
+
+[56] [57]
+<images/PondTrade_step13_output-statistics-interface.png, id=853, 1372.12625pt
 x 738.76pt>
 File: images/PondTrade_step13_output-statistics-interface.png Graphic file (typ
 e png)
 <use images/PondTrade_step13_output-statistics-interface.png>
 Package pdftex.def Info: images/PondTrade_step13_output-statistics-interface.pn
-g  used on input line 3397. on input line 3397.
-Package pdftex.def Info: Requested size: 469.762pt x 252.92232pt on input line 
-3397.
-[54]
-<images/andros-diagram.png, id=810, 242.9075pt x 495.8525pt>
+g  used on input line 3675. on input line 3675.
+Package pdftex.def Info: Requested size: 469.762pt x 252.92232pt on input line
+3675.
+<images/andros-diagram.png, id=854, 242.9075pt x 495.8525pt>
 File: images/andros-diagram.png Graphic file (type png)
 <use images/andros-diagram.png>
-Package pdftex.def Info: images/andros-diagram.png  used on input line 3408. on
- input line 3408.
+Package pdftex.def Info: images/andros-diagram.png  used on input line 3686. on
+ input line 3686.
 Package pdftex.def Info: Requested size: 242.90689pt x 495.85129pt on input lin
-e 3408.
-<images/andros-2.png, id=811, 895.345pt x 597.23125pt>
+e 3686.
+[58]
+<images/andros-2.png, id=865, 895.345pt x 597.23125pt>
 File: images/andros-2.png Graphic file (type png)
 <use images/andros-2.png>
-Package pdftex.def Info: images/andros-2.png  used on input line 3436. on input
- line 3436.
+Package pdftex.def Info: images/andros-2.png  used on input line 3714. on input
+ line 3714.
 Package pdftex.def Info: Requested size: 469.7626pt x 313.35062pt on input line
- 3436.
-[55 <./images/PondTrade_step13_output-statistics-interface.png>] [56 <./images/
-andros-diagram.png>] [57 <./images/andros-2.png>] [58
+ 3714.
+[59 <./images/PondTrade_step13_output-statistics-interface.png>] [60 <./images/
+andros-diagram.png>] [61 <./images/andros-2.png>] [62
 
 ]
 Chapter 5.
-[59] [60
-
-]
-Chapter 6.
-[61] [62
-
-]
-Chapter 7.
 [63] [64
 
 ]
-Overfull \hbox (31.67389pt too wide) in paragraph at lines 3603--3606
+Chapter 6.
+[65] [66
+
+]
+Chapter 7.
+[67] [68
+
+]
+Overfull \hbox (31.67389pt too wide) in paragraph at lines 3881--3884
 \T1/lmr/m/it/10 (-20) ward Glance\T1/lmr/m/n/10 (-20) . []$http : / / lincolnmu
 llen . com / blog / a-[]con^^\rmation-[]of-[]andrew-[]goldstone-[]on-[]teaching
--[]quantitative-[]methods/$[]. 
+-[]quantitative-[]methods/$[].
  []
 
-[65]
-Overfull \hbox (54.49132pt too wide) in paragraph at lines 3622--3625
+[69]
+Overfull \hbox (54.49132pt too wide) in paragraph at lines 3900--3903
 \T1/lmr/m/it/10 (-20) Owens\T1/lmr/m/n/10 (-20) . []$http : / / www . trevorowe
 ns . org / 2012 / 11 / discovery-[]and-[]justi^^\cation-[]are-[]di^^[erent-[]no
-tes-[]on-[]sciencing-[]the-[]humanities/$[]. 
+tes-[]on-[]sciencing-[]the-[]humanities/$[].
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3627.
-[66]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3627.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3905.
+[70]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3905.
 (./odate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3627.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3627.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3905.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3905.
 
 Package rerunfilecheck Info: File `odate.out' has not changed.
-(rerunfilecheck)             Checksum: 4D62D91D01A6AF8BE48AF0686FC3A524;9405.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3627.
- ) 
+(rerunfilecheck)             Checksum: FAC3B7F13912364E2B615493D5D7EEE2;9390.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3905.
+ )
 Here is how much of TeX's memory you used:
- 13683 strings out of 494437
- 199340 string characters out of 6166645
- 300980 words of memory out of 5000000
- 16354 multiletter control sequences out of 15000+600000
+ 13704 strings out of 494437
+ 199579 string characters out of 6166645
+ 304430 words of memory out of 5000000
+ 16358 multiletter control sequences out of 15000+600000
  67394 words of font info for 126 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
+Output written on odate.pdf (66 pages, 1445391 bytes).
+=======
  32i,5n,38p,497b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/l
 ocal/texlive/2017basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/tex
@@ -1289,10 +1306,10 @@ ist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017basic/texmf-dist/f
 onts/type1/public/lm/lmri12.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/
 type1/public/lm/lmro10.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1
 /public/lm/lmtt10.pfb>
-Output written on odate.pdf (66 pages, 1445391 bytes).
+Output written on odate.pdf (70 pages, 1463981 bytes).
+>>>>>>> 24e2ef4e4525d67beb2d69e969a520fde8e74bfe
 PDF statistics:
- 998 PDF objects out of 1000 (max. 8388607)
- 891 compressed objects within 9 object streams
- 313 named destinations out of 1000 (max. 500000)
+ 1056 PDF objects out of 1200 (max. 8388607)
+ 944 compressed objects within 10 object streams
+ 330 named destinations out of 1000 (max. 500000)
  12677 words of extra memory for PDF output out of 14400 (max. 10000000)
-

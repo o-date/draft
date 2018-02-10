@@ -5,3 +5,118 @@ vsfm
 ### discussion
 
 ### exercises
+
+### Going further
+
+It is possible to make 3d models from archival film/video footage, although the quality of the resulting model
+may require a significant amount of sculpting work afterwards to achieve a desireable effect. It depends, really, on
+why one wants to build a 3d model in the first place. Archaeologists for instance might want to work with a 3d
+rendering of a building or site now lost.
+
+The workflow has a number of steps:
+
+1. obtaining the video (if it is on eg. youtube)
+2. slicing the video into still images
+3. adding camera metadata to the images
+4. computing matched points across the images
+5. triangulation from the matched points
+6. surface reconstruction
+
+The necessary software are all open-source or free-to-use programs
+1. Youtube-dl https://rg3.github.io/youtube-dl/
+2. avconv via libav-tools
+3. exiftool https://www.sno.phy.queensu.ca/~phil/exiftool/
+4. regard3d http://www.regard3d.org/
+5. meshlab (for post-processing) http://www.meshlab.net/
+
+At the command line in your instance of DH-Box, you can install the first three programs like so:
+
+```$ sudo pip install --upgrade youtube_dl```
+
+```$ sudo apt-get install libav-tools```
+
+get exiftool
+
+get and compile regard3d 
+
+```wget https://downloads.sourceforge.net/projects/regard3d/files/Regard3D/0.9.5/Regard3D_src_0.9.5.7z```
+
+but you need ```sudo apt-get install p7zip-full``` to unzip it
+
+SG - VSFM. Not regard3d. regard3d is gui based and can't do that in dhbox, least not on my end.
+
+Step One Downloading from Youtube
+Archival or interesting footage of all kinds may be found on youtube and other video streaming services.
+Youtube-dl is a sophisticated program for downloading this footage (and other associated metadata) from
+youtube and some other sites. Find a video of interest. Note the url. Then:
+youtube-dl https://www.youtube.com/watch?v=nSB2VeTeXXg
+Try to find video that does not have watermarks (the example above has a watermark and probably is not the
+best source video one could use). Look for videos that are composed of long cuts, that sweep smoothly around
+the site/object/target of interest. You may wish to note the timing of interesting shots, as you can download or
+clip the video to those passages (see the youtube-dl documentation)
+
+You might want to rename the downloaded file into something easier to work with. The youtube link above for instance is for a file called "Aerial views of the ancient city of Pompeii HD Stock Footage-nSB2VeTeXXg.mp4". Typing that out a few times will quickly become frustrating. We can rename the file using the `mv` command:
+
+```$ mv "Aerial views of the ancient city of Pompeii HD Stock Footage-nSB2VeTeXXg.mp4" "pompeiifilm.mp4"```
+
+That is to say, 'move the "old file name" to "new file name"'. If you included file paths in the new file name, you'd actually move the file, too.
+
+Step Two Slicing the Video into Stills
+
+First, let's make a new directory into which we can put the still images that we are going to cut the video. 
+
+```$mkdir frames```
+
+A quick search of the linux user community will give you an idea of the wide variety of things you can do with avconv, but for now, we are going to tell it to split the video into frames and put the frames into a new directory:
+
+```$ avconv -i name-of-your-video-here.mp4 frames/frame-%05d.jpg```
+
+The `-%05d` flag behind the word `frame` is a pattern for naming the output files: `frame-00001.jpg`, `frame-00002.jpg` and so on. Move into the frames directory and list the files to see the results. If you were able to use the same video of drone footage from Pompeii that we used, there will be 1914 images in the new folder. You might wish to explore the documenation for the avconv command (type ```man avconv``` to get the manual or visit [the online documentation here](https://libav.org/avconv.html#image2-1). The command below will take a still every 5 seconds:
+
+```$ avconv -i name-of-your-video-here.mp4 -vsync 1 -r 5 -f image2 frames/frame-%05d.jpg```
+
+
+Step Three Adding Camera Metadata
+
+
+
+
+We will be using Regard3d to stitch the images together. Regard3d needs to know the camera make, model,
+focal length (mm), and sensor width (mm). We are going to fudge this information with our best approximation.
+'Sensor width' is the width of the actual piece of hardware in a digital camera upon which light falls. You'll have to
+do some searching to work out the best approximation for this measurement for the likely camera used to make
+the video you're interested in.
+Find the camera database that Regard3d uses (see the documentation for Regard3d for the location on your
+system). It is a csv file. Open it with a text editor (eg Sublime Text or Atom. not Excel, because Excel will introduce
+errors). Add the make, model, and sensor width information following this pattern:
+make;model;width-in-mm
+Regard3d reads the exif image metadata to work out which camera settings to use. Focal length is read from the
+exif metadata as well. We assign these like so, from the command line in your frames folder:
+exiftool -FocalLength="3.97" *.jpeg
+exiftool -Make="CameraMake" *.jpeg
+exiftool -Model="CameraModel" *.jpeg
+Note that the make and model must absolutely match what you put into the camera database csv file -
+uppercase, lowercase, etc matters. Also, Windows users might have to rename downloaded exiftool file to
+exiftool.exe and put it into their path variable (alternatively, rename it and then put it in the frames folder
+so that when you type the command, your system can find it easily).
+Step Four Computing Matches
+Open Regard3d and start a new project. Add a photoset by selecting your frames directory. Note that when you
+used the exiftool, the original images were copied within the folder with a new name. Don't select those original
+images. As the images load up, you will see whether or not your metadata is being correctly read. If you get NaN
+under make, model, focal length, or sensor width, revisit step three again carefully. Click ok to use the images.
+Click on compute matches. Slide the keypoint density sliders (two sliders) all the way to 'ultra'. You can try with
+just the default values at first, which is faster, but using 'ultra' means we get as many data points as possible,
+which can be necessary given our source images.
+This might take some time. When it is finished, proceed through the next steps as Regard3d presents them to
+you (the options in the bottom left panel of the program are context-specific. If you want to revisit a previous
+step and try different settings, select the results from that step in the inspector panel top left to redo).
+The final procedure in model generation is to compute the surfaces. When you click on the 'surface' button
+(having just completed the 'densification' step), make sure to tick off the 'texture' radio button. When this step is
+complete, you can hit the 'export' button. The model will be in your project folder - .obj, .stl., and .png. To share
+the model on something like Sketchfab.com zip these three files into a single zip folder. On sketchfab, you upload
+the zip folder.
+Step Five Clean Up
+Double click on the .obj file in your project folder. Meshlab will open and display your model. The exact tools you
+might wish to use to enhance or clean up your model depends very much on how your model turned out. At the
+very least, you'll use the 'vertice select' tool (which allows you to draw a box over the offending part) and the
+'vertice delete' tool. Search the web for help and examples for the effective use of Meshlab.
