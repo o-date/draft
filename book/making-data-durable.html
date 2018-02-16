@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2018-02-04">
+<meta name="date" content="2018-02-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -73,8 +73,6 @@
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#neha-gupta"><i class="fa fa-check"></i>Neha Gupta</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#michael-carter"><i class="fa fa-check"></i>Michael Carter</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#beth-compton"><i class="fa fa-check"></i>Beth Compton</a></li>
-<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#jolene-smith"><i class="fa fa-check"></i>Jolene Smith</a></li>
-<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#andreas-angourakis"><i class="fa fa-check"></i>Andreas Angourakis</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#editorial-board"><i class="fa fa-check"></i>Editorial Board</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i>Getting Started</a><ul>
@@ -157,7 +155,7 @@
 <li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora</a></li>
 <li class="chapter" data-level="3.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.4</b> What is Web Mapping?</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.4.1</b> Overview of Map Services</a></li>
-<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a Web map with Leaflet</a></li>
+<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a web map with Leaflet</a></li>
 <li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-12"><i class="fa fa-check"></i><b>3.4.3</b> exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>3.5</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
@@ -230,23 +228,37 @@
             <section class="normal" id="section-">
 <div id="making-data-durable" class="section level1">
 <h1><span class="header-section-number">Part 2</span> Making Data Durable</h1>
-<p>Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three great habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “futureproof” your digital work.</p>
-<p>The concept of Paradata as implemented in events like the Heritage Jam link/reference can be applied broadly to analytical and technical digital projects to great effect. Originally documented in the London Charter for Computer-based Visualization of Cultural Heritage [source and link], paradata (literally data alongside the data) are narrative descriptions of process. No matter how well-structured your files and how reproducible.</p>
-<p>Most archaeological researchers have encountered “bad” data in the past when trying to understand or reconstruct someone’s conclusions from field notes and excavation reports. What makes a dataset bad?</p>
+<p>Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three great habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “future-proof” your digital work.</p>
+<p>Prepare yourself for a little journey. In a dreamlike state, you find yourself in a time machine, noticing that you have traveled to a point in the far or not-so-distant future. You arrive in your own lab to find a group of researchers puzzling over the information you created in the time before, trying to reconstruct your conclusions and make some kind of sense of it all.</p>
+<pre><code>&quot;What are these strange codes?&quot;
+&quot;Does this thing go with that? It looks like there&#39;s a bit missing, but we can&#39;t be sure.&quot;
+&quot;What was on all those corrupted flash drives? Does anyone even have a flash-drive-to-skull-jack converter around here?&quot;
+&quot;WHAT WAS THIS PERSON THINKING?&quot;</code></pre>
+<p>It doesn’t have to be this way. Most archaeological researchers have encountered “bad” data in the past when trying to understand or reconstruct someone’s conclusions from field notes and excavation reports. What makes a dataset bad?</p>
 <div class="figure">
 <img src="images/regret-tweet-data.png" alt="A Useful Warning from Kenny Brophy" />
 <p class="caption">A Useful Warning from Kenny Brophy</p>
 </div>
 <p><em>It’s not understandable.</em> The dataset may be illegible (poor handwriting, or a bad scan of a hard copy document). It might be made up of codes with no way to decipher their meaning. It might be a digital binary file that can no longer be read by available software (or on a physical format that’s now obsolete). do</p>
-<p>INCLUDE SOME IMAGES</p>
 <p><em>It can’t be easily accessed.</em> The dataset might be saved in a format that only expensive, proprietary software can read. It might be comprised of a lot of fascinating information but challenging to extract from a format like PDF.</p>
-<p><em>It’s difficult to reuse.</em> The dataset might use inconsistent terminology.</p>
-<p>With these frustrations in mind, you have the tools to create good data. Good data are stable, human readable, and accessible. They can be rearranged and remixed. The same qualities that make data useful can also help to protect against the ravages of time.</p>
+<p><em>It’s difficult to reuse.</em> The dataset might use inconsistent terminology. The data might be saved as an image, when in fact it’s got a structure. [should a definition of structured data go here or somewhere else?]</p>
+<p>With these frustrations in mind, the qualities of “good” data become apparent. Good data are stable, human readable, and accessible. They can be rearranged and remixed. As an added benefit, those same qualities that make data useful and conclusions reproducible can also help to protect against the ravages of time.</p>
+<div id="pre-planning" class="section level4 unnumbered">
+<h4>Pre-Planning</h4>
 <p>You’ll notice that quality data (however you define the term) take planning. The structure of your data and the practicalities of how you’ll handle and store it should be woven into your research design. A reality to confront, however, is that there will be tradeoffs.</p>
 <p>Up front, right at the beginning, when you’re working out your research questions and goals, ask yourself some questions. What do I want my data to do? How much detail do I need to collect? Do I have a plan for curating datasets I’ve created? Is there space somewhere to do so? Will I need to be selective?</p>
-<p>lots of references to Marwick paper(s) go here…</p>
-<p>Perfection is unattainable. No dataset will ever be truly “complete.” You could collect, measure, and produce data at finer and finer resolutions, ad infinitum. But you don’t want to do that. And even if you think you’re being comprehensive, all data you collect is only a specific, bounded representation of the real world surely there’s a reference or a better way to put this.</p>
+<p>[Cite the grid in Computational Reproducibility in Archaeological Research: Basic Principles and a Case Study of Their Implementation]</p>
+<p>Perfection is unattainable. No dataset will ever be truly “complete.” You could collect, measure, and produce data at finer and finer resolutions, ad infinitum. But you don’t want to do that. And even if you think you’re being comprehensive, all data you collect is only a specific, bounded representation of the real world.</p>
+<p>The concept of Paradata as implemented in events like the Heritage Jam [link/reference] can be applied broadly to analytical and technical digital projects to great effect. Originally documented in the London Charter for Computer-based Visualization of Cultural Heritage [source and link], paradata (literally data alongside the data) are narrative descriptions of process. Keeping a paradata file can help to illustrate some of the assumptions we naturally make when producing and grooming data. Data are never “raw”. [Gitelman, Lisa, ed. Raw data is an oxymoron. MIT Press, 2013.] In the context of an archaeological excavation with published analysis, this information might take the form of sections of a gray literature report or an appendix to a publication. Or it might be a text document that travels along side a collection of data files as a “readme.”</p>
+</div>
+<div id="preservation-and-longevity" class="section level4 unnumbered">
+<h4>Preservation and Longevity</h4>
+<p>For advice on specific types of data consult <a href="http://guides.archaeologydataservice.ac.uk/g2gp/Main"><em>Guides to Good Practice</em> published by the Archaeology Data Service and Digital Antiquity</a>, 2011.</p>
+<p>Time is your enemy - bit rot and link rot - deprecated formats - disappearing web resources and problems with the “cloud” - lost institutional knowledge and unconscious assumptions</p>
+<p>Tools - metadata creation - fixity</p>
 
+</div> 
+</div>
             </section>
 
           </div>

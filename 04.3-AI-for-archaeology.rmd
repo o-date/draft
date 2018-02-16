@@ -1,6 +1,4 @@
----
-always_allow_html: yes
----
+
 
 ## Artificial Intelligence in Digital Archaeology 
 
@@ -55,14 +53,16 @@ ABMs fall somewhere in-between these two spectra, though normally leaning toward
 
 - The Pond Trade (coastal settlements of variable size around a pond; cultural vectors; trade ships travel between the settlements, re-evaluating afterwards if the trip is worse or better than other previous trips (make table); they carry economic value and cultural traits from between the base and destination settlements)
 
-- Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
+Pond Trade model repository: github.com/something-or-other
 
-![Interface of step 13](images/PondTrade_step13_output-statistics-interface.png)
+![The Interface](images/interface-andros.png)
+
 
 ```
 library(DiagrammeR)
 grViz("diagrams/boxes.dot")
 ```
+
 ![andros-first-diagram](images/andros-diagram.png)
 
 SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
