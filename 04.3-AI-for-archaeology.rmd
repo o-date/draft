@@ -2,6 +2,19 @@
 
 ## Artificial Intelligence in Digital Archaeology 
 
+To speak of 'artificial intelligence' in archaeology may be to speak too soon yet. We do have machine learning in the service of archaeology (neural networks for classificatory purposes, for instance), and there is a well-established body of work in terms of simulation that could fall under the rubric of 'artificial intelligence'.
+
+Then why use the term? We think it is still useful to use the term because it reminds us that, in using computational power for simulation or image classification we are off-loading some of our expertise and abilities to a non-human actor. In the case of machine learning and neural networks, we really *can't* see inside the 'black box'. But we can examine the training data, for it is in the selection of training data that we introduce biases or agendas into the computation. By thinking of the machine in this case as something non-human, our hope is that we remind you to not accept the results or methods of AI in archaeology blindly, as if the machine was not capable of racist or colonialist results. 
+
+Machine learning: a series of techniques that endeavour to train a computer program to identify and classify data according to some previously determined values. We will in this chapter discuss image recognition using the neural network model trained by Google, the Inception3 model, which we will query using the Tensorflow package.
+
+Agent based simulation: a series of techniques that create a population of software 'agents' who are programmed with contextual rules governing the behaviour of individual agents. The context can be both in terms of the simulated environment (GIS data, for instance) or the social environment (social relationships as a network). The simulation iterates over an entire landscape of possible variables, creating a 'behaviour space' which is then used by the investigator to understand the emergent behaviour in the situation, to understand better the possible range of situations that could account for the observed phenomenon in the 'real world'.
+
+The value of machine learning: it makes us think carefully about what we are looking for and at in the first place; and then it can be scaled massively.
+
+The value of agent-based modeling: it forces us to think carefully about what it is we think actually *happened* in the past such that it can be encoded as a series of individual-level instructions. 
+
+
 ### Agent-based modeling (ABM)
 
 >Andreas: "Hello World!"
