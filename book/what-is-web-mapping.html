@@ -175,7 +175,7 @@
 <li class="chapter" data-level="4.1" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html"><i class="fa fa-check"></i><b>4.1</b> 3D Photogrammetry &amp; Structure from Motion</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#discussion-10"><i class="fa fa-check"></i><b>4.1.1</b> discussion</a></li>
 <li class="chapter" data-level="4.1.2" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#exercises-15"><i class="fa fa-check"></i><b>4.1.2</b> exercises</a></li>
-<li class="chapter" data-level="4.1.3" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#going-further"><i class="fa fa-check"></i><b>4.1.3</b> Going further</a></li>
+<li class="chapter" data-level="4.1.3" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#nuts-and-bolts"><i class="fa fa-check"></i><b>4.1.3</b> nuts and bolts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html"><i class="fa fa-check"></i><b>4.2</b> 3D Printing, the Internet of Things and “Maker” Archaeology</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#discussion-11"><i class="fa fa-check"></i><b>4.2.1</b> discussion</a></li>
@@ -238,10 +238,8 @@
 <p>Tiled map service and <a href="http://www.opengeospatial.org/standards/wms">Web Map Service</a> are two forms of Web-based mapping. A WMS is an interface that enables us (the clients) to request specific maps i.e. visual representations of geographic information from a geospatial database. The WMS server is called via a Universal Resource Link (URL) on an Internet-enabled desktop GIS. A request typically consists of the geographic layer (e.g. theme) and geographic area of interest. The response to a request results in <em>geo-registered map images</em> that are displayed and queried within a browser. Because the map is dynamically drawn upon request, and because the server typically uses the most current information from several layers in the geospatial database, WMS maps tend to load slowly. [Toporama] (<a href="http://wms.ess-ws.nrcan.gc.ca/wms/toporama_en" class="uri">http://wms.ess-ws.nrcan.gc.ca/wms/toporama_en</a>) is an example of a WMS server for Canadian topographic themes. [add image for WMS architecture?]</p>
 <p>Tile map services such as <a href="http://tilemill-project.github.io/tilemill/docs/crashcourse/introduction/">TillMill Project</a>, <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, <a href="www.carto.com">CartoDB</a>, and <a href="http://maps.stamen.com">Stamen</a> all use one or more vector layers that have been rasterized into an image. This rasterized image is divided into 256 x 256 adjacent pixel images or ‘tiles’. This is usually the base layer in a web map.</p>
 <p>Each tile is an image on the Web, which means that you can link to it. For example, the following URL points to a specific tile on the Web:</p>
-<blockquote>
-<p><a href="https://tile.openstreetmap.org/7/63/42.png" class="uri">https://tile.openstreetmap.org/7/63/42.png</a></p>
-</blockquote>
-<p>The three elements in the URL are: 1. <strong>tile.openstreetmap.org</strong>, the tile server name; 2. <strong>7</strong>, the zoom level or <em>z</em> value of the tile; and finally 3. <strong>63/42</strong>, the <em>x</em> and <em>y</em> values in the grid where the tile lives</p>
+<pre><code> https://tile.openstreetmap.org/7/63/42.png</code></pre>
+<p>The three elements in the URL are: 1. <code>tile.openstreetmap.org</code>, the tile server name; 2. <code>7</code>, the zoom level or <code>z</code> value of the tile; and finally 3. <code>63/42</code>, the <code>x</code> and <code>y</code> values in the grid where the tile lives</p>
 <p>Z values have a range between 0 and 21, where 21 returns a tile with greatest detail (and smallest sized tile).</p>
 <p>Once generated, the set of tiles are stored on disk, ready to be distributed rapidly to large numbers of simultaneous requests. Tiled maps, also called ‘slippy’ maps load quickly precisely because they are pre-generated. They shift attention to map aesthetics and smooth map navigation, trading in functionality such as layer order, map scale and projection. <a href="http://alexurquhart.github.io/free-tiles/">Alex Urquhart</a> maintains a list of free tile services. [add image for tiles?]</p>
 <p>Data layers are typically added on top of the base layer. Data layers can be points, lines and polygons. These data layers are saved as GeoJSON, a format designed for representing on the Web, geographic features with their non-spatial attributes.</p>
@@ -269,47 +267,33 @@
 <p>tells us that this document written in <strong>html</strong>, a language for creating web pages.</p></li>
 </ol>
 <p>Go ahead and change the title</p>
-<title>
-title when you hover over tab
-</title>
+<pre><code>&lt;title&gt;title when you hover over tab&lt;/title&gt;</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>We now want to have a look at our web page on a local browser. Let’s fire up Prepros (this may take a few minutes) to get a preview. Add the web-map folder as a project, either by drag and drop or use the + at the bottom left of the Prepros window.</li>
 </ol>
 <p>Right click on the folder to ‘Enable Live Preview’. Then click on the globe icon to see the web page in the browser.</p>
 <ol start="4" style="list-style-type: decimal">
-<li>On the index.html, locate the tag
-<head>
-and
-<body>
-. In the anatomy of a web page, these are the sections that are most important for creating and loading content on a web page.</li>
+<li>On the <code>index.html</code>, locate the tag <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>. In the anatomy of a web page, these are the sections that are most important for creating and loading content on a web page.</li>
 </ol>
-Within our
-<head>
-section, we have added two tags, <link> and
-<script>
-<p>to the Leaflet library. You will notice that the URL points to ‘CDN’ or a Content Delivery Network. These are servers that host Web content based on our geographic location. In this case, we request a specific hosted CSS or Cascading Style Sheet for Leaflet and the Leaflet script that adds interactivity to the web map.</p>
+<p>Within our <code>&lt;head&gt;</code> section, we have added two tags, <code>&lt;link&gt;</code> and <code>&lt;script&gt;</code> to the Leaflet library. You will notice that the URL points to <code>CDN</code> or a Content Delivery Network. These are servers that host Web content based on our geographic location. In this case, we request a specific hosted CSS or Cascading Style Sheet for Leaflet and the Leaflet script that adds interactivity to the web map.</p>
 <p>The CSS gives us pre-defined styles and elements to format the content of a webpage i.e. we get the look and feel of a Leaflet map. It includes fonts, size, colour, line spacing, and Leaflet elements like the map, and icon for zoom.</p>
-**It is key that that CSS loads before the script, and that both of them are within the
-<head>
-</head>
-<p>tags.**</p>
+<p><strong>It is key that that CSS loads before the script, and that both of them are within the <code>&lt;head&gt;&lt;/head&gt;</code> tags.</strong></p>
 <ol start="5" style="list-style-type: decimal">
-<li>Next, in the
-<body>
-section of our web page, we add a
-<div>
-element that will contain a thing called “map”</li>
+<li>Next, in the <code>&lt;body&gt;</code> section of our web page, we add a <code>&lt;div&gt;</code> element that will contain a thing called <code>map</code>.</li>
 </ol>
-We then call the
-<script>
-<p>and initialize our map using “L.map”</p>
-<p>Examine the code &gt;L.map(‘map’).setView([40.5931,-75.5265], 12);</p>
-<p>.setView centers our web map on specific coordinates and at a particular zoom level. Change the coordinates and hit save. Have a look at the live preview. What do you see?</p>
+<p>We then call the <code>&lt;script&gt;</code> and initialize our map using <code>L.map</code>.</p>
+<p>Examine the code</p>
+<pre><code>L.map(&#39;map&#39;).setView([40.5931,-75.5265], 12);</code></pre>
+<p><code>.setView</code> centers our web map on specific coordinates and at a particular zoom level. Change the coordinates and hit save. Have a look at the live preview. What do you see?</p>
 <ol start="6" style="list-style-type: decimal">
-<li>We must load a tile server for our base map, using “L.tileLayer” &gt;L.tileLayer(‘<a href="https://%7Bs%7D.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png</a>’, { maxZoom: 19, attribution: ‘© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>’ }).addTo(map);</li>
+<li>We must load a tile server for our base map, using <code>L.tileLayer</code></li>
 </ol>
+<pre><code>L.tileLayer(&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, {
+    maxZoom: 19,
+    attribution: &#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;&#39;
+    }).addTo(map);</code></pre>
 <p>This code does tells us which tile server we want, the maximum zoom level, and the attribution for that tile provider.</p>
-<p>Take note of “.addTo(map)” that actually adds the layer to our web map</p>
+<p>Take note of <code>.addTo(map)</code> that actually adds the layer to our web map</p>
 <p>Congratulations! We have our first Leaflet map.</p>
 
 </div>
