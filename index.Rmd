@@ -1,6 +1,6 @@
 ---
 title: "The Open Digital Archaeology Textbook Environment"
-author: "Shawn Graham, Neha Gupta, Michael Carter, & Beth Compton"
+author: "Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Michael Carter, & Beth Compton"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site

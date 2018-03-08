@@ -3,4 +3,4 @@ edit: https://github.com/o-date/draft/edit/gh-pages/%s
 output_dir: "book"
 ui:
     edit: "Edit"
-    chapter_name: "Part "
+chapter_name: "Part "

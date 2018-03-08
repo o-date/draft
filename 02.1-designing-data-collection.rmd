@@ -1,6 +1,28 @@
 ## Designing Data Collection
 
-yada yada
+In teaching, there is a concept called 'backwards design', where you design your lesson from the end point you wish your students to achieve. The same is true of data. Knowing that archaeology is destructive, and that the processes of archaeology _creates_ new kinds of artefacts (drawings, photos, record sheets, labels, and so on), we need to start at the end. Ideally, it is an end point that will allow someone else to reconsider the archaeological record that you have created. As Gavin Lucas [@lucas2012understand], the idea of an 'archaeological record' is a three-fold, trinity-like concept- 
+
+- the material culture broadly understood
+- the 'formation theory' of how that material culture came to be
+- and the materialization of the construction of that material culture in the present: our archive
+
+And so, we will begin this section on data collection by thinking through where the _things_ are going to go.
+
+**Where to put your data**
+
+LOCKSS
+Choosing a repository
+	Does it have room for your stuff?
+	Is your stuff within the purview of its digital archivists?
+	How long is this place going to be around?
+	Does it have plans for migrating and maintaining your files?
+Choosing what you want to curate
+Simple formats = easier migration
+    Convert databases to xml or csv tables with relationships
+    Lossless files. TIFF over JPEG
+    CAD- no archival alternative
+    Geospatial- GeoJSON is text-based and human readable
+    3D- a new frontier in digital preservation (we don’t know how to do it)
 
 ### discussion
 
