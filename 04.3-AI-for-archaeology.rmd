@@ -17,14 +17,30 @@ The value of agent-based modeling: it forces us to think carefully about what it
 
 ### Agent-based modeling (ABM)
 
->Andreas: "Hello World!"
-Overview
+This section is an overview of agent-based modeling (*ABM*), as it is used within archaeology, anthropology, and behavioral sciences. Before tackling what "agent-based" means exactly, we start with a brief introduction to the "modeling" part, which is not trivial at all. To place ABM in this wide picture, we introduce several technical and theoretical dimensions of simulation models. Beforehand, the student must understand that *simulation models* involve computer code (*digital*) and the iteration of processes (*dynamic*).
 
-#### Models, simulation, and the precursors of ABM
+Following the definition of ABM, we jump into describing the process of creating a model or *formalizing* an informal model. We keep these instructions general enough for them to be valid in any modeling platform or programming language.
+
+Next, we cover the *why* and *how* of the application of ABM in archaeology, history, and social sciences. To illustrate the diversity of ABM approaches, we present some key examples in archaeology.
+
+Last, we present the _**Pond Trade model**_, which is designed to showcase many elements that are common in ABM models in archaeology. The whole process of design, programming, simulation, and analysis was intentionally broken down into small, progressive steps to allow the student to start an ABM model from scratch. The exercise assumes no previous programming knowledge. The Pond Trade model is implemented in NetLogo (https://ccl.northwestern.edu/netlogo/), which is free, easy to install and use, and widely used in academia.
+
+Throughout this section, several concepts will probably sound *alien* for most history and archaeology graduate students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers didn't go through formal introductions. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results. In this sense, the content of this section should not be considered the standard among the ABM-archaeology community. 
+
+To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or their interests and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings. Despite the rarity of ABM in academic curricula, some publications do offer a more exhaustive introduction to formal models and ABM specifically in archaeology (e.g., REFs). 
+
+#### What is ABM?
 
 >"Essentially, all models are wrong, but some are useful"  
 >George Box, 1987  
 >*Empirical Model-Building and Response Surfaces*, p. 424
+
+The first thing to consider is that ABM is about models. A model is a representation of a phenomenon as a set of elements and their relationships. In another words, it is a generalization, abstraction, or simplification of what we consider as *the* phenomenon. Think about a pineapple. The mental representation of the phenomenon, "the pineapple", is already a model. It consists of a set of traits or visual cues, and their relative positions. Empirically, every pineapple is singular, but we still are able to identify any pineapple we encounter using this model.
+
+![Pineapples and their models](images/andros_pineapple.png)
+
+- Why model with ABM? open with the idea that we are always modeling
+- Mention review article 'Why model?'
 
 - def system, model, formal model
 - The origins of computer simulation
@@ -34,22 +50,6 @@ Overview
 a. Flow: spectrum between centralized (iteration of a single process, e.g. event) and distributed (multiple processes are iterated contextually by multiple entities).
 b. Schedule: spectrum between fully-scheduled (processes are initiated in a predetermined order) and event-driven (processes are initiated given a certain input).
 ABMs fall somewhere in-between these two spectra, though normally leaning towards distributed (e.g., using Monte Carlo methods) and fully-scheduled. Applications in several disciplines (see Wikipedia)
-
-#### ABM in History and Social Sciences
-
-- Emergence... Life game, deterministic chaos
-- Saving the gap between atomism and holism, or individual and social structure
-- Virtual laboratory for social sciences
-- Examples
-- Mention the cycles of enthusiasm and skepticism, and the tendency to develop closed circles
-- Challenges and pitfalls 
-
-### discussion
-
-#### Why model with ABM?
-
-- open with the idea that we are always modeling
-- Mention review article 'Why model?'
 
 #### How to model with ABM?
 
@@ -62,11 +62,42 @@ ABMs fall somewhere in-between these two spectra, though normally leaning toward
 - ABM in python, Java, C#, or C++? in R? in NetLogo? (Any language can do it, really). Pros and cons, talk in terms of higher/lower level programming languages (still, they are all quite high-level).
 - remember to talk about https://www.openabm.org/
 
-### exercises
+#### ABM in Archaeology and Social Sciences
 
-- The Pond Trade (coastal settlements of variable size around a pond; cultural vectors; trade ships travel between the settlements, re-evaluating afterwards if the trip is worse or better than other previous trips (make table); they carry economic value and cultural traits from between the base and destination settlements)
+- Emergence... Life game, deterministic chaos
+- Saving the gap between atomism and holism, or individual and social structure
+- Virtual laboratory for social sciences
+- Examples
+- Mention the cycles of enthusiasm and skepticism, and the tendency to develop closed circles
+- Challenges and pitfalls 
 
-Pond Trade model repository: github.com/something-or-other
+#### ABM tutorial: the Pond Trade model
+
+brief overview
+disclaimer: MY modelling strategy is highly focused in theory-building (general, explorative), not hypothesis-testing (specific, data-driven).
+
+##### Phenomena of interest and conceptual model
+
+- phenomena: cycles of growth and collapse, i.e. flutuations in the scale of site occupation, out of phase with environmental change. Focus on coastal settlements around a water body (e.g., lake, bay, sea).
+- Belief or main assumption: topography, transport technology, trade, settlement size and wealth, and cultural exchange are intertwined.
+
+![andros-first-diagram](images/andros-diagram.png)
+
+- Elements: "pond" or water body, settlements, ships, routes, goods.
+- Rules: 
+  - coastal settlements of variable size around a pond.
+  - each settlement has a "cultural vector".
+  - trade ships travel between the settlements.
+  - once in their base settlement, ships evaluate all possible trips and choose the one with the greater cost-benefit ratio.
+  - ships carry economic value and cultural traits between the base and destination settlements.
+  - settlements size depends on the economic value they receive from trade.
+  - the economic value produced in a settlement depends on its size.
+  - the number of ships per settlement depends on its size.
+
+##### Implementation
+- 
+
+Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
 
 ![The Interface](images/interface-andros.png)
 
@@ -76,22 +107,22 @@ library(DiagrammeR)
 grViz("diagrams/boxes.dot")
 ```
 
-![andros-first-diagram](images/andros-diagram.png)
-
-SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
-
-- Implement the model based on general definition (agents, variables, parameters)
-- Walk-through the implementation in NetLogo
-- Simulations and experiment design
-- Analysis and display of results (R example)
+##### Simulation experiments and analysis
 
 ```
 plot(1:10, 1:10)
 ```
 ![andros-second-diagram](images/andros-2.png)
 
+SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
+AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
 
-- Next steps
+- Implement the model based on general definition (agents, variables, parameters)
+- Walk-through the implementation in NetLogo
+- Simulations and experiment design
+- Analysis and display of results (R example)
+
+##### Next steps
 
 ### Machine learning for image captioning and other classificatory tasks
 
