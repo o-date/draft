@@ -83,6 +83,11 @@ disclaimer: MY modelling strategy is highly focused in theory-building (general,
 
 ![andros-first-diagram](images/andros-diagram.png)
 
+```
+library(DiagrammeR)
+grViz("diagrams/boxes.dot")
+```
+
 - Elements: "pond" or water body, settlements, ships, routes, goods.
 - Rules: 
   - coastal settlements of variable size around a pond.
@@ -95,19 +100,18 @@ disclaimer: MY modelling strategy is highly focused in theory-building (general,
   - the number of ships per settlement depends on its size.
 
 ##### Implementation
-- 
+
+- Implement the model based on general definition (agents, variables, parameters)
+- Walk-through the implementation in NetLogo
 
 Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
 
 ![The Interface](images/interface-andros.png)
 
-
-```
-library(DiagrammeR)
-grViz("diagrams/boxes.dot")
-```
-
 ##### Simulation experiments and analysis
+
+- Simulations and experiment design
+- Analysis and display of results (R example)
 
 ```
 plot(1:10, 1:10)
@@ -116,11 +120,6 @@ plot(1:10, 1:10)
 
 SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
 AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
-
-- Implement the model based on general definition (agents, variables, parameters)
-- Walk-through the implementation in NetLogo
-- Simulations and experiment design
-- Analysis and display of results (R example)
 
 ##### Next steps
 
