@@ -17,13 +17,13 @@ The value of agent-based modeling: it forces us to think carefully about what it
 
 ### Agent-based modeling (ABM)
 
-This section is an overview of agent-based modeling (*ABM*), as it is used within archaeology, anthropology, and behavioral sciences. Before tackling what "agent-based" means exactly, we start with a brief introduction to the "modeling" part, which is not trivial at all. To place ABM in this wide picture, we introduce several technical and theoretical dimensions of simulation models. Beforehand, the student must understand that *simulation models* involve computer code (*digital*) and the iteration of processes (*dynamic*).
+This section is an overview of agent-based modeling (*ABM*), as it is used within archaeology, anthropology, and behavioral sciences. Before tackling the append "agent-based", we start with a brief introduction to what "modeling" means. To place ABM in a wide picture, we introduce the student to several technical and theoretical dimensions present in all simulation models. We describe the necessary and optional parts of ABM models, including their characteristic type of element, i.e. the agent. At this point, the student must be aware that *simulation models* in our context involve computer code (they are *digital*) and the iteration of processes (they are *dynamic*).  
 
 Following the definition of ABM, we jump into describing the process of creating a model or *formalizing* an informal model. We keep these instructions general enough for them to be valid in any modeling platform or programming language.
 
 Next, we cover the *why* and *how* of the application of ABM in archaeology, history, and social sciences. To illustrate the diversity of ABM approaches, we present some key examples in archaeology.
 
-Last, we present the _**Pond Trade model**_, which is designed to showcase many elements that are common in ABM models in archaeology. The whole process of design, programming, simulation, and analysis was intentionally broken down into small, progressive steps to allow the student to start an ABM model from scratch. The exercise assumes no previous programming knowledge. The Pond Trade model is implemented in NetLogo (https://ccl.northwestern.edu/netlogo/), which is free, easy to install and use, and widely used in academia.
+Last, we present the _**Pond Trade model**_, which is designed to showcase many elements that are common in ABM models in archaeology. The whole process of design, programming, simulation, and analysis was intentionally broken down into small, progressive steps to allow the student to start an ABM model from scratch. The exercise assumes no previous programming knowledge. The Pond Trade model is implemented in _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/), which is free, easy to install and use, and widely used in academia.
 
 Throughout this section, several concepts will probably sound *alien* for most history and archaeology graduate students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers didn't go through formal introductions. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results. In this sense, the content of this section should not be considered the standard among the ABM-archaeology community. 
 
@@ -35,26 +35,32 @@ To the date, there is no easy way to begin doing ABM. We encourage students to e
 >George Box, 1987  
 >*Empirical Model-Building and Response Surfaces*, p. 424
 
-The first thing to consider is that ABM is about models. A model is a representation of a phenomenon as a set of elements and their relationships. In another words, it is a generalization, abstraction, or simplification of what we consider as *the* phenomenon. Think about a pineapple. The mental representation of the phenomenon, "the pineapple", is already a model. It consists of a set of traits or visual cues, and their relative positions. Empirically, every pineapple is singular, but we still are able to identify any pineapple we encounter using this model.
+The first thing to consider is that ABM is about models. A model is a representation of a phenomenon as a set of elements and their relationships. In another words, it is a generalization, abstraction, or simplification of what we consider as *the* phenomenon.
+
+Think about a pineapple. The mental representation of the phenomenon, "the pineapple", is already a model. It consists of a set of traits or visual cues, and their relative positions. In our minds, it is *the* pineapple, the one that we will try to represent when asked to draw a pineapple in a piece of paper. It is a generalization because, empirically, every pineapple is singular. It is an abstration and a simplification because our model consist of a few sensual properties that we experiment when in contact with this fruit. In this case, the most common model of pineapple is not only visual but also mostly superficial and two-dimensional. Nonetheless, we still are able to identify any pineapple we encounter using this model.
 
 ![Pineapples and their models](images/andros_pineapple.png)
+
+Another important statement about models is that a model, as any form of though is subject to be considered as a phenomenon. That would be the realm of epistemology and cognitive sciences. It follows that one's model is *a* model and that there can be many models representing a phenomenon as there are minds thinking of it. See the striking diversity of pineapple drawings. Adding further complexity to this picture, our minds are constantly changing with the integration of new experiences--creating, modifying, and forgetting models--and we often exchange and contrast alternative models through expressing them to ourselves and others. For example, a child is able to learn--and graciously modify--a model of pineapple, even without any direct experience with the real phenomenon. 
+Well, what do pineapple drawings have in common with doing models in archaeology? You may imagine that, if your mental representation of a pineapple is a model, human minds are bursting with models about everything, including models *of* models and models *within* models. If an archaeologist, there will be many archaeologically-sensitive models buried deep inside such mental apparatus. Why did people in this site buried food remains in small pits? They wanted to avoid squallor. They did not stand the smell of decomposition. One person with high status started doing it and them the rest just followed. They were offering sustainance to the land spirit. All of these explanations emanate directly from models of why people behave as they do.
 
 - Why model with ABM? open with the idea that we are always modeling
 - Mention review article 'Why model?'
 
 - def system, model, formal model
 - The origins of computer simulation
+- 3d models and statistical models (e.g., regression) are not simulation models. Simulation implies the passing of time as the driving variable of a model. Other kinds of models may share the goal of inferring new data from a given knowledge or dataset. For instance, we can design a curve that fits the number of archaeological sites in a region for all known periods, and use it to estimate this value during periods not represented in any sites. However, this equation is not representing the mechanisms that are supposely causing the phenomenon, i.e. the distribution of human activity in space and time. The idea of step, iteration, or repetition as the representation of passing time is the keystone of any simulation model. 
 - Equation-based modeling, System Dynamics - ODE systems as models (mention Lorenz attractor, end with the idea of iteration of a process)
-- Algorithm-based modeling, Algorithms as behavioral models (mention cellular automata, Van Neumann, Schelling, etc)
-- The variety of algorithm-based models, much coincides with the variety of programming paradigm.
-a. Flow: spectrum between centralized (iteration of a single process, e.g. event) and distributed (multiple processes are iterated contextually by multiple entities).
-b. Schedule: spectrum between fully-scheduled (processes are initiated in a predetermined order) and event-driven (processes are initiated given a certain input).
+- Algorithm-based modeling, algorithms as behavioral models (mention cellular automata, Van Neumann, Schelling, etc)
+- The variety of algorithm-based models, coincides in great measure with the variety of programming paradigm:
+  a. Flow: spectrum between centralized (iteration of a single process, e.g. event) and distributed (multiple processes are iterated contextually by multiple entities).
+  b. Schedule: spectrum between fully-scheduled (processes are initiated in a predetermined order) and event-driven (processes are initiated given a certain input).
 ABMs fall somewhere in-between these two spectra, though normally leaning towards distributed (e.g., using Monte Carlo methods) and fully-scheduled. Applications in several disciplines (see Wikipedia)
+- Parts of an ABM model
+ (re-visit presentations)
 
 #### How to model with ABM?
 
-- Parts of an ABM model
- (re-visit presentations)
 - Define hypotheses, questions or simply the phenomenon of interest (identify the system)
 - Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam's razor vs. emergence
 - Express the chosen elements and processes as computer code (implement the model)
@@ -83,6 +89,11 @@ disclaimer: MY modelling strategy is highly focused in theory-building (general,
 
 ![andros-first-diagram](images/andros-diagram.png)
 
+```
+library(DiagrammeR)
+grViz("diagrams/boxes.dot")
+```
+
 - Elements: "pond" or water body, settlements, ships, routes, goods.
 - Rules: 
   - coastal settlements of variable size around a pond.
@@ -95,19 +106,18 @@ disclaimer: MY modelling strategy is highly focused in theory-building (general,
   - the number of ships per settlement depends on its size.
 
 ##### Implementation
-- 
+
+- Implement the model based on general definition (agents, variables, parameters)
+- Walk-through the implementation in NetLogo
 
 Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
 
 ![The Interface](images/interface-andros.png)
 
-
-```
-library(DiagrammeR)
-grViz("diagrams/boxes.dot")
-```
-
 ##### Simulation experiments and analysis
+
+- Simulations and experiment design
+- Analysis and display of results (R example)
 
 ```
 plot(1:10, 1:10)
@@ -116,11 +126,6 @@ plot(1:10, 1:10)
 
 SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
 AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
-
-- Implement the model based on general definition (agents, variables, parameters)
-- Walk-through the implementation in NetLogo
-- Simulations and experiment design
-- Analysis and display of results (R example)
 
 ##### Next steps
 
