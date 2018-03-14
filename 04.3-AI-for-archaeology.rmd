@@ -39,22 +39,27 @@ The first thing to consider is that ABM is about models. A model is a representa
 
 ![Pineapples and their models](images/andros_pineapple.png)
 
+Another important statement about models is that a model, as any form of though is subject to be considered as a phenomenon. That would be the realm of epistemology and cognitive sciences. It follows that one's model is *a* model and that there can be many models representing a phenomenon as there are minds thinking of it. See the striking diversity of pineapple drawings. Adding further complexity to this picture, our minds are constantly changing with the integration of new experiences--creating, modifying, and forgetting models--and we often exchange and contrast alternative models through expressing them to ourselves and others. For example, a child is able to learn--and graciously modify--a model of pineapple, even without any direct experience with the real phenomenon.
+
+Well, what do pineapple drawings have in common with doing models in archaeology? You may imagine that, if your mental representation of a pineapple is a model, human minds are bursting with models about everything, including models *of* models and models *within* models. If an archaeologist, there will be many archaeologically-sensitive models buried deep inside such mental apparatus. Why did people in this site buried food remains in small pits? They wanted to avoid squallor. They did not stand the smell of decomposition. One person with high status started doing it and them the rest just followed. They were offering sustainance to the land spirit. All of these explanations emanate directly from models of why people behave as they do.
+
 - Why model with ABM? open with the idea that we are always modeling
 - Mention review article 'Why model?'
 
 - def system, model, formal model
 - The origins of computer simulation
+- 3d models and statistical models (e.g., regression) are not simulation models. Simulation implies the passing of time as the driving variable of a model. Other kinds of models may share the goal of inferring new data from a given knowledge or dataset. For instance, we can design a curve that fits the number of archaeological sites in a region for all known periods, and use it to estimate this value during periods not represented in any sites. However, this equation is not representing the mechanisms that are supposely causing the phenomenon, i.e. the distribution of human activity in space and time. The idea of step, iteration, or repetition as the representation of passing time is the keystone of any simulation model.
 - Equation-based modeling, System Dynamics - ODE systems as models (mention Lorenz attractor, end with the idea of iteration of a process)
 - Algorithm-based modeling, Algorithms as behavioral models (mention cellular automata, Van Neumann, Schelling, etc)
-- The variety of algorithm-based models, much coincides with the variety of programming paradigm.
-a. Flow: spectrum between centralized (iteration of a single process, e.g. event) and distributed (multiple processes are iterated contextually by multiple entities).
-b. Schedule: spectrum between fully-scheduled (processes are initiated in a predetermined order) and event-driven (processes are initiated given a certain input).
+- The variety of algorithm-based models, much coincides with the variety of programming paradigm.  
+  a. Flow: spectrum between centralized (iteration of a single process, e.g. event) and distributed (multiple processes are iterated contextually by multiple entities).  
+  b. Schedule: spectrum between fully-scheduled (processes are initiated in a predetermined order) and event-driven (processes are initiated given a certain input).  
 ABMs fall somewhere in-between these two spectra, though normally leaning towards distributed (e.g., using Monte Carlo methods) and fully-scheduled. Applications in several disciplines (see Wikipedia)
+- Parts of an ABM model
+ (re-visit presentations)
 
 #### How to model with ABM?
 
-- Parts of an ABM model
- (re-visit presentations)
 - Define hypotheses, questions or simply the phenomenon of interest (identify the system)
 - Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam's razor vs. emergence
 - Express the chosen elements and processes as computer code (implement the model)
@@ -119,6 +124,7 @@ plot(1:10, 1:10)
 ![andros-second-diagram](images/andros-2.png)
 
 SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
+
 AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
 
 ##### Next steps
