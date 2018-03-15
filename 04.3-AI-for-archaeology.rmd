@@ -8,11 +8,11 @@ Then why use the term? We think it is still useful to use the term because it re
 
 Machine learning: a series of techniques that endeavour to train a computer program to identify and classify data according to some previously determined values. We will in this chapter discuss image recognition using the neural network model trained by Google, the Inception3 model, which we will query using the Tensorflow package.
 
-Agent based simulation: a series of techniques that create a population of software 'agents' who are programmed with contextual rules governing the behaviour of individual agents. The context can be both in terms of the simulated environment (GIS data, for instance) or the social environment (social relationships as a network). The simulation iterates over an entire landscape of possible variables, creating a 'behaviour space' which is then used by the investigator to understand the emergent behaviour in the situation, to understand better the possible range of situations that could account for the observed phenomenon in the 'real world'.
+Agent based simulation: a series of techniques that create a population of software 'agents' who are programmed with contextual rules (e.g., *if this happens, do that*) governing the behaviour of individual agents. The context can be both in terms of the simulated environment (GIS data, for instance) or the social environment (social relationships as a network). *<The simulation iterates>* Simulation experiments iterate over multiple combinations of parameters' values*<an entire landscape of possible variables>*, *<creating>* the 'behaviour space'. *<which is>* Simulation results are then used by the investigator to *<understand the emergent behaviour in the situation, to understand better the possible range of situations that could account for the observed phenomenon in the 'real world'>* explain the 'real world' phenomenon as an emergency of a population of agents following a set of rules under certain situations.
 
 The value of machine learning: it makes us think carefully about what we are looking for and at in the first place; and then it can be scaled massively.
 
-The value of agent-based modeling: it forces us to think carefully about what it is we think actually *happened* in the past such that it can be encoded as a series of individual-level instructions. 
+The value of agent-based modeling: it forces us to think carefully about what it is we think actually *happened* in the past such that it can be *<encoded as a series of individual-level instructions>* expressed as a series of contextual rules of behavior, functioning under certain conditions. 
 
 
 ### Agent-based modeling (ABM)
