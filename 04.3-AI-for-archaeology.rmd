@@ -25,9 +25,9 @@ Next, we cover the *why* and *how* of the application of ABM in archaeology, his
 
 Last, we present the _**Pond Trade model**_, which is designed to showcase many elements that are common in ABM models in archaeology. The whole process of design, programming, simulation, and analysis was intentionally broken down into small, progressive steps to allow the student to start an ABM model from scratch. The exercise assumes no previous programming knowledge. The Pond Trade model is implemented in _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/), which is free, easy to install and use, and widely used in academia.
 
-Throughout this section, several concepts will probably sound *alien* for most history and archaeology graduate students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers didn't go through formal introductions. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results. In this sense, the content of this section should not be considered the standard among the ABM-archaeology community. 
+Throughout this section, several concepts will probably sound *alien* for most history and archaeology students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers don't go through formal introductions nor are well-versed in algebra and calculus. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results, though proposals do exist. In this sense, the content of this section should NOT be considered the standard among the ABM-archaeology community. 
 
-To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or their interests and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings. Despite the rarity of ABM in academic curricula, some publications do offer a more exhaustive introduction to formal models and ABM specifically in archaeology (e.g., REFs). 
+To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or their interests and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings; certainly, more practice with programming. Despite the rarity of ABM in history and archaeology curricula, there are many publications that offer more exhaustive introductions ABM in archaeology (e.g., @Breitenecker2015, @Cegielski2016, @Romanowska2015; also visit https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography, for an extensive and constantly updated list of references).
 
 #### What is ABM?
 
@@ -39,9 +39,9 @@ The first thing to consider is that ABM is about models. A model is a representa
 
 ![Pineapples and their models](images/andros_pineapple.png)
 
-Another important statement about models is that a model, as any form of though is subject to be considered as a phenomenon. That would be the realm of epistemology and cognitive sciences. It follows that one's model is *a* model and that there can be many models representing a phenomenon as there are minds thinking of it. See the striking diversity of pineapple drawings. Adding further complexity to this picture, our minds are constantly changing with the integration of new experiences--creating, modifying, and forgetting models--and we often exchange and contrast alternative models through expressing them to ourselves and others. For example, a child is able to learn--and graciously modify--a model of pineapple, even without any direct experience with the real phenomenon.
+Another important statement about models is that they are, as any form of thought, a phenomenon in its own right. That put us in the realm of epistemology and cognitive sciences. It follows that one's model is *a* model and that there are many models representing a phenomenon as there are minds that have experienced this phenomenon. Observe the diversity of pineapple drawings. Adding further complexity to this picture, minds are constantly changing with the integration of new experiences--creating, modifying, and forgetting models--and we often exchange and contrast alternative models through expressing them to ourselves and others. For example, a child is able to learn--and graciously modify--a model of pineapple, even without any direct experience with the real phenomenon.
 
-Well, what do pineapple drawings have in common with doing models in archaeology? You may imagine that, if your mental representation of a pineapple is a model, human minds are bursting with models about everything, including models *of* models and models *within* models. If an archaeologist, there will be many archaeologically-sensitive models buried deep inside such mental apparatus. Why did people in this site buried food remains in small pits? They wanted to avoid squallor. They did not stand the smell of decomposition. One person with high status started doing it and them the rest just followed. They were offering sustainance to the land spirit. All of these explanations emanate directly from models of why people behave as they do.
+Well, what do pineapple drawings have in common with doing models in archaeology? You may imagine that, if your mental representation of a pineapple is a model, human minds are bursting with models about everything, including models *of* models and models *within* models. If an archaeologist, there will be many archaeologically-sensitive models buried deep inside such mental apparatus. Why did people in this site buried food remains in small pits? "They wanted to avoid squallor." "They did not stand the smell of decomposition." "One person with high status started doing it and them the rest just followed." "They were offering sustainance to the land spirit." All of these explanations emanate directly from models of *why people behave as they do*.
 
 - Why model with ABM? open with the idea that we are always modeling
 - Mention review article 'Why model?'
@@ -79,7 +79,7 @@ ABMs fall somewhere in-between these two spectra, though normally leaning toward
 #### ABM tutorial: the Pond Trade model
 
 brief overview
-disclaimer: MY modelling strategy is highly focused in theory-building (general, explorative), not hypothesis-testing (specific, data-driven).
+disclaimer: MY modelling strategy is highly focused in theory-building (general, explorative), not hypothesis-testing and prediction (specific, data-driven).
 
 ##### Phenomena of interest and conceptual model
 
@@ -111,7 +111,7 @@ grViz("diagrams/boxes.dot")
 
 Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
 
-![The Interface](images/interface-andros.png)
+![The model interface in step 13](images/interface-andros.png)
 
 ##### Simulation experiments and analysis
 
