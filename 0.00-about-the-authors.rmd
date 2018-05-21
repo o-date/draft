@@ -2,7 +2,7 @@
 
 ### Shawn Graham ### {-}
 
-Shawn Graham trained in Roman archaeology but has become over the years a digital archaeologist and digital humanist. He is currently an associate professor in the [Department of History at Carleton University in Ottawa Canada](http://carleton.ca). He keeps an open lab notebook of his research and experiments in digital history and archaeology at his research blog, [electricarchaeology](http://electricarchaeology.ca). He can be found on Twitter at [electricarchaeo](http://twitter.com/electricarchaeo). His teaching explores  methods and digital approaches at all levels, including seminars in the collaborative MA Digital Humanities program as well as in the MA Public History program. His research interests include augmented reality and virtual reality in the service of landscape archaeology, video games about the past, and agent based modeling.
+Shawn Graham trained in Roman archaeology but has become over the years a digital archaeologist and digital humanist. He is currently an associate professor in the [Department of History at Carleton University in Ottawa Canada](http://carleton.ca). He keeps an open lab notebook of his research and experiments in digital history and archaeology at his research blog, [electricarchaeology](http://electricarchaeology.ca). He can be found on Twitter at [electricarchaeo](http://twitter.com/electricarchaeo).
 
 ### Neha Gupta ### {-}
 
@@ -15,6 +15,10 @@ Michael Carter is an Assistant Professor in  the School of Creative Industries a
 ### Beth Compton ### {-}
 
 Beth Compton is a PhD student at the University of Western Ontario's Department of Anthropology. Her research examines critically the implications and assumptions of digital approaches to repatriation, and uses archaeological ethnographic approaches to evaluate artifact sharing policies. She study archaeological representation and replication, particularly the use of digital photography, 3D modeling, and 3D printing. She is interested in all aspects of meaning-making and knowledge sharing in digital archaeological heritage practice. She is a Co-Founder of the [DH Maker Bus project](http://www.makerbus.ca/) and is an Ontario Trillium Scholar.
+
+### Jolene Smith
+
+### Andreas Angourakis
 
 ### Editorial Board {-}
 
