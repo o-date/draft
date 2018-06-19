@@ -16,11 +16,11 @@ lang: "en"
 ---
 # notice {-}
 
-This volume goes hand-in-glove with a computational environnent built on the DHBox. 
+This volume goes hand-in-glove with a computational environnent that uses [Jupyter Notebooks](https://jupyter.org/) coupled with the [Binder](https://mybinder.org/) service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the [basic notebook repository](https://github.com/o-date/notebooks) and hit the `launch binder` button (after reading the information there). 
 
 THIS IS A DRAFT VERSION; it's not even version 0.1 yet. It is filled with errors, omissions, and non-sequiturs. 
 
-![A word cloud image of the original ODATE proposal, arranged to mimic a photograph of the temple of Athena Pronaos at Delphi](images/word-cloud-proposal.jpg)
+![This book will, with time, have many branches and off-shoots. It is meant to be customized and expanded; there will never be a canonical version. Photo by Brandon Green, _unsplash.com_.](images/brandon-green-321795-unsplash.jpg)
 
 ![Creative Commons License](images/by-nc-sa.png)  
 The online version of this book is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).

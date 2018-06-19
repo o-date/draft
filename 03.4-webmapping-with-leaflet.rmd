@@ -1,13 +1,13 @@
 ## What is Web Mapping?
-A web map is a geographic visualization that is supported by computational infrastructures. This form of mapping is fundamentally *powered* by the Web [Axismap, 2018](http://www.axismaps.com/guide/web/what-is-a-web-map/ "target="_blank). It should come as no surprise that the ubiquity of web maps correlates with the development of Web 2.0, a marked transformation in the way that that we engage with the Internet [@Aced2013].
+A web map is a geographic visualization that is supported by computational infrastructures. This form of mapping is fundamentally *powered* by the Web <a href="http://www.axismaps.com/guide/web/what-is-a-web-map/">(Axismap, 2018)</a>. It should come as no surprise that the ubiquity of web maps correlates with the development of Web 2.0, a marked transformation in the way that that we engage with the Internet [@Aced2013].
 
 As Darcy DiNucci [@DiNucci1999] remarked in 1999, content loading into a browser as 'static screenfuls is only an embryo of the Web to come'. Web 2.0, thus is characterized by 'interactivity', 'two-way communication' often through devices that are 'Internet-enabled' and a greater awareness amongst developers of 'user experience' and 'interface'. These interests are correlated with the diversification of screen sizes on mobile hand-held devices such as smart phones, tablets and laptops, all of which require responsiveness, appropriate scaling for size and interaction primarily through touch and swipe. Whereas the first iteration of the Web required advanced training to create a website, Web 2.0, as is often claimed, requires little or no expert knowledge to make a Web-ready 'thing' such as a website, a blog, or a Wiki. This is the context in which Web mapping, that is the Web-based visualization of geographic information became popularized.
 
-One can argue that web maps narrow the distance between professional map makers and non-specialist makers; yet some scholars have expressed concerns on the quality of geographic data that are now frequently and widely shared on the Web [@Exel2010]. Collaborative online platforms such as [OpenStreetMap](https://www.openstreetmap.org "target="_blank), for example, have drawn attention to the social dimension of knowledge making; how accurate is information that a lay-person or particular interest community has uploaded? Can we make real-world decisions based on those data? [@Begin2013] suggest that volunteered geographic information reflects 'contributors’ motivation and individual preferences in selecting mapped features and delineating mapped areas', a situation that can enable scholars in examining and assessing the quality of those data.
+One can argue that web maps narrow the distance between professional map makers and non-specialist makers; yet some scholars have expressed concerns on the quality of geographic data that are now frequently and widely shared on the Web [@Exel2010]. Collaborative online platforms such as <a href="https://www.openstreetmap.org">Open Street Map</a>, for example, have drawn attention to the social dimension of knowledge making; how accurate is information that a lay-person or particular interest community has uploaded? Can we make real-world decisions based on those data? [@Begin2013] suggest that volunteered geographic information reflects 'contributors’ motivation and individual preferences in selecting mapped features and delineating mapped areas', a situation that can enable scholars in examining and assessing the quality of those data.
 
 For archaeologists, web maps and publishing geographic information present challenges and opportunities. Archaeologists are aware that the data they collect through field studies often contain sensitive location information. These concerns are sometimes heightened in contexts where there are tensions between archaeologists and local communities or ethnic and linguistic minorities who might be socially, politically and economically marginalized in that society. Archaeologists often express concern that publishing location information on sites of archaeological and historical interest can facilitate, if not result in, the destruction of those sites through looting. Looting and illegal trafficking of archaeological artefacts and human bones is an issue observed in many places [@Brodie2001, @Huffer2017].
 
-Recent developments in geovisual analytics that leverage the spatial dimension in data suggest that scholars can work with, and meaningfully analyze these data even where they contain sensitive location information [@Andrienko2007]. This situation opens enormous opportunities for archaeologists to develop tools that are appropriate for meaningful analysis and publication of archaeological data. In the next section, we build upon the ethos of 'openness' and present an overview of map services, followed by a guide to making an interactive web map with the Leaflet library. For an example of a Leaflet web map, check out [Open Context](www.opencontext.org "target="_blank).
+Recent developments in geovisual analytics that leverage the spatial dimension in data suggest that scholars can work with, and meaningfully analyze these data even where they contain sensitive location information [@Andrienko2007]. This situation opens enormous opportunities for archaeologists to develop tools that are appropriate for meaningful analysis and publication of archaeological data. In the next section, we build upon the ethos of 'openness' and present an overview of map services, followed by a guide to making an interactive web map with the Leaflet library. For an example of a Leaflet web map, check out <a href="www.opencontext.org">Open Context</a>.
 
 ### Overview of Map Services
 Tiled map service and [Web Map Service](http://www.opengeospatial.org/standards/wms" target="_blank) are two forms of Web-based mapping. A WMS is an interface that enables us (the clients) to request specific maps i.e. visual representations of geographic information from a geospatial database. The WMS server is called via a Universal Resource Link (URL) on an Internet-enabled desktop GIS. A request typically consists of the geographic layer (e.g. theme) and geographic area of interest. The response to a request results in *geo-registered map images* that are displayed and queried within a browser. Because the map is dynamically drawn upon request, and because the server typically uses the most current information from several layers in the geospatial database, WMS maps tend to load slowly. [Toporama](http://wms.ess-ws.nrcan.gc.ca/wms/toporama_en "target="_blank)  is an example of a WMS server for Canadian topographic themes. (add image for WMS architecture?)
@@ -152,4 +152,38 @@ followed by :
   });
 ```
 
-4. Save the file and preview it in the browser. Congratulations! We've added our own feature data to a Leaflet map.
+4. Save the file and preview it in the browser. Congratulations! We've added our own point feature data to a Leaflet map.
+
+5. It would be great to have interaction beyond panning and zooming on our web map. One way is to add pop-ups to each of our markers that we can click on.
+
+Locate `pointToLayer` which we called passed a function. We will create a variable called marker and bind a pop-up to each marker:
+
+```
+// creates a variable called marker
+pointToLayer: function(feature,latlng){
+var marker = L.marker(latlng);
+
+// binds a popup to marker, assigns properties to display
+  marker.bindPopup(feature.properties.Label + '<br/>');
+  return marker;
+}
+}).addTo(map);
+    });
+```
+6. That's it! We've created a web map with our own point data, and we have markers with pop-ups to click on.
+
+###Resources
+
+Below are examples in archaeology that use Leaflet that you can try out, and that have repositories that you can fork for you own projects:
+
+1) The Digital Atlas of Ancient Egypt developed at the Department of Anthropology, Michigan State University: https://msu-anthropology.github.io/daea/
+
+Repository: https://github.com/msu-anthropology/daea
+
+2) TOMB: The Online Map of Bioarchaeology developed by Lisa Bright (Michigan State University): http://brightl1.github.io/TOMB/
+
+Repository: https://github.com/brightl1/TOMB/
+
+3) MINA | Map Indian Archaeology developed by Dr Neha Gupta (Memorial University of Newfoundland): http://dngupta.github.io/mina.github.io/
+
+Repository: https://github.com/dngupta/mina.github.io
