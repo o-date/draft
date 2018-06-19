@@ -39,12 +39,30 @@ The concept of Paradata as implemented in events like the Heritage Jam [link/ref
 
 For advice on specific types of data consult  [*Guides to Good Practice* published by the Archaeology Data Service and Digital Antiquity](http://guides.archaeologydataservice.ac.uk/g2gp/Main), 2011.
 
+Basic concepts in digital preservation
+- look to library and archives professionals
+- NDSI levels of Preservation (for organizations, but can be helpful to understand goals.)
+Phillips, Megan, Jefferson Bailey, Andrea Goethals, and Trevor Owens 2013
+The NDSA Levels of Digital Preservation: Explanation and Uses. Archiving Conference 2013(1): 216–222.
+
+
+- ethical imperatives for archaeology (cite some organizational ethics statements)
+
 Time is your enemy
 - bit rot and link rot
 - deprecated formats
 - disappearing web resources and problems with the "cloud"
 - lost institutional knowledge and unconscious assumptions
+- create thorough metadata as you go. This will help you, those who use your data in the future, and those who are tasked with curating your datasets.Structural metadata and descriptive metadata. Different purposes but both can increase durability of data.
 
 Tools
 - metadata creation
-- fixity
+- fixity or other checksum tools
+
+Preserving supporting data vs digital projects
+
+DH projects:
+“Preservation for the (Digital) Ages: Digital Archivists from Collaborate with Classicists to Improve Database Preservation Methods.” ScienceDaily, https://www.sciencedaily.com/releases/2017/10/171017124345.htm. Accessed 7 Feb. 2018.
+
+Xu, Weijia, et al. A Portable Strategy for Preserving Web Applications Functionality. IEEE, 2017, pp. 1–4. CrossRef, doi:10.1109/JCDL.2017.7991578.
+[Jolene can't access this]
