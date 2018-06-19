@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2018-02-04">
+<meta name="date" content="2018-02-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -73,8 +73,6 @@
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#neha-gupta"><i class="fa fa-check"></i>Neha Gupta</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#michael-carter"><i class="fa fa-check"></i>Michael Carter</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#beth-compton"><i class="fa fa-check"></i>Beth Compton</a></li>
-<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#jolene-smith"><i class="fa fa-check"></i>Jolene Smith</a></li>
-<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#andreas-angourakis"><i class="fa fa-check"></i>Andreas Angourakis</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#editorial-board"><i class="fa fa-check"></i>Editorial Board</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i>Getting Started</a><ul>
@@ -157,7 +155,7 @@
 <li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora</a></li>
 <li class="chapter" data-level="3.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.4</b> What is Web Mapping?</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.4.1</b> Overview of Map Services</a></li>
-<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a Web map with Leaflet</a></li>
+<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a web map with Leaflet</a></li>
 <li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-12"><i class="fa fa-check"></i><b>3.4.3</b> exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>3.5</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
@@ -177,7 +175,7 @@
 <li class="chapter" data-level="4.1" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html"><i class="fa fa-check"></i><b>4.1</b> 3D Photogrammetry &amp; Structure from Motion</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#discussion-10"><i class="fa fa-check"></i><b>4.1.1</b> discussion</a></li>
 <li class="chapter" data-level="4.1.2" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#exercises-15"><i class="fa fa-check"></i><b>4.1.2</b> exercises</a></li>
-<li class="chapter" data-level="4.1.3" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#going-further"><i class="fa fa-check"></i><b>4.1.3</b> Going further</a></li>
+<li class="chapter" data-level="4.1.3" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#nuts-and-bolts"><i class="fa fa-check"></i><b>4.1.3</b> nuts and bolts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html"><i class="fa fa-check"></i><b>4.2</b> 3D Printing, the Internet of Things and “Maker” Archaeology</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#discussion-11"><i class="fa fa-check"></i><b>4.2.1</b> discussion</a></li>
@@ -230,48 +228,93 @@
             <section class="normal" id="section-">
 <div id="d-photogrammetry-structure-from-motion" class="section level2">
 <h2><span class="header-section-number">4.1</span> 3D Photogrammetry &amp; Structure from Motion</h2>
-<p>vsfm</p>
+<p>In recent years, faster and more powerful computers have made it feasible to do complex 3d model building by extracting points of overlap in multiple photographs, then extrapolating from the camera metadata embedded in those images the distance from the points to the camera’s image sensor. This information allows the reconstruction of where those points were <em>in space</em> relative to the camera. Thus astonishingly good 3d models can be created at rather low cost.</p>
+<p>Laser scanning, on the other hand, involves shooting rays of light onto an object (or space) and counting the time it takes for the light to return to the scanner. Laser scanners are able therefore to take detailed micro-millimetre scans of an object’s surface and texture. For some archaeological purposes, laser scanning is to be preferred. For other purposes, 3d photogrammetry or ‘structure from motion’ (sfm) is entirely appropriate, and the level of resolution good enough</p>
+<p>In this chapter, we’ll cover some of the basic principles of how sfm works while pointing you to more detailed discussions. We also provide links in the ‘further readings’ to some recent case studies using 3d photogrammetry in novel ways.</p>
+<p>Basic principles</p>
+<ul>
+<li>image capture</li>
+<li>image matching</li>
+<li>dense point cloud generation</li>
+<li>secondary product generation</li>
+<li>analysis / presentation</li>
+</ul>
+<p>take overlapping images; you want a high degree of overlap</p>
+<p>tie points are matched</p>
+<p>camera orientations are deduced</p>
+<p>dense point cloud generated</p>
+<p>chief ray is the line from the object, through the lens, to the image plate</p>
+<p>intersection of many of these allows the software to work out the location of the point in space</p>
+<ul>
+<li><p>knowing the ‘interior and exterior’ orientation of the camera - its internal arrangements, including lens distortion, focal length and so on from the metadata bundled with the image, allows software to work out the position of the camera viz points of overlap in the images</p></li>
+<li><p>the intersection of rays then allows us to work out the location of these points in space</p></li>
+<li><p>resulting point cloud has an arbitrary scale and coordinate frame (ways around this)</p></li>
+</ul>
+<p>sfm process - identifies control points that are visible in multiple images (default in agisoft photoscan is 40 000 <em>per image</em>) - best control points are then matched - then triangulation (more or less) to work out the relative position &amp; orientation of every image</p>
+<p>this is the sparse reconstruction</p>
+<p>now dense reconstruction</p>
+<ul>
+<li>repeats the process above but for all possible control points</li>
+<li>a ‘triangulated irregular network’ TIN is generated, a mesh, onto which textures can be mapped using regular graphics software</li>
+</ul>
+<p>then what?</p>
+<ul>
+<li>download to your computer; clean up</li>
+</ul>
 <div id="discussion-10" class="section level3">
 <h3><span class="header-section-number">4.1.1</span> discussion</h3>
 </div>
 <div id="exercises-15" class="section level3">
 <h3><span class="header-section-number">4.1.2</span> exercises</h3>
 </div>
-<div id="going-further" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> Going further</h3>
-<p>It is possible to make 3d models from archival film/video footage, although the quality of the resulting model may require a significant amount of sculpting work afterwards to achieve a desireable effect. It depends, really, on why one wants to build a 3d model in the first place. Archaeologists for instance might want to work with a 3d rendering of a building or site now lost.</p>
-<p>The workflow has a number of steps:</p>
-<ol style="list-style-type: decimal">
-<li>obtaining the video (if it is on eg. youtube)</li>
-<li>slicing the video into still images</li>
-<li>adding camera metadata to the images</li>
-<li>computing matched points across the images</li>
-<li>triangulation from the matched points</li>
-<li>surface reconstruction</li>
+<div id="nuts-and-bolts" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> nuts and bolts</h3>
+<p>In order to use something like <a href="http://www.regard3d.org/">Regard3d</a> to build models from <em>pictures you’ve taken with your cellphone</em>, you need to add certain information to</p>
+<ol style="list-style-type: lower-alpha">
+<li>the images themselves</li>
+<li>the database of cameras that Regard3d knows.</li>
 </ol>
-<p>The necessary software are all open-source or free-to-use programs 1. Youtube-dl <a href="https://rg3.github.io/youtube-dl/" class="uri">https://rg3.github.io/youtube-dl/</a> 2. avconv via libav-tools 3. exiftool <a href="https://www.sno.phy.queensu.ca/~phil/exiftool/" class="uri">https://www.sno.phy.queensu.ca/~phil/exiftool/</a> 4. regard3d <a href="http://www.regard3d.org/" class="uri">http://www.regard3d.org/</a> 5. meshlab (for post-processing) <a href="http://www.meshlab.net/" class="uri">http://www.meshlab.net/</a></p>
-<p>At the command line in your instance of DH-Box, you can install the first three programs like so:</p>
-<p><code>$ sudo pip install --upgrade youtube_dl</code></p>
-<p><code>$ sudo apt-get install libav-tools</code></p>
-<p>get exiftool</p>
-<p>get and compile regard3d</p>
-<p><code>wget https://downloads.sourceforge.net/projects/regard3d/files/Regard3D/0.9.5/Regard3D_src_0.9.5.7z</code></p>
-<p>but you need <code>sudo apt-get install p7zip-full</code> to unzip it</p>
-<p>SG - VSFM. Not regard3d. regard3d is gui based and can’t do that in dhbox, least not on my end.</p>
-<p>Step One Downloading from Youtube Archival or interesting footage of all kinds may be found on youtube and other video streaming services. Youtube-dl is a sophisticated program for downloading this footage (and other associated metadata) from youtube and some other sites. Find a video of interest. Note the url. Then: youtube-dl <a href="https://www.youtube.com/watch?v=nSB2VeTeXXg" class="uri">https://www.youtube.com/watch?v=nSB2VeTeXXg</a> Try to find video that does not have watermarks (the example above has a watermark and probably is not the best source video one could use). Look for videos that are composed of long cuts, that sweep smoothly around the site/object/target of interest. You may wish to note the timing of interesting shots, as you can download or clip the video to those passages (see the youtube-dl documentation)</p>
-<p>You might want to rename the downloaded file into something easier to work with. The youtube link above for instance is for a file called “Aerial views of the ancient city of Pompeii HD Stock Footage-nSB2VeTeXXg.mp4”. Typing that out a few times will quickly become frustrating. We can rename the file using the <code>mv</code> command:</p>
-<p><code>$ mv &quot;Aerial views of the ancient city of Pompeii HD Stock Footage-nSB2VeTeXXg.mp4&quot; &quot;pompeiifilm.mp4&quot;</code></p>
-<p>That is to say, ‘move the “old file name” to “new file name”’. If you included file paths in the new file name, you’d actually move the file, too.</p>
-<p>Step Two Slicing the Video into Stills</p>
-<p>First, let’s make a new directory into which we can put the still images that we are going to cut the video.</p>
-<p><code>$mkdir frames</code></p>
-<p>A quick search of the linux user community will give you an idea of the wide variety of things you can do with avconv, but for now, we are going to tell it to split the video into frames and put the frames into a new directory:</p>
-<p><code>$ avconv -i name-of-your-video-here.mp4 frames/frame-%05d.jpg</code></p>
-<p>The <code>-%05d</code> flag behind the word <code>frame</code> is a pattern for naming the output files: <code>frame-00001.jpg</code>, <code>frame-00002.jpg</code> and so on. Move into the frames directory and list the files to see the results. If you were able to use the same video of drone footage from Pompeii that we used, there will be 1914 images in the new folder. You might wish to explore the documenation for the avconv command (type <code>man avconv</code> to get the manual or visit <a href="https://libav.org/avconv.html#image2-1">the online documentation here</a>. The command below will take a still every 5 seconds:</p>
-<p><code>$ avconv -i name-of-your-video-here.mp4 -vsync 1 -r 5 -f image2 frames/frame-%05d.jpg</code></p>
-<p>Step Three Adding Camera Metadata</p>
-<p>We will be using Regard3d to stitch the images together. Regard3d needs to know the camera make, model, focal length (mm), and sensor width (mm). We are going to fudge this information with our best approximation. ‘Sensor width’ is the width of the actual piece of hardware in a digital camera upon which light falls. You’ll have to do some searching to work out the best approximation for this measurement for the likely camera used to make the video you’re interested in. Find the camera database that Regard3d uses (see the documentation for Regard3d for the location on your system). It is a csv file. Open it with a text editor (eg Sublime Text or Atom. not Excel, because Excel will introduce errors). Add the make, model, and sensor width information following this pattern: make;model;width-in-mm Regard3d reads the exif image metadata to work out which camera settings to use. Focal length is read from the exif metadata as well. We assign these like so, from the command line in your frames folder: exiftool -FocalLength=“3.97” <em>.jpeg exiftool -Make=“CameraMake” </em>.jpeg exiftool -Model=“CameraModel” *.jpeg Note that the make and model must absolutely match what you put into the camera database csv file - uppercase, lowercase, etc matters. Also, Windows users might have to rename downloaded exiftool file to exiftool.exe and put it into their path variable (alternatively, rename it and then put it in the frames folder so that when you type the command, your system can find it easily). Step Four Computing Matches Open Regard3d and start a new project. Add a photoset by selecting your frames directory. Note that when you used the exiftool, the original images were copied within the folder with a new name. Don’t select those original images. As the images load up, you will see whether or not your metadata is being correctly read. If you get NaN under make, model, focal length, or sensor width, revisit step three again carefully. Click ok to use the images. Click on compute matches. Slide the keypoint density sliders (two sliders) all the way to ‘ultra’. You can try with just the default values at first, which is faster, but using ‘ultra’ means we get as many data points as possible, which can be necessary given our source images. This might take some time. When it is finished, proceed through the next steps as Regard3d presents them to you (the options in the bottom left panel of the program are context-specific. If you want to revisit a previous step and try different settings, select the results from that step in the inspector panel top left to redo). The final procedure in model generation is to compute the surfaces. When you click on the ‘surface’ button (having just completed the ‘densification’ step), make sure to tick off the ‘texture’ radio button. When this step is complete, you can hit the ‘export’ button. The model will be in your project folder - .obj, .stl., and .png. To share the model on something like Sketchfab.com zip these three files into a single zip folder. On sketchfab, you upload the zip folder. Step Five Clean Up Double click on the .obj file in your project folder. Meshlab will open and display your model. The exact tools you might wish to use to enhance or clean up your model depends very much on how your model turned out. At the very least, you’ll use the ‘vertice select’ tool (which allows you to draw a box over the offending part) and the ‘vertice delete’ tool. Search the web for help and examples for the effective use of Meshlab.</p>
+<p><strong>if you’ve taken pictures with an actual digital camera, chances are that this information is already present and you’re good to go</strong> You’ll know if you need to add information if you add a picture set to Regard3d and it says ‘NA’ beside the picture.</p>
+<div id="adding-metadata-to-images" class="section level4">
+<h4><span class="header-section-number">4.1.3.1</span> Adding metadata to images</h4>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://www.sno.phy.queensu.ca/~phil/exiftool/index.html" class="uri">https://www.sno.phy.queensu.ca/~phil/exiftool/index.html</a> and download the version of the Exiftool appropriate to your computer.</li>
+</ol>
+<ul>
+<li><strong>Windows users</strong> you need to fully extract the tool from the zipped download. <strong>THEN</strong> you need to rename the file to just <code>exiftool.exe</code>. When you extract it, the tool name is <code>exiftool(-k).exe</code>. Delete the <code>(-k)</code> in the file name.</li>
+<li>You need to add data about the camera make, camera model, and focal length to the image files themselves -</li>
+<li><strong>Move</strong> the file <code>exiftool.exe</code> to the folder where your images are.</li>
+<li><strong>Mac users</strong> Unzip if you need to, double click on the dmg file, follow the prompts. You’re good to go.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Navigate to where your images are store. Windows users, search your machine for <code>command prompt</code>. Mac users, search your machine for <code>terminal</code>. Run that program. This opens up a window where you can type commands into your computer. You use the <code>cd</code> command to ‘change directories’, followed by the exact location (path) of your images. On a PC it’ll probably look something like <code>cd c:\users\yourname\documents\myimages</code>. When you’re in the location, <code>dir</code> will show you everything in that director. Mac users, the command <code>ls</code> will list the directory contents. Make sure you’re in the right location, (and windows users, that <code>exiftool.exe</code> is in that directory).</p></li>
+<li>The following commands will add the required metadata to your images. Note that each command is saying, in effect, exiftool, change the following metadata field to this new setting for the following image. the <code>*.jpeg</code> means, every single jpeg in this folder. <strong>NB</strong> if your files end with .jpg, you’d use <code>.jpg</code>, right?</li>
+</ol>
+<ul>
+<li><code>exiftool -FocalLength=&quot;3.97&quot; *.jpeg</code> . &lt;- sets the focal length of your image at 3.97 mm. You should search for your cellphone make online to see if you can find the actual measurement. If you can’t find it, 3.97 is probably close enough.</li>
+<li><code>exiftool -Make=&quot;CameraMake&quot; *.jpeg</code> &lt;- you can use whatever value you want instead of <code>CameraMake</code>. E.g., <code>myphone</code> works.</li>
+<li><code>exiftool -Model=&quot;CameraModel&quot; *.jpeg</code> &lt;- you can use whatever value you want.<br />
+</li>
+<li>If all goes according to plan, the computer will report the number of images modified. Exiftool also makes a copy of your images with the new file extension, <code>.jpeg_original</code> so that if something goes wrong, you can delete the new files and restore the old ones by changing their file names (eg, remove <code>_original</code> from the name).</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Regard3d looks for that metadata in order to do the calculations that generate the point cloud from which the model is created. It needs the focal length, and it needs the size of the image sensor to work. It reads the metadata on make and model and compares it against a database of cameras to get the size of the image sensor plate. Oddly enough, this information is <strong>not</strong> encoded in the image metadata, which is why we need the database. This database is just a text file that uses commas to delimit the fields of information. The pattern looks like this: <code>make;model;width-in-mm</code>. EG: <code>Canon;Canon-sure-shot;6</code>. So, we find that file, and we add that information at the end of it.</li>
+</ol>
+<ul>
+<li><strong>windows users</strong> This information will be at this location: <code>C:\Users\[User name]\AppData\Local\Regard3D</code> eg, on my PC: <code>C:\Users\ShawnGraham\AppData\Local\Regard3D</code>, and is in the file “sensor_database.csv”.</li>
+<li>*<strong>mac users</strong> Open your finder, and hit shift+command+g and go to <code>/Applications/Regard3D.app/Contents/Resources</code></li>
+<li>Do not open <code>sensor_database.csv</code> with Excel; Excel will add hidden characters and screw everything up. Instead, you need a proper text editor to work with the file (notepad or wordpad are not useful here). One good option is <a href="https://www.sublimetext.com/">Sublime Text</a>. Download, install, and use it to open <code>sensor_database.csv</code></li>
+<li>Add whatever you put in for camera make and camera model (back in step 3) <em>exactly</em> - uppercase/lowercase matters. You can search to find the size of the image sensor for your cell phone camera. Use that info if you can find it; otherwise 6 mm is probably pretty close.</li>
+<li><code>ShawnsPhone;LG3;6</code></li>
+<li>Save.</li>
+</ul>
+<p>Now you can open Regard3d, ‘add a picture set’, select these images, and Regard3d will have all of the necessary metadata with which to work.</p>
+<p>Build the model</p>
+<p>Open Regard3d and start a new project. Add a photoset by selecting your frames directory. Note that when you used the exiftool, the original images were copied within the folder with a new name. Don’t select those original images. As the images load up, you will see whether or not your metadata is being correctly read. If you get NaN under make, model, focal length, or sensor width, revisit step three again carefully. Click ok to use the images. Click on compute matches. Slide the keypoint density sliders (two sliders) all the way to ‘ultra’. You can try with just the default values at first, which is faster, but using ‘ultra’ means we get as many data points as possible, which can be necessary given our source images. This might take some time. When it is finished, proceed through the next steps as Regard3d presents them to you (the options in the bottom left panel of the program are context-specific. If you want to revisit a previous step and try different settings, select the results from that step in the inspector panel top left to redo). The final procedure in model generation is to compute the surfaces. When you click on the ‘surface’ button (having just completed the ‘densification’ step), make sure to tick off the ‘texture’ radio button. When this step is complete, you can hit the ‘export’ button. The model will be in your project folder - .obj, .stl., and .png. To share the model on something like Sketchfab.com zip these three files into a single zip folder. On sketchfab, you upload the zip folder.</p>
+<p>Step Five Clean Up Double click on the .obj file in your project folder. Meshlab will open and display your model. The exact tools you might wish to use to enhance or clean up your model depends very much on how your model turned out. At the very least, you’ll use the ‘vertice select’ tool (which allows you to draw a box over the offending part) and the ‘vertice delete’ tool. Search the web for help and examples for the effective use of Meshlab.</p>
+<p>link to humcommons piece for the archival build</p>
 
+</div>
 </div>
 </div>
             </section>

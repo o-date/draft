@@ -1,4 +1,3 @@
-% Encoding: UTF-8
 %% This BibTeX bibliography file was created using BibDesk.
 %% http://bibdesk.sourceforge.net/
 
@@ -536,63 +535,3 @@
 	Urldate = {2017-02-23},
 	Year = {2011},
 	Bdsk-Url-1 = {http://escholarship.org/uc/item/1r6137tb}}
-
-@Article{Huffer2017,
-  author  = {Damien Huffer and Shawn Graham},
-  title   = {The Insta-Dead: The rhetoric of the human remains trade on Instagram},
-  journal = {Internet Archaeology},
-  year    = {2017},
-  doi     = {https://doi.org/10.11141/ia.45.5},
-}
-
-@Article{Begin2013,
-  author  = {Daniel Bégin, Rodolphe Devillers, S Roche},
-  title   = {Assesing Volenteered Geographic Information (VGI) Quality Based on Contributors' Mapping Behaviours},
-  journal = {International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
-  year    = {2013},
-  url     = {https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XL-2-W1/149/2013/isprsarchives-XL-2-W1-149-2013.pdf},
-}
-
-@Article{Aced2013,
-  author   = {Cristina Aced},
-  title    = {Web 2.0: the origin of the word that has changed the way we understand public relations},
-  journal  = {International PR 2013 Conference. Images of public relations},
-  year     = {2013},
-  abstract = {This article reviews the concept Web 2.0 in order to determine who was the first person to use it. Although it is widely accepted that the term Web 2.0 was coined by Tim O'Reilly in 2003, a comprehensive literature review shows that the term had been used previously. Specifically, in 1999, the designer Darcy DiNucci talked about Web 2.0 in an article published in Print Magazine. In addition, this paper analyzes the meaning of the concept Web 2.0 and its influence on public relations. Knowing the origin of Web 2.0 will enable us to understand the new communication paradigm },
-  url      = {https://www.researchgate.net/publication/266672416_Web_20_the_origin_of_the_word_that_has_changed_the_way_we_understand_public_relations},
-}
-
-@InProceedings{Exel2010,
-  author    = {M. van Exel, E. Dias, S. Fruijtier},
-  title     = {The impact of crowdsourcing on spatial data quality indicators},
-  booktitle = {Proceedings of GIScience 2011, Zurich, Switzerland, 14–17 September 2010},
-  year      = {2010},
-  url       = {https://www.researchgate.net/publication/267398729_The_impact_of_crowdsourcing_on_spatial_data_quality_indicators},
-}
-
-@Article{Andrienko2007,
-  author  = {G. Andrienko, N. Andrienko, P. Jankowski, M.-J. Kraak, D. Keim, A. M. MacEachren, S. Wrobel},
-  title   = {Geovisual analytics for spatial decision support. Setting the research agenda},
-  journal = {International Journal of Geographical Information Science},
-  year    = {2007},
-  volume  = {21},
-  number  = {8},
-  pages   = {839–857},
-}
-
-@Book{Brodie2001,
-  title     = {Trade in illicit antiquities: the destruction of the world’s archaeological heritage},
-  publisher = {Cambridge: McDonald Institute for Archaeological Research},
-  year      = {2001},
-  editor    = {Neil Brodie, Jennifer Doole, Colin Renfrew},
-}
-
-@Article{DiNucci1999,
-  author  = {Darcy DiNucci},
-  title   = {Fragmented future},
-  journal = {Print Magazine},
-  year    = {1999},
-  url     = {http://darcyd.com/fragmented_future.pdf},
-}
-
-@Comment{jabref-meta: databaseType:bibtex;}
