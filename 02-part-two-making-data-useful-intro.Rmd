@@ -39,20 +39,9 @@ The concept of Paradata as implemented in events like the Heritage Jam [link/ref
 
 For advice on specific types of data consult  [*Guides to Good Practice* published by the Archaeology Data Service and Digital Antiquity](http://guides.archaeologydataservice.ac.uk/g2gp/Main), 2011.
 
-<<<<<<< HEAD
-Basic concepts in digital preservation
-- look to library and archives professionals
-- NDSI levels of Preservation (for organizations, but can be helpful to understand goals.)
-Phillips, Megan, Jefferson Bailey, Andrea Goethals, and Trevor Owens 2013
-The NDSA Levels of Digital Preservation: Explanation and Uses. Archiving Conference 2013(1): 216–222.
 
 
-- ethical imperatives for archaeology (cite some organizational ethics statements)
-
-Time is your enemy
-- bit rot and link rot
-=======
-With pre-planning and thought directed at topics like format, structure, and descriptions, you can do a lot to extend the life of your work. From the outset, consider whether you intend to prepare your data for ultimate disposition in a [digital repository](https://o-date.github.io/draft/book/introduction-to-digital-libraries-archives-repositories.html), maintain it yourself, or both. In the discipline of digital preservation, the [LOCKSS](https://www.lockss.org/about/principles/) (Lots of Copies Keep Stuff Safe) principle recommends storing data in at least three separate locations to ensure redundancy. 
+With pre-planning and thought directed at topics like format, structure, and descriptions, you can do a lot to extend the life of your work. From the outset, consider whether you intend to prepare your data for ultimate disposition in a [digital repository](https://o-date.github.io/draft/book/introduction-to-digital-libraries-archives-repositories.html), maintain it yourself, or both. In the discipline of digital preservation, the [LOCKSS](https://www.lockss.org/about/principles/) (Lots of Copies Keep Stuff Safe) principle recommends storing data in at least three separate locations to ensure redundancy.
 
 For a deeper dive into digital preservation, see
 Trevor Owens, *The Theory and Craft of Digital Preservation,* Johns Hopkins University Press, 2018 ([full open access preprint available](https://osf.io/preprints/lissa/5cpjt/)).
@@ -63,7 +52,6 @@ Trevor Owens, *The Theory and Craft of Digital Preservation,* Johns Hopkins Univ
 **Time is your enemy**
 Archaeologists are well aware that excavation is a destructive act. Conservation is never forever. When we dig, we participate in a process of rearranging physical material in ways that make it both easier to interpret and more vulnerable to inevitable degradation. In a way, the same can be said about archaeological data. Here are some common risks:
 
->>>>>>> 6339990011e2a71b3a2dfd53d35016423c73ca93
 - deprecated formats
 - bit rot and link rot
 - disappearing web resources and problems with the "cloud"
@@ -72,7 +60,6 @@ Archaeologists are well aware that excavation is a destructive act. Conservation
 
 Tools
 - metadata creation
-<<<<<<< HEAD
 - fixity or other checksum tools
 
 Preserving supporting data vs digital projects
@@ -82,8 +69,3 @@ DH projects:
 
 Xu, Weijia, et al. A Portable Strategy for Preserving Web Applications Functionality. IEEE, 2017, pp. 1–4. CrossRef, doi:10.1109/JCDL.2017.7991578.
 [Jolene can't access this]
-=======
-- fixity
-
-personal digital archiving
->>>>>>> 6339990011e2a71b3a2dfd53d35016423c73ca93
