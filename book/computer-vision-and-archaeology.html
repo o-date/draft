@@ -78,7 +78,7 @@
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#editorial-board"><i class="fa fa-check"></i>Editorial Board</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i>Getting Started</a><ul>
-<li class="chapter" data-level="" data-path="how-to-use-this-text.html"><a href="how-to-use-this-text.html"><i class="fa fa-check"></i>How to use this text</a></li>
+<li class="chapter" data-level="" data-path="students-how-to-use-this-text.html"><a href="students-how-to-use-this-text.html"><i class="fa fa-check"></i>Students: How to use this text</a></li>
 <li class="chapter" data-level="" data-path="how-to-contribute-changes-or-make-your-own-version.html"><a href="how-to-contribute-changes-or-make-your-own-version.html"><i class="fa fa-check"></i>How to contribute changes, or make your own version</a></li>
 <li class="chapter" data-level="" data-path="colophon.html"><a href="colophon.html"><i class="fa fa-check"></i>Colophon</a></li>
 </ul></li>
@@ -201,9 +201,6 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="on-the-horizons-where-digital-archaeology-might-go-next.html"><a href="on-the-horizons-where-digital-archaeology-might-go-next.html"><i class="fa fa-check"></i><b>6</b> On the Horizons: Where Digital Archaeology Might Go Next</a></li>
-<li class="chapter" data-level="7" data-path="open.html"><a href="open.html"><i class="fa fa-check"></i><b>7</b> Open Review</a><ul>
-<li class="chapter" data-level="7.1" data-path="contribute.html"><a href="contribute.html"><i class="fa fa-check"></i><b>7.1</b> Contribute</a></li>
-</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://creativecommons.org/licenses/by/4.0/" target="blank">CC-BY 4.0</a></li>
@@ -228,10 +225,7 @@
             <section class="normal" id="section-">
 <div id="computer-vision-and-archaeology" class="section level2">
 <h2><span class="header-section-number">4.4</span> Computer Vision and Archaeology</h2>
-<p><em>It has become practical in recent years to use neural networks to identify objects, people, and places, in photographs. For archaeology, this could be a valuable tool for rapidly identifying objects when no relevant subject specialist is available.</em></p>
-<blockquote>
-<p>Neural networks have appeared in the archaeological literature from at least the 1990s, but these uses did not share code or sufficient detail to enable replicability (per Baxter 2014 who provides an overview). Other studies concluded that the method did not have any more explanatory power than other more common models (Gibson 1996; Everitt and Dunn 2001), though work such as Bell and Croson (1998) concluded that early NN were particularly well suited for sparse datasets. Important work on NN in general in archaeology has been done by Juan A. Barceló from the mid 1990s onwards (in particular, 1995; 2004; 2008; Barceló and Faura, 1999). Work by Aprile, Castellano and Eramo (2014) finds success using NN to classify mineral inclusions in potsherds. Other work uses NN to enhance information retrieval on for instance pottery databases (Benhabiles and Tabia, 2016), or to determine whether or not degraded statuary belongs to a particular ‘school’ for the purposes of restoration (Wang et al. 2017).</p>
-</blockquote>
+<p>It has become practical in recent years to use neural networks to identify objects, people, and places, in photographs. This use of neural networks <em>applied to imagery</em> in particular has seen rapid advancement since 2012 and the first appearance of ‘convolutional’ neural networks (<span class="citation">Deshpande (<a href="#ref-deshpande2016overview">2016</a>)</span> provides an accessible guide to this literature). But neural networks in general have appeared sporadically in the archaeological literature since the 1990s; <span class="citation">Baxter (<a href="#ref-baxter2014overview">2014</a>)</span> provides a useful overview. Recent interesting uses include <span class="citation">Benhabiles and Tabia (<a href="#ref-benhabiles2016">2016</a>)</span> which uses the approach to enhance pottery databases, and <span class="citation">Wang et al. (<a href="#ref-wang_2017">2017</a>)</span> on stylistic analysis of statuary as an aid to restoration. In this section, we provide a gentle introduction to how convolutional neural networks work as preparation, and then two jupyter binders that may be repurposed or expanded with more data to create actual working classifiers.</p>
 <div id="convolutional-neural-networks" class="section level3">
 <h3><span class="header-section-number">4.4.1</span> Convolutional Neural Networks</h3>
 <p>Neural networks are a biological metaphor for a kind of sequence of computations drawing on the architecture of the eye, the optic nerve, and the brain. When the retina of the eye is exposed to light, different structures within the retina react to different aspects of the image being projected against the retina. These ‘fire’ with greater or lesser strength, depending on what is being viewed. Subsequent neurons will fire if the signal(s) they receive are strong enough. These differential cascades of firing neurons ‘light up’ the brain in particular, repeatable ways when exposed to different images. Computational neural networks aim to achieve a similar effect. In the same way that a child eventually learns to recognize <em>this</em> pattern of shapes and colour as an ‘apple’ and <em>that</em> pattern as an ‘orange’, we can train the computer to ‘know’ that a particular pattern of activations <em>should be</em> labelled ‘apple’.</p>
@@ -254,6 +248,21 @@
 </div>
 </div>
 <!-- </div> -->
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-deshpande2016overview">
+<p>Deshpande, Adit. 2016. “The 9 Deep Learning Papers You Need to Know About.” <a href="https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html" class="uri">https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html</a>.</p>
+</div>
+<div id="ref-baxter2014overview">
+<p>Baxter, Mike. 2014. “Neural Networks in Archaeology.” <a href="https://www.academia.edu/8434624/Neural_networks_in_archaeology" class="uri">https://www.academia.edu/8434624/Neural_networks_in_archaeology</a>.</p>
+</div>
+<div id="ref-benhabiles2016">
+<p>Benhabiles, Halim, and Hedi Tabia. 2016. “Convolutional Neural Network for Pottery Retrieval.” <em>Journal of Electronic Imaging</em> 26. <a href="https://doi.org/10.1117/1.JEI.26.1.011005" class="uri">https://doi.org/10.1117/1.JEI.26.1.011005</a>.</p>
+</div>
+<div id="ref-wang_2017">
+<p>Wang, Haiyan, Zhongshi He, Yongwen Huang, Dingding Chen, and Zexun Zhou. 2017. “Bodhisattva Head Images Modeling Style Recognition of Dazu Rock Carvings Based on Deep Convolutional Network.” <em>Journal of Cultural Heritage</em> 27: 60–71. doi:<a href="https://doi.org/https://doi.org/10.1016/j.culher.2017.03.006">https://doi.org/10.1016/j.culher.2017.03.006</a>.</p>
+</div>
+</div>
             </section>
 
           </div>
