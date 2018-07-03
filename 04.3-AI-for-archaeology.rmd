@@ -145,7 +145,7 @@ AA: didn't find anything useful about that...  Anyhow, I can continue by loading
 
 ### Machine learning for image captioning and other classificatory tasks
 
-blah
+tensor-flow-for-poets tutorial: turn into jupyter + binder. Also, use JCAA article to explain neural nets.
 
 ### discussion
 
