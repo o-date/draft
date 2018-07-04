@@ -10,14 +10,14 @@ In the Jupyter notebooks, we show you some code for retrieving data from a few d
 
 We -
 
-- defined the location of where the APIs 'endpoint' is. That is to say, the URL of where we can pass commands to the API;
+- defined the location of where the APIs 'endpoint' is. That is to say, the URL where we can pass commands to the API;
 - we identified one of the parameters that the API uses, `proxtext`, and assigned our search value to it
 - we also specified what format to return the results in (eg, json)
 - and then we told the python module 'imports' the complete URL that specifies not just the endpoint, but also all of the paramters for our search. The module 'imports' handles the actual getting of information for us, so we don't need to program that from scratch.
 
 The remainder of the code gets the data and puts it into a variable that we can either examine or save to file.
 
-APIs can appear intimidating at first. This is partly because many developers use automatic code to generate the documentation for their APIs in the first place! One of the nice things about the Open Context API and its developers is that they also provide examples of how to use the API and some common tasks one might want to do using it. An example of the kind of scholarship that is enabled when we have large scale data repositories available for programmatic querying is @anderson_2017.
+APIs can appear intimidating at first. This is partly because many developers use automatic tools to generate the documentation for their APIs in the first place! The result is a dense soup of terms and jargon that is largely impenetrable to the rest of us. One of the nice things about the Open Context API and its developers is that they also provide examples of how to use the API and some common tasks one might want to do using it. An example of the kind of scholarship that is enabled when we have large scale data repositories available for programmatic querying is @anderson_2017.
 
 ### Exercises
 

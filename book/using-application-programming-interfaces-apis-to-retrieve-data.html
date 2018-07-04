@@ -220,13 +220,13 @@
 <p>In the Jupyter notebooks, we show you some code for retrieving data from a few different APIs. The first is the ‘Chronicling America’ website, a repository of historical newspapers from across the United States kept by the Library of Congress. We developed our code for accessing the API by repurposing code that Tim Sherrat used for querying the <a href="https://github.com/wragge/ozglam-workbench/blob/master/Trove/1-Introduction-to-the-Trove-API.ipynb">Trove API from the National Library of Australia</a> (which incidentally underlines again the value of sharing code!). Our version is <a href="https://github.com/o-date/open-context-jupyter/blob/master/notebooks/chronicling%20america%20api.ipynb">in this repo</a>. If you study that code, you can see how we built the query in python.</p>
 <p>We -</p>
 <ul>
-<li>defined the location of where the APIs ‘endpoint’ is. That is to say, the URL of where we can pass commands to the API;</li>
+<li>defined the location of where the APIs ‘endpoint’ is. That is to say, the URL where we can pass commands to the API;</li>
 <li>we identified one of the parameters that the API uses, <code>proxtext</code>, and assigned our search value to it</li>
 <li>we also specified what format to return the results in (eg, json)</li>
 <li>and then we told the python module ‘imports’ the complete URL that specifies not just the endpoint, but also all of the paramters for our search. The module ‘imports’ handles the actual getting of information for us, so we don’t need to program that from scratch.</li>
 </ul>
 <p>The remainder of the code gets the data and puts it into a variable that we can either examine or save to file.</p>
-<p>APIs can appear intimidating at first. This is partly because many developers use automatic code to generate the documentation for their APIs in the first place! One of the nice things about the Open Context API and its developers is that they also provide examples of how to use the API and some common tasks one might want to do using it. An example of the kind of scholarship that is enabled when we have large scale data repositories available for programmatic querying is <span class="citation">Anderson et al. (<a href="#ref-anderson_2017">2017</a>)</span>.</p>
+<p>APIs can appear intimidating at first. This is partly because many developers use automatic tools to generate the documentation for their APIs in the first place! The result is a dense soup of terms and jargon that is largely impenetrable to the rest of us. One of the nice things about the Open Context API and its developers is that they also provide examples of how to use the API and some common tasks one might want to do using it. An example of the kind of scholarship that is enabled when we have large scale data repositories available for programmatic querying is <span class="citation">Anderson et al. (<a href="#ref-anderson_2017">2017</a>)</span>.</p>
 <div id="exercises-9" class="section level3">
 <h3><span class="header-section-number">2.5.1</span> Exercises</h3>
 <p>Launch the <a href="http://mybinder.org/v2/gh/o-date/open-context-jupyter/master">jupyter binder</a>.</p>
