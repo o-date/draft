@@ -9,7 +9,6 @@ Choosing a format:
 A lot of people have a lot of opinions on good database platforms, horrible ones, and everything in between. But there is no universally right answer and a lot depends on technical resources and level of experience. That is to say, in many cases, a relational database is the strongest option, but handling information well in spreadsheets may met your needs and the needs of other researchers if implemented well. Our organizations may dictate software platforms we're permitted to use, and often that's Microsoft Access or Excel.
 
 
-
 ### discussion
 
 ### exercises

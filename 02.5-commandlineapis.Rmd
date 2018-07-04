@@ -1,7 +1,9 @@
-## Command Line Methods for Working with APIs
+## Using Application Programming Interfaces (APIS) to Retrieve Data
 
 
-[todo]
+
+
+
 + simple api call to chronicling america
 + more complex to open context
 + some simple plots in the data from open context
@@ -9,15 +11,7 @@
 
 see jupyter notebooks, https://github.com/o-date/open-context-jupyter 
 
-### Working with Omeka
 
-yadda
-
-### Working with tDAR
-
-yadda
-
-### Working with ADS 
 
 ### Exercises
 

@@ -21,7 +21,7 @@ Beth Compton is a PhD student at the University of Western Ontario's Department 
 [Jolene Smith](https://www.jolenesmith.net) is an archaeologist who manages statewide digital archives and archaeological data at the Virginia Department of Historic Resources. She is interested in open data, preservation, and developing easy-to-use tools to help small organizations create, use, and manage archaeological data. 
 
 
-### Andreas Angourakis
+### Andreas Angourakis {-}
 
 Andreas Angourakis is a PhD student at the Department of History and Archaeology, University of Barcelona. He is a generalist that underwent training in humanistic disciplines, social sciences, and biology. He is self-taught in software and programming languages, including R and NetLogo. His research in archaeology has been focused on the development of simulation models of socio-ecological dynamics in the past, mainly using agent-based modeling, and assembling multivariate statistical protocols for analyzing and interpreting archaeological data. As digital archaeology's bones of the trade, he believes that creativity and science are unmistakably intertwined. He can be found on Twitter as [@AndrosSpica](https://twitter.com/AndrosSpica), GitHub as [Andros-Spica](https://github.com/Andros-Spica), and is present on both [Research Gate](https://www.researchgate.net/profile/Andreas_Angourakis) and [Academia](https://ub.academia.edu/AndreasAngourakis).
 
@@ -45,6 +45,8 @@ We wrote this text with a particular kind of student in mind. We imagined this s
 It'll be ok.
 
 We take a pedagogical perspective that focuses on the learning that happens when we make things, when we experiment or otherwise play around with materials and computing, and especially, when/if things break. It's a perspective that finds value in 'failing gloriously', in trying to push ourselves beyond our comfort level. The only thing that you will need therefore to be successful in learning some of the basic issues around digital archaeology is a willingness to consider why things didn't work the way they ought to have, and a web browser. We built this textbook with its very own digital archaeology computer built right in! There's nothing you can break on your own machine, nor does your machine have to be very powerful.
+
+Our hope for this volume is that it will provide you with the ability to work out what you need to know, what you don't know, and how to creatively use the computational power of the devices available to you, to do better archaeology. Once you've outgrown this text, we strongly recommend that you visit the peer-reviewed collection of tutorials at [The Programming Historian](https://programminghistorian.org/) (which are available in English and Spanish and soon other languages). If you are more interested in the statistical side of digital archaeology, then you should consult Ben Marwick et al [How to Do Archaeological Science Using R](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/). 
 
 ## Students: How to use this text {-}
 
