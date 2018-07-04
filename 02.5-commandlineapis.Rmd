@@ -1,6 +1,14 @@
 ## Command Line Methods for Working with APIs
 
 
+[todo]
++ simple api call to chronicling america
++ more complex to open context
++ some simple plots in the data from open context
++ calling leaflet from notebook, mapping open context <- but maybe do this in 3.4
+
+see jupyter notebooks, https://github.com/o-date/open-context-jupyter 
+
 ### Working with Omeka
 
 yadda

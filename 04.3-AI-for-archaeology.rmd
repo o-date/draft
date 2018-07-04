@@ -1,10 +1,10 @@
 
 
-## Artificial Intelligence in Digital Archaeology 
+## Artificial Intelligence in Digital Archaeology
 
 To speak of 'artificial intelligence' in archaeology may be to speak too soon yet. We do have machine learning in the service of archaeology (neural networks for classificatory purposes, for instance), and there is a well-established body of work in terms of simulation that could fall under the rubric of 'artificial intelligence'.
 
-Then why use the term? We think it is still useful to use the term because it reminds us that, in using computational power for simulation or image classification we are off-loading some of our expertise and abilities to a non-human actor. In the case of machine learning and neural networks, we really *can't* see inside the 'black box'. But we can examine the training data, for it is in the selection of training data that we introduce biases or agendas into the computation. By thinking of the machine in this case as something non-human, our hope is that we remind you to not accept the results or methods of AI in archaeology blindly, as if the machine was not capable of racist or colonialist results. 
+Then why use the term? We think it is still useful to use the term because it reminds us that, in using computational power for simulation or image classification we are off-loading some of our expertise and abilities to a non-human actor. In the case of machine learning and neural networks, we really *can't* see inside the 'black box'. But we can examine the training data, for it is in the selection of training data that we introduce biases or agendas into the computation. By thinking of the machine in this case as something non-human, our hope is that we remind you to not accept the results or methods of AI in archaeology blindly, as if the machine was not capable of racist or colonialist results.
 
 Machine learning: a series of techniques that endeavour to train a computer program to identify and classify data according to some previously determined values. We will in this chapter discuss image recognition using the neural network model trained by Google, the Inception3 model, which we will query using the Tensorflow package.
 
@@ -12,7 +12,7 @@ Agent based simulation: a series of techniques that create a population of softw
 
 The value of machine learning: it makes us think carefully about what we are looking for and at in the first place; and then it can be scaled massively.
 
-The value of agent-based modeling: it forces us to think carefully about what it is we think actually *happened* in the past such that it can be <!---encoded as a series of individual-level instructions--> expressed as a series of contextual rules of behavior, functioning under certain conditions. 
+The value of agent-based modeling: it forces us to think carefully about what it is we think actually *happened* in the past such that it can be <!---encoded as a series of individual-level instructions--> expressed as a series of contextual rules of behavior, functioning under certain conditions.
 
 
 ### Agent-based modeling (ABM)
@@ -25,7 +25,7 @@ Next, we cover the *why* and *how* of the application of ABM in archaeology, his
 
 Last, we walkthrough the steps involved creating an ABM model. Inspired in the theme of emergence and collapse of territorial integration, we designed a model, the _**Pond Trade model**_, showcasing many elements that are common in ABM models in archaeology. The coupled process of design and programming was intentionally broken down into smaller, progressive steps to illustrate an organized pace of code development, from simple to increasingly complex algorithms. The Pond Trade model is implemented in _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/), which is free, easy to install and use, and widely used in academia. The exercise assumes no previous programming knowledge, though practice with NetLogo is required to fully undertand the later versions of the model.
 
-Throughout this section, several concepts will probably sound *alien* for most history and archaeology students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers don't go through formal introductions nor are well-versed in algebra and calculus. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results, though proposals do exist (**REF ODD**). In this sense, the content of this section should NOT be considered the standard among the ABM-archaeology community. 
+Throughout this section, several concepts will probably sound *alien* for most history and archaeology students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers don't go through formal introductions nor are well-versed in algebra and calculus. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results, though proposals do exist (**REF ODD**). In this sense, the content of this section should NOT be considered the standard among the ABM-archaeology community.
 
 To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or their interests and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings; certainly, a greater mastery in programming. Despite the rarity of ABM in history and archaeology mainstream curricula, there are many publications that offer introductions to ABM in archaeology, writen by authors with different backgrounds and perspectives [e.g., @Breitenecker2015, @Cegielski2016, @Romanowska2015; also visit https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography, for an extensive and constantly updated list of references].
 
@@ -51,7 +51,7 @@ Fine. Models are not only inevitable for any living mind, but they are also the 
 
 Formal models--or rather *formalizing* informal models--reduce ambiguity, setting aside part of the risk of being misunderstood. In a formal model everything must be defined, even when the elements of our model are still abstract and general. Our imaginary book about ancient Armenians could be complemented with one or several formal models that crystalize the main features of our informal model(s). For instance, if our informal model about property inheritance includes the nuclear patriarchal family as the main kinship structure, we must define it in *dummy* terms, explaining--to ourselves and others--what "family", "nuclear", and "patriarchal" means, at least in the context of our model. *Do a model assume that family implies co-habitation?* *Do our model consider adopted members?* *What happens if a spouse dies?* As it is often the case, we may end up changing our informal model through the effort of formalization; by realizing, for example, that we can replace "patriarchal" with "patrilineal" because our model do not assume a particular power structure within families.
 
-Formalization often demand the use of formal logic and some extend of quantification. Seen from the perspective of the human natural language, mathematics and logic are languages for idiots, with a lot of repetitions, fixed vocabulary, and no nuances. Dull. Computational systems function strictly with this kind of language, and they are both empowered and limited by it. A piece of software can potentially do so many increadible things, most of them impossible for the brightest human minds. However, software will be fit for a task as long as we give it enough instructions. Imagine a *formal entity* bumping into a closed door just because nobody explained it how to open doors. So much for Artificial *Inteligence*! 
+Formalization often demand the use of formal logic and some extend of quantification. Seen from the perspective of the human natural language, mathematics and logic are languages for idiots, with a lot of repetitions, fixed vocabulary, and no nuances. Dull. Computational systems function strictly with this kind of language, and they are both empowered and limited by it. A piece of software can potentially do so many increadible things, most of them impossible for the brightest human minds. However, software will be fit for a task as long as we give it enough instructions. Imagine a *formal entity* bumping into a closed door just because nobody explained it how to open doors. So much for Artificial *Inteligence*!
 
 A formal definition is a disclaimer saying: *"This is what X means in this model, no more, no less. You can now criticize it at will."* Whitout the formal definition, we would probably spend a chapter reviewing everything we read and thought about "nuclear patriarchal family" and still would not be "at the same page" with all our readers.  The terms of this definition are assumptions of the model. At any point, new evidence or insight can suggest us that an assumption is unjustified or unnecessary, and we may change it or remove it from the model.
 
@@ -77,7 +77,7 @@ ABMs fall somewhere in-between these two spectra, though normally leaning toward
 - Define hypotheses, questions or simply the phenomenon of interest (identify the system)
 - Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam's razor vs. emergence
 - Express the chosen elements and processes as computer code (implement the model)
-- Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step.  The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new  modeling effort (and that is actually the main usefulness of models in the long run). 
+- Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step.  The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new  modeling effort (and that is actually the main usefulness of models in the long run).
 - ABM in python, Java, C#, or C++? in R? in NetLogo? (Any language can do it, really). Pros and cons, talk in terms of higher/lower level programming languages (still, they are all quite high-level).
 - remember to talk about https://www.openabm.org/
 
@@ -88,7 +88,7 @@ ABMs fall somewhere in-between these two spectra, though normally leaning toward
 - Virtual laboratory for social sciences
 - Examples
 - Mention the cycles of enthusiasm and skepticism, and the tendency to develop closed circles
-- Challenges and pitfalls 
+- Challenges and pitfalls
 
 #### ABM tutorial: the Pond Trade model
 
@@ -108,7 +108,7 @@ grViz("diagrams/boxes.dot")
 ```
 
 - Elements: "pond" or water body, settlements, ships, routes, goods.
-- Rules: 
+- Rules:
   - coastal settlements of variable size around a pond.
   - each settlement has a "cultural vector".
   - trade ships travel between the settlements.
@@ -141,14 +141,28 @@ SG: code chunks didn't render correctly through the bookdown generation process,
 
 AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
 
-##### Next steps
+## Computer Vision and Archaeology
 
-### Machine learning for image captioning and other classificatory tasks
+It has become practical in recent years to use neural networks to identify objects, people, and places, in photographs. This use of neural networks _applied to imagery_ in particular has seen rapid advancement since 2012 and the first appearance of 'convolutional' neural networks (@deshpande2016overview provides an accessible guide to this literature). But neural networks in general have appeared sporadically in the archaeological literature since the 1990s; @baxter2014overview provides a useful overview. Recent interesting uses include @benhabiles2016 which uses the approach to enhance pottery databases, and @wang_2017 on stylistic analysis of statuary as an aid to restoration. In this section, we provide a gentle introduction to how convolutional neural networks work as preparation, and then two jupyter binders that may be repurposed or expanded with more data to create actual working classifiers.
 
-blah
+### Convolutional Neural Networks
 
-### discussion
+Neural networks are a biological metaphor for a kind of sequence of computations drawing on the architecture of the eye, the optic nerve, and the brain. When the retina of the eye is exposed to light, different structures within the retina react to different aspects of the image being projected against the retina. These 'fire' with greater or lesser strength, depending on what is being viewed. Subsequent neurons will fire if the signal(s) they receive are strong enough. These differential cascades of firing neurons 'light up' the brain in particular, repeatable ways when exposed to different images. Computational neural networks aim to achieve a similar effect. In the same way that a child eventually learns to recognize _this_ pattern of shapes and colour as an 'apple' and _that_ pattern as an 'orange', we can train the computer to 'know' that a particular pattern of activations _should be_ labelled 'apple'.
 
-blah
+A 'convolutional' neural network begins by 'looking' at an image in terms of its most basic features - curves or areas of contiguous colour. As the information percolates through the network the layers are sensitive to more and more abstraction in the image, some 2048 different dimensions of information. English does not have words to understand _what_ precisely, some (most) of these dimensions are responding to, although if you've seen any of the 'Deep Dream' artworks [SG insert figure here] you are seeing a visualization of some of those dimensions of data. The final layer of neurons predicts from the 2048 dimensions what the image is supposed to be. When we are training such a network, we know at the beginning what the image is of; if at the end, the network does not correctly predict 'apple', this error causes the network to shift its weighting of connections between neurons back through the network ('backpropogation') to increase the chances of a correct response. This process of calculation, guess, evaluation, adjustment goes on until no more improvement seems to occur.
 
-### exercises
+Neural networks like this can have very complicated architectures to increase their speed, or their accuracy, or some other feature of interest to the researcher. In general, such neural networks are composed of four kinds of layers. The first is the **convolutional** layer. This is a kind of filter that responds to different aspects of an image; it moves across the image from left to right, top to bottom (whence comes the name 'convolutional'). The next layer is the layer that reacts to the information provided by the filter; it is the **activation** layer. The neural network is dealing with an astounding amount of information at this point, and so the third layer, the **pooling** layer does a kind of mathematical reduction or compression to strip out the noise and leave only the most important features in the data. Any particular neural network might have several such 'sandwiches' of neurons arranged in particular ways. The last layer is the **connected** layer, which is the layer with the information concerning the labels. These neurons run a kind of 'vote' on whether or not the 2048-dimension representation of the image 'belongs' to their particular category. This vote is expressed as a percentage, and is typically what we see as the output of a CNN applied to the problem of image identification.
+
+### Applications
+
+Training a neural network to recognize categories of objects is massively computationally intense. Google's Inception3 model - that is, the final state of the neural network Google trained - took the resources of a massive company to put together and millions of images. However, Google _released_ its model to the public. Now anyone can take that _finished_ pattern of weights and neurons and use them in their own applications. But Google didn't train their model on archaeological materials, so it's reasonable to wonder if such a model has any value to us.
+
+It turns out that it does, because of an interesting by-product of the way the model was trained and created. **Transfer learning** allows us to take the high-dimensional ways-of-seeing that the Inception3 model has learned, and apply them to a tweaked final voting layer. We can give the computer mere thousands of images and tell it to learn _these_ categories: and so we can train an image classifier on different kinds of pottery relatively quickly. Google has also released a version of Inception3 called Mobilnet that is much smaller (only 1001 dimensions or ways-of-seeing) and can be used in conjunction with a smartphone. We can use transfer learning on the smaller model as well and create a smartphone application trained to recognize Roman pottery fabrics, for instance.
+
+The focus on identifying objects in photographs does obscure an interesting aspect of the model - that is, there are interesting and useful things that can be done when we dismiss the labeling. The second-to-last layer of the neural network is the numerical representation of the feature-map of the image. We don't need to know what the image is of in order to make use of that information. We can instead feed these representations of the the images into various kinds of k-means, nearest-neighbour, t-sne, or other kinds of statistical tools to look for pattern and structure in the data. If our images are from tourist photos uploaded to flickr of archaeological sites, we might use such tools to understand how tourists are framing their photos (and so, their archaeological consciousness). Graham and Huffer (2018) are using this tool to identify visual tropes in the photographs connected to the communities of people who buy, sell, and collect photos of, human remains on Instagram. Historians are using this approach to understand patterns in 19th century photographs; others are looking at the evolution of advertising in print media.
+
+### Exercises
+
+1. Build an image classifier. The code for this exercise is [in our repo](https://github.com/o-date/image-classifier); [launch the binder](https://mybinder.org/v2/gh/o-date/image-classifier/master) and work carefully through the steps. Pay attention to the various 'flags' that you can set for the training script. Google them; what do they do? Can you improve the speed of the transfer learning? The accuracy? Use what you've learned in section 2.5 to retrieve more data upon which you might build a classifier (hint: there's a script in the repo that might help you with that).
+
+2. Classify similar images. The code for this exercise is in [Shawn Graham's repo](); [launch the binder](http://mybinder.org/v2/gh/shawngraham/bindr-test-Identifying-Similar-Images-with-TensorFlow/master) and work through the steps. Add more image data so that the results are clearer.

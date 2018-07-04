@@ -20,3 +20,6 @@ http://www.datacarpentry.org/spreadsheets-socialsci/
 
 SQL for Social Science Data
 http://www.datacarpentry.org/sql-socialsci/
+
+Cleaning Data with Open Refine
+
