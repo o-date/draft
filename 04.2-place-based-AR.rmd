@@ -1,0 +1,13 @@
+## Place-based Interpretation with Locative Augmented Reality
+
+Augmented reality is the use of various technologies to overlay data onto one's visual or aural perception of the environment. Augmented reality does not need to be a digital technology - it can be as simple as a sheet of plexiglass/perspex framing a view of an archaeological site, etched so that the 'missing' structure(s) can be seen, as at Carnuntum in Austria.
+
+![Carnuntum](images/Heidentor_Carnuntum_4487.jpg)
+
+(Image Wikimedia Commons, by user [Gryffindor](https://commons.wikimedia.org/wiki/User:Gryffindor))
+
+Augmented reality does not need to be a visual technology, either. 
+
+### discussion
+
+### exercises

@@ -9,6 +9,7 @@ In this chapter, we'll cover some of the basic principles of how sfm works while
 
 ### Basic principles
 
+
 - image capture
 - image matching
 - dense point cloud generation
@@ -115,29 +116,27 @@ You can use whatever value you want, eg `LG3`.
 If all goes according to plan, the computer will report the number of images modified. Exiftool also makes a copy of your images with the new file extension, `.jpeg_original` so that if something goes wrong, you can delete the new files and restore the old ones by changing their file names (eg, remove `_original` from the name).
 
 4. Regard3d looks for that metadata in order to do the calculations that generate the point cloud from which the model is created. It needs the focal length, and it needs the size of the image sensor to work. It reads the metadata on make and model and compares it against a database of cameras to get the size of the image sensor plate. Oddly enough, this information is **not** encoded in the image metadata, which is why we need the database. This database is just a text file that uses commas to delimit the fields of information. The pattern looks like this: ```make;model;width-in-mm```. EG: `Canon;Canon-sure-shot;6`. So, we find that file, and we add that information at the end of it.
- - **windows users** This information will be at this location: 
  
- ```C:\Users\[User name]\AppData\Local\Regard3D``` 
+ **windows users** This information will be at this location: 
+ 
+ `C:\Users\[User name]\AppData\Local\Regard3D`
  
  eg, on my PC: 
  
- ```C:\Users\ShawnGraham\AppData\Local\Regard3D```
+ `C:\Users\ShawnGraham\AppData\Local\Regard3D`
  
 and is in the file "sensor_database.csv".
 
- - ***mac users** Open your finder, and hit shift+command+g and go to 
+***mac users** Open your finder, and hit shift+command+g and go to 
  
-```/Applications/Regard3D.app/Contents/Resources```
+`
+/Applications/Regard3D.app/Contents/Resources
+`
  
  - Do not open `sensor_database.csv` with Excel; Excel will add hidden characters which cause trouble. Instead, you need a proper text editor to work with the file (notepad or wordpad are not useful here). One good option is [Sublime Text](https://www.sublimetext.com/). Download, install, and use it to open `sensor_database.csv`
  - Add whatever you put in for camera make and camera model (back in step 3) *exactly* - uppercase/lowercase matters. You can search to find the size of the image sensor for your cell phone camera. Use that info if you can find it; otherwise 6 mm is probably pretty close. The line you add to the database then will look something like this:
  
-```myphone;LG3;6```
+myphone;LG3;6
 
-- Save.
-
-Now you can open Regard3d, 'add a picture set', select these images, and Regard3d will have all of the necessary metadata with which to work.
-
-
-
+Save the file. Now you can open Regard3d, 'add a picture set', select these images, and Regard3d will have all of the necessary metadata with which to work.
 
