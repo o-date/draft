@@ -25,6 +25,11 @@ Beth Compton is a PhD student at the University of Western Ontario's Department 
 
 Andreas Angourakis is a PhD student at the Department of History and Archaeology, University of Barcelona. He is a generalist that underwent training in humanistic disciplines, social sciences, and biology. He is self-taught in software and programming languages, including R and NetLogo. His research in archaeology has been focused on the development of simulation models of socio-ecological dynamics in the past, mainly using agent-based modeling, and assembling multivariate statistical protocols for analyzing and interpreting archaeological data. As digital archaeology's bones of the trade, he believes that creativity and science are unmistakably intertwined. He can be found on Twitter as [@AndrosSpica](https://twitter.com/AndrosSpica), GitHub as [Andros-Spica](https://github.com/Andros-Spica), and is present on both [Research Gate](https://www.researchgate.net/profile/Andreas_Angourakis) and [Academia](https://ub.academia.edu/AndreasAngourakis).
 
+### Andrew Reinhard
+
+Andrew Reinhard literally wrote the book on video game archaeology: Archaeogaming: An Introduction to Archaeology in and of Video Games (Berghahn Books 2018). He led the team of archaeologists that excavated the Atari Burial ground in Alamogordo, New Mexico (April 2014) as well as the first in-game archaeological expedition via No Man’s Sky (Hello Games 2016). He is a PhD candidate at the University of York’s (UK) Department of Archaeology where his thesis focuses on evaluating tools and methods for archaeological investigation of digital spaces.
+
+
 ### Editorial Board {-}
 
 Katharine Cook, University of Victoria
