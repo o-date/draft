@@ -14,6 +14,8 @@ Finally, _SPARQL_ is an acronymn for SPARQL Protocol and RDF Query Language (yes
 
 In the notebook for this section, we're not using Python or R directly. Instead, we've set up a 'kernel' (think of that as the 'engine' for the notebook) that already includes everything necessary to set up and run SPARQL queries. (For reference, the kernel code is [here](https://github.com/paulovn/sparql-kernel)). Both R and Python can interact with and query endpoints, and manipulate linked open data, but for the sake of learning a bit of what one can do with SPARQL, this notebook keeps all of that ancillary code tucked away. The followup notebook shows you how to use R to do some basic manipulations of the query results.
 
+Note the sparql endpoint for nomisma also lets you download in csv, geojson, kml
+
 
 ### discussion
 
