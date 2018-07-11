@@ -18,7 +18,24 @@ https://youtu.be/Y_yE-TkDn5I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_yE-TkDn5I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-### discussion
+### Projection Mapping
+
+Projection mapping is a kind of AR that uses digital video projectors and specialized software on your computer to block out areas of light so that the different areas show different videos or images at the same time. Instead of a rectangle of light, one can 'map' the boundaries of the projection areas to match the architecture of a building facade (for example). Other terms for this include 'spatial augmented reality' or 'video mapping'.
+
+The artist [Craig Winslow](http://craigwinslow.com/work/lightcapsules/) used the technology to bring the faded historic signage of Winnipeg's downtown back to life. 
+
+Get started:
+
+Optoma Projection Mapper(5$ android, ios app) http://projection-mapping.org/tools/optoma-projection-mapper/
+
+Mappmap: https://mapmapteam.github.io/
+ 
+Hololens, ARkit, all the rest of it.
+
+<img src="http://craigwinslow.com/wp-content/uploads/2016/07/006-Portland-ME_PROMO.gif">.
+
+
+
 
 ### exercises
 
