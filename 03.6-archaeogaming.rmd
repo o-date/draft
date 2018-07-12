@@ -1,4 +1,74 @@
-## Virtual Archaeology
+## Virtual Archaeology and Archaeogaming
+
+### Theory
+-blah
+
+#### Making, Wayfaring, Tacking and Archaeological Cabling
+-blah
+
+#### Materiality
+-blah
+
+#### Phenomenology
+-blah
+
+### Method
+-blah
+
+#### The London & Seville Charters
+-blah
+
+#### Agency
+-blah
+
+#### Authority
+-blah
+
+#### Authenticity
+-blah
+
+#### Transparency
+-blah
+
+#### Paradata
+-blah
+
+### Practice
+-blah
+
+#### Paul Reilly
+
+#### Anthony Masinton
+-blah
+
+#### Grant Cox
+-blah
+
+#### Richard Allen
+-blah
+
+#### Daniel Pletinckx
+-blah
+
+#### Nicole Beale
+-blah
+
+#### Alice Watterson
+blah
+
+#### Costas Papadopoulos
+blah
+
+#### Ed Gonzalez-Tennant
+-blah
+
+### Discussion
+-blah
+
+### Exercises
+-blah
+
+## Archaeogaming
 
 “Archaeogaming” is the study of archaeology both in and of games, largely focused on digital games (arcade cabinets, computer games, console games, etc.) but also including analog games (tabletop, pen-and-paper, cards, dice, etc.). Two major branches comprise archaeogaming: 1) representations of archaeology and archaeologists in games, and 2) treating games as archaeology themselves. 
 

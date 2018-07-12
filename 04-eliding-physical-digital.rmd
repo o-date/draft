@@ -1,4 +1,4 @@
 # Eliding the Digital and the Physical
 
-yadda
+this might be a good place to talk about GIS and why it's not here.
 
