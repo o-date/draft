@@ -1,5 +1,5 @@
 ---
-title: "The Open Digital Archaeology Textbook Environment"
+title: "The Open Digital Archaeology Textbook"
 author: "Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Michael Carter, & Beth Compton"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
@@ -10,7 +10,7 @@ bibliography: [book.bib]
 biblio-style: apalike
 link-citations: true
 github-repo: o-date/draft
-description: "The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory"
+description: "The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory"
 cover-image: images/word-cloud-proposal.jpg
 lang: "en"
 ---

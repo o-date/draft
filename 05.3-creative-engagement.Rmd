@@ -10,7 +10,7 @@ This is part of the rationale for the open access journal [_Epoiesen: A Journal 
 
 In this section, we explore ways of using generative computational approaches to remix archaeological data in a variety of ways - from a whimsical archaeological Twitterbot, to sonification, to glitch photograph, to abstract painting of word patterns in R.
 
-## Twitterbots with Tracery
+### Twitterbots with Tracery
 
 _this section adopts and modifies portions of Graham's [Programming Historian lesson on Tracery](https://programminghistorian.org/en/lessons/intro-to-twitterbots)_
 
@@ -50,7 +50,7 @@ Given that so much historical or archaeological data is expressed on the web as 
 
 > My most successful bot has been [\@tinyarchae](http://twitter.com/tinyarchae), a bot that tweets scenes from a horrible dsyfunctional archaeological excavation project. Every archaeological project deals with problems of sexism, abuse, and bad faith; \@tinyarchae pushes the stuff of conference whispers to a ridiculous extreme. It is a caricature that contains a kernel of uncomfortable truth. Other bots I have built glitch [archaeological photography](https://twitter.com/archaeoglitch); one is actually useful, in that it is [tweeting out new journal articles in archaeology](https://twitter.com/botarchaeo) and so serves as a research assistant. (For more thoughts on the role bots play in public archaeology, see this [keynote](https://electricarchaeology.ca/2017/04/27/bots-of-archaeology-machines-writing-public-archaeology/) from the [Public Archaeology Twitter Conference](https://publicarchaeologyconference.wordpress.com/)).
 
-### Planning: What will your bot do?
+#### Planning: What will your bot do?
 
 We begin with pad and paper. As a child in elementary school, one activity we often did to learn the basics of English grammar was called 'mad-libs' (as in, 'silly - mad - ad libs'). The teacher performing this activity would ask the class to, say, list a noun, then and adverb, then a verb, and then another adverb. Then on the other side of the sheet there would be a story with blank spaces like this:
 
@@ -100,7 +100,7 @@ Possible outcomes will be:
 
 With tweaking, and breaking the units of expression into smaller symbols, we can fix any expressive infelicities (or indeed, decide to leave them in to make the voice more 'authentic'.)
 
-### Prototyping with a Tracery editor
+#### Prototyping with a Tracery editor
 
 There is a Tracery editor at [www.brightspiral.com/tracery/](http://www.brightspiral.com/tracery). We will use that to work out the kinks in _plantpotbot_. The editor visualizes the way the symbols and rules of the grammar interact (how they are nested, and the kinds of output your grammar will generate). Open the editor in a new window. 
 
@@ -149,7 +149,7 @@ Every Tracery grammar is actually a JSON object consisting of key/value pairs, w
 
 It is good practice to copy that JSON to a text editor and save another copy somewhere safe.
 
-### Exercise
+#### Exercise
 
 1. Build a grammar for your bot, following the sequence above. Save the .json file that expresses your bot. Remember that some of the power of Twitterbots comes from their serendipitous placement with other tweets in _your_ timeline, _and others'_. The potential for juxtaposition of your bot's message(s) against other people's tweets will also influence the relative success of the bot. How can you plan for these collisions?
 
@@ -169,7 +169,7 @@ Decide how often you want your bot to tweet, and whether you want the source gra
 
 Congratulations, you have built a Twitterbot!
 
-### Good bot citizenship
+#### Good bot citizenship
 
 As Cheap Bots Done Quick is a service provided by George Buckenham out of a spirit of goodwill, do not use the service to create bots that are offensive or abusive or that otherwise will spoil the service for everyone else. As he writes,
 
@@ -177,5 +177,5 @@ As Cheap Bots Done Quick is a service provided by George Buckenham out of a spir
 
 Other pointers for good bot citizenship are provided by Darius Kazemi, one of the great bot artists, are discussed [here](http://tinysubversions.com/2013/03/basic-twitter-bot-etiquette/).
 
-## Sonification
+### Sonification
 
