@@ -226,12 +226,14 @@ and we know that there are approximately 20 years between Phases 1 and 3, for po
 
 ```
 my_data = [
-    {'event_date': datetime(0010,1,1), 'magnitude': 234},
-    {'event_date': datetime(0020,1,1), 'magnitude': 120},
-    {'event_date': datetime(0025,1,1), 'magnitude': 45},
-    {'event_date': datetime(0030,1,1), 'magnitude': 47}
+    {'event_date': datetime(1010,1,1), 'magnitude': 234},
+    {'event_date': datetime(1020,1,1), 'magnitude': 120},
+    {'event_date': datetime(1025,1,1), 'magnitude': 45},
+    {'event_date': datetime(1030,1,1), 'magnitude': 47}
 ]
 ```
+
+...run the code, save the output, and then do the same thing again for pottery B.
 
 #### Exercise
 
