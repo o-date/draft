@@ -292,7 +292,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>In this section, we explore ways of using generative computational approaches to remix archaeological data in a variety of ways - from a whimsical archaeological Twitterbot, to sonification, to glitch photograph, to abstract painting of word patterns in R.</p>
 <div id="twitterbots-with-tracery" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Twitterbots with Tracery</h3>
-<p><em>this section adopts and modifies portions of Graham’s <a href="https://programminghistorian.org/en/lessons/intro-to-twitterbots">Programming Historian lesson on Tracery</a></em></p>
+<p><em>this section reuses, adopts and modifies portions of Graham’s <a href="https://programminghistorian.org/en/lessons/intro-to-twitterbots">Programming Historian lesson on Tracery</a></em></p>
 <p>Strictly speaking, a twitter bot is a piece of software for automated controlling a Twitter account. When thousands of these are created and are tweeting more or less the same message, they have the ability to shape discourse on Twitter which then can influence other media discourses. Bots of this kind <a href="http://www.sciencedirect.com/science/article/pii/S0747563213003129">can even be seen as credible sources of information</a>. Projects such as <a href="http://www.docnow.io/">Documenting the Now</a> are creating tools to allow researchers to create and query archives of social media around current events - and which will naturally contain many bot-generated posts. Here we demonstrate how one can build a simple twitterbot using the <a href="http://tracery.io">tracery.io generative grammar</a> and the <a href="http://cheapbotsdonequick.com/">Cheap Bots Done Quick</a> service. Tracery exists in multiple languages and can be integrated into websites, games, bots. You may fork it <a href="https://github.com/galaxykate/tracery/tree/tracery2">on github here</a>.</p>
 <p>The impetus for building a Twitterbot (or any social media automation) in this way is to use the affordances of digital media to create <em>things</em> that could not otherwise exist to move us, to inspire us, to challenge us. Archaeologist Sara Perry for instance is leading the ‘<a href="https://www.emotiveproject.eu/">Emotive: Storytelling for cultural heritage</a>’ project that makes use of bots to such ends. In the uses of such automatons, there is room for satire; there is room for comment. With Mark Sample, we believe that there is a need for ‘<a href="https://medium.com/@samplereality/a-protest-bot-is-a-bot-so-specific-you-cant-mistake-it-for-bullshit-90fe10b7fbaa">bots of conviction</a>’.</p>
 <p>These are protest bots, bots so topical and on-point that they can’t be mistaken for anything else. Per Sample, such bots should be</p>
@@ -409,7 +409,49 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="sonification" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Sonification</h3>
+<p><em>this section resuses, adopts and modifies portions of Graham’s <a href="https://programminghistorian.org/en/lessons/sonification">Programming Historian lesson on the sound of data</a></em></p>
+<p>While there is a lot of research into archaeo-acoustics (much of which involves digital manipulation of the sound files), in this section we want to take the opposite tack - of <em>creating</em> aural representations of our data.</p>
+<p>Pleasing or discordant sound from data can be used to signal many different things - from warning tones that something is wrong, to artistic interventions meant to draw attention to <a href="https://datadrivendj.com/tracks/louisiana/">environmental degradation</a>, to <a href="https://datadrivendj.com/tracks/subway/">economic inequality over space</a>. Sonifying archaeological materials could be an effective strategy in a work of public archaeology or advocacy.</p>
+<p>To begin with, sonification is a useful exploratory technique to make your data unfamiliar again. By translating it, transcoding it, <a href="http://blog.taracopplestone.co.uk/making-things-photobashing-as-archaeological-remediation/">remediating</a> it, we begin to see elements of the data that our familiarity with visual modes of expression have blinded us to. This deformation, this deformance, is in keeping with arguments made by for instance Mark Sample on <a href="http://www.samplereality.com/2012/05/02/notes-towards-a-deformed-humanities/">breaking things</a>, or Bethany Nowviskie on the ‘<a href="http://nowviskie.org/2013/resistance-in-the-materials/">resistance in the materials</a>’. Sonification moves us along the continuum from data to capta, social science to art, <a href="http://nooart.org/post/73353953758/temkin-glitchhumancomputerinteraction">glitch to aesthetic</a>. So let’s see what this all sounds like.</p>
+<p>Sonification is the practice of mapping aspects of the data to produce sound signals. In general, a technique can be called ‘sonification’ if it meets certain conditions. These include reproducibility (the same data can be transformed the same ways by other researchers and produce the same results) and what might be called intelligibility - that the ‘objective’ elements of the original data are reflected systematically in the resulting sound (see <a href="#Hermann">Hermann</a> <a href="http://www.icad.org/Proceedings/2008/Hermann2008.pdf">2008</a> for a taxonomy of sonification). <a href="#Last">Last and Usyskin</a> <a href="https://www.researchgate.net/publication/282504359_Listen_to_the_Sound_of_Data">(2015)</a> designed a series of experiments to determine what kinds of data-analytic tasks could be performed when the data were sonified. Their experimental results (Last and Usyskin 2015) have shown that even untrained listeners (listeners with no formal training in music) can make useful distinctions in the data. They found listeners could discriminate in the sonified data common data exploration tasks such as classification and clustering. (Their sonified outputs mapped the underlying data to the Western musical scale.)</p>
+<p>Last and Usyskin focused on time-series data. They argue that time-series data are particularly well suited to sonification because there are natural parallels with musical sound. Music is sequential, it has duration, and it evolves over time; so too with time-series data <a href="https://www.researchgate.net/publication/282504359_Listen_to_the_Sound_of_Data">(Last and Usyskin 2015: 424)</a>. It becomes a problem of matching the data to the appropriate sonic outputs. In many applications of sonification, a technique called ‘parameter mapping’ is used to marry aspects of the data along various auditory dimensions such as <a href="#pitch">pitch</a>, variation, brilliance, and onset. The problem with this approach is that where there is no temporal relationship (or rather, no non-linear relationship) between the original data points, the resulting sound can be ‘confusing’ (2015: 422).</p>
+<p>In the <a href="https://mybinder.org/v2/gh/o-date/sonification/master">notebook</a> on sonification, we walk through the process of mapping time-series data against the 88 key keyboard. In the code, you will see a number of different methods that can be used.</p>
+<p>The data are represented in json:</p>
+<pre><code>my_data = [
+    {&#39;event_date&#39;: datetime(1792,6,8), &#39;magnitude&#39;: 3.4},
+    {&#39;event_date&#39;: datetime(1800,3,4), &#39;magnitude&#39;: 3.2},
+    {&#39;event_date&#39;: datetime(1810,1,16), &#39;magnitude&#39;: 3.6},
+    {&#39;event_date&#39;: datetime(1812,8,23), &#39;magnitude&#39;: 3.0},
+    {&#39;event_date&#39;: datetime(1813,10,10), &#39;magnitude&#39;: 5.6},
+    {&#39;event_date&#39;: datetime(1824,1,5), &#39;magnitude&#39;: 4.0}
+]</code></pre>
+<p>The name of the second value here is ‘magnitude’, but it could be anything - counts, percentage, averages. The first value, in the sample code, uses python’s <code>datetime</code> format and so has to be written as in the example. Unfortunately, <code>datetime</code> only works for dates from 1 CE onwards. This means that for any dates of interest to many archaeologists, this approach would either seem to be not useful, or require too much bother in order to get the dates correctly expressed.</p>
+<p>This is not as big a problem as it first may appear. The actual calendar date is not important; it’s the internal relationship that matters. That is to say, we’re interested in the evolution over time as represented by the evolution of the sonification as we listen to it. In which case, say we had the following data we wanted to sonify:</p>
+<pre><code>Phase 1: 234 sherds of pottery A
+Phase 2a: 120 sherds of pottery A
+Phase 2b: 45 sherds of pottery A
+Phase 3: 47 sherds of pottery A
+Phase 1: 120 sherds of pottery B
+Phase 1: 34 sherds of pottery B
+Phase 2a: 200 sherds of pottery B
+Phase 2b: 180 sherds of pottery B
+Phase 3: 87 sherds of pottery B</code></pre>
+<p>and we know that there are approximately 20 years between Phases 1 and 3, for pottery A we could express this like so:</p>
+<pre><code>my_data = [
+    {&#39;event_date&#39;: datetime(0010,1,1), &#39;magnitude&#39;: 234},
+    {&#39;event_date&#39;: datetime(0020,1,1), &#39;magnitude&#39;: 120},
+    {&#39;event_date&#39;: datetime(0025,1,1), &#39;magnitude&#39;: 45},
+    {&#39;event_date&#39;: datetime(0030,1,1), &#39;magnitude&#39;: 47}
+]</code></pre>
+<div id="exercise-1" class="section level4">
+<h4><span class="header-section-number">5.3.2.1</span> Exercise</h4>
+<ol style="list-style-type: decimal">
+<li>Collect some data that you would like to sonify. Construct an array as above to express each potential ‘voice’ in your final composition. What do you think you might ‘hear’?</li>
+<li>Try the <a href="https://programminghistorian.org/en/lessons/sonification#musicalgorithms">Programming Historian sonification tutorial using Musicalgorithms</a> to represent that data. What is the key difference between that approach, and the approach detailed here using miditime? How does it differ, and what does that <em>sound</em> like? Try sketching out how you could use these differences to explain key concepts in archaeology to a public audience.</li>
+<li>Launch the <a href="https://mybinder.org/v2/gh/o-date/sonification/master">jupyter notebook</a> to explore miditime’s approach to sonifying time-series data. Build mutliple voices, and mix them together using Garageband or <a href="https://www.audacityteam.org/">Audacity</a>. What creative decisions do you have to take in order to make this work? How do they change the data, or what you are able to hear? What <em>do</em> you hear - and <em>what</em> might it mean?</li>
+</ol>
 
+</div>
 </div>
 </div>
 <!-- </div> -->
