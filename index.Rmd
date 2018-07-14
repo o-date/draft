@@ -1,6 +1,6 @@
 ---
-title: "The Open Digital Archaeology Textbook Environment"
-author: "Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Michael Carter, & Beth Compton"
+title: "The Open Digital Archaeology Textbook"
+author: "Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Michael Carter, & Beth Compton"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
@@ -10,13 +10,13 @@ bibliography: [book.bib]
 biblio-style: apalike
 link-citations: true
 github-repo: o-date/draft
-description: "The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory"
+description: "The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory"
 cover-image: images/word-cloud-proposal.jpg
 lang: "en"
 ---
 # notice {-}
 
-This volume goes hand-in-glove with a computational environnent that uses [Jupyter Notebooks](https://jupyter.org/) coupled with the [Binder](https://mybinder.org/) service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the [basic notebook repository](https://github.com/o-date/notebooks) and hit the `launch binder` button (after reading the information there). 
+This volume goes hand-in-glove with a computational environnent that uses [Jupyter Notebooks](https://jupyter.org/) coupled with the [Binder](https://mybinder.org/) service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the [list of notebooks](https://o-date.github.io/support/notebooks-toc/) and hit the `launch binder` button. To examine or download the code, click the `repository` links instead. 
 
 THIS IS A DRAFT VERSION; it's not even version 0.1 yet. It is filled with errors, omissions, and non-sequiturs. 
 

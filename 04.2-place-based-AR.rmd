@@ -1,0 +1,45 @@
+## Place-based Interpretation with Locative Augmented Reality
+
+Augmented reality is the use of various technologies to overlay data onto one's visual or aural perception of the environment. Augmented reality does not need to be a digital technology - it can be as simple as a sheet of plexiglass/perspex framing a view of an archaeological site, etched so that the 'missing' structure(s) can be seen, as at Carnuntum in Austria.
+
+![Carnuntum](images/Heidentor_Carnuntum_4487.jpg)
+
+(Image Wikimedia Commons, by user [Gryffindor](https://commons.wikimedia.org/wiki/User:Gryffindor))
+
+Augmented reality does not need to be a visual technology, either. 
+
+What AR could be - the following two videos were winning entries in the [HeritageJam](http://www.heritagejam.org/) at York University in recent years. They are prototypes for how AR might be used archaeologically. 
+
+https://youtu.be/wAdbynt4gyw
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wAdbynt4gyw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+https://youtu.be/Y_yE-TkDn5I
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y_yE-TkDn5I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+### Projection Mapping
+
+Projection mapping is a kind of AR that uses digital video projectors and specialized software on your computer to block out areas of light so that the different areas show different videos or images at the same time. Instead of a rectangle of light, one can 'map' the boundaries of the projection areas to match the architecture of a building facade (for example). Other terms for this include 'spatial augmented reality' or 'video mapping'.
+
+The artist [Craig Winslow](http://craigwinslow.com/work/lightcapsules/) used the technology to bring the faded historic signage of Winnipeg's downtown back to life. 
+
+Get started:
+
+Optoma Projection Mapper(5$ android, ios app) http://projection-mapping.org/tools/optoma-projection-mapper/
+
+Mappmap: https://mapmapteam.github.io/
+ 
+Hololens, ARkit, all the rest of it.
+
+<img src="http://craigwinslow.com/wp-content/uploads/2016/07/006-Portland-ME_PROMO.gif">.
+
+
+
+
+### exercises
+
+maybe this can be rejigged to grab just archaeological wiki articles? would show incidentally ways of making nodejs apps https://roadtrip.glitch.me/
+
+
+matthew haris notebook for site photos data extraction thing!!!go find. think it's in R. more of an image recognition though.
