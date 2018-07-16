@@ -1,4 +1,4 @@
-# Making Data Durable
+# Making Data Useful
 
 
 Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three great habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “future-proof” your digital work.
@@ -23,7 +23,7 @@ do
 
 With these frustrations in mind, the qualities of "good" data become apparent. Good data are stable, human readable, and accessible. They can be rearranged and remixed. As an added benefit, those same qualities that make data useful and conclusions reproducible can also help to protect against the ravages of time.
 
-#### Pre-Planning #### {-}
+#### Making Data Sensible: Pre-Planning #### {-}
 
 You’ll notice that quality data (however you define the term) take planning. The structure of your data and the practicalities of how you’ll handle and store it should be woven into your research design. A reality to confront, however, is that there will be tradeoffs.
 
@@ -35,7 +35,7 @@ Perfection is unattainable. No dataset will ever be truly “complete.” You co
 
 The concept of Paradata as implemented in events like the Heritage Jam [link/reference] can be applied broadly to analytical and technical digital projects to great effect. Originally documented in the London Charter for Computer-based Visualization of Cultural Heritage [source and link], paradata (literally data alongside the data) are narrative descriptions of process. Keeping a paradata file can help to illustrate some of the assumptions we naturally make when producing and grooming data. Data are never "raw". [Gitelman, Lisa, ed. Raw data is an oxymoron. MIT Press, 2013.] In the context of an archaeological excavation with published analysis, this information might take the form of sections of a gray literature report or an appendix to a publication. Or it might be a text document that travels along side a collection of data files as a "readme."
 
-#### Preservation and Longevity #### {-}
+#### Making Data Durable: Preservation and Longevity #### {-}
 
 For advice on specific types of data consult  [*Guides to Good Practice* published by the Archaeology Data Service and Digital Antiquity](http://guides.archaeologydataservice.ac.uk/g2gp/Main), 2011.
 
