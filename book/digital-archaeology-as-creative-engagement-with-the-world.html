@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2018-07-17">
+<meta name="date" content="2018-07-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -257,7 +257,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="digital-archaeology-as-creative-engagement-with-the-world.html"><a href="digital-archaeology-as-creative-engagement-with-the-world.html"><i class="fa fa-check"></i><b>5.3</b> Digital Archaeology as Creative Engagement with the World</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="digital-archaeology-as-creative-engagement-with-the-world.html"><a href="digital-archaeology-as-creative-engagement-with-the-world.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>5.3.1</b> Twitterbots with Tracery</a></li>
-<li class="chapter" data-level="5.3.2" data-path="digital-archaeology-as-creative-engagement-with-the-world.html"><a href="digital-archaeology-as-creative-engagement-with-the-world.html#sonification"><i class="fa fa-check"></i><b>5.3.2</b> Sonification</a></li>
+<li class="chapter" data-level="5.3.2" data-path="digital-archaeology-as-creative-engagement-with-the-world.html"><a href="digital-archaeology-as-creative-engagement-with-the-world.html#chatbots"><i class="fa fa-check"></i><b>5.3.2</b> Chatbots</a></li>
+<li class="chapter" data-level="5.3.3" data-path="digital-archaeology-as-creative-engagement-with-the-world.html"><a href="digital-archaeology-as-creative-engagement-with-the-world.html#sonification"><i class="fa fa-check"></i><b>5.3.3</b> Sonification</a></li>
+<li class="chapter" data-level="5.3.4" data-path="digital-archaeology-as-creative-engagement-with-the-world.html"><a href="digital-archaeology-as-creative-engagement-with-the-world.html#worldbuilding"><i class="fa fa-check"></i><b>5.3.4</b> Worldbuilding</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="on-the-horizons-where-digital-archaeology-might-go-next.html"><a href="on-the-horizons-where-digital-archaeology-might-go-next.html"><i class="fa fa-check"></i><b>6</b> On the Horizons: Where Digital Archaeology Might Go Next</a></li>
@@ -293,7 +295,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <blockquote>
 <p>In such a vacuum, there is a need for critical creative engagement with the past. In <em>Succinct Research</em>, Bill White reminds us why society allows archaeologists to exist in the first place: ‘it is to amplify the whispers of the past in our own unique way so they can still be heard today’. We have been failing in this by limiting the ways we might accomplish that task.</p>
 </blockquote>
-<p>In this section, we explore ways of using generative computational approaches to remix archaeological data in a variety of ways - from a whimsical archaeological Twitterbot, to sonification, to glitch photograph, to abstract painting of word patterns in R.</p>
+<p>In this section, we explore ways of using generative computational approaches to remix archaeological data in a variety of ways - from a whimsical archaeological Twitterbot, to sonification, to glitch photograph, to world building.</p>
 <div id="twitterbots-with-tracery" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Twitterbots with Tracery</h3>
 <p><em>this section reuses, adopts and modifies portions of Graham’s <a href="https://programminghistorian.org/en/lessons/intro-to-twitterbots">Programming Historian lesson on Tracery</a></em></p>
@@ -401,6 +403,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Underneath the JSON box are some settings governing how often your bot will tweet, whether your source grammar will be visible to others, and whether or not your bot will reply to messages or mentions:</p>
 <p>Decide how often you want your bot to tweet, and whether you want the source grammar visible. Then… the moment of truth. Hit the ‘tweet’ button, then go check your bot’s twitter feed. Click ‘save’.</p>
 <p>Congratulations, you have built a Twitterbot!</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Tracery can power more than bots. This site: <a href="https://lovecraftian-archaeology.glitch.me/" class="uri">https://lovecraftian-archaeology.glitch.me/</a> uses Tracery to generate archaeological site reports to lovecraftian effect. The source code is at <a href="https://glitch.com/edit/#!/lovecraftian-archaeology" class="uri">https://glitch.com/edit/#!/lovecraftian-archaeology</a>. Here, the grammar is in the file <code>grammar.js</code>. In this grammar, we are generating site names and other names that we want to reuse across the generated story. Beginning with the <code>origin</code>, diagram out how the elements interrelate to create the site report. Then, once you see how the grammar is working, adapt the code to create your own work of fiction-meets-archaeology.</li>
+</ol>
 </div>
 <div id="good-bot-citizenship" class="section level4">
 <h4><span class="header-section-number">5.3.1.4</span> Good bot citizenship</h4>
@@ -411,8 +416,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Other pointers for good bot citizenship are provided by Darius Kazemi, one of the great bot artists, are discussed <a href="http://tinysubversions.com/2013/03/basic-twitter-bot-etiquette/">here</a>.</p>
 </div>
 </div>
+<div id="chatbots" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Chatbots</h3>
+<p>Chatbots are conversational robots designed to mimic human interaction - with varying degrees of success.The <a href="https://www.emotiveproject.eu/">EMOTIVE</a> project at York University is exploring such chatbots for the purposes of storytelling and cultural heritage. The poet and programmer Allison Parish, of New York University, designs and builds various algorithmic explorations of language including such chatbots. In the <a href="https://github.com/o-date/creativity">creativity binder</a> there is a notebook by Parrish (“semantic_similarity_chatbot”) that walks you through programming such a chatbot by training it on a database of movie dialogue. It works by calculating the ‘semantic similarity’ between what you type and what exists in its database of similar responses.</p>
+<p>The notebook is very well commented out and takes you through the concepts in some detail. At the end of the notebook, Parrish makes some suggestions on where to take it next-</p>
+<blockquote>
+<p>Use the metadata file that comes with the Cornell corpus to make a chatbot that only uses lines from a particular genre of movie. (How is a comedy chatbot different from an action chatbot?) Use a different corpus of conversation altogether. Your own chat logs? Conversational exchanges from a novel? Transcripts of interviews on news programs?</p>
+</blockquote>
+<div id="exercise-1" class="section level4">
+<h4><span class="header-section-number">5.3.2.1</span> Exercise</h4>
+<ol style="list-style-type: decimal">
+<li>Train the chatbot on ‘archaeological’ movies. What does this say about the public consciousness of archaeology?</li>
+<li>Train the chatbot on a corpus of writing by a particular archaeologist. Explore the responses - what does your virtual archaeologist reveal about their practice?</li>
+</ol>
+</div>
+</div>
 <div id="sonification" class="section level3">
-<h3><span class="header-section-number">5.3.2</span> Sonification</h3>
+<h3><span class="header-section-number">5.3.3</span> Sonification</h3>
 <p><em>this section resuses, adopts and modifies portions of Graham’s <a href="https://programminghistorian.org/en/lessons/sonification">Programming Historian lesson on the sound of data</a></em></p>
 <p>While there is a lot of research into archaeo-acoustics (much of which involves digital manipulation of the sound files), in this section we want to take the opposite tack - of <em>creating</em> aural representations of our data.</p>
 <p>Pleasing or discordant sound from data can be used to signal many different things - from warning tones that something is wrong, to artistic interventions meant to draw attention to <a href="https://datadrivendj.com/tracks/louisiana/">environmental degradation</a>, to <a href="https://datadrivendj.com/tracks/subway/">economic inequality over space</a>. Sonifying archaeological materials could be an effective strategy in a work of public archaeology or advocacy.</p>
@@ -448,13 +468,35 @@ Phase 3: 87 sherds of pottery B</code></pre>
     {&#39;event_date&#39;: datetime(1030,1,1), &#39;magnitude&#39;: 47}
 ]</code></pre>
 <p>…run the code, save the output, and then do the same thing again for pottery B.</p>
-<div id="exercise-1" class="section level4">
-<h4><span class="header-section-number">5.3.2.1</span> Exercise</h4>
+<div id="exercise-2" class="section level4">
+<h4><span class="header-section-number">5.3.3.1</span> Exercise</h4>
 <ol style="list-style-type: decimal">
 <li>Collect some data that you would like to sonify. Construct an array as above to express each potential ‘voice’ in your final composition. What do you think you might ‘hear’?</li>
 <li>Try the <a href="https://programminghistorian.org/en/lessons/sonification#musicalgorithms">Programming Historian sonification tutorial using Musicalgorithms</a> to represent that data. What is the key difference between that approach, and the approach detailed here using miditime? How does it differ, and what does that <em>sound</em> like? Try sketching out how you could use these differences to explain key concepts in archaeology to a public audience.</li>
 <li>Launch the <a href="https://mybinder.org/v2/gh/o-date/sonification/master">jupyter notebook</a> to explore miditime’s approach to sonifying time-series data. Build mutliple voices, and mix them together using Garageband or <a href="https://www.audacityteam.org/">Audacity</a>. What creative decisions do you have to take in order to make this work? How do they change the data, or what you are able to hear? What <em>do</em> you hear - and <em>what</em> might it mean?</li>
 </ol>
+</div>
+</div>
+<div id="worldbuilding" class="section level3">
+<h3><span class="header-section-number">5.3.4</span> Worldbuilding</h3>
+<p>There is an approach to video games called ‘procedural content generation’ to create the world of the game so that it is always unique when you play it. <em>Minecraft</em> is one game that uses procedural content generation; <em>No Man’s Sky</em> is another. In the <a href="https://github.com/o-date/creativity">creativity binder</a> there is a subfolder called ‘WorldBuilding’ that contains a notebook, ‘model demo’. This notebook builds a world by simulating certain environmental processes, where the terrain is modeled as a series of Voronoi polygons with elevation and simulated water erosion along the edges, after <a href="https://twitter.com/mewo2">Martin O’Leary</a>‘s tutorial on <a href="http://mewo2.com/notes/terrain/">Creating Fantasy Maps</a>. Nomads move into this terrain and travel around it, from which movement trails and cities emerge. These cities then interact following the well known <a href="http://www-personal.umich.edu/~axe/research/Building.pdf">Axelrod Tribute Model</a>. The final elements of this demonstration generate a kind of chronicle that tells the ’history’ of this world.</p>
+<p>Another kind of procedural history generator can be found in the same binder in the ‘history generator’ folder, which also permits the visualization of the ‘history’, like so:</p>
+<div class="figure">
+<img src="images/prochist.png" alt="Output of the script" />
+<p class="caption">Output of the script</p>
+</div>
+<p>This script contains a very simple model of state formation, fusion and fision. It also incorporates a Tracery grammar to ‘liven up’ the resulting chronicle. As a final feature, it uses the graphviz library to visualization the relationships through time.</p>
+<div id="exercises-24" class="section level4">
+<h4><span class="header-section-number">5.3.4.1</span> Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Examine the underlying models for interaction. What are their theoretical underpinnings? What would have to be modified to make these generative worlds/histories more ‘real’?</li>
+<li>How could such generative histories be used for public archaeology?</li>
+</ol>
+<p>To close this section on creative engagement, we shall leave the final word to James Ryan. Ryan is a PhD student at the University of California Santa Cruz who is using similar methods to generate a podcast that tells the story of a fictitious town in ‘Sheldon County’. A good discussion of his project can be found on <a href="https://www.eurogamer.net/articles/2018-07-14-the-us-town-ruled-by-an-ai-storyteller">eurogamer.net</a>. Ryan says,</p>
+<blockquote>
+<p>I view coding as a kind of literacy that works a lot like regular literacy: just as writing enables modes of human expression that span from the boring, mundane, functional to the creative, poetic, profound, coding does as well. So, to me, creative coding is to coding as creative writing is to writing. I try to make sure that each day I spend working on a simulation leads to interesting new possibilities being generable by the time I stop working that day. Again, the whole process feels kind of like sculpting to me, as opposed to writing, for instance, where the work is more linear. The artist is simply working in a different material context. Working with oil paints is a lot different than working with clay which is a lot different than working on a typewriter, and all of these are different than working with code. But these are all tools of expression.&quot;</p>
+</blockquote>
+<p>What could creative engagement and expressive use of coding with digital archaeological data, in terms of the ways the public learns about archaeology? Or how to view the world through an archaeological lense?</p>
 
 </div>
 </div>

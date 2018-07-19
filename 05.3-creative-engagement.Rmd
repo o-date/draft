@@ -8,7 +8,7 @@ This is part of the rationale for the open access journal [_Epoiesen: A Journal 
 
 > In such a vacuum, there is a need for critical creative engagement with the past. In _Succinct Research_, Bill White reminds us why society allows archaeologists to exist in the first place: 'it is to amplify the whispers of the past in our own unique way so they can still be heard today'. We have been failing in this by limiting the ways we might accomplish that task.
 
-In this section, we explore ways of using generative computational approaches to remix archaeological data in a variety of ways - from a whimsical archaeological Twitterbot, to sonification, to glitch photograph, to abstract painting of word patterns in R.
+In this section, we explore ways of using generative computational approaches to remix archaeological data in a variety of ways - from a whimsical archaeological Twitterbot, to sonification, to glitch photograph, to world building.
 
 ### Twitterbots with Tracery
 
@@ -169,6 +169,8 @@ Decide how often you want your bot to tweet, and whether you want the source gra
 
 Congratulations, you have built a Twitterbot!
 
+3. Tracery can power more than bots. This site: [https://lovecraftian-archaeology.glitch.me/](https://lovecraftian-archaeology.glitch.me/) uses Tracery to generate archaeological site reports to lovecraftian effect. The source code is at [https://glitch.com/edit/#!/lovecraftian-archaeology](https://glitch.com/edit/#!/lovecraftian-archaeology). Here, the grammar is in the file `grammar.js`. In this grammar, we are generating site names and other names that we want to reuse across the generated story. Beginning with the `origin`, diagram out how the elements interrelate to create the site report. Then, once you see how the grammar is working, adapt the code to create your own work of fiction-meets-archaeology.
+
 #### Good bot citizenship
 
 As Cheap Bots Done Quick is a service provided by George Buckenham out of a spirit of goodwill, do not use the service to create bots that are offensive or abusive or that otherwise will spoil the service for everyone else. As he writes,
@@ -176,6 +178,20 @@ As Cheap Bots Done Quick is a service provided by George Buckenham out of a spir
 > If you create a bot I deem abusive or otherwise unpleasant (for example, \@mentioning people who have not consented, posting insults or using slurs) I will take it down
 
 Other pointers for good bot citizenship are provided by Darius Kazemi, one of the great bot artists, are discussed [here](http://tinysubversions.com/2013/03/basic-twitter-bot-etiquette/).
+
+### Chatbots
+
+Chatbots are conversational robots designed to mimic human interaction - with varying degrees of success.The [EMOTIVE](https://www.emotiveproject.eu/) project at York University is exploring such chatbots for the purposes of storytelling and cultural heritage. The poet and programmer Allison Parish, of New York University, designs and builds various algorithmic explorations of language including such chatbots. In the [creativity binder](https://github.com/o-date/creativity) there is a notebook by Parrish ("semantic_similarity_chatbot") that walks you through programming such a chatbot by training it on a database of movie dialogue. It works by calculating the 'semantic similarity' between what you type and what exists in its database of similar responses. 
+
+The notebook is very well commented out and takes you through the concepts in some detail. At the end of the notebook, Parrish makes some suggestions on where to take it next- 
+
+> Use the metadata file that comes with the Cornell corpus to make a chatbot that only uses lines from a particular genre of movie. (How is a comedy chatbot different from an action chatbot?)
+Use a different corpus of conversation altogether. Your own chat logs? Conversational exchanges from a novel? Transcripts of interviews on news programs?
+
+#### Exercise
+
+1. Train the chatbot on 'archaeological' movies. What does this say about the public consciousness of archaeology?
+2. Train the chatbot on a corpus of writing by a particular archaeologist. Explore the responses - what does your virtual archaeologist reveal about their practice?
 
 ### Sonification
 
@@ -240,3 +256,27 @@ my_data = [
 1. Collect some data that you would like to sonify. Construct an array as above to express each potential 'voice' in your final composition. What do you think you might 'hear'?
 2. Try the [Programming Historian sonification tutorial using Musicalgorithms](https://programminghistorian.org/en/lessons/sonification#musicalgorithms) to represent that data. What is the key difference between that approach, and the approach detailed here using miditime? How does it differ, and what does that _sound_ like? Try sketching out how you could use these differences to explain key concepts in archaeology to a public audience.
 3. Launch the [jupyter notebook](https://mybinder.org/v2/gh/o-date/sonification/master) to explore miditime's approach to sonifying time-series data. Build mutliple voices, and mix them together using Garageband or [Audacity](https://www.audacityteam.org/). What creative decisions do you have to take in order to make this work? How do they change the data, or what you are able to hear? What *do* you hear - and *what* might it mean?
+
+
+### Worldbuilding
+
+There is an approach to video games called 'procedural content generation' to create the world of the game so that it is always unique when you play it. _Minecraft_ is one game that uses procedural content generation; _No Man's Sky_ is another. In the [creativity binder](https://github.com/o-date/creativity) there is a subfolder called 'WorldBuilding' that contains a notebook, 'model demo'. This notebook builds a world by simulating certain environmental processes, where the terrain is modeled as a series of Voronoi polygons with elevation and simulated water erosion along the edges, after [Martin O'Leary](https://twitter.com/mewo2)'s tutorial on [Creating Fantasy Maps](http://mewo2.com/notes/terrain/). Nomads move into this terrain and travel around it, from which movement trails and cities emerge. These cities then interact following the well known [Axelrod Tribute Model](http://www-personal.umich.edu/~axe/research/Building.pdf). The final elements of this demonstration generate a kind of chronicle that tells the 'history' of this world. 
+
+Another kind of procedural history generator can be found in the same binder in the 'history generator' folder, which also permits the visualization of the 'history', like so:
+
+![Output of the script](images/prochist.png)
+
+This script contains a very simple model of state formation, fusion and fision. It also incorporates a Tracery grammar to 'liven up' the resulting chronicle. As a final feature, it uses the graphviz library to visualization the relationships through time.
+
+#### Exercises
+
+1. Examine the underlying models for interaction. What are their theoretical underpinnings? What would have to be modified to make these generative worlds/histories more 'real'?
+2. How could such generative histories be used for public archaeology?
+
+To close this section on creative engagement, we shall leave the final word to James Ryan. Ryan is a PhD student at the University of California Santa Cruz who is using similar methods to generate a podcast that tells the story of a fictitious town in 'Sheldon County'. A good discussion of his project can be found on [eurogamer.net](https://www.eurogamer.net/articles/2018-07-14-the-us-town-ruled-by-an-ai-storyteller). Ryan says,
+
+>  I view coding as a kind of literacy that works a lot like regular literacy: just as writing enables modes of human expression that span from the boring, mundane, functional to the creative, poetic, profound, coding does as well. So, to me, creative coding is to coding as creative writing is to writing. 
+> I try to make sure that each day I spend working on a simulation leads to interesting new possibilities being generable by the time I stop working that day. Again, the whole process feels kind of like sculpting to me, as opposed to writing, for instance, where the work is more linear. The artist is simply working in a different material context. Working with oil paints is a lot different than working with clay which is a lot different than working on a typewriter, and all of these are different than working with code.
+> But these are all tools of expression."
+
+What could creative engagement and expressive use of coding with digital archaeological data, in terms of the ways the public learns about archaeology? Or how to view the world through an archaeological lense?
