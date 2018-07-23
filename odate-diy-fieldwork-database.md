@@ -1,9 +1,91 @@
-
 #Overview
+Archaeology is an inherently collaborative process that happens in various places simulataneously. It is therefore often challening to ensure that archaeological databases, which serve to store and organize inter-related information obtained through various methods and practices, are kept up to date and syncronized across research environments. In order to deal with these challenges it might be necessary to set up a database hosted on a network, which would enable multiple users to simultaneously engage with the database while ensuring that the data remains orderly and complete.
 
-##Networking Basics
-##Raspberry Pi and Raspbian
-##Tinkering and Improvising in the Field
+In order to implement such a system we need to set up a network, set up a server, set up a database along with user-friendly interfaces, and ensure that the system is aligned with and contributes positively to the goals of the overall project.
+
+The system that we're going to build will look something like this:
+![DIY Fieldwork Database Diagram](https://github.com/zackbatist/DIYFieldworkDatabase/raw/master/DIYDatabaseDiagram.png)
+
+It consists of:
+- a local network generated and managed by a wireless router
+- a Raspberri Pi mini-computer upon which the database will reside and be served to other devices across the network
+- the software configured to host the database and ensure that the data is secured and backed up
+- user interfaces that talk to the database and that encourage desired user behaviour
+- other useful services such as a file sharing server and data visualization portal that may help encourage collaborative and informed research
+
+The system that we're going to build may be suitable for some, but not for others. It is therefore important to remember that this all requires some degree of flexibility so that what you make suits the overall goals of the project you're contributing to. So you may copy these instructions directly or tinker around to suit your needs!
+
+##A Note on Hardware
+This is meant to be a very portable, low energy use and inexpensive setup. While I recommend that you use a dedicated server - a computer that is configured to run the database server and only the database server - you can actually host the database on the same device that you use as a user interface. I will be including notes on how to configure this to work all on one device, but I recommend that you not use this kind of setup for educational and testing purposes only, and not in a production environment. Raspberry Pi is available online for around 45$ CAD at https://www.raspberrypi.org/products/, or your local makerspace will likely be happy tp lend you one to play with. You will also need a SD card with a capacity of at least 8GB, a wireless router (this one is 40$ and tiny - perfect for portability! https://amzn.to/2HoOM6W), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: https://amzn.to/2Ht8quv) and a couple USB flash drives with varying storage capacities that suit your needs.
+
+This guide is designed with unix-users in mind - so those who use MacOS or Linux. Sorry Windows users :(
+
+#Networking Basics
+What is a local network?
+- local network vs the internet
+- wireless vs wired
+- ip addresses and dhcp management (the role of the router as manager of the network)
+What is a server?
+- a specialized computer
+- designed to be lightweight and efficient
+- consist of hardware and software elements
+What is a user?
+- also referred to as a client, terminal or workstation
+- they work remotely
+- define the terms local and remote
+
+#Raspberry Pi and Raspbian
+- Raspberry Pi has its own Linux Distribution designed to be lightweight and consume less power
+- it is often run headless, or without an external monitor, keyboard and mouse
+- encourage them to use the command line
+- Raspbian is extremely easy to install and reinstall
+- the operating system resides on a SD card
+- show how the OS is set up, including ssh and wpa_supplicant setup
+- show them how to install updates
+- show them how to install new software (use tightvnc as an example maybe)
+- show them how to SSH
+- show them how to configure a static IP address
+- include or reference a cheat sheet with basic terminal commands
+- show them around certain directories (/etc) and encourage them to ask the community for help
+- show them how to shut down the Raspberry Pi
+
+#Multi-User Databases
+- I mentioned how servers have both hardware and software components, now is the time to configure the software
+- explain how MariaDB is a fork of MySQL, but pretty much everything is the same
+- explain that the database resides on the SD card, and that users can connect to it remotely with the following information: the server's IP address, the port that is used by MariaDB, the name of the database, and login credentials
+- so let's install MariaDB Server
+- let's login as root
+- let's create a database
+- let's create a user and grant permissions
+- let's create tables
+- explain indexes and primary keys
+- let's insert data to the tables
+- let's select data from tables
+- let's update data from tables
+- let's make relationships among tables
+- let's join data from multiple tables
+- let's delete data from tables
+- do all this from the command line but show how it can also be done from a GUI like Sequel Pro or SQL Workbench, which actually shows the queries being run
+
+#Client side stuff
+- explain ODBC (it's a driver that translates across database management systems (DBMSs))
+- show how they would connect to the database from MS Access (setup ODBC and DSN, Linked Table Manager, creating forms in Access, etc)
+- show that in certain cases ODBC is not necessary, such as when using R Shiny since the data is being entered directly rather than passed along through an intermediary DBMS such as MS Access
+- link down to a permalink explaining the R Shiny app in more detail
+
+#Other bits and bobs
+- automatic scheduled backups
+- SMB file sharing
+- R Shiny frontends
+
+#Tinkering and Improvising in the Field
+- working in multiple locations without any internet connection (and sqldump workaround)
+- ensure that people, especially higher up, understand the constraints and limitations you face
+- show people rather than tell
+- be respectful of their data and devices
+- power outages and working off-grid
+- migrating to the cloud and back
+- keep notes, watch your posture, etc
 
 #Discussion
 
@@ -12,24 +94,6 @@
 #Excercises
 
 #Further Reading
-
-# DIYFieldworkDatabase
-## Overview of the system
-I put together a little DIY fieldwork database server using nearly entirely open source tools and software. It consists of a Raspberry Pi operating on a local network, which contains a MariaDB server, a SMB file sharing server, an R Shiny server, and automatic scheduled backups, but can be configured or extended to suit whatever situation you're in. This is a more collaborative and distributed setup than a typical Microsoft Access setup (or even worse, a series of scattered spreadsheets :z), since multiple users can simultaneously enter data stored in a unified and central directory, share files across the network, and browse what's going on across an entire project. Microsoft Access, on the other hand, is proprietary, expensive and windows-only software that has poor multi-user support and the learning curve is steeper than its worth (I could go on...).
-
-Moreover, this is a very inexpensive and portable setup. In terms of hardware, you will need a 35$ Raspberry Pi, a 32GB SD card (also ~35$), a small router (this one is 40$ and tiny! https://amzn.to/2HoOM6W), a high ampage external battery (I recommend this one at 43$: https://amzn.to/2Ht8quv) and a couple USB flash drives with storage capacities that suit your needs.
-
-Please refer to the diagram for further details regarding hardware configuration and overall setup.
-
-![DIYDatabaseDiagram.png](https://github.com/zackbatist/DIYFieldworkDatabase/raw/master/DIYDatabaseDiagram.png)
-
-This repo documents how I put things together and made things work. Please get in touch if you have any questions!
-
-- Zack Batist
-- [@mtl_zack](https://twitter.com/mtl_zack/) on twitter
-- [zackbatist](https://github.com/zackbatist/) on github
-
-R code and SQL snippets coming soon!
 
 ## Installing Raspbian
 Insert microSD card into the adapter and insert into a laptop.
