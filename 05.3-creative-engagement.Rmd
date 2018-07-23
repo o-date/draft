@@ -10,6 +10,14 @@ This is part of the rationale for the open access journal [_Epoiesen: A Journal 
 
 In this section, we explore ways of using generative computational approaches to remix archaeological data in a variety of ways - from a whimsical archaeological Twitterbot, to sonification, to glitch photograph, to world building.
 
+To close this introduction to creative engagement, we shall leave the final word to James Ryan. Ryan is a PhD student at the University of California Santa Cruz who is using similar methods to generate a podcast that tells the story of a fictitious town in 'Sheldon County'. A good discussion of his project can be found on [eurogamer.net](https://www.eurogamer.net/articles/2018-07-14-the-us-town-ruled-by-an-ai-storyteller). Ryan says,
+
+>  I view coding as a kind of literacy that works a lot like regular literacy: just as writing enables modes of human expression that span from the boring, mundane, functional to the creative, poetic, profound, coding does as well. So, to me, creative coding is to coding as creative writing is to writing. 
+> I try to make sure that each day I spend working on a simulation leads to interesting new possibilities being generable by the time I stop working that day. Again, the whole process feels kind of like sculpting to me, as opposed to writing, for instance, where the work is more linear. The artist is simply working in a different material context. Working with oil paints is a lot different than working with clay which is a lot different than working on a typewriter, and all of these are different than working with code.
+> But these are all tools of expression."
+
+What could creative engagement and expressive use of coding with digital archaeological data, in terms of the ways the public learns about archaeology? Or how to view the world through an archaeological lense?
+
 ### Twitterbots with Tracery
 
 _this section reuses, adopts and modifies portions of Graham's [Programming Historian lesson on Tracery](https://programminghistorian.org/en/lessons/intro-to-twitterbots)_
@@ -260,7 +268,7 @@ my_data = [
 
 ### Worldbuilding
 
-There is an approach to video games called 'procedural content generation' to create the world of the game so that it is always unique when you play it. _Minecraft_ is one game that uses procedural content generation; _No Man's Sky_ is another. In the [creativity binder](https://github.com/o-date/creativity) there is a subfolder called 'WorldBuilding' that contains a notebook, 'model demo'. This notebook builds a world by simulating certain environmental processes, where the terrain is modeled as a series of Voronoi polygons with elevation and simulated water erosion along the edges, after [Martin O'Leary](https://twitter.com/mewo2)'s tutorial on [Creating Fantasy Maps](http://mewo2.com/notes/terrain/). Nomads move into this terrain and travel around it, from which movement trails and cities emerge. These cities then interact following the well known [Axelrod Tribute Model](http://www-personal.umich.edu/~axe/research/Building.pdf). The final elements of this demonstration generate a kind of chronicle that tells the 'history' of this world. 
+There is an approach to video games called 'procedural content generation' to create the world of the game so that it is always unique when you play it. _Minecraft_ is one game that uses procedural content generation; _No Man's Sky_ is another. In the [creativity2 binder](https://github.com/o-date/creativity2) there is a subfolder called 'WorldBuilding' that contains a notebook, 'model demo'. This notebook builds a world by simulating certain environmental processes, where the terrain is modeled as a series of Voronoi polygons with elevation and simulated water erosion along the edges, after [Martin O'Leary](https://twitter.com/mewo2)'s tutorial on [Creating Fantasy Maps](http://mewo2.com/notes/terrain/). Nomads move into this terrain and travel around it, from which movement trails and cities emerge. These cities then interact following the well known [Axelrod Tribute Model](http://www-personal.umich.edu/~axe/research/Building.pdf). The final elements of this demonstration generate a kind of chronicle that tells the 'history' of this world. 
 
 Another kind of procedural history generator can be found in the same binder in the 'history generator' folder, which also permits the visualization of the 'history', like so:
 
@@ -273,10 +281,3 @@ This script contains a very simple model of state formation, fusion and fision. 
 1. Examine the underlying models for interaction. What are their theoretical underpinnings? What would have to be modified to make these generative worlds/histories more 'real'?
 2. How could such generative histories be used for public archaeology?
 
-To close this section on creative engagement, we shall leave the final word to James Ryan. Ryan is a PhD student at the University of California Santa Cruz who is using similar methods to generate a podcast that tells the story of a fictitious town in 'Sheldon County'. A good discussion of his project can be found on [eurogamer.net](https://www.eurogamer.net/articles/2018-07-14-the-us-town-ruled-by-an-ai-storyteller). Ryan says,
-
->  I view coding as a kind of literacy that works a lot like regular literacy: just as writing enables modes of human expression that span from the boring, mundane, functional to the creative, poetic, profound, coding does as well. So, to me, creative coding is to coding as creative writing is to writing. 
-> I try to make sure that each day I spend working on a simulation leads to interesting new possibilities being generable by the time I stop working that day. Again, the whole process feels kind of like sculpting to me, as opposed to writing, for instance, where the work is more linear. The artist is simply working in a different material context. Working with oil paints is a lot different than working with clay which is a lot different than working on a typewriter, and all of these are different than working with code.
-> But these are all tools of expression."
-
-What could creative engagement and expressive use of coding with digital archaeological data, in terms of the ways the public learns about archaeology? Or how to view the world through an archaeological lense?

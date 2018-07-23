@@ -1,0 +1,62 @@
+## 3D Printing, the Internet of Things and “Maker” Archaeology
+
+
+
+### 3d Printing - a Workflow
+
+In the workflow described below, it is entirely possible to 3d print a wide variety of data that are not, strictly speaking '3d' in the sense of existing in three dimensions in the 'real world'. For instance, one could extract the hue, colour, and saturation values of a collection of site photographs and 3d print an object that represents several hundred photographs as a surface where x = hue, y = colour, and z = saturation. 
+
+![Hue, color, and saturation values for 9000 images depicting human remains for sale collected from Instagram](images/9000images3dspace.jpg)
+
+Users will obtain values for x,y,z and represent those values as points using the values from x,y. The z value will remain in the attribute table and will be used later. Once the points are represented in x,y space, we'll create a digital elevation model (DEM). This essentially will take the x,y points and interpolate or mathematically guess all of the values between the points while assigning a pixel value to each location from the z attribute table. Typically this z value represents elevation (hence the name of the DEM), but this is typically colour coded in various shades of grey/black/white. The last step will be to use a tool in [QGIS](https://www.qgis.org/en/site/) to convert the DEM to an STL file, which is a standard 3d object file format that is used for makerbot. This will create the 3D object, which can then be printed using the 3D printer.
+
+Let's walk through the process.
+
+You have data values that you'd like represent in a 3D space. To display values into 3D space, you'll need values inputed in x,y and z. x,y will represent your data in a 2D space, while the addition of the z value will add the 3rd dimension. The method outlined below is typically done to display geographic data, but it can also be used with other types of data. The method below will use non-geographic data to create a 3D object file.
+
+The software used in this workflow is QGIS. QGIS is a free open source desktop geographic information systems (GIS) application that allows users to view, edit and analyze geographic information. Users can [download the tool for Windows, MAC OS X or Linux at the following website.](http://www.qgis.org/en/site/forusers/download.html "download") The workflow below was done using QGIS 2.14.
+
+#### Create a point shapefile
+
+1. Collect or ensure that you have a comma-separated file (.csv) with values of x,y,z. This is displayed in a text editor, but it can also be viewed as tabular data. 
+
+![Comma seperated values](images/joelcsv.png).
+
+2. Open QGIS and in the menu, click on Layer > Add Layer > Add delimited text layer... This will allow us to add our .csv file in QGIS 
+
+![Add delimited layer](images/joelimportcsv.png).
+
+You should now see some points displayed in QGIS. You'll notice in the layers panel on the left that there is a point file. This point file is considered to be a vector feature with its geometry represented as a point. If you can't see the Layers Panel, select in the menu View > Panels > Layers Panel. In the layers Panel, turn the layer on/off by clicking on the box next to it. Keep in mind that this point file is only temporary and should now be saved properly.
+
+3. In the Layers Panel, right click on the file and select Save as... and change to the settings as outlined in the screenshot. Ensure that you change the CRS to EPSG 3857 WGS 84 / Pseudo Mercator.
+
+4. In the Layers Panel, remove the temporary point file by right clicking on the file and clicking remove. You'll want to have only the pointfilepseudo in the Layers Panel.
+
+Your data is now viewed in 2D space and represented as points. Each point (x,y) has a z value associated to it, even if we can't see it. You can view this z value by clicking on identify tool in QGIS and then clicking on a point. The underlying attribute table will appear, indicating the value of x,y and most importantly the z.
+
+#### Create a Digital Elevation Model
+
+Our next step is to fill in the gaps between the points. To do so, we'll convert the vector point geometry to raster pixels while we use interpolation tools in QGIS to do this. This is quite common in a GIS software, where users attempt to interpolate the elevation of the area with use the spot height points. The output product from this operation is called a digital elevation model (DEM).
+
+  1. In QGIS, click on View > Panels > Toolbox. This will open up the Processing Toolbox window on the right. We'll be using one of the interpolation tools from this toolbox to create our Digital Elevation Model (DEM).
+  2. In the search box, type v.surf. This will bring up various interpolation tools that can be used for your interpolation with the use of GRASS tools. GRASS (Geographic Resources Analysis Support System) are open source tools that can be used in QGIS or as a standalone application. In this case, we're using the GRASS tools in QGIS.
+  3. Double click on the v.surf.idw - surface interpolation by...The idw in this particular case refers to the interpolate method of Inverse-Distance Weighted. This method essentially gives less weight to known points that are furthest when trying to interpolate values.
+  4. Fill in the information as seen in the screenshot. The algorithm will process and your output will be added to the Layers Panel.
+
+  You'll see various shades of grey/black/white sections when looking at the DEM raster in QGIS. Each shade of grey represents a different value of z.
+
+#### Create a 3D object (.stl)
+
+For 3D printing, users must have specific file formats. An .obj or .stl are some of the common formats that can be used to create 3D models. Meshlab is a free tool that can be used to view and convert between multiple types of 3D object formats. In our particular case, we'll be printing our final 3D object on a makerbot printer. We'll need the file format to be in .stl. Luckily for us, QGIS can export directly from a DEM to STL file.
+
+  1. In QGIS, click plugins > Manage and Install Plugins...
+  2. In the search box, type DEMto3d. This should bring up the plugin that's required for our conversion. Click on the plugin and install it. Exit the plugins menu when complete.
+  3. In the QGIS menu, click on Raster > DEMto3D > DEM 3D Printing. Select the InterpolateIDW layer and the remainder of the settings as outlined in the screenshot below. Once complete, click on Export to STL. Once prompted to save the file, select the appropriate directory.
+
+#### Print 3D object or create AR
+
+This will export an stl file that is rather large in file size. This stl file can be used to print a 3D representation of the model or can be used to view the model as an augmented reality object.
+
+### discussion
+
+### exercises
