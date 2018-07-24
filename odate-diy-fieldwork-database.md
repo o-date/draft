@@ -1,4 +1,4 @@
-#Overview
+# Overview
 Archaeology is an inherently collaborative process that happens in various places simulataneously. It is therefore often challening to ensure that archaeological databases, which serve to store and organize inter-related information obtained through various methods and practices, are kept up to date and syncronized across research environments. In order to deal with these challenges it might be necessary to set up a database hosted on a network, which would enable multiple users to simultaneously engage with the database while ensuring that the data remains orderly and complete.
 
 In order to implement such a system we need to set up a network, set up a server, set up a database along with user-friendly interfaces, and ensure that the system is aligned with and contributes positively to the goals of the overall project.
@@ -15,12 +15,12 @@ It consists of:
 
 The system that we're going to build may be suitable for some, but not for others. It is therefore important to remember that this all requires some degree of flexibility so that what you make suits the overall goals of the project you're contributing to. So you may copy these instructions directly or tinker around to suit your needs!
 
-##A Note on Hardware
+## A Note on Hardware
 This is meant to be a very portable, low energy use and inexpensive setup. While I recommend that you use a dedicated server - a computer that is configured to run the database server and only the database server - you can actually host the database on the same device that you use as a user interface. I will be including notes on how to configure this to work all on one device, but I recommend that you not use this kind of setup for educational and testing purposes only, and not in a production environment. Raspberry Pi is available online for around 45$ CAD at https://www.raspberrypi.org/products/, or your local makerspace will likely be happy tp lend you one to play with. You will also need a SD card with a capacity of at least 8GB, a wireless router (this one is 40$ and tiny - perfect for portability! https://amzn.to/2HoOM6W), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: https://amzn.to/2Ht8quv) and a couple USB flash drives with varying storage capacities that suit your needs.
 
 This guide is designed with unix-users in mind - so those who use MacOS or Linux. Sorry Windows users :(
 
-#Networking Basics
+# Networking Basics
 What is a local network?
 - local network vs the internet
 - wireless vs wired
@@ -34,7 +34,7 @@ What is a user?
 - they work remotely
 - define the terms local and remote
 
-#Raspberry Pi and Raspbian
+# Raspberry Pi and Raspbian
 - Raspberry Pi has its own Linux Distribution designed to be lightweight and consume less power
 - it is often run headless, or without an external monitor, keyboard and mouse
 - encourage them to use the command line
@@ -49,7 +49,7 @@ What is a user?
 - show them around certain directories (/etc) and encourage them to ask the community for help
 - show them how to shut down the Raspberry Pi
 
-#Multi-User Databases
+# Multi-User Databases
 - I mentioned how servers have both hardware and software components, now is the time to configure the software
 - explain how MariaDB is a fork of MySQL, but pretty much everything is the same
 - explain that the database resides on the SD card, and that users can connect to it remotely with the following information: the server's IP address, the port that is used by MariaDB, the name of the database, and login credentials
@@ -67,18 +67,18 @@ What is a user?
 - let's delete data from tables
 - do all this from the command line but show how it can also be done from a GUI like Sequel Pro or SQL Workbench, which actually shows the queries being run
 
-#Client side stuff
+# Client side stuff
 - explain ODBC (it's a driver that translates across database management systems (DBMSs))
 - show how they would connect to the database from MS Access (setup ODBC and DSN, Linked Table Manager, creating forms in Access, etc)
 - show that in certain cases ODBC is not necessary, such as when using R Shiny since the data is being entered directly rather than passed along through an intermediary DBMS such as MS Access
 - link down to a permalink explaining the R Shiny app in more detail
 
-#Other bits and bobs
+# Other bits and bobs
 - automatic scheduled backups
 - SMB file sharing
 - R Shiny frontends
 
-#Tinkering and Improvising in the Field
+# Tinkering and Improvising in the Field
 - working in multiple locations without any internet connection (and sqldump workaround)
 - ensure that people, especially higher up, understand the constraints and limitations you face
 - show people rather than tell
@@ -87,13 +87,13 @@ What is a user?
 - migrating to the cloud and back
 - keep notes, watch your posture, etc
 
-#Discussion
+# Discussion
 
-#Takeaways
+# Takeaways
 
-#Excercises
+# Excercises
 
-#Further Reading
+# Further Reading
 
 ## Installing Raspbian
 Insert microSD card into the adapter and insert into a laptop.
