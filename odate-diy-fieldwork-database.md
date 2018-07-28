@@ -35,15 +35,99 @@ Other kinds of specialized buildings might exist in the town as well. You might 
 Finally, **a user (also referred to as a client, terminal or workstation) is any other computer on the network that is served information or passes along information to be served to others.** The things that they do on their own computer are local relative to other computers on the network. The terms 'local' and 'remote' are therefore commonly used to designate things that occur close to home base, and things that occur further away, respectively.
 
 # Raspberry Pi and Raspbian
-- Raspberry Pi has its own Linux Distribution designed to be lightweight and consume less power
-- it is often run headless, or without an external monitor, keyboard and mouse
-- encourage them to use the command line
-- Raspbian is extremely easy to install and reinstall
-- the operating system resides on a SD card
-- show how the OS is set up, including ssh and wpa_supplicant setup
-- show them how to install updates
-- show them how to install new software (use tightvnc as an example maybe)
-- show them how to SSH
+Raspberry Pi is an open source, inexpensive and low-power mini-computer that includes all the necessary components needed to do a wide variety of creative things. It's very popular among makers and DIY/DIWO hackers due to its extensibility and flexibility of use. Raspberry Pi has its own Linux distribution called Raspbian OS, which is designed to be lightweight and consume relatively little power.
+
+While you _could_ connect a display, keyboard and mouse to the Raspberry Pi and interface with it directly, it's actually very common to run it 'headless' - by running commands via the command line or terminal over a network, without the use of a visual user interface. It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone inevitably does) you'll be back up and running in a matter of minutes!
+
+So let's get started by installing Raspbian on a SD card. Start by inserting the SD card into your computer using an adapter (these tend to come with the microSD card if you just bought a new one, but makerspaces and photographers may have one lying around for you to borrow). Once it's in it will mount automatically and you should see it pop up on your finder or file explorer. It might have a different name, but be sure you are able to identify it and associate it with what you just inserted into your laptop or desktop computer.
+
+Now we'll have to wipe and format the microSD card using an SD Card Formatter tool. Use the one made available by the SD Association, available at: https://www.sdcard.org/downloads/formatter_4/.
+
+[more details and screenshots here]
+
+Once the microSD card is wiped and formatted, we want to etch the Raspbian operating system onto the card. First, download Raspbian OS from https://www.raspberrypi.org/downloads/raspbian/, and then use Etcher (available at https://etcher.io/) to write it to the microSD card. This may take a few minutes. Notice that the mounted volume is no re-named 'boot'.
+
+[more details and screenshots]
+
+There are a couple other things that we need to do to ensure that we can interface with the Raspberry Pi headless. First we need to create a file in the OS that enables SSH interface. Open terminal (/Applications/Utilities/Terminal.app, or by hitting Command+Space and then typing Terminal.app) and type the following, then hit enter. Touch is a command that creates an empty text file, in a location specified after the space. So we are creating a text file called 'ssh' in the main directory of the boot volume. What this file does, in simple terms, is specify that it's okay to allow other computers to interface with the Raspberry Pi over the network.
+
+Configure the OS to enable SSH on first boot.
+```
+touch /Volumes/boot/ssh
+```
+
+So now that we've specified that it's okay for network-based interactions, we need to enable the Raspberry Pi to connect to the network automatically in the first place - we can't control the Raspberry Pi if it's not connected to the network, and we can't connect to the network without controlling the Raspberry Pi. Therefore we create the following file before finalizing the operating system's setup, to enable the Raspberry Pi to connect to the specified network automatically upon startup:
+
+```
+touch /Volumes/boot/wpa_supplicant.conf
+```
+This creates the file wpa_supplicant.conf in the main directory, similarly to as we did earlier.
+
+```
+cd /Volumes/boot
+nano wpa_supplicant.conf
+```
+This navigates us to the main directory of the boot volume, and then uses a small text editor called nano to open the file and start editing it. Alternatively, we could open and edit the file without navigating into the boot directory first by specifying the file's location from our starting location: `nano /Volumes/boot/wpa_supplicant.conf` ('/Volumes/boot/' is unnecessary to include when we are already located in that directory, having used `cd` to get there.
+
+You should now see a blank file like this: [screenshot]
+Type the following into ```wpa_supplicant.conf```. Remember to change the generic country code, network SSID and network password, including the <> characters, to suit your setup.
+```
+country=<XX>
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="<network name>"
+    psk="<network password>"
+}
+```
+
+Exit nano by hitting Control+X, and then hitting y when asked if you'd like to save the buffer (which means save the file). You should return to the normal terminal window.
+
+Now eject the microSD card, place it in the Raspberry Pi and boot it up. Wait a couple minutes for it to finish booting up. The red LED light specifies power consumption (solid means power is flowing, flickering means inadequate power supply, i.e. needs a supply with better ampage), and the green LED light specifies data processing. The operating system will be finished installing once the green LED calms down.
+
+Note: There is no power switch on the Raspberry Pi, and power-supply can therefore be a bit finicky. You will have to shut down the computer by running a specific command.
+
+DO NOT JUST UNPLUG THE POWER CHORD! THAT CAN CORRUPT THE SD CARD AND YOU'LL HAVE TO RE-IMAGE IT AND LOSE ALL DATA IN THE PROCESS! I KNOW THIS FROM MY OWN PAINFUL AND STUPID EXPERIENCE SO DON'T EVEN DARE!
+
+Now that we've installed the OS and enabled network-based control of it, let's go ahead and establish such a connection. This is called SSH. To establish an SSH connection we will need to know the location of the target computer on the network. We can do this by going into the router's settings and checking all connected computers' IP addresses, or we can run the following command on your laptop or desktop computer:
+
+```ifconfig```
+[more details]
+
+Now that we know the target computer's ip address, we can type the following command:
+```
+ssh pi@<ip address>
+```
+
+You will be prompted for a password. The default password on fresh installations of Raspbian is 'raspberry'. No astericks will be visible as you type it, just hit enter when you are finished. Your window should look something like this: [screenshot]
+
+'pi' and 'raspberry' specify the default username and password on the networked computer that will be hosting us, which is specified by the IP address.
+
+This terminal window should now be considered a remote client to the raspberry pi. Everything you do here occurs on the raspberry pi. If you were to close the terminal window, you will be prompted to end the session - this is fine, but the Raspberry Pi will still be running. You will also need to re-establish a new SSH connection to get back in control of the target computer.
+
+You may also get the following warning. This is because each computer that establishes an SSH connection with a specific target is identified using a cryptographic key, for security reasons. When you re-install Raspbian on the same microSD card, the old key slot is removed and replaced with a new one. However, when your laptop tries to enter the computer located on the same location on the network it reaches for the old key that works with the lock that has since been removed. We therefore need to delete the old key and replace it with a new one that fits the new lock.
+
+to do this, navigate to the file where the keys are stored, and edit the file to delete the corresponding keys:
+```
+sudo nano ~/.ssh/known_hosts
+```
+Remove all the data stored in this file by going to the end and holding backspace, then save and exit with Control+x and then y.
+
+Now that we are in the remote host, let's install updates. This requires an internet connection.
+```
+sudo apt-get update -y
+sudo apt-get upgrade -y
+```
+Linus software is installed and managed through the use of package managers, in this case one called apt. 'apt-get update' updates the listing of software (along with version and compatibility info) that is managed on some server out on the internet, and 'apt-get upgrade' installs updates to software that you already have installed based upon comparisons with that external listing. Including the `-y` flag is optional, and specifies that prompts to confirm any update with a yes/no response should always respond with 'yes'.
+
+For the purpose of this tutorial it is not necessary to update the kernel or firmware. The most up-to-date versions are included in the raspbian disk images, and using ```sudo rpi-update``` may install bleeding-edge updates or untested firmware that might break our intended setup.
+
+To shut down the Raspberry Pi, use the following command:
+```
+sudo shutdown -h now
+```
+
 - show them how to configure a static IP address
 - include or reference a cheat sheet with basic terminal commands
 - show them around certain directories (/etc) and encourage them to ask the community for help
