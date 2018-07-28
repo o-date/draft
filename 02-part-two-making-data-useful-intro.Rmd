@@ -10,16 +10,16 @@ Prepare yourself for a little journey. In a dreamlike state, you find yourself i
     "What was on all those corrupted flash drives? Does anyone even have a flash-drive-to-skull-jack converter around here?"
     "WHAT WAS THIS PERSON THINKING?"
 
-It doesn't have to be this way. Most archaeological researchers have encountered “bad” data in the past when trying to understand or reconstruct someone’s conclusions from field notes and excavation reports. What makes a dataset bad?
+It doesn't have to be this way. Most archaeological researchers have encountered “bad” data in the past when trying to understand or reconstruct someone’s conclusions from field notes and excavation reports. What makes a dataset unweildy? What would make it better?
 
 ![A Useful Warning from Kenny Brophy](images/regret-tweet-data.png)
 
-*It’s not understandable.* The dataset may be illegible (poor handwriting, or a bad scan of a hard copy document). It might be made up of codes with no way to decipher their meaning. It might be a digital binary file that can no longer be read by available software (or on a physical format that’s now obsolete).
+*It’s not understandable.* The dataset may be illegible (poor handwriting, or a poor scan of a hard copy document). It might be made up of codes with no way to decipher their meaning. It might be a digital binary file that can no longer be read by available software (or on a physical format that’s now obsolete).
 do
 
 *It can’t be easily accessed.* The dataset might be saved in a format that only expensive, proprietary software can read. It might be comprised of a lot of fascinating information but challenging to extract from a format like PDF.
 
-*It’s difficult to reuse.* The dataset might use inconsistent terminology. The data might be saved as an image, when in fact it's got a structure. [should a definition of structured data go here or somewhere else?]
+*It’s difficult to reuse.* The dataset might use inconsistent terminology. The data might be saved as an image, when in fact it's got a structure. The data may already be processed in ways that make further analysis impossible.
 
 With these frustrations in mind, the qualities of "good" data become apparent. Good data are stable, human readable, and accessible. They can be rearranged and remixed. As an added benefit, those same qualities that make data useful and conclusions reproducible can also help to protect against the ravages of time.
 
@@ -37,11 +37,9 @@ The concept of Paradata as implemented in events like the Heritage Jam [link/ref
 
 #### Making Data Durable: Preservation and Longevity #### {-}
 
-For advice on specific types of data consult  [*Guides to Good Practice* published by the Archaeology Data Service and Digital Antiquity](http://guides.archaeologydataservice.ac.uk/g2gp/Main), 2011.
+With pre-planning and thought directed at topics like format, structure, and descriptions, you can do a lot to extend the life of your work. From the outset, consider whether you intend to prepare your data for ultimate disposition in a [digital repository](https://o-date.github.io/draft/book/introduction-to-digital-libraries-archives-repositories.html), maintain it yourself, or both. In the discipline of digital preservation, the [LOCKSS](https://www.lockss.org/about/principles/) (Lots of Copies Keep Stuff Safe) principle recommends storing data in several locations to ensure redundancy.
 
-
-
-With pre-planning and thought directed at topics like format, structure, and descriptions, you can do a lot to extend the life of your work. From the outset, consider whether you intend to prepare your data for ultimate disposition in a [digital repository](https://o-date.github.io/draft/book/introduction-to-digital-libraries-archives-repositories.html), maintain it yourself, or both. In the discipline of digital preservation, the [LOCKSS](https://www.lockss.org/about/principles/) (Lots of Copies Keep Stuff Safe) principle recommends storing data in at least three separate locations to ensure redundancy.
+For advice on specific types of archaeological, data consult  [*Guides to Good Practice* published by the Archaeology Data Service and Digital Antiquity](http://guides.archaeologydataservice.ac.uk/g2gp/Main), 2011.
 
 For a deeper dive into digital preservation, see
 Trevor Owens, *The Theory and Craft of Digital Preservation,* Johns Hopkins University Press, 2018 ([full open access preprint available](https://osf.io/preprints/lissa/5cpjt/)).
@@ -51,6 +49,9 @@ Trevor Owens, *The Theory and Craft of Digital Preservation,* Johns Hopkins Univ
 
 **Time is your enemy**
 Archaeologists are well aware that excavation is a destructive act. Conservation is never forever. When we dig, we participate in a process of rearranging physical material in ways that make it both easier to interpret and more vulnerable to inevitable degradation. In a way, the same can be said about archaeological data. Here are some common risks:
+
+Deprecated formats:
+After we hit the Save button, it's easy to take for granted that our digital work is safe and sound. But consider file formats. Many of us working with legacy collections and data have come up against old word processing files, databases, or geospatial datasets that just won't open anymore. These are generally binary files [define] in proprietary formats that have since become obsolete.
 
 - deprecated formats
 - bit rot and link rot
