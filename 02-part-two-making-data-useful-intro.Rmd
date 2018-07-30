@@ -51,18 +51,24 @@ Trevor Owens, *The Theory and Craft of Digital Preservation,* Johns Hopkins Univ
 Archaeologists are well aware that excavation is a destructive act. Conservation is never forever. When we dig, we participate in a process of rearranging physical material in ways that make it both easier to interpret and more vulnerable to inevitable degradation. In a way, the same can be said about archaeological data. Here are some common risks:
 
 Deprecated formats:
-After we hit the Save button, it's easy to take for granted that our digital work is safe and sound. But consider file formats. Many of us working with legacy collections and data have come up against old word processing files, databases, or geospatial datasets that just won't open anymore. These are generally binary files [define] in proprietary formats that have since become obsolete.
+After we hit the Save button, it's easy to take for granted that our digital work is safe and sound. But consider file formats. Many of us working with legacy collections and data have come up against old word processing files, databases, or geospatial datasets that just won't open anymore. These are generally binary files [define] in proprietary formats that have since become obsolete. A way to guard against this is to use lossless formats when possible and to regularly convert files to keep up with software versions.
 
-- deprecated formats
-- bit rot and link rot
-- disappearing web resources and problems with the "cloud"
-- lost institutional knowledge and unconscious assumptions
-- create thorough metadata as you go. This will help you, those who use your data in the future, and those who are tasked with curating your datasets.Structural metadata and descriptive metadata. Different purposes but both can increase durability of data.
+Bit rot and link rot:
+Some files can themselves deteriorate over time, especially when copied or compressed repeatedly. Links on websites can become broken or "dead" as resources are moved or reconfigured. Defining a migration schedule for files to newer versions can help guard against bit rot (don't just save your files somewhere and expect them to work years later). One way to check on file integrity is to periodically generate *checksums* when you store a file. A checksum is long number calculated based on the contents of the bits in the file itself. For example, even a tiny glitch in the pixels of an image will cause changes to the checksum, so a mismatched value will tell you something went wrong with your file. Link rot can be mitigated by linking to archived sources (the Internet Archive's [Wayback Machine](https://archive.org/web/web.php), for example) or DOIs.
 
-Tools
-- metadata creation
-- fixity or other checksum tools
+Lost institutional knowledge and unconscious assumptions:
+What did those codes mean? What unit of measurement is this? How was the equipment calibrated? What were the coordinates of the site datum again? These are critical pieces of information that can all too easily become lost and make related data difficult or impossible to reuse.
 
+
+**Strategies: Metadata**
+Create thorough metadata as you go. This will help you, those who use your data in the future, and those who are tasked with curating your datasets.
+
+Structural metadata
+descriptive metadata
+Different purposes but both can increase durability of data.
+
+
+**Strategies: Have a Plan**
 Preserving supporting data vs digital projects
 
 DH projects:
@@ -70,3 +76,5 @@ DH projects:
 
 Xu, Weijia, et al. A Portable Strategy for Preserving Web Applications Functionality. IEEE, 2017, pp. 1–4. CrossRef, doi:10.1109/JCDL.2017.7991578.
 [Jolene can't access this]
+
+Wordpress to static site
