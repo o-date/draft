@@ -38,7 +38,9 @@ Finally, **a user (also referred to as a client, terminal or workstation) is any
 https://www.raspberrypi.org/documentation/linux/usage/commands.md
 Raspberry Pi is an open source, inexpensive and low-power mini-computer that includes all the necessary components needed to do a wide variety of creative things. It's very popular among makers and DIY/DIWO hackers due to its extensibility and flexibility of use. Raspberry Pi has its own Linux distribution called Raspbian OS, which is designed to be lightweight and consume relatively little power.
 
-While you _could_ connect a display, keyboard and mouse to the Raspberry Pi and interface with it directly, it's actually very common to run it 'headless' - by running commands via the command line or terminal over a network, without the use of a visual user interface. It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone inevitably does) you'll be back up and running in a matter of minutes!
+While you _could_ connect a display, keyboard and mouse to the Raspberry Pi and interface with it directly, it's actually very common to run it 'headless' - by running commands via the command line or terminal over a network, without the use of a visual user interface. We do this by establishing a SSH connection, by typing commands in a terminal window on a remote computer that are actually implemented on the local computer. The network setup enables all of this to happen.
+
+It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone inevitably does) you'll be back up and running in a matter of minutes!
 
 So let's get started by installing Raspbian on a SD card. Start by inserting the SD card into your computer using an adapter (these tend to come with the microSD card if you just bought a new one, but makerspaces and photographers may have one lying around for you to borrow). Once it's in it will mount automatically and you should see it pop up on your finder or file explorer. It might have a different name, but be sure you are able to identify it and associate it with what you just inserted into your laptop or desktop computer.
 
@@ -50,28 +52,35 @@ Once the microSD card is wiped and formatted, we want to etch the Raspbian opera
 
 [more details and screenshots]
 
-There are a couple other things that we need to do to ensure that we can interface with the Raspberry Pi headless. First we need to create a file in the OS that enables SSH interface. Open terminal (/Applications/Utilities/Terminal.app, or by hitting Command+Space and then typing Terminal.app) and type the following, then hit enter. Touch is a command that creates an empty text file, in a location specified after the space. So we are creating a text file called 'ssh' in the main directory of the boot volume. What this file does, in simple terms, is specify that it's okay to allow other computers to interface with the Raspberry Pi over the network.
+There are a couple other things that we need to do to ensure that we can interface with the Raspberry Pi headless. First we need to create a file in the OS that enables SSH interface. Open terminal (/Applications/Utilities/Terminal.app, or by hitting Command+Space and then typing Terminal.app) and type the following command, then hit enter:
 
-Configure the OS to enable SSH on first boot.
 ```
 touch /Volumes/boot/ssh
 ```
 
-So now that we've specified that it's okay for network-based interactions, we need to enable the Raspberry Pi to connect to the network automatically in the first place - we can't control the Raspberry Pi if it's not connected to the network, and we can't connect to the network without controlling the Raspberry Pi. Therefore we create the following file before finalizing the operating system's setup, to enable the Raspberry Pi to connect to the specified network automatically upon startup:
+This command (`touch`) creates an empty text file in a location specified after the space. In this case, we are creating a text file called 'ssh' in the main directory of the boot volume. What this file does, in simple terms, is [specify that it's okay to allow other computers to interface with the Raspberry Pi over the network.](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md#3-enable-ssh-on-a-headless-raspberry-pi-add-file-to-sd-card-on-another-machine)
+
+So now that we've specified that it's okay to enable SSH connections over a network, we need to enable the Raspberry Pi to connect to the network in the first place. If we were using a graphical user interface, we would go to a menubar, select the network and input the password. Only then would we be able to  connect to the Raspberry Pi headless. However because we are not using a graphical user interface, we need to devise a way to make the Raspberry Pi connect to the network automatically, without prior intervention on our part. We can do this by creating another file, `wpa_supplicant.conf_`, similarly to what we did above.
 
 ```
 touch /Volumes/boot/wpa_supplicant.conf
 ```
-This creates the file wpa_supplicant.conf in the main directory, similarly to as we did earlier.
 
+Now we need to edit this file to specify the login credentials for the network that we want to join. We'll use a terminal-based text editor called `nano` to edit this file.
+
+```
+nano /Volumes/boot/wpa_supplicant.conf
+```
+
+**Side-note:** alternatively, we could navigate to the directory where `wpa_supplicant.conf` is located and then run nano, breaking this up into two separate steps:
 ```
 cd /Volumes/boot
 nano wpa_supplicant.conf
 ```
-This navigates us to the main directory of the boot volume, and then uses a small text editor called nano to open the file and start editing it. Alternatively, we could open and edit the file without navigating into the boot directory first by specifying the file's location from our starting location: `nano /Volumes/boot/wpa_supplicant.conf` ('/Volumes/boot/' is unnecessary to include when we are already located in that directory, having used `cd` to get there.
+The `cd` command moves you around directories. Check what files and sub-directories are in your current directory with `ls`.
 
 You should now see a blank file like this: [screenshot]
-Type the following into ```wpa_supplicant.conf```. Remember to change the generic country code, network SSID and network password, including the <> characters, to suit your setup.
+Type the following into ```wpa_supplicant.conf```. Remember to change the generic country code, network SSID and network password, including the <> characters, to suit your setup. The quotes should remain in place.
 ```
 country=<XX>
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -83,31 +92,34 @@ network={
 }
 ```
 
-Exit nano by hitting Control+X, and then hitting y when asked if you'd like to save the buffer (which means save the file). You should return to the normal terminal window.
+Exit nano by hitting `control + x`, and then pressing the `y` key when asked if you'd like to save the buffer (which means save the file). This should return you to the normal terminal window.
 
 Now eject the microSD card, place it in the Raspberry Pi and boot it up. Wait a couple minutes for it to finish booting up. The red LED light specifies power consumption (solid means power is flowing, flickering means inadequate power supply, i.e. needs a supply with better ampage), and the green LED light specifies data processing. The operating system will be finished installing once the green LED calms down.
 
-Note: There is no power switch on the Raspberry Pi, and power-supply can therefore be a bit finicky. You will have to shut down the computer by running a specific command.
+Note: There is no power switch on the Raspberry Pi, and power-supply can therefore be a bit finicky. You will have to shut down the computer by running a specific command. DO NOT JUST UNPLUG THE POWER CORD! THAT CAN CORRUPT THE SD CARD AND YOU'LL HAVE TO RE-IMAGE IT AND LOSE ALL DATA IN THE PROCESS!
 
-DO NOT JUST UNPLUG THE POWER CHORD! THAT CAN CORRUPT THE SD CARD AND YOU'LL HAVE TO RE-IMAGE IT AND LOSE ALL DATA IN THE PROCESS! I KNOW THIS FROM MY OWN PAINFUL AND STUPID EXPERIENCE SO DON'T EVEN DARE!
+Now that we've installed the OS and enabled network-based control of it, let's go ahead and establish such a connection. This is called SSH, or Secure SHell connection. To establish an SSH connection we will need to know the location of the target computer on the network. We can do this by going into the router's settings and checking all connected computers' IP addresses, or we can run the following command on your laptop or desktop computer:
 
-Now that we've installed the OS and enabled network-based control of it, let's go ahead and establish such a connection. This is called SSH. To establish an SSH connection we will need to know the location of the target computer on the network. We can do this by going into the router's settings and checking all connected computers' IP addresses, or we can run the following command on your laptop or desktop computer:
-
-```ifconfig```
+```arp -a```
 [more details]
 
-Now that we know the target computer's ip address, we can type the following command:
+Now that we know the target computer's ip address, we can type the following command, removing the <> characters that surround the generic placeholder:
 ```
 ssh pi@<ip address>
 ```
-
 You will be prompted for a password. The default password on fresh installations of Raspbian is 'raspberry'. No astericks will be visible as you type it, just hit enter when you are finished. Your window should look something like this: [screenshot]
 
-'pi' and 'raspberry' specify the default username and password on the networked computer that will be hosting us, which is specified by the IP address.
+Congratulations, you're in!
 
-This terminal window should now be considered a remote client to the raspberry pi. Everything you do here occurs on the raspberry pi. If you were to close the terminal window, you will be prompted to end the session - this is fine, but the Raspberry Pi will still be running. You will also need to re-establish a new SSH connection to get back in control of the target computer.
+In the command we just ran, 'pi' and 'raspberry' specify the default username and password on the host computer, and the host computer itself is specified by the IP address that locates it on the network.
 
-You may also get the following warning. This is because each computer that establishes an SSH connection with a specific target is identified using a cryptographic key, for security reasons. When you re-install Raspbian on the same microSD card, the old key slot is removed and replaced with a new one. However, when your laptop tries to enter the computer located on the same location on the network it reaches for the old key that works with the lock that has since been removed. We therefore need to delete the old key and replace it with a new one that fits the new lock.
+This terminal window should now be considered a remote client to the raspberry pi. More specifically, everything that you do run that follows `pi@raspberrypi:` is being implemented on the Raspberry Pi. If you were to close the terminal window, you will be prompted to end the session - this is fine, but the Raspberry Pi will still be running. You will also need to re-establish a new SSH connection to get back in control of the host computer.
+
+You may also get the following warning when trying to establish an initial connection vis SSHL
+
+[screenshot]
+
+This is triggered because each computer that establishes an SSH connection with a specific target is identified using a cryptographic key, for security reasons. When you re-install Raspbian on the same microSD card, the old key slot is removed and replaced with a new one. However, when your remote laptop tries to enter the computer located on the same location on the network it reaches for the old key that works with the lock that has since been removed. We therefore need to delete the old key and replace it with a new one that fits the new lock.
 
 to do this, navigate to the file where the keys are stored, and edit the file to delete the corresponding keys:
 ```
@@ -115,23 +127,23 @@ sudo nano ~/.ssh/known_hosts
 ```
 Remove all the data stored in this file by going to the end and holding backspace, then save and exit with Control+x and then y.
 
-Now that we are in the remote host, let's install updates. This requires an internet connection.
+Now that we are in the remote host, let's install updates. This requires that the network be connected to the internet.
 ```
 sudo apt-get update -y
 sudo apt-get upgrade -y
 ```
-Linus software is installed and managed through the use of package managers, in this case one called apt. 'apt-get update' updates the listing of software (along with version and compatibility info) that is managed on some server out on the internet, and 'apt-get upgrade' installs updates to software that you already have installed based upon comparisons with that external listing. Including the `-y` flag is optional, and specifies that prompts to confirm any update with a yes/no response should always respond with 'yes'.
+Linux software is installed and managed through the use of package managers, in this case one called apt. `apt-get update` updates the listing of software (along with version numbers and compatibility info) that is managed on some series of servers out on the internet. `apt-get upgrade` installs updates to outdated software on your device based on comparisons of the local version numbers with that external listing. Including the `-y` flag is optional, and specifies that prompts to confirm any update with a yes/no response should always respond with 'yes'.
 
-For the purpose of this tutorial it is not necessary to update the kernel or firmware. The most up-to-date versions are included in the raspbian disk images, and using ```sudo rpi-update``` may install bleeding-edge updates or untested firmware that might break our intended setup.
+For the purpose of this tutorial it is not necessary to update the kernel or firmware. The most up-to-date versions are included in the raspbian disk images, and using `sudo rpi-update` may install bleeding-edge updates or untested firmware that might break our intended setup.
 
 To shut down the Raspberry Pi, use the following command:
 ```
 sudo shutdown -h now
 ```
+## Setting up Static IP Addresses
+To make our lives a little easier, especially when working on a network that many other devices will be connected to, it will be helpful to configure a static IP address for the Raspberry Pi on the network. Each device connected to the network is assigned a unique IP address, typically as a sequence following the order in which they connected. So the router might have IP address `192.168.0.100`, and subsequently connected computers will have `192.168.0.101`, `192.168.0.102`, `192.168.0.103`, etc. Most routers enable up to 200 connections by default, distributing IP addresses up to `192.168.0.199`. In order to maintain consistency when connecting to the Raspberry Pi (which may be necessary when writing instructions for others to follow, or when pre-configuring connections to the Raspberry Pi on others' computers), we can reserve an IP address from the upper end of the range, such as `192.168.0.198`. You will no longer have to lookup the target computer's IP address in the router options or via the terminal - you could simply run `ssh pi@192.168.0.198` to establish a connection to the Raspberry Pi from any remote computer on the network.
 
-To make our lives a little easier, especially when working on a network that many other devices will be connected to, it will be helpful to configure a static IP address for the Raspberry Pi on the network. Each device connected to the network is assigned a unique IP address, typically as a sequence following the order in which they connected. So the router might have IP address `192.168.0.100`, and subsequently connected computers will have `192.168.0.101`, `192.168.0.102`, `192.168.0.103`, etc. Most routers enable up to 200 connections by default, distributing IP addresses up to `192.168.0.199`. In order to maintain consistency when connecting to the Raspberry Pi (which may be necessary when writing instructions for others to follow, or when pre-configuring connections to the Raspberry Pi on others' computers), we can reserve an IP address from the upper end of the range, such as `192.168.0.198`. You will no longer have to lookup the target computer's IP address in the router options or via the terminal - you could simply run `ssh pi@192.168.0.198` to establish a connection to the Raspberry Pi from any other computer on the network.
-
-In order to do this we will have to find some information about how the network configuration. Start by SSHing into the Raspberry Pi.
+In order to do this we will have to find some information about the network configuration. Start by SSH-ing into the Raspberry Pi.
 
 We first need to get the Raspberry Pi's IP address on the network, on both wifi and ethernet interfaces.
 
@@ -145,7 +157,7 @@ inet 169.254.39.157/16 brd 169.254.255.255 scope global eth0
 inet 192.168.0.198/24 brd 192.168.0.255 scope global wlan0
 ```
 
-```eth0``` refers to the ethernet interface, and ```wlan0``` refers to the wireless interface. Information pertaining to the ethernet interface will not appear if the Raspberry Pi is not currently connected to the router via an ethernet cable.
+`eth0` refers to the ethernet interface, and `wlan0` refers to the wireless interface. Information pertaining to the ethernet interface will not appear if the Raspberry Pi is not currently connected to the router via an ethernet cable.
 
 Next we need to determine the router's gateway:
 ```
@@ -168,15 +180,17 @@ The result should look something like this:
 nameserver 192.168.0.1
 ```
 
-Finally, we have to add this retrieved information to ```/etc/dhcpcd.conf```:
+Finally, we have to add this retrieved information to the file located at `/etc/dhcpcd.conf`:
 ```
 sudo nano /etc/dhcpcd.conf
 ```
 
+**Pro-tip:** when editing system files or doing anything that reconfigures the computer setup in a serious way, you will have to include the `sudo` before the command. This grants 'super user' privileges, which are required for system adminstration.
+
 Add the following, substituting the IP address values for the one's that were just determined above.
 ```
 interface eth0
-static ip_address = 169.254.39.157/16
+static ip_address = 192.168.0.197/16
 static routers = 192.168.0.1
 static domain_name_servers = 192.168.0.1
 
@@ -186,9 +200,9 @@ static routers = 192.168.0.1
 static domain_name_servers = 192.168.0.1
 ```
 
-Save and close the file, and you should be good to go! You might have to re-establish the connection, however.
+Save and close the file, and you should be good to go! You might have to re-establish the connection, however, since the host may now be situated at a different location on the network.
 
-__Pro-tip:__ You may need to make a direct connection with your computer to download updates (I tend to tether my cullular connection to my laptop and share the connection over ethernet). In such cases, you will need to edit ```dhcpcd.conf``` and comment out the ```eth0``` specifications to enable an alternative ethernet interface with your laptop that is not specific to the router that it is normally connected to. You may not even need an ```eth0``` static IP, but it helps to have that direct ethernet connection in place if you are using the Pi as a network attached storage (NAS) device, i.e. sharing files over the network, as this gives a significant speed boost to file transfers.
+__Pro-tip:__ You may need to make a direct connection with your computer to download updates (When in the field, I tend to tether my cullular connection to my laptop and share the connection over ethernet). In such cases, you will need to edit `dhcpcd.conf` and comment out the `eth0` specifications to enable an alternative ethernet interface with your laptop that is not specific to the router that it is normally connected to. You may not even need an `eth0` static IP, but it helps to have that direct ethernet connection in place if you are using the Pi as a network attached storage (NAS) device, i.e. sharing files over the network, as this gives a significant speed boost to file transfers.
 
 
 - include or reference a cheat sheet with basic terminal commands
