@@ -33,12 +33,13 @@ Up front, right at the beginning, when you’re working out your research questi
 
 ```{r reptable, message=FALSE}
 library(xtable)
-reptable <- read.csv("../diagrams/marwick_table_2.csv", check.names = FALSE)
+reptable <- read.csv("../diagrams/marwick_figure_2.csv", check.names = FALSE)
 reptable <- xtable(reptable,
                caption = "Summary of degrees of reproducibility, reproduced from Marwick 2016",
                align = "lp{2cm}p{5cm}p{5cm}p{5cm}p{5cm}")
 print(reptable,  comment = FALSE,
       floating = FALSE,
+
       #floating.environment = "sidewaystable",
       tabular.environment = "longtable",
       size = "\\fontsize{8pt}{8pt}\\selectfont",
