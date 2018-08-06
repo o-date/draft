@@ -29,11 +29,11 @@ You’ll notice that quality data (however you define the term) take planning. T
 
 Up front, right at the beginning, when you’re working out your research questions and goals, ask yourself some questions. What do I want my data to do? How much detail do I need to collect? Do I have a plan for curating datasets I’ve created? Is there space somewhere to do so? Will I need to be selective?
 
-\begin{landscape}
+
 
 ```{r reptable, message=FALSE}
 library(xtable)
-reptable <- read.csv("../diagrams/marwick_figure_2.csv", check.names = FALSE)
+reptable <- read.csv("diagrams/marwick_figure_2.csv", check.names = FALSE)
 reptable <- xtable(reptable,
                caption = "Summary of degrees of reproducibility, reproduced from Marwick 2016",
                align = "lp{2cm}p{5cm}p{5cm}p{5cm}p{5cm}")
@@ -47,7 +47,8 @@ print(reptable,  comment = FALSE,
 
 ```
 
-\end{landscape}
+
+
 
 Perfection is unattainable. No dataset will ever be truly “complete.” You could collect, measure, and produce data at finer and finer resolutions, ad infinitum. But you don’t want to do that. And even if you think you're being comprehensive, all data you collect is only a specific, bounded representation of the real world.  
 
