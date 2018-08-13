@@ -25,14 +25,14 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2018-08-09">
+<meta name="date" content="2018-08-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="the-ethics-of-big-data-in-archaeology.html">
+<link rel="prev" href="the-human-problem.html">
 <link rel="next" href="designing-data-collection.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -159,6 +159,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.6.1" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#discussion-1"><i class="fa fa-check"></i><b>1.6.1</b> discussion</a></li>
 <li class="chapter" data-level="1.6.2" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#exercises-5"><i class="fa fa-check"></i><b>1.6.2</b> exercises</a></li>
 </ul></li>
+<li class="chapter" data-level="1.7" data-path="the-human-problem.html"><a href="the-human-problem.html"><i class="fa fa-check"></i><b>1.7</b> The Human Problem</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="making-data-useful.html"><a href="making-data-useful.html"><i class="fa fa-check"></i><b>2</b> Making Data Useful</a><ul>
 <li class="chapter" data-level="2.1" data-path="designing-data-collection.html"><a href="designing-data-collection.html"><i class="fa fa-check"></i><b>2.1</b> Designing Data Collection</a><ul>
@@ -232,8 +233,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html"><i class="fa fa-check"></i><b>4.2</b> 3D Printing, the Internet of Things and “Maker” Archaeology</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#d-printing---a-workflow"><i class="fa fa-check"></i><b>4.2.1</b> 3d Printing - a Workflow</a></li>
-<li class="chapter" data-level="4.2.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#discussion-10"><i class="fa fa-check"></i><b>4.2.2</b> discussion</a></li>
-<li class="chapter" data-level="4.2.3" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#exercises-19"><i class="fa fa-check"></i><b>4.2.3</b> exercises</a></li>
+<li class="chapter" data-level="4.2.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#using-raspberry-pi-in-the-field"><i class="fa fa-check"></i><b>4.2.2</b> Using Raspberry Pi in the Field</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>4.3</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#projection-mapping"><i class="fa fa-check"></i><b>4.3.1</b> Projection Mapping</a></li>
@@ -253,7 +253,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.1.1" data-path="marketing-digital-archaeology.html"><a href="marketing-digital-archaeology.html#exercises-22"><i class="fa fa-check"></i><b>5.1.1</b> exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html"><i class="fa fa-check"></i><b>5.2</b> Sustainability &amp; Power in Digital Archaeology</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#discussion-11"><i class="fa fa-check"></i><b>5.2.1</b> discussion</a></li>
+<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#discussion-12"><i class="fa fa-check"></i><b>5.2.1</b> discussion</a></li>
 <li class="chapter" data-level="5.2.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#exercises-23"><i class="fa fa-check"></i><b>5.2.2</b> exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="digital-archaeology-as-creative-engagement-with-the-world.html"><a href="digital-archaeology-as-creative-engagement-with-the-world.html"><i class="fa fa-check"></i><b>5.3</b> Digital Archaeology as Creative Engagement with the World</a><ul>
@@ -367,7 +367,7 @@ reptable &lt;-<span class="st"> </span><span class="kw">xtable</span>(reptable,
           </div>
         </div>
       </div>
-<a href="the-ethics-of-big-data-in-archaeology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-human-problem.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="designing-data-collection.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

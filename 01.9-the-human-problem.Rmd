@@ -1,3 +1,5 @@
+## The Human Problem
+
 A key to success in using, remixing, and sharing data openly is communicating effectively with colleagues and other stakeholders. Whether you are utilizing data that already existed or creating a totally new dataset, your work impacts colleagues, and it is important to build not only a technical framework but social supports for your work. A successful digital archaeology project is one which is well-understood and well-regarded by colleagues. In the following section I will describe how to frame digital archaeology work for colleagues and others who may be interested or impacted by it, and share three key tools for establishing boundaries and expectations for your project.
 
 <!-- Messy outline below -->

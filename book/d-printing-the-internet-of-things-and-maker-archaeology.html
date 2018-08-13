@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2018-08-09">
+<meta name="date" content="2018-08-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -159,6 +159,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.6.1" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#discussion-1"><i class="fa fa-check"></i><b>1.6.1</b> discussion</a></li>
 <li class="chapter" data-level="1.6.2" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#exercises-5"><i class="fa fa-check"></i><b>1.6.2</b> exercises</a></li>
 </ul></li>
+<li class="chapter" data-level="1.7" data-path="the-human-problem.html"><a href="the-human-problem.html"><i class="fa fa-check"></i><b>1.7</b> The Human Problem</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="making-data-useful.html"><a href="making-data-useful.html"><i class="fa fa-check"></i><b>2</b> Making Data Useful</a><ul>
 <li class="chapter" data-level="2.1" data-path="designing-data-collection.html"><a href="designing-data-collection.html"><i class="fa fa-check"></i><b>2.1</b> Designing Data Collection</a><ul>
@@ -232,8 +233,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html"><i class="fa fa-check"></i><b>4.2</b> 3D Printing, the Internet of Things and “Maker” Archaeology</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#d-printing---a-workflow"><i class="fa fa-check"></i><b>4.2.1</b> 3d Printing - a Workflow</a></li>
-<li class="chapter" data-level="4.2.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#discussion-10"><i class="fa fa-check"></i><b>4.2.2</b> discussion</a></li>
-<li class="chapter" data-level="4.2.3" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#exercises-19"><i class="fa fa-check"></i><b>4.2.3</b> exercises</a></li>
+<li class="chapter" data-level="4.2.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#using-raspberry-pi-in-the-field"><i class="fa fa-check"></i><b>4.2.2</b> Using Raspberry Pi in the Field</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>4.3</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#projection-mapping"><i class="fa fa-check"></i><b>4.3.1</b> Projection Mapping</a></li>
@@ -253,7 +253,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.1.1" data-path="marketing-digital-archaeology.html"><a href="marketing-digital-archaeology.html#exercises-22"><i class="fa fa-check"></i><b>5.1.1</b> exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html"><i class="fa fa-check"></i><b>5.2</b> Sustainability &amp; Power in Digital Archaeology</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#discussion-11"><i class="fa fa-check"></i><b>5.2.1</b> discussion</a></li>
+<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#discussion-12"><i class="fa fa-check"></i><b>5.2.1</b> discussion</a></li>
 <li class="chapter" data-level="5.2.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#exercises-23"><i class="fa fa-check"></i><b>5.2.2</b> exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="digital-archaeology-as-creative-engagement-with-the-world.html"><a href="digital-archaeology-as-creative-engagement-with-the-world.html"><i class="fa fa-check"></i><b>5.3</b> Digital Archaeology as Creative Engagement with the World</a><ul>
@@ -342,13 +342,191 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h4><span class="header-section-number">4.2.1.4</span> Print 3D object or create AR</h4>
 <p>This will export an stl file that is rather large in file size. This stl file can be used to print a 3D representation of the model or can be used to view the model as an augmented reality object.</p>
 </div>
+<div id="discussion-10" class="section level4">
+<h4><span class="header-section-number">4.2.1.5</span> discussion</h4>
 </div>
-<div id="discussion-10" class="section level3">
-<h3><span class="header-section-number">4.2.2</span> discussion</h3>
+<div id="exercises-19" class="section level4">
+<h4><span class="header-section-number">4.2.1.6</span> exercises</h4>
 </div>
-<div id="exercises-19" class="section level3">
-<h3><span class="header-section-number">4.2.3</span> exercises</h3>
+</div>
+<div id="using-raspberry-pi-in-the-field" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Using Raspberry Pi in the Field</h3>
+<p>Archaeology is an inherently collaborative process that happens in various places simulataneously. It is therefore often challening to ensure that archaeological databases, which serve to store and organize inter-related information obtained through various methods and practices, are kept up to date and syncronized across research environments. In order to deal with these challenges it might be necessary to set up a database hosted on a network, which would enable multiple users to simultaneously engage with the database while ensuring that the data remains orderly and complete.</p>
+<p>In order to implement such a system we need to set up a network, set up a server, set up a database along with user-friendly interfaces, and ensure that the system is aligned with and contributes positively to the goals of the overall project.</p>
+<p>The system that we’re going to build will look something like this: <img src="images/DIYDatabaseDiagram.png" alt="DIY Fieldwork Database Diagram" /></p>
+<p>It consists of: - a local network generated and managed by a wireless router - a Raspberri Pi mini-computer upon which the database will reside and be served to other devices across the network - the software configured to host the database and ensure that the data is secured and backed up - user interfaces that talk to the database and that encourage desired user behaviour - other useful services such as a file sharing server and data visualization portal that may help encourage collaborative and informed research</p>
+<p>The system that we’re going to build may be suitable for some, but not for others. It is therefore important to remember that this all requires some degree of flexibility so that what you make suits the overall goals of the project you’re contributing to. So you may copy these instructions directly or tinker around to suit your needs!</p>
+<div id="some-notes-on-hardware" class="section level5">
+<h5><span class="header-section-number">4.2.2.0.1</span> Some Notes on Hardware</h5>
+<p>This is meant to be a very portable, low energy use and inexpensive setup. While I recommend that you use a dedicated server - a computer that is configured to run the database server, and only the database server - you can actually host the database on a regular laptop that you also serves as the client. I will be including notes on how to configure this to work all on one device, but I recommend that you use this kind of setup for educational and testing purposes only, and not in a production environment.</p>
+<p>Raspberry Pi is available online for around 45$ CAD at <a href="https://www.raspberrypi.org/products/" class="uri">https://www.raspberrypi.org/products/</a>, but your local makerspace will likely be happy to lend you one to play with. You will also need a SD card with a capacity of at least 8GB and with adequate read/write speeds (see <a href="https://www.raspberrypi.org/documentation/installation/sd-cards.md" class="uri">https://www.raspberrypi.org/documentation/installation/sd-cards.md</a> for more info), a wireless router (this one is 40$ and tiny - perfect for portability! <a href="https://amzn.to/2HoOM6W" class="uri">https://amzn.to/2HoOM6W</a>), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: <a href="https://amzn.to/2Ht8quv" class="uri">https://amzn.to/2Ht8quv</a>) and a couple USB flash drives with varying storage capacities that suit your needs.</p>
+<p>This guide is designed with unix-users in mind - so those who use MacOS or Linux. Sorry Windows users :(</p>
+</div>
+<div id="networking-basics" class="section level4">
+<h4><span class="header-section-number">4.2.2.1</span> Networking Basics</h4>
+<p>The goal of this project is to enable multiple computers to communicate with a database on a central server. In order to accomplish this we first need to set up a network, which enables this communication to happen. <strong>A network is a set of interconnected computers, which communicate with each other using cables or wireless connections as well as protocols that manage the connections.</strong></p>
+<p>The internet is one kind of network that relies on immense cabling infrastructure and DNS protocols that have global reach (DNS, or Domain Name Servers, distribute codes to every computer on the internet, which are comparable to phone numbers in a phone network). However in our case we are going to set up a local network (also known as a local area network, LAN or intranet) that has a limited scope and range. <strong>A local network distributes IP addresses to connected devices that enable them to communicate with each other, but it does not necessarily connect these computers to the outside world of the internet.</strong> It can be imagined as a neighbourhood with roads and walkways of its own that serve the local community; the neighbourhood may be connected to the rest of the world via a regional or national highway. <strong>The local network is managed by a router, which is a specialized computer that assigns local IP addresses and also helps direct traffic to and from the broader internet.</strong> You can think of the router as a local post office, which receives mail directed to the town and distributes the mail to every household.</p>
+<p><img src="images/local-network.png" alt="local network" /> <img src="images/internet-connected-network.png" alt="internet connected network" /></p>
+<p>Other kinds of specialized buildings might exist in the town as well. You might do all sorts of things in your home, such as cook, water the garden, wash the dog, or host a party, which each consume varying degrees of food and water (including some waste) but services like grocery store or water reclamation plants need to be streamlined and focused in order to keep up with the inflow and outflow of material that they need to process, which is immense because they engage with each and every household in town. These represent specialized computers on a network called servers (also referred to as hosts, clusters or ‘the cloud’). <strong>Servers are centralized computers that manage and distribute information to and from clients across the network. They are designed to be as lightweight and efficient as possible,</strong> such as by minimizing flare in user interfaces to enable more effective use of computing resources directed towards the task at hand, or by keeping the temperature cool to prevent shutdowns and slowdowns due to overheating. The hardware places hard limits on how efficient a computer may operate, but configuring the software can go a long way in stretching a computer’s capabilities.</p>
+<p>Finally, <strong>a user (also referred to as a client, terminal or workstation) is any other computer on the network that is served information or passes along information to be served to others.</strong> The things that they do on their own computer are local relative to other computers on the network. The terms ‘local’ and ‘remote’ are therefore commonly used to designate things that occur close to home base, and things that occur further away, respectively.</p>
+</div>
+<div id="raspberry-pi-and-raspbian" class="section level4">
+<h4><span class="header-section-number">4.2.2.2</span> Raspberry Pi and Raspbian</h4>
+<p><a href="https://www.raspberrypi.org/documentation/linux/usage/commands.md" class="uri">https://www.raspberrypi.org/documentation/linux/usage/commands.md</a> Raspberry Pi is an open source, inexpensive and low-power mini-computer that includes all the necessary components needed to do a wide variety of creative things. It’s very popular among makers and DIY/DIWO hackers due to its extensibility and flexibility of use. Raspberry Pi has its own Linux distribution called Raspbian OS, which is designed to be lightweight and consume relatively little power.</p>
+<p>While you <em>could</em> connect a display, keyboard and mouse to the Raspberry Pi and interface with it directly, it’s actually very common to run it ‘headless’ - by running commands via the command line or terminal over a network, without the use of a visual user interface. We do this by establishing a SSH connection, by typing commands in a terminal window on a remote computer that are actually implemented on the local computer. The network setup enables all of this to happen.</p>
+<p>It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone inevitably does) you’ll be back up and running in a matter of minutes!</p>
+<p>So let’s get started by installing Raspbian on a SD card. Start by inserting the SD card into your computer using an adapter (these tend to come with the microSD card if you just bought a new one, but makerspaces and photographers may have one lying around for you to borrow). Once it’s in it will mount automatically and you should see it pop up on your finder or file explorer. It might have a different name, but be sure you are able to identify it and associate it with what you just inserted into your laptop or desktop computer.</p>
+<p>Now we’ll have to wipe and format the microSD card using an SD Card Formatter tool. Use the one made available by the SD Association, available at: <a href="https://www.sdcard.org/downloads/formatter_4/" class="uri">https://www.sdcard.org/downloads/formatter_4/</a>.</p>
+<p>[more details and screenshots here]</p>
+<p>Once the microSD card is wiped and formatted, we want to etch the Raspbian operating system onto the card. First, download Raspbian OS from <a href="https://www.raspberrypi.org/downloads/raspbian/" class="uri">https://www.raspberrypi.org/downloads/raspbian/</a>, and then use Etcher (available at <a href="https://etcher.io/" class="uri">https://etcher.io/</a>) to write it to the microSD card. This may take a few minutes. Notice that the mounted volume is no re-named ‘boot’.</p>
+<p>[more details and screenshots]</p>
+<p>There are a couple other things that we need to do to ensure that we can interface with the Raspberry Pi headless. First we need to create a file in the OS that enables SSH interface. Open terminal (/Applications/Utilities/Terminal.app, or by hitting Command+Space and then typing Terminal.app) and type the following command, then hit enter:</p>
+<pre><code>touch /Volumes/boot/ssh</code></pre>
+<p>This command (<code>touch</code>) creates an empty text file in a location specified after the space. In this case, we are creating a text file called ‘ssh’ in the main directory of the boot volume. What this file does, in simple terms, is <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/README.md#3-enable-ssh-on-a-headless-raspberry-pi-add-file-to-sd-card-on-another-machine">specify that it’s okay to allow other computers to interface with the Raspberry Pi over the network.</a></p>
+<p>So now that we’ve specified that it’s okay to enable SSH connections over a network, we need to enable the Raspberry Pi to connect to the network in the first place. If we were using a graphical user interface, we would go to a menubar, select the network and input the password. Only then would we be able to connect to the Raspberry Pi headless. However because we are not using a graphical user interface, we need to devise a way to make the Raspberry Pi connect to the network automatically, without prior intervention on our part. We can do this by creating another file, <code>wpa_supplicant.conf_</code>, similarly to what we did above.</p>
+<pre><code>touch /Volumes/boot/wpa_supplicant.conf</code></pre>
+<p>Now we need to edit this file to specify the login credentials for the network that we want to join. We’ll use a terminal-based text editor called <code>nano</code> to edit this file.</p>
+<pre><code>nano /Volumes/boot/wpa_supplicant.conf</code></pre>
+<p><strong>Side-note:</strong> alternatively, we could navigate to the directory where <code>wpa_supplicant.conf</code> is located and then run nano, breaking this up into two separate steps:</p>
+<pre><code>cd /Volumes/boot
+nano wpa_supplicant.conf</code></pre>
+<p>The <code>cd</code> command moves you around directories. Check what files and sub-directories are in your current directory with <code>ls</code>.</p>
+<p>You should now see a blank file like this: [screenshot] Type the following into <code>wpa_supplicant.conf</code>. Remember to change the generic country code, network SSID and network password, including the &lt;&gt; characters, to suit your setup. The quotes should remain in place.</p>
+<pre><code>country=&lt;XX&gt;
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
 
+network={
+    ssid=&quot;&lt;network name&gt;&quot;
+    psk=&quot;&lt;network password&gt;&quot;
+}</code></pre>
+<p>Exit nano by hitting <code>control + x</code>, and then pressing the <code>y</code> key when asked if you’d like to save the buffer (which means save the file). This should return you to the normal terminal window.</p>
+<p>Now eject the microSD card, place it in the Raspberry Pi and boot it up. Wait a couple minutes for it to finish booting up. The red LED light specifies power consumption (solid means power is flowing, flickering means inadequate power supply, i.e. needs a supply with better ampage), and the green LED light specifies data processing. The operating system will be finished installing once the green LED calms down.</p>
+<p>Note: There is no power switch on the Raspberry Pi, and power-supply can therefore be a bit finicky. You will have to shut down the computer by running a specific command. DO NOT JUST UNPLUG THE POWER CORD! THAT CAN CORRUPT THE SD CARD AND YOU’LL HAVE TO RE-IMAGE IT AND LOSE ALL DATA IN THE PROCESS!</p>
+<p>Now that we’ve installed the OS and enabled network-based control of it, let’s go ahead and establish such a connection. This is called SSH, or Secure SHell connection. To establish an SSH connection we will need to know the location of the target computer on the network. We can do this by going into the router’s settings and checking all connected computers’ IP addresses, or we can run the following command on your laptop or desktop computer:</p>
+<p><code>arp -a</code> [more details]</p>
+<p>Now that we know the target computer’s ip address, we can type the following command, removing the &lt;&gt; characters that surround the generic placeholder:</p>
+<pre><code>ssh pi@&lt;ip address&gt;</code></pre>
+<p>You will be prompted for a password. The default password on fresh installations of Raspbian is ‘raspberry’. No astericks will be visible as you type it, just hit enter when you are finished. Your window should look something like this: [screenshot]</p>
+<p>Congratulations, you’re in!</p>
+<p>In the command we just ran, ‘pi’ and ‘raspberry’ specify the default username and password on the host computer, and the host computer itself is specified by the IP address that locates it on the network.</p>
+<p>This terminal window should now be considered a remote client to the raspberry pi. More specifically, everything that you do run that follows <code>pi@raspberrypi:</code> is being implemented on the Raspberry Pi. If you were to close the terminal window, you will be prompted to end the session - this is fine, but the Raspberry Pi will still be running. You will also need to re-establish a new SSH connection to get back in control of the host computer.</p>
+<p>You may also get the following warning when trying to establish an initial connection vis SSHL</p>
+<p>[screenshot]</p>
+<p>This is triggered because each computer that establishes an SSH connection with a specific target is identified using a cryptographic key, for security reasons. When you re-install Raspbian on the same microSD card, the old key slot is removed and replaced with a new one. However, when your remote laptop tries to enter the computer located on the same location on the network it reaches for the old key that works with the lock that has since been removed. We therefore need to delete the old key and replace it with a new one that fits the new lock.</p>
+<p>to do this, navigate to the file where the keys are stored, and edit the file to delete the corresponding keys:</p>
+<pre><code>sudo nano ~/.ssh/known_hosts</code></pre>
+<p>Remove all the data stored in this file by going to the end and holding backspace, then save and exit with Control+x and then y.</p>
+<p>Now that we are in the remote host, let’s install updates. This requires that the network be connected to the internet.</p>
+<pre><code>sudo apt-get update -y
+sudo apt-get upgrade -y</code></pre>
+<p>Linux software is installed and managed through the use of package managers, in this case one called apt. <code>apt-get update</code> updates the listing of software (along with version numbers and compatibility info) that is managed on some series of servers out on the internet. <code>apt-get upgrade</code> installs updates to outdated software on your device based on comparisons of the local version numbers with that external listing. Including the <code>-y</code> flag is optional, and specifies that prompts to confirm any update with a yes/no response should always respond with ‘yes’.</p>
+<p>For the purpose of this tutorial it is not necessary to update the kernel or firmware. The most up-to-date versions are included in the raspbian disk images, and using <code>sudo rpi-update</code> may install bleeding-edge updates or untested firmware that might break our intended setup.</p>
+<p>To shut down the Raspberry Pi, use the following command:</p>
+<pre><code>sudo shutdown -h now</code></pre>
+<div id="setting-up-static-ip-addresses" class="section level5">
+<h5><span class="header-section-number">4.2.2.2.1</span> Setting up Static IP Addresses</h5>
+<p>To make our lives a little easier, especially when working on a network that many other devices will be connected to, it will be helpful to configure a static IP address for the Raspberry Pi on the network. Each device connected to the network is assigned a unique IP address, typically as a sequence following the order in which they connected. So the router might have IP address <code>192.168.0.100</code>, and subsequently connected computers will have <code>192.168.0.101</code>, <code>192.168.0.102</code>, <code>192.168.0.103</code>, etc. Most routers enable up to 200 connections by default, distributing IP addresses up to <code>192.168.0.199</code>. In order to maintain consistency when connecting to the Raspberry Pi (which may be necessary when writing instructions for others to follow, or when pre-configuring connections to the Raspberry Pi on others’ computers), we can reserve an IP address from the upper end of the range, such as <code>192.168.0.198</code>. You will no longer have to lookup the target computer’s IP address in the router options or via the terminal - you could simply run <code>ssh pi@192.168.0.198</code> to establish a connection to the Raspberry Pi from any remote computer on the network.</p>
+<p>In order to do this we will have to find some information about the network configuration. Start by SSH-ing into the Raspberry Pi.</p>
+<p>We first need to get the Raspberry Pi’s IP address on the network, on both wifi and ethernet interfaces.</p>
+<pre><code>ip -4 addr show | grep global</code></pre>
+<p>The output should look something like this:</p>
+<pre><code>inet 169.254.39.157/16 brd 169.254.255.255 scope global eth0
+inet 192.168.0.198/24 brd 192.168.0.255 scope global wlan0</code></pre>
+<p><code>eth0</code> refers to the ethernet interface, and <code>wlan0</code> refers to the wireless interface. Information pertaining to the ethernet interface will not appear if the Raspberry Pi is not currently connected to the router via an ethernet cable.</p>
+<p>Next we need to determine the router’s gateway:</p>
+<pre><code>ip route | grep default | awk &#39;{print $3}&#39;</code></pre>
+<p>The result should look something like this:</p>
+<pre><code>192.168.0.1</code></pre>
+<p>Then we need to determine the DNS server or namespace, which is often the same as the router’s gateway:</p>
+<pre><code>cat /etc/resolv.conf</code></pre>
+<p>The result should look something like this:</p>
+<pre><code># Generated by resolvconf
+nameserver 192.168.0.1</code></pre>
+<p>Finally, we have to add this retrieved information to the file located at <code>/etc/dhcpcd.conf</code>:</p>
+<pre><code>sudo nano /etc/dhcpcd.conf</code></pre>
+<p>**Pro-<a href="tip:**" class="uri">tip:**</a> when editing system files or doing anything that reconfigures the computer setup in a serious way, you will have to include the <code>sudo</code> before the command. This grants ‘super user’ privileges, which are required for system adminstration.</p>
+<p>Add the following, substituting the IP address values for the one’s that were just determined above.</p>
+<pre><code>interface eth0
+static ip_address = 192.168.0.197/16
+static routers = 192.168.0.1
+static domain_name_servers = 192.168.0.1
+
+interface wlan0
+static ip_address = 192.168.0.198/24
+static routers = 192.168.0.1
+static domain_name_servers = 192.168.0.1</code></pre>
+<p>Save and close the file, and you should be good to go! You might have to re-establish the connection, however, since the host may now be situated at a different location on the network.</p>
+<p>__Pro-<a href="tip:__" class="uri">tip:__</a> You may need to make a direct connection with your computer to download updates (When in the field, I tend to tether my cullular connection to my laptop and share the connection over ethernet). In such cases, you will need to edit <code>dhcpcd.conf</code> and comment out the <code>eth0</code> specifications to enable an alternative ethernet interface with your laptop that is not specific to the router that it is normally connected to. You may not even need an <code>eth0</code> static IP, but it helps to have that direct ethernet connection in place if you are using the Pi as a network attached storage (NAS) device, i.e. sharing files over the network, as this gives a significant speed boost to file transfers.</p>
+<ul>
+<li>include or reference a cheat sheet with basic terminal commands</li>
+<li>show them around certain directories (/etc) and encourage them to ask the community for help</li>
+</ul>
+</div>
+</div>
+<div id="multi-user-databases" class="section level4">
+<h4><span class="header-section-number">4.2.2.3</span> Multi-User Databases</h4>
+<ul>
+<li>I mentioned how servers have both hardware and software components, now is the time to configure the software</li>
+<li>explain how MariaDB is a fork of MySQL, but pretty much everything is the same</li>
+<li>explain that the database resides on the SD card, and that users can connect to it remotely with the following information: the server’s IP address, the port that is used by MariaDB, the name of the database, and login credentials</li>
+<li>so let’s install MariaDB Server</li>
+<li>let’s login as root</li>
+<li>let’s create a database</li>
+<li>let’s create a user and grant permissions</li>
+<li>let’s create tables</li>
+<li>explain indexes and primary keys</li>
+<li>let’s insert data to the tables</li>
+<li>let’s select data from tables</li>
+<li>let’s update data from tables</li>
+<li>let’s make relationships among tables</li>
+<li>let’s join data from multiple tables</li>
+<li>let’s delete data from tables</li>
+<li>do all this from the command line but show how it can also be done from a GUI like Sequel Pro or SQL Workbench, which actually shows the queries being run</li>
+</ul>
+</div>
+<div id="client-side-stuff" class="section level4">
+<h4><span class="header-section-number">4.2.2.4</span> Client side stuff</h4>
+<ul>
+<li>explain ODBC (it’s a driver that translates across database management systems (DBMSs))</li>
+<li>show how they would connect to the database from MS Access (setup ODBC and DSN, Linked Table Manager, creating forms in Access, etc)</li>
+<li>show that in certain cases ODBC is not necessary, such as when using R Shiny since the data is being entered directly rather than passed along through an intermediary DBMS such as MS Access</li>
+<li>link down to a permalink explaining the R Shiny app in more detail</li>
+</ul>
+</div>
+<div id="other-bits-and-bobs" class="section level4">
+<h4><span class="header-section-number">4.2.2.5</span> Other bits and bobs</h4>
+<ul>
+<li>automatic scheduled backups</li>
+<li>SMB file sharing</li>
+<li>R Shiny frontends</li>
+</ul>
+</div>
+<div id="tinkering-and-improvising-in-the-field" class="section level4">
+<h4><span class="header-section-number">4.2.2.6</span> Tinkering and Improvising in the Field</h4>
+<ul>
+<li>working in multiple locations without any internet connection (and sqldump workaround)</li>
+<li>ensure that people, especially higher up, understand the constraints and limitations you face</li>
+<li>show people rather than tell</li>
+<li>be respectful of their data and devices</li>
+<li>power outages and working off-grid</li>
+<li>migrating to the cloud and back</li>
+<li>keep notes, watch your posture, etc</li>
+</ul>
+</div>
+<div id="discussion-11" class="section level4">
+<h4><span class="header-section-number">4.2.2.7</span> Discussion</h4>
+</div>
+<div id="takeaways-1" class="section level4">
+<h4><span class="header-section-number">4.2.2.8</span> Takeaways</h4>
+</div>
+<div id="excercises" class="section level4">
+<h4><span class="header-section-number">4.2.2.9</span> Excercises</h4>
+</div>
+<div id="further-reading-3" class="section level4">
+<h4><span class="header-section-number">4.2.2.10</span> Further Reading</h4>
+
+</div>
 </div>
 </div>
             </section>
