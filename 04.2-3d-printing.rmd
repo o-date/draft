@@ -57,6 +57,264 @@ For 3D printing, users must have specific file formats. An .obj or .stl are some
 
 This will export an stl file that is rather large in file size. This stl file can be used to print a 3D representation of the model or can be used to view the model as an augmented reality object.
 
-### discussion
+#### discussion
 
-### exercises
+#### exercises
+
+
+### Using Raspberry Pi in the Field
+Archaeology is an inherently collaborative process that happens in various places simulataneously. It is therefore often challening to ensure that archaeological databases, which serve to store and organize inter-related information obtained through various methods and practices, are kept up to date and syncronized across research environments. In order to deal with these challenges it might be necessary to set up a database hosted on a network, which would enable multiple users to simultaneously engage with the database while ensuring that the data remains orderly and complete.
+
+In order to implement such a system we need to set up a network, set up a server, set up a database along with user-friendly interfaces, and ensure that the system is aligned with and contributes positively to the goals of the overall project.
+
+The system that we're going to build will look something like this:
+![DIY Fieldwork Database Diagram](https://github.com/zackbatist/DIYFieldworkDatabase/raw/master/DIYDatabaseDiagram.png)
+
+It consists of:
+- a local network generated and managed by a wireless router
+- a Raspberri Pi mini-computer upon which the database will reside and be served to other devices across the network
+- the software configured to host the database and ensure that the data is secured and backed up
+- user interfaces that talk to the database and that encourage desired user behaviour
+- other useful services such as a file sharing server and data visualization portal that may help encourage collaborative and informed research
+
+The system that we're going to build may be suitable for some, but not for others. It is therefore important to remember that this all requires some degree of flexibility so that what you make suits the overall goals of the project you're contributing to. So you may copy these instructions directly or tinker around to suit your needs!
+
+##### Some Notes on Hardware
+This is meant to be a very portable, low energy use and inexpensive setup. While I recommend that you use a dedicated server - a computer that is configured to run the database server, and only the database server - you can actually host the database on a regular laptop that you also serves as the client. I will be including notes on how to configure this to work all on one device, but I recommend that you use this kind of setup for educational and testing purposes only, and not in a production environment.
+
+Raspberry Pi is available online for around 45$ CAD at https://www.raspberrypi.org/products/, but your local makerspace will likely be happy to lend you one to play with. You will also need a SD card with a capacity of at least 8GB and with adequate read/write speeds (see https://www.raspberrypi.org/documentation/installation/sd-cards.md for more info), a wireless router (this one is 40$ and tiny - perfect for portability! https://amzn.to/2HoOM6W), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: https://amzn.to/2Ht8quv) and a couple USB flash drives with varying storage capacities that suit your needs.
+
+This guide is designed with unix-users in mind - so those who use MacOS or Linux. Sorry Windows users :(
+
+#### Networking Basics
+The goal of this project is to enable multiple computers to communicate with a database on a central server. In order to accomplish this we first need to set up a network, which enables this communication to happen. **A network is a set of interconnected computers, which communicate with each other using cables or wireless connections as well as protocols that manage the connections.**
+
+The internet is one kind of network that relies on immense cabling infrastructure and DNS protocols that have global reach (DNS, or Domain Name Servers, distribute codes to every computer on the internet, which are comparable to phone numbers in a phone network). However in our case we are going to set up a local network (also known as a local area network, LAN or intranet) that has a limited scope and range. **A local network distributes IP addresses to connected devices that enable them to communicate with each other, but it does not necessarily connect these computers to the outside world of the internet.** It can be imagined as a neighbourhood with roads and walkways of its own that serve the local community; the neighbourhood may be connected to the rest of the world via a regional or national highway. **The local network is managed by a router, which is a specialized computer that assigns local IP addresses and also helps direct traffic to and from the broader internet.** You can think of the router as a local post office, which receives mail directed to the town and distributes the mail to every household.
+
+![local network](images/local-network.png)
+![internet connected network](images/internet-connected-network.png)
+
+Other kinds of specialized buildings might exist in the town as well. You might do all sorts of things in your home, such as cook, water the garden, wash the dog, or host a party, which each consume varying degrees of food and water (including some waste) but services like grocery store or water reclamation plants need to be streamlined and focused in order to keep up with the inflow and outflow of material that they need to process, which is immense because they engage with each and every household in town. These represent specialized computers on a network called servers (also referred to as hosts, clusters or 'the cloud'). **Servers are centralized computers that manage and distribute information to and from clients across the network. They are designed to be as lightweight and efficient as possible,** such as by minimizing flare in user interfaces to enable more effective use of computing resources directed towards the task at hand, or by keeping the temperature cool to prevent shutdowns and slowdowns due to overheating. The hardware places hard limits on how efficient a computer may operate, but configuring the software can go a long way in stretching a computer's capabilities.
+
+Finally, **a user (also referred to as a client, terminal or workstation) is any other computer on the network that is served information or passes along information to be served to others.** The things that they do on their own computer are local relative to other computers on the network. The terms 'local' and 'remote' are therefore commonly used to designate things that occur close to home base, and things that occur further away, respectively.
+
+#### Raspberry Pi and Raspbian
+https://www.raspberrypi.org/documentation/linux/usage/commands.md
+Raspberry Pi is an open source, inexpensive and low-power mini-computer that includes all the necessary components needed to do a wide variety of creative things. It's very popular among makers and DIY/DIWO hackers due to its extensibility and flexibility of use. Raspberry Pi has its own Linux distribution called Raspbian OS, which is designed to be lightweight and consume relatively little power.
+
+While you _could_ connect a display, keyboard and mouse to the Raspberry Pi and interface with it directly, it's actually very common to run it 'headless' - by running commands via the command line or terminal over a network, without the use of a visual user interface. We do this by establishing a SSH connection, by typing commands in a terminal window on a remote computer that are actually implemented on the local computer. The network setup enables all of this to happen.
+
+It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone inevitably does) you'll be back up and running in a matter of minutes!
+
+So let's get started by installing Raspbian on a SD card. Start by inserting the SD card into your computer using an adapter (these tend to come with the microSD card if you just bought a new one, but makerspaces and photographers may have one lying around for you to borrow). Once it's in it will mount automatically and you should see it pop up on your finder or file explorer. It might have a different name, but be sure you are able to identify it and associate it with what you just inserted into your laptop or desktop computer.
+
+Now we'll have to wipe and format the microSD card using an SD Card Formatter tool. Use the one made available by the SD Association, available at: https://www.sdcard.org/downloads/formatter_4/.
+
+[more details and screenshots here]
+
+Once the microSD card is wiped and formatted, we want to etch the Raspbian operating system onto the card. First, download Raspbian OS from https://www.raspberrypi.org/downloads/raspbian/, and then use Etcher (available at https://etcher.io/) to write it to the microSD card. This may take a few minutes. Notice that the mounted volume is no re-named 'boot'.
+
+[more details and screenshots]
+
+There are a couple other things that we need to do to ensure that we can interface with the Raspberry Pi headless. First we need to create a file in the OS that enables SSH interface. Open terminal (/Applications/Utilities/Terminal.app, or by hitting Command+Space and then typing Terminal.app) and type the following command, then hit enter:
+
+```
+touch /Volumes/boot/ssh
+```
+
+This command (`touch`) creates an empty text file in a location specified after the space. In this case, we are creating a text file called 'ssh' in the main directory of the boot volume. What this file does, in simple terms, is [specify that it's okay to allow other computers to interface with the Raspberry Pi over the network.](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md#3-enable-ssh-on-a-headless-raspberry-pi-add-file-to-sd-card-on-another-machine)
+
+So now that we've specified that it's okay to enable SSH connections over a network, we need to enable the Raspberry Pi to connect to the network in the first place. If we were using a graphical user interface, we would go to a menubar, select the network and input the password. Only then would we be able to  connect to the Raspberry Pi headless. However because we are not using a graphical user interface, we need to devise a way to make the Raspberry Pi connect to the network automatically, without prior intervention on our part. We can do this by creating another file, `wpa_supplicant.conf_`, similarly to what we did above.
+
+```
+touch /Volumes/boot/wpa_supplicant.conf
+```
+
+Now we need to edit this file to specify the login credentials for the network that we want to join. We'll use a terminal-based text editor called `nano` to edit this file.
+
+```
+nano /Volumes/boot/wpa_supplicant.conf
+```
+
+**Side-note:** alternatively, we could navigate to the directory where `wpa_supplicant.conf` is located and then run nano, breaking this up into two separate steps:
+```
+cd /Volumes/boot
+nano wpa_supplicant.conf
+```
+The `cd` command moves you around directories. Check what files and sub-directories are in your current directory with `ls`.
+
+You should now see a blank file like this: [screenshot]
+Type the following into ```wpa_supplicant.conf```. Remember to change the generic country code, network SSID and network password, including the <> characters, to suit your setup. The quotes should remain in place.
+```
+country=<XX>
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="<network name>"
+    psk="<network password>"
+}
+```
+
+Exit nano by hitting `control + x`, and then pressing the `y` key when asked if you'd like to save the buffer (which means save the file). This should return you to the normal terminal window.
+
+Now eject the microSD card, place it in the Raspberry Pi and boot it up. Wait a couple minutes for it to finish booting up. The red LED light specifies power consumption (solid means power is flowing, flickering means inadequate power supply, i.e. needs a supply with better ampage), and the green LED light specifies data processing. The operating system will be finished installing once the green LED calms down.
+
+Note: There is no power switch on the Raspberry Pi, and power-supply can therefore be a bit finicky. You will have to shut down the computer by running a specific command. DO NOT JUST UNPLUG THE POWER CORD! THAT CAN CORRUPT THE SD CARD AND YOU'LL HAVE TO RE-IMAGE IT AND LOSE ALL DATA IN THE PROCESS!
+
+Now that we've installed the OS and enabled network-based control of it, let's go ahead and establish such a connection. This is called SSH, or Secure SHell connection. To establish an SSH connection we will need to know the location of the target computer on the network. We can do this by going into the router's settings and checking all connected computers' IP addresses, or we can run the following command on your laptop or desktop computer:
+
+```arp -a```
+[more details]
+
+Now that we know the target computer's ip address, we can type the following command, removing the <> characters that surround the generic placeholder:
+```
+ssh pi@<ip address>
+```
+You will be prompted for a password. The default password on fresh installations of Raspbian is 'raspberry'. No astericks will be visible as you type it, just hit enter when you are finished. Your window should look something like this: [screenshot]
+
+Congratulations, you're in!
+
+In the command we just ran, 'pi' and 'raspberry' specify the default username and password on the host computer, and the host computer itself is specified by the IP address that locates it on the network.
+
+This terminal window should now be considered a remote client to the raspberry pi. More specifically, everything that you do run that follows `pi@raspberrypi:` is being implemented on the Raspberry Pi. If you were to close the terminal window, you will be prompted to end the session - this is fine, but the Raspberry Pi will still be running. You will also need to re-establish a new SSH connection to get back in control of the host computer.
+
+You may also get the following warning when trying to establish an initial connection vis SSHL
+
+[screenshot]
+
+This is triggered because each computer that establishes an SSH connection with a specific target is identified using a cryptographic key, for security reasons. When you re-install Raspbian on the same microSD card, the old key slot is removed and replaced with a new one. However, when your remote laptop tries to enter the computer located on the same location on the network it reaches for the old key that works with the lock that has since been removed. We therefore need to delete the old key and replace it with a new one that fits the new lock.
+
+to do this, navigate to the file where the keys are stored, and edit the file to delete the corresponding keys:
+```
+sudo nano ~/.ssh/known_hosts
+```
+Remove all the data stored in this file by going to the end and holding backspace, then save and exit with Control+x and then y.
+
+Now that we are in the remote host, let's install updates. This requires that the network be connected to the internet.
+```
+sudo apt-get update -y
+sudo apt-get upgrade -y
+```
+Linux software is installed and managed through the use of package managers, in this case one called apt. `apt-get update` updates the listing of software (along with version numbers and compatibility info) that is managed on some series of servers out on the internet. `apt-get upgrade` installs updates to outdated software on your device based on comparisons of the local version numbers with that external listing. Including the `-y` flag is optional, and specifies that prompts to confirm any update with a yes/no response should always respond with 'yes'.
+
+For the purpose of this tutorial it is not necessary to update the kernel or firmware. The most up-to-date versions are included in the raspbian disk images, and using `sudo rpi-update` may install bleeding-edge updates or untested firmware that might break our intended setup.
+
+To shut down the Raspberry Pi, use the following command:
+```
+sudo shutdown -h now
+```
+##### Setting up Static IP Addresses
+To make our lives a little easier, especially when working on a network that many other devices will be connected to, it will be helpful to configure a static IP address for the Raspberry Pi on the network. Each device connected to the network is assigned a unique IP address, typically as a sequence following the order in which they connected. So the router might have IP address `192.168.0.100`, and subsequently connected computers will have `192.168.0.101`, `192.168.0.102`, `192.168.0.103`, etc. Most routers enable up to 200 connections by default, distributing IP addresses up to `192.168.0.199`. In order to maintain consistency when connecting to the Raspberry Pi (which may be necessary when writing instructions for others to follow, or when pre-configuring connections to the Raspberry Pi on others' computers), we can reserve an IP address from the upper end of the range, such as `192.168.0.198`. You will no longer have to lookup the target computer's IP address in the router options or via the terminal - you could simply run `ssh pi@192.168.0.198` to establish a connection to the Raspberry Pi from any remote computer on the network.
+
+In order to do this we will have to find some information about the network configuration. Start by SSH-ing into the Raspberry Pi.
+
+We first need to get the Raspberry Pi's IP address on the network, on both wifi and ethernet interfaces.
+
+```
+ip -4 addr show | grep global
+```
+
+The output should look something like this:
+```
+inet 169.254.39.157/16 brd 169.254.255.255 scope global eth0
+inet 192.168.0.198/24 brd 192.168.0.255 scope global wlan0
+```
+
+`eth0` refers to the ethernet interface, and `wlan0` refers to the wireless interface. Information pertaining to the ethernet interface will not appear if the Raspberry Pi is not currently connected to the router via an ethernet cable.
+
+Next we need to determine the router's gateway:
+```
+ip route | grep default | awk '{print $3}'
+```
+
+The result should look something like this:
+```
+192.168.0.1
+```
+
+Then we need to determine the DNS server or namespace, which is often the same as the router's gateway:
+```
+cat /etc/resolv.conf
+```
+
+The result should look something like this:
+```
+# Generated by resolvconf
+nameserver 192.168.0.1
+```
+
+Finally, we have to add this retrieved information to the file located at `/etc/dhcpcd.conf`:
+```
+sudo nano /etc/dhcpcd.conf
+```
+
+**Pro-tip:** when editing system files or doing anything that reconfigures the computer setup in a serious way, you will have to include the `sudo` before the command. This grants 'super user' privileges, which are required for system adminstration.
+
+Add the following, substituting the IP address values for the one's that were just determined above.
+```
+interface eth0
+static ip_address = 192.168.0.197/16
+static routers = 192.168.0.1
+static domain_name_servers = 192.168.0.1
+
+interface wlan0
+static ip_address = 192.168.0.198/24
+static routers = 192.168.0.1
+static domain_name_servers = 192.168.0.1
+```
+
+Save and close the file, and you should be good to go! You might have to re-establish the connection, however, since the host may now be situated at a different location on the network.
+
+__Pro-tip:__ You may need to make a direct connection with your computer to download updates (When in the field, I tend to tether my cullular connection to my laptop and share the connection over ethernet). In such cases, you will need to edit `dhcpcd.conf` and comment out the `eth0` specifications to enable an alternative ethernet interface with your laptop that is not specific to the router that it is normally connected to. You may not even need an `eth0` static IP, but it helps to have that direct ethernet connection in place if you are using the Pi as a network attached storage (NAS) device, i.e. sharing files over the network, as this gives a significant speed boost to file transfers.
+
+
+- include or reference a cheat sheet with basic terminal commands
+- show them around certain directories (/etc) and encourage them to ask the community for help
+
+#### Multi-User Databases
+- I mentioned how servers have both hardware and software components, now is the time to configure the software
+- explain how MariaDB is a fork of MySQL, but pretty much everything is the same
+- explain that the database resides on the SD card, and that users can connect to it remotely with the following information: the server's IP address, the port that is used by MariaDB, the name of the database, and login credentials
+- so let's install MariaDB Server
+- let's login as root
+- let's create a database
+- let's create a user and grant permissions
+- let's create tables
+- explain indexes and primary keys
+- let's insert data to the tables
+- let's select data from tables
+- let's update data from tables
+- let's make relationships among tables
+- let's join data from multiple tables
+- let's delete data from tables
+- do all this from the command line but show how it can also be done from a GUI like Sequel Pro or SQL Workbench, which actually shows the queries being run
+
+#### Client side stuff
+- explain ODBC (it's a driver that translates across database management systems (DBMSs))
+- show how they would connect to the database from MS Access (setup ODBC and DSN, Linked Table Manager, creating forms in Access, etc)
+- show that in certain cases ODBC is not necessary, such as when using R Shiny since the data is being entered directly rather than passed along through an intermediary DBMS such as MS Access
+- link down to a permalink explaining the R Shiny app in more detail
+
+#### Other bits and bobs
+- automatic scheduled backups
+- SMB file sharing
+- R Shiny frontends
+
+#### Tinkering and Improvising in the Field
+- working in multiple locations without any internet connection (and sqldump workaround)
+- ensure that people, especially higher up, understand the constraints and limitations you face
+- show people rather than tell
+- be respectful of their data and devices
+- power outages and working off-grid
+- migrating to the cloud and back
+- keep notes, watch your posture, etc
+
+#### Discussion
+
+#### Takeaways
+
+#### Excercises
+
+#### Further Reading
+
