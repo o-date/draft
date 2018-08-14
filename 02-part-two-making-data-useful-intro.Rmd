@@ -1,7 +1,7 @@
 # Making Data Useful
 
 
-Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three great habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “future-proof” your digital work.
+Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “future-proof” your digital work.
 
 Prepare yourself for a little journey. In a dreamlike state, you find yourself in a time machine, noticing that you have traveled to a point in the far or not-so-distant future. You arrive in your own lab to find a group of researchers puzzling over the information you created in the time before, trying to reconstruct your conclusions and make some kind of sense of it all.
 
@@ -10,44 +10,34 @@ Prepare yourself for a little journey. In a dreamlike state, you find yourself i
     "What was on all those corrupted flash drives? Does anyone even have a flash-drive-to-skull-jack converter around here?"
     "WHAT WAS THIS PERSON THINKING?"
 
-It doesn't have to be this way. Most archaeological researchers have encountered “bad” data in the past when trying to understand or reconstruct someone’s conclusions from field notes and excavation reports. What makes a dataset unweildy? What would make it better?
+It doesn't have to be this way. Most archaeological researchers have encountered “bad” data when trying to use someone else's data or reconstruct their conclusions from field notes and excavation reports. What makes a dataset unwieldy? How can we make it better?
 
 ![A Useful Warning from Kenny Brophy](images/regret-tweet-data.png)
 
 *It’s not understandable.* The dataset may be illegible (poor handwriting, or a poor scan of a hard copy document). It might be made up of codes with no way to decipher their meaning. It might be a digital binary file that can no longer be read by available software (or on a physical format that’s now obsolete).
-do
 
 *It can’t be easily accessed.* The dataset might be saved in a format that only expensive, proprietary software can read. It might be comprised of a lot of fascinating information but challenging to extract from a format like PDF.
 
-*It’s difficult to reuse.* The dataset might use inconsistent terminology. The data might be saved as an image, when in fact it's got a structure. The data may already be processed in ways that make further analysis impossible.
+*It’s difficult to reuse.* The dataset might use inconsistent terminology. The data might be saved as an image (a picture of a table in a PDF), when in fact it's got a structure (easily extractable text and numbers). The data may already be processed in ways that make further analysis impossible.
 
-With these frustrations in mind, the qualities of "good" data become apparent. Good data are stable, human readable, and accessible. They can be rearranged and remixed. As an added benefit, those same qualities that make data useful and conclusions reproducible can also help to protect against the ravages of time.
+With these frustrations in mind, the qualities of "good" data become apparent. Good data are stable, human readable, and accessible. They can be rearranged and remixed. And maintaining data in this condition helps protect them from the ravages of time.
 
 #### Making Data Sensible: Pre-Planning #### {-}
 
-You’ll notice that quality data (however you define the term) take planning. The structure of your data and the practicalities of how you’ll handle and store it should be woven into your research design. A reality to confront, however, is that there will be tradeoffs.
+Creating good data requires planning. It is important to plan the structure of the data, expectations for its use by researchers, and arrange for its storage from the beginning of your research. A reality to confront, however, is that there will be tradeoffs.
 
-Up front, right at the beginning, when you’re working out your research questions and goals, ask yourself some questions. What do I want my data to do? How much detail do I need to collect? Do I have a plan for curating datasets I’ve created? Is there space somewhere to do so? Will I need to be selective?
+Up front, right at the beginning, when you’re working out your research questions and goals, ask yourself some questions: What do I want my data to do? How much detail do I need to collect? Do I have a plan for curating datasets I’ve created? Is there space somewhere to do so? Will I need to be selective?
+|	Data		Computational environment	Comment
 
-\begin{landscape}
+|Degree of reproducibility|Data|Analysis|Computational environment|Comment|
+|---|---|---|---|---|
+|Not reproducible|	Summary statistics of the raw data are presented.|	Brief narrative of methods is presented.|	No information is provided.|	The current status quo for scholarly journal articles.|
+|Low reproducibility|	The reader invited to contact the author for access to the data.|	Brief narrative of methods is presented, names and version numbers of software are stated.|	No information is provided.|	Frequently seen. Inviting readers to contact the author to access the raw data is no guarantee that the raw data is available.|
+|Moderate reproducibility|	The journal article is accompanied by files of raw data tables in PDF or Excel (i.e., binary) files.|	Brief narrative of methods is presented, names and version numbers of software are stated.|	No information is provided.|	Frequently seen. Having the raw data in supplementary material makes it much more accessible compared to when it must be requested from the author. However, extracting raw data from a PDF or other binary file format can be  time-consuming and introduce errors. This presents obstacles to re-use of the data.|
+|High reproducibility|	The journal article is accompanied by plain text files (e.g., CSV format) of raw data.|	The journal article is accompanied by script files of R of Python code that demonstrate key parts of the analysis (but do not generate all the results presented in the paper).|	No information is provided.|	Uncommon. Raw data in plain text format makes re-use highly efficient. Script files with code  provide valuable insights into analytical decisions that are not narrated in the text of the article. However, because the code is not complete, substantial effort and skill is required by other researchers to reproduce the results of the article, and to re-use the code in new studies. This presents obstacles to re-use of the code.|
+|Very high reproducibility|	The journal article includes DOIs to an open access repository that contains plain text files (e.g., CSV format) of raw data.|	The open access repository linked to from the paper includes version-controlled R package or script files of R or Python code to reproduce all of the analysis output and graphics in the article.|	The open access repository linked to from the paper includes a dockerfile that documents the computational environment of the published analysis, and a docker image that allows another person to use that environment.|	Currently rarely seen. Other researchers should have a good chance to reproduce, re-use and extend the published results with this combination of plain text data files, code that documents every analysis and visualization in the paper, and details of the computational environment of the original analysis. Note that this does not guarantee permanent reproducibility, but it gives the best odds we can currently provide. The use of an open access repository means that researchers can access the files even if they do not have a subscription to the journal, and ensures the availability of the files if the journal website changes.|
 
-```{r reptable, message=FALSE}
-library(xtable)
-reptable <- read.csv("../diagrams/marwick_figure_2.csv", check.names = FALSE)
-reptable <- xtable(reptable,
-               caption = "Summary of degrees of reproducibility, reproduced from Marwick 2016",
-               align = "lp{2cm}p{5cm}p{5cm}p{5cm}p{5cm}")
-print(reptable,  comment = FALSE,
-      floating = FALSE,
-
-      #floating.environment = "sidewaystable",
-      tabular.environment = "longtable",
-      size = "\\fontsize{8pt}{8pt}\\selectfont",
-      booktabs = TRUE)
-
-```
-
-\end{landscape}
+[Table reproduced from Marwick 2016.]
 
 Perfection is unattainable. No dataset will ever be truly “complete.” You could collect, measure, and produce data at finer and finer resolutions, ad infinitum. But you don’t want to do that. And even if you think you're being comprehensive, all data you collect is only a specific, bounded representation of the real world.  
 
