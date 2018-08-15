@@ -1,4 +1,4 @@
-## Digital Archaeology as Creative Engagement with the World
+## Computational Creativity
 
 Once archaeological data becomes digital, it can escape the narrow purview of scholarly, academic engagement. Should it? Once it's out in the world, we lose our academic authority over it because it can be remixed, re-assembled, and taken to pieces for various ends - not all of them politically, ethically, or morally valid. But given that so much of archaeology is publicly funded, we have to recognize that these things will happen, and that we *should* be equipping our readers, our publics, to engage with these materials in ways that do justice to the peoples of the past, and also, the needs of the future. One way that this can be accomplished is to provide data and tools so that this archaeology can become fodder for art or activist inspired work.
 
