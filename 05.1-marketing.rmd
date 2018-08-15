@@ -1,7 +1,90 @@
 ## Marketing Digital Archaeology
 
-blag
+Digital archaeology exists as both a scholarly pursuit but also a 'tactical term'. We mean this in the way that [Matthew Kirschenbaum](http://dhdebates.gc.cuny.edu/debates/text/48) described the Digital Humanities in his contribution to the 2012 edition of the Debates in the Digital Humanities. He writes,
 
-### discussion
+>To assert that digital humanities is a “tactical” coinage is not simply to indulge in neopragmatic relativism. Rather, it is to insist on the reality of circumstances in which it is unabashedly deployed to get things done—“things” that might include getting a faculty line or funding a staff position, establishing a curriculum, revamping a lab, or launching a center. At a moment when the academy in general and the humanities in particular are the objects of massive and wrenching changes, digital humanities emerges as a rare vector for jujitsu, simultaneously serving to position the humanities at the very forefront of certain value-laden agendas—entrepreneurship, openness and public engagement, future-oriented thinking, collaboration, interdisciplinarity, big data, industry tie-ins, and distance or distributed education—while at the same time allowing for various forms of intrainstitutional mobility as new courses are approved, new colleagues are hired, new resources are allotted, and old resources are reallocated.
+
+We live in a current moment where, to get things done, we have to deploy terms in ways that capture the imagination of decision makers _and the public_ in ways that affect change. In a sense, it is a kind of marketing. But it is worth thinking about the ways digital archaeology fits into the frameworks of public archaeology as discussed in @moshenska_et_al_2017. In particular, we are thinking of the ways in which the public form their views of archaeology. The work of academic archaeologists is not the primary vector through which the public learns about archaeology. How then can we deploy our work in ways that we _infiltrate_ the places we have hitherto abandoned? Some time ago, Graham argued on the basis of scraping the network of links surrounding the so-called 'blogosphere' related to archaeology that we were 'teaching' the search engines what was important, what constituted archaeology. That was in 2011. By 2014, he was no longer so certain, and again missing the boat by a few years, argued that archaeologists needed to engage with writing the Wikipedia [@graham_2015]. Ironically enough, a few years later still it would not have been unreasonable to argue that Twitter and Facebook should be the locus for our marketing of archaeology, but with the rise of bad-faith actors whose concerted gaming of the algorithms of social media are working to undermine basic foundations of trust, we arrive at a moment when Wikipedia is our last online bastion of common ground [@madrigal_2018].
+
+Does that mean we should _not_ engage with Twitter and Facebook in terms of the _marketing_ or knowledge mobilization that we do? Of course not. But it does mean that we can't naively put materials there and expect them to have any real impact. 'Marketing' implies a budget, it implies active engagement, and it implies working to understand the arms-race that this advertising-powered web has created. If there is a business school at your institution, have you ever taken a course there? Have you ever tried to buy advertising on google, and mount an [ad-words campaign](https://ads.google.com/home/)? 
+
+This is related to the discussion of the economics of public archaeology, which Burtenshaw explores CITATION. When we consider the economics of _digital_ archaeology, we are confronted with the hard question of how do we measure its value? In the physical world, we can consider that archaeology provides value through:
+
+> - tourism
+> - urban regeneration
+> - direct sale of material (antiquities trading)
+> - marketing and branding
+> - jobs created by archaeological research and conservation.
+- @burtenshaw_2017, 37
+
+These create direct impact in terms of monies spent, and indirect in terms of this money being re-circulated by the initial suppliers. Burtenshaw suggests that we should understand the economic impact of public archaeology by looking at its 'magnitude, multiplication and distribution within a certain area' @burtenshaw_2017, 38. For digital archaeology, this directly ties back to the tactical usage of the term, because when we deploy it tactically, we are implicitly making an argument about economic value and economic impact. In online advertising, such things are measurement by 'engagement' or click-bait. Indeed, 'clickbait archaeology' (see e.g., [this thread by Erin Thompson](https://twitter.com/artcrimeprof/status/1002345847068217345)) can be considered archaeology done - or promoted - with the express purpose of monetizing outrage in some register because people are more likely to click on negatively or outrageously framed stories (eg @Hensinger_et_al_2013, @maldonado_2016). Thus, projects that use a digital aspect tied into a current high-profile issue (such as eg the destruction of cultural heritage by terrorists) as a way of generating traffic to a website _for the express purpose of increasing the profile of the organization rather than the scholarly dimension of the work is actually undermining the archaeology. (Some research makes a connection between how such stories make the reader _feel_ for whether or not something will achieve 'virality' or wide-spread sharing, @Guerini_Staiano_2015). Maldonado has an excellent [blog post on this matter](http://almostarchaeology.com/post/154387752118/archaeologypost-truth). 
+
+The marketing of archaeology online is largely a function of the economic value to be gained through engagement with the ad-based ecosystem created by Facebook, Google, and to a lesser extent, Twitter. The economic value of traffic to archaeological websites is not yet mapped out, but the role of archaeological click-bait in generating value for dubious purposes (see also Kristina Killgrove's excellent '[Don't share that Daily Mail Link about Archaeology...Just Don't](http://www.poweredbyosteons.org/2016/06/dont-share-that-daily-mail-link-about.html)') is only starting to be explored. That 'digital archaeology' as a term can be deployed tactically for strategic purposes _within_ the academy is also a kind of marketing. The question is: what kind of 'digital archaeology' do _you_ want to see out in the world?
 
 ### exercises
+
+The [Documenting the Now project](https://www.docnow.io/) is a collaborative project that is developing tools to enable researches and activists to keep track of developing issues as they play out over social media. One of these tools is TWARC - 'twitter archiving' tool. [Its repository is here](https://github.com/DocNow/twarc). _The instructions below were first published in our [workbook for crafting digital history](http://workbook.craftingdigitalhistory.ca/module-2/Exercises/#exercise-5-mining-twitter)_.
+
+**NB Twitter is changing how it approves and manages this process. The steps below might well be out of date, so proceed with caution. We will update once we see what the new process is, and whether it is worth the bother**.
+
+
+1. First of all, you need to set up a Twitter account, if you haven't already got one. Do so, but make sure to minimize any personal information that is exposed. For instance, don't make your handle the same as your real name.
+
+2. Turn off geolocation. Do not give your actual location in the profile.
+
+3. View the settings, and make sure all of the privacy settings are dialed down. For the time being, you *do* have to associate a cell phone number with your account. You can delete that once you've done the next step.
+
+4. Go to the [Twitter apps page](http://apps.twitter.com/) and click on new app.
+
+5. On the new **application** page, just give your app a name like my-twarc or similar. For website, use the site URL for your university or institution (although for our purposes any website will do). You don’t need to fill in any of the rest of the fields.
+
+6. Continue on to the next page (tick off the box saying you’ve read the developer code of behaviour). This next page shows you all the details about your new application.
+
+7. Click on the ‘Keys and Access Tokens’ tab.
+
+8. Copy the consumer key, the consumer secret to a text file.
+
+9. Click on the ‘create access tokens’ button at the bottom of the page. This generates an access token and an access secret.
+
+10. Copy those to your text file, save it. **Do not put this file in a github repo or similarly leave it online anywhere**.
+
+![Image showing Twitter access tokens](images/twitter-app.png)
+
+Now, right click on this [link to launch the binder in a new page](https://mybinder.org/v2/gh/o-date/social-media-work/master); we've pre-installed TWARC for you: 
+
+**WARNING** this binder is not secure; it is possible that someone might be able to intercept. That said, the session is destroyed after your use and so the liklihood of someone intercepting is vanishingly small.
+
+
+11. On the right hand side of the screen, select 'new >> terminal'. At the `$` prompt type `twarc configure`, give it the information it asks for (your consumer secret etc) and follow the prompts.
+
+You're now ready to search. For instance, `$ twarc search canada150 > search.jsonl` will search Twitter for posts using the canada150 hashtag.
+
+**Wait! Don't run that command! (Force-stop the search if necessary by hitting ctrl+c.)**
+
+If you search for canada150 , there are, what, 36 million Canadians? How many tweets is that likely to be? Quite a lot — and the command will run quietly for days grabbing that information, writing it to file, and you'll be sitting looking at the screen wondering if anything is happening.
+
+Try something smaller and more contained for now: `$ twarc search archaeogaming > search.jsonl`.
+
+Note that Twitter only gives access to the last two weeks or so via search. For grabbing the stream as an event happens you'd use the twarc stream command — see the Twarc documentation for more.
+
+It might take some time for the search to happen. You can always force-stop the search by hitting ctrl+c. If you do that though there could be an error in the text formatting of the file which will throw an error when you open it with a tool expecting perfectly formatted json. You can still open the JSON in a text editor though, but you will have to go to the end of the file and fix the formatting.
+
+The data being collected is in JSON format. That is, a list of 'keys' and 'values'. This is a handy format for computers, and some data visualization platforms require data in this format.
+
+On the home screen for the binder, you can download the json file to your computer. There are some utilities that come with TWARC that allow you to build visualizations of the data. To get these utilities, at the terminal in the binder, use `git clone` to get the source for TWARC:
+
+```git clone https://github.com/DocNow/twarc.git```
+
+Then, you can do things like build a tweet wall:
+
+```python twarc/utils/wall.py tweets.jsonl > tweets.html```
+
+or a wordcloud:
+
+```python twarc/utils/wordcloud.py tweets.jsonl > wordcloud.html```
+
+You can use the `network.py` command to get the tweets organized for network analysis in a program such as [Gephi](http://gephi.org) like so:
+
+```utils/network.py --users tweets.jsonl tweets.gexf```
+
+...which would enable you to identify influential accounts and so on. Consult the TWARC documentation for other things you can do with this package.

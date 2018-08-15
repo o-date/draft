@@ -39,7 +39,6 @@ Hololens, ARkit, all the rest of it.
 
 ### exercises
 
-maybe this can be rejigged to grab just archaeological wiki articles? would show incidentally ways of making nodejs apps https://roadtrip.glitch.me/
+1. The best introduction to producing virtual reality is currently Jacob Greene's [Creating Mobile Augmented Reality Experiences in Unity](https://programminghistorian.org/en/lessons/creating-mobile-augmented-reality-experiences-in-unity#setting-up-unity-for-ar-development) at the [Programming Historian](https://programminghistorian.org). In this tutorial, he demonstrates how to use the built in features of the [Unity 3d](https://unity3d.com) game engine to create smartphone AR applications. Complete the tutorial, and then extend the application by adding 3d models (there are creative-commons licensed models at [Sketchfab](https://sketchfab.com) in their 'cultural heritage' category) to it. 
+2. The interactive fiction engined [Twine](https://twinery.org) can be hacked to create webpages that only display certain text passages or audio or images if the user is standing in a particular location. See the [Twine Cookbook's](https://twinery.org/cookbook/) 'Geolocation' section. A walk through of using this feature is [here](https://github.com/shawngraham/ar-archaeology/blob/master/workshop%20materials/Hacking%20Twine%20to%20make%20a%20location-based%20game.md). Play with this to plan out a hand-held guide to your campus.
 
-
-matthew haris notebook for site photos data extraction thing!!!go find. think it's in R. more of an image recognition though.

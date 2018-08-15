@@ -14,6 +14,8 @@ More recently, in his inaugural editorial for the open-access journal, Frontiers
 
 > ....digital technologies are indeed tools, but they are not neutral or passive and therefore the technological ecosystem within which archaeology functions must be connected to broader paradigmatic shifts. Consequently, there is a need for specialisation and focus to fully understand and take advantage of the complexisties of technology, and yet it is so universal that all arcaheologists must take more responsibility for their digital data, analysis, and communications.
 
+All archaeologies are digital, but not all archaeologies are Digital Archaeology.
+
 ### A distant view
 Ethan Watrall has drawn the history of computational archaeology/digital archaeology all the way back to the pioneering work of James Deetz in the 1960s, who used computers at MIT to perform stylistic analyses of Arikara ceramics [@watrall_archaeology_2017, @deetz_dynamics_1965]. Most early interest in computation for archaeology was centred on the potential for computational databases, although ambition often out-stripped capability. By the 1970s, serious efforts were being put into work to build the infrastructural knowledge necessary to make and usefully query archaeological datasets. One can see this concern play out by considering a `topic model` [@shawn_graham_digital_2014] of the early volumes of the Computer Applications in Archaeology (a topic model is a way of deducing latent patterns of discourse within text, based on patternings of words [See @graham_getting_2012]):
 

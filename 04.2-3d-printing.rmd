@@ -1,6 +1,6 @@
 ## 3D Printing, the Internet of Things and “Maker” Archaeology
 
-
+@heckadon_et_al2018
 
 ### 3d Printing - a Workflow
 
@@ -68,7 +68,7 @@ Archaeology is an inherently collaborative process that happens in various place
 In order to implement such a system we need to set up a network, set up a server, set up a database along with user-friendly interfaces, and ensure that the system is aligned with and contributes positively to the goals of the overall project.
 
 The system that we're going to build will look something like this:
-![DIY Fieldwork Database Diagram](https://github.com/zackbatist/DIYFieldworkDatabase/raw/master/DIYDatabaseDiagram.png)
+![DIY Fieldwork Database Diagram](images/DIYDatabaseDiagram.png)
 
 It consists of:
 - a local network generated and managed by a wireless router
