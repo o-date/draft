@@ -23,7 +23,7 @@ What's more, _programming is forgetting_ [@parrish_2016]:
 
 > The process of computer programming is taking the world, which is infinitely variable, mysterious, and unknowable (if you’ll excuse a little turn towards the woo in this talk) and turning it into procedures and data. And we have a number of different names for this process: scanning, sampling, digitizing, transcribing, schematizing, programming. But the result is the same. The world, which consists of analog phenomena infinite and unknowable, is reduced to the repeatable and the discrete.
 
-> In the process of programming, or scanning or sampling or digitizing or transcribing, much of the world is left out or forgotten.
+> [...] In the process of programming, or scanning or sampling or digitizing or transcribing, much of the world is left out or forgotten.
 
 What do we _leave out_ when we reduce the messiness of the world to our schemas, our rasters, our compressed images? The decision of what to leave out is always a decision, even if it flows as a consequence of whatever method we're using. In this way, the act of forgetting - even in an era of big data when seemingly everything that _can be recorded is recorded_ is still a fundamentally _ethical_ and _moral_ one. It is not however a recognition that should make us despair. What should we do? In her discussion of the ethics of trying to represent and interfere with digital representations of the world, Parrish arrives at an ethics that is not so much proscriptive as inquisitive:
 
