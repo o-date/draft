@@ -1,6 +1,6 @@
 ## 3D Printing, the Internet of Things and “Maker” Archaeology
 
-
+@heckadon_et_al2018
 
 ### 3d Printing - a Workflow
 
