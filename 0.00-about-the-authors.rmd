@@ -32,7 +32,8 @@ Andrew Reinhard literally wrote the book on video game archaeology: Archaeogamin
 
 ### Kate Ellenberger {-}
 
-### Zach Battist {-}
+### Zack Batist {-}
+[Zack Batist](https://www.zackbatist.github.io) is a PhD student at the University of Toronto's Faculty of Information, where his research focuses on the ways in which archaeological practices – in their immense variety and scope – are implemented as part of a broad continuum of work that is inherently interdisciplinary and cooperative in nature. He is also interested in the critical evaluation of open data initiatives and the development of information infrastructures across and among disciplines, as well as public perceptions of archaeology and the representation of archaeology in science fiction, popular media, professional politics and public policy. He also actively tinkers with various computational tools and methods, ranging across the general domains of database management, GIS, statistical computing, network analysis, web development and server administration. Some ramblings and code can be found on [github](https://www.github.com/zackbatist) and [twitter](https://www.twitter.com/mtl_zack).
 
 ### Joel Rivard {-}
 
