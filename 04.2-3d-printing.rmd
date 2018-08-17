@@ -284,34 +284,276 @@ Save and close the file, and you should be good to go! You might have to re-esta
 
 __Pro Tip:__ You may need to make a direct connection with your computer to download updates (When in the field, I tend to tether my cullular connection to my laptop and share the connection over ethernet). In such cases, you will need to edit `dhcpcd.conf` and comment out the `eth0` specifications to enable an alternative ethernet interface with your laptop that is not specific to the router that it is normally connected to. You may not even need an `eth0` static IP, but it helps to have that direct ethernet connection in place if you are using the Pi as a network attached storage (NAS) device, i.e. sharing files over the network, as this gives a significant speed boost to file transfers.
 
-#### Multi-User Databases
-- I mentioned how servers have both hardware and software components, now is the time to configure the software
-- explain how MariaDB is a fork of MySQL, but pretty much everything is the same
-- explain that the database resides on the SD card, and that users can connect to it remotely with the following information: the server's IP address, the port that is used by MariaDB, the name of the database, and login credentials
-- so let's install MariaDB Server
-- let's login as root
-- let's create a database
-- let's create a user and grant permissions
-- let's create tables
-- explain indexes and primary keys
-- let's insert data to the tables
-- let's select data from tables
-- let's update data from tables
-- let's make relationships among tables
-- let's join data from multiple tables
-- let's delete data from tables
+#### Setting up the database management system
+Now that we have the Raspberry Pi set up, let's set up a database management system (DBMS for short). In this tutorial we're going to be using MariaDB, which is for all intents and purposes identical to MySQL (MariaDB is a fork of MySQL that is more committed to open source principles). In fact, all MySQL commands work in MariaDB, and the community of users cross-polinate and use the terms synonymously in their documentation and troubleshooting. We will be using many commands that were designed for use in MySQL and which were ported over to MariaDB when it was forked.
+
+In our current application, we will be installing a database server on the Raspberry Pi, which hosts one or more databases. The database, and all information stored within it, resides on the SD card slotted into the Raspberry Pi, which users connect to over the network as clients. The fact that the database exists in one centralized place ensures that the information accessed by clients is constantly up to date and consistent. In order to connect to the database as a client, users will have to know the server's IP address, the port that is used by MariaDB on the server, the name of the database to be accessed, and the users' login credentials to access the database.
+
+To install MariaDB Server, first SSH into the Raspberry Pi and then use `apt-get` to install `mariadb-server` from the package manager:
+
+```
+sudo apt-get install mariadb-server
+```
+
+Once it is installed, you will have to re-configure a configuration file to enable access to the database across the network. First access the config file:
+
+```
+sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+```
+
+Find the line that configures `bind-address` to `127.0.0.1` and change its value to `0.0.0.0`. This changes the addresses that the MariaDB server will listen to for connections. If we had left it at `127.0.0.1`, which is typically synonymous with `localhost`, only modifications made by the Raspberry Pi's local users would be able to access any of the databases managed by the MariaDB server. By changing the value to `0.0.0.0` we enable the server to accept connections from any computer on the network, if they have valid credentials. You can also configure specific IP addresses in order to allow only computers with those locations on the network to access the database server.
+
+Once your changes are made, save the file using `control + x` and then restart the MariaDB service:
+
+```
+sudo service mysql restart
+```
+
+Now let's login to the server so that we can create a database. By default there is only one user named 'root', whose password is blank. Root has the broadest set of privileges, and can create or drop databases and users freely. You can only log in as root on the machine on which the MariaDB server resides - you can not log in as root from a remote connection. After establishing a SSH connection to the Raspberry Pi, initiate the server and login as root:
+
+```
+sudo mysql
+```
+
+You'll notice that the terminal window looks a little different. We are now in the MariaDB server environment, and we will have to escape it in order to run commands outside of it. The command to escape is `control + c`. You can also establish another SSH connection in a new terminal window so that you can use one window for database management tasks, and the other for working with other aspects of the operating system.
+
+MariaDB commands are SQL, or Structured Query Language. They are generally written using upper case letters, and every command must end with a semicolon. The semicolon essentially indicates the boundaries of a SQL statement, which is essentially a self-contained logical statement. If you do hit enter after an incomplete statement is input then any further input will be tacked on to the end of the incomplete statement. The semicolon indicates that the statement is finished and ready to be executed.
+
+Now let's create a database called `odate1`:
+
+```
+CREATE DATABASE odate1;
+```
+
+Next create a new user named `lara` with password `croft`:
+
+```
+CREATE USER 'lara'@'localhost' IDENTIFIED BY 'croft';
+```
+
+We can also make a restriction that would only recognize a user named lara if she attempts to access the server from a specific IP address by replacing `localhost` with the IP address that you are expecting her to connect from:
+
+```
+CREATE USER 'lara'@'12.34.56.78' IDENTIFIED BY 'croft';
+```
+
+Different users can have different permissions granted to them. Groups of specific permissions can be lumped together and labelled as roles, which can also be assigned to users, which may make database management slightly easier. In this tutorial we will not fret too much with permissions or roles, and we will simply assign all permissions to our user lara:
+
+```
+GRANT ALL PRIVILEGES ON odate1.* TO 'lara'@'%' IDENTIFIED BY 'croft';
+FLUSH PRIVILEGES;
+```
+
+We could also restrict lara's permissions to specific tables on the database by replacing the `*`, which means 'any' or 'wild card' in logical or boolean terms, with the name of a specific table contained within the database.
+
+Now let's close the MariaDB service (using `control + c`) and try logging in as lara:
+
+```
+mysql -u lara -p
+```
+
+The -p flag indicates that the terminal should prompt us for a password. As lara, if we try creating a database we will get an error because lara does not have permission to do so.
+
+Creating or dropping tables, columns, indexes and relationships, as well as selecting, inserting, updating and deleting rows, is done via SQL. More comprehensive guides on SQL can be found at the following links, but here are a few useful snippets that you can try out.
+
+To create a table:
+```
+CREATE TABLE `odate1`.`contexts` (
+`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+`Context` VARCHAR(255) NOT NULL DEFAULT '',
+`Trench` VARCHAR(255) NOT NULL DEFAULT '',
+`ContextDescription` VARCHAR(255) NOT NULL DEFAULT '',
+`Munsell` VARCHAR(255) NOT NULL DEFAULT '',
+`SedimentColour` VARCHAR(255) NOT NULL DEFAULT '',
+`NumberOfBuckets` INT(11) NOT NULL DEFAULT '',
+PRIMARY KEY (`id`)
+);
+```
+
+To insert data into the table:
+```
+INSERT INTO `contexts` (id, Context, Trench, ContextDescription, Munsell, SedimentColour, NumberOfBuckets)
+VALUES (1, 0001, 001, "The first context of the season. Loamy sand, very herbaceous, characteristic of a typical surface layer.","5YR 3/3",, 3);
+```
+
+to select data from the table:
+```
+SELECT `Context`, `Munsell`, `SedimentColour` FROM `contexts` WHERE `contexts`.`Trench` = 001;
+```
+
+To update data in the table (https://www.w3schools.com/sql/sql_update.asp):
+```
+UPDATE `contexts` SET `SedimentColour` = "Dark Brown" WHERE `Munsell` = "5YR 3/3";
+UPDATE `contexts` SET `SedimentColour` = "Brown" WHERE `Munsell` = "5YR 4/3";
+UPDATE `contexts` SET `SedimentColour` = "Brown" WHERE `Munsell` = "5YR 5/4";
+UPDATE `contexts` SET `SedimentColour` = "Reddish Yellow" WHERE `Munsell` = "5YR 7/6";
+```
+
+To delete data from the table (https://www.w3schools.com/sql/sql_delete.asp):
+```
+DELETE FROM `contexts` WHERE `Context` = "0005";
+```
+
+To make a relationship between two tables:
+```
+CREATE TABLE `odate1`.`trenches` (
+`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+`Trench` VARCHAR(255) NOT NULL DEFAULT '',
+`Supervisor` VARCHAR(255) NOT NULL DEFAULT '',
+`Reason` VARCHAR(255) NOT NULL DEFAULT '',
+`LocalDatum` VARCHAR(255) NOT NULL DEFAULT '',
+PRIMARY KEY (`id`)
+);
+
+ALTER TABLE `contexts` ADD CONSTRAINT `FK_contexts_Trench` FOREIGN KEY (`Trench`) REFERENCES `contexts` (`Trench`) ON DELETE CASCADE ON UPDATE CASCADE;
+```
+
+To run a join query (https://www.w3schools.com/sql/sql_join.asp):
+```
+SELECT `contexts`.Context, `contexts`.`Trench`, `contexts`.`NumberOfBuckets`, `Trench`.`Reason` FROM `contexts` INNER JOIN `trenches` ON `contexts`.`Trench` = `trenches`.`Trench`;
+```
+
 - do all this from the command line but show how it can also be done from a GUI like Sequel Pro or SQL Workbench, which actually shows the queries being run
 
 #### Client side stuff
-- explain ODBC (it's a driver that translates across database management systems (DBMSs))
-- show how they would connect to the database from MS Access (setup ODBC and DSN, Linked Table Manager, creating forms in Access, etc)
-- show that in certain cases ODBC is not necessary, such as when using R Shiny since the data is being entered directly rather than passed along through an intermediary DBMS such as MS Access
-- link down to a permalink explaining the R Shiny app in more detail
+Manipulating a database can be done from the command line or from a graphical user interface running on a remote client. There are a wide variety of database client software available (either open source or proprietary) but I highly recommend Sequel Pro (mac only) and MySQL Workbench (cross platform).
 
-#### Other bits and bobs
-- automatic scheduled backups
-- SMB file sharing
-- R Shiny frontends
+As mentioned above, in order for a client to access a database on a remote server they will need the following information:
+* the server's IP address
+* the port on which MariaDB listens to connections
+* the database's name
+* a user's username and password
+
+Assuming that the Raspberry Pi has the static IP we assigned to it earlier, we can access our test database using the following information:
+* IP address: 192.168.0.198
+* Port: 3306 (this is the default for MariaDB and MySQL)
+* Database: odate1
+* User: lara
+* Password: croft
+
+Everything that happens in this interface can be expressed as a logical SQL statement, which is passed on to the server and executed there as if it were done in the terminal, as demonstrated above. In MySQL Workbench this is explicitly shown to the user so that they may verify the actions that they take.
+
+It is also possible to generate your own interfaces and data entry forms using Microsoft Access, PHP or R. In broad terms, a connection to the database is established using the same information just listed above, and buttons next to text fields or table renderers are used to execute SQL statements that insert, update, select delete or otherwise query the database accordingly.
+
+For more information on how create data entry forms using Microsoft Access, PHP and R Shiny, please refer to the following links:
+* Microsoft Access:
+* PHP:
+* R:
+
+#### Scheduling automatic backups
+It is wise to backup your databases regularly, but this is often overlooked. Thankfully we can automate this process! We accomplish this by running a basic script that wraps the database as a single file and copies it over to a specified directory that corresponds with a folder on a mounted USB storage drive.
+
+First we will have to configure the system so that the USB storage device is mounted consistently and automatically each time the device is connected. While Raspberry Pi does support auto USB mounting when starting the machine, it can be a bit flaky. Therefore we will use the device ID (referred to as UUID in the linux system) to ensure that there is more certainty of a proper mount. So we need to determine the UUID of the USB device by first inserting it in the Raspberry Pi and then cross-checking the outputs of the following commands:
+```
+ls -al /dev/disk/by-uuid
+lsblk
+```
+
+Infer the correct UUID based on the drive's capacity and through elimination of other possibilities, and note it down somewhere.
+
+Now create the directory where we want to mount the drive:
+```
+sudo mkdir /media/backup
+```
+
+Give the directory adequate permissions:
+```
+sudo chmod -R 777 /media/backup
+```
+
+__Note:__ This command gives unrestricted read, write and execute permissions to all users! Configure your permissions to suit your needs!
+
+Next open the `fstab` file, which is a system file that handles the way Raspbian mounts USB devices:
+```
+sudo nano /etc/fstab
+```
+
+At the end of that file, add the following command, replacing the UUID with the one pertaining to the specific device and the directory with the intended mount point:
+```
+UUID=783A-120B /media/backup auto noatime,nofail,umask=000 0 0
+```
+
+__Note:__ This is the correct code for FAT32 formatted drives only. FAT32 handles permissions is a slightly different way than NTFS and linux-based filesystems (i.e. ext4) and you will need to configure them accordingly. However, I recommend the use of FAT32 in general, since it is interoperable between virtually all operating systems, whereas others are not, and zipped archaeological databases probably won't be more than 4GB each, which is the file size limit for FAT32-formatted devices.
+
+Now the USB drive will be auto mounted and ready to use. Don’t forget to restart your Raspberry Pi to test it out:
+```
+sudo shutdown -h now
+```
+
+After you have gotten the USB drive to mount automatically, we need to create a script called `dbbackup.sh` in the home directory:
+```
+cd ~
+sudo nano dbbackup.sh
+```
+
+In that file, enter the following:
+```
+#!/bin/bash
+$OUTPUT_FILE = /media/backup/mysqldump/odate1_$(date +"%Y%m%d_%H%M%S").gzip
+$USERNAME = lara
+$PASSWORD = croft
+$DATABASE_NAME = odate1
+
+sudo mysqldump -u$USERNAME -p$PASSWORD $DATABASE_NAME | gzip > $OUTPUT_FILE
+```
+
+The username, password, database name and file path can also be modified to suit your unique situation. Ensure that the permissions are properly set to allow you to write to the specified directory.
+
+Then we need to set the script to be executable:
+```
+sudo chmod 755 dbbackup.sh
+```
+
+Now we need to automate the execution of this script using `cron`. `cron` is a time-based scheduling utility in Unix/Linux operating systems such as Raspbian. It reads a configuration file, commonly referred to as `crontab` where jobs are scheduled using a special syntax. To access and edit the crontab simply enter `sudo crontab -e` and add a line at the end of the file to schedule a job.
+
+To run dbbackup.sh every 30 minutes, add the following line at the end of the crontab:
+```
+*/30 * * * * /home/pi/dbbackup.sh
+```
+
+__Pro Tip:__ [crontab.guru](https://crontab.guru/) is a great resource for determining the correct syntax for cron schedules.
+
+For more information, please refer to the following link:
+[https://www.codingepiphany.com/2013/06/12/raspberry-pi-lamp-server-tuning-and-automated-db-backup/
+](https://www.codingepiphany.com/2013/06/12/raspberry-pi-lamp-server-tuning-and-automated-db-backup/)
+
+#### Configuring a file sharing server
+It may be useful for participants on a project to assemmble photos, spreadsheets, reports or various other digital files with minimal hassle. Luckily, the Raspberry Pi can also be used to set up a network attached storage (NAS) device. In simpler terms, network-connected users can transfer files between their own computers and a USB storage device connected to the Raspberry Pi. This effectively renders a USB storage drive as a wireless drive.
+
+To begin, the system must be confured to automount the USB drive. Instructions on how to do this have been provided in section 4.2.2.5. I recommend that you use a separate USB drive than the one used for backups. For the purpose of this tutorial, I will assume that the file sharing drive is mounted at `/media/FileShare`.
+
+We will be using a software package called Samba to enable the primary NAS functions. Install Samba using the following command:
+```
+sudo apt-get install samba samba-common-bin
+```
+
+Next, edit the Samba configuration file:
+```
+sudo nano /etc/samba/smb.conf
+```
+
+Add the following at the end of the file:
+```
+[FileShare]
+Comment = Pi shared folder
+Path = /media/FileShare
+Browseable = yes
+Writeable = Yes
+only guest = no
+create mask = 0777
+directory mask = 0777
+Public = yes
+Guest ok = yes
+```
+
+Ensure that `Path =` the directory you want to share, such as the mount point of an external drive.
+
+This configuration allows anyone to read, write, and execute files in a volume named share, either by logging in as a Samba user or as a guest. If you do not want to allow guest users, omit the `guest ok = yes` line.
+
+Please refer to the following link and the Samba documentation in order to set up usernames and passwords. The method just described allows free-for-all access, and it should be communicated to users that they can add, delete or modify any file in the shared directory, for better or worse. You may feel inclined to schedule automated backups of your shared drive to yet another connected drive, though this may congest the network and occupy lots of disk space, depending on the size of the shared directory. You may wish to schedule such backups during off-hours, when volumes of traffic across the network are expected to be low.
+* 
+* 
+* 
 
 #### Tinkering and Improvising in the Field
 - working in multiple locations without any internet connection (and sqldump workaround)
