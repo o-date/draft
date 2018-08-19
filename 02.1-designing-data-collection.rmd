@@ -8,6 +8,21 @@ In teaching, there is a concept called 'backwards design', where you design your
 
 And so, we will begin this section on data collection by thinking through where the _things_ are going to go.
 
+**Modes of collection**
+
+*Paper to digital*
+Sometimes the most straightforward way to collect data in the field is to write it on paper. Paper forms can't run out of batteries. Data loss and integrity issues are still real, but massive data loss may be less of a threat when working with paper, depending on backup mechanisms.
+- designing paper forms
+- what about  marginalia?
+*Born digital*
+- mobile data collection
+- limits without over-constraining
+- list of open resources
+
+Importance of training
+
+**Creating structure**
+
 **Where to put your data**
 
 LOCKSS
@@ -24,11 +39,6 @@ Simple formats = easier migration
     Geospatial- GeoJSON is text-based and human readable
     3D- a new frontier in digital preservation (we don’t know how to do it)
 
-**Creating a structure**
-
-**Choosing legacy_formats**
-
-**Where to put your data**
 
 ### discussion
 
