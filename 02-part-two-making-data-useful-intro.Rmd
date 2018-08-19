@@ -85,6 +85,3 @@ DH projects:
 “Preservation for the (Digital) Ages: Digital Archivists from Collaborate with Classicists to Improve Database Preservation Methods.” ScienceDaily, https://www.sciencedaily.com/releases/2017/10/171017124345.htm. Accessed 7 Feb. 2018.
 
 Xu, Weijia, et al. A Portable Strategy for Preserving Web Applications Functionality. IEEE, 2017, pp. 1–4. CrossRef, doi:10.1109/JCDL.2017.7991578.
-[Jolene can't access this]
-
-Wordpress to static site
