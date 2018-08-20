@@ -48,7 +48,7 @@ The [Documenting the Now project](https://www.docnow.io/) is a collaborative pro
 
 10. Copy those to your text file, save it. **Do not put this file in a github repo or similarly leave it online anywhere**.
 
-![Image showing Twitter access tokens](images/twitter-app.png)
+![Twitter Application Management page as of August 2018](images/twitter-app.png)
 
 Now, right click on this [link to launch the binder in a new page](https://mybinder.org/v2/gh/o-date/social-media-work/master); we've pre-installed TWARC for you: 
 
