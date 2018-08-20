@@ -1,11 +1,10 @@
-## 3D Photogrammetry
+## Photogrammetry
 
 In recent years, faster and more powerful computers have made it feasible to do complex 3d model building by extracting points of overlap in multiple photographs, then extrapolating from the camera metadata embedded in those images the distance from the points to the camera's image sensor.This information allows the reconstruction of where those points were _in space_ relative to the camera. Thus astonishingly good 3d models can be created at rather low cost. 
 
 Laser scanning, on the other hand, involves shooting rays of light onto an object (or space) and counting the time it takes for the light to return to the scanner. Laser scanners are able therefore to take detailed micro-millimetre scans of an object's surface and texture. For some archaeological purposes, laser scanning is to be preferred. For other purposes, 3d photogrammetry or 'structure from motion' (sfm) is entirely appropriate, and the level of resolution good enough
 
 In this chapter, we'll cover some of the basic principles of how sfm works while pointing you to more detailed discussions. We also provide links in the 'further readings' to some recent case studies using 3d photogrammetry in novel ways.
-
 
 ### Basic principles
 
