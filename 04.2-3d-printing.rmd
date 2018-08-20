@@ -108,13 +108,13 @@ It may seem a little intimidating, but using the terminal is actually quite easy
 
 So let's get started by installing Raspbian on a SD card. Start by inserting the SD card into your computer using an adapter (these tend to come with the microSD card if you just bought a new one, but makerspaces and photographers may have one lying around for you to borrow). Once it's in it will mount automatically and you should see it pop up on your finder or file explorer. It might have a different name, but be sure you are able to identify it and associate it with what you just inserted into your laptop or desktop computer.
 
-Now we'll have to wipe and format the microSD card using an SD Card Formatter tool. Use the one made available by the SD Association, available at: https://www.sdcard.org/downloads/formatter_4/.
+![sd](images/sd.jpg)
 
-[more details and screenshots here]
+Now we'll have to wipe and format the microSD card using an SD Card Formatter tool. Use the one made available by the SD Association, available at: https://www.sdcard.org/downloads/formatter_4/.
 
 Once the microSD card is wiped and formatted, we want to etch the Raspbian operating system onto the card. First, download Raspbian OS from https://www.raspberrypi.org/downloads/raspbian/, and then use Etcher (available at https://etcher.io/) to write it to the microSD card. This may take a few minutes. Notice that the mounted volume is re-named as 'boot'.
 
-[more details and screenshots]
+![format](images/format.png)
 
 There are a couple other things that we need to do to ensure that we can interface with the Raspberry Pi headless. First we need to create a file in the OS that enables SSH interface. Open terminal (/Applications/Utilities/Terminal.app, or by hitting Command+Space and then typing Terminal.app) and type the following command, then hit enter:
 
@@ -145,7 +145,7 @@ The `cd` command moves you around directories. Check what files and sub-director
 
 After the `nano` command you should see a blank file like this:
 
-[screenshot]
+![wpasupp](images/wpasupp.png)
 
 Type the following into ```wpa_supplicant.conf```. Remember to change the generic country code, network SSID and network password, including the <> characters, to suit your setup. The quotes should remain in place.
 ```
@@ -180,7 +180,7 @@ You will be prompted for a password. The default password on fresh installations
 
 [screenshot]
 
-Congratulations, you're in! :tada:
+Congratulations, you're in! 🎉
 
 In the command we just ran, 'pi' and 'raspberry' specify the default username and password on the host computer, and the host computer itself is specified by the IP address that locates it on the network.
 
