@@ -1,6 +1,6 @@
 ## So what is Digital Archaeology?
 
-@hugget_locke_2018 reviewed the landscape of 'digital archaeology', and identifyed an 'anxiety discourse' that surrounded this thing, 'digital archaeology'. The anxiety around the thoughtful use of computation in archaeology involved the simple - what do we _call_ this thing? - to the profound - the effect on archaeology of the use of 'borrowed' technologies:
+@hugget_locke_2018 reviewed the landscape of 'digital archaeology', and identified an 'anxiety discourse' that surrounded this thing, 'digital archaeology'. The anxiety around the thoughtful use of computation in archaeology involved the simple - what do we _call_ this thing? - to the profound - the effect on archaeology of the use of 'borrowed' technologies:
 
 > This anxiety discourse arose from frustration on three levels. First, digital technologies are transforming the practice of archaeology yet digital archaeologists are frequently seen as little more than technicians or technologists. Secondly, the significance of the transformation of archaeological practice by the digital was largely unrecognised or else taken for granted – archaeologists are simply consumers of the digital like everyone else and so powerless in the face of its inevitability. Thirdly, archaeologists were uncritically accepting of the new tools and opportunities that the digital offered
 
