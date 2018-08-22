@@ -1,5 +1,7 @@
 ## Designing Data Collection
 
+<div class="rmdcaution"> _This section is currently under development. Check back soon!_ </div>
+
 In teaching, there is a concept called 'backwards design', where you design your lesson from the end point you wish your students to achieve. The same is true of data. Knowing that archaeology is destructive, and that the processes of archaeology _creates_ new kinds of artefacts (drawings, photos, record sheets, labels, and so on), we need to start at the end. Ideally, it is an end point that will allow someone else to reconsider the archaeological record that you have created. As Gavin Lucas @lucas2012understand writes, the idea of an 'archaeological record' is a three-fold, trinity-like concept-
 
 - the material culture broadly understood
