@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="The Open Digital Archaeology Textbook Environment" />
+<meta property="og:type" content="book" />
+
+<meta property="og:image" content="images/word-cloud-proposal.jpg" />
+<meta property="og:description" content="The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory" />
+<meta name="github-repo" content="o-date/draft" />
+
+<meta name="author" content="Shawn Graham, Neha Gupta, Michael Carter, &amp; Beth Compton" />
+
+<meta name="date" content="2017-03-08" />
+
+
+<meta name="description" content="The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory">
+
+<title>The Open Digital Archaeology Textbook Environment</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/toc.css" type="text/css" />
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#notice">notice</a></li>
+<li class="has-sub"><a href="about-the-authors.html#about-the-authors">About the Authors</a><ul>
+<li><a href="about-the-authors.html#shawn-graham">Shawn Graham</a></li>
+<li><a href="about-the-authors.html#neha-gupta">Neha Gupta</a></li>
+<li><a href="about-the-authors.html#michael-carter">Michael Carter</a></li>
+<li><a href="about-the-authors.html#beth-compton">Beth Compton</a></li>
+<li><a href="about-the-authors.html#editorial-board">Editorial Board</a></li>
+</ul></li>
+<li class="has-sub"><a href="getting-started.html#getting-started">Getting Started</a><ul>
+<li><a href="how-to-use-this-text.html#how-to-use-this-text">How to use this text</a></li>
+<li><a href="how-to-contribute-changes-or-make-your-own-version.html#how-to-contribute-changes-or-make-your-own-version">How to contribute changes, or make your own version</a></li>
+<li><a href="how-to-access-and-use-the-computational-environment.html#how-to-access-and-use-the-computational-environment">How to access and use the computational environment</a></li>
+<li class="has-sub"><a href="colophon.html#colophon">Colophon</a><ul>
+<li><a href="colophon.html#the-computational-environment">The computational environment</a></li>
+</ul></li>
+</ul></li>
+<li><a href="welcome.html#welcome">Welcome!</a></li>
+<li class="has-sub"><a href="1-going-digital.html#going-digital"><span class="toc-section-number">1</span> Going Digital</a><ul>
+<li class="has-sub"><a href="1-1-so-what-is-digital-archaeology.html#so-what-is-digital-archaeology"><span class="toc-section-number">1.1</span> So what is Digital Archaeology?</a><ul>
+<li><a href="1-1-so-what-is-digital-archaeology.html#is-digital-archaeology-part-of-the-digital-humanities"><span class="toc-section-number">1.1.1</span> Is digital archaeology part of the digital humanities?</a></li>
+<li><a href="1-1-so-what-is-digital-archaeology.html#archaeological-glitch-art"><span class="toc-section-number">1.1.2</span> Archaeological Glitch Art</a></li>
+<li><a href="1-1-so-what-is-digital-archaeology.html#the-cool-factor"><span class="toc-section-number">1.1.3</span> The ‘cool’ factor</a></li>
+<li><a href="1-1-so-what-is-digital-archaeology.html#takeaways"><span class="toc-section-number">1.1.4</span> Takeaways</a></li>
+<li><a href="1-1-so-what-is-digital-archaeology.html#exercises"><span class="toc-section-number">1.1.5</span> Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-2-project-management-basics.html#project-management-basics"><span class="toc-section-number">1.2</span> Project Management Basics</a><ul>
+<li><a href="1-2-project-management-basics.html#take-aways"><span class="toc-section-number">1.2.1</span> Take-aways</a></li>
+<li><a href="1-2-project-management-basics.html#exercises-1"><span class="toc-section-number">1.2.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-3-github-version-control.html#github-version-control"><span class="toc-section-number">1.3</span> Github &amp; Version Control</a><ul>
+<li><a href="1-3-github-version-control.html#the-core-functions-of-git"><span class="toc-section-number">1.3.1</span> The core functions of Git</a></li>
+<li><a href="1-3-github-version-control.html#key-terms"><span class="toc-section-number">1.3.2</span> Key Terms</a></li>
+<li><a href="1-3-github-version-control.html#take-aways-1"><span class="toc-section-number">1.3.3</span> Take-aways</a></li>
+<li><a href="1-3-github-version-control.html#further-reading"><span class="toc-section-number">1.3.4</span> Further Reading</a></li>
+<li><a href="1-3-github-version-control.html#exercises-2"><span class="toc-section-number">1.3.5</span> Exercises</a></li>
+<li><a href="1-3-github-version-control.html#warnings"><span class="toc-section-number">1.3.6</span> Warnings</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-4-open-notebook-research-scholarly-communication.html#open-notebook-research-scholarly-communication"><span class="toc-section-number">1.4</span> Open Notebook Research &amp; Scholarly Communication</a><ul>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#how-to-ask-questions"><span class="toc-section-number">1.4.1</span> How to Ask Questions</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#discussion"><span class="toc-section-number">1.4.2</span> discussion</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#take-aways-2"><span class="toc-section-number">1.4.3</span> Take-aways</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#further-reading-1"><span class="toc-section-number">1.4.4</span> Further Reading</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#on-privilege-and-open-notebooks"><span class="toc-section-number">1.4.5</span> On Privilege and Open Notebooks</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#exercises-3"><span class="toc-section-number">1.4.6</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-5-failing-productively.html#failing-productively"><span class="toc-section-number">1.5</span> Failing Productively</a><ul>
+<li><a href="1-5-failing-productively.html#a-taxonomy-of-fails"><span class="toc-section-number">1.5.1</span> A taxonomy of fails</a></li>
+<li><a href="1-5-failing-productively.html#exercises-4"><span class="toc-section-number">1.5.2</span> Exercises</a></li>
+</ul></li>
+<li><a href="1-6-introduction-to-digital-libraries-archives-repositories.html#introduction-to-digital-libraries-archives-repositories"><span class="toc-section-number">1.6</span> Introduction to Digital Libraries, Archives &amp; Repositories</a></li>
+<li class="has-sub"><a href="1-7-command-line-methods-for-working-with-apis.html#command-line-methods-for-working-with-apis"><span class="toc-section-number">1.7</span> Command Line Methods for Working with APIs</a><ul>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#working-with-open-context"><span class="toc-section-number">1.7.1</span> Working with Open Context</a></li>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#working-with-omeka"><span class="toc-section-number">1.7.2</span> Working with Omeka</a></li>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#working-with-tdar"><span class="toc-section-number">1.7.3</span> Working with tDAR</a></li>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#working-with-ads"><span class="toc-section-number">1.7.4</span> Working with ADS</a></li>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#exercises-5"><span class="toc-section-number">1.7.5</span> Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-8-the-ethics-of-big-data-in-archaeology.html#the-ethics-of-big-data-in-archaeology"><span class="toc-section-number">1.8</span> The Ethics of Big Data in Archaeology</a><ul>
+<li><a href="1-8-the-ethics-of-big-data-in-archaeology.html#discussion-1"><span class="toc-section-number">1.8.1</span> discussion</a></li>
+<li><a href="1-8-the-ethics-of-big-data-in-archaeology.html#exercises-6"><span class="toc-section-number">1.8.2</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="2-making-data-useful.html#making-data-useful"><span class="toc-section-number">2</span> Making Data Useful</a><ul>
+<li class="has-sub"><a href="2-1-designing-data-collection.html#designing-data-collection"><span class="toc-section-number">2.1</span> Designing Data Collection</a><ul>
+<li><a href="2-1-designing-data-collection.html#discussion-2"><span class="toc-section-number">2.1.1</span> discussion</a></li>
+<li><a href="2-1-designing-data-collection.html#exercises-7"><span class="toc-section-number">2.1.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="2-2-cleaning-data-with-open-refine.html#cleaning-data-with-open-refine"><span class="toc-section-number">2.2</span> Cleaning Data with Open Refine</a><ul>
+<li><a href="2-2-cleaning-data-with-open-refine.html#discussion-3"><span class="toc-section-number">2.2.1</span> discussion</a></li>
+<li><a href="2-2-cleaning-data-with-open-refine.html#exercises-8"><span class="toc-section-number">2.2.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="2-3-linked-open-data-and-data-publishing.html#linked-open-data-and-data-publishing"><span class="toc-section-number">2.3</span> Linked Open Data and Data Publishing</a><ul>
+<li><a href="2-3-linked-open-data-and-data-publishing.html#discussion-4"><span class="toc-section-number">2.3.1</span> discussion</a></li>
+<li><a href="2-3-linked-open-data-and-data-publishing.html#exercises-9"><span class="toc-section-number">2.3.2</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="3-finding-and-communicating-the-compelling-story.html#finding-and-communicating-the-compelling-story"><span class="toc-section-number">3</span> Finding and Communicating the Compelling Story</a><ul>
+<li class="has-sub"><a href="3-1-statistical-computing-with-r-and-python-notebooks-reproducible-code.html#statistical-computing-with-r-and-python-notebooks-reproducible-code"><span class="toc-section-number">3.1</span> Statistical Computing with R and Python Notebooks; Reproducible code</a><ul>
+<li><a href="3-1-statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-5"><span class="toc-section-number">3.1.1</span> discussion</a></li>
+<li><a href="3-1-statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-10"><span class="toc-section-number">3.1.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-2-d3-processing-and-data-driven-documents.html#d3-processing-and-data-driven-documents"><span class="toc-section-number">3.2</span> D3, Processing, and Data Driven Documents</a><ul>
+<li><a href="3-2-d3-processing-and-data-driven-documents.html#discussion-6"><span class="toc-section-number">3.2.1</span> discussion</a></li>
+<li><a href="3-2-d3-processing-and-data-driven-documents.html#exercises-11"><span class="toc-section-number">3.2.2</span> exercises</a></li>
+</ul></li>
+<li><a href="3-3-storytelling-and-the-archaeological-cms-omeka-kora.html#storytelling-and-the-archaeological-cms-omeka-kora"><span class="toc-section-number">3.3</span> Storytelling and the Archaeological CMS: Omeka, Kora</a></li>
+<li class="has-sub"><a href="3-4-web-mapping-with-leaflet.html#web-mapping-with-leaflet"><span class="toc-section-number">3.4</span> Web Mapping with Leaflet</a><ul>
+<li><a href="3-4-web-mapping-with-leaflet.html#discussion-7"><span class="toc-section-number">3.4.1</span> discussion</a></li>
+<li><a href="3-4-web-mapping-with-leaflet.html#exercises-12"><span class="toc-section-number">3.4.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-5-place-based-interpretation-with-locative-augmented-reality.html#place-based-interpretation-with-locative-augmented-reality"><span class="toc-section-number">3.5</span> Place-based Interpretation with Locative Augmented Reality</a><ul>
+<li><a href="3-5-place-based-interpretation-with-locative-augmented-reality.html#discussion-8"><span class="toc-section-number">3.5.1</span> discussion</a></li>
+<li><a href="3-5-place-based-interpretation-with-locative-augmented-reality.html#exercises-13"><span class="toc-section-number">3.5.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-6-archaeogaming-and-virtual-archaeology.html#archaeogaming-and-virtual-archaeology"><span class="toc-section-number">3.6</span> Archaeogaming and Virtual Archaeology</a><ul>
+<li><a href="3-6-archaeogaming-and-virtual-archaeology.html#discussion-9"><span class="toc-section-number">3.6.1</span> discussion</a></li>
+<li><a href="3-6-archaeogaming-and-virtual-archaeology.html#exercises-14"><span class="toc-section-number">3.6.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-7-social-media-as-public-engagement-scholarly-communication-in-archaeology.html#social-media-as-public-engagement-scholarly-communication-in-archaeology"><span class="toc-section-number">3.7</span> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
+<li><a href="3-7-social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-10"><span class="toc-section-number">3.7.1</span> discussion</a></li>
+<li><a href="3-7-social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-15"><span class="toc-section-number">3.7.2</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="4-eliding-the-digital-and-the-physical.html#eliding-the-digital-and-the-physical"><span class="toc-section-number">4</span> Eliding the Digital and the Physical</a><ul>
+<li class="has-sub"><a href="4-1-d-photogrammetry-structure-from-motion.html#d-photogrammetry-structure-from-motion"><span class="toc-section-number">4.1</span> 3D Photogrammetry &amp; Structure from Motion</a><ul>
+<li><a href="4-1-d-photogrammetry-structure-from-motion.html#discussion-11"><span class="toc-section-number">4.1.1</span> discussion</a></li>
+<li><a href="4-1-d-photogrammetry-structure-from-motion.html#exercises-16"><span class="toc-section-number">4.1.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="4-2-d-printing-the-internet-of-things-and-maker-archaeology.html#d-printing-the-internet-of-things-and-maker-archaeology"><span class="toc-section-number">4.2</span> 3D Printing, the Internet of Things and “Maker” Archaeology</a><ul>
+<li><a href="4-2-d-printing-the-internet-of-things-and-maker-archaeology.html#discussion-12"><span class="toc-section-number">4.2.1</span> discussion</a></li>
+<li><a href="4-2-d-printing-the-internet-of-things-and-maker-archaeology.html#exercises-17"><span class="toc-section-number">4.2.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="4-3-artificial-intelligence-in-digital-archaeology.html#artificial-intelligence-in-digital-archaeology"><span class="toc-section-number">4.3</span> Artificial Intelligence in Digital Archaeology</a><ul>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#agent-models"><span class="toc-section-number">4.3.1</span> agent models</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#discussion-13"><span class="toc-section-number">4.3.2</span> discussion</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#exercises-18"><span class="toc-section-number">4.3.3</span> exercises</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#machine-learning-for-image-captioning-and-other-classificatory-tasks"><span class="toc-section-number">4.3.4</span> Machine learning for image captioning and other classificatory tasks</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#discussion-14"><span class="toc-section-number">4.3.5</span> discussion</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#exercises-19"><span class="toc-section-number">4.3.6</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="5-digital-archaeologys-place-in-the-world.html#digital-archaeologys-place-in-the-world"><span class="toc-section-number">5</span> Digital Archaeology’s Place in the World</a><ul>
+<li class="has-sub"><a href="5-1-marketing-digital-archaeology.html#marketing-digital-archaeology"><span class="toc-section-number">5.1</span> Marketing Digital Archaeology</a><ul>
+<li><a href="5-1-marketing-digital-archaeology.html#discussion-15"><span class="toc-section-number">5.1.1</span> discussion</a></li>
+<li><a href="5-1-marketing-digital-archaeology.html#exercises-20"><span class="toc-section-number">5.1.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="5-2-sustainability-power-in-digital-archaeology.html#sustainability-power-in-digital-archaeology"><span class="toc-section-number">5.2</span> Sustainability &amp; Power in Digital Archaeology</a><ul>
+<li><a href="5-2-sustainability-power-in-digital-archaeology.html#discussion-16"><span class="toc-section-number">5.2.1</span> discussion</a></li>
+<li><a href="5-2-sustainability-power-in-digital-archaeology.html#exercises-21"><span class="toc-section-number">5.2.2</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li><a href="6-on-the-horizons-where-digital-archaeology-might-go-next.html#on-the-horizons-where-digital-archaeology-might-go-next"><span class="toc-section-number">6</span> On the Horizons: Where Digital Archaeology Might Go Next</a></li>
+<li><a href="references.html#references">References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="command-line-methods-for-working-with-apis" class="section level2">
+<h2><span class="header-section-number">1.7</span> Command Line Methods for Working with APIs</h2>
+<p>yadda … maybe do this in R (since we have an Rserver in the box) and use the rcats tutorial as a model? <a href="https://rforcats.net/" class="uri">https://rforcats.net/</a> which might fit into the section below</p>
+<div id="working-with-open-context" class="section level3">
+<h3><span class="header-section-number">1.7.1</span> Working with Open Context</h3>
+<p><a href="http://opencontext.org">Open Context, http://opencontext.org</a> operates under the idea that every element of an archaeological research project should be published. To that end, they publish <em>everything</em> with its own unique URI.</p>
+<p>Search for something interesting. I put ‘poggio’ in the search box, and then clicked on the various options to get the architectural fragments. Look at the URL: <a href="https://opencontext.org/subjects-search/?prop=oc-gen-cat-object&amp;q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite" class="uri">https://opencontext.org/subjects-search/?prop=oc-gen-cat-object&amp;q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite</a> See all that stuff after the word ‘Poggio’? That’s to generate the map view. We don’t need it.</p>
+<p>We’re going to ask for the search results w/o all of the website extras, no maps, no shiny interface. To do that, we take advantage of the API. With open context, if you have a search with a ‘?’ in the URL, you can put .json in front of the question mark, and delete all of the stuff from the # sign on, like so:</p>
+<p><a href="https://opencontext.org/subjects-search/.json?prop=oc-gen-cat-object&amp;q=Poggio" class="uri">https://opencontext.org/subjects-search/.json?prop=oc-gen-cat-object&amp;q=Poggio</a></p>
+<p>Put that in the address bar. Boom! lots of stuff! But only one page’s worth, which isn’t lots of data. To get a lot more data, we have to add another parameter, the number of rows: ?rows=100&amp;. Slot that in just before the p in prop= and see what happens.</p>
+<p>Now, that isn’t all of the records though. Remove the .json and see what happens when you click on the arrows to page through the NEXT 100 rows. You get a URL like this:</p>
+<p><a href="https://opencontext.org/subjects-search/?rows=100&amp;prop=oc-gen-cat-object&amp;start=100&amp;q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite" class="uri">https://opencontext.org/subjects-search/?rows=100&amp;prop=oc-gen-cat-object&amp;start=100&amp;q=Poggio#15/43.1526/11.4090/19/any/Google-Satellite</a></p>
+<p>So – to recap, the URL is searching for 100 rows at a time, in the general object category, starting from row 100, and grabbing materials from Poggio. We now know enough about how open context’s api works to grab material.</p>
+<p>Couple of ways one could grab it:</p>
+<ol style="list-style-type: decimal">
+<li>You could copy n’ paste -&gt; but that will only get you one page’s worth of data (and if you tried to put, say, 10791 into the ‘rows’ parameter, you’ll just get a time-out error). You’d have to go back to the search page, hit the ‘next’ button, reinsert the .json etc over and over again.</li>
+<li>Automatically. We’ll use a program called wget to do this. (To install wget on your machine, see the programming historian Wget will interact with the Open Context site to retrieve the data. We feed wget a file that contains all of the urls that we wish to grab, and it saves all of the data into a single file. So, open a new text file and paste our search URL in there like so:</li>
+</ol>
+<pre><code>https://opencontext.org/subjects-search/.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;q=Poggio
+https://opencontext.org/subjects-search/.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;start=100&amp;q=Poggio
+https://opencontext.org/subjects-search/.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;start=200&amp;q=Poggio</code></pre>
+<p>…and so on until we’ve covered the full 4000 objects. Tedious? You bet. So we’ll get the computer to generate those URLS for us. Open a new text file, and copy the following in:</p>
+<pre><code>#URL-Generator.py
+
+urls = &#39;&#39;;
+f=open(&#39;urls.txt&#39;,&#39;w&#39;)
+for x in range(1, 4000, 100):
+    urls = &#39;https://opencontext.org/subjects-search/.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;start=%d&amp;q=Poggio/\n&#39; % (x)
+    f.write(urls)
+f.close</code></pre>
+<p>and save it as url-generator.py. This program is in the python language. Type at the prompt:</p>
+<pre><code>$ python url-generator.py</code></pre>
+<p>This little program defines an empty container called ‘urls’; it then creates a new file called ‘urls.txt’; then we tell it to write the address of our search into the urls container. See the %d in there? The program writes a number between 1 and 4000; each time it does that, it counts by 100 so that the next time it goes through the loop, it adds a new address with the correct starting point! Then it saves that container of URLs into the file urls.txt. Go ahead, open it up, and you’ll see.</p>
+<p>Now we’ll feed it to wget like so. At the prompt type</p>
+<pre><code>$ wget -i urls.txt -r --no-parent -nd –w 2 --limit-rate=10k</code></pre>
+<p>You’ll end up with a lot of files that have no file extension in your folder, eg</p>
+<pre><code>.json?rows=100&amp;prop=oc-gen-cat-object---oc-gen-cat-arch-element&amp;start=61&amp;q=Poggio%2F</code></pre>
+<p>Rename them so that they have <code>.json</code> file extensions. Now we concatenate them together</p>
+<pre><code># As simple as this. Output file should be last
+$ json-concat file1.json file2.json file3.json file4.json ouput.json</code></pre>
+<p>SG MAKE SURE THAT JSON-CONCAT CAN BE HAD ON DHBOX, OTHERWISE FIND ALTERNATIVE</p>
+<p>ALSO MAKE SURE TO TALK THROUGH THIS: <a href="https://github.com/ropensci/opencontext" class="uri">https://github.com/ropensci/opencontext</a></p>
+<p>json is a text file where keys are paired with values. JQ is a piece of software that enables us to reach into a json file, grab the data we want, and create either new json or csv. If you intend to visualize and explore data using some sort of spreadsheet program, then you’ll need to extract the data you want into a csv that your spreadsheet can digest. If you wanted to try something like d3 or some other dynamic library for generating web-based visualizations (eg p5js), you’ll need json.</p>
+<p>jqplay</p>
+<p>JQ lets us do some fun filtering and parsing, but we won’t download and install it yet. Instead, we’ll load some sample data into a web-toy called jqplay. This will let us try different ideas out and see the results immediately. In the this file called sample.json I have the query results from Open Context – Github recognizes that it is json and that it has geographic data within it, and turns it automatically into a map! To see the raw json, click on the &lt; &gt; button. Copy that data into the json box at jqplay.org.</p>
+<p>JQPlay will colour-code the json. Everything in red is a key, everything in black is a value. Keys can be nested, as represented by the indentation. Scroll down through the json – do you see any interesting key:value pairs? Matthew Lincoln’s tutorial at the programming historian is one of the most cogent explanations of how this works, and I do recommend you read that piece. Suffice to say, for now, that if you see an interesting key:value pair that you’d like to extract, you need to figure out just how deeply nested it is. For instance, there is a properties key that seems to have interesting information within it about dates, wares, contexts and so on. Perhaps we’d like to build a query using JQ that extracts that information into a csv. It’s within the features key pair, so try entering the following in the filter box:</p>
+<pre><code>.features [ ] | .properties</code></pre>
+<p>You should get something like this:</p>
+<pre><code>{
+  &quot;id&quot;: &quot;#geo-disc-tile-12023202222130313322&quot;,
+  &quot;href&quot;: &quot;https://opencontext.org/search/?disc-geotile=12023202222130313322&amp;prop=oc-gen-cat-object&amp;rows=5&amp;q=Poggio&quot;,
+  &quot;label&quot;: &quot;Discovery region (1)&quot;,
+  &quot;feature-type&quot;: &quot;discovery region (facet)&quot;,
+  &quot;count&quot;: 12,
+  &quot;early bce/ce&quot;: -700,
+  &quot;late bce/ce&quot;: -535
+}
+{
+  &quot;id&quot;: &quot;#geo-disc-tile-12023202222130313323&quot;,
+  &quot;href&quot;: &quot;https://opencontext.org/search/?disc-geotile=12023202222130313323&amp;prop=oc-gen-cat-object&amp;rows=5&amp;q=Poggio&quot;,
+  &quot;label&quot;: &quot;Discovery region (2)&quot;,
+  &quot;feature-type&quot;: &quot;discovery region (facet)&quot;,
+  &quot;count&quot;: 25,
+  &quot;early bce/ce&quot;: -700,
+  &quot;late bce/ce&quot;: -535
+}</code></pre>
+<p>For the exact syntax of why that works, see Lincoln’s tutorial. I’m going to just jump to the conclusion now. Let’s say we wanted to grab some of those keys within properties, and turn into a csv. We tell it to look inside features and find properties; then we tell it to make a new array with just those keys within properties we want; and then we tell it to pipe that information into comma-separated values. Try the following on the sample data:</p>
+<pre><code>.features [ ] | .properties | [.label, .href, .&quot;context label&quot;, .&quot;early bce/ce&quot;, .&quot;late bce/ce&quot;, .&quot;item category&quot;, .snippet] | @csv</code></pre>
+<p>…and make sure to tick the ‘raw output’ box at the top right. Ta da! You’ve culled the information of interest from a json file, into a csv. There’s a lot more you can do with jq, but this will get you started. Finally, we move back to the command line and invoke JQ to format the data how we want it:</p>
+<pre><code>jq -r &#39;.features [ ] | .properties | [.label, .href, .&quot;context label&quot;, .&quot;early bce/ce&quot;, .&quot;late bce/ce&quot;, .&quot;item category&quot;, .snippet] | @csv&#39; data.json &gt; data.csv</code></pre>
+</div>
+<div id="working-with-omeka" class="section level3">
+<h3><span class="header-section-number">1.7.2</span> Working with Omeka</h3>
+<p>yadda</p>
+</div>
+<div id="working-with-tdar" class="section level3">
+<h3><span class="header-section-number">1.7.3</span> Working with tDAR</h3>
+<p>yadda</p>
+</div>
+<div id="working-with-ads" class="section level3">
+<h3><span class="header-section-number">1.7.4</span> Working with ADS</h3>
+</div>
+<div id="exercises-5" class="section level3">
+<h3><span class="header-section-number">1.7.5</span> Exercises</h3>
+<p>yadda</p>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="1-6-introduction-to-digital-libraries-archives-repositories.html"><button class="btn btn-default">Previous</button></a>
+<a href="https://github.com/o-date/draft/edit/gh-pages/01.7-commandlineapis.Rmd"><button class="btn btn-default">Edit</button></a>
+<a href="1-8-the-ethics-of-big-data-in-archaeology.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>
