@@ -1,7 +1,5 @@
 ## Cleaning Data
 
-<div class="rmdcaution"> _This section is currently under development. Check back soon!_ </div>
-
 Gathering from many datasets
 
 Define well-formed data

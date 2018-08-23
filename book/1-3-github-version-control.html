@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="The Open Digital Archaeology Textbook Environment" />
+<meta property="og:type" content="book" />
+
+<meta property="og:image" content="images/word-cloud-proposal.jpg" />
+<meta property="og:description" content="The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory" />
+<meta name="github-repo" content="o-date/draft" />
+
+<meta name="author" content="Shawn Graham, Neha Gupta, Michael Carter, &amp; Beth Compton" />
+
+<meta name="date" content="2017-03-08" />
+
+
+<meta name="description" content="The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory">
+
+<title>The Open Digital Archaeology Textbook Environment</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/toc.css" type="text/css" />
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#notice">notice</a></li>
+<li class="has-sub"><a href="about-the-authors.html#about-the-authors">About the Authors</a><ul>
+<li><a href="about-the-authors.html#shawn-graham">Shawn Graham</a></li>
+<li><a href="about-the-authors.html#neha-gupta">Neha Gupta</a></li>
+<li><a href="about-the-authors.html#michael-carter">Michael Carter</a></li>
+<li><a href="about-the-authors.html#beth-compton">Beth Compton</a></li>
+<li><a href="about-the-authors.html#editorial-board">Editorial Board</a></li>
+</ul></li>
+<li class="has-sub"><a href="getting-started.html#getting-started">Getting Started</a><ul>
+<li><a href="how-to-use-this-text.html#how-to-use-this-text">How to use this text</a></li>
+<li><a href="how-to-contribute-changes-or-make-your-own-version.html#how-to-contribute-changes-or-make-your-own-version">How to contribute changes, or make your own version</a></li>
+<li><a href="how-to-access-and-use-the-computational-environment.html#how-to-access-and-use-the-computational-environment">How to access and use the computational environment</a></li>
+<li class="has-sub"><a href="colophon.html#colophon">Colophon</a><ul>
+<li><a href="colophon.html#the-computational-environment">The computational environment</a></li>
+</ul></li>
+</ul></li>
+<li><a href="welcome.html#welcome">Welcome!</a></li>
+<li class="has-sub"><a href="1-going-digital.html#going-digital"><span class="toc-section-number">1</span> Going Digital</a><ul>
+<li class="has-sub"><a href="1-1-so-what-is-digital-archaeology.html#so-what-is-digital-archaeology"><span class="toc-section-number">1.1</span> So what is Digital Archaeology?</a><ul>
+<li><a href="1-1-so-what-is-digital-archaeology.html#is-digital-archaeology-part-of-the-digital-humanities"><span class="toc-section-number">1.1.1</span> Is digital archaeology part of the digital humanities?</a></li>
+<li><a href="1-1-so-what-is-digital-archaeology.html#archaeological-glitch-art"><span class="toc-section-number">1.1.2</span> Archaeological Glitch Art</a></li>
+<li><a href="1-1-so-what-is-digital-archaeology.html#the-cool-factor"><span class="toc-section-number">1.1.3</span> The ‘cool’ factor</a></li>
+<li><a href="1-1-so-what-is-digital-archaeology.html#takeaways"><span class="toc-section-number">1.1.4</span> Takeaways</a></li>
+<li><a href="1-1-so-what-is-digital-archaeology.html#exercises"><span class="toc-section-number">1.1.5</span> Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-2-project-management-basics.html#project-management-basics"><span class="toc-section-number">1.2</span> Project Management Basics</a><ul>
+<li><a href="1-2-project-management-basics.html#take-aways"><span class="toc-section-number">1.2.1</span> Take-aways</a></li>
+<li><a href="1-2-project-management-basics.html#exercises-1"><span class="toc-section-number">1.2.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-3-github-version-control.html#github-version-control"><span class="toc-section-number">1.3</span> Github &amp; Version Control</a><ul>
+<li><a href="1-3-github-version-control.html#the-core-functions-of-git"><span class="toc-section-number">1.3.1</span> The core functions of Git</a></li>
+<li><a href="1-3-github-version-control.html#key-terms"><span class="toc-section-number">1.3.2</span> Key Terms</a></li>
+<li><a href="1-3-github-version-control.html#take-aways-1"><span class="toc-section-number">1.3.3</span> Take-aways</a></li>
+<li><a href="1-3-github-version-control.html#further-reading"><span class="toc-section-number">1.3.4</span> Further Reading</a></li>
+<li><a href="1-3-github-version-control.html#exercises-2"><span class="toc-section-number">1.3.5</span> Exercises</a></li>
+<li><a href="1-3-github-version-control.html#warnings"><span class="toc-section-number">1.3.6</span> Warnings</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-4-open-notebook-research-scholarly-communication.html#open-notebook-research-scholarly-communication"><span class="toc-section-number">1.4</span> Open Notebook Research &amp; Scholarly Communication</a><ul>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#how-to-ask-questions"><span class="toc-section-number">1.4.1</span> How to Ask Questions</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#discussion"><span class="toc-section-number">1.4.2</span> discussion</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#take-aways-2"><span class="toc-section-number">1.4.3</span> Take-aways</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#further-reading-1"><span class="toc-section-number">1.4.4</span> Further Reading</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#on-privilege-and-open-notebooks"><span class="toc-section-number">1.4.5</span> On Privilege and Open Notebooks</a></li>
+<li><a href="1-4-open-notebook-research-scholarly-communication.html#exercises-3"><span class="toc-section-number">1.4.6</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-5-failing-productively.html#failing-productively"><span class="toc-section-number">1.5</span> Failing Productively</a><ul>
+<li><a href="1-5-failing-productively.html#a-taxonomy-of-fails"><span class="toc-section-number">1.5.1</span> A taxonomy of fails</a></li>
+<li><a href="1-5-failing-productively.html#exercises-4"><span class="toc-section-number">1.5.2</span> Exercises</a></li>
+</ul></li>
+<li><a href="1-6-introduction-to-digital-libraries-archives-repositories.html#introduction-to-digital-libraries-archives-repositories"><span class="toc-section-number">1.6</span> Introduction to Digital Libraries, Archives &amp; Repositories</a></li>
+<li class="has-sub"><a href="1-7-command-line-methods-for-working-with-apis.html#command-line-methods-for-working-with-apis"><span class="toc-section-number">1.7</span> Command Line Methods for Working with APIs</a><ul>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#working-with-open-context"><span class="toc-section-number">1.7.1</span> Working with Open Context</a></li>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#working-with-omeka"><span class="toc-section-number">1.7.2</span> Working with Omeka</a></li>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#working-with-tdar"><span class="toc-section-number">1.7.3</span> Working with tDAR</a></li>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#working-with-ads"><span class="toc-section-number">1.7.4</span> Working with ADS</a></li>
+<li><a href="1-7-command-line-methods-for-working-with-apis.html#exercises-5"><span class="toc-section-number">1.7.5</span> Exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-8-the-ethics-of-big-data-in-archaeology.html#the-ethics-of-big-data-in-archaeology"><span class="toc-section-number">1.8</span> The Ethics of Big Data in Archaeology</a><ul>
+<li><a href="1-8-the-ethics-of-big-data-in-archaeology.html#discussion-1"><span class="toc-section-number">1.8.1</span> discussion</a></li>
+<li><a href="1-8-the-ethics-of-big-data-in-archaeology.html#exercises-6"><span class="toc-section-number">1.8.2</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="2-making-data-useful.html#making-data-useful"><span class="toc-section-number">2</span> Making Data Useful</a><ul>
+<li class="has-sub"><a href="2-1-designing-data-collection.html#designing-data-collection"><span class="toc-section-number">2.1</span> Designing Data Collection</a><ul>
+<li><a href="2-1-designing-data-collection.html#discussion-2"><span class="toc-section-number">2.1.1</span> discussion</a></li>
+<li><a href="2-1-designing-data-collection.html#exercises-7"><span class="toc-section-number">2.1.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="2-2-cleaning-data-with-open-refine.html#cleaning-data-with-open-refine"><span class="toc-section-number">2.2</span> Cleaning Data with Open Refine</a><ul>
+<li><a href="2-2-cleaning-data-with-open-refine.html#discussion-3"><span class="toc-section-number">2.2.1</span> discussion</a></li>
+<li><a href="2-2-cleaning-data-with-open-refine.html#exercises-8"><span class="toc-section-number">2.2.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="2-3-linked-open-data-and-data-publishing.html#linked-open-data-and-data-publishing"><span class="toc-section-number">2.3</span> Linked Open Data and Data Publishing</a><ul>
+<li><a href="2-3-linked-open-data-and-data-publishing.html#discussion-4"><span class="toc-section-number">2.3.1</span> discussion</a></li>
+<li><a href="2-3-linked-open-data-and-data-publishing.html#exercises-9"><span class="toc-section-number">2.3.2</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="3-finding-and-communicating-the-compelling-story.html#finding-and-communicating-the-compelling-story"><span class="toc-section-number">3</span> Finding and Communicating the Compelling Story</a><ul>
+<li class="has-sub"><a href="3-1-statistical-computing-with-r-and-python-notebooks-reproducible-code.html#statistical-computing-with-r-and-python-notebooks-reproducible-code"><span class="toc-section-number">3.1</span> Statistical Computing with R and Python Notebooks; Reproducible code</a><ul>
+<li><a href="3-1-statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-5"><span class="toc-section-number">3.1.1</span> discussion</a></li>
+<li><a href="3-1-statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-10"><span class="toc-section-number">3.1.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-2-d3-processing-and-data-driven-documents.html#d3-processing-and-data-driven-documents"><span class="toc-section-number">3.2</span> D3, Processing, and Data Driven Documents</a><ul>
+<li><a href="3-2-d3-processing-and-data-driven-documents.html#discussion-6"><span class="toc-section-number">3.2.1</span> discussion</a></li>
+<li><a href="3-2-d3-processing-and-data-driven-documents.html#exercises-11"><span class="toc-section-number">3.2.2</span> exercises</a></li>
+</ul></li>
+<li><a href="3-3-storytelling-and-the-archaeological-cms-omeka-kora.html#storytelling-and-the-archaeological-cms-omeka-kora"><span class="toc-section-number">3.3</span> Storytelling and the Archaeological CMS: Omeka, Kora</a></li>
+<li class="has-sub"><a href="3-4-web-mapping-with-leaflet.html#web-mapping-with-leaflet"><span class="toc-section-number">3.4</span> Web Mapping with Leaflet</a><ul>
+<li><a href="3-4-web-mapping-with-leaflet.html#discussion-7"><span class="toc-section-number">3.4.1</span> discussion</a></li>
+<li><a href="3-4-web-mapping-with-leaflet.html#exercises-12"><span class="toc-section-number">3.4.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-5-place-based-interpretation-with-locative-augmented-reality.html#place-based-interpretation-with-locative-augmented-reality"><span class="toc-section-number">3.5</span> Place-based Interpretation with Locative Augmented Reality</a><ul>
+<li><a href="3-5-place-based-interpretation-with-locative-augmented-reality.html#discussion-8"><span class="toc-section-number">3.5.1</span> discussion</a></li>
+<li><a href="3-5-place-based-interpretation-with-locative-augmented-reality.html#exercises-13"><span class="toc-section-number">3.5.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-6-archaeogaming-and-virtual-archaeology.html#archaeogaming-and-virtual-archaeology"><span class="toc-section-number">3.6</span> Archaeogaming and Virtual Archaeology</a><ul>
+<li><a href="3-6-archaeogaming-and-virtual-archaeology.html#discussion-9"><span class="toc-section-number">3.6.1</span> discussion</a></li>
+<li><a href="3-6-archaeogaming-and-virtual-archaeology.html#exercises-14"><span class="toc-section-number">3.6.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-7-social-media-as-public-engagement-scholarly-communication-in-archaeology.html#social-media-as-public-engagement-scholarly-communication-in-archaeology"><span class="toc-section-number">3.7</span> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
+<li><a href="3-7-social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-10"><span class="toc-section-number">3.7.1</span> discussion</a></li>
+<li><a href="3-7-social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-15"><span class="toc-section-number">3.7.2</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="4-eliding-the-digital-and-the-physical.html#eliding-the-digital-and-the-physical"><span class="toc-section-number">4</span> Eliding the Digital and the Physical</a><ul>
+<li class="has-sub"><a href="4-1-d-photogrammetry-structure-from-motion.html#d-photogrammetry-structure-from-motion"><span class="toc-section-number">4.1</span> 3D Photogrammetry &amp; Structure from Motion</a><ul>
+<li><a href="4-1-d-photogrammetry-structure-from-motion.html#discussion-11"><span class="toc-section-number">4.1.1</span> discussion</a></li>
+<li><a href="4-1-d-photogrammetry-structure-from-motion.html#exercises-16"><span class="toc-section-number">4.1.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="4-2-d-printing-the-internet-of-things-and-maker-archaeology.html#d-printing-the-internet-of-things-and-maker-archaeology"><span class="toc-section-number">4.2</span> 3D Printing, the Internet of Things and “Maker” Archaeology</a><ul>
+<li><a href="4-2-d-printing-the-internet-of-things-and-maker-archaeology.html#discussion-12"><span class="toc-section-number">4.2.1</span> discussion</a></li>
+<li><a href="4-2-d-printing-the-internet-of-things-and-maker-archaeology.html#exercises-17"><span class="toc-section-number">4.2.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="4-3-artificial-intelligence-in-digital-archaeology.html#artificial-intelligence-in-digital-archaeology"><span class="toc-section-number">4.3</span> Artificial Intelligence in Digital Archaeology</a><ul>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#agent-models"><span class="toc-section-number">4.3.1</span> agent models</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#discussion-13"><span class="toc-section-number">4.3.2</span> discussion</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#exercises-18"><span class="toc-section-number">4.3.3</span> exercises</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#machine-learning-for-image-captioning-and-other-classificatory-tasks"><span class="toc-section-number">4.3.4</span> Machine learning for image captioning and other classificatory tasks</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#discussion-14"><span class="toc-section-number">4.3.5</span> discussion</a></li>
+<li><a href="4-3-artificial-intelligence-in-digital-archaeology.html#exercises-19"><span class="toc-section-number">4.3.6</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="5-digital-archaeologys-place-in-the-world.html#digital-archaeologys-place-in-the-world"><span class="toc-section-number">5</span> Digital Archaeology’s Place in the World</a><ul>
+<li class="has-sub"><a href="5-1-marketing-digital-archaeology.html#marketing-digital-archaeology"><span class="toc-section-number">5.1</span> Marketing Digital Archaeology</a><ul>
+<li><a href="5-1-marketing-digital-archaeology.html#discussion-15"><span class="toc-section-number">5.1.1</span> discussion</a></li>
+<li><a href="5-1-marketing-digital-archaeology.html#exercises-20"><span class="toc-section-number">5.1.2</span> exercises</a></li>
+</ul></li>
+<li class="has-sub"><a href="5-2-sustainability-power-in-digital-archaeology.html#sustainability-power-in-digital-archaeology"><span class="toc-section-number">5.2</span> Sustainability &amp; Power in Digital Archaeology</a><ul>
+<li><a href="5-2-sustainability-power-in-digital-archaeology.html#discussion-16"><span class="toc-section-number">5.2.1</span> discussion</a></li>
+<li><a href="5-2-sustainability-power-in-digital-archaeology.html#exercises-21"><span class="toc-section-number">5.2.2</span> exercises</a></li>
+</ul></li>
+</ul></li>
+<li><a href="6-on-the-horizons-where-digital-archaeology-might-go-next.html#on-the-horizons-where-digital-archaeology-might-go-next"><span class="toc-section-number">6</span> On the Horizons: Where Digital Archaeology Might Go Next</a></li>
+<li><a href="references.html#references">References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="github-version-control" class="section level2">
+<h2><span class="header-section-number">1.3</span> Github &amp; Version Control</h2>
+<p>It’s a familiar situation - you’ve been working on a paper. It’s where you want it to be, and you’re certain you’re done. You save it as ‘final.doc’. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as ‘final-w-changes.doc’. Later that day it occurs to you that you don’t like those changes, and you go back to the original ‘final.doc’, make some changes, and just overwrite the previous version. Soon, you have a folder like:</p>
+<pre><code>|-project
+    |-&#39;finalfinal.doc&#39;
+    |-&#39;final-w-changes.doc&#39;
+    |-&#39;final-w-changes2.doc&#39;
+    |-&#39;isthisone-changes.doc&#39;
+    |-&#39;this.doc&#39;</code></pre>
+<p>Things can get messy quite quickly. Imagine that you also have several spreadsheets in there as well, images, snippets of code… we don’t want this. What we want is a way of managing the evolution of your files. We do this with a program called <a href="https://git-scm.com/">Git</a>. Git is not a user-friendly piece of software, and it takes some work to get your head around. Git is also very powerful, but fortunately, the basic uses to which most of us put it to are more or less straightforward. There are many other programs that make use of Git for version control; these programs weld a graphical user interface on top of the main Git program. It is better however to become familiar with the basic uses of git from the command line <em>first</em> before learning the idiosyncracies of these helper programs. The exercises in this section will take you through the basics of using Git from the command line.</p>
+<div id="the-core-functions-of-git" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> The core functions of Git</h3>
+<div class="figure">
+<img src="images/what-git-does.png" alt="Alice Bartlett’s summary of what Git does" />
+<p class="caption">Alice Bartlett’s summary of what Git does</p>
+</div>
+<p>At its heart, Git is a way of taking ‘snapshots’ of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, see Alice Bartlett’s <a href="https://speakerdeck.com/alicebartlett/git-for-humans">presentation here</a>; Bartlett is a senior developer for the Financial Times). In Git’s lingo, a folder on your computer is known as a <code>repository</code>. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a <code>commit</code>. A commit is a Git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:</p>
+<pre><code>|-project
+    |-&#39;final.doc&#39;</code></pre>
+<p>BUT its commit history could be visualized like this:</p>
+<div class="figure">
+<img src="images/commit-history.png" alt="A visualization of the history of commits" />
+<p class="caption">A visualization of the history of commits</p>
+</div>
+<p>Each one of those circles represents a point in time when you the writer made a commit; Git compared the state of the file to the earlier state, and saved a snapshot of the <code>differences</code>. What is particularly useful about making a commit is that Git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about <em>why</em> the commit is being made. In our hypothetical situation, your first commit message might look like this:</p>
+<pre><code>Fixed conclusion
+
+Julie pointed out that I had missed 
+the critical bit in the assignment 
+regarding stratigraphy. This was 
+added in the concluding section.</code></pre>
+<p>This information is stored in the history of the commits. In this way, you can see exactly how the project evolved and why. Each one of these commits has what is called a <code>hash</code>. This is a unique fingerprint that you can use to ‘time travel’ (in Bartlett’s felicitous phrasing). If you want to see what your project looked like a few months ago, you <code>checkout</code> that commit. This has the effect of ‘rewinding’ the project. Once you’ve checked out a commit, don’t be alarmed when you look at the folder: your folder (your repository) looks like how it once did all those weeks ago! Any files written after that commit seem as if they’ve disappeared. Don’t worry: they still exist!</p>
+<p>What would happen if you wanted to experiment or take your project in a new direction from that point forward? Git lets you do this. What you will do is create a new <code>branch</code> of your project from that point. You can think of a branch as like the branch of a tree, or perhaps better, a branch of a river that eventually merges back to the source. (Another way of thinking about branches is that it is a label that sticks with these particular commits.) It is generally considered ‘best practice’ to leave your <code>master</code> branch alone, in the sense that it represents the best version of your project. When you want to experiment or do something new, you create a <code>branch</code> and work there. If the work on the branch ultimately proves fruitless, you can discard it. <em>But</em>, if you decide that you like how it’s going, you can <code>merge</code> that branch back into your master. A merge is a commit that folds all of the commits from the branch with the commits from the master.</p>
+<p>Git is also a powerful tool for backing up your work. You can work quite happily with Git on your own machine, but when you store those files and the history of commits somewhere remote, you open up the possibility of collaboration <em>and</em> a safe place where your materials can be recalled if -perish the thought- something happened to your computer. In Git-speak, the remote location is, well, the <code>remote</code>. There are many different places on the web that can function as a remote for Git repositories. You can even set one up on your own server, if you want. One of the most popular (and the one that we use for ODATE) is <a href="http://github.com">Github</a>. There are many useful repositories shared via Github of interest to archaeologists - <a href="http://opencontext.org">OpenContext</a> for instance shares a lot of material that way. To get material <em>out</em> of Github and onto your own computer, you <code>clone</code> it. If that hypothetical paper you were writing was part of a group project, your partners could clone it from your Github space, and work on it as well!</p>
+<p>You and Anna are working together on the project. You have made a new project repository in your Github space, and you have cloned it to your computer. Anna has cloned it to hers. Let’s assume that you have a very productive weekend and you make some real headway on the project. You <code>commit</code> your changes, and then <code>push</code> them from your computer to the Github version of your repository. That repository is now one commit <em>ahead</em> of Anna’s version. Anna <code>pulls</code> those changes from Github to her own version of the repository, which now looks <em>exactly</em> like your version. What happens if you make changes to the exact same part of the exact same file? This is called a <code>conflict</code>. Git will make a version of the file that contains text clearly marking off the part of the file where the conflict occurs, with the conflicting information marked out as well. The way to <code>resolve</code> the conflict is to open the file (typically with a text editor) and to delete the added Git text, making a decision on which information is the correct information.</p>
+</div>
+<div id="key-terms" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Key Terms</h3>
+<ul>
+<li>repository: a single folder that holds all of the files and subfolders of your project</li>
+<li>commit: this means, ‘take a snapshot of the current state of my repostiory’</li>
+<li>publish: take my folder on my computer, and copy it and its contents to the web as a repository at github.com/myusername/repositoryname</li>
+<li>sync: update the web repository with the latest commit from my local folder</li>
+<li>branch: make a copy of my repository with a ‘working name’</li>
+<li>merge: fold the changes I have made on a branch into another branch</li>
+<li>fork: to make a copy of someone else’s repo</li>
+<li>clone: to copy an online repo onto your own computer</li>
+<li>pull request: to ask the original maker of a repo to ‘pull’ your changes into their master, original, repository</li>
+<li>push: to move your changes from your computer to the online repo</li>
+<li>conflict: when two commits describe different changes to the same part of a file</li>
+</ul>
+</div>
+<div id="take-aways-1" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Take-aways</h3>
+<ul>
+<li>Git keeps track of all of the differences in your files, when you take a ‘snapshot’ of the state of your folder (repository) with the <code>commit</code> command</li>
+<li>Git allows you to roll back changes</li>
+<li>Git allows you to experiment by making changes that can be deleted or incorporated as desired</li>
+<li>Git allows you to manage collaboration safely</li>
+<li>Git allows you to distribute your materials</li>
+</ul>
+</div>
+<div id="further-reading" class="section level3">
+<h3><span class="header-section-number">1.3.4</span> Further Reading</h3>
+<p>We alluded above to the presence of ‘helper’ programs that are designed to make it easier to use Git to its full potential. An excellent introduction to Github’s desktop GUI is at this <a href="http://programminghistorian.org/lessons/getting-started-with-github-desktop">Programming Historian lesson on Github</a>. A follow-up lesson explains the way Github itself can be used to host entire websites! You may explore it <a href="http://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages">here</a>. In the section of this chapter on open notebooks, we will also use Git and Github to create a simple open notebook for your research projects.</p>
+<p>You might also wish to dip into the <a href="https://www.youtube.com/watch?v=D0_j04BnVeA">archived live stream; link here</a> from the first day of the NEH funded Institute on Digital Archaeology Method and Practice (2015) where Prof. Ethan Watrall discusses project management fundamentals and, towards the last part of the stream, introduces Git.</p>
+</div>
+<div id="exercises-2" class="section level3">
+<h3><span class="header-section-number">1.3.5</span> Exercises</h3>
+<ol style="list-style-type: decimal">
+<li>How do you turn a folder into a repository? With the <code>git init</code> command. At the command line (remember, the <code>$</code> just shows you the prompt; you don’t have to type it!):</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>make a new director: <code>$ mkdir first-repo</code></li>
+<li>type <code>$ ls</code> (list) to see that the director exists. Then change directory into it: <code>cd first-repo</code>. (remember: if you’re ever not sure what directory you’re in, type <code>$ pwd</code>, or print working directory).</li>
+<li>make a new file called <code>readme.md</code>. You do this by calling the text editor: <code>nano readme.md</code>. Type an explanation of what this exercise is about. The <code>.md</code> signals that you’re writing a text file that uses the markdown format of signalling things like headings, lists, tables, etc. (A guide to <a href="https://daringfireball.net/projects/markdown/basics.php">markdown syntax is here</a>). Hit ctrl+x to exit, then y to save, leave the file name as it is.</li>
+<li>type <code>$ ls</code> again to check that the file is there.</li>
+<li>type <code>$ git init</code> to tell the Git program that this folder is to be tracked as a repository. If all goes correctly, you should see a variation on this message: <code>Initialized empty Git repository in /home/demonstration/first-repo/.git/</code>. But type <code>$ ls</code> again. What do you (not) see?</li>
+</ol>
+<p>The changes in your repo will now be stored in that <em>hidden</em> directory, <code>.git</code>. Most of the time, you will never have reason to search that folder out. But know that the config file that describes your repo is in that folder. There might come a time in the future where you want to alter some of the default behaviour of the git program. You do that by opening the config file (which you can read with a text editor). Google ‘show hidden files and folders’ for your operating system when that time comes.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Open your readme.md file again with the nano text editor, from the command line. Add some more information to it, then save and exit the text editor.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>type <code>$ git status</code></li>
+<li>Git will respond with a couple of pieces of information. It will tell you which <code>branch</code> you are on. It will list any untracked files present or new changes that are unstaged. We now will <code>stage</code> those changes to be added to our commit history by typing <code>$ git add -A</code>. (the bit that says <code>-A</code> adds any new, modified, or deleted files to your commit when you make it. There are <a href="https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660">other options or flags</a> where you add <em>only</em> the new and modified files, <em>or</em> only the modified and deleted files.)</li>
+<li>Let’s check our git status again: type <code>$ git status</code></li>
+<li>You should see something like this:</li>
+</ol>
+<pre><code>On branch master
+Initial commit
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+        new file:   readme.md```</code></pre>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Let’s take a snapshot: type <code>$ git commit -m &quot;My first commit&quot;</code>. What happened? Remember, Git keeps track not only of the changes, but <em>who</em> is making them. If this is your first time working with Git in the Archaebox, Git will ask you for your name and email. Helpfully, the Git error message tells you exactly what to do: type <code>$ git config --global user.email &quot;you\@example.com&quot;</code> and then type <code>$ git config --global user.name &quot;Your Name&quot;</code>. Now try making your first commit.</li>
+<li>The command above represents a bit of a shortcut for making commit messages by using the <code>-m</code> flag to associate the text in the quotation marks with the commit. Open up your readme.md file again, and add some more text to it. Save and exit the text editor. Add the new changes to the snapshot that we will take. Then, type <code>$ git commit</code>. Git automatically opens up the text editor so you can type a longer, more substantive commit message. In this message (unlike in markdown) the <code>#</code> indicates a line to be ignored. You’ll see that there is already some default text in there telling you what to do. Type a message indicating the nature of the changes you have made. Then save and exit the text editor. DO NOT change the filename!</li>
+</ol>
+<p>Congratulations, you are now able to track your changes, and keep your materials under version control!</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Go ahead and make some more changes to your repository. Add some new files. Commit your changes after each new file is created. Now we’re going to view the history of your commits. Type <code>$ git log</code>. What do you notice about this list of changes? Look at the time stamps. You’ll see that the entries are listed in reverse chronological order. Each entry has its own ‘hash’ or unique ID, the person who made the commit and time are listed, as well as the commit message eg:</li>
+</ol>
+<pre><code>commit 253506bc23070753c123accbe7c495af0e8b5a43
+Author: Shawn Graham &lt;shawn.graham@carleton.ca&gt;
+Date:   Tue Feb 14 18:42:31 2017 +0000
+
+Fixed the headings that were broken in the about section of readme.md
+</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>We’re going to go back in time and create a new branch. You can escape the <code>git log</code> by typing <code>q</code>. Here’s how the command will look: <code>$ git checkout -b branchname &lt;commit&gt;</code> where <code>branch</code> is the name you want the branch to be called, and <code>&lt;commit&gt;</code> is that unique ID. Make a new branch from your second last commit (don’t use &lt; or &gt;).</li>
+<li>We typed <code>git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43</code>. The response: <code>Switched to a new branch 'experiment'</code> Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you’ve time travelled! Those files are not missing; but they <em>are</em> on a different branch (the master branch) and you can’t harm them now. Add a number of new files, making commits after each one. Check your git status, and check your git log as you go to make sure you’re getting everything. Make sure there are no unstaged changes - everything’s been committed.</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Now let’s assume that your <code>experiment</code> branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your <code>master</code> branch. We’re going to merge things. To merge, we have to go back to the master branch: <code>$ git checkout master</code>. (Good practice is to keep separate branches for all major experiments or directions you go. In case you lose track of the names of the branches you’ve created, this command: <code>git branch -va</code> will list them for you.)</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Now, we merge with <code>$ git merge experiment</code>. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>One of the most powerful aspects of using Git is the possibility of using it to manage collaborations. To do this, we have to make a copy of your repository available to others as a <code>remote</code>. There are a variety of places on the web where this can be done; one of the most popular at the moment is <a href="http://github.com">Github</a>. Github allows a user to have an unlimited number of <code>public</code> repositories. Public repositories can be viewed and copied by anyone. <code>Private</code> repositories require a paid account, and access is controlled. If you are working on sensitive materials that can only be shared amongst the collaborators on a project, you should invest in an upgraded account (note that you can also control which files get included in commit; see <a href="https://help.github.com/articles/ignoring-files/">this help file</a>. In essence, you simply list the file names you do not want committed; here’s an <a href="https://gist.github.com/octocat/9257657">example</a>). Let’s assume that your materials are not sensitive.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Go to Github, register for an account.</li>
+<li>On the upper right part of the screen there is a large + sign. Click on that, and select <code>new public repository</code></li>
+<li>On the following screen, give your repo a name.</li>
+<li>DO NOT ‘initialize this repo with a readme.md’. Leave <code>add .gitignore</code> and <code>add license</code> set to NONE.</li>
+<li>Clic the green ‘Create Repository’ button.</li>
+<li><p>You now have a space into which you will publish the repository on your machine. At the command line, we now need to tell Git the location of this space. We do that with the following command, where you will change <code>your-username</code> and <code>your-new-repo</code> appropriately:</p>
+<pre><code>$ git remote add origin https://github.com/YOUR-USERNAME/YOUR-NEW-REPO.git</code></pre></li>
+<li><p>Now we push your local copy of the repository onto the web, to the Github version of your repo:</p>
+<pre><code>git push -u origin master</code></pre></li>
+</ol>
+<p><em>NB</em> If you wanted to push a <code>branch</code> to your repository on the web instead, do you see how you would do that? If your branch was called <code>experiment</code>, the command would look like this:</p>
+<pre><code>$ git push origin experiment
+</code></pre>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>The changes can sometimes take a few minutes to show up on the website. Now, the next time you make changes to this repository, you can push them to your Github account - which is the ‘origin’ in the command above. Add a new text file. Commit the changes. Push the changes to your account.</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>Imagine you are collaborating with one of your classmates. Your classmate is in charge of the project, and is keeping track of the ‘official’ folder of materials (eg, the repo). You wish to make some changes to the files in that repository. You can manage that collaboration via Github by making a copy, what Github calls a <code>fork</code>.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Make sure you’re logged into your Github account on the Github website. We’re going to fork an example repository right now by going to <a href="https://github.com/octocat/Spoon-Knife" class="uri">https://github.com/octocat/Spoon-Knife</a>. Click the ‘fork’ button at top-right. Github now makes a copy of the repository in your own Github account!</li>
+<li><p>To make a copy of that repository on your own machine, you will now clone it with the <code>git clone</code> command. (Remember: a ‘fork’ copies someone’s Github repo into a repo in your OWN Github account; a ‘clone’ makes a copy on your own MACHINE). Type:</p>
+<pre><code>$ cd.. 
+$ pwd</code></pre>
+<p>We do that to make sure you’re not <em>inside</em> any other repo you’ve made! Make sure you’re not inside the repository we used in exercises 1 to 5, then proceed:</p></li>
+</ol>
+<pre><code>$ git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+$ ls</code></pre>
+<p>You now have a folder called ‘Spoon-Knife’ on your machine! Any changes you make inside that folder can be tracked with commits. You can also <code>git push -u origin master</code> when you’re inside it, and the changes will show up on your OWN copy (your fork) on Github.com. c. Make a fork of, and then clone, one of your classmates’ repositories. Create a new branch. Add a new file to the repository on your machine, and then push it to your fork on Github. Remember, your new file will appear on the new branch you created, NOT the master branch.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Now, you let your collaborator know that you’ve made a change that you want her to <code>merge</code> into the original repository. You do this by issuing a <code>pull request</code>. But first, we have to tell Git to keep an eye on that original repository, which we will call <code>upstream</code>. You do this by adding that repository’s location like so:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>type (but change the address appropriately):</li>
+</ol>
+<pre><code>$ git remote add upstream THE-FULL-URL-TO-THEIR-REPO-ENDING-WITH-.git</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>You can keep your version of the remote up-to-date by fetching any new changes your classmate has done:</p>
+<pre><code>$ git fetch upstream</code></pre></li>
+<li>Now let’s make a <code>pull</code> request (you might want to bookmark this <a href="https://help.github.com/articles/creating-a-pull-request/">help document</a>). Go to your copy of your classmate’s repository at your Github account. Make sure you’ve selected the correct branch you pushed your changes to, by selecting it from the Branches menu drop down list.</li>
+<li>Click the ‘new pull request’ button.</li>
+<li>The new page that appears can be confusing, but it is trying to double check with you which changes you want to make, and where. <em>‘Base Branch’</em> is the branch where you want your changes to go, ie, your classmate’s repository. <em>‘head branch’</em> is the branch where you made <em>your</em> changes. Make sure these are set properly. Remember: the first one is the TO, the second one is the FROM: the place where you want your changes to go TO, FROM the place where you made the changes.</li>
+<li><p>A pull request has to have a message attached to it, so that your classmate knows what kind of change you’re proposing. Fill in the message fields appropriately, then hit the ‘create pull request’ button.</p></li>
+</ol>
+<div class="figure">
+<img src="images/pullrequest-send.png" alt="A pull request message; Image from Github.com" />
+<p class="caption">A pull request message; Image from Github.com</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Finally, the last bit of work to be done is to accept the pull request and <code>merge</code> the changes into the original repository.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Go to your repository on your Github account. Check to see if there are any ‘pull requests’ - these will be listed under the ‘pull requests’ tab. Click on that tab.</li>
+<li>You can merge from the command line, but for now, you can simply click on the green ‘merge pull request’ button, and then the ‘confirm merge’ button. The changes your classmate has made have now been folded into your repository.</li>
+<li><p>To get the updates on your local machine, go back to the command line and type</p>
+<pre><code>$ git pull origin master</code></pre></li>
+</ol>
+</div>
+<div id="warnings" class="section level3">
+<h3><span class="header-section-number">1.3.6</span> Warnings</h3>
+<p>It is possible to make changes to files directly via the edit button on Github. Be careful if you do this, because things rapidly can become out of sync, resulting in conflicts between differing versions of the same file. Get in the habit of making your changes on your own machine, and making sure things are committed and up-to-date (<code>git status</code>, <code>git pull origin master</code>, <code>git fetch upstream</code> are your friends) before beginning work. At this point, you might want to investigate some of the graphical interfaces for Git (such as <a href="https://desktop.github.com/">Github Desktop</a>). Knowing as you do how things work from the command line, the idiosyncracies of the graphical interfaces will make more sense. For further practice on the ins-and-outs of Git and Github Desktop, we recommend trying <a href="https://github.com/jlord/git-it-electron/">the Git-it app</a> by Jessica Lord.</p>
+<p>For help in resolving merge conflicts, see the <a href="https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/">Github help documentation</a>. For a quick reminder of how the workflow should go, see <a href="https://gist.github.com/shawngraham/513d4b2860d52fdac6bd783e4387957e">this cheat-sheet by Chase Pettit</a>.</p>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="1-2-project-management-basics.html"><button class="btn btn-default">Previous</button></a>
+<a href="https://github.com/o-date/draft/edit/gh-pages/01.3-githubandversioncontrol.Rmd"><button class="btn btn-default">Edit</button></a>
+<a href="1-4-open-notebook-research-scholarly-communication.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>
