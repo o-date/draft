@@ -1,6 +1,18 @@
 A key to success in using, remixing, and sharing data openly is communicating effectively with colleagues and other stakeholders. Whether you are utilizing data that already existed or creating a totally new dataset, your work impacts colleagues, and it is important to build not only a technical framework but social supports for your work. A successful digital archaeology project is one which is well-understood and well-regarded by colleagues. In the following section I will describe how to frame digital archaeology work for colleagues and others who may be interested or impacted by it, and share three key tools for establishing boundaries and expectations for your project.
 
-<!-- Messy outline below -->
+## The Two-Sentence Pitch
+
+Whether you are building a large, multi-faceted, multi-scholar project or experimenting on your own, you need to be ready to explain your work's value. By the time you talk to a colleague about it, you should have a two sentence pitch. Being prepared to explain why your digital archaeology project is valuable is not only important for you to maintain the resources to continue your work, but helps build support for digital archaeology scholarship in the community. If there is one planning task you do, do this.
+
+> Example project: [Graham and Ellenberger's 2017 Heritage Jam Entry](http://www.heritagejam.org/new-blog/2017/10/25/old-bones-daily-shawn-graham-and-kate-ellenberger)
+> Two-Sentence Pitch: This is the first part of our research on how 19th century newspapers in Western Quebec and northern New York State depicted human remains and archaeology. We used language we found in the newspaper text to generate a realistic-looking fictional newspaper that is different every time you load it. 
+
+> Example project: [Ellenberger's Museum Tablet Tour](http://kateellenberger.com/digital-archaeology/museum-tablet-tour-2014/)
+> Two-Sentence Pitch: I made an accessible digital tour for the visible storage display at the University Art Museum so that visitors could learn more about the objects, and read interpretations written by students and faculty. It was rewarding to build the first digital database the museum has used and be able to infuse some of my anthropological values into its design.
+
+<!-- What's below is a messy outline and not reflective of the structure I'm going to write -->
+
+## Consulting Colleagues and Stakeholders
 
 1. Colleagues
   + Can be difficult to move forward when data sharing is not necessarily the norm, and there are not norms around how to do it
@@ -17,8 +29,16 @@ A key to success in using, remixing, and sharing data openly is communicating ef
   + The power of informal working groups for getting feedback and direction
   + Managing expectations
   + Sharing outputs and picking appropriate formats
-3. Build a Plan for Yourself
-4. Make Your Case
+
+## Making a Plan
   + The Group Meeting
   + The Strategy Document
   + The Policy Document
+
+## Persisting and Adapting your Plan
+
+If you do most of your research on your own or improvise often, you may not be used to following a plan. Even if your plan is loose and flexible, I strongly urge you to follow one. The biggest difficulties people have in continuing their digital archaeology projects are with people, not technology, so this aspect of project planning deserves some attention. Everyone has heard of a colleague who believes someone else's work is infringing on their intellectual property in some way, or colleagues not believing certain projects have intellectual value, or someone who used data in a way that upset the colleagues or interlocutors they got it from. Try to avoid that. Most of the time you can.
+
+<!-- I need to make this less trite -->
+
+When you reach a roadblock that needs to be solved by communicating with other scholars or stakeholders, troubleshoot it using the logic and dedication you would in solving a technical issue.
