@@ -147,13 +147,13 @@ network={
 
 ![wpasupp](images/wpasupp.png)
 
-**Note:** this is a relatively insecure method, since we are writing out our network credentials in plain text. Anyone who has read access to this file can see this information. I recommend that you not use login credentials that are personal to your university account, since they are typically used to access other crucial university or employee services. Ask your network administrator or IT department to create a new generic or institutional user and password combination for such testing and tinkering experiences!
+**Note:** this is a relatively insecure method, since we are writing out our network credentials in plain text. Anyone who has read access to this file can see this information. I recommend that you not use login credentials that are personal to your university account, since they are typically used to access other crucial university or employee services. Ask your network administrator or IT department to create a new generic or institutional user and password combination for such testing and tinkering experiences! (See the Raspberry Pi documentation on this topic for further information.)[https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md]
 
-Exit nano by hitting `ctrl + x`, and then pressing the `y` key when asked if you'd like to save the buffer (which means save the file). This should return you to the normal terminal window.
+Exit nano by hitting `control + x`, and then pressing the `y` key when asked if you'd like to save the buffer (which means save the file). This should return you to the normal terminal window.
 
 Now eject the microSD card, place it in the Raspberry Pi and boot it up. Wait a couple minutes for it to finish booting up. The red LED light specifies power consumption (solid means power is flowing, flickering means inadequate power supply, i.e. needs a supply with better ampage), and the green LED light specifies data processing. The operating system will be finished installing once the green LED calms down.
 
-Now that we've installed the OS and enabled network-based control of it, let's go ahead and establish such a connection. This is called SSH, or Secure SHell connection. To establish an SSH connection we will need to know the location of the target computer on the network. We can do this by going into the router's settings and checking all connected computers' IP addresses.
+Now that we've installed the OS and enabled network-based control of it, let's go ahead and establish such a connection. (This is called SSH, or Secure SHell connection)[https://www.raspberrypi.org/documentation/remote-access/ssh/]. To establish an SSH connection we will need to know the location of the target computer on the network. We can do this by going into the router's settings and checking all connected computers' IP addresses.
 
 Once you determine the target computer's ip address, we can type the following command, replacing the generic placeholder (including the <> characters) with the actual address:
 
@@ -181,7 +181,7 @@ To do this, navigate to the file where the keys are stored, and edit the file to
 ```
 sudo nano ~/.ssh/known_hosts
 ```
-Remove all the data stored in this file by going to the end and holding backspace, then save and exit with `control + x` and then `y`.
+Remove all the data stored in this file by going to the end and holding backspace, then save and exit with `control + x` and then `y`. See [https://www.raspberrypi.org/forums/viewtopic.php?t=40037](https://www.raspberrypi.org/forums/viewtopic.php?t=40037) for more info.
 
 Now that we are in the remote host, let's install updates. This requires that the local network be connected to the internet.
 
@@ -265,12 +265,12 @@ static routers = 192.168.0.1
 static domain_name_servers = 192.168.0.1
 ```
 
-Save and close the file, and you should be good to go! You might have to re-establish the connection, however, since the host may now be situated at a different location on the network.
+Save and close the file, and you should be good to go! You might have to re-establish the connection, however, since the host may now be situated at a different location on the network. Further information: (http://raspberrypi.stackexchange.com/a/37921/8697)[http://raspberrypi.stackexchange.com/a/37921/8697]
 
-**Pro Tip:** You may need to make a direct connection with your computer to download updates (When in the field, I tend to tether my cullular connection to my laptop and share the connection over ethernet). In such cases, you will need to edit `dhcpcd.conf` and comment out the `eth0` specifications to enable an alternative ethernet interface with your laptop that is not specific to the router that it is normally connected to. You may not even need an `eth0` static IP, but it helps to have that direct ethernet connection in place if you are using the Pi as a network attached storage (NAS) device, i.e. sharing files over the network, as this gives a significant speed boost to file transfers.
+**ProTip:** You may need to make a direct connection with your computer to download updates (When in the field, I tend to tether my cullular connection to my laptop and share the connection over ethernet). In such cases, you will need to edit `dhcpcd.conf` and comment out the `eth0` specifications to enable an alternative ethernet interface with your laptop that is not specific to the router that it is normally connected to. You may not even need an `eth0` static IP, but it helps to have that direct ethernet connection in place if you are using the Pi as a network attached storage (NAS) device, i.e. sharing files over the network, as this gives a significant speed boost to file transfers.
 
 #### Setting up the database management system
-Now that we have the Raspberry Pi set up, let's set up a database management system (DBMS for short). We're going to be using MariaDB, which is for all intents and purposes identical to MySQL (MariaDB is a fork of MySQL that is more committed to open source principles). In fact, all MySQL commands work in MariaDB, and the community of users cross-polinate and use the terms synonymously in their documentation and troubleshooting. We will be using many commands that were designed for use in MySQL and which were ported over to MariaDB when it was forked.
+Now that we have the Raspberry Pi set up, let's set up a database management system (DBMS for short). We're going to be using MariaDB, which is for all intents and purposes identical to MySQL ((MariaDB is a fork of MySQL that is more committed to open source principles)[https://www.tecmint.com/the-story-behind-acquisition-of-mysql-and-the-rise-of-mariadb/]). In fact, (all MySQL commands work in MariaDB)[https://mariadb.com/kb/en/library/mariadb-vs-mysql-compatibility/], and the community of users cross-polinate and use the terms synonymously in their documentation and troubleshooting. We will be using many commands that were designed for use in MySQL and which were ported over to MariaDB when it was forked.
 
 In our current application, we will be installing a database server on the Raspberry Pi, which hosts one or more databases. The database, and all information stored within it, resides on the SD card slotted into the Raspberry Pi, which users connect to over the network as clients. The fact that the database exists in one centralized place ensures that the information accessed by clients is constantly up to date and consistent. In order to connect to the database as a client, users will have to know the server's IP address, the port that is used by MariaDB on the server, the name of the database to be accessed, and the users' login credentials to access the database.
 
@@ -286,9 +286,9 @@ Once it is installed, you will have to re-configure a configuration file to enab
 sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
 ```
 
-Find the line that configures `bind-address` to `127.0.0.1` and change its value to `0.0.0.0`. This changes the addresses that the MariaDB server will listen to for connections. If we had left it at `127.0.0.1`, which is typically synonymous with `localhost`, only modifications made by the Raspberry Pi's local users would be able to access any of the databases managed by the MariaDB server. By changing the value to `0.0.0.0` we enable the server to accept connections from any computer on the network, if they have valid credentials. You can also configure specific IP addresses in order to allow only computers with those locations on the network to access the database server.
+Find the line that configures `bind-address` to `127.0.0.1` and change its value to `0.0.0.0`. (This changes the addresses that the MariaDB server will listen to for connections)[https://mariadb.com/kb/en/library/server-system-variables/#bind_address]. If we had left it at `127.0.0.1`, which is typically synonymous with `localhost`, only modifications made by the Raspberry Pi's local users would be able to access any of the databases managed by the MariaDB server. By changing the value to `0.0.0.0` we enable the server to accept connections from any computer on the network, if they have valid credentials. You can also configure specific IP addresses in order to allow only computers with those locations on the network to access the database server.
 
-Once your changes are made, save the file using `ctrl + x` and then restart the MariaDB service:
+Once your changes are made, save the file using `control + x` and then restart the MariaDB service:
 
 ```
 sudo service mysql restart
@@ -300,7 +300,7 @@ Now let's login to the server so that we can create a database. By default there
 sudo mysql
 ```
 
-You'll notice that the terminal window looks a little different. We are now in the MariaDB server environment, and we will have to escape it in order to run commands outside of it. The command to escape is `ctrl + c`. You can also establish another SSH connection in a new terminal window so that you can use one window for database management tasks, and the other for working with other aspects of the operating system.
+You'll notice that the terminal window looks a little different. We are now in the MariaDB server environment, and we will have to escape it in order to run commands outside of it. The command to escape is `control + c`. You can also establish another SSH connection in a new terminal window so that you can use one window for database management tasks, and the other for working with other aspects of the operating system.
 
 MariaDB commands are SQL, or Structured Query Language. They are generally written using upper case letters, and every command must end with a semicolon. The semicolon essentially indicates the boundaries of a SQL statement, which is essentially a self-contained logical statement. If you do hit enter after an incomplete statement is input then any further input will be tacked on to the end of the incomplete statement. The semicolon indicates that the statement is finished and ready to be executed.
 
@@ -322,7 +322,7 @@ We can also make a restriction that would only recognize a user named lara if sh
 CREATE USER 'lara'@'12.34.56.78' IDENTIFIED BY 'croft';
 ```
 
-Different users can have different permissions granted to them. Groups of specific permissions can be lumped together and labelled as roles, which can also be assigned to users, which may make database management slightly easier. In this tutorial we will not fret too much with permissions or roles, and we will simply assign all permissions to our user lara:
+Different users can have different (permissions)[https://mariadb.com/kb/en/library/grant/] granted to them. Groups of specific permissions can be lumped together and labelled as (roles)[https://mariadb.com/kb/en/library/roles_overview/], which can also be assigned to users, which may make database management slightly easier. In this tutorial we will not fret too much with permissions or roles (see (https://mariadb.com/kb/en/library/grant/)[https://mariadb.com/kb/en/library/grant/] for more information), and we will simply assign all permissions to our user lara:
 
 ```
 GRANT ALL PRIVILEGES ON odate1.* TO 'lara'@'%' IDENTIFIED BY 'croft';
@@ -331,7 +331,7 @@ FLUSH PRIVILEGES;
 
 We could also restrict lara's permissions to specific tables on the database by replacing the `*`, which means 'any' or 'wild card' in logical or boolean terms, with the name of a specific table contained within the database.
 
-Now let's close the MariaDB service (using `ctrl + c`) and try logging in as lara:
+Now let's close the MariaDB service (using `control + c`) and try logging in as lara:
 
 ```
 mysql -u lara -p
@@ -339,7 +339,7 @@ mysql -u lara -p
 
 The -p flag indicates that the terminal should prompt us for a password. As lara, if we try creating a database we will get an error because lara does not have permission to do so.
 
-Creating or dropping tables, columns, indexes and relationships, as well as selecting, inserting, updating and deleting rows, is done via SQL. More comprehensive guides on SQL can be found at the following links, but here are a few useful snippets that you can try out.
+Creating or dropping tables, columns, indexes and relationships, as well as selecting, inserting, updating and deleting rows, is done via SQL. More comprehensive guides on SQL can be found at (w3schools)[https://www.w3schools.com/sql/sql_intro.asp] (among other great learning resources that they offer) and the (MariaDB Knowledge Base)[https://mariadb.com/kb/en/library/mariadb-basics/], but here are a few useful snippets that you can try out.
 
 To create a table:
 ```
@@ -398,7 +398,7 @@ To run a join query (https://www.w3schools.com/sql/sql_join.asp):
 SELECT `contexts`.Context, `contexts`.`Trench`, `contexts`.`NumberOfBuckets`, `Trench`.`Reason` FROM `contexts` INNER JOIN `trenches` ON `contexts`.`Trench` = `trenches`.`Trench`;
 ```
 
-- do all this from the command line but show how it can also be done from a GUI like Sequel Pro or SQL Workbench, which actually shows the queries being run
+- do all this from the command line but show how it can also be done from a GUI like (Sequel Pro)[https://www.sequelpro.com/] or (SQL Workbench)[https://www.mysql.com/products/workbench/], which actually shows the queries being run
 
 #### Accessing the database from a client
 Manipulating a database can be done from the command line or from a graphical user interface running on a remote client. There are a wide variety of database client software available (either open source or proprietary) but I highly recommend Sequel Pro (mac only) and MySQL Workbench (cross platform).
@@ -423,9 +423,9 @@ Everything that happens in this interface can be expressed as a logical SQL stat
 It is also possible to generate your own interfaces and data entry forms using Microsoft Access, PHP or R. In broad terms, a connection to the database is established using the same information just listed above, and buttons next to text fields or table renderers are used to execute SQL statements that insert, update, select delete or otherwise query the database accordingly.
 
 For more information on how create data entry forms using Microsoft Access, PHP and R Shiny, please refer to the following links:
-* Microsoft Access:
-* PHP:
-* R:
+* Microsoft Access: https://dev.mysql.com/doc/connector-odbc/en/connector-odbc-examples-tools-with-access-linked-tables.html
+* PHP: https://www.taniarascia.com/create-a-simple-database-app-connecting-to-mysql-with-php/
+* R: https://mariadb.com/kb/en/library/r-statistical-programming-using-mariadb-as-the-background-database/, https://shiny.rstudio.com/articles/overview.html, https://github.com/MangoTheCat/dtdbshiny
 
 #### Scheduling automatic backups
 It is wise to backup your databases regularly, but this is often overlooked. Thankfully we can automate this process! We accomplish this by running a basic script that wraps the database as a single file and copies it over to a specified directory that corresponds with a folder on a mounted USB storage drive.
@@ -448,7 +448,7 @@ Give the directory adequate permissions:
 sudo chmod -R 777 /media/backup
 ```
 
-**Note:** This command gives unrestricted read, write and execute permissions to all users! Configure your permissions to suit your needs!
+**Note:** This command gives unrestricted read, write and execute permissions to all users! Configure your permissions to suit your needs! Further information: (https://www.guru99.com/file-permissions.html)[https://www.guru99.com/file-permissions.html], (https://chmod-calculator.com/)[https://chmod-calculator.com/]
 
 Next open the `fstab` file, which is a system file that handles the way Raspbian mounts USB devices:
 ```
@@ -460,7 +460,9 @@ At the end of that file, add the following command, replacing the UUID with the 
 UUID=783A-120B /media/backup auto noatime,nofail,umask=000 0 0
 ```
 
-**Note:** This is the correct code for FAT32 formatted drives only. FAT32 handles permissions is a slightly different way than NTFS and linux-based filesystems (i.e. ext4) and you will need to configure them accordingly. However, I recommend the use of FAT32 in general, since it is interoperable between virtually all operating systems, whereas others are not, and zipped archaeological databases probably won't be more than 4GB each, which is the file size limit for FAT32-formatted devices.
+Further information: (https://www.raspberrypi.org/documentation/configuration/external-storage.md)[https://www.raspberrypi.org/documentation/configuration/external-storage.md]
+
+**Note:** This is the correct code for FAT32/exFAT formatted drives only. FAT32/exFAT handles permissions is a slightly different way than NTFS and linux-based filesystems (i.e. ext4) and you will need to configure them accordingly. However, I recommend the use of FAT32/exFAT in general, since it is interoperable between virtually all operating systems, whereas others are not, and zipped archaeological databases probably won't be more than 4GB each, which is the file size limit for FAT32/exFAT-formatted devices.
 
 Now the USB drive will be auto mounted and ready to use. Don’t forget to restart your Raspberry Pi to test it out:
 ```
@@ -537,7 +539,7 @@ Ensure that `Path =` the directory you want to share, such as the mount point of
 
 This configuration allows anyone to read, write, and execute files in a volume named share, either by logging in as a Samba user or as a guest. If you do not want to allow guest users, omit the `guest ok = yes` line.
 
-Please refer to the following link and the Samba documentation in order to set up usernames and passwords. The method just described allows free-for-all access, and it should be communicated to users that they can add, delete or modify any file in the shared directory, for better or worse. You may feel inclined to schedule automated backups of your shared drive to yet another connected drive, though this may congest the network and occupy lots of disk space, depending on the size of the shared directory. You may wish to schedule such backups during off-hours, when volumes of traffic across the network are expected to be low.
+Please refer to (this resource)[https://www.raspberrypi.org/magpi/samba-file-server/] for further information, as well as the (Samba documentation)[https://www.samba.org/samba/docs/] in order to set up usernames and passwords. The method just described allows free-for-all access, and it should be communicated to users that they can add, delete or modify any file in the shared directory, for better or worse. You may feel inclined to schedule automated backups of your shared drive to yet another connected drive, though this may congest the network and occupy lots of disk space, depending on the size of the shared directory. You may wish to schedule such backups during off-hours, when volumes of traffic across the network are expected to be low.
 * 
 * 
 * 
