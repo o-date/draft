@@ -199,6 +199,17 @@ Remove all the data stored in this file by going to the end and holding backspac
 
 ![known hosts](images/knownhosts.png)
 
+**SSH via direct ethernet connection (MacOS):**
+Raspbian is configured by default to receive an IP address from a DHCP server, a role that is typically fulfilled by a wireless router. This can be done without a router by connecting the Raspberry Pi to the client computer using an ethernet cable, but it is necessary to configure the sharing options in MacOS in order for this to work. From System Preferences, go to the Sharing window. From the box on the left, enable 'Internet Sharing'. You may have to select 'Thunderbolt Ethernet' under the Wi-Fi dropdown before checking off the 'Internet Sharing' box.
+
+Then in terminal, use `ifconfig` to get information about your computer's networking configuration. Find the header `bridge100`, note the IP address after `inet`, which is most likely `192.168.2.1`. Add one to the final digit to determine the likely IP address of the Raspberry Pi (`192.168.2.2` in this case).
+
+**Note:** This will not work if the wireless network is secured by a 802.1x firewall, which are commonly implemented by most university, hospital and government networks.
+
+For more information, visit:
+* https://medium.com/@tzhenghao/how-to-ssh-into-your-raspberry-pi-with-a-mac-and-ethernet-cable-636a197d055
+* https://www.jeffgeerling.com/blog/2016/ssh-raspberry-pi-only-network-cable-using-os-xs-internet-sharing
+
 Now that we are in the remote host, let's install updates. This requires that the local network be connected to the internet.
 
 ```
@@ -265,7 +276,7 @@ Finally, we have to add this retrieved information to the file located at `/etc/
 sudo nano /etc/dhcpcd.conf
 ```
 
-**Pro Tip:** when editing system files or doing anything that reconfigures the computer setup in a serious way, you will have to include the `sudo` before the command. This grants 'super user' privileges, which are required for system adminstration.
+**ProTip:** when editing system files or doing anything that reconfigures the computer setup in a serious way, you will have to include the `sudo` before the command. This grants 'super user' privileges, which are required for system adminstration.
 
 Add the following, substituting the `static routers` and `static domain_name_servers` values with the one's that were just determined above. The values for `static ip_address` should be our new consistent IP address. For the numbers following the `/`, use the values from the IP addresses we identified above.
 
@@ -310,7 +321,36 @@ Once your changes are made, save the file using `control + x` and then restart t
 sudo service mysql restart
 ```
 
-Now let's login to the server so that we can create a database. By default there is only one user named 'root', whose password is blank. Root has the broadest set of privileges, and can create or drop databases and users freely. You can only log in as root on the machine on which the MariaDB server resides; you can not log in as root from a remote connection. After establishing a SSH connection to the Raspberry Pi, initiate the server and login as root:
+**Installing and running MariaDB locally on MacOS:**
+It is possible to install the MariaDB DBMS locally on your laptop, which means that your laptop would serve as both the server and the client at the same time. This is useful if you want to create and manage a database locally before migrating it to a server, or if you don't have a Raspberry Pi on hand but want to learn more about database adminstration.
+
+To onstall MariaDB on a mac, we need to first install a paclage manager called homebrew, similar to apt, that is designed specifically for MacOS. To install homebrew, open terminal and then run the following command to download the installation files and build the program:
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Then update the index of retrievable packages and upgrade any installed packages:
+```
+brew update
+brew upgrade
+```
+
+Nowe install MariaDB via homebrew:
+```
+brew install mariadb
+```
+
+Once installed, to start the MariaDB server use the following:
+```
+mysql.server start
+```
+
+It is also important to stop the server when you are finished using it in order to ensure that your computer is not constantly using up resources when they are not needed:
+```
+mysql.server stop
+```
+
+Once the database server is installed and running up, let's login to the server so that we can create a database. By default there is only one user named 'root', whose password is blank. Root has the broadest set of privileges, and can create or drop databases and users freely. You can only log in as root on the machine on which the MariaDB server resides; you can not log in as root from a remote connection. After establishing a SSH connection to the Raspberry Pi, initiate the server and login as root:
 
 ```
 sudo mysql
@@ -516,7 +556,7 @@ To run dbbackup.sh every 30 minutes, add the following line at the end of the cr
 */30 * * * * /home/pi/dbbackup.sh
 ```
 
-**Pro Tip:** [crontab.guru](https://crontab.guru/) is a great resource for determining the correct syntax for cron schedules.
+**ProTip:** [crontab.guru](https://crontab.guru/) is a great resource for determining the correct syntax for cron schedules.
 
 For more information, please refer to the following link:
 [https://www.codingepiphany.com/2013/06/12/raspberry-pi-lamp-server-tuning-and-automated-db-backup/
