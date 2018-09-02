@@ -1,5 +1,3 @@
-
-
 ## Artificial Intelligence in Digital Archaeology
 
 To speak of 'artificial intelligence' in archaeology may be to speak too soon yet. We do have machine learning in the service of archaeology (neural networks for classificatory purposes, for instance), and there is a well-established body of work in terms of simulation that could fall under the rubric of 'artificial intelligence'.
@@ -57,26 +55,37 @@ Formal models, or rather *formalizing* informal models, reduce ambiguity, settin
 
 Formalization often demands the use of formal logic and to some extent, quantification. Seen from the perspective of the human natural language, mathematics and logic contain lots of repetitions, fixed vocabulary, and no nuances. Nevertheless, computational systems function strictly with this kind of language, and they are both empowered and limited by it.  A formal definition is a disclaimer saying: *"This is what X means in this model, no more, no less. You can now criticize it at will."* Whitout the formal definition, we would probably spend a chapter reviewing everything we read and thought about "nuclear patriarchal family" and still would not be "at the same page" with all our readers.  The terms of this definition are assumptions of the model. At any point, new evidence or insight can suggest us that an assumption is unjustified or unnecessary, and we may change it or remove it from the model. It is in the elaboration and exploration of the unintended consequences of these rigorous definitions that the power of simulation emerges.
 
-SG: at this point, send the reader to a jupyter notebook with a simple ABM in python in it, also point to more complicated tutorials elsewhere.
+@Epstein2008 perhaps put it best:
 
+> The first question that arises frequently—sometimes innocently and sometimes not—is simply, "Why model?" Imagining a rhetorical (non-innocent) inquisitor, my favorite retort is, "You are a modeler." Anyone who ventures a projection, or imagines how a social dynamic—an epidemic, war, or migration—would unfold is running some model.
+> But typically, it is an implicit model in which the assumptions are hidden, their internal consistency is untested, their logical consequences are unknown, and their relation to data is unknown. But, when you close your eyes and imagine an epidemic spreading, or any other social dynamic, you are running some model or other. It is just an implicit model that you haven't written down...
+> This being the case, I am always amused when these same people challenge me with the question, "Can you validate your model?" The appropriate retort, of course, is, "Can you validate yours?" At least I can write mine down so that it can, in principle, be calibrated to data, if that is what you mean by "validate," a term I assiduously avoid (good Popperian that I am). 
+>The choice, then, is not whether to build models; it's whether to build explicit ones. In explicit models, assumptions are laid out in detail, so we can study exactly what they entail. On these assumptions, this sort of thing happens. When you alter the assumptions that is what happens. By writing explicit models, you let others replicate your results.
 
-- Why model with ABM? open with the idea that we are always modeling
-- Mention review article 'Why model?'
+Epstein goes on to note that modeling can sometimes be seen as implying prediction; for archaeology, prediction might very well be the least useful thing that a formalized model might do. Instead, as Epstein lists, there are many reasons to model:
 
-- def system, model, formal model
-- The origins of computer simulation
-- 3d models and statistical models (e.g., regression) are not simulation models. Simulation implies the passing of time as the driving variable of a model. Other kinds of models may share the goal of inferring new data from a given knowledge or dataset. For instance, we can design a curve that fits the number of archaeological sites in a region for all known periods, and use it to estimate this value during periods not represented in any sites. However, this equation is not representing the mechanisms that are supposely causing the phenomenon, i.e. the distribution of human activity in space and time. The idea of step, iteration, or repetition as the representation of passing time is the keystone of any simulation model.
-- Equation-based modeling, System Dynamics - ODE systems as models (mention Lorenz attractor, end with the idea of iteration of a process)
-- Algorithm-based modeling, Algorithms as behavioral models (mention cellular automata, Van Neumann, Schelling, etc)
-- The variety of algorithm-based models, much coincides with the variety of programming paradigm.  
-  a. Flow: spectrum between centralized (iteration of a single process, e.g. event) and distributed (multiple processes are iterated contextually by multiple entities).  
-  b. Schedule: spectrum between fully-scheduled (processes are initiated in a predetermined order) and event-driven (processes are initiated given a certain input).  
-ABMs fall somewhere in-between these two spectra, though normally leaning towards distributed (e.g., using Monte Carlo methods) and fully-scheduled. Applications in several disciplines (see Wikipedia)
-- Parts of an ABM model
- (re-visit presentations)
+> Explain (very distinct from predict)
+> Guide data collection
+> Illuminate core dynamics
+> Suggest dynamical analogies
+> Discover new questions
+> Promote a scientific habit of mind
+> Bound (bracket) outcomes to plausible ranges
+> Illuminate core uncertainties.
+> Offer crisis options in near-real time
+> Demonstrate tradeoffs / suggest efficiencies
+> Challenge the robustness of prevailing theory through perturbations
+> Expose prevailing wisdom as incompatible with available data
+> Train practitioners
+> Discipline the policy dialogue
+> Educate the general public
+> Reveal the apparently simple (complex) to be complex (simple)
 
-#### How to model with ABM?
+Not everything on that list may apply to archaeology, but nevertheless, the list opens up the possibility space for archaeological simulation. See for instance Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/), which implements Schelling's 1971 Segragation Model which showed how even minor expressions of preference could lead to segregated neighborhoods. Hart and Case's 'playable post' implements the model interactively in the browser, and uses engaging graphics to communicate the dynamic to the public. An archaeological agent based model similarly deployed could be an excellent public archaeology intervention.
 
+#### How do we model with ABM?
+
+In simple terms, building a model involves the following steps.
 - Define hypotheses, questions or simply the phenomenon of interest (identify the system)
 - Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam's razor vs. emergence
 - Express the chosen elements and processes as computer code (implement the model)
