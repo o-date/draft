@@ -15,6 +15,8 @@ The value of agent-based modeling: it forces us to think carefully about what it
 
 ### Agent-based modeling (ABM)
 
+<div class = rmdcaution> _This section is under development_. </div>
+
 This section is an overview of agent-based modeling (**_ABM_**), as it is used within archaeology, anthropology, and behavioral sciences. Before tackling the "agent-based", we start with a brief introduction to what "modeling" means. To place ABM in a bigger picture, we introduce the reader to several dimensions of the variability of simulation models. We describe the necessary and optional parts of ABM models, including their characteristic type of element, i.e. the agent. At this point, the student must be aware that _**simulation models**_ in our context involve computer code (they are *digital*) and the iteration of processes (they are *dynamic*).
 
 Following the definition of ABM, we describe the process of creating a model or *formalizing* an informal model. Although the reality is messier, this process can be divided into *definition* of research question and phenomenon, *design*, *implementation*, and *verification*. *Validation*, which is considered a fifth step by most of the modeling literature, is regarded here as an extra, lengthy process, often separable from the tasks involved in creating and exploring a model. Furthermore, we introduce two additional steps that are not normally acknowledged: *understanding* and *documenting* the model. In explaining all modeling steps, we keep instructions general enough for them to be valid when dealing with any platform or programming language.
