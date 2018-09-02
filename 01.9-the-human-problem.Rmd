@@ -1,8 +1,10 @@
+## The Human Problem
+
 A key to success in using, remixing, and sharing data openly is communicating effectively with colleagues and other stakeholders. Although rigorous research will take you part of the way in developing work that is well-regarded by other scholars, it will not happen in a vacuum. You must be the best advocate for your own work, and for digital archaeology as a methodology.
 
 Whether you are utilizing data that already existed or creating a totally new dataset, your work impacts colleagues, and it is important to build not only a technical framework but social supports for your work. Another way of understanding this is that you are responsible for ensuring you actually reach the audience you identified while following Appleford and Giuliano's project design principles (described in chapter 01.2). A successful digital archaeology project is one which is well-understood and well-regarded by colleagues. In the following section I will describe how to frame digital archaeology work for colleagues and others who may be interested or impacted by it, and share three key tools for establishing boundaries and expectations for your project.
 
-## The Two-Sentence Pitch
+### The Two-Sentence Pitch
 
 Whether you are building a large, multi-faceted, multi-scholar project or experimenting on your own, you need to be ready to explain your work's value. By the time you talk to a colleague about it, you should have a two sentence pitch. Being prepared to explain why your digital archaeology project is valuable is not only important for you to maintain the resources to continue your work, but helps build support for digital archaeology scholarship in the community. If there is one planning task you do, do this.
 
@@ -14,7 +16,7 @@ Whether you are building a large, multi-faceted, multi-scholar project or experi
 
 <!-- What's below is a messy outline and not reflective of the structure I'm going to write -->
 
-## Consulting Colleagues and Stakeholders
+### Consulting Colleagues and Stakeholders
 
 <!-- Matching format to scholarly audience -->
 For many of us, the main audience of our research is our colleagues. But colleagues is about as vague and useless a term as "the public" and so when you develop a new project you should pin down (for yourself) the scholarly topics that your work will contribute to, and some examples of individuals who do related work. This will not only help you strategize who to seek out when presenting or publishing your work, but will give you an opportunity to examine what sorts of work are valued in those communities. For example, public archaeologists often present their work at scholarly conferences but may never publish them in peer-reviewed journals, and in digital archaeology the norm is to share data and documentation online. Be ready to either make a contribution in the form your colleagues will recognize as valuable or explain why you chose something different. Furthermore, don't forget that most colleagues will not have the technical skills you develop during your digital archaeology project so prepare to explain yourself 
@@ -35,24 +37,24 @@ Even highly technical or abstract work can impact people beyond the scholarly re
   + Sharing outputs and picking appropriate formats 
 -->
 
-## Making a Plan
+### Making a Plan
 
 In this section I will give you three more tools for planning and managing the human aspect of a project. None of these need to be exhaustive or perfect, and preparing on a basic level for how you will go about managing the project will save you time and effort in the long run. I have organized these tools from informal to formal.
 
-### Consultation
+#### Consultation
 
 <!-- I need to make everything after this comment less trite and focus on giving a template for people to apply -->
 
 Consultation is one of the most important things you can do to make your project successful. Discuss your idea with trusted colleagues first, and if applicable, with stakeholders outside the field, before you begin manipulating data. Absolutely do not publicly share results of a project before speaking to a single colleague or stakeholder about it. Informal working groups of colleagues are invaluable and you should use them.
 
-### Strategy Document
+#### Strategy Document
 
 
-### Policy Document
+#### Policy Document
 
 
 
-## Persisting and Adapting your Plan
+### Persisting and Adapting your Plan
 
 If you do most of your research on your own or improvise often, you may not be used to following a plan. Even if your plan is loose and flexible, I strongly urge you to follow one. It can be three sentences long, but those are three sentences worth having when you get stuck. The biggest difficulties people have in continuing their digital archaeology projects are with people, not technology, so this aspect of project planning deserves attention. Everyone has heard of a colleague who believes someone else's work is infringing on their intellectual property in some way, or colleagues not believing certain projects have intellectual value, or someone who used data in a way that upset the colleagues or interlocutors they got it from. Try to avoid that. Most of the time you can.
 

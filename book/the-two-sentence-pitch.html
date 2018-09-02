@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="eliding-the-digital-and-the-physical.html">
-<link rel="next" href="d-printing-the-internet-of-things-and-maker-archaeology.html">
+<link rel="prev" href="the-ethics-of-big-data-in-archaeology.html">
+<link rel="next" href="consulting-colleagues-and-stakeholders.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -164,12 +164,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.6" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html"><i class="fa fa-check"></i><b>1.6</b> The Ethics of Big Data in Archaeology</a><ul>
 <li class="chapter" data-level="1.6.1" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#exercises-5"><i class="fa fa-check"></i><b>1.6.1</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="1.7" data-path="the-human-problem.html"><a href="the-human-problem.html"><i class="fa fa-check"></i><b>1.7</b> The Human Problem</a><ul>
-<li class="chapter" data-level="1.7.1" data-path="the-human-problem.html"><a href="the-human-problem.html#the-two-sentence-pitch"><i class="fa fa-check"></i><b>1.7.1</b> The Two-Sentence Pitch</a></li>
-<li class="chapter" data-level="1.7.2" data-path="the-human-problem.html"><a href="the-human-problem.html#consulting-colleagues-and-stakeholders"><i class="fa fa-check"></i><b>1.7.2</b> Consulting Colleagues and Stakeholders</a></li>
-<li class="chapter" data-level="1.7.3" data-path="the-human-problem.html"><a href="the-human-problem.html#making-a-plan"><i class="fa fa-check"></i><b>1.7.3</b> Making a Plan</a></li>
-<li class="chapter" data-level="1.7.4" data-path="the-human-problem.html"><a href="the-human-problem.html#persisting-and-adapting-your-plan"><i class="fa fa-check"></i><b>1.7.4</b> Persisting and Adapting your Plan</a></li>
+<li class="chapter" data-level="1.7" data-path="the-two-sentence-pitch.html"><a href="the-two-sentence-pitch.html"><i class="fa fa-check"></i><b>1.7</b> The Two-Sentence Pitch</a></li>
+<li class="chapter" data-level="1.8" data-path="consulting-colleagues-and-stakeholders.html"><a href="consulting-colleagues-and-stakeholders.html"><i class="fa fa-check"></i><b>1.8</b> Consulting Colleagues and Stakeholders</a></li>
+<li class="chapter" data-level="1.9" data-path="making-a-plan.html"><a href="making-a-plan.html"><i class="fa fa-check"></i><b>1.9</b> Making a Plan</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="making-a-plan.html"><a href="making-a-plan.html#consultation"><i class="fa fa-check"></i><b>1.9.1</b> Consultation</a></li>
+<li class="chapter" data-level="1.9.2" data-path="making-a-plan.html"><a href="making-a-plan.html#strategy-document"><i class="fa fa-check"></i><b>1.9.2</b> Strategy Document</a></li>
+<li class="chapter" data-level="1.9.3" data-path="making-a-plan.html"><a href="making-a-plan.html#policy-document"><i class="fa fa-check"></i><b>1.9.3</b> Policy Document</a></li>
 </ul></li>
+<li class="chapter" data-level="1.10" data-path="persisting-and-adapting-your-plan.html"><a href="persisting-and-adapting-your-plan.html"><i class="fa fa-check"></i><b>1.10</b> Persisting and Adapting your Plan</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="making-data-useful.html"><a href="making-data-useful.html"><i class="fa fa-check"></i><b>2</b> Making Data Useful</a><ul>
 <li class="chapter" data-level="2.1" data-path="designing-data-collection-and-curation.html"><a href="designing-data-collection-and-curation.html"><i class="fa fa-check"></i><b>2.1</b> Designing Data Collection and Curation</a><ul>
@@ -298,102 +300,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="d-photogrammetry" class="section level2">
-<h2><span class="header-section-number">4.1</span> 3D Photogrammetry</h2>
-<p>In recent years, faster and more powerful computers have made it feasible to do complex 3d model building by extracting points of overlap in multiple photographs, then extrapolating from the camera metadata embedded in those images the distance from the points to the camera’s image sensor.This information allows the reconstruction of where those points were <em>in space</em> relative to the camera. Thus astonishingly good 3d models can be created at rather low cost.</p>
-<p>Laser scanning, on the other hand, involves shooting rays of light onto an object (or space) and counting the time it takes for the light to return to the scanner. Laser scanners are able therefore to take detailed micro-millimetre scans of an object’s surface and texture. For some archaeological purposes, laser scanning is to be preferred. For other purposes, 3d photogrammetry or ‘structure from motion’ (sfm) is entirely appropriate, and the level of resolution good enough</p>
-<p>In this chapter, we’ll cover some of the basic principles of how sfm works while pointing you to more detailed discussions. We also provide links in the ‘further readings’ to some recent case studies using 3d photogrammetry in novel ways.</p>
-<div id="basic-principles" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Basic principles</h3>
-<p>Photogrammetry, as the name implies, is the derivation of measurements from photographs. In our case, we are talking about triangulation. We identify from a series of photographs of an object a series of ‘control points’ (the same features across multiple photographs) and ‘rays’ (lines-of-sight). Then we work out where the rays intersect via triangulation. (Our eyes and brain do this naturally and we call this ‘depth perception’). Once we’ve done this enough times, we end up with a cloud of points which are the three-dimensional position in space <em>relative</em> to the camera that took the photographs. Various algorithms can then join-up the points into a meshwork, onto which we can project the image information. The quality of the result depends on the software and algorithms, the quality of the camera, background lighting, and the skill of the photographer.</p>
-<p>Nowadays, visually appealling models can be generated by low-cost smart-phone apps and shared immediately with services such as <a href="http://sketchfab.com">Sketchfab</a> (check out their <a href="https://sketchfab.com/models/categories/cultural-heritage-history">Cultural Heritage &amp; History</a> category). For recording purposes or for 3d printing artefacts afterwards for study, higher-power cameras and software are generally used (<a href="http://www.agisoft.com/">Agisoft Photoscan</a> is an often-used product in this regard). Open source software is quite powerful, but packages like <a href="http://ccwu.me/vsfm/">VisualSFM</a> (one of the best known) can be difficult to set up. (If you are familiar with Docker, Ryan Baumann has <a href="https://ryanfb.github.io/etc/2015/01/13/docker_for_visualsfm.html">simplified some of the process</a>. More images and more computational power does not always lead to better results, however <span class="citation">(Baumann <a href="#ref-baumann_2015">2015</a>)</span>.</p>
-<p>In general, it takes practice to develop the necessary photographic and technological skill/intuition to get the best out of one’s photographs and one’s software. In the exercise below, we introduce you to a workflow using <a href="">Regard3d</a>, a graphical user interface for working with a number of algorithms at each step of the process. It is also worth noting that 3d models can be generated from high-quality drone or other video; a workflow for this (which also uses Regard3d) may be <a href="http://dx.doi.org/10.17613/M60V7D">found here</a>.</p>
-<p>The general process runs like this:</p>
-<ul>
-<li>image capture: take overlapping images; you want a high degree of overlap. Knowing the ‘interior and exterior’ orientation of the camera - its internal arrangements, including lens distortion, focal length and so on from the metadata bundled with the image, allows software to work out the position of the camera with regard to the points of overlap in the images.</li>
-<li>image matching: tie points are matched and camera orientations are deduced</li>
-<li>dense point cloud generation. The intersection of rays then allows us to work out the location of these points in space</li>
-<li>secondary product generation</li>
-<li>analysis / presentation</li>
-</ul>
-</div>
-<div id="further-readings" class="section level3">
-<h3><span class="header-section-number">4.1.2</span> Further Readings</h3>
-<p>The following will challenge your sense of what is possible with 3d photogrammetry, and how/why archaeologists should think critically about this technology.</p>
-<p>Eve, S. (2018). Losing our Senses, an Exploration of 3D Object Scanning. Open Archaeology, 4(1), pp. 114-122. Retrieved 7 Aug. 2018, from <a href="doi:10.1515/opar-2018-0007" class="uri">doi:10.1515/opar-2018-0007</a></p>
-<p>Reilly, P. (2015). Additive Archaeology: An Alternative Framework for Recontextualising Archaeological Entities. Open Archaeology, 1(1), pp. -. Retrieved 7 Aug. 2018, from <a href="doi:10.1515/opar-2015-0013" class="uri">doi:10.1515/opar-2015-0013</a></p>
-<p>Verdiani, G. (2015). Bringing Impossible Places to the Public: Three Ideas for Rupestrian Churches in Goreme, Kapadokya Utilizing a Digital Survey, 3D Printing, and Augmented Reality. Open Archaeology, 1(1), pp. -. Retrieved 7 Aug. 2018, from <a href="doi:10.1515/opar-2015-0007" class="uri">doi:10.1515/opar-2015-0007</a></p>
-</div>
-<div id="exercises-20" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> exercises</h3>
-<p>While there are command-line applications (like <a href="http://ccwu.me/vsfm/">VSFM</a>) for photogrammetry, running such things from a Jupyter notebook does not work very well. VSFM <em>can</em> be installed in something like DHBox (but it’s not for the faint-of-heart, see eg <a href="http://www.10flow.com/2012/08/15/building-visualsfm-on-ubuntu-12-04-precise-pangolin-desktop-64-bit/">this</a>). Roman Hiestand built a graphical user interface around a series of open-source modules that, when combined in a workflow, enables you to experiment with photogrammetry. With a bit of hacking, we can also make it work with photographs taken from smartphone or tablet.</p>
-<p>Download and install the relevant version of <a href="http://www.regard3d.org/">Regard3d</a> for your operating system.</p>
-<ol style="list-style-type: decimal">
-<li><p>Try the Heistand’s <a href="http://www.regard3d.org/index.php/documentation/tutorial">tutorial</a> using the images of the <a href="http://sourceforge.net/projects/regard3d/files/Demo/OpenMVG/SceauxCastle.zip/download">Sceaux Castle</a>. This tutorial gives you a sense of the basic workflow for using Regard3d.</p></li>
-<li><p>Take your own photographs of an object. Try to capture it from every angle, making sure that there is a high amount of overlap from one photograph to another. Around 20 photographs can be enough to make a model, although more data is normally better. Copy these photos to your computer. A note on smartphone cameras: While many people now have powerful cameras in their pockets in the form of smartphones, these cameras are not in Regard3d’s database of cameras and sensor widths. If you’re using a smartphone camera, you will have to add this data to the metadata of the images, and then add the ‘camera’ to the database of cameras. <strong>If you’ve taken pictures with an actual digital camera, chances are that this information is already present in the Regard3d database</strong>. You’ll know if you need to add information if you add a picture set to Regard3d and it says ‘NA’ beside the picture.</p></li>
-</ol>
-<p>Open Regard3d and start a new project. Add a photoset by selecting the directory where you saved the photos.</p>
-<p>Click ok to use the images. <strong>If Regard3d doesn’t recognize your camera, check the <a href="Adding%20metadata%20to%20images">Adding metadata to images</a> section below</strong>.</p>
-<p>Click on compute matches. Try with just the default values. If the system cannot compute matches, try again but this time slide the keypoint density sliders (two sliders) all the way to ‘ultra’. Using ‘ultra’ means we get as many data points as possible, which can be necessary given our source images (warning: this also is computationally very heavy and if your machine does not have enough memory the process can fail). This might take some time. When it is finished, proceed through the next steps as Regard3d presents them to you (the options in the bottom left panel of the program are context-specific. If you want to revisit a previous step and try different settings, select the results from that step in the inspector panel top left to redo).</p>
-<p>The final procedure in model generation is to compute the surfaces. When you click on the ‘surface’ button (having just completed the ‘densification’ step), make sure to tick off the ‘texture’ radio button. When this step is complete, you can hit the ‘export’ button. The model will be in your project folder - .obj, .stl., and .png. To share the model on something like <a href="http://sketchfab.com">Sketchfab.com</a> zip these three files into a single zip folder. On Sketchfab (or similar services), you would upload the zip folder. These services would then unzip the folder, and their 3d viewers know how to read and display your data.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Cleaning up a model with Meshlab Building a 3d model takes skill, patience, and practice. No model ever appears ‘perfect’ on the first try. We can ‘fix’ a number of issues in a 3d model by opening it in a 3d editing programme. There are many such programmes out there, with various degrees of user-friendliness. One open-source package that is often used is <a href="http://www.meshlab.net/">Meshlab</a>. It is very powerful, but not that intuitive or friendly. <strong>Warning</strong> It does not ‘undo’.</li>
-</ol>
-<p>Once you have downloaded and installed Meshlab, double-click on the .obj file in your project folder. Meshlab will open and display your model. The exact tools you might wish to use to enhance or clean up your model depends very much on how your model turned out. At the very least, you’ll use the ‘vertice select’ tool (which allows you to draw a box over the offending part) and the ‘vertice delete’ tool.</p>
-<div id="adding-metadata-to-images" class="section level4">
-<h4><span class="header-section-number">4.1.3.1</span> Adding metadata to images</h4>
-<ol style="list-style-type: decimal">
-<li>Go to <a href="https://www.sno.phy.queensu.ca/~phil/exiftool/index.html" class="uri">https://www.sno.phy.queensu.ca/~phil/exiftool/index.html</a> and download the version of the Exiftool appropriate to your computer.</li>
-</ol>
-<ul>
-<li><strong>Windows users</strong> you need to fully extract the tool from the zipped download. <strong>THEN</strong> you need to rename the file to just <code>exiftool.exe</code>. When you extract it, the tool name is <code>exiftool(-k).exe</code>. Delete the <code>(-k)</code> in the file name.</li>
-<li><strong>Move</strong> the file <code>exiftool.exe</code> to the folder where your images are.</li>
-<li><strong>Mac users</strong> Unzip if you need to, double click on the dmg file, follow the prompts. You’re good to go.</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Navigate to where your images are store. Windows users, search your machine for <code>command prompt</code>. Mac users, search your machine for <code>terminal</code>. Run that program. This opens up a window where you can type commands into your computer. You use the <code>cd</code> command to ‘change directories’, followed by the exact location (path) of your images. On a PC it’ll probably look something like <code>cd c:\users\yourname\documents\myimages</code>. When you’re in the location, <code>dir</code> will show you everything in that director. Mac users, the command <code>ls</code> will list the directory contents. Make sure you’re in the right location, (and windows users, that <code>exiftool.exe</code> is in that directory).</p></li>
-<li><p>The following commands will add the required metadata to your images. Note that each command is saying, in effect, exiftool, change the following metadata field to this new setting for the following image. the <code>*.jpeg</code> means, every single jpeg in this folder. <strong>NB</strong> if your files end with .jpg, you’d use <code>.jpg</code>, right?</p></li>
-</ol>
-<p><code>exiftool -FocalLength=&quot;3.97&quot; *.jpeg</code></p>
-<p>This sets the focal length of your image at 3.97 mm. You should search for your cellphone make online to see if you can find the actual measurement. If you can’t find it, 3.97 is probably close enough.</p>
-<p><code>exiftool -Make=&quot;CameraMake&quot; *.jpeg</code></p>
-<p>You can use whatever value you want instead of <code>CameraMake</code>. E.g., <code>myphone</code> works.</p>
-<p><code>exiftool -Model=&quot;CameraModel&quot; *.jpeg</code></p>
-<p>You can use whatever value you want, eg <code>LG3</code>.</p>
-<p>If all goes according to plan, the computer will report the number of images modified. Exiftool also makes a copy of your images with the new file extension, <code>.jpeg_original</code> so that if something goes wrong, you can delete the new files and restore the old ones by changing their file names (eg, remove <code>_original</code> from the name).</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Regard3d looks for that metadata in order to do the calculations that generate the point cloud from which the model is created. It needs the focal length, and it needs the size of the image sensor to work. It reads the metadata on make and model and compares it against a database of cameras to get the size of the image sensor plate. Oddly enough, this information is <strong>not</strong> encoded in the image metadata, which is why we need the database. This database is just a text file that uses commas to delimit the fields of information. The pattern looks like this: <code>make;model;width-in-mm</code>. EG: <code>Canon;Canon-sure-shot;6</code>. So, we find that file, and we add that information at the end of it.</li>
-</ol>
-<p><strong>windows users</strong> This information will be at this location:</p>
-<p><code>C:\Users\[User name]\AppData\Local\Regard3D</code></p>
-<p>eg, on my PC:</p>
-<p><code>C:\Users\ShawnGraham\AppData\Local\Regard3D</code></p>
-<p>and is in the file “sensor_database.csv”.</p>
-<p>*<strong>mac users</strong> Open your finder, and hit shift+command+g and go to</p>
-<p><code>/Applications/Regard3D.app/Contents/Resources</code></p>
-<ul>
-<li>Do not open <code>sensor_database.csv</code> with Excel; Excel will add hidden characters which cause trouble. Instead, you need a proper text editor to work with the file (notepad or wordpad are not useful here). One good option is <a href="https://www.sublimetext.com/">Sublime Text</a>. Download, install, and use it to open <code>sensor_database.csv</code></li>
-<li>Add whatever you put in for camera make and camera model (back in step 3) <em>exactly</em> - uppercase/lowercase matters. You can search to find the size of the image sensor for your cell phone camera. Use that info if you can find it; otherwise 6 mm is probably pretty close. The line you add to the database then will look something like this:</li>
-</ul>
-<p>myphone;LG3;6</p>
-<p>Save the file. Now you can open Regard3d, ‘add a picture set’, select these images, and Regard3d will have all of the necessary metadata with which to work.</p>
-
-</div>
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-baumann_2015">
-<p>Baumann, Ryan. 2015. “Qualitative Photogrammetry Comparisons Gallery.” /etc (blog). <a href="https://ryanfb.github.io/etc/2015/07/27/qualitative_photogrammetry_comparisons_gallery.html" class="uri">https://ryanfb.github.io/etc/2015/07/27/qualitative_photogrammetry_comparisons_gallery.html</a>.</p>
-</div>
+<div id="the-two-sentence-pitch" class="section level2">
+<h2><span class="header-section-number">1.7</span> The Two-Sentence Pitch</h2>
+<p>Whether you are building a large, multi-faceted, multi-scholar project or experimenting on your own, you need to be ready to explain your work’s value. By the time you talk to a colleague about it, you should have a two sentence pitch. Being prepared to explain why your digital archaeology project is valuable is not only important for you to maintain the resources to continue your work, but helps build support for digital archaeology scholarship in the community. If there is one planning task you do, do this.</p>
+<blockquote>
+<p>Example project: <a href="http://www.heritagejam.org/new-blog/2017/10/25/old-bones-daily-shawn-graham-and-kate-ellenberger">Graham and Ellenberger’s 2017 Heritage Jam Entry</a> Two-Sentence Pitch: This is the first part of our research on how 19th century newspapers in Western Quebec and northern New York State depicted human remains and archaeology. We used language we found in the newspaper text to generate a realistic-looking fictional newspaper that is different every time you load it.</p>
+</blockquote>
+<blockquote>
+<p>Example project: <a href="http://kateellenberger.com/digital-archaeology/museum-tablet-tour-2014/">Ellenberger’s Museum Tablet Tour</a> Two-Sentence Pitch: I made an accessible digital tour for the visible storage display at the University Art Museum so that visitors could learn more about the objects, and read interpretations written by students and faculty. It was rewarding to build the first digital database the museum has used and be able to infuse some of my anthropological values into its design.</p>
+</blockquote>
+<!-- What's below is a messy outline and not reflective of the structure I'm going to write -->
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="eliding-the-digital-and-the-physical.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="d-printing-the-internet-of-things-and-maker-archaeology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-ethics-of-big-data-in-archaeology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="consulting-colleagues-and-stakeholders.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -423,7 +347,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/o-date/draft/edit/gh-pages/04.1-3d-photogrammetry.rmd",
+"link": "https://github.com/o-date/draft/edit/gh-pages/01.9-the-human-problem.Rmd",
 "text": "Edit"
 },
 "download": ["odate.pdf", "odate.epub"],
