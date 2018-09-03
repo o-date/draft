@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2018-09-02">
+<meta name="date" content="2018-09-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -51,67 +51,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -224,45 +198,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Computing with R and Python Notebooks; Reproducible code</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-4"><i class="fa fa-check"></i><b>3.1.1</b> discussion</a></li>
 <li class="chapter" data-level="3.1.2" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-12"><i class="fa fa-check"></i><b>3.1.2</b> exercises</a></li>
-<li class="chapter" data-level="3.1.3" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-5"><i class="fa fa-check"></i><b>3.1.3</b> discussion</a></li>
-<li class="chapter" data-level="3.1.4" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-13"><i class="fa fa-check"></i><b>3.1.4</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.2</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.2.1</b> The Content Management System</a></li>
-<li class="chapter" data-level="3.2.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.2.2</b> Omeka</a></li>
-<li class="chapter" data-level="3.2.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.2.3</b> Kora</a></li>
-<li class="chapter" data-level="3.2.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.2.4</b> Mukurtu</a></li>
-<li class="chapter" data-level="3.2.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-14"><i class="fa fa-check"></i><b>3.2.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html"><i class="fa fa-check"></i><b>3.2</b> Data Driven Documents</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-driven-documents.html"><a href="data-driven-documents.html#d3"><i class="fa fa-check"></i><b>3.2.1</b> D3</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html#discussion-5"><i class="fa fa-check"></i><b>3.2.2</b> discussion</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-driven-documents.html"><a href="data-driven-documents.html#exercises-13"><i class="fa fa-check"></i><b>3.2.3</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.3</b> What is Web Mapping?</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.3.1</b> Overview of Map Services</a></li>
-<li class="chapter" data-level="3.3.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.3.2</b> Making a web map with Leaflet</a></li>
-<li class="chapter" data-level="3.3.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-15"><i class="fa fa-check"></i><b>3.3.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.3.1</b> The Content Management System</a></li>
+<li class="chapter" data-level="3.3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.3.2</b> Omeka</a></li>
+<li class="chapter" data-level="3.3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.3.3</b> Kora</a></li>
+<li class="chapter" data-level="3.3.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.3.4</b> Mukurtu</a></li>
+<li class="chapter" data-level="3.3.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-14"><i class="fa fa-check"></i><b>3.3.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.4</b> Virtual Archaeology</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theory"><i class="fa fa-check"></i><b>3.4.1</b> Theory</a></li>
-<li class="chapter" data-level="3.4.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#method"><i class="fa fa-check"></i><b>3.4.2</b> Method</a></li>
-<li class="chapter" data-level="3.4.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#practice"><i class="fa fa-check"></i><b>3.4.3</b> Practice</a></li>
-<li class="chapter" data-level="3.4.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>3.4.4</b> Discussion</a></li>
-<li class="chapter" data-level="3.4.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>3.4.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.4</b> What is Web Mapping?</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.4.1</b> Overview of Map Services</a></li>
+<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a web map with Leaflet</a></li>
+<li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-15"><i class="fa fa-check"></i><b>3.4.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.4.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#resources"><i class="fa fa-check"></i><b>3.4.4</b> Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.5</b> Archaeogaming</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.5.1</b> Archaeological Reception</a></li>
-<li class="chapter" data-level="3.5.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.5.2</b> Games as Archaeology</a></li>
-<li class="chapter" data-level="3.5.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.5.3</b> Archaeogaming Projects Past and Present</a></li>
-<li class="chapter" data-level="3.5.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.5.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
-<li class="chapter" data-level="3.5.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-17"><i class="fa fa-check"></i><b>3.5.5</b> Exercises</a></li>
-<li class="chapter" data-level="3.5.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.5.6</b> Further Reading</a></li>
+<li class="chapter" data-level="3.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.5</b> Virtual Archaeology</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theory"><i class="fa fa-check"></i><b>3.5.1</b> Theory</a></li>
+<li class="chapter" data-level="3.5.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#method"><i class="fa fa-check"></i><b>3.5.2</b> Method</a></li>
+<li class="chapter" data-level="3.5.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#practice"><i class="fa fa-check"></i><b>3.5.3</b> Practice</a></li>
+<li class="chapter" data-level="3.5.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>3.5.4</b> Discussion</a></li>
+<li class="chapter" data-level="3.5.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>3.5.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.6</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>3.6.1</b> discussion</a></li>
-<li class="chapter" data-level="3.6.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>3.6.2</b> exercises</a></li>
+<li class="chapter" data-level="3.6" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.6</b> Archaeogaming</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.6.1</b> Archaeological Reception</a></li>
+<li class="chapter" data-level="3.6.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.6.2</b> Games as Archaeology</a></li>
+<li class="chapter" data-level="3.6.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.6.3</b> Archaeogaming Projects Past and Present</a></li>
+<li class="chapter" data-level="3.6.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.6.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
+<li class="chapter" data-level="3.6.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-17"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.6.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.6.6</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.7</b> Computational Creativity</a><ul>
-<li class="chapter" data-level="3.7.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.7.1</b> Twitterbots with Tracery</a></li>
-<li class="chapter" data-level="3.7.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.7.2</b> Chatbots</a></li>
-<li class="chapter" data-level="3.7.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.7.3</b> Sonification</a></li>
-<li class="chapter" data-level="3.7.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.7.4</b> Worldbuilding</a></li>
+<li class="chapter" data-level="3.7" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.7</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>3.7.1</b> discussion</a></li>
+<li class="chapter" data-level="3.7.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>3.7.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.8</b> Computational Creativity</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.8.1</b> Twitterbots with Tracery</a></li>
+<li class="chapter" data-level="3.8.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.8.2</b> Chatbots</a></li>
+<li class="chapter" data-level="3.8.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.8.3</b> Sonification</a></li>
+<li class="chapter" data-level="3.8.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.8.4</b> Worldbuilding</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="eliding-the-digital-and-the-physical.html"><a href="eliding-the-digital-and-the-physical.html"><i class="fa fa-check"></i><b>4</b> Eliding the Digital and the Physical</a><ul>
@@ -355,7 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Box, George EP, and Norman R Draper. 1987. <em>Empirical Model-Building and Response Surfaces</em>. John Wiley; Sons.</p>
 </div>
 <div>
-<p>Breitenecker, Felix, Martin Bicher, and Gabriel Wurzer. 2015. “Agent-Based Simulation in Archaeology: A Characterization.” In <em>Agent-Based Modeling and Simulation in Archaeology</em>, edited by Gabriel Wurzer, Kerstin Kowarik, and Hans Reschreiter, 53–76. Springer, Cham. <a href="https://doi.org/10.1007/978-3-319-00008-4_3" class="uri">https://doi.org/10.1007/978-3-319-00008-4_3</a>.</p>
+<p>Breitenecker, Felix, Martin Bicher, and Gabriel Wurzer. 2015. “Agent-Based Simulation in Archaeology: A Characterization.” In <em>Agent-Based Modeling and Simulation in Archaeology</em>, edited by Gabriel Wurzer, Kerstin Kowarik, and Hans Reschreiter, 53–76. Springer, Cham. doi:<a href="https://doi.org/10.1007/978-3-319-00008-4_3">10.1007/978-3-319-00008-4_3</a>.</p>
 </div>
 <div>
 <p>Burtenshaw, Paul. 2017. “Economics in Public Archaeology.” In <em>Key Concepts in Public Archaeology</em>, edited by Gabriel Moshenska, 31–42. UCL Press. <a href="http://discovery.ucl.ac.uk/1574530/1/Key-Concepts-in-Public-Archaeology.pdf" class="uri">http://discovery.ucl.ac.uk/1574530/1/Key-Concepts-in-Public-Archaeology.pdf</a>.</p>
@@ -364,7 +342,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Caraher, William. 2012. “Archaeological Glitch Art.” <em>The Archaeology of the Mediterranean World</em>. <a href="https://mediterraneanworld.wordpress.com/2012/11/21/archaeological-glitch-art/" class="uri">https://mediterraneanworld.wordpress.com/2012/11/21/archaeological-glitch-art/</a>.</p>
 </div>
 <div>
-<p>Cegielski, Wendy H., and J. Daniel Rogers. 2016. “Rethinking the role of Agent-Based Modeling in archaeology.” <em>Journal of Anthropological Archaeology</em> 41 (March). Academic Press: 283–98. <a href="https://doi.org/10.1016/J.JAA.2016.01.009" class="uri">https://doi.org/10.1016/J.JAA.2016.01.009</a>.</p>
+<p>Cegielski, Wendy H., and J. Daniel Rogers. 2016. “Rethinking the role of Agent-Based Modeling in archaeology.” <em>Journal of Anthropological Archaeology</em> 41 (March). Academic Press: 283–98. doi:<a href="https://doi.org/10.1016/J.JAA.2016.01.009">10.1016/J.JAA.2016.01.009</a>.</p>
 </div>
 <div>
 <p>“China Has Turned Xinjiang into a Police State Like No Other.” 2018. <a href="https://www.economist.com/briefing/2018/05/31/china-has-turned-xinjiang-into-a-police-state-like-no-other" class="uri">https://www.economist.com/briefing/2018/05/31/china-has-turned-xinjiang-into-a-police-state-like-no-other</a>.</p>
@@ -376,7 +354,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Cook, Katherine, and Mary E. Compton. 2018. “Canadian Digital Arcaheology: On Boundaries and Futures.” <em>Canadian Digital Arcaheology: On Boundaries and Futures</em> 42: 38–45.</p>
 </div>
 <div>
-<p>Costopoulos, Andre. 2016. “Digital Archeology Is Here (and Has Been for a While).” <em>Frontiers in Digital Humanities</em> 3: 4. <a href="https://doi.org/10.3389/fdigh.2016.00004" class="uri">https://doi.org/10.3389/fdigh.2016.00004</a>.</p>
+<p>Costopoulos, Andre. 2016. “Digital Archeology Is Here (and Has Been for a While).” <em>Frontiers in Digital Humanities</em> 3: 4. doi:<a href="https://doi.org/10.3389/fdigh.2016.00004">10.3389/fdigh.2016.00004</a>.</p>
 </div>
 <div>
 <p>Daniel Bégin, S Roche, Rodolphe Devillers. 2013. “Assesing Volenteered Geographic Information (Vgi) Quality Based on Contributors’ Mapping Behaviours.” <em>International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>. <a href="https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XL-2-W1/149/2013/isprsarchives-XL-2-W1-149-2013.pdf" class="uri">https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XL-2-W1/149/2013/isprsarchives-XL-2-W1-149-2013.pdf</a>.</p>
@@ -397,7 +375,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Epstein, Joshua M. 2008. “Why Model?” <em>Journal of Artificial Societies and Social Simulation</em> 11 (4). JASSS: 12. <a href="http://jasss.soc.surrey.ac.uk/11/4/12.html" class="uri">http://jasss.soc.surrey.ac.uk/11/4/12.html</a>.</p>
 </div>
 <div>
-<p>Ethan Watrall. n.d. “Archaeology, the Digital Humanities, and the &quot;Big Tent&quot;.” In <em>Debates in the Digital Humanities</em>, 2016th ed. Accessed February 23, 2017. <a href="http://dhdebates.gc.cuny.edu/debates/text/79" class="uri">http://dhdebates.gc.cuny.edu/debates/text/79</a>.</p>
+<p>Ethan Watrall. 2017. “Archaeology, the Digital Humanities, and the ‘Big Tent’.” In <em>Debates in the Digital Humanities</em>, 2016th ed. Accessed February 23. <a href="http://dhdebates.gc.cuny.edu/debates/text/79" class="uri">http://dhdebates.gc.cuny.edu/debates/text/79</a>.</p>
 </div>
 <div>
 <p>Evans, Thomas L., Patrick T. Daly, and MyiLibrary, eds. 2006. <em>Digital Archaeology: Bridging Method and Theory</em>. London ; New York: Routledge. <a href="http://proxy.library.carleton.ca/login?url=http://www.myilibrary.com?id=29182" class="uri">http://proxy.library.carleton.ca/login?url=http://www.myilibrary.com?id=29182</a>.</p>
@@ -430,7 +408,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Hensinger, Elena, Ilias Flaounas, and Nello Cristianini. 2013. “Modelling and Explaining Online News Preferences.” In <em>Pattern Recognition - Applications and Methods</em>, edited by Pedro Latorre Carmona, J. Salvador Sánchez, and Ana L.N. Fred, 65–77. Berlin, Heidelberg: Springer Berlin Heidelberg.</p>
 </div>
 <div>
-<p>Huffer, Damien, and Shawn Graham. 2017. “The Insta-Dead: The Rhetoric of the Human Remains Trade on Instagram.” <em>Internet Archaeology</em>. <a href="https://doi.org/https://doi.org/10.11141/ia.45.5" class="uri">https://doi.org/https://doi.org/10.11141/ia.45.5</a>.</p>
+<p>Huffer, Damien, and Shawn Graham. 2017. “The Insta-Dead: The Rhetoric of the Human Remains Trade on Instagram.” <em>Internet Archaeology</em>. doi:<a href="https://doi.org/https://doi.org/10.11141/ia.45.5">https://doi.org/10.11141/ia.45.5</a>.</p>
 </div>
 <div>
 <p>———. 2018. “Fleshing Out the Bones: Studying the Human Remains Trade with Tensorflow and Inception.” <em>Journal of Computer Applications in Archaeology</em> 1 (1). Ubiquity Press, Ltd.: 55–63.</p>
@@ -448,10 +426,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Lucas, Gavin. 2012. <em>Understanding the Archaeological Record</em>. Cambridge University Press.</p>
 </div>
 <div>
+<p>M. van Exel, S. Fruijtier, E. Dias. 2010. “The Impact of Crowdsourcing on Spatial Data Quality Indicators.” In <em>Proceedings of Giscience 2011, Zurich, Switzerland, 14–17 September 2010</em>. <a href="https://www.researchgate.net/publication/267398729_The_impact_of_crowdsourcing_on_spatial_data_quality_indicators" class="uri">https://www.researchgate.net/publication/267398729_The_impact_of_crowdsourcing_on_spatial_data_quality_indicators</a>.</p>
+</div>
+<div>
 <p>Madrigal, Alexis. 2018. “Wikipedia, the Last Bastion of Shared Reality.” <a href="https://www.theatlantic.com/technology/archive/2018/08/jeongpedia/566897/" class="uri">https://www.theatlantic.com/technology/archive/2018/08/jeongpedia/566897/</a>.</p>
 </div>
 <div>
-<p>Maldonado, Adrián. 2016. “The Serialized Past: Archaeology News Online.” <em>Advances in Archaeological Practice</em> 4 (4). Cambridge University Press: 556–61. <a href="https://doi.org/10.7183/2326-3768.4.4.556" class="uri">https://doi.org/10.7183/2326-3768.4.4.556</a>.</p>
+<p>Maldonado, Adrián. 2016. “The Serialized Past: Archaeology News Online.” <em>Advances in Archaeological Practice</em> 4 (4). Cambridge University Press: 556–61. doi:<a href="https://doi.org/10.7183/2326-3768.4.4.556">10.7183/2326-3768.4.4.556</a>.</p>
 </div>
 <div>
 <p>Marwick, Ben. 2016. “Computational Reproducibility in Archaeological Research: Basic Principles and a Case Study of Their Implementation.” <em>Journal of Archaeological Method and Theory</em>, 1–27. <a href="http://link.springer.com/article/10.1007/s10816-015-9272-9" class="uri">http://link.springer.com/article/10.1007/s10816-015-9272-9</a>.</p>
@@ -460,7 +441,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Meyers, Emery, and Andrew Reinhard. 2017. “Trading Shovels for Controllers: A Brief Exploration of Archaeology in Video Games.” <em>Public Archaeology</em> 14 (2): 137–49.</p>
 </div>
 <div>
-<p>Mickel, Allison. 2016. “Tracing Teams, Texts, and Topics: Applying Social Network Analysis to Understand Archaeological Knowledge Production at Çatalhöyük.” <em>Journal of Archaeological Method and Theory</em> 23 (4): 1095–1126. <a href="https://doi.org/10.1007/s10816-015-9261-z" class="uri">https://doi.org/10.1007/s10816-015-9261-z</a>.</p>
+<p>Mickel, Allison. 2016. “Tracing Teams, Texts, and Topics: Applying Social Network Analysis to Understand Archaeological Knowledge Production at Çatalhöyük.” <em>Journal of Archaeological Method and Theory</em> 23 (4): 1095–1126. doi:<a href="https://doi.org/10.1007/s10816-015-9261-z">10.1007/s10816-015-9261-z</a>.</p>
 </div>
 <div>
 <p>Montello, Daniel R., Sara Irina Fabrikant, Marco Ruocco, and Richard S. Middleton. 2003. “Testing the First Law of Cognitive Geography on Point-Display Spatializations.” In <em>International Conference on Spatial Information Theory</em>, 316–31. Springer. <a href="http://link.springer.com/chapter/10.1007/978-3-540-39923-0_21" class="uri">http://link.springer.com/chapter/10.1007/978-3-540-39923-0_21</a>.</p>
@@ -473,9 +454,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div>
 <p>Mullen, Lincoln. 2017. “A Confirmation of Andrew Goldstone on ‘Teaching Quantitative Methods’.” <em>The Backward Glance</em>. <a href="http://lincolnmullen.com/blog/a-confirmation-of-andrew-goldstone-on-teaching-quantitative-methods/" class="uri">http://lincolnmullen.com/blog/a-confirmation-of-andrew-goldstone-on-teaching-quantitative-methods/</a>.</p>
-</div>
-<div>
-<p>M. van Exel, S. Fruijtier, E. Dias. 2010. “The Impact of Crowdsourcing on Spatial Data Quality Indicators.” In <em>Proceedings of Giscience 2011, Zurich, Switzerland, 14–17 September 2010</em>. <a href="https://www.researchgate.net/publication/267398729_The_impact_of_crowdsourcing_on_spatial_data_quality_indicators" class="uri">https://www.researchgate.net/publication/267398729_The_impact_of_crowdsourcing_on_spatial_data_quality_indicators</a>.</p>
 </div>
 <div>
 <p>Neil Brodie, Colin Renfrew, Jennifer Doole, ed. 2001. <em>Trade in Illicit Antiquities: The Destruction of the World’s Archaeological Heritage</em>. Cambridge: McDonald Institute for Archaeological Research.</p>
@@ -502,7 +480,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Romanowska, Iza. 2015. “So You Think You Can Model? A Guide to Building and Evaluating Archaeological Simulation Models of Dispersals.” <em>Human Biology Open Access Pre-Prints</em> 79. <a href="http://digitalcommons.wayne.edu/humbiol{\_}preprints/79" class="uri">http://digitalcommons.wayne.edu/humbiol{\_}preprints/79</a>.</p>
 </div>
 <div>
-<p>Samuels, Lisa, and Jerome J. McGann. 1999. “Deformance and Interpretation.” <em>New Literary History</em> 30 (1): 25–56. <a href="https://doi.org/10.1353/nlh.1999.0010" class="uri">https://doi.org/10.1353/nlh.1999.0010</a>.</p>
+<p>Samuels, Lisa, and Jerome J. McGann. 1999. “Deformance and Interpretation.” <em>New Literary History</em> 30 (1): 25–56. doi:<a href="https://doi.org/10.1353/nlh.1999.0010">10.1353/nlh.1999.0010</a>.</p>
 </div>
 <div>
 <p>Shawn Graham. 2014. “A Digital Archaeology of Digital Archaeology: Work in Progress.” <a href="https://electricarchaeology.ca/2014/11/06/a-digital-archaeology-of-digital-archaeology-work-in-progress/" class="uri">https://electricarchaeology.ca/2014/11/06/a-digital-archaeology-of-digital-archaeology-work-in-progress/</a>.</p>
@@ -511,7 +489,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>tjowens. 2012. “Discovery and Justification Are Different: Notes on Science-Ing the Humanities.” <em>Trevor Owens</em>. <a href="http://www.trevorowens.org/2012/11/discovery-and-justification-are-different-notes-on-sciencing-the-humanities/" class="uri">http://www.trevorowens.org/2012/11/discovery-and-justification-are-different-notes-on-sciencing-the-humanities/</a>.</p>
 </div>
 <div>
-<p>Wang, Haiyan, Zhongshi He, Yongwen Huang, Dingding Chen, and Zexun Zhou. 2017. “Bodhisattva Head Images Modeling Style Recognition of Dazu Rock Carvings Based on Deep Convolutional Network.” <em>Journal of Cultural Heritage</em> 27: 60–71. <a href="https://doi.org/https://doi.org/10.1016/j.culher.2017.03.006" class="uri">https://doi.org/https://doi.org/10.1016/j.culher.2017.03.006</a>.</p>
+<p>Wang, Haiyan, Zhongshi He, Yongwen Huang, Dingding Chen, and Zexun Zhou. 2017. “Bodhisattva Head Images Modeling Style Recognition of Dazu Rock Carvings Based on Deep Convolutional Network.” <em>Journal of Cultural Heritage</em> 27: 60–71. doi:<a href="https://doi.org/https://doi.org/10.1016/j.culher.2017.03.006">https://doi.org/10.1016/j.culher.2017.03.006</a>.</p>
 </div>
 <div>
 <p>Winfield, Nick. n.d. “Amazon Pushes Facial Recognition to Police. Critics See Surveillance Risk.” <a href="https://www.nytimes.com/2018/05/22/technology/amazon-facial-recognition.html" class="uri">https://www.nytimes.com/2018/05/22/technology/amazon-facial-recognition.html</a>.</p>
@@ -557,7 +535,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/99-references.Rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf"],
+"download": ["odate.pdf", "odate.epub"],
 "toc": {
 "collapse": "section",
 "number_sections": null

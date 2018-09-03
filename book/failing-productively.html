@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2018-09-02">
+<meta name="date" content="2018-09-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -51,67 +51,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -224,45 +198,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Computing with R and Python Notebooks; Reproducible code</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-4"><i class="fa fa-check"></i><b>3.1.1</b> discussion</a></li>
 <li class="chapter" data-level="3.1.2" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-12"><i class="fa fa-check"></i><b>3.1.2</b> exercises</a></li>
-<li class="chapter" data-level="3.1.3" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-5"><i class="fa fa-check"></i><b>3.1.3</b> discussion</a></li>
-<li class="chapter" data-level="3.1.4" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-13"><i class="fa fa-check"></i><b>3.1.4</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.2</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.2.1</b> The Content Management System</a></li>
-<li class="chapter" data-level="3.2.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.2.2</b> Omeka</a></li>
-<li class="chapter" data-level="3.2.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.2.3</b> Kora</a></li>
-<li class="chapter" data-level="3.2.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.2.4</b> Mukurtu</a></li>
-<li class="chapter" data-level="3.2.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-14"><i class="fa fa-check"></i><b>3.2.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html"><i class="fa fa-check"></i><b>3.2</b> Data Driven Documents</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-driven-documents.html"><a href="data-driven-documents.html#d3"><i class="fa fa-check"></i><b>3.2.1</b> D3</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html#discussion-5"><i class="fa fa-check"></i><b>3.2.2</b> discussion</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-driven-documents.html"><a href="data-driven-documents.html#exercises-13"><i class="fa fa-check"></i><b>3.2.3</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.3</b> What is Web Mapping?</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.3.1</b> Overview of Map Services</a></li>
-<li class="chapter" data-level="3.3.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.3.2</b> Making a web map with Leaflet</a></li>
-<li class="chapter" data-level="3.3.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-15"><i class="fa fa-check"></i><b>3.3.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.3.1</b> The Content Management System</a></li>
+<li class="chapter" data-level="3.3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.3.2</b> Omeka</a></li>
+<li class="chapter" data-level="3.3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.3.3</b> Kora</a></li>
+<li class="chapter" data-level="3.3.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.3.4</b> Mukurtu</a></li>
+<li class="chapter" data-level="3.3.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-14"><i class="fa fa-check"></i><b>3.3.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.4</b> Virtual Archaeology</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theory"><i class="fa fa-check"></i><b>3.4.1</b> Theory</a></li>
-<li class="chapter" data-level="3.4.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#method"><i class="fa fa-check"></i><b>3.4.2</b> Method</a></li>
-<li class="chapter" data-level="3.4.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#practice"><i class="fa fa-check"></i><b>3.4.3</b> Practice</a></li>
-<li class="chapter" data-level="3.4.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>3.4.4</b> Discussion</a></li>
-<li class="chapter" data-level="3.4.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>3.4.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.4</b> What is Web Mapping?</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.4.1</b> Overview of Map Services</a></li>
+<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a web map with Leaflet</a></li>
+<li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-15"><i class="fa fa-check"></i><b>3.4.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.4.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#resources"><i class="fa fa-check"></i><b>3.4.4</b> Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.5</b> Archaeogaming</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.5.1</b> Archaeological Reception</a></li>
-<li class="chapter" data-level="3.5.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.5.2</b> Games as Archaeology</a></li>
-<li class="chapter" data-level="3.5.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.5.3</b> Archaeogaming Projects Past and Present</a></li>
-<li class="chapter" data-level="3.5.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.5.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
-<li class="chapter" data-level="3.5.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-17"><i class="fa fa-check"></i><b>3.5.5</b> Exercises</a></li>
-<li class="chapter" data-level="3.5.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.5.6</b> Further Reading</a></li>
+<li class="chapter" data-level="3.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.5</b> Virtual Archaeology</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theory"><i class="fa fa-check"></i><b>3.5.1</b> Theory</a></li>
+<li class="chapter" data-level="3.5.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#method"><i class="fa fa-check"></i><b>3.5.2</b> Method</a></li>
+<li class="chapter" data-level="3.5.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#practice"><i class="fa fa-check"></i><b>3.5.3</b> Practice</a></li>
+<li class="chapter" data-level="3.5.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>3.5.4</b> Discussion</a></li>
+<li class="chapter" data-level="3.5.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>3.5.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.6</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>3.6.1</b> discussion</a></li>
-<li class="chapter" data-level="3.6.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>3.6.2</b> exercises</a></li>
+<li class="chapter" data-level="3.6" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.6</b> Archaeogaming</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.6.1</b> Archaeological Reception</a></li>
+<li class="chapter" data-level="3.6.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.6.2</b> Games as Archaeology</a></li>
+<li class="chapter" data-level="3.6.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.6.3</b> Archaeogaming Projects Past and Present</a></li>
+<li class="chapter" data-level="3.6.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.6.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
+<li class="chapter" data-level="3.6.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-17"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.6.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.6.6</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.7</b> Computational Creativity</a><ul>
-<li class="chapter" data-level="3.7.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.7.1</b> Twitterbots with Tracery</a></li>
-<li class="chapter" data-level="3.7.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.7.2</b> Chatbots</a></li>
-<li class="chapter" data-level="3.7.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.7.3</b> Sonification</a></li>
-<li class="chapter" data-level="3.7.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.7.4</b> Worldbuilding</a></li>
+<li class="chapter" data-level="3.7" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.7</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>3.7.1</b> discussion</a></li>
+<li class="chapter" data-level="3.7.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>3.7.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.8</b> Computational Creativity</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.8.1</b> Twitterbots with Tracery</a></li>
+<li class="chapter" data-level="3.8.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.8.2</b> Chatbots</a></li>
+<li class="chapter" data-level="3.8.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.8.3</b> Sonification</a></li>
+<li class="chapter" data-level="3.8.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.8.4</b> Worldbuilding</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="eliding-the-digital-and-the-physical.html"><a href="eliding-the-digital-and-the-physical.html"><i class="fa fa-check"></i><b>4</b> Eliding the Digital and the Physical</a><ul>
@@ -324,10 +302,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.5</span> Failing Productively</h2>
 <p>We have found that students are very nervous about doing digital work because, ‘what if it breaks?’ and ‘what if I can’t get it to work?’ This is perhaps a result of high-stakes testing and the ways we as educators have inculcated all-or-nothing grading in our courses. There is no room for experimentation, no room for trying things out when the final essay is worth 50% of the course grade, for instance. Playing it safe is a valid response in such an environment. A better approach, from a pedagogical point of view, is to encourage students to explore and try things out, with the grading being focused on documenting the <em>process</em> rather than on the final outcome. We will point the reader to Daniel Paul O’Donnel’s concept of the <a href="http://people.uleth.ca/~daniel.odonnell/Teaching/the-unessay">unessay; more details behind the link</a>.</p>
 <p>Our emphasis on open notebooks has an ulterior motive, and that is to surface the many ways in which digital work sometimes fails. We want to introduce to you the idea of ‘failing productively’ because there is such a thing as an unproductive failure. There are ways of failing that do not do us much good, and we need - especially with digital work - to consider what ‘fail’ actually can mean. In the technology world, there are various slogans surrounding the idea of ‘fail’ - fail fast; move fast and break things; fail better; for instance.</p>
-<p>When we talk about ‘failing productively’ or failing better, it is easy for critics of digital archaeology (or the digital humanities; see Allington et al 2016 but contra: Greenspan 2016) to connect digital work to the worst excesses of the tech sector. But again, this is to misunderstand what ‘fail’ should mean. The understanding of many tech startup folks that valorizing failure as a license to burn through funding has caused a lot of harm. The tech sector failed to understand the humanistic implication of the phrase, and instead took it literally to mean ‘a lack of success is itself the goal’.
-Perhaps a better understanding of what ‘fail’ should mean is as something akin to what Nassim Taleb called ‘antifragility’. The fragile thing breaks under stress and randomness; the resilient thing stays the same; and the anti-fragile thing actually gets stronger as it is exposed to randomness. Kids’ bones for instance need to be exposed to shocks in order to get stronger. Academia’s systems are ‘fragile’ in that they do not tolerate fail; they are to a degree resilient, but they are not ‘antifragile’ in Taleb’s sense. The idea that ‘fail’ can break that which is ‘fragile’ is part of the issue here. So silicon valley really means ‘fail’ in the sense of ‘antifragile’ but they frequently forget that; academia sees ‘fail’ as the breaking of something fragile; and so the two are at loggerheads. Indeed, the rhetorical moves of academe often frame weak results - fails - as actual successes, thus making the scholarship fragile (hence the fierceness of academic disputes when results are challenged, sometimes). To make scholarship anti-fragile - to extract the full value of a fail and make it be productive, we need remember only one thing:</p>
+<p>When we talk about ‘failing productively’ or failing better, it is easy for critics of digital archaeology (or the digital humanities; see Allington et al 2016 but contra: Greenspan 2016) to connect digital work to the worst excesses of the tech sector. But again, this is to misunderstand what ‘fail’ should mean. The understanding of many tech startup folks that valorizing failure as a license to burn through funding has caused a lot of harm. The tech sector failed to understand the humanistic implication of the phrase, and instead took it literally to mean ‘a lack of success is itself the goal’. Perhaps a better understanding of what ‘fail’ should mean is as something akin to what Nassim Taleb called ‘antifragility’. The fragile thing breaks under stress and randomness; the resilient thing stays the same; and the anti-fragile thing actually gets stronger as it is exposed to randomness. Kids’ bones for instance need to be exposed to shocks in order to get stronger. Academia’s systems are ‘fragile’ in that they do not tolerate fail; they are to a degree resilient, but they are not ‘antifragile’ in Taleb’s sense. The idea that ‘fail’ can break that which is ‘fragile’ is part of the issue here. So silicon valley really means ‘fail’ in the sense of ‘antifragile’ but they frequently forget that; academia sees ‘fail’ as the breaking of something fragile; and so the two are at loggerheads. Indeed, the rhetorical moves of academe often frame weak results - fails - as actual successes, thus making the scholarship fragile (hence the fierceness of academic disputes when results are challenged, sometimes). To make scholarship anti-fragile - to extract the full value of a fail and make it be productive, we need remember only one thing:</p>
 <p><strong>A failure shared is not a failure.</strong></p>
-<p>Not every experiment results in success; indeed, the failures are richer experiences because as academics we are loathe to say when something did not work – but how else will anybody know that a particular method, or approach, is flawed? If we try something, it does not work, and we then critically analyze why that should be, we have in fact entered a circle of positive feedback. This perspective is informed by our research into game based learning. A good game keeps the challenges just ahead of the player’s (student’s) ability, to create a state of ‘flow’. Critical failure is part of this: too hard, and the player quits; too easy, and the player drops the controller in disgust. The ‘fails’ that happen in a state of flow enable the player to learn how to overcome them. Perhaps if we can design assessment to tap into this state of flow, then we can create the conditions for continual learning and growth (see for instance Kee, Graham, et al. 2009). As in our teaching, so too in our research. Presner writes,</p>
+<p>Not every experiment results in success; indeed, the failures are richer experiences because as academics we are loathe to say when something did not work – but how else will anybody know that a particular method, or approach, is flawed? If we try something, it does not work, and we then critically analyze why that should be, we have in fact entered a circle of positive feedback. This perspective is informed by our research into game based learning. A good game keeps the challenges just ahead of the player’s (student’s) ability, to create a state of ‘flow’. Critical failure is part of this: too hard, and the player quits; too easy, and the player drops the controller in disgust. The ‘fails’ that happen in a state of flow enable the player to learn how to overcome them. Perhaps if we can design assessment to tap into this state of flow, then we can create the conditions for continual learning and growth (see for instance Kee, Graham, et al. 2009). As in our teaching, so too in our research. Presner writes,</p>
 <blockquote>
 <p>Digital projects in the Humanities, Social Sciences, and Arts share with experimental practices in the Sciences a willingness to be open about iteration and negative results. As such, experimentation and trial-and-error are inherent parts of digital research and must be recognized to carry risk. The processes of experimentation can be documented and prove to be essential in the long-term development process of an idea or project. White papers, sets of best practices, new design environments, and publications can result from such projects and these should be considered in the review process. Experimentation and risk-taking in scholarship represent the best of what the university, in all its many disciplines, has to offer society. To treat scholarship that takes on risk and the challenge of experimentation as an activity of secondary (or no) value for promotion and advancement, can only serve to reduce innovation, reward mediocrity, and retard the development of research. PRESSNER 2012 cite</p>
 </blockquote>
@@ -409,7 +386,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/01.5-failingproductively.Rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf"],
+"download": ["odate.pdf", "odate.epub"],
 "toc": {
 "collapse": "section",
 "number_sections": null

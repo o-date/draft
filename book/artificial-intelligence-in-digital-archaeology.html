@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, &amp; Beth Compton">
 
 
-<meta name="date" content="2018-09-02">
+<meta name="date" content="2018-09-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -51,67 +51,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -224,45 +198,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Computing with R and Python Notebooks; Reproducible code</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-4"><i class="fa fa-check"></i><b>3.1.1</b> discussion</a></li>
 <li class="chapter" data-level="3.1.2" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-12"><i class="fa fa-check"></i><b>3.1.2</b> exercises</a></li>
-<li class="chapter" data-level="3.1.3" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-5"><i class="fa fa-check"></i><b>3.1.3</b> discussion</a></li>
-<li class="chapter" data-level="3.1.4" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-13"><i class="fa fa-check"></i><b>3.1.4</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.2</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.2.1</b> The Content Management System</a></li>
-<li class="chapter" data-level="3.2.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.2.2</b> Omeka</a></li>
-<li class="chapter" data-level="3.2.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.2.3</b> Kora</a></li>
-<li class="chapter" data-level="3.2.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.2.4</b> Mukurtu</a></li>
-<li class="chapter" data-level="3.2.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-14"><i class="fa fa-check"></i><b>3.2.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html"><i class="fa fa-check"></i><b>3.2</b> Data Driven Documents</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-driven-documents.html"><a href="data-driven-documents.html#d3"><i class="fa fa-check"></i><b>3.2.1</b> D3</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html#discussion-5"><i class="fa fa-check"></i><b>3.2.2</b> discussion</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-driven-documents.html"><a href="data-driven-documents.html#exercises-13"><i class="fa fa-check"></i><b>3.2.3</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.3</b> What is Web Mapping?</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.3.1</b> Overview of Map Services</a></li>
-<li class="chapter" data-level="3.3.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.3.2</b> Making a web map with Leaflet</a></li>
-<li class="chapter" data-level="3.3.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-15"><i class="fa fa-check"></i><b>3.3.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.3.1</b> The Content Management System</a></li>
+<li class="chapter" data-level="3.3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.3.2</b> Omeka</a></li>
+<li class="chapter" data-level="3.3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.3.3</b> Kora</a></li>
+<li class="chapter" data-level="3.3.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.3.4</b> Mukurtu</a></li>
+<li class="chapter" data-level="3.3.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-14"><i class="fa fa-check"></i><b>3.3.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.4</b> Virtual Archaeology</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theory"><i class="fa fa-check"></i><b>3.4.1</b> Theory</a></li>
-<li class="chapter" data-level="3.4.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#method"><i class="fa fa-check"></i><b>3.4.2</b> Method</a></li>
-<li class="chapter" data-level="3.4.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#practice"><i class="fa fa-check"></i><b>3.4.3</b> Practice</a></li>
-<li class="chapter" data-level="3.4.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>3.4.4</b> Discussion</a></li>
-<li class="chapter" data-level="3.4.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>3.4.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.4</b> What is Web Mapping?</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.4.1</b> Overview of Map Services</a></li>
+<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a web map with Leaflet</a></li>
+<li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-15"><i class="fa fa-check"></i><b>3.4.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.4.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#resources"><i class="fa fa-check"></i><b>3.4.4</b> Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.5</b> Archaeogaming</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.5.1</b> Archaeological Reception</a></li>
-<li class="chapter" data-level="3.5.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.5.2</b> Games as Archaeology</a></li>
-<li class="chapter" data-level="3.5.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.5.3</b> Archaeogaming Projects Past and Present</a></li>
-<li class="chapter" data-level="3.5.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.5.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
-<li class="chapter" data-level="3.5.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-17"><i class="fa fa-check"></i><b>3.5.5</b> Exercises</a></li>
-<li class="chapter" data-level="3.5.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.5.6</b> Further Reading</a></li>
+<li class="chapter" data-level="3.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.5</b> Virtual Archaeology</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theory"><i class="fa fa-check"></i><b>3.5.1</b> Theory</a></li>
+<li class="chapter" data-level="3.5.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#method"><i class="fa fa-check"></i><b>3.5.2</b> Method</a></li>
+<li class="chapter" data-level="3.5.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#practice"><i class="fa fa-check"></i><b>3.5.3</b> Practice</a></li>
+<li class="chapter" data-level="3.5.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>3.5.4</b> Discussion</a></li>
+<li class="chapter" data-level="3.5.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>3.5.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.6</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>3.6.1</b> discussion</a></li>
-<li class="chapter" data-level="3.6.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>3.6.2</b> exercises</a></li>
+<li class="chapter" data-level="3.6" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.6</b> Archaeogaming</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.6.1</b> Archaeological Reception</a></li>
+<li class="chapter" data-level="3.6.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.6.2</b> Games as Archaeology</a></li>
+<li class="chapter" data-level="3.6.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.6.3</b> Archaeogaming Projects Past and Present</a></li>
+<li class="chapter" data-level="3.6.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.6.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
+<li class="chapter" data-level="3.6.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-17"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.6.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.6.6</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.7</b> Computational Creativity</a><ul>
-<li class="chapter" data-level="3.7.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.7.1</b> Twitterbots with Tracery</a></li>
-<li class="chapter" data-level="3.7.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.7.2</b> Chatbots</a></li>
-<li class="chapter" data-level="3.7.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.7.3</b> Sonification</a></li>
-<li class="chapter" data-level="3.7.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.7.4</b> Worldbuilding</a></li>
+<li class="chapter" data-level="3.7" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.7</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>3.7.1</b> discussion</a></li>
+<li class="chapter" data-level="3.7.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>3.7.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.8</b> Computational Creativity</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.8.1</b> Twitterbots with Tracery</a></li>
+<li class="chapter" data-level="3.8.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.8.2</b> Chatbots</a></li>
+<li class="chapter" data-level="3.8.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.8.3</b> Sonification</a></li>
+<li class="chapter" data-level="3.8.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.8.4</b> Worldbuilding</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="eliding-the-digital-and-the-physical.html"><a href="eliding-the-digital-and-the-physical.html"><i class="fa fa-check"></i><b>4</b> Eliding the Digital and the Physical</a><ul>
@@ -362,41 +340,17 @@ George Box, 1987<br />
 <p>Formalization often demands the use of formal logic and to some extent, quantification. Seen from the perspective of the human natural language, mathematics and logic contain lots of repetitions, fixed vocabulary, and no nuances. Nevertheless, computational systems function strictly with this kind of language, and they are both empowered and limited by it. A formal definition is a disclaimer saying: <em>“This is what X means in this model, no more, no less. You can now criticize it at will.”</em> Whitout the formal definition, we would probably spend a chapter reviewing everything we read and thought about “nuclear patriarchal family” and still would not be “at the same page” with all our readers. The terms of this definition are assumptions of the model. At any point, new evidence or insight can suggest us that an assumption is unjustified or unnecessary, and we may change it or remove it from the model. It is in the elaboration and exploration of the unintended consequences of these rigorous definitions that the power of simulation emerges.</p>
 <p><span class="citation">Epstein (<a href="#ref-Epstein2008">2008</a>)</span> perhaps put it best:</p>
 <blockquote>
-<p>The first question that arises frequently—sometimes innocently and sometimes not—is simply, “Why model?” Imagining a rhetorical (non-innocent) inquisitor, my favorite retort is, “You are a modeler.” Anyone who ventures a projection, or imagines how a social dynamic—an epidemic, war, or migration—would unfold is running some model.
-But typically, it is an implicit model in which the assumptions are hidden, their internal consistency is untested, their logical consequences are unknown, and their relation to data is unknown. But, when you close your eyes and imagine an epidemic spreading, or any other social dynamic, you are running some model or other. It is just an implicit model that you haven’t written down…
-This being the case, I am always amused when these same people challenge me with the question, “Can you validate your model?” The appropriate retort, of course, is, “Can you validate yours?” At least I can write mine down so that it can, in principle, be calibrated to data, if that is what you mean by “validate,” a term I assiduously avoid (good Popperian that I am).
-The choice, then, is not whether to build models; it’s whether to build explicit ones. In explicit models, assumptions are laid out in detail, so we can study exactly what they entail. On these assumptions, this sort of thing happens. When you alter the assumptions that is what happens. By writing explicit models, you let others replicate your results.</p>
+<p>The first question that arises frequently—sometimes innocently and sometimes not—is simply, “Why model?” Imagining a rhetorical (non-innocent) inquisitor, my favorite retort is, “You are a modeler.” Anyone who ventures a projection, or imagines how a social dynamic—an epidemic, war, or migration—would unfold is running some model. But typically, it is an implicit model in which the assumptions are hidden, their internal consistency is untested, their logical consequences are unknown, and their relation to data is unknown. But, when you close your eyes and imagine an epidemic spreading, or any other social dynamic, you are running some model or other. It is just an implicit model that you haven’t written down… This being the case, I am always amused when these same people challenge me with the question, “Can you validate your model?” The appropriate retort, of course, is, “Can you validate yours?” At least I can write mine down so that it can, in principle, be calibrated to data, if that is what you mean by “validate,” a term I assiduously avoid (good Popperian that I am). The choice, then, is not whether to build models; it’s whether to build explicit ones. In explicit models, assumptions are laid out in detail, so we can study exactly what they entail. On these assumptions, this sort of thing happens. When you alter the assumptions that is what happens. By writing explicit models, you let others replicate your results.</p>
 </blockquote>
 <p>Epstein goes on to note that modeling can sometimes be seen as implying prediction; for archaeology, prediction might very well be the least useful thing that a formalized model might do. Instead, as Epstein lists, there are many reasons to model:</p>
 <blockquote>
-<p>Explain (very distinct from predict)
-Guide data collection
-Illuminate core dynamics
-Suggest dynamical analogies
-Discover new questions
-Promote a scientific habit of mind
-Bound (bracket) outcomes to plausible ranges
-Illuminate core uncertainties.
-Offer crisis options in near-real time
-Demonstrate tradeoffs / suggest efficiencies
-Challenge the robustness of prevailing theory through perturbations
-Expose prevailing wisdom as incompatible with available data
-Train practitioners
-Discipline the policy dialogue
-Educate the general public
-Reveal the apparently simple (complex) to be complex (simple)</p>
+<p>Explain (very distinct from predict) Guide data collection Illuminate core dynamics Suggest dynamical analogies Discover new questions Promote a scientific habit of mind Bound (bracket) outcomes to plausible ranges Illuminate core uncertainties. Offer crisis options in near-real time Demonstrate tradeoffs / suggest efficiencies Challenge the robustness of prevailing theory through perturbations Expose prevailing wisdom as incompatible with available data Train practitioners Discipline the policy dialogue Educate the general public Reveal the apparently simple (complex) to be complex (simple)</p>
 </blockquote>
 <p>Not everything on that list may apply to archaeology, but nevertheless, the list opens up the possibility space for archaeological simulation. See for instance Vi Hart and Nicky Case’s <a href="https://ncase.me/polygons/">Parable of the Polygons</a>, which implements Schelling’s 1971 Segragation Model which showed how even minor expressions of preference could lead to segregated neighborhoods. Hart and Case’s ‘playable post’ implements the model interactively in the browser, and uses engaging graphics to communicate the dynamic to the public. An archaeological agent based model similarly deployed could be an excellent public archaeology intervention.</p>
 </div>
 <div id="how-do-we-model-with-abm" class="section level4">
 <h4><span class="header-section-number">4.4.1.2</span> How do we model with ABM?</h4>
-<p>In simple terms, building a model involves the following steps.
-- Define hypotheses, questions or simply the phenomenon of interest (identify the system)
-- Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam’s razor vs. emergence
-- Express the chosen elements and processes as computer code (implement the model)
-- Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step. The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new modeling effort (and that is actually the main usefulness of models in the long run).
-- ABM in python, Java, C#, or C++? in R? in NetLogo? (Any language can do it, really). Pros and cons, talk in terms of higher/lower level programming languages (still, they are all quite high-level).
-- remember to talk about <a href="https://www.openabm.org/" class="uri">https://www.openabm.org/</a></p>
+<p>In simple terms, building a model involves the following steps. - Define hypotheses, questions or simply the phenomenon of interest (identify the system) - Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam’s razor vs. emergence - Express the chosen elements and processes as computer code (implement the model) - Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step. The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new modeling effort (and that is actually the main usefulness of models in the long run). - ABM in python, Java, C#, or C++? in R? in NetLogo? (Any language can do it, really). Pros and cons, talk in terms of higher/lower level programming languages (still, they are all quite high-level). - remember to talk about <a href="https://www.openabm.org/" class="uri">https://www.openabm.org/</a></p>
 </div>
 <div id="abm-in-archaeology-and-social-sciences" class="section level4">
 <h4><span class="header-section-number">4.4.1.3</span> ABM in Archaeology and Social Sciences</h4>
@@ -411,8 +365,7 @@ Reveal the apparently simple (complex) to be complex (simple)</p>
 </div>
 <div id="abm-tutorial-the-pond-trade-model" class="section level4">
 <h4><span class="header-section-number">4.4.1.4</span> ABM tutorial: the Pond Trade model</h4>
-<p>brief overview
-disclaimer: MY modelling strategy is highly focused in theory-building (general, explorative), not hypothesis-testing and prediction (specific, data-driven).</p>
+<p>brief overview disclaimer: MY modelling strategy is highly focused in theory-building (general, explorative), not hypothesis-testing and prediction (specific, data-driven).</p>
 <div id="phenomena-of-interest-and-conceptual-model" class="section level5">
 <h5><span class="header-section-number">4.4.1.4.1</span> Phenomena of interest and conceptual model</h5>
 <ul>
@@ -427,8 +380,7 @@ disclaimer: MY modelling strategy is highly focused in theory-building (general,
 grViz(&quot;diagrams/boxes.dot&quot;)</code></pre>
 <ul>
 <li>Elements: “pond” or water body, settlements, ships, routes, goods.</li>
-<li>Rules:
-<ul>
+<li>Rules:</li>
 <li>coastal settlements of variable size around a pond.</li>
 <li>each settlement has a “cultural vector”.</li>
 <li>trade ships travel between the settlements.</li>
@@ -437,7 +389,6 @@ grViz(&quot;diagrams/boxes.dot&quot;)</code></pre>
 <li>settlements size depends on the economic value they receive from trade.</li>
 <li>the economic value produced in a settlement depends on its size.</li>
 <li>the number of ships per settlement depends on its size.</li>
-</ul></li>
 </ul>
 </div>
 <div id="implementation" class="section level5">
@@ -472,10 +423,10 @@ grViz(&quot;diagrams/boxes.dot&quot;)</code></pre>
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-Breitenecker2015">
-<p>Breitenecker, Felix, Martin Bicher, and Gabriel Wurzer. 2015. “Agent-Based Simulation in Archaeology: A Characterization.” In <em>Agent-Based Modeling and Simulation in Archaeology</em>, edited by Gabriel Wurzer, Kerstin Kowarik, and Hans Reschreiter, 53–76. Springer, Cham. <a href="https://doi.org/10.1007/978-3-319-00008-4_3" class="uri">https://doi.org/10.1007/978-3-319-00008-4_3</a>.</p>
+<p>Breitenecker, Felix, Martin Bicher, and Gabriel Wurzer. 2015. “Agent-Based Simulation in Archaeology: A Characterization.” In <em>Agent-Based Modeling and Simulation in Archaeology</em>, edited by Gabriel Wurzer, Kerstin Kowarik, and Hans Reschreiter, 53–76. Springer, Cham. doi:<a href="https://doi.org/10.1007/978-3-319-00008-4_3">10.1007/978-3-319-00008-4_3</a>.</p>
 </div>
 <div id="ref-Cegielski2016">
-<p>Cegielski, Wendy H., and J. Daniel Rogers. 2016. “Rethinking the role of Agent-Based Modeling in archaeology.” <em>Journal of Anthropological Archaeology</em> 41 (March). Academic Press: 283–98. <a href="https://doi.org/10.1016/J.JAA.2016.01.009" class="uri">https://doi.org/10.1016/J.JAA.2016.01.009</a>.</p>
+<p>Cegielski, Wendy H., and J. Daniel Rogers. 2016. “Rethinking the role of Agent-Based Modeling in archaeology.” <em>Journal of Anthropological Archaeology</em> 41 (March). Academic Press: 283–98. doi:<a href="https://doi.org/10.1016/J.JAA.2016.01.009">10.1016/J.JAA.2016.01.009</a>.</p>
 </div>
 <div id="ref-Romanowska2015">
 <p>Romanowska, Iza. 2015. “So You Think You Can Model? A Guide to Building and Evaluating Archaeological Simulation Models of Dispersals.” <em>Human Biology Open Access Pre-Prints</em> 79. <a href="http://digitalcommons.wayne.edu/humbiol{\_}preprints/79" class="uri">http://digitalcommons.wayne.edu/humbiol{\_}preprints/79</a>.</p>
@@ -526,7 +477,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/04.4-AI-for-archaeology.rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf"],
+"download": ["odate.pdf", "odate.epub"],
 "toc": {
 "collapse": "section",
 "number_sections": null
