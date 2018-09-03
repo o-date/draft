@@ -1,5 +1,6 @@
 # Making Data Useful
 
+<div class = rmdcaution> _This section is under development_. </div>
 
 Elsewhere in this text we’ve covered approaches to creating digital archaeology data. Section 1.1 discusses three habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “future-proof” your digital work.
 
@@ -27,9 +28,8 @@ With these frustrations in mind, the qualities of "good" data become apparent. G
 Creating good data requires planning. It is important to plan the structure of the data, expectations for its use by researchers, and arrange for its storage from the beginning of your research. A reality to confront, however, is that there will be tradeoffs.
 
 Up front, right at the beginning, when you’re working out your research questions and goals, ask yourself some questions: What do I want my data to do? How much detail do I need to collect? Do I have a plan for curating datasets I’ve created? Is there space somewhere to do so? Will I need to be selective?
-|	Data		Computational environment	Comment
 
-|Degree of reproducibility|Data|Analysis|Computational environment|Comment|
+|Degree of reproducibility...|Data...|Analysis|Computational environment|Comment                |
 |---|---|---|---|---|
 |Not reproducible|	Summary statistics of the raw data are presented.|	Brief narrative of methods is presented.|	No information is provided.|	The current status quo for scholarly journal articles.|
 |Low reproducibility|	The reader invited to contact the author for access to the data.|	Brief narrative of methods is presented, names and version numbers of software are stated.|	No information is provided.|	Frequently seen. Inviting readers to contact the author to access the raw data is no guarantee that the raw data is available.|

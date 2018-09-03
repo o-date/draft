@@ -30,16 +30,22 @@ Andrew Reinhard literally wrote the book on video game archaeology: Archaeogamin
 
 ### Lorna Richardson {-}
 
+[Lorna Richardson](https://twitter.com/lornarichardson) is Lecturer in Digital Humanities at the University of East Anglia.
+
 ### Kate Ellenberger {-}
+
+[Kate Ellenberger](http://kateellenberger.com/) has just completed her PhD at Binghamton University, State University of New York, on community based archaeologies. Her background is in public outreach, museum work, archaeological mapping and databases, and she actively consults on public and field projects. 
 
 ### Zack Batist {-}
 [Zack Batist](https://www.zackbatist.github.io) is a PhD student at the University of Toronto's Faculty of Information, where his research focuses on the ways in which archaeological practices – in their immense variety and scope – are implemented as part of a broad continuum of work that is inherently interdisciplinary and cooperative in nature. He is also interested in the critical evaluation of open data initiatives and the development of information infrastructures across and among disciplines, as well as public perceptions of archaeology and the representation of archaeology in science fiction, popular media, professional politics and public policy. He also actively tinkers with various computational tools and methods, ranging across the general domains of database management, GIS, statistical computing, network analysis, web development and server administration. Some ramblings and code can be found on [github](https://www.github.com/zackbatist) and [twitter](https://www.twitter.com/mtl_zack).
 
 ### Joel Rivard {-}
 
+Joël Rivard is the replacement GIS and Geography Librarian at the University of Ottawa. Before taking this position in the summer of 2017, Joël spent over 15 years working as the Cartographic Specialist and the GIS Technician at the Carleton University Library. He has a Master of Information Studies as well as an honours degree in Geomatics with a minor in Environmental Studies.
+
 ### Ben Marwick {-}
 
-
+[Ben Marwick](https://anthropology.washington.edu/people/ben-marwick) is an Associate Professor in the department of Anthropology at the University of Washington. He is a leading figure in computational archaeology and reproducible methods in digital archaeology. His research uses models from evolutionary ecology to analyse past human behaviour in mainland Southeast Asia and Australia. My technical specialisations in stone artefact technology and geoarchaeology provides me with wide scope in time periods and geography. My specific interests include the hominin colonisation of mainland Southeast Asia, forager technologies and ecology in Australia and mainland Southeast Asia, and transitions to agriculture in mainland Southeast Asia.
 
 ### Editorial Board {-}
 
@@ -63,6 +69,12 @@ It'll be ok.
 We take a pedagogical perspective that focuses on the learning that happens when we make things, when we experiment or otherwise play around with materials and computing, and especially, when/if things break. It's a perspective that finds value in 'failing gloriously', in trying to push ourselves beyond our comfort level. The only thing that you will need therefore to be successful in learning some of the basic issues around digital archaeology is a willingness to consider why things didn't work the way they ought to have, and a web browser. We built this textbook with its very own digital archaeology computer built right in! There's nothing you can break on your own machine, nor does your machine have to be very powerful.
 
 Our hope for this volume is that it will provide you with the ability to work out what you need to know, what you don't know, and how to creatively use the computational power of the devices available to you, to do better archaeology. Once you've outgrown this text, we strongly recommend that you visit the peer-reviewed collection of tutorials at [The Programming Historian](https://programminghistorian.org/) (which are available in English and Spanish and soon other languages). If you are more interested in the statistical side of digital archaeology, then you should consult Ben Marwick et al [How to Do Archaeological Science Using R](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/). 
+
+## Instructors: How to use this text {-}
+
+There is a logic to how this text is organized that means one _could_ use it in its entirety for developing a course around digital archaeology. It does not assume much digital fluency on the part of students, but builds towards progressively more complex topics. Exercises and further readings are suggested in each section. The text can be used in conjunction with the notebooks, or without them. Alternatively, one can pick from the various notebooks (and their integral texts) and build a course around their use. The source text files for this text are available in [this repository](https://github.com/o-date/source-markdown-files) and they may be cut-and-pasted into your own coursepacks as appropriate. 
+
+Because the source text and code are all open, one could assign students the task of improving, adding to, or altering the text to suit local circumstances. Feel free to fork (take a copy) of the entire project for your own pedagogical needs (but note that any resulting work has to be shared under similar terms). Any changes that get folded back into this source material will be reflected with authorship credentials.
 
 ## Students: How to use this text {-}
 
