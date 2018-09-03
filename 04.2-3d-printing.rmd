@@ -401,20 +401,19 @@ To create a table:
 ```
 CREATE TABLE `odate1`.`contexts` (
 `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-`Context` VARCHAR(255) NOT NULL DEFAULT '',
-`Trench` VARCHAR(255) NOT NULL DEFAULT '',
-`ContextDescription` VARCHAR(255) NOT NULL DEFAULT '',
-`Munsell` VARCHAR(255) NOT NULL DEFAULT '',
-`SedimentColour` VARCHAR(255) NOT NULL DEFAULT '',
-`NumberOfBuckets` INT(11) NOT NULL DEFAULT '',
+`Context` VARCHAR(255) DEFAULT '',
+`Trench` VARCHAR(255) DEFAULT '',
+`ContextDescription` VARCHAR(255) DEFAULT '',
+`Munsell` VARCHAR(255) DEFAULT '',
+`SedimentColour` VARCHAR(255) DEFAULT '',
+`NumberOfBuckets` INT(11) DEFAULT 0,
 PRIMARY KEY (`id`)
 );
 ```
 
 To insert data into the table:
 ```
-INSERT INTO `contexts` (id, Context, Trench, ContextDescription, Munsell, SedimentColour, NumberOfBuckets)
-VALUES (1, 0001, 001, "The first context of the season. Loamy sand, very herbaceous, characteristic of a typical surface layer.","5YR 3/3",, 3);
+INSERT INTO `odate1`.`contexts` (Context, Trench, ContextDescription, Munsell, SedimentColour, NumberOfBuckets) VALUES (0001, 001, "The first context of the season. Loamy sand, very herbaceous, characteristic of a typical surface layer.","5YR 3/3",NULL,3);
 ```
 
 to select data from the table:
@@ -424,10 +423,10 @@ SELECT `Context`, `Munsell`, `SedimentColour` FROM `contexts` WHERE `contexts`.`
 
 To update data in the table (https://www.w3schools.com/sql/sql_update.asp):
 ```
-UPDATE `contexts` SET `SedimentColour` = "Dark Brown" WHERE `Munsell` = "5YR 3/3";
-UPDATE `contexts` SET `SedimentColour` = "Brown" WHERE `Munsell` = "5YR 4/3";
-UPDATE `contexts` SET `SedimentColour` = "Brown" WHERE `Munsell` = "5YR 5/4";
-UPDATE `contexts` SET `SedimentColour` = "Reddish Yellow" WHERE `Munsell` = "5YR 7/6";
+UPDATE `odate1`.`contexts` SET `SedimentColour` = "Dark Brown" WHERE `Munsell` = "5YR 3/3";
+UPDATE `odate1`.`contexts` SET `SedimentColour` = "Brown" WHERE `Munsell` = "5YR 4/3";
+UPDATE `odate1`.`contexts` SET `SedimentColour` = "Brown" WHERE `Munsell` = "5YR 5/4";
+UPDATE `odate1`.`contexts` SET `SedimentColour` = "Reddish Yellow" WHERE `Munsell` = "5YR 7/6";
 ```
 
 To delete data from the table (https://www.w3schools.com/sql/sql_delete.asp):
@@ -438,15 +437,15 @@ DELETE FROM `contexts` WHERE `Context` = "0005";
 To make a relationship between two tables:
 ```
 CREATE TABLE `odate1`.`trenches` (
-`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-`Trench` VARCHAR(255) NOT NULL DEFAULT '',
-`Supervisor` VARCHAR(255) NOT NULL DEFAULT '',
-`Reason` VARCHAR(255) NOT NULL DEFAULT '',
-`LocalDatum` VARCHAR(255) NOT NULL DEFAULT '',
+`id` INT(11) SIGNED NOT NULL AUTO_INCREMENT,
+`Trench` VARCHAR(255) DEFAULT '',
+`Supervisor` VARCHAR(255) DEFAULT '',
+`Reason` VARCHAR(255) DEFAULT '',
+`LocalDatum` VARCHAR(255) DEFAULT '',
 PRIMARY KEY (`id`)
 );
 
-ALTER TABLE `contexts` ADD CONSTRAINT `FK_contexts_Trench` FOREIGN KEY (`Trench`) REFERENCES `contexts` (`Trench`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `odate1`.`contexts` ADD CONSTRAINT `FK_contexts_Trench` FOREIGN KEY (`Trench`) REFERENCES `odate1`.`contexts` (`Trench`) ON DELETE CASCADE ON UPDATE CASCADE;
 ```
 
 To run a join query (https://www.w3schools.com/sql/sql_join.asp):
@@ -596,31 +595,6 @@ Ensure that `Path =` the directory you want to share, such as the mount point of
 This configuration allows anyone to read, write, and execute files in a volume named share, either by logging in as a Samba user or as a guest. If you do not want to allow guest users, omit the `guest ok = yes` line.
 
 Please refer to [this resource](https://www.raspberrypi.org/magpi/samba-file-server/) for further information, as well as the [Samba documentation](https://www.samba.org/samba/docs/) in order to set up usernames and passwords. The method just described allows free-for-all access, and it should be communicated to users that they can add, delete or modify any file in the shared directory, for better or worse. You may feel inclined to schedule automated backups of your shared drive to yet another connected drive, though this may congest the network and occupy lots of disk space, depending on the size of the shared directory. You may wish to schedule such backups during off-hours, when volumes of traffic across the network are expected to be low.
-
-#### Discussion
-This kind of work may seem quite daunting at first for those lacking experience at the command line, but it takes time to build up familiarity and confidence with what you're doing. In time, working from the terminal may actually seem _preferable_ to using a graphical user interface; the fact that every action has a purpose, and that the outcomes of every command are predictable and responsive to your actions, makes this work extremely satisfying. At that point, the technology fades to the background and you are left with a series of continuous objectives that build upon each other, and that you are tasked to resolve.
-
-When working as part of a team in a fieldwork setting, the most common challenges are likely to be people-problems rather than tech issues. It is extremely important to be aware of, and to effectively communicate, the limits of what you are capable of accomplishing. Working in fieldwork-based settings is particularly challenging due to various factors.
-
-First, timelines tend to be very rushed, since an entire season of work may last anywhere between 2-8 weeks. Moreover, as a maker you will be learning as you go. It may take you dozens of attempts to make and re-make an effective system before you get it the way you want it, which would be fine under more flexible circumstances. However when working in the field, people may demand that their needs be met in very short time frames. This can be extremely frustrating, for both the maker and the user, since the maker may be pressured to make a shoddy product while the user is made to live with it.
-
-It may also be very difficult to borrow knowledge from others. In places situated off the grid, searching the internet for solutions to a nagging problem may be unfeasible. If internet access is sporadic it may be prudent to download PDF versions of software documentation or to capture screenshots of helpful comments posted on support forums during those rare occasions when it is possible to get online. You may also be one of only a handful of people, or even the only person on the project, with the kinds of skills required to complete your work, which means that asking peers for help may not be helpful.
-
-It is also somewhat common for all work that even remotely relates to a certain conception of computer-based work to be foisted upon one or two individuals who have proven capable of dealing such tasks. That will most certainly include you. Prioritize your time, and show others how to do certain tasks on their own.
-
-When making things, it is important to consider what the thing will be used for, and how it will be used.
-
-
-Tinkering and Improvising in the Field
-- ensure that people, especially higher up, understand the constraints and limitations you face
-- show people rather than tell
-- be respectful of their data and devices
-- keep notes, watch your posture, etc
-
-
-#### Takeaways
-
-#### Excercises
 
 #### Further Reading
 https://www.raspberrypi.org/documentation/linux/usage/commands.md
