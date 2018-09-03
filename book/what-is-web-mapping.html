@@ -51,41 +51,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -198,49 +224,45 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Computing with R and Python Notebooks; Reproducible code</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-4"><i class="fa fa-check"></i><b>3.1.1</b> discussion</a></li>
 <li class="chapter" data-level="3.1.2" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-12"><i class="fa fa-check"></i><b>3.1.2</b> exercises</a></li>
+<li class="chapter" data-level="3.1.3" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-5"><i class="fa fa-check"></i><b>3.1.3</b> discussion</a></li>
+<li class="chapter" data-level="3.1.4" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-13"><i class="fa fa-check"></i><b>3.1.4</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html"><i class="fa fa-check"></i><b>3.2</b> Data Driven Documents</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="data-driven-documents.html"><a href="data-driven-documents.html#d3"><i class="fa fa-check"></i><b>3.2.1</b> D3</a></li>
-<li class="chapter" data-level="3.2.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html#discussion-5"><i class="fa fa-check"></i><b>3.2.2</b> discussion</a></li>
-<li class="chapter" data-level="3.2.3" data-path="data-driven-documents.html"><a href="data-driven-documents.html#exercises-13"><i class="fa fa-check"></i><b>3.2.3</b> exercises</a></li>
+<li class="chapter" data-level="3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.2</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.2.1</b> The Content Management System</a></li>
+<li class="chapter" data-level="3.2.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.2.2</b> Omeka</a></li>
+<li class="chapter" data-level="3.2.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.2.3</b> Kora</a></li>
+<li class="chapter" data-level="3.2.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.2.4</b> Mukurtu</a></li>
+<li class="chapter" data-level="3.2.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-14"><i class="fa fa-check"></i><b>3.2.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.3.1</b> The Content Management System</a></li>
-<li class="chapter" data-level="3.3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.3.2</b> Omeka</a></li>
-<li class="chapter" data-level="3.3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.3.3</b> Kora</a></li>
-<li class="chapter" data-level="3.3.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.3.4</b> Mukurtu</a></li>
-<li class="chapter" data-level="3.3.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-14"><i class="fa fa-check"></i><b>3.3.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.3</b> What is Web Mapping?</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.3.1</b> Overview of Map Services</a></li>
+<li class="chapter" data-level="3.3.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.3.2</b> Making a web map with Leaflet</a></li>
+<li class="chapter" data-level="3.3.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-15"><i class="fa fa-check"></i><b>3.3.3</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.4</b> What is Web Mapping?</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.4.1</b> Overview of Map Services</a></li>
-<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a web map with Leaflet</a></li>
-<li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-15"><i class="fa fa-check"></i><b>3.4.3</b> Exercises</a></li>
-<li class="chapter" data-level="3.4.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#resources"><i class="fa fa-check"></i><b>3.4.4</b> Resources</a></li>
+<li class="chapter" data-level="3.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.4</b> Virtual Archaeology</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theory"><i class="fa fa-check"></i><b>3.4.1</b> Theory</a></li>
+<li class="chapter" data-level="3.4.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#method"><i class="fa fa-check"></i><b>3.4.2</b> Method</a></li>
+<li class="chapter" data-level="3.4.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#practice"><i class="fa fa-check"></i><b>3.4.3</b> Practice</a></li>
+<li class="chapter" data-level="3.4.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>3.4.4</b> Discussion</a></li>
+<li class="chapter" data-level="3.4.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>3.4.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.5</b> Virtual Archaeology</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theory"><i class="fa fa-check"></i><b>3.5.1</b> Theory</a></li>
-<li class="chapter" data-level="3.5.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#method"><i class="fa fa-check"></i><b>3.5.2</b> Method</a></li>
-<li class="chapter" data-level="3.5.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#practice"><i class="fa fa-check"></i><b>3.5.3</b> Practice</a></li>
-<li class="chapter" data-level="3.5.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>3.5.4</b> Discussion</a></li>
-<li class="chapter" data-level="3.5.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>3.5.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.5" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.5</b> Archaeogaming</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.5.1</b> Archaeological Reception</a></li>
+<li class="chapter" data-level="3.5.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.5.2</b> Games as Archaeology</a></li>
+<li class="chapter" data-level="3.5.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.5.3</b> Archaeogaming Projects Past and Present</a></li>
+<li class="chapter" data-level="3.5.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.5.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
+<li class="chapter" data-level="3.5.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-17"><i class="fa fa-check"></i><b>3.5.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.5.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.5.6</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.6</b> Archaeogaming</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.6.1</b> Archaeological Reception</a></li>
-<li class="chapter" data-level="3.6.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.6.2</b> Games as Archaeology</a></li>
-<li class="chapter" data-level="3.6.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.6.3</b> Archaeogaming Projects Past and Present</a></li>
-<li class="chapter" data-level="3.6.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.6.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
-<li class="chapter" data-level="3.6.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-17"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
-<li class="chapter" data-level="3.6.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.6.6</b> Further Reading</a></li>
+<li class="chapter" data-level="3.6" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.6</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>3.6.1</b> discussion</a></li>
+<li class="chapter" data-level="3.6.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>3.6.2</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.7</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
-<li class="chapter" data-level="3.7.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>3.7.1</b> discussion</a></li>
-<li class="chapter" data-level="3.7.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>3.7.2</b> exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="3.8" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.8</b> Computational Creativity</a><ul>
-<li class="chapter" data-level="3.8.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.8.1</b> Twitterbots with Tracery</a></li>
-<li class="chapter" data-level="3.8.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.8.2</b> Chatbots</a></li>
-<li class="chapter" data-level="3.8.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.8.3</b> Sonification</a></li>
-<li class="chapter" data-level="3.8.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.8.4</b> Worldbuilding</a></li>
+<li class="chapter" data-level="3.7" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.7</b> Computational Creativity</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.7.1</b> Twitterbots with Tracery</a></li>
+<li class="chapter" data-level="3.7.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.7.2</b> Chatbots</a></li>
+<li class="chapter" data-level="3.7.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.7.3</b> Sonification</a></li>
+<li class="chapter" data-level="3.7.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.7.4</b> Worldbuilding</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="eliding-the-digital-and-the-physical.html"><a href="eliding-the-digital-and-the-physical.html"><i class="fa fa-check"></i><b>4</b> Eliding the Digital and the Physical</a><ul>
@@ -299,25 +321,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="what-is-web-mapping" class="section level2">
-<h2><span class="header-section-number">3.4</span> What is Web Mapping?</h2>
+<h2><span class="header-section-number">3.3</span> What is Web Mapping?</h2>
 <p>A web map is a geographic visualization that is supported by computational infrastructures. This form of mapping is fundamentally <em>powered</em> by the Web <a href="http://www.axismaps.com/guide/web/what-is-a-web-map/">(Axismap, 2018)</a>. It should come as no surprise that the ubiquity of web maps correlates with the development of Web 2.0, a marked transformation in the way that that we engage with the Internet <span class="citation">(Aced <a href="#ref-Aced2013">2013</a>)</span>.</p>
 <p>As Darcy DiNucci <span class="citation">(DiNucci <a href="#ref-DiNucci1999">1999</a>)</span> remarked in 1999, content loading into a browser as ‘static screenfuls is only an embryo of the Web to come’. Web 2.0, thus is characterized by ‘interactivity’, ‘two-way communication’ often through devices that are ‘Internet-enabled’ and a greater awareness amongst developers of ‘user experience’ and ‘interface’. These interests are correlated with the diversification of screen sizes on mobile hand-held devices such as smart phones, tablets and laptops, all of which require responsiveness, appropriate scaling for size and interaction primarily through touch and swipe. Whereas the first iteration of the Web required advanced training to create a website, Web 2.0, as is often claimed, requires little or no expert knowledge to make a Web-ready ‘thing’ such as a website, a blog, or a Wiki. This is the context in which Web mapping, that is the Web-based visualization of geographic information became popularized.</p>
 <p>One can argue that web maps narrow the distance between professional map makers and non-specialist makers; yet some scholars have expressed concerns on the quality of geographic data that are now frequently and widely shared on the Web <span class="citation">(M. van Exel <a href="#ref-Exel2010">2010</a>)</span>. Collaborative online platforms such as <a href="https://www.openstreetmap.org">Open Street Map</a>, for example, have drawn attention to the social dimension of knowledge making; how accurate is information that a lay-person or particular interest community has uploaded? Can we make real-world decisions based on those data? <span class="citation">(Daniel Bégin <a href="#ref-Begin2013">2013</a>)</span> suggest that volunteered geographic information reflects ‘contributors’ motivation and individual preferences in selecting mapped features and delineating mapped areas’, a situation that can enable scholars in examining and assessing the quality of those data.</p>
-<p>For archaeologists, web maps and publishing geographic information present challenges and opportunities. Archaeologists are aware that the data they collect through field studies often contain sensitive location information. These concerns are sometimes heightened in contexts where there are tensions between archaeologists and local communities or ethnic and linguistic minorities who might be socially, politically and economically marginalized in that society. Archaeologists often express concern that publishing location information on sites of archaeological and historical interest can facilitate, if not result in, the destruction of those sites through looting. Looting and illegal trafficking of archaeological artefacts and human bones is an issue observed in many places <span class="citation">(Neil Brodie <a href="#ref-Brodie2001">2001</a>, <span class="citation">Huffer and Graham (<a href="#ref-Huffer2017">2017</a>)</span>)</span>.</p>
-<p>Recent developments in geovisual analytics that leverage the spatial dimension in data suggest that scholars can work with, and meaningfully analyze these data even where they contain sensitive location information <span class="citation">(G. Andrienko et al. <a href="#ref-Andrienko2007">2007</a>)</span>. This situation opens enormous opportunities for archaeologists to develop tools that are appropriate for meaningful analysis and publication of archaeological data. In the next section, we build upon the ethos of ‘openness’ and present an overview of map services, followed by a guide to making an interactive web map with the Leaflet library. For an example of a Leaflet web map, check out <a href="www.opencontext.org">Open Context</a>.</p>
+<p>For archaeologists, web maps and publishing geographic information present challenges and opportunities. Archaeologists are aware that the data they collect through field studies often contain sensitive location information. These concerns are sometimes heightened in contexts where there are tensions between archaeologists and local communities or ethnic and linguistic minorities who might be socially, politically and economically marginalized in that society. Archaeologists often express concern that publishing location information on sites of archaeological and historical interest can facilitate, if not result in, the destruction of those sites through looting. Looting and illegal trafficking of archaeological artefacts and human bones is an issue observed in many places <span class="citation">(Neil Brodie <a href="#ref-Brodie2001">2001</a>, <span class="citation">@Huffer2017</span>)</span>.</p>
+<p>Recent developments in geovisual analytics that leverage the spatial dimension in data suggest that scholars can work with, and meaningfully analyze these data even where they contain sensitive location information <span class="citation">(Andrienko et al. <a href="#ref-Andrienko2007">2007</a>)</span>. This situation opens enormous opportunities for archaeologists to develop tools that are appropriate for meaningful analysis and publication of archaeological data. In the next section, we build upon the ethos of ‘openness’ and present an overview of map services, followed by a guide to making an interactive web map with the Leaflet library. For an example of a Leaflet web map, check out <a href="www.opencontext.org">Open Context</a>.</p>
 <div id="overview-of-map-services" class="section level3">
-<h3><span class="header-section-number">3.4.1</span> Overview of Map Services</h3>
+<h3><span class="header-section-number">3.3.1</span> Overview of Map Services</h3>
 <p>Tiled map service and <a href="http://www.opengeospatial.org/standards/wms%22%20target=%22_blank">Web Map Service</a> are two forms of Web-based mapping. A WMS is an interface that enables us (the clients) to request specific maps i.e. visual representations of geographic information from a geospatial database. The WMS server is called via a Universal Resource Link (URL) on an Internet-enabled desktop GIS. A request typically consists of the geographic layer (e.g. theme) and geographic area of interest. The response to a request results in <em>geo-registered map images</em> that are displayed and queried within a browser. Because the map is dynamically drawn upon request, and because the server typically uses the most current information from several layers in the geospatial database, WMS maps tend to load slowly. [Toporama](<a href="http://wms.ess-ws.nrcan.gc.ca/wms/toporama_en" class="uri">http://wms.ess-ws.nrcan.gc.ca/wms/toporama_en</a> “target=”_blank) is an example of a WMS server for Canadian topographic themes. (add image for WMS architecture?)</p>
 <p>Tile map services such as [TillMill Project](<a href="http://tilemill-project.github.io/tilemill/docs/crashcourse/introduction/" class="uri">http://tilemill-project.github.io/tilemill/docs/crashcourse/introduction/</a> “target=”_blank), [OpenStreetMap](<a href="https://www.openstreetmap.org/" class="uri">https://www.openstreetmap.org/</a> “target=”_blank), [CartoDB](www.carto.com “target=”_blank), and [Stamen](<a href="http://maps.stamen.com" class="uri">http://maps.stamen.com</a> “target=”_blank) all use one or more vector layers that have been rasterized into an image. This rasterized image is divided into 256 x 256 adjacent pixel images or ‘tiles’. This is usually the base layer in a web map.</p>
 <p>Each tile is an image on the Web, which means that you can link to it. For example, the following URL points to a specific tile on the Web:</p>
 <pre><code> https://tile.openstreetmap.org/7/63/42.png</code></pre>
-<p>The three elements in the URL are: 1. <code>tile.openstreetmap.org</code>, the tile server name; 2. <code>7</code>, the zoom level or <code>z</code> value of the tile; and finally 3. <code>63/42</code>, the <code>x</code> and <code>y</code> values in the grid where the tile lives</p>
+<p>The three elements in the URL are:
+1. <code>tile.openstreetmap.org</code>, the tile server name;
+2. <code>7</code>, the zoom level or <code>z</code> value of the tile; and finally
+3. <code>63/42</code>, the <code>x</code> and <code>y</code> values in the grid where the tile lives</p>
 <p>Z values have a range between 0 and 21, where 21 returns a tile with greatest detail (and smallest sized tile).</p>
 <p>Once generated, the set of tiles are stored on disk, ready to be distributed rapidly to large numbers of simultaneous requests. Tiled maps load quickly precisely because they are pre-generated. They shift attention to map aesthetics and smooth map navigation, trading in functionality such as layer order, map scale and projection. [Alex Urquhart](<a href="http://alexurquhart.github.io/free-tiles/" class="uri">http://alexurquhart.github.io/free-tiles/</a> “target=”_blank) maintains a list of tile services. (add image for tiles?)</p>
 <p>Data layers are typically added on top of the base layer. Data layers can be points, lines and polygons. These data layers are saved as [GeoJSON](<a href="http://geojson.org/" class="uri">http://geojson.org/</a> “target=”_blank), a format designed for representing on the Web, geographic features with their non-spatial attributes.</p>
 </div>
 <div id="making-a-web-map-with-leaflet" class="section level3">
-<h3><span class="header-section-number">3.4.2</span> Making a web map with Leaflet</h3>
+<h3><span class="header-section-number">3.3.2</span> Making a web map with Leaflet</h3>
 <p>[Leaflet](<a href="http://leafletjs.com/" class="uri">http://leafletjs.com/</a> “target=”_blank) is a JavaScript library developed by [Vladimir Agafonkin](<a href="https://vimeo.com/106112939" class="uri">https://vimeo.com/106112939</a> “target=”_blank) for use with tiled maps. Launched in 2008, Leaflet has become widely used in tile web mapping because the library’s low-barrier customization and interactivity with map elements, and because of its simplified setup when compared to a WMS served map. Moreover, Leaflet’s compatibility with other Web 2.0 technologies and code-sharing platforms such as [GitHub](www.github.com “target=”_blank) has encouraged an active community of ‘makers’.</p>
 <p>In keeping with this e-book’s ethos of ‘openness’ and with a motivation to encourage low-cost and low-barrier web mapping, below is an outline to get started on our own interactive web map with Leaflet. We will need:</p>
 <ol style="list-style-type: decimal">
@@ -329,16 +354,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ol>
 </div>
 <div id="exercises-15" class="section level3">
-<h3><span class="header-section-number">3.4.3</span> Exercises</h3>
+<h3><span class="header-section-number">3.3.3</span> Exercises</h3>
 <p>Making a ‘digital thing’ can be exciting and intimidating, and yet seeing one’s creation on the Web can be gratifying. It is important to realize that much of the work to make that happen takes place on a local machine. Therefore, setting up a local environment with the tools we need is highly encouraged. We recommend installing a local web server such as [MAMP](<a href="https://www.mamp.info/en/" class="uri">https://www.mamp.info/en/</a> “target=”_blank) for Macs or [WampServer](<a href="http://www.wampserver.com/en/" class="uri">http://www.wampserver.com/en/</a> “target=”_blank) for Windows.</p>
 <p>For this exercise, we’ll use [Prepros](<a href="https://prepros.io/" class="uri">https://prepros.io/</a> “target=”_blank), a temporary preprocessor application that reloads our local browser as we make changes to our HTML file, and enables us to see what’s happening.</p>
 <div id="a-simple-leaflet-web-map" class="section level4">
-<h4><span class="header-section-number">3.4.3.1</span> A simple Leaflet web map</h4>
+<h4><span class="header-section-number">3.3.3.1</span> A simple Leaflet web map</h4>
 <ol style="list-style-type: decimal">
 <li><p>Download (web-map) and unzip to known location. Which files and folders do you see? It is helpful to see files and sub-folders within their hierarchical structure before we start editing. Bring the web-map folder into Atom. We do this by ‘Add a Project Folder’.</p></li>
-<li>Locate the file named <code>index.html</code> and open it. What do you see in the file? The first line
-<!DOCTYPE html>
-<p>tells us that this document written in <strong>html</strong>, a language for creating web pages.</p></li>
+<li><p>Locate the file named <code>index.html</code> and open it. What do you see in the file? The first line &lt;!DOCTYPE html&gt; tells us that this document written in <strong>html</strong>, a language for creating web pages.</p></li>
 </ol>
 <p>Go ahead and change the title</p>
 <pre><code>&lt;title&gt;title when you hover over tab&lt;/title&gt;</code></pre>
@@ -369,12 +392,15 @@ var map = L.map(&#39;map&#39;).setView([40.5931,-75.5265], 12);</code></pre>
     attribution: &#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;&#39;
     }).addTo(map);
 &lt;/script&gt;</code></pre>
-<p>This code tells us the following: 1. <code>https://{s}.tile.openstreetmap.org</code>, tile server we want, 2. <code>19</code>, the maximum zoom level, and 3.<code>'&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;'</code> the attribution for that tile provider</p>
+<p>This code tells us the following:
+1. <code>https://{s}.tile.openstreetmap.org</code>, tile server we want,
+2. <code>19</code>, the maximum zoom level, and
+3.<code>'&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;'</code> the attribution for that tile provider</p>
 <p>Take note of <code>.addTo(map);</code> that actually adds the layer to our web map, and the <code>&lt;/script&gt;</code> closes this particular script. To load additional layers or attribute data, we would add our code within the tags <code>&lt;script&gt;&lt;/script&gt;</code> which we outline in the next subsection.</p>
 <p>Congratulations! We have our first Leaflet map. Examine the map in the Prepros preview window.</p>
 </div>
 <div id="loading-point-data-onto-a-leaflet-map" class="section level4">
-<h4><span class="header-section-number">3.4.3.2</span> Loading point data onto a Leaflet map</h4>
+<h4><span class="header-section-number">3.3.3.2</span> Loading point data onto a Leaflet map</h4>
 <p>Now that we have a base map set up, we want to load some feature data i.e. points, lines, polygons, onto it. We have a few different ways to add feature data. They can be loaded as a Common Separated Value (CSV) file or a GeoJSON.</p>
 <p>In this exercise, we will work with a GeoJSON, a small file (point-data.geojson) with about 20 potential excavation sites. The original CSV had four fields, all of which were converted into GeoJSON using an online tool [here](<a href="http://www.convertcsv.com/csv-to-geojson.htm/" class="uri">http://www.convertcsv.com/csv-to-geojson.htm/</a> “target=”_blank).</p>
 <ol style="list-style-type: decimal">
@@ -425,10 +451,7 @@ var marker = L.marker(latlng);
 <ol start="6" style="list-style-type: decimal">
 <li>That’s it! We’ve created a web map with our own point data, and we have markers with pop-ups to click on.</li>
 </ol>
-</div>
-</div>
-<div id="resources" class="section level3">
-<h3><span class="header-section-number">3.4.4</span> Resources</h3>
+<p>###Resources</p>
 <p>Below are examples in archaeology that use Leaflet that you can try out, and that have repositories that you can fork for you own projects:</p>
 <ol style="list-style-type: decimal">
 <li>The Digital Atlas of Ancient Egypt developed at the Department of Anthropology, Michigan State University: <a href="https://msu-anthropology.github.io/daea/" class="uri">https://msu-anthropology.github.io/daea/</a></li>
@@ -443,6 +466,7 @@ var marker = L.marker(latlng);
 </ol>
 <p>Repository: <a href="https://github.com/dngupta/mina.github.io" class="uri">https://github.com/dngupta/mina.github.io</a></p>
 
+</div>
 </div>
 </div>
 <h3>References</h3>
@@ -461,9 +485,6 @@ var marker = L.marker(latlng);
 </div>
 <div id="ref-Brodie2001">
 <p>Neil Brodie, Colin Renfrew, Jennifer Doole, ed. 2001. <em>Trade in Illicit Antiquities: The Destruction of the World’s Archaeological Heritage</em>. Cambridge: McDonald Institute for Archaeological Research.</p>
-</div>
-<div id="ref-Huffer2017">
-<p>Huffer, Damien, and Shawn Graham. 2017. “The Insta-Dead: The Rhetoric of the Human Remains Trade on Instagram.” <em>Internet Archaeology</em>. doi:<a href="https://doi.org/https://doi.org/10.11141/ia.45.5">https://doi.org/10.11141/ia.45.5</a>.</p>
 </div>
 <div id="ref-Andrienko2007">
 <p>Andrienko, G., N. Andrienko, P. Jankowski, M.-J. Kraak, D. Keim, A. M. MacEachren, and S. Wrobel. 2007. “Geovisual Analytics for Spatial Decision Support. Setting the Research Agenda.” <em>International Journal of Geographical Information Science</em> 21 (8): 839–57.</p>
@@ -508,7 +529,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/03.4-webmapping-with-leaflet.rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf", "odate.epub"],
+"download": ["odate.pdf"],
 "toc": {
 "collapse": "section",
 "number_sections": null
