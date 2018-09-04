@@ -2,73 +2,63 @@
 
 <div class = rmdcaution> _This section is under development_. </div>
 
-### Theory
--blah
+In the 1980’s during the hype of futuristic movies like Tron (the original - date), War Games (date) and Lawnmower Man (date) in which virtual reality played a key role in transporting characters and audiences into an all immersive virtual space, the notion of Virtual Archaeology was born, or more specifically, coined. Virtual Archaeology saw its beginnings in what is now Computational Archaeology, or basically, the use of computer science in archaeology. As it is today, and very much represented within this textbook, computer archaeology is divided into two distinct fields; a) the use of mathematical data to analyze and predict archaeological information and b) the visualization of that data into 2D, 3D and 3D printed (re)visualizations, which are representational of the known and constructed knowledge archaeologists create when we analyzing the context, landscape and time stratification of an archaeological site. When archaeologist Paul Reilly coined the term in 1987, before the widespread introduction of personal computers, his intent was to bring to light that visualizing archaeological data beyond just graphs and charts, helped to enhance and communicate the narratives buried within the archaeological sites we excavate and the knowledge we were constructing through the analysis of those limited data sets. The key however to Reilly’s notion was that the raw, scientific, archaeological data, however scarce, still needed to be the starting point of the virtual representation.
 
-#### Making, Wayfaring, Tacking and Archaeological Cabling
--blah
+In this chapter, we will explore the theory and method of virtual archaeology and how it relates to the broader notion of Digital Archaeology.
 
-#### Materiality
--blah
+### Basic principles
 
-#### Phenomenology
--blah
+Archaeological narratives, the stories we create in order to explain the material culture we find within archaeological sites, must begin with data, no matter how small, that we derive from the archaeological landscape.
 
-### Method
--blah
+To explain our hypothesis and to give credence to our virtual (re)imagination of the archaeological material, whether it is an object, landscape or built environment, we must and can use a combination of theories and methods to support our virtualization of the archaeological past.
 
-#### The London & Seville Charters
--blah
+Virtual archaeology is just not the seen. It is felt, smelt, heard, it has texture and weight, it has a narrative. It can be accessible and restrictive depending on the wishes of the descendent caretakers or the needs of the greater public. Virtual archaeology is not virtual reality but a means in which to experience the archaeological past phenomenologically.
 
-#### Agency
--blah
+### Main Challenge
 
-#### Authority
--blah
+Throughout this volume on archaeology, the authors and the examples presented, have laid out what Digital Archaeology is. The acquisition of data from the archaeological landscape, the visualization of that data through the technology and techniques best suited for the type of data being captured and communicated, as well as the means in which Digital Archaeology is partially or fully integrated within a broader more digitally dependent archaeological process.
 
-#### Authenticity
--blah
+Virtual archaeology relies more heavily on the construction of new knowledge through the making of 2D images, 3D models or 3D printed objects. What does that mean? As archaeologists, we interpret the archaeological material that reveals itself. We draw from past knowledge and experience; what we have learned in school, on other archaeological excavations, what others have said on the subject before us, but more importantly what the object, landscape or built environment says to us personally. 
 
-#### Transparency
--blah
+Say more…
 
-#### Paradata
--blah
+### The Archaeological Narrative
 
-### Practice
--blah
+What is the “archaeological unknown”? When an archaeological artifact, landscape or built structured is (re)discovered, its context is partially or fully missing. Archaeologists have to then develop a “best guess” theory of the meaning, motivation and context of the archaeological material based on experience, known knowledge and creative interpretation. In many ways it is detective work, sousing out who might have made the artifact, landscape or structure, why or what was the motivation and how did it come to rest in within a particular spot. Archaeologists usually use theories, developed by themselves or borrowed from other archaeologists to explain the who, what, why and how. As digital archaeology is in many ways about the interpretation of data points, there is always a scientific, quantifiable flavour to the interpretations or data generated through digital means. We as archaeologist, then source our toolkit of skills, knowledge and experience to paint an interpretation, visual, phenomenological or written, of the artifact and the data potentially associated with the object, landscape or structure.
 
-#### Paul Reilly
+In 1993, archaeologist Janet Spector wrote a highly influential paper entitled, “What this awl means: Feminist archaeology at a Wahpeton Dakota village”. Instead of methodically describing an artifact scientifically, a tradition in archaeology to give weight and authority to what the archaeologist is about to interpret, Spector chose to create a narrative, a living history if you like, of the artifact that was excavated (side box with a note to read the Spector article). The artifact, an awl, is used to make clothing and Spector narrated a story that brought the artifact and the person who many have used it, to life, virtually, in the readers mind. This fictional interpretation however was based on the cumulative scientific, anthropological and archaeological knowledge Spector sourced in order to (re)visualize one potential lifeway of this artifact. It was remarkable because Spector made this archaeological find accessible to a larger audience by creating a narrative which captured the essence of the artifact. Essentially, Spector has given us the permission to creatively interpret the archaeologically unknown, while still being grounded in traditional archaeological theory.
+The thread throughout anthropologist Tim Ingold’s 2011 book, “Being Alive: Essays on Movement, Knowledge and Description” is that objects have their own narratives. That the world (the environment, plants, animals, humans…) come into contact with objects, add to the objects narrative and as time passes, those narratives are recorded physically upon the object but the meaning, the context, is lost. Additionally, Like the awl, artifacts were once raw material. That material, may it be wood, stone or the landscape, all have previous stories, like you do, that make up the object’s existence. When we work these raw materials to fashion a new object, like a pot, a spear point or a piece of art, the raw materials have their own way of imposing their narratives into the new object being created. Like a knot in a piece of wood, it forces the carpenter to change direction and accommodate or build upon the materials previous narrative (side box with a note to read the Ingold chapter on sawing a piece of wood). It is these course-corrections, or as Ingold describes them, wayfaring points, that helps us understand what the artifact may be, and mean within the context in which it was excavated.
 
-#### Anthony Masinton
--blah
+A wayfaring point is really just a decision-making moment. An artifact is made, used and then discarded but in-between those key points in its lifeway, there are other smaller wayfaring stops which build upon the artifact, landscape or structures where the context or intent has been lost. Ingold also provides a way for us, as archaeologists, to make new meaning from the archaeologically unknown, as we (re)imagine artifacts, landscapes and ancient peoples within 2D, 3D or 3D printed form. The construction of unknown knowledge, or the creation of plausible narratives for those unknown wayfaring moments, helps to interpret the archaeological material. In many ways, we “make” new meaning when we create new narratives to fill in the gaps.
 
-#### Grant Cox
--blah
+Take for instance, an Iroquoian Longhouse (side image of an excavated Iroquoian longhouse and a reconstructed one). Unlike the stone remnants of the great castles of Europe, or the Pyramids of Egypt, there are no lasting remains of longhouse structures other than the post-hole circles that represent where the wooden superstructure once stood but has now rotted into dirt. Nothing of these structures survive above the soil line, so in order to (re)visualize these grand structures archaeologists have to work closely with the current decedents to interpret the oral stories and histories of longhouses and how they were built as well as source whatever historical images or written accounts the first European voyagers made of their encounters with the Iroquoian populations. One might even look towards experimental archaeology (side box with a note on experimental archaeology) to understand what types of wood and bark would be used when (re)visualizing all the bits and pieces that haven’t survived in the archaeological record. 
 
-#### Richard Allen
--blah
+As we are constructing in 2D or 3D, through a written or spoken narrative, we are reimagining based on the information available, what an artifact, landscape or structure would have looked like. We are “making” new knowledge, testing existing theories and creating an alternative narrative.
 
-#### Daniel Pletinckx
--blah
+### Theoretical Pragmatism
 
-#### Nicole Beale
--blah
+Archaeology is a theory laden subject. There is no getting around it. Although archaeology is highly tactile, physical and applied, as archaeologists, we must harken back to established theories, notions and concepts to speak authoritatively in our interpretations.
 
-#### Alice Watterson
+The concept of Virtual Archaeology is almost 30 years old, yet it still suffers from a lack of theoretical grounding. Paul Reilly freely admits that coining the term “virtual archaeology” in the 1980’s has been problematic, especially now in the present, when virtual reality has come to represent in entertainment as well as science, a very real means of immersing oneself into an alternative, almost hyper-real world. Jeremy Huggett suggests it is because we “fetishize the technology” (2004), placing more emphasis on what the technology does instead of critically evaluating what information it provides. Further, in a generation that now consumes and produces information easily, alternative visions and voices, both critically sound and not, compete with an archaeologist driven narrative, thus consumers have become producers.
+
+Well established archaeological theories support parts of the virtual archaeological method and practice, but there isn’t one theoretical approach we can wrap around virtual archaeology to ground it to the current concept of archaeological science, of which most of digital archaeology is born. There is however a “theoretical pragmatism”, derived from a humanistic and philosophical approach to understanding the archaeological landscape, that provides a freedom to pick and choose elements and parts of various archaeological theories to support a virtual archaeological interpretation.
+
+Called “archaeological cabling”, Alyson Wylie, an archaeologist who has specialized in the philosophical notions in archaeology, provides a theoretical pragmatism that easily lends itself to the theory and practice of virtual archaeology. Quite simply, a rope, has many strands and when they are twined together, it makes for a stronger combined element. Virtual archaeology in many ways is a combination of multiple theories which helps to solidify 
+
+### Phenomenology and Virtual Archaeology
+
+blah
 blah
 
-#### Costas Papadopoulos
+### Lasting Considerations
+
 blah
-
-#### Ed Gonzalez-Tennant
--blah
-
-### Discussion
--blah
+blah
+### Creative Disruption in Archaeology
 
 ### Exercises
--blah
+
+blah
 
 ## Archaeogaming
 
