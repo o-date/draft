@@ -1,0 +1,188 @@
+## Artificial Intelligence in Digital Archaeology
+
+To speak of 'artificial intelligence' in archaeology may be to speak too soon yet. We do have machine learning in the service of archaeology (neural networks for classificatory purposes, for instance), and there is a well-established body of work in terms of simulation that could fall under the rubric of 'artificial intelligence'.
+
+Then why use the term? We think it is still useful to use the term because it reminds us that, in using computational power for simulation or image classification we are off-loading some of our expertise and abilities to a non-human actor. In the case of machine learning and neural networks, we really *can't* see inside the 'black box'. But we can examine the training data, for it is in the selection of training data that we introduce biases or agendas into the computation. By thinking of the machine in this case as something non-human, our hope is that we remind you to not accept the results or methods of AI in archaeology blindly, as if the machine was not capable of racist or colonialist results.
+
+Machine learning: a series of techniques that endeavour to train a computer program to identify and classify data according to some previously determined values. We will in this chapter discuss image recognition using the neural network model trained by Google, the Inception3 model, which we will query using the Tensorflow package.
+
+Agent based simulation: a series of techniques that create a population of software 'agents' who are programmed with contextual rules (e.g., *if this happens, do that*) governing the behaviour of individual agents. The context can be both in terms of the simulated environment (GIS data, for instance) or the social environment (social relationships as a network).<!---The simulation iterates--> Simulation experiments iterate over multiple combinations of parameters' values<!---an entire landscape of possible variables-->, <!---creating--> the 'behaviour space'. <!---which is--> Simulation results are then used by the investigator to <!---understand the emergent behaviour in the situation, to understand better the possible range of situations that could account for the observed phenomenon in the 'real world'--> explain the 'real world' phenomenon as an emergency of a population of agents following a set of rules under certain situations.
+
+The value of machine learning: it makes us think carefully about what we are looking for and at in the first place; and then it can be scaled massively.
+
+The value of agent-based modeling: it forces us to think carefully about what it is we think actually *happened* in the past such that it can be <!---encoded as a series of individual-level instructions--> expressed as a series of contextual rules of behavior, functioning under certain conditions.
+
+
+### Agent-based modeling (ABM)
+
+<div class = rmdcaution> _This section is under development_. </div>
+
+This section is an overview of agent-based modeling (**_ABM_**), as it is used within archaeology, anthropology, and behavioral sciences. Before tackling the "agent-based", we start with a brief introduction to what "modeling" means. To place ABM in a bigger picture, we introduce the reader to several dimensions of the variability of simulation models. We describe the necessary and optional parts of ABM models, including their characteristic type of element, i.e. the agent. At this point, the student must be aware that _**simulation models**_ in our context involve computer code (they are *digital*) and the iteration of processes (they are *dynamic*).
+
+Following the definition of ABM, we describe the process of creating a model or *formalizing* an informal model. Although the reality is messier, this process can be divided into *definition* of research question and phenomenon, *design*, *implementation*, and *verification*. *Validation*, which is considered a fifth step by most of the modeling literature, is regarded here as an extra, lengthy process, often separable from the tasks involved in creating and exploring a model. Furthermore, we introduce two additional steps that are not normally acknowledged: *understanding* and *documenting* the model. In explaining all modeling steps, we keep instructions general enough for them to be valid when dealing with any platform or programming language.
+
+Next, we cover the *why* and *how* of the application of ABM in archaeology, history, and social sciences. We discuss some key foundational works, including models that predate the development of ABM as it defined today. Specifically regarding archaeological applications, we illustrate the diversity of ABM approaches by presenting several examples of models with varying goals, spatial and temporal scales, and theoretical backgrounds.
+
+Last, we walkthrough the steps involved creating an ABM model. Inspired in the theme of emergence and collapse of territorial integration, we designed a model, the _**Pond Trade model**_, showcasing many elements that are common in ABM models in archaeology. The coupled process of design and programming was intentionally broken down into smaller, progressive steps to illustrate an organized pace of code development, from simple to increasingly complex algorithms. The Pond Trade model is implemented in _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/), which is free, easy to install and use, and widely used in academia. The exercise assumes no previous programming knowledge, though practice with NetLogo is required to fully undertand the later versions of the model. (A Jupyter Notebook that uses an agent based model written in Python as the basis for an exploration of computational creativity can be found [in the 'Worldbuilding' subfolder here](https://github.com/o-date/creativity2); please also see Ben Davis' [Agent-based modelling prehistoric landscape use with R and NetLogo](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/agent-based-modelling-prehistoric-landscape-use-with-r-and-netlogo.html)). 
+
+Throughout this section, several concepts will probably sound *alien* for most history and archaeology students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers don't go through formal introductions nor are well-versed in algebra and calculus. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results, though proposals do exist (**REF ODD**). In this sense, the content of this section should NOT be considered the standard among the ABM-archaeology community.
+
+To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or their interests and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings; certainly, a greater mastery in programming. Despite the rarity of ABM in history and archaeology mainstream curricula, there are many publications that offer introductions to ABM in archaeology, writen by authors with different backgrounds and perspectives (e.g., @Breitenecker2015, @Cegielski2016, @Romanowska2015; also visit [_The ABM in Archaeology Bibliography_](https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography), for an extensive and constantly updated list of references).
+
+#### What is ABM?
+
+>"Essentially, all models are wrong, but some are useful"  
+>George Box, 1987  
+>@box1987empirical, p. 424
+
+The first thing to consider is that ABM is about models. A model is a representation of a phenomenon as a set of elements and their relationships; the key term being *representation*. It is a generalization/abstraction/simplification of what we consider as *THE* phenomenon. Think about a pineapple. The mental representation of the phenomenon, "the pineapple", is already a model. It consists of a set of traits or visual cues, and their relative positions (e.g., crown of spicky leafs on top, thorns covering the oval body). Empirically, every pineapple has different visual properties, but we still are able to identify any pineapple we encounter by using this model.
+
+![Pineapples and their (visual) models](images/andros_pineapple.png)
+
+Another important statement about models is that they are--as any mental process--a phenomenon in its own right. That puts us in the realm of epistemology and cognitive sciences. It follows that one's model is *a* model and that there are many models representing a phenomenon as there are minds that recognise this phenomenon. Observe the diversity of pineapple drawings. Adding further complexity to this picture, minds are constantly changing with the integration of new experiences--creating, modifying, merging, and forgetting models--and we often exchange and contrast alternative models through expressing them to ourselves and others. As the last straw of confusion, the ability for communicating models give them the status of *'material objects'*, with a *existence* of their own, reproduced through learning, checked by the clash of new experiences, and in perpetual change through innovation and creativity. For example, a child with little or no experience with the 'real pineapple' is able to learn--and graciously modify--a model of pineapple.
+
+Well, what do pineapple drawings have in common with doing models in archaeology? You may imagine that, if your mental representation of a pineapple is a model, human minds are bursting with models about everything, including *models of models*, *models within models*, and *models of ourselves*. If an archaeologist, there will be many archaeologically-sensitive models buried deep inside such mental apparatus. *"Why did people in this site buried food remains in small pits?" "They wanted to avoid attracting critters." "They did not stand the smell of decomposition." "One person with high status started doing it and them the rest just followed." "They were offering sustainance to the land spirit."* These explanations derive directly from models of *why people behave as they do*. Often tagged as *social* or *behavioral*, this kind of model is as key in archaeology as it is neglected. Given that archaeological practice orbits around materials, archaeologists tend to relegate social models to a second plane, as if the goal is actually to understand the material remains of human behavior rather than the behavior itself. More importantly, many archaeologists are hardly cognizant that they are using social models even when being avowedly 'non-theoretical'.  
+
+Another common practice is to present authoritative models as mantras while unconsciously hidding the models used. Social models are indeed more permeable to *personal*, *subjective* perspectives (in contrast with a model of stratification, for example) because we use them daily to interact with others, apart from archaeological affairs. Thus, they are strongly moulded to our life experiences and beliefs, which vary depending on many socio-cultural factors, including those less obvious such as age and gender. Even though there are shared traits between them, these models are as many and diverse as pineapple drawings.
+
+Why bother then doing formalized models in our research? Ultimately, we are searching for knowledge, statements with at least some *value of truth*, independent of any individual. Remember that models of a phenomena, as diverse they may be, are contrasted with experiences of that phenomena, which are much less variable. As George Box's famous phrase states, models are NOT equivalent reproductions of a phenomenon, but tools for looking and interacting with it. What we could define as *imaginative models*, such as the smiling pineapple, though still able to exist for other purposes, can be clearly distinguished from models with *some degree of truth*, because they fail to match our sensible experience and are incompatible with other successful models. Those that cannot be distinguished, should be considered *valid*, *competing* models; their study, validation, and improvement being the main goal of scientific endeavours.
+
+Unfortunately, models involving human behavior are less straightforward to validate or dismiss than a "smiley pineapple". Still, when having many competing models, progress can be made by ordering them by 'probability of being true', following many criteria. A warning though: almost-certain models might be eventually proven false, and marginal (even discredited) models can end up being mainstream. To be alive (read, _useful_) models must be communicated, used, re-used, abused, recycled, hacked, and broken. A well-documented model, preserved in many locations and formats, could as easily be considered *hibernating*, awaiting new evidence for validation or a new generation of scholarship.
+
+Models are not only inevitable for any living mind, but they are also the keystone for the generation of knowledge. However, if models can be so simple, spontaneous, and intuitive as a pineapple drawing, what is the need of doing strange models with complicated equations, painstaking specifications, and fathomless designs? Archaeologist use models to define their research agenda and guide their interpretations. A lot of ink has been spilled in presenting, discussing, and revisiting archaeological and archaeologicaly-relevant models. Nonetheless, few of these works are able to define unambiguosly the model(s) in question, not because they lack in effort but due to the intrinsic limitation of the media objectifying the model: human, natural, verbal language. 
+
+For example, we may write a book on how we believe, given known evidence, that kinship relates to property rights among, say, the Armenians contemporaneous to the Early Roman Empire. Our reasoning and description of possible factors can be lengthy and impeccable; however, we are bound to be misunderstood at some point, because readers may not share the same concepts and certainly not all connotations that we may have wanted to convey. A significant part of the model in our minds would be writen between the lines or not at all. Depending on their background, readers can potentially miss altogether that we are referring to *a model*, and consider the elements of our model as loose speculations or, worse, as given facts.
+
+Formal models, or rather *formalizing* informal models, reduce ambiguity, setting aside part of the risk of being misunderstood. In a formal model everything must be defined, even when the elements of our model are still abstract and general. Our imaginary book about ancient Armenians could be complemented with one or several formal models that crystalize the main features of our informal model(s). For instance, if our informal model about property inheritance includes the nuclear patriarchal family as the main kinship structure, we must define it in *null* terms, explaining to ourselves and to others what "family", "nuclear", and "patriarchal" means, at least in the context of our model. _Does a model assume that family implies co-habitation? Does our model consider adopted members? What happens if a spouse dies?_ As it is often the case, we may end up changing our informal model through the effort of formalization; by realizing, for example, that we can replace "patriarchal" with "patrilineal" because our model does not assume a particular power structure within families.
+
+Formalization often demands the use of formal logic and to some extent, quantification. Seen from the perspective of the human natural language, mathematics and logic contain lots of repetitions, fixed vocabulary, and no nuances. Nevertheless, computational systems function strictly with this kind of language, and they are both empowered and limited by it.  A formal definition is a disclaimer saying: *"This is what X means in this model, no more, no less. You can now criticize it at will."* Whitout the formal definition, we would probably spend a chapter reviewing everything we read and thought about "nuclear patriarchal family" and still would not be "at the same page" with all our readers.  The terms of this definition are assumptions of the model. At any point, new evidence or insight can suggest us that an assumption is unjustified or unnecessary, and we may change it or remove it from the model. It is in the elaboration and exploration of the unintended consequences of these rigorous definitions that the power of simulation emerges.
+
+@Epstein2008 perhaps put it best:
+
+> The first question that arises frequently—sometimes innocently and sometimes not—is simply, "Why model?" Imagining a rhetorical (non-innocent) inquisitor, my favorite retort is, "You are a modeler." Anyone who ventures a projection, or imagines how a social dynamic—an epidemic, war, or migration—would unfold is running some model.
+> But typically, it is an implicit model in which the assumptions are hidden, their internal consistency is untested, their logical consequences are unknown, and their relation to data is unknown. But, when you close your eyes and imagine an epidemic spreading, or any other social dynamic, you are running some model or other. It is just an implicit model that you haven't written down...
+> This being the case, I am always amused when these same people challenge me with the question, "Can you validate your model?" The appropriate retort, of course, is, "Can you validate yours?" At least I can write mine down so that it can, in principle, be calibrated to data, if that is what you mean by "validate," a term I assiduously avoid (good Popperian that I am). 
+>The choice, then, is not whether to build models; it's whether to build explicit ones. In explicit models, assumptions are laid out in detail, so we can study exactly what they entail. On these assumptions, this sort of thing happens. When you alter the assumptions that is what happens. By writing explicit models, you let others replicate your results.
+
+Epstein goes on to note that modeling can sometimes be seen as implying prediction; for archaeology, prediction might very well be the least useful thing that a formalized model might do. Instead, as Epstein lists, there are many reasons to model:
+
+> Explain (very distinct from predict)
+> Guide data collection
+> Illuminate core dynamics
+> Suggest dynamical analogies
+> Discover new questions
+> Promote a scientific habit of mind
+> Bound (bracket) outcomes to plausible ranges
+> Illuminate core uncertainties.
+> Offer crisis options in near-real time
+> Demonstrate tradeoffs / suggest efficiencies
+> Challenge the robustness of prevailing theory through perturbations
+> Expose prevailing wisdom as incompatible with available data
+> Train practitioners
+> Discipline the policy dialogue
+> Educate the general public
+> Reveal the apparently simple (complex) to be complex (simple)
+
+Not everything on that list may apply to archaeology, but nevertheless, the list opens up the possibility space for archaeological simulation. See for instance Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/), which implements Schelling's 1971 Segragation Model which showed how even minor expressions of preference could lead to segregated neighborhoods. Hart and Case's 'playable post' implements the model interactively in the browser, and uses engaging graphics to communicate the dynamic to the public. An archaeological agent based model similarly deployed could be an excellent public archaeology intervention.
+
+#### How do we model with ABM?
+
+In simple terms, building a model involves the following steps.
+- Define hypotheses, questions or simply the phenomenon of interest (identify the system)
+- Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam's razor vs. emergence
+- Express the chosen elements and processes as computer code (implement the model)
+- Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step.  The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new  modeling effort (and that is actually the main usefulness of models in the long run).
+- ABM in python, Java, C#, or C++? in R? in NetLogo? (Any language can do it, really). Pros and cons, talk in terms of higher/lower level programming languages (still, they are all quite high-level).
+- remember to talk about https://www.openabm.org/
+
+#### ABM in Archaeology and Social Sciences
+
+- Emergence... Life game, deterministic chaos
+- Saving the gap between atomism and holism, or individual and social structure
+- Virtual laboratory for social sciences
+- Examples
+- Mention the cycles of enthusiasm and skepticism, and the tendency to develop closed circles
+- Challenges and pitfalls
+
+#### ABM tutorial: the Pond Trade model
+
+brief overview
+disclaimer: MY modelling strategy is highly focused in theory-building (general, explorative), not hypothesis-testing and prediction (specific, data-driven).
+
+##### Phenomena of interest and conceptual model
+
+- phenomena: cycles of growth and collapse, i.e. flutuations in the scale of site occupation, out of phase with environmental change. Focus on coastal settlements around a water body (e.g., lake, bay, sea).
+- Belief or main assumption: topography, transport technology, trade, settlement size and wealth, and cultural exchange are intertwined.
+
+![andros-first-diagram](images/andros-diagram.png)
+
+```
+library(DiagrammeR)
+grViz("diagrams/boxes.dot")
+```
+
+- Elements: "pond" or water body, settlements, ships, routes, goods.
+- Rules:
+  - coastal settlements of variable size around a pond.
+  - each settlement has a "cultural vector".
+  - trade ships travel between the settlements.
+  - once in their base settlement, ships evaluate all possible trips and choose the one with the greater cost-benefit ratio.
+  - ships carry economic value and cultural traits between the base and destination settlements.
+  - settlements size depends on the economic value they receive from trade.
+  - the economic value produced in a settlement depends on its size.
+  - the number of ships per settlement depends on its size.
+
+##### Implementation
+
+- Implement the model based on general definition (agents, variables, parameters)
+- Walk-through the implementation in NetLogo
+
+Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
+
+![The model interface in step 13](images/interface-andros.png)
+
+##### Simulation experiments and analysis
+
+- Simulations and experiment design
+- Analysis and display of results (R example)
+
+```
+plot(1:10, 1:10)
+```
+![andros-second-diagram](images/andros-2.png)
+
+SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
+
+AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
+
+## Computer Vision and Archaeology
+
+It has become practical in recent years to use neural networks to identify objects, people, and places, in photographs. This use of neural networks _applied to imagery_ in particular has seen rapid advancement since 2012 and the first appearance of 'convolutional' neural networks (@deshpande2016overview provides an accessible guide to this literature). But neural networks in general have appeared sporadically in the archaeological literature since the 1990s; @baxter2014overview provides a useful overview. Recent interesting uses include @benhabiles2016 which uses the approach to enhance pottery databases, and @wang_2017 on stylistic analysis of statuary as an aid to restoration. In this section, we provide a gentle introduction to how convolutional neural networks work as preparation, and then two jupyter binders that may be repurposed or expanded with more data to create actual working classifiers.
+
+### Convolutional Neural Networks
+
+Neural networks are a biological metaphor for a kind of sequence of computations drawing on the architecture of the eye, the optic nerve, and the brain. When the retina of the eye is exposed to light, different structures within the retina react to different aspects of the image being projected against the retina. These 'fire' with greater or lesser strength, depending on what is being viewed. Subsequent neurons will fire if the signal(s) they receive are strong enough. These differential cascades of firing neurons 'light up' the brain in particular, repeatable ways when exposed to different images. Computational neural networks aim to achieve a similar effect. In the same way that a child eventually learns to recognize _this_ pattern of shapes and colour as an 'apple' and _that_ pattern as an 'orange', we can train the computer to 'know' that a particular pattern of activations _should be_ labelled 'apple'.
+
+A 'convolutional' neural network begins by 'looking' at an image in terms of its most basic features - curves or areas of contiguous colour. As the information percolates through the network the layers are sensitive to more and more abstraction in the image, some 2048 different dimensions of information. English does not have words to understand _what_ precisely, some (most) of these dimensions are responding to, although if you've seen any of the 'Deep Dream' artworks [SG insert figure here] you are seeing a visualization of some of those dimensions of data. The final layer of neurons predicts from the 2048 dimensions what the image is supposed to be. When we are training such a network, we know at the beginning what the image is of; if at the end, the network does not correctly predict 'apple', this error causes the network to shift its weighting of connections between neurons back through the network ('backpropogation') to increase the chances of a correct response. This process of calculation, guess, evaluation, adjustment goes on until no more improvement seems to occur.
+
+Neural networks like this can have very complicated architectures to increase their speed, or their accuracy, or some other feature of interest to the researcher. In general, such neural networks are composed of four kinds of layers. The first is the **convolutional** layer. This is a kind of filter that responds to different aspects of an image; it moves across the image from left to right, top to bottom (whence comes the name 'convolutional'). The next layer is the layer that reacts to the information provided by the filter; it is the **activation** layer. The neural network is dealing with an astounding amount of information at this point, and so the third layer, the **pooling** layer does a kind of mathematical reduction or compression to strip out the noise and leave only the most important features in the data. Any particular neural network might have several such 'sandwiches' of neurons arranged in particular ways. The last layer is the **connected** layer, which is the layer with the information concerning the labels. These neurons run a kind of 'vote' on whether or not the 2048-dimension representation of the image 'belongs' to their particular category. This vote is expressed as a percentage, and is typically what we see as the output of a CNN applied to the problem of image identification.
+
+### Applications
+
+Training a neural network to recognize categories of objects is massively computationally intense. Google's Inception3 model - that is, the final state of the neural network Google trained - took the resources of a massive company to put together and millions of images. However, Google _released_ its model to the public. Now anyone can take that _finished_ pattern of weights and neurons and use them in their own applications. But Google didn't train their model on archaeological materials, so it's reasonable to wonder if such a model has any value to us.
+
+It turns out that it does, because of an interesting by-product of the way the model was trained and created. **Transfer learning** allows us to take the high-dimensional ways-of-seeing that the Inception3 model has learned, and apply them to a tweaked final voting layer. We can give the computer mere thousands of images and tell it to learn _these_ categories: and so we can train an image classifier on different kinds of pottery relatively quickly. Google has also released a version of Inception3 called Mobilnet that is much smaller (only 1001 dimensions or ways-of-seeing) and can be used in conjunction with a smartphone. We can use transfer learning on the smaller model as well and create a smartphone application trained to recognize Roman pottery fabrics, for instance.
+
+The focus on identifying objects in photographs does obscure an interesting aspect of the model - that is, there are interesting and useful things that can be done when we dismiss the labeling. The second-to-last layer of the neural network is the numerical representation of the feature-map of the image. We don't need to know what the image is of in order to make use of that information. We can instead feed these representations of the the images into various kinds of k-means, nearest-neighbour, t-sne, or other kinds of statistical tools to look for pattern and structure in the data. If our images are from tourist photos uploaded to flickr of archaeological sites, we might use such tools to understand how tourists are framing their photos (and so, their archaeological consciousness). @huffer2018fleshing are using this tool to identify visual tropes in the photographs connected to the communities of people who buy, sell, and collect photos of, human remains on Instagram. Historians are using this approach to understand patterns in 19th century photographs; others are looking at the evolution of advertising in print media.
+
+These technologies are rapidly being put to uses that we regard as deeply unethical. Amazon, for instance, has a facial recognition service called 'Rekognition' that it has been trying to sell to police services [@wingfield_2018_amazon], which can be considered a kind of digital 'carding' or profiling by race. In China, massive automated computer vision is deployed to keep control over minority populations [@economist_2018]. Various software companies promise to identify 'ethnicity' or 'race' from store security camera footage, in order to increase sales (and a quick search of the internet will find them for you).  In Graham and Huffer's [Bone Trade](http://bonetrade.github.io) project, one possible mooted outcome is to use computer vision to determine descendent communities to which belong the human bones being trade online. Given that many of these bones probably were removed from graves in the first place to 'prove' deplorable theories on race (see @redman_2016 on the origins) such a use of computer vision runs the risk of re-creating the sins of the past. 
+
+Before deploying computer vision in the service of archaeology, or indeed, any technology, one should always ask how the technology could be abused: who could this hurt?
+
+### Exercises
+
+1. Build an image classifier. The code for this exercise is [in our repo](https://github.com/o-date/image-classifier); [launch the binder](https://mybinder.org/v2/gh/o-date/image-classifier/master) and work carefully through the steps. Pay attention to the various 'flags' that you can set for the training script. Google them; what do they do? Can you improve the speed of the transfer learning? The accuracy? Use what you've learned in section 2.5 to retrieve more data upon which you might build a classifier (hint: there's a script in the repo that might help you with that).
+
+2. Classify similar images. The code for this exercise is in [Shawn Graham's repo](); [launch the binder](http://mybinder.org/v2/gh/shawngraham/bindr-test-Identifying-Similar-Images-with-TensorFlow/master) and work through the steps. Add more image data so that the results are clearer.
+
+3. If you are feeling adventurous, explore Matt Harris' [signboardr](https://github.com/mrecos/signboardr), an R package that uses computer vision to identify and extract text from archaeological photos containing a sign board, and then putting that data into the metadata of the photos. Harris' code is a good example of the power of R and computer vision for automating what would otherwise be time consuming.

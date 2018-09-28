@@ -1,6 +1,6 @@
 ## Social media as Public Engagement & Scholarly Communication in Archaeology
 
-boo socmed
+<div class = rmdcaution> _This section is under development_. </div>
 
 ### discussion
 

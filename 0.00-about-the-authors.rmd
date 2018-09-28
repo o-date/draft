@@ -16,11 +16,36 @@ Michael Carter is an Assistant Professor in  the School of Creative Industries a
 
 Beth Compton is a PhD student at the University of Western Ontario's Department of Anthropology. Her research examines critically the implications and assumptions of digital approaches to repatriation, and uses archaeological ethnographic approaches to evaluate artifact sharing policies. She study archaeological representation and replication, particularly the use of digital photography, 3D modeling, and 3D printing. She is interested in all aspects of meaning-making and knowledge sharing in digital archaeological heritage practice. She is a Co-Founder of the [DH Maker Bus project](http://www.makerbus.ca/) and is an Ontario Trillium Scholar.
 
-### Jolene Smith
+### Jolene Smith ### {-}
 
-### Andreas Angourakis
+[Jolene Smith](https://www.jolenesmith.net) is an archaeologist who manages statewide digital archives and archaeological data at the Virginia Department of Historic Resources. She is interested in open data, preservation, and developing easy-to-use tools to help small organizations create, use, and manage archaeological data. 
 
-Andreas Angourakis is a PhD student at the Department of History and Archaeology, University of Barcelona. He is a generalist that underwent training in humanistic disciplines, social sciences, and biology. He is self-taught in software and programming languages, including R and NetLogo. His research in archaeology has been focused on the development of simulation models of socio-ecological dynamics in the past, mainly using agent-based modeling, and assembling multivariate statistical protocols for analyzing and interpreting archaeological data. As digital archaeology's bones of the trade, he believes that creativity and science are unmistakably intertwined. He can be found on Twitter as [@AndrosSpica](https://twitter.com/AndrosSpica), GitHub as [Andros-Spica](https://github.com/Andros-Spica), and is present on both [Research Gate](https://www.researchgate.net/profile/Andreas_Angourakis) and [Academia](https://ub.academia.edu/AndreasAngourakis).
+### Andreas Angourakis {-}
+
+Andreas Angourakis is a PhD student at the Department of History and Archaeology, University of Barcelona. He is a generalist that underwent training in humanistic disciplines, social sciences, and biology. He is self-taught in software and programming languages, including R and NetLogo. His research in archaeology has been focused on the development of simulation models of socio-ecological dynamics in the past, mainly using agent-based modeling, and assembling multivariate statistical protocols for analyzing and interpreting archaeological data. As digital archaeology's bones of the trade, he believes that creativity and science are unmistakably intertwined. He can be found on Twitter as [AndrosSpica](https://twitter.com/AndrosSpica), GitHub as [Andros-Spica](https://github.com/Andros-Spica), and is present on both [Research Gate](https://www.researchgate.net/profile/Andreas_Angourakis) and [Academia](https://ub.academia.edu/AndreasAngourakis).
+
+### Andrew Reinhard {-}
+
+Andrew Reinhard literally wrote the book on video game archaeology: Archaeogaming: An Introduction to Archaeology in and of Video Games (Berghahn Books 2018). He led the team of archaeologists that excavated the Atari Burial ground in Alamogordo, New Mexico (April 2014) as well as the first in-game archaeological expedition via No Man’s Sky (Hello Games 2016). He is a PhD candidate at the University of York’s (UK) Department of Archaeology where his thesis focuses on evaluating tools and methods for archaeological investigation of digital spaces.
+
+### Lorna Richardson {-}
+
+[Lorna Richardson](https://twitter.com/lornarichardson) is Lecturer in Digital Humanities at the University of East Anglia.
+
+### Kate Ellenberger {-}
+
+[Kate Ellenberger](http://kateellenberger.com/) has just completed her PhD at Binghamton University, State University of New York, on community based archaeologies. Her background is in public outreach, museum work, archaeological mapping and databases, and she actively consults on public and field projects. 
+
+### Zack Batist {-}
+[Zack Batist](https://www.zackbatist.github.io) is a PhD student at the University of Toronto's Faculty of Information, where his research focuses on the ways in which archaeological practices – in their immense variety and scope – are implemented as part of a broad continuum of work that is inherently interdisciplinary and cooperative in nature. He is also interested in the critical evaluation of open data initiatives and the development of information infrastructures across and among disciplines, as well as public perceptions of archaeology and the representation of archaeology in science fiction, popular media, professional politics and public policy. He also actively tinkers with various computational tools and methods, ranging across the general domains of database management, GIS, statistical computing, network analysis, web development and server administration. Some ramblings and code can be found on [github](https://www.github.com/zackbatist) and [twitter](https://www.twitter.com/mtl_zack).
+
+### Joel Rivard {-}
+
+Joël Rivard is the replacement GIS and Geography Librarian at the University of Ottawa. Before taking this position in the summer of 2017, Joël spent over 15 years working as the Cartographic Specialist and the GIS Technician at the Carleton University Library. He has a Master of Information Studies as well as an honours degree in Geomatics with a minor in Environmental Studies.
+
+### Ben Marwick {-}
+
+[Ben Marwick](https://anthropology.washington.edu/people/ben-marwick) is an Associate Professor in the department of Anthropology at the University of Washington. He is a leading figure in computational archaeology and reproducible methods in digital archaeology. His research uses models from evolutionary ecology to analyse past human behaviour in mainland Southeast Asia and Australia. My technical specialisations in stone artefact technology and geoarchaeology provides me with wide scope in time periods and geography. My specific interests include the hominin colonisation of mainland Southeast Asia, forager technologies and ecology in Australia and mainland Southeast Asia, and transitions to agriculture in mainland Southeast Asia.
 
 ### Editorial Board {-}
 
@@ -28,7 +53,7 @@ Katharine Cook, University of Victoria
 
 Ethan Watrall, Michigan State University
 
-Daniel Pett, The British Museum
+Daniel Pett, Fitzwilliam Museum, University of Cambridge
 
 Eric Kansa, Open Context & The Alexandria Archive Institute
 
@@ -41,11 +66,23 @@ We wrote this text with a particular kind of student in mind. We imagined this s
 
 It'll be ok.
 
-We take a pedagogical perspective that focuses on the learning that happens when we make things, when we experiment or otherwise play around with materials and computing, and especially, when/if things break. It's a perspective that finds value in 'failing gloriously', in trying to push ourselves beyond our comfort level. The only thing that you will need therefore to be successful in learning some of the basic issues around digital archaeology is a willingness to consider why things didn't work the way they ought to have, and a web browser. We built this textbook with its very own digital archaeology computer built right in! There's nothing you can break on your own machine, nor does your machine have to be very powerful. 
+We take a pedagogical perspective that focuses on the learning that happens when we make things, when we experiment or otherwise play around with materials and computing, and especially, when/if things break. It's a perspective that finds value in 'failing gloriously', in trying to push ourselves beyond our comfort level. The only thing that you will need therefore to be successful in learning some of the basic issues around digital archaeology is a willingness to consider why things didn't work the way they ought to have, and a web browser. We built this textbook with its very own digital archaeology computer built right in! There's nothing you can break on your own machine, nor does your machine have to be very powerful.
 
-## How to use this text {-}
+Our hope for this volume is that it will provide you with the ability to work out what you need to know, what you don't know, and how to creatively use the computational power of the devices available to you, to do better archaeology. Once you've outgrown this text, we strongly recommend that you visit the peer-reviewed collection of tutorials at [The Programming Historian](https://programminghistorian.org/) (which are available in English and Spanish and soon other languages). If you are more interested in the statistical side of digital archaeology, then you should consult Ben Marwick et al [How to Do Archaeological Science Using R](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/). 
 
-Each section in this book is broken down into an overview or discussion of the main concepts, and then followed up with skill-building exercises. The computational environment is running on someone else's servers. When you close the browser, it shuts down. Your work can be saved to your own machine and reloaded into the environment later, or you can 'push' your changes to your own online repository of work. In which case you really ought to work through the sections on [Github & Version Control] and [Open Notebook Research & Scholarly Communication] so you'll be able to get your work and data out of the Jupyter Notebooks and onto space that you control. The best way to use this book is to make sure you have at least one hour blocked out to read through a section, and then two hours to go through the section again if you're working on the exercises. We find that the work goes better if those blocks are interspersed with breaks every twenty minutes or so.
+## Instructors: How to use this text {-}
+
+There is a logic to how this text is organized that means one _could_ use it in its entirety for developing a course around digital archaeology. It does not assume much digital fluency on the part of students, but builds towards progressively more complex topics. Exercises and further readings are suggested in each section. The text can be used in conjunction with the notebooks, or without them. Alternatively, one can pick from the various notebooks (and their integral texts) and build a course around their use. The source text files for this text are available in [this repository](https://github.com/o-date/source-markdown-files) and they may be cut-and-pasted into your own coursepacks as appropriate. 
+
+Because the source text and code are all open, one could assign students the task of improving, adding to, or altering the text to suit local circumstances. Feel free to fork (take a copy) of the entire project for your own pedagogical needs (but note that any resulting work has to be shared under similar terms). Any changes that get folded back into this source material will be reflected with authorship credentials.
+
+## Students: How to use this text {-}
+
+Each section in this book is broken down into an overview or discussion of the main concepts, and then followed up with skill-building exercises. The computational environment - provided via a Jupyter notebook- is running on someone else's servers. When you close the browser, it shuts down. 
+
+**Warning!** The computational notebooks that we provide are running in the [binder](http://mybinder.org) environment and _will time out_ after **ten** minutes' inactivity. 
+
+Your work can be saved to your own machine and reloaded into the environment later, or you can 'push' your changes to your own online repository of work (to learn how to push work to a Github repository, see the sections on [Github & Version Control] and [Open Notebook Research & Scholarly Communication] so you'll be able to get your work and data out of the Jupyter Notebooks and onto space that you control). The best way to use this book is to make sure you have at least one hour blocked out to read through a section, and then two hours to go through the section again if you're working on the exercises. We find that the work goes better if those blocks are interspersed with breaks every twenty minutes or so.
 
 Do you notice that stripe down the side of the screen at the right? That's a tool-bar for annotating the text, using a tool called `Hypothes.is`. If you highlight any text (go ahead, highlight that phrase right now by right-clicking and dragging your mouse!) a little pop-up will ask you if you want to annotate or highlight the text. If you choose annotate, a writing pane will open on the right. Using the Hypothesis tool requires a reader to create a login and account with Hypothesis, which is managed by the Hypothesis site, not us.
 
@@ -57,17 +94,18 @@ Over time, the parts of the text that are heavily annotated will look as if some
 
 Finally, if you'd rather not read this as a web page, you can grab a pdf copy by pressing the download button above (the downwards-facing arrow icon) and printing out just the bits you want or need. If you'd rather read this text via an e-reader or iBooks or similar, the download link will also give you an ePub version. Individuals who use a screenreader or other assistive device might prefer to work with the pdf or epub versions. Please do let us know if there is any way we can make this text more accessible for users with particular needs. Since this text is fundamentally a series of plain-text files that we then manipulate to create these different outputs, it should be straightforward for us to adapt accordingly!
 
+
 ## How to contribute changes, or make your own version {-}
 
 Perhaps your professor has assigned a portion of this text to your class, with the instruction to improve it. Do you see the edit button at the top of the screen (it looks like a little square with a pencil)? If you click on that, and you have an account on Github (and you're signed in), you will grab a copy of this entire text that you can then edit. If you want, you can also make a `pull-request` to us, asking us to fold your changes into our textbook. We welcome these suggestions! Since this book has a creative-commons license, you are welcome to expand and build upon this as you wish, but do cite and link back to the original version.
 
-Instructors can take a copy of this repository as well, and re-edit or recombine the text in whatever ways will serve their learning goals best. We knit the markdown together inside [R Studio](https://rstudio.com) with the [Bookdown](https://bookdown.org/home/) package. References are kept in the bibtex format in a `.bib` file. (For more information, see the colophon below)
-.
+Instructors can take a copy of this repository as well, and re-edit or recombine the text in whatever ways will serve their learning goals best. We knit the markdown together inside [R Studio](https://rstudio.com) with the [Bookdown](https://bookdown.org/home/) package. References are kept in the bibtex format in a `.bib` file. (For more information, see the colophon below.)
+
 ## How to access and use the computational environment {-}
 
-There are two options. We created a set of [Jupyter Notebooks](https://jupyter.org/) coupled with the [Binder](https://mybinder.org/) service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the [basic notebook repository](https://github.com/o-date/notebooks) and hit the `launch binder` button (after reading the information there). Students can use the built in file manager to download or upload notebooks into the environment.
+There are two options. We created a set of [Jupyter Notebooks](https://jupyter.org/) coupled with the [Binder](https://mybinder.org/) service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the [our list of notebooks](https://o-date.github.io/support/notebooks-toc/) and hit the `launch binder` button (after reading the information there). Students can use the built in file manager to download or upload notebooks into the environment.
 
-Alternatively, instructors might want to use the [DHBox](http://dhbox.org), which is a linux based computer accessible through a browser. The DHBox has a bit more flexibility in the sense that the terminal available inside is not as locked down as what is available through Binder. The DHBox perists for as long as a month, and so students don't have to be as mindful of saving their work to their _own_ machines as perhaps with the Binder service. At the DHBox site, students create a new user account. They should select the maximum amount of time available for the box. Each time a person logins, the box will tell them how much time remains for the account. Students can use the built-in file manager to download their work from the box to their own machine.
+Alternatively, instructors might want to use the [DHBox](http://dhbox.org), which is a linux based computer accessible through a browser. The DHBox has a bit more flexibility, and includes Jupyter notebooks and RStudio by default. The DHBox perists for as long as a month, and so students don't have to be as mindful of saving their work to their _own_ machines, as perhaps they do with the Binder service. At the DHBox site, students create a new user account. They should select the maximum amount of time available for the box. Each time a person logins, the box will tell them how much time remains for the account. Students can use the built-in file manager to download their work from the box to their own machine.
 
 It is worth noting that any jupyter notebook can be read within either environment (and of course, students can install Jupyter onto their own machines if they so desire). Jupyter notebooks can be written in both python or R. Jupyter notebooks are quickly becoming a standard for 'literate programming', where the reflective text and the code are interwoven for the purposes of reproducibility and replicability.
 
@@ -106,4 +144,3 @@ This is the only thing you need to have in this file, which is saved in the proj
 4. Write! We write the content of this book as text files, saving the parts in order. Each file should be numbered `01-introduction.Rmd`, `02-a-history-of-spoons.Rmd`, `03-the-spoons-of-site-x.Rmd` and so on.
 
 5. Build the book. With Bookdown installed, there will be a 'Build Book' button in the R Studio build pane. This will generate the static html files for the book, the pdf, and the epub. All of these will be found in a new folder in your project, `_book`. There are many more customizations that can be done, but that is sufficient to get one started.
-
