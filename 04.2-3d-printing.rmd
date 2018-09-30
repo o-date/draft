@@ -5,7 +5,9 @@
 @heckadon_et_al2018
 
 ### Overview
-[text goes here]
+A 'maker' approach, in general terms, is a creative process of on-the-fly craftwork that involves learning and contributing towards the development of neat things. It's an inclusive, community driven movement that recognizes the capabilities for anyone to learn or do anything (but never everything!). Makers share their tools and experiences through direct dialogue and by making alongside others, by posting code and resources online in accessible formats, and by nurturing open and supportive ecosystems of information exchange. Failing is considered to be part of making by providing unique opportunities to learn from.
+
+Although making often involves digital technology, it's incredibly open-ended. Crafts like pottery, needlework, mushroom foraging, birdwatching, woodworking, improv entertainment and even archaeological excavation subscribe to similar tenets, and sometimes cross-pollinate with computer tech in fun and functional ways. In this chapter we guide the reader through the use of 3D printing and Raspberry Pi microcomputers in an open-ended way, enabling you to continue on with this work on your own and apply what you learn in various circumstances.
 
 ### 3d Printing - a Workflow
 
