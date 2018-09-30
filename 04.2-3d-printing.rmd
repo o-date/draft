@@ -1,8 +1,11 @@
-## 3D Printing, the Internet of Things and “Maker” Archaeology
+## 3D Printing, Raspberry Pi and “Maker” Archaeology
 
 <div class = rmdcaution> _This section is under development_. </div>
 
 @heckadon_et_al2018
+
+### Overview
+[text goes here]
 
 ### 3d Printing - a Workflow
 
@@ -58,11 +61,6 @@ For 3D printing, users must have specific file formats. An .obj or .stl are some
 #### Print 3D object or create AR
 
 This will export an stl file that is rather large in file size. This stl file can be used to print a 3D representation of the model or can be used to view the model as an augmented reality object.
-
-#### discussion
-
-#### exercises
-
 
 ### Using Raspberry Pi in the Field
 Archaeology is an inherently collaborative process that happens in various places simulataneously. It is therefore often challening to ensure that archaeological databases, which serve to store and organize inter-related information obtained through various methods and practices, are kept up to date and syncronized across research environments. In order to deal with these challenges it might be necessary to set up a database hosted on a network, which would enable multiple users to simultaneously engage with the database while ensuring that the data remains orderly and complete.
@@ -598,7 +596,9 @@ This configuration allows anyone to read, write, and execute files in a volume n
 
 Please refer to [this resource](https://www.raspberrypi.org/magpi/samba-file-server/) for further information, as well as the [Samba documentation](https://www.samba.org/samba/docs/) in order to set up usernames and passwords. The method just described allows free-for-all access, and it should be communicated to users that they can add, delete or modify any file in the shared directory, for better or worse. You may feel inclined to schedule automated backups of your shared drive to yet another connected drive, though this may congest the network and occupy lots of disk space, depending on the size of the shared directory. You may wish to schedule such backups during off-hours, when volumes of traffic across the network are expected to be low.
 
-#### Further Reading
-https://www.raspberrypi.org/documentation/linux/usage/commands.md
+### Discussion
+[text goes here]
 
+### Further Reading
+[bibliography / reading list goes here]
 
