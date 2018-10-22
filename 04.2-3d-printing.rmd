@@ -1,8 +1,11 @@
-## 3D Printing, the Internet of Things and “Maker” Archaeology
+## 3D Printing, Raspberry Pi and “Maker” Archaeology
 
 <div class = rmdcaution> _This section is under development_. </div>
 
-@heckadon_et_al2018
+### Overview
+A 'maker' approach, in general terms, is a creative process of on-the-fly craftwork that involves learning and contributing towards the development of neat things. It's an inclusive, community driven movement that recognizes the capabilities for anyone to learn or do anything (but never everything!). Makers share their tools and experiences through direct dialogue and by making alongside others, by posting code and resources online in accessible formats, and by nurturing open and supportive ecosystems of information exchange. Failing is considered to be part of making by providing unique opportunities to learn from.
+
+Although making often involves digital technology, it's incredibly open-ended. Crafts like pottery, needlework, mushroom foraging, birdwatching, woodworking, improv entertainment and even archaeological excavation subscribe to similar tenets, and sometimes cross-pollinate with computer tech in fun and functional ways. In this chapter we guide the reader through the use of 3D printing and Raspberry Pi microcomputers in an open-ended way, enabling you to continue on with this work on your own and apply what you learn in various circumstances.
 
 ### 3d Printing - a Workflow
 
@@ -59,11 +62,6 @@ For 3D printing, users must have specific file formats. An .obj or .stl are some
 
 This will export an stl file that is rather large in file size. This stl file can be used to print a 3D representation of the model or can be used to view the model as an augmented reality object.
 
-#### discussion
-
-#### exercises
-
-
 ### Using Raspberry Pi in the Field
 Archaeology is an inherently collaborative process that happens in various places simulataneously. It is therefore often challening to ensure that archaeological databases, which serve to store and organize inter-related information obtained through various methods and practices, are kept up to date and syncronized across research environments. In order to deal with these challenges it might be necessary to set up a database hosted on a network, which would enable multiple users to simultaneously engage with the database while ensuring that the data remains orderly and complete.
 
@@ -84,7 +82,7 @@ The system that we're going to build may be suitable for some, but not for other
 **Some Notes on Hardware:**
 This is meant to be a very portable, low energy use and inexpensive setup. While I recommend that you use a dedicated server - a computer that is configured to run the database server, and only the database server - you can actually host the database on a regular laptop that you also serves as the client. I will be including notes on how to configure this to work all on one device, but I recommend that you use this kind of setup for educational and testing purposes only, and not in a production environment.
 
-Raspberry Pi is available online for around 45$ CAD at https://www.raspberrypi.org/products/, but your local makerspace will likely be happy to lend you one to play with. You will also need a SD card with a capacity of at least 8GB and with adequate read/write speeds (see https://www.raspberrypi.org/documentation/installation/sd-cards.md for more info), a wireless router (this one is 40$ and tiny - perfect for portability! https://amzn.to/2HoOM6W), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: https://amzn.to/2Ht8quv) and a couple USB flash drives with varying storage capacities that suit your needs.
+Raspberry Pi is available online for around 45$ CAD at https://www.raspberrypi.org/products/, but your local library or makerspace will likely be happy to lend you one to play with. You will also need a SD card with a capacity of at least 8GB and with adequate read/write speeds (see https://www.raspberrypi.org/documentation/installation/sd-cards.md for more info), a wireless router (this one is 40$ and tiny - perfect for portability! https://amzn.to/2HoOM6W), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: https://amzn.to/2Ht8quv) and a couple USB flash drives with varying storage capacities that suit your needs.
 
 This guide is designed with unix-users in mind - so those who use MacOS or Linux. Sorry Windows users :(
 
@@ -95,7 +93,7 @@ The internet is one kind of network that relies on immense cabling infrastructur
 
 ![computer networks](images/networks.png)
 
-Other kinds of specialized buildings might exist in the town as well. You might do all sorts of things in your home, such as cook, water the garden, wash the dog, or host a party, which each consume varying degrees of food and water (including some waste) but services like grocery store or water reclamation plants need to be streamlined and focused in order to keep up with the inflow and outflow of material that they need to process, which is immense because they engage with each and every household in town. These represent specialized computers on a network called servers (also referred to as hosts, clusters or 'the cloud'). **Servers are centralized computers that manage and distribute information to and from clients across the network. They are designed to be as lightweight and efficient as possible,** such as by minimizing flare in user interfaces to enable more effective use of computing resources directed towards the task at hand, or by keeping the temperature cool to prevent shutdowns and slowdowns due to overheating. The hardware places hard limits on how efficient a computer may operate, but configuring the software can go a long way in stretching a computer's capabilities.
+Other kinds of specialized buildings might exist in the town as well. You might do all sorts of things in your home, such as cook, water the garden, wash the dog, or host a party, which each consume varying degrees of food and water (including some waste) but services like grocery store or water reclamation plants need to be streamlined and focused in order to keep up with the inflow and outflow of material that they need to process, which is immense because they engage with each and every household in town. These represent specialized computers on a network called servers (also referred to as hosts, clusters or 'the cloud'). **Servers are centralized computers that manage and distribute information to and from clients across the network. They are designed to be as lightweight and efficient as possible,** such as by minimizing flair in user interfaces to enable more effective use of computing resources directed towards the task at hand, or by keeping the temperature cool to prevent shutdowns and slowdowns due to overheating. The hardware places hard limits on how efficient a computer may operate, but configuring the software can go a long way in stretching a computer's capabilities.
 
 Finally, **a user (also referred to as a client, terminal or workstation) is any other computer on the network that is served information or passes along information to be served to others.** The things that they do on their own computer are local relative to other computers on the network. The terms 'local' and 'remote' are therefore commonly used to designate things that occur close to home base, and things that occur further away, respectively.
 
@@ -104,7 +102,7 @@ Raspberry Pi is an open source, inexpensive and low-power mini-computer that inc
 
 While you _could_ connect a display, keyboard and mouse to the Raspberry Pi and interface with it directly, **it's actually very common to run it 'headless' - by running commands via the command line or terminal over a network, without the use of a visual user interface**. We do this by establishing a SSH connection, by typing commands in a terminal window on a remote computer that are actually implemented on the local computer. The network setup enables all of this to happen.
 
-It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone inevitably does) you'll be back up and running in a matter of minutes!
+It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone does at some time or another) you'll be back up and running in a matter of minutes!
 
 So let's get started by installing Raspbian on a SD card. Start by inserting the SD card into your computer using an adapter (these tend to come with the microSD card if you just bought a new one, but makerspaces and photographers may have one lying around for you to borrow). Once it's in it will mount automatically and you should see it pop up on your finder or file explorer. It might have a different name, but be sure you are able to identify it and associate it with what you just inserted into your laptop or desktop computer.
 
@@ -475,8 +473,6 @@ Assuming that the Raspberry Pi has the static IP we assigned to it earlier, we c
 
 Everything that happens in this interface can be expressed as a logical SQL statement, which is passed on to the server and executed there as if it were done in the terminal, as demonstrated above. In MySQL Workbench this is explicitly shown to the user so that they may verify the actions that they take.
 
-[screenshot]
-
 It is also possible to generate your own interfaces and data entry forms using Microsoft Access, PHP or R. In broad terms, a connection to the database is established using the same information just listed above, and buttons next to text fields or table renderers are used to execute SQL statements that insert, update, select delete or otherwise query the database accordingly.
 
 For more information on how create data entry forms using Microsoft Access, PHP and R Shiny, please refer to the following links:
@@ -598,7 +594,9 @@ This configuration allows anyone to read, write, and execute files in a volume n
 
 Please refer to [this resource](https://www.raspberrypi.org/magpi/samba-file-server/) for further information, as well as the [Samba documentation](https://www.samba.org/samba/docs/) in order to set up usernames and passwords. The method just described allows free-for-all access, and it should be communicated to users that they can add, delete or modify any file in the shared directory, for better or worse. You may feel inclined to schedule automated backups of your shared drive to yet another connected drive, though this may congest the network and occupy lots of disk space, depending on the size of the shared directory. You may wish to schedule such backups during off-hours, when volumes of traffic across the network are expected to be low.
 
-#### Further Reading
-https://www.raspberrypi.org/documentation/linux/usage/commands.md
+### Discussion
+These guides and workflows are meant to emphasize the open-ended opportunities that 3D printing and low-power portable computing afford. They are not definitive instructions to be copied and pasted to obtain the same result, but instead should be considered as ideas to tinker with. To meet the expectations of stakeholders involved in a project, it will be necessary to read the room and get others involved in the making process, in ways that meet their needs and capabilities. The maker community is generally very friendly supportive; help is only a google search away.
 
+### Further Reading
+[bibliography / reading list goes here]
 
