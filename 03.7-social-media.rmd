@@ -5,3 +5,129 @@
 ### discussion
 
 ### exercises
+
+We're going to mine Twitter for tweets, photos, etc, connected to digital archaeology.
+
+This requires two things:
+
+1. a twitter account
+2. python installed on your machine
+
+But - we'll use a virtual computer that already has Python and the `Twarc` (TWitter ARChiver) package already installed. Twarc was created by Ed Summers, who is heading a project called [Documenting the Now](https://www.docnow.io/) to create the tools necessary to keep track of all the ways our media are disseminating (and distorting!) the truth. It's a rapid-response suite of tools to capture events as they happen.
+
+What we're going to do is set up some credentials with Twitter that give you access to the underlying data of the tweets. Then, the Twarc packages has a bunch of functions built in that lets you search and archive tweets.
+
+## Part One: Setting up your Twitter Credentials
+
+:::warning
+**update oct 12** it seems that Twitter now requires some kind of developer authentication process now. So the instructions below might have extra steps. If that's the case, no problem, I'll give you my consumer secret/key
+:::
+
+**READ THROUGH FIRST, THEN START**
+
+1. First of all, you need to set up a Twitter account, if you haven't already got one (Go to [twitter.com](http://twitter.com). Do so, but make sure to minimize any personal information that is exposed. For instance, don't make your handle the same as your real name.
+
+    + Turn off geolocation. Do not give your actual location in the profile.
+
+    + View the settings, and make sure all of the privacy settings are dialed down. For the time being, you do have to associate a cell phone number with your account. You can delete that once you've done the next step.
+
+2. Your professor will need to set themselves up as a 'developer' on Twitter. They should go to the [Twitter apps page - https://developer.twitter.com/](https://developer.twitter.com/) and apply. This process will involve giving information about _why_ they wish to be a developer. Twitter has guidance on the [Twitter for Education](https://developer.twitter.com/en/docs/basics/developer-portal/guides/twitter-for-education.html) about how to do this. It will take about 24 hrs for a new developer account to get processed and set up.
+
+3. Once that process is complete, go to the new application page to create a new 'app'. Give the app a name like `my-twarc` or similar. For website, use a website domain that you control.
+
+4. Continue on to the next page (tick off the box saying you’ve read the developer code of behaviour). This next page shows you all the details about your new application.
+
+5. Click on the ‘Keys and Access Tokens’ tab.
+
+6. Copy the consumer key, the consumer secret to a text file.
+
+7. Click on the ‘create access tokens’ button at the bottom of the page. This generates an access token and an access secret.
+
+8. Copy those to your text file, save it. **Do not put this file in your repo or leave it online anywhere**. Otherwise, a person can impersonate you!
+
+![](http://i.imgur.com/mM4hZNN.png)
+
+---
+
+## Part Two for Students: Firing Up Your Virtual Computer
+
+1. _Right-click_ and select 'open in new tab' this: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/o-date/social-media-work/master)
+
+2. Wait. It is setting up your new virtual computer. When it's loaded up, it will look like this:
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304640402-48607.png)
+
+3. Click the 'New' button, and select 'Terminal'. You should see this:
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304810966-61987.png)
+
+**WARNING. You have to interact with the virtual computer - type a command, click on something - within ten minutes or it shuts down and you lose everything**.
+
+**Pro tip** you can always type `pwd` into the terminal as a way of keeping the thing alive. This command Prints the Working Directory, eg, tells you what folder you're in.
+
+4. Type the command: `twarc configure`
+
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304902569-2152.png
+)
+
+And in the next screenshot, read the annotations from top to bottom:
+
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305146992-49673.png)
+
+But where is this 'displayed pin'? It's in the window in your browser where the 'authenticate twitter?' dialogue was displayed. Instead of the twitter page, the URL the professor entered for the app in part one step 3 has now been loaded and the information you need is indicated with `oauth_token=`. **You need the bit after the `=` sign**. 
+
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305692926-702.png)
+
+It'll look something like this: `-bBafl42aabB...` etc, a long string of numbers and letters. Copy that.
+
+Then paste it in:
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305848359-8369.png)
+
+And you're ready to data mine twitter!
+
+## Part Three: Find some data
+
+On the [Twarc readme page](https://github.com/DocNow/twarc) there are examples of how to use twarc to search for information.
+
+If you typed in `twarc search digiarch` and hit return, the terminal window would fill with tweet metadata and data (Here's [a video of this in action searching for user 'electricarchaeo'](https://screencast-o-matic.com/watch/cF6lVjY05K)). But *this is only the last week or so of information!*. You can save this information to a file instead of your terminal window like so:
+
+`twarc search digiarch > digiarch.jsonl`  (that's an 'el' at the end of .json, meaing 'javascript object notation lines' format.)
+
+If you then right-click on the 'jupyter' logo at the top of the screen and open the link in a new window, you'll be back at the file explorer. One of the files listed will be the new `digiarch.jsonl` file you made:
+
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539306896907-33928.png)
+
+So what can we do with this information? Quite a lot, but for now, let's make a basic wordcloud of the text of the tweets.
+
+We're going to need some utilities that Ed Summer has written, some extra python programs that can work with this information. Back in the terminal window, type the following:
+
+`git clone https://github.com/DocNow/twarc`
+
+This tells the `git` program that's already installed to go to github and get the source code for Twarc. One of the folders it is going to grab is called `utils` and that has the utility program for making a word cloud that we will use.
+
+So we'll type in the location and name of the program we want to use, followed by the data to operate on, followed by the name of the output file we want to create, like so:
+
+`twarc/utils/wordcloud.py digiarch.jsonl > wordcloud.html`
+
+And when you press enter, nothing seems to happen. But go back to the list of files (right-click the jupyter logo, open in new tab) and one of the files listed will be `wordcloud.html`. Click on it...
+
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539307355837-46159.png)
+
+(If you reload the page, the word-cloud will regenerate, with different colours, and the words in positions.)
+
+## Download the data you collected.
+
+Once this virtual computer shuts down, all of that data you collected will be lost. Click on the jupyter logo, select the files you want to keep, and hit download:
+
+![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539307991802-92070.png)
+
+Depending on your browser, you might get a warning, asking if you're sure you want to download. Say yes.
+
+## Other things you could do
+
+Descriptions of what the other utilities do can be found on the [twarc page](https://github.com/DocNow/twarc).
+
+Go, play! Once you've got that jsonl file, you could convert it to csv and then import it into a spreadsheet file. This [website](https://json-csv.com/) can do that for you. Warning: there's a 1 mb limit for using that tool. If your data is too big, you'll need to find something - a bit of code, a utility- that you can use on the command line (maybe [this](https://medium.com/@gabrielpires/how-to-convert-a-json-file-to-csv-python-script-a9ff0a3f906e)). 
+With a bit of effort, you can make a network graph of who responds to who. Or explore tweeting by gender. Or map tweets. Or... or... or.
+
+Probably the easiest thing you could do, once you've converted to csv (again, [this site can do that](https://json-csv.com/)), is to copy the column of tweet text itself into say [Voyant](http://voyant-tools.org). Why not give that a try? 
+
+What you do really depends on what kinds of questions you're hoping to answer. Now that you have access to the firehose of data that is Twitter, what kinds of things might you like to know? How do people talk about archaeology? 

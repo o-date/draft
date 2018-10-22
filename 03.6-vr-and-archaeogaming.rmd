@@ -2,7 +2,7 @@
 
 <div class = rmdcaution> _This section is under development_. </div>
 
-In the 1980’s during the hype of futuristic movies like Tron (the original - date), War Games (date) and Lawnmower Man (date) in which virtual reality played a key role in transporting characters and audiences into an all immersive virtual space, the notion of Virtual Archaeology was born, or more specifically, coined. Virtual Archaeology saw its beginnings in what is now Computational Archaeology, or basically, the use of computer science in archaeology. As it is today, and very much represented within this textbook, computer archaeology is divided into two distinct fields; a) the use of mathematical data to analyze and predict archaeological information and b) the visualization of that data into 2D, 3D and 3D printed (re)visualizations, which are representational of the known and constructed knowledge archaeologists create when we analyzing the context, landscape and time stratification of an archaeological site. When archaeologist Paul Reilly coined the term in 1987, before the widespread introduction of personal computers, his intent was to bring to light that visualizing archaeological data beyond just graphs and charts, helped to enhance and communicate the narratives buried within the archaeological sites we excavate and the knowledge we were constructing through the analysis of those limited data sets. The key however to Reilly’s notion was that the raw, scientific, archaeological data, however scarce, still needed to be the starting point of the virtual representation.
+In the 1980’s during the hype of futuristic movies like Tron (the original - 1982), War Games (1983) and Lawnmower Man (1992) in which virtual reality played a key role in transporting characters and audiences into an all immersive virtual space, the notion of Virtual Archaeology was born, or more specifically, coined. Virtual Archaeology saw its beginnings in what is now Computational Archaeology, or basically, the use of computer science in archaeology. As it is today, and very much represented within this textbook, computer archaeology is divided into two distinct fields; a) the use of mathematical data to analyze and predict archaeological information and b) the visualization of that data into 2D, 3D and 3D printed (re)visualizations, which are representational of the known and constructed knowledge archaeologists create when we analyzing the context, landscape and time stratification of an archaeological site. When archaeologist Paul Reilly coined the term in 1987, before the widespread introduction of personal computers, his intent was to bring to light that visualizing archaeological data beyond just graphs and charts, helped to enhance and communicate the narratives buried within the archaeological sites we excavate and the knowledge we were constructing through the analysis of those limited data sets. The key however to Reilly’s notion was that the raw, scientific, archaeological data, however scarce, still needed to be the starting point of the virtual representation.
 
 In this chapter, we will explore the theory and method of virtual archaeology and how it relates to the broader notion of Digital Archaeology.
 
@@ -47,19 +47,19 @@ Called “archaeological cabling”, Alyson Wylie, an archaeologist who has spec
 
 ### Phenomenology and Virtual Archaeology
 
-blah
-blah
+_to come._
 
 ### Lasting Considerations
 
-blah
-blah
+_to come._
 
 ### Creative Disruption in Archaeology
 
+_to come._
+
 ### Exercises
 
-blah
+_to come._
 
 ## Archaeogaming
 
