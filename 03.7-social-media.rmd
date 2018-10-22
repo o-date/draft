@@ -45,19 +45,19 @@ What we're going to do is set up some credentials with Twitter that give you acc
 
 8. Copy those to your text file, save it. **Do not put this file in your repo or leave it online anywhere**. Otherwise, a person can impersonate you!
 
-![](http://i.imgur.com/mM4hZNN.png)
+![](images/mM4hZNN.png)
 
 ---
 
 ## Part Two for Students: Firing Up Your Virtual Computer
 
-1. _Right-click_ and select 'open in new tab' this: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/o-date/social-media-work/master)
+1. _Right-click_ and select 'open in new tab' this: [![Binder](images/badge.png)](https://mybinder.org/v2/gh/o-date/social-media-work/master)
 
 2. Wait. It is setting up your new virtual computer. When it's loaded up, it will look like this:
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304640402-48607.png)
+![](images/1539304640402-48607.png)
 
 3. Click the 'New' button, and select 'Terminal'. You should see this:
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304810966-61987.png)
+![](images/1539304810966-61987.png)
 
 **WARNING. You have to interact with the virtual computer - type a command, click on something - within ten minutes or it shuts down and you lose everything**.
 
@@ -65,21 +65,20 @@ What we're going to do is set up some credentials with Twitter that give you acc
 
 4. Type the command: `twarc configure`
 
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304902569-2152.png
-)
+![](images/1539304902569-2152.png)
 
 And in the next screenshot, read the annotations from top to bottom:
 
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305146992-49673.png)
+![](images/1539305146992-49673.png)
 
 But where is this 'displayed pin'? It's in the window in your browser where the 'authenticate twitter?' dialogue was displayed. Instead of the twitter page, the URL the professor entered for the app in part one step 3 has now been loaded and the information you need is indicated with `oauth_token=`. **You need the bit after the `=` sign**. 
 
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305692926-702.png)
+![](images/1539305692926-702.png)
 
 It'll look something like this: `-bBafl42aabB...` etc, a long string of numbers and letters. Copy that.
 
 Then paste it in:
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305848359-8369.png)
+![](images/1539305848359-8369.png)
 
 And you're ready to data mine twitter!
 
@@ -93,7 +92,7 @@ If you typed in `twarc search digiarch` and hit return, the terminal window woul
 
 If you then right-click on the 'jupyter' logo at the top of the screen and open the link in a new window, you'll be back at the file explorer. One of the files listed will be the new `digiarch.jsonl` file you made:
 
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539306896907-33928.png)
+![](images/1539306896907-33928.png)
 
 So what can we do with this information? Quite a lot, but for now, let's make a basic wordcloud of the text of the tweets.
 
@@ -109,7 +108,7 @@ So we'll type in the location and name of the program we want to use, followed b
 
 And when you press enter, nothing seems to happen. But go back to the list of files (right-click the jupyter logo, open in new tab) and one of the files listed will be `wordcloud.html`. Click on it...
 
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539307355837-46159.png)
+![](images/1539307355837-46159.png)
 
 (If you reload the page, the word-cloud will regenerate, with different colours, and the words in positions.)
 
@@ -117,7 +116,7 @@ And when you press enter, nothing seems to happen. But go back to the list of fi
 
 Once this virtual computer shuts down, all of that data you collected will be lost. Click on the jupyter logo, select the files you want to keep, and hit download:
 
-![](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539307991802-92070.png)
+![](images/1539307991802-92070.png)
 
 Depending on your browser, you might get a warning, asking if you're sure you want to download. Say yes.
 
