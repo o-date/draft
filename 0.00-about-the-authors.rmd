@@ -34,7 +34,8 @@ Andrew Reinhard literally wrote the book on video game archaeology: Archaeogamin
 
 ### Kate Ellenberger {-}
 
-[Kate Ellenberger](http://kateellenberger.com/) has just completed her PhD at Binghamton University, State University of New York, on community based archaeologies. Her background is in public outreach, museum work, archaeological mapping and databases, and she actively consults on public and field projects. 
+[Kate Ellenberger](http://kateellenberger.com/) is a consulting public and digital archaeologist. She received her PhD in Anthropology from Binghamton University in 2018 for her dissertation examining the community and institutional stakeholders that have influenced public archaeology practice in the United States. Her current work focuses on the theory and practice of self-evaluation in public archaeology.
+
 
 ### Zack Batist {-}
 [Zack Batist](https://www.zackbatist.github.io) is a PhD student at the University of Toronto's Faculty of Information, where his research focuses on the ways in which archaeological practices – in their immense variety and scope – are implemented as part of a broad continuum of work that is inherently interdisciplinary and cooperative in nature. He is also interested in the critical evaluation of open data initiatives and the development of information infrastructures across and among disciplines, as well as public perceptions of archaeology and the representation of archaeology in science fiction, popular media, professional politics and public policy. He also actively tinkers with various computational tools and methods, ranging across the general domains of database management, GIS, statistical computing, network analysis, web development and server administration. Some ramblings and code can be found on [github](https://www.github.com/zackbatist) and [twitter](https://www.twitter.com/mtl_zack).

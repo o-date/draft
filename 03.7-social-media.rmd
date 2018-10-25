@@ -2,6 +2,15 @@
 
 <div class = rmdcaution> _This section is under development_. </div>
 
+Social media - that is to say, websites that facilitate quick posts that are pushed into other users' feeds (and so we can continue to include 'blogs') - are nominally thought of in archaeology as a vector for disseminating information _about_ archaeology. However, creative use of social media can make social media a location for _doing_ archaeology. On some platforms, autonomous agents impersonate humans or are other ways implicated in _shaping_ opinions or fostering/promoting points of view, and so their code and actions are entirely appropriate objects for archaeological study. Indeed, one can make the argument that the affordances of the platform naturally distance us from our humanity, and make us perform more bot-like interactions (which one of us argued in the first [Public Archaeology Twitter Conference](https://shawngraham.github.io/talk/bots-of-archaeology/), an act of meta-archaeology.)
+
+day of archaeology article; lorna richardson body of work
+
+- how to be professional on social media
+  - sara perry article
+- how to fact check (four moves)
+- bots: see creativity section
+
 ### discussion
 
 ### exercises
@@ -17,7 +26,7 @@ But - we'll use a virtual computer that already has Python and the `Twarc` (TWit
 
 What we're going to do is set up some credentials with Twitter that give you access to the underlying data of the tweets. Then, the Twarc packages has a bunch of functions built in that lets you search and archive tweets.
 
-## Part One: Setting up your Twitter Credentials
+#### Part One: Setting up your Twitter Credentials
 
 :::warning
 **update oct 12** it seems that Twitter now requires some kind of developer authentication process now. So the instructions below might have extra steps. If that's the case, no problem, I'll give you my consumer secret/key
@@ -49,7 +58,7 @@ What we're going to do is set up some credentials with Twitter that give you acc
 
 ---
 
-## Part Two for Students: Firing Up Your Virtual Computer
+#### Part Two for Students: Firing Up Your Virtual Computer
 
 1. _Right-click_ and select 'open in new tab' this: [![Binder](images/badge.png)](https://mybinder.org/v2/gh/o-date/social-media-work/master)
 
@@ -82,7 +91,7 @@ Then paste it in:
 
 And you're ready to data mine twitter!
 
-## Part Three: Find some data
+#### Part Three: Find some data
 
 On the [Twarc readme page](https://github.com/DocNow/twarc) there are examples of how to use twarc to search for information.
 
@@ -112,7 +121,7 @@ And when you press enter, nothing seems to happen. But go back to the list of fi
 
 (If you reload the page, the word-cloud will regenerate, with different colours, and the words in positions.)
 
-## Download the data you collected.
+#### Download the data you collected.
 
 Once this virtual computer shuts down, all of that data you collected will be lost. Click on the jupyter logo, select the files you want to keep, and hit download:
 
@@ -120,7 +129,7 @@ Once this virtual computer shuts down, all of that data you collected will be lo
 
 Depending on your browser, you might get a warning, asking if you're sure you want to download. Say yes.
 
-## Other things you could do
+#### Other things you could do
 
 Descriptions of what the other utilities do can be found on the [twarc page](https://github.com/DocNow/twarc).
 
