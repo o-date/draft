@@ -80,7 +80,7 @@ Let's imagine that you would like to create a bot that speaks with the voice of 
 
 Now, let's look at how these sentences have been constructed. We are going to replace words and phrases with _symbols_ so that we can regenerate the original sentences. There are a number of sentences that being with 'I'. We can begin to think of an 'being' _symbol_:
 
-```
+```bash
 "being": "am a plant","am begging you","am so lonely","turned towards the sun"
 ```
 
@@ -88,7 +88,7 @@ This notation is saying to us that the symbol "being" can be replaced by (or is 
 
 We can mix symbols and text, in our bot. If we tell the bot to start with the word "I", we can insert the _symbol_ 'being' after it and complete the phrase with "am a plant" or "turned towards the sun" and the sentence will make _grammatical_ sense. Let's build another symbol; perhaps we call it 'placewhere':
 
-```
+```bash
 "placewhere": "in a pot","on the windowsill","fallen over"
 ```
 
@@ -96,7 +96,7 @@ We can mix symbols and text, in our bot. If we tell the bot to start with the wo
 
 Now, in our sentences from our brainstorm, we never used the phrase, 'on the windowsill', but once we identified 'in a pot', other potential equivalent ideas jump out. Our bot will eventually use these _symbols_ to make sentences. The symbols - 'being', 'placewhere' - are like our madlibs when they asked for a list of nouns, adverbs and so on. Imagine then we pass the following to our bot:
 
-```
+```bash
 "I #being# #placewhere#"
 ```
 
@@ -219,7 +219,7 @@ In the [notebook](https://mybinder.org/v2/gh/o-date/sonification/master) on soni
 
 The data are represented in json:
 
-```
+```JSON
 my_data = [
     {'event_date': datetime(1792,6,8), 'magnitude': 3.4},
     {'event_date': datetime(1800,3,4), 'magnitude': 3.2},
@@ -234,7 +234,7 @@ The name of the second value here is 'magnitude', but it could be anything - cou
 
 This is not as big a problem as it first may appear. The actual calendar date is not important; it's the internal relationship that matters. That is to say, we're interested in the evolution over time as represented by the evolution of the sonification as we listen to it. In which case, say we had the following data we wanted to sonify:
 
-```
+```JSON
 Phase 1: 234 sherds of pottery A
 Phase 2a: 120 sherds of pottery A
 Phase 2b: 45 sherds of pottery A
@@ -248,7 +248,7 @@ Phase 3: 87 sherds of pottery B
 
 and we know that there are approximately 20 years between Phases 1 and 3, for pottery A we could express this like so:
 
-```
+```JSON
 my_data = [
     {'event_date': datetime(1010,1,1), 'magnitude': 234},
     {'event_date': datetime(1020,1,1), 'magnitude': 120},

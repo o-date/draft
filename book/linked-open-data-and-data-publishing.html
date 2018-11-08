@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
   <meta name="twitter:image" content="images/brandon-green-321795-unsplash.jpg" />
 
-<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, &amp; Beth Compton">
+<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
 
 
-<meta name="date" content="2018-10-26">
+<meta name="date" content="2018-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,7 @@
 
 
 <script src="https://hypothes.is/embed.js" async></script>
+<link rel="stylesheet" href="css/custom.css">
 
 
 <style type="text/css">
@@ -305,9 +306,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="linked-open-data-and-data-publishing" class="section level2">
 <h2><span class="header-section-number">2.4</span> Linked Open Data and Data Publishing</h2>
-<p>huggett, costopoulos discussion on desireability or not of different kinds of silos</p>
-<p>linked open data one way of having cake and eating too</p>
-<p>difficulties in effecting this vision</p>
+<div class="rmdcaution">
+<em>This section is under development</em>.
+</div>
+<ul>
+<li><p>huggett, costopoulos discussion on desireability or not of different kinds of silos</p></li>
+<li><p>linked open data one way of having cake and eating too</p></li>
+<li><p>difficulties in effecting this vision</p></li>
+</ul>
 <p>While many databases, services, or museums might expose their data via a web API, there can be limitations. Matthew Lincoln has an excellent tutorial at <a href="https://programminghistorian.org/en/lessons/graph-databases-and-SPARQL">The Programming Historian</a> that walks us through some of these differences, but the key one is in the way the data is represented. When data is described using a ‘Resource Description Framework’, RDF, the resource - the ‘thing’- is described via a series of relationships, rather than as rows in a table or keys having values.</p>
 <p>Information is in the relationships. It’s a network. It’s a <em>graph</em>. Thus, every ‘thing’ in this graph can have its own <em>uniform resource identifier</em> (URI) that lives as a location on the internet. Information can then be created by making <em>statements</em> that use these URIs, similarly to how English grammar creates meaning: subject verb object. Or, in RDF-speak, ‘subject predicate object’, also known as a <em>triple</em>. In this way, data in <em>different</em> places can be linked together by referencing the elements they have in common. This is Linked Open Data (LOD). The access point for interrogating LOD is called an ‘endpoint’.</p>
 <p>Finally, <em>SPARQL</em> is an acronymn for SPARQL Protocol and RDF Query Language (yes, it’s one of <em>those</em> kinds of acronyms).</p>
@@ -360,7 +366,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/02.3-linked-open-data-and-data-publishing.rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf", "odate.epub"],
+"download": null,
 "toc": {
 "collapse": "section",
 "number_sections": null

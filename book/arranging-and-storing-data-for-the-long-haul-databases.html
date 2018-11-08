@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
   <meta name="twitter:image" content="images/brandon-green-321795-unsplash.jpg" />
 
-<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, &amp; Beth Compton">
+<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
 
 
-<meta name="date" content="2018-10-26">
+<meta name="date" content="2018-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,7 @@
 
 
 <script src="https://hypothes.is/embed.js" async></script>
+<link rel="stylesheet" href="css/custom.css">
 
 
 <style type="text/css">
@@ -334,55 +335,55 @@ To some degree, you might have less control of formatting when using plain text 
 <p><strong>JSON and XML</strong><br />
 While you likely won’t (and shouldn’t) input your research data directly into these formats from the beginning, many web resources rely on <a href="https://en.wikipedia.org/wiki/JSON">JSON (JavaScript Object Notation)</a> or <a href="https://en.wikipedia.org/wiki/XML">XML (Extensible Markup Language)</a> documents to store data. JSON and XML are formats for writing plain text documents in ways that allow computers (and people) to understand hierarchy and relationships between data.</p>
 <p>JSON looks like this (<a href="https://en.wikipedia.org/wiki/JSON">source</a>):</p>
-<pre><code>{
-  &quot;firstName&quot;: &quot;John&quot;,
-  &quot;lastName&quot;: &quot;Smith&quot;,
-  &quot;isAlive&quot;: true,
-  &quot;age&quot;: 27,
-  &quot;address&quot;: {
-    &quot;streetAddress&quot;: &quot;21 2nd Street&quot;,
-    &quot;city&quot;: &quot;New York&quot;,
-    &quot;state&quot;: &quot;NY&quot;,
-    &quot;postalCode&quot;: &quot;10021-3100&quot;
-  },
-  &quot;phoneNumbers&quot;: [
-    {
-      &quot;type&quot;: &quot;home&quot;,
-      &quot;number&quot;: &quot;212 555-1234&quot;
-    },
-    {
-      &quot;type&quot;: &quot;office&quot;,
-      &quot;number&quot;: &quot;646 555-4567&quot;
-    },
-    {
-      &quot;type&quot;: &quot;mobile&quot;,
-      &quot;number&quot;: &quot;123 456-7890&quot;
-    }
-  ],
-  &quot;children&quot;: [],
-  &quot;spouse&quot;: null
-}</code></pre>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;firstName&quot;</span><span class="fu">:</span> <span class="st">&quot;John&quot;</span><span class="fu">,</span>
+  <span class="dt">&quot;lastName&quot;</span><span class="fu">:</span> <span class="st">&quot;Smith&quot;</span><span class="fu">,</span>
+  <span class="dt">&quot;isAlive&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span>
+  <span class="dt">&quot;age&quot;</span><span class="fu">:</span> <span class="dv">27</span><span class="fu">,</span>
+  <span class="dt">&quot;address&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;streetAddress&quot;</span><span class="fu">:</span> <span class="st">&quot;21 2nd Street&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;city&quot;</span><span class="fu">:</span> <span class="st">&quot;New York&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;state&quot;</span><span class="fu">:</span> <span class="st">&quot;NY&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;postalCode&quot;</span><span class="fu">:</span> <span class="st">&quot;10021-3100&quot;</span>
+  <span class="fu">},</span>
+  <span class="dt">&quot;phoneNumbers&quot;</span><span class="fu">:</span> <span class="ot">[</span>
+    <span class="fu">{</span>
+      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;home&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;number&quot;</span><span class="fu">:</span> <span class="st">&quot;212 555-1234&quot;</span>
+    <span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span>
+      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;office&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;number&quot;</span><span class="fu">:</span> <span class="st">&quot;646 555-4567&quot;</span>
+    <span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span>
+      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;mobile&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;number&quot;</span><span class="fu">:</span> <span class="st">&quot;123 456-7890&quot;</span>
+    <span class="fu">}</span>
+  <span class="ot">]</span><span class="fu">,</span>
+  <span class="dt">&quot;children&quot;</span><span class="fu">:</span> <span class="ot">[]</span><span class="fu">,</span>
+  <span class="dt">&quot;spouse&quot;</span><span class="fu">:</span> <span class="kw">null</span>
+<span class="fu">}</span></code></pre></div>
 <p>XML looks like this (<a href="https://www.xmlfiles.com/examples/plant-catalog/">source</a>):</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO8859-1&quot; ?&gt;
-&lt;CATALOG&gt;
- &lt;PLANT&gt;
- &lt;COMMON&gt;Bloodroot&lt;/COMMON&gt;
- &lt;BOTANICAL&gt;Sanguinaria canadensis&lt;/BOTANICAL&gt;
- &lt;ZONE&gt;4&lt;/ZONE&gt;
- &lt;LIGHT&gt;Mostly Shady&lt;/LIGHT&gt;
- &lt;PRICE&gt;$2.44&lt;/PRICE&gt;
- &lt;AVAILABILITY&gt;031599&lt;/AVAILABILITY&gt;
- &lt;/PLANT&gt;
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;ISO8859-1&quot; <span class="kw">?&gt;</span>
+<span class="kw">&lt;CATALOG&gt;</span>
+ <span class="kw">&lt;PLANT&gt;</span>
+ <span class="kw">&lt;COMMON&gt;</span>Bloodroot<span class="kw">&lt;/COMMON&gt;</span>
+ <span class="kw">&lt;BOTANICAL&gt;</span>Sanguinaria canadensis<span class="kw">&lt;/BOTANICAL&gt;</span>
+ <span class="kw">&lt;ZONE&gt;</span>4<span class="kw">&lt;/ZONE&gt;</span>
+ <span class="kw">&lt;LIGHT&gt;</span>Mostly Shady<span class="kw">&lt;/LIGHT&gt;</span>
+ <span class="kw">&lt;PRICE&gt;</span>$2.44<span class="kw">&lt;/PRICE&gt;</span>
+ <span class="kw">&lt;AVAILABILITY&gt;</span>031599<span class="kw">&lt;/AVAILABILITY&gt;</span>
+ <span class="kw">&lt;/PLANT&gt;</span>
 
- &lt;PLANT&gt;
- &lt;COMMON&gt;Columbine&lt;/COMMON&gt;
- &lt;BOTANICAL&gt;Aquilegia canadensis&lt;/BOTANICAL&gt;
- &lt;ZONE&gt;3&lt;/ZONE&gt;
- &lt;LIGHT&gt;Mostly Shady&lt;/LIGHT&gt;
- &lt;PRICE&gt;$9.37&lt;/PRICE&gt;
- &lt;AVAILABILITY&gt;030699&lt;/AVAILABILITY&gt;
- &lt;/PLANT&gt;
-&lt;/CATALOG&gt;</code></pre>
+ <span class="kw">&lt;PLANT&gt;</span>
+ <span class="kw">&lt;COMMON&gt;</span>Columbine<span class="kw">&lt;/COMMON&gt;</span>
+ <span class="kw">&lt;BOTANICAL&gt;</span>Aquilegia canadensis<span class="kw">&lt;/BOTANICAL&gt;</span>
+ <span class="kw">&lt;ZONE&gt;</span>3<span class="kw">&lt;/ZONE&gt;</span>
+ <span class="kw">&lt;LIGHT&gt;</span>Mostly Shady<span class="kw">&lt;/LIGHT&gt;</span>
+ <span class="kw">&lt;PRICE&gt;</span>$9.37<span class="kw">&lt;/PRICE&gt;</span>
+ <span class="kw">&lt;AVAILABILITY&gt;</span>030699<span class="kw">&lt;/AVAILABILITY&gt;</span>
+ <span class="kw">&lt;/PLANT&gt;</span>
+<span class="kw">&lt;/CATALOG&gt;</span></code></pre></div>
 <!-- Make those archaeological examples -->
 <p>Note that you can see some code-like formatting, but you can still read the contents and get a feel for organization.</p>
 <p><strong>Relational databases</strong> A relational database consists of many different tables connected together with <em>relationships</em> that tell computers how things fit together. Most relational databases rely on SQL, or Structured Query Language, to run the show.</p>
@@ -447,7 +448,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/02.2-databases.rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf", "odate.epub"],
+"download": null,
 "toc": {
 "collapse": "section",
 "number_sections": null

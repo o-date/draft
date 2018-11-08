@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
   <meta name="twitter:image" content="images/brandon-green-321795-unsplash.jpg" />
 
-<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, &amp; Beth Compton">
+<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
 
 
-<meta name="date" content="2018-10-26">
+<meta name="date" content="2018-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,7 @@
 
 
 <script src="https://hypothes.is/embed.js" async></script>
+<link rel="stylesheet" href="css/custom.css">
 
 
 <style type="text/css">
@@ -329,94 +330,93 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>One way of experimenting with D3 is to use Mike Bostock’s <a href="http://bl.ocks.org">bl.ocks.org</a> service. This site shows off many different kinds of visualizations. To use it for yourself requires us to put our html, css, and json files somewhere where bl.ocks.org can find it - in this case, we will use a Github <a href="http://gist.github.com">gist</a>. A gist is part of the Github website that allows anyone to quickly post a code snippet online, with a url, for sharing. If we are logged in, then the gist ceases to be anonymous - for instance, Shawn’s gists are all at <a href="http://gist.github.com/shawngraham">gist.github.com/shawngraham</a>. To run a gist through bl.ocks.org, we copy the URL path <em>after</em> gist.github.com and paste it _after bl.ocks.org - hence Shawn’s gists could be visualized at <code>http://bl.ocks.org/shawngraham/&lt;string-of-random-letters-and-numbers-identifying-the-exact-gist</code>. A gist can have more than one file.</p>
 <p>On your own webserver, you would have an <code>index.html</code> file, a <code>style.css</code> file, and a data file, either in csv, tsv, or in json. Let’s build a simple bar chart with an interactive tool tip, that visualizes some pottery counts.</p>
 <p>Our pottery counts data is represented by the following .json file:</p>
-<pre><code>[
-  {&quot;PotteryType&quot;: &quot;Terra Sig&quot;,&quot;Count&quot;: 58},
-  {&quot;PotteryType&quot;: &quot;African Red Slip&quot;,&quot;Count&quot;: 81},
-  {&quot;PotteryTyp&quot;: &quot;Dressel24&quot;,&quot;Count&quot;: 39},
-  {&quot;PotteryType&quot;: &quot;Vernice Nera&quot;,&quot;Count&quot;: 80},
-  {&quot;PotteryType&quot;: &quot;Bipedalis Fragment&quot;,&quot;Count&quot;: 99}
-]</code></pre>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="ot">[</span>
+  <span class="fu">{</span><span class="dt">&quot;PotteryType&quot;</span><span class="fu">:</span> <span class="st">&quot;Terra Sig&quot;</span><span class="fu">,</span><span class="dt">&quot;Count&quot;</span><span class="fu">:</span> <span class="dv">58</span><span class="fu">}</span><span class="ot">,</span>
+  <span class="fu">{</span><span class="dt">&quot;PotteryType&quot;</span><span class="fu">:</span> <span class="st">&quot;African Red Slip&quot;</span><span class="fu">,</span><span class="dt">&quot;Count&quot;</span><span class="fu">:</span> <span class="dv">81</span><span class="fu">}</span><span class="ot">,</span>
+  <span class="fu">{</span><span class="dt">&quot;PotteryTyp&quot;</span><span class="fu">:</span> <span class="st">&quot;Dressel24&quot;</span><span class="fu">,</span><span class="dt">&quot;Count&quot;</span><span class="fu">:</span> <span class="dv">39</span><span class="fu">}</span><span class="ot">,</span>
+  <span class="fu">{</span><span class="dt">&quot;PotteryType&quot;</span><span class="fu">:</span> <span class="st">&quot;Vernice Nera&quot;</span><span class="fu">,</span><span class="dt">&quot;Count&quot;</span><span class="fu">:</span> <span class="dv">80</span><span class="fu">}</span><span class="ot">,</span>
+  <span class="fu">{</span><span class="dt">&quot;PotteryType&quot;</span><span class="fu">:</span> <span class="st">&quot;Bipedalis Fragment&quot;</span><span class="fu">,</span><span class="dt">&quot;Count&quot;</span><span class="fu">:</span> <span class="dv">99</span><span class="fu">}</span>
+<span class="ot">]</span></code></pre></div>
 <p>The next step is to create the style sheet. The one we’re going to use can be inspected <a href="https://gist.github.com/shawngraham/dc506c6be872625101a1163ad59e4d68#file-barchart-css">here</a>. A stylesheet describes how each element referred to in the html should be rendered. Can you work out which part of the stylesheet is governing the colour for our barchart? Which bit will take care of the axes?</p>
 <p>The final step is to create the html that will pull everything together. Because we’re going to use the tools in the D3 package to control how this all works, we have to tell this to the html. The opening of our HTML looks like this - see how we’re telling the brower where our css is, and where to find the D3? The D3 <em>could</em> live in, for instance, a folder on our own server, but here we’re going to use the most up-to-date version available at 3djs.org:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;head&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;barchart.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;script src=&quot;https://d3js.org/d3.v3.min.js&quot;&gt;&lt;/script&gt;
-     &lt;script src=&quot;d3.tip.v0.6.3.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+<span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+<span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;barchart.css&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+    <span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;https://d3js.org/d3.v3.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
+     <span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;d3.tip.v0.6.3.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
+<span class="kw">&lt;script&gt;</span></code></pre></div>
 <p>Next, we’re going to define a series of variables that will control or describe how we want the data to be displayed, and the kind of <em>interactivity</em> that our chart will have. The second script in the html code above calls a related package, ‘d3.tip’ by Justin Palmer. This is a small bundle that enables mouse-over tool-tips on the elements in our visualization. It’s not loading it from somewhere else on the web, but rather from the same location where the index.html file can be found.</p>
 <p>In the definition of the variables below, any that begin with <code>d3</code> are referring to the D3 package which was loaded by the <code>&lt;script&gt;</code>. For more on the wide variety of things D3 can do, we invite you to check out <a href="https://github.com/d3/d3/wiki/Tutorials">the D3 tutorials</a>.</p>
-<pre><code>var margin = {top: 40, right: 20, bottom: 30, left: 70},
-    width = 460 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="kw">var</span> margin <span class="op">=</span> <span class="op">{</span><span class="dt">top</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span> <span class="dt">right</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">bottom</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">left</span><span class="op">:</span> <span class="dv">70</span><span class="op">},</span>
+    width <span class="op">=</span> <span class="dv">460</span> <span class="op">-</span> <span class="va">margin</span>.<span class="at">left</span> <span class="op">-</span> <span class="va">margin</span>.<span class="at">right</span><span class="op">,</span>
+    height <span class="op">=</span> <span class="dv">500</span> <span class="op">-</span> <span class="va">margin</span>.<span class="at">top</span> <span class="op">-</span> <span class="va">margin</span>.<span class="at">bottom</span><span class="op">;</span>
 
-var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1);
+<span class="kw">var</span> x <span class="op">=</span> <span class="va">d3</span>.<span class="va">scale</span>.<span class="at">ordinal</span>()
+    .<span class="at">rangeRoundBands</span>([<span class="dv">0</span><span class="op">,</span> width]<span class="op">,</span> .<span class="dv">1</span>)<span class="op">;</span>
 
-var y = d3.scale.linear()
-    .range([height, 0]);
+<span class="kw">var</span> y <span class="op">=</span> <span class="va">d3</span>.<span class="va">scale</span>.<span class="at">linear</span>()
+    .<span class="at">range</span>([height<span class="op">,</span> <span class="dv">0</span>])<span class="op">;</span>
 
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient(&quot;bottom&quot;);
+<span class="kw">var</span> xAxis <span class="op">=</span> <span class="va">d3</span>.<span class="va">svg</span>.<span class="at">axis</span>()
+    .<span class="at">scale</span>(x)
+    .<span class="at">orient</span>(<span class="st">&quot;bottom&quot;</span>)<span class="op">;</span>
 
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient(&quot;left&quot;)
-    .ticks(10, &quot;&quot;);</code></pre>
+<span class="kw">var</span> yAxis <span class="op">=</span> <span class="va">d3</span>.<span class="va">svg</span>.<span class="at">axis</span>()
+    .<span class="at">scale</span>(y)
+    .<span class="at">orient</span>(<span class="st">&quot;left&quot;</span>)
+    .<span class="at">ticks</span>(<span class="dv">10</span><span class="op">,</span> <span class="st">&quot;&quot;</span>)<span class="op">;</span></code></pre></div>
 <p>This next variable contains the information telling the browser what to do if the user mouses-over one of the bars in our chart. When that happens, the browser is to turn the bar red and to display the value for that bar (which is held in d.Count - look at the JSON again. Do you see the ‘Count’ data? If you wanted to adapt this chart to show <em>weights</em> of the pottery, what might you have to change?)</p>
-<pre><code>var tip = d3.tip()
-  .attr(&#39;class&#39;, &#39;d3-tip&#39;)
-  .offset([-10, 0])
-  .html(function(d) {
-    return &quot;&lt;strong&gt;Count:&lt;/strong&gt; &lt;span style=&#39;color:red&#39;&gt;&quot; + d.Count + &quot;&lt;/span&gt;&quot;;
-  })
-var svg = d3.select(&quot;body&quot;).append(&quot;svg&quot;)
-    .attr(&quot;width&quot;, width + margin.left + margin.right)
-    .attr(&quot;height&quot;, height + margin.top + margin.bottom)
-  .append(&quot;g&quot;)
-    .attr(&quot;transform&quot;, &quot;translate(&quot; + margin.left + &quot;,&quot; + margin.top + &quot;)&quot;);
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="kw">var</span> tip <span class="op">=</span> <span class="va">d3</span>.<span class="at">tip</span>()
+  .<span class="at">attr</span>(<span class="st">&#39;class&#39;</span><span class="op">,</span> <span class="st">&#39;d3-tip&#39;</span>)
+  .<span class="at">offset</span>([<span class="op">-</span><span class="dv">10</span><span class="op">,</span> <span class="dv">0</span>])
+  .<span class="at">html</span>(<span class="kw">function</span>(d) <span class="op">{</span>
+    <span class="cf">return</span> <span class="st">&quot;&lt;strong&gt;Count:&lt;/strong&gt; &lt;span style=&#39;color:red&#39;&gt;&quot;</span> <span class="op">+</span> <span class="va">d</span>.<span class="at">Count</span> <span class="op">+</span> <span class="st">&quot;&lt;/span&gt;&quot;</span><span class="op">;</span>
+  <span class="op">}</span>)
+<span class="kw">var</span> svg <span class="op">=</span> <span class="va">d3</span>.<span class="at">select</span>(<span class="st">&quot;body&quot;</span>).<span class="at">append</span>(<span class="st">&quot;svg&quot;</span>)
+    .<span class="at">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> width <span class="op">+</span> <span class="va">margin</span>.<span class="at">left</span> <span class="op">+</span> <span class="va">margin</span>.<span class="at">right</span>)
+    .<span class="at">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> height <span class="op">+</span> <span class="va">margin</span>.<span class="at">top</span> <span class="op">+</span> <span class="va">margin</span>.<span class="at">bottom</span>)
+  .<span class="at">append</span>(<span class="st">&quot;g&quot;</span>)
+    .<span class="at">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;translate(&quot;</span> <span class="op">+</span> <span class="va">margin</span>.<span class="at">left</span> <span class="op">+</span> <span class="st">&quot;,&quot;</span> <span class="op">+</span> <span class="va">margin</span>.<span class="at">top</span> <span class="op">+</span> <span class="st">&quot;)&quot;</span>)<span class="op">;</span>
 
-svg.call(tip);</code></pre>
+<span class="va">svg</span>.<span class="at">call</span>(tip)<span class="op">;</span></code></pre></div>
 <p>Now we add the actual data:</p>
-<pre><code>d3.json(&quot;pottery.json&quot;, function(error, data) {
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="va">d3</span>.<span class="at">json</span>(<span class="st">&quot;pottery.json&quot;</span><span class="op">,</span> <span class="kw">function</span>(error<span class="op">,</span> data) <span class="op">{</span>
 
-  if (error) throw error;
+  <span class="cf">if</span> (error) <span class="cf">throw</span> error<span class="op">;</span>
 
-  x.domain(data.map(function(d) { return d.PotteryType; }));
-  y.domain([0, d3.max(data, function(d) { return d.Count; })]);</code></pre>
+  <span class="va">x</span>.<span class="at">domain</span>(<span class="va">data</span>.<span class="at">map</span>(<span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="va">d</span>.<span class="at">PotteryType</span><span class="op">;</span> <span class="op">}</span>))<span class="op">;</span>
+  <span class="va">y</span>.<span class="at">domain</span>([<span class="dv">0</span><span class="op">,</span> <span class="va">d3</span>.<span class="at">max</span>(data<span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="va">d</span>.<span class="at">Count</span><span class="op">;</span> <span class="op">}</span>)])<span class="op">;</span></code></pre></div>
 <p>We just tell it that the json data is in the <code>pottery.json</code> file. If that json file was on the web somewhere, we could just provide the url (as long as it ends in a json file!). Then we map the data in the json file to our x and y axes - PotteryType and Count. This mapping pushes that data to <code>d.PotteryType</code> and <code>d.Count</code>; anytime we need that data, we can now just refer to those variables.</p>
 <p>We finish up by pulling it all together:</p>
-<pre><code>  svg.append(&quot;g&quot;)
-      .attr(&quot;class&quot;, &quot;x axis&quot;)
-      .attr(&quot;transform&quot;, &quot;translate(0,&quot; + height + &quot;)&quot;)
-      .call(xAxis);
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">  <span class="va">svg</span>.<span class="at">append</span>(<span class="st">&quot;g&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;x axis&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;translate(0,&quot;</span> <span class="op">+</span> height <span class="op">+</span> <span class="st">&quot;)&quot;</span>)
+      .<span class="at">call</span>(xAxis)<span class="op">;</span>
 
-  svg.append(&quot;g&quot;)
-      .attr(&quot;class&quot;, &quot;y axis&quot;)
-      .call(yAxis)
-    .append(&quot;text&quot;)
-      .attr(&quot;transform&quot;, &quot;rotate(-90)&quot;)
-      .attr(&quot;y&quot;, -36)
-      .attr(&quot;dy&quot;, &quot;.71em&quot;)
-      .style(&quot;text-anchor&quot;, &quot;end&quot;)
-      .text(&quot;Count&quot;);
+  <span class="va">svg</span>.<span class="at">append</span>(<span class="st">&quot;g&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;y axis&quot;</span>)
+      .<span class="at">call</span>(yAxis)
+    .<span class="at">append</span>(<span class="st">&quot;text&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;rotate(-90)&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> <span class="op">-</span><span class="dv">36</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;dy&quot;</span><span class="op">,</span> <span class="st">&quot;.71em&quot;</span>)
+      .<span class="at">style</span>(<span class="st">&quot;text-anchor&quot;</span><span class="op">,</span> <span class="st">&quot;end&quot;</span>)
+      .<span class="at">text</span>(<span class="st">&quot;Count&quot;</span>)<span class="op">;</span>
 
-  svg.selectAll(&quot;.bar&quot;)
-      .data(data)
-    .enter().append(&quot;rect&quot;)
-      .attr(&quot;class&quot;, &quot;bar&quot;)
-      .attr(&quot;x&quot;, function(d) { return x(d.PotteryType); })
-      .attr(&quot;width&quot;, x.rangeBand())
-      .attr(&quot;y&quot;, function(d) { return y(d.Count); })
-      .attr(&quot;height&quot;, function(d) { return height - y(d.Count); })
-      .on(&#39;mouseover&#39;, tip.show)
-      .on(&#39;mouseout&#39;, tip.hide);
-});
-</code></pre>
+  <span class="va">svg</span>.<span class="at">selectAll</span>(<span class="st">&quot;.bar&quot;</span>)
+      .<span class="at">data</span>(data)
+    .<span class="at">enter</span>().<span class="at">append</span>(<span class="st">&quot;rect&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;bar&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="at">x</span>(<span class="va">d</span>.<span class="at">PotteryType</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> <span class="va">x</span>.<span class="at">rangeBand</span>())
+      .<span class="at">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="at">y</span>(<span class="va">d</span>.<span class="at">Count</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> height <span class="op">-</span> <span class="at">y</span>(<span class="va">d</span>.<span class="at">Count</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">on</span>(<span class="st">&#39;mouseover&#39;</span><span class="op">,</span> <span class="va">tip</span>.<span class="at">show</span>)
+      .<span class="at">on</span>(<span class="st">&#39;mouseout&#39;</span><span class="op">,</span> <span class="va">tip</span>.<span class="at">hide</span>)<span class="op">;</span>
+})<span class="op">;</span></code></pre></div>
 <p>You can see our gist that contains our interactive bar chart at <a href="https://gist.github.com/shawngraham/dc506c6be872625101a1163ad59e4d68" class="uri">https://gist.github.com/shawngraham/dc506c6be872625101a1163ad59e4d68</a> (interestingly, all the files in our gist are listed alphabetically. Scroll down to see all of the files). Let’s make this visualization live - pass the filepath to <a href="https://bl.ocks.org/" class="uri">https://bl.ocks.org/</a> to see the finished result!</p>
 <p>(That is, copy the bit <em>after</em> gist.github.com/ and paste it so that it’s now after bl.ocks.org in your browser’s address bar.)</p>
 </div>
@@ -426,27 +426,27 @@ svg.call(tip);</code></pre>
 <p>This walkthrough has only barely skimmed the surface of what D3 can do. But now that you know how the different pieces fit together, you can try fitting your own data into the visualizations that <em>other</em> people have made. This can be frustrating - you really have to know how your data is structured, and you must read closely the index.html files of the visualization you want to repurpose to make sure that the code is calling the data correctly. For instance, in our example above, Graham kept getting an error where the bars themselves would not display. He chased this error down by right-clicking on the barchart and selecting ‘inspect element’. This opens the browser’s inspector tool, and allows us to see what errors are occuring in our html. In Graham’s case, the error message was <code>error invalid value for rect attribute height NaN</code>.</p>
 <p>Error messages are often inscrutable. Copying the error into a Google search usually finds <em>other</em> people who have had the same error and who have posted their problem to sites like <a href="http://stackoverflow.com">Stack Overflow</a>, a coding question and answer site. Reading the responses, graham realized that when he repurposed the example from <a href="http://www.knowstack.com/different-ways-of-loading-a-d3js-data/">this walkthrough</a> he made the following mistake. Can you spot it?</p>
 <p>Original code:</p>
-<pre><code>svg.selectAll(&quot;.bar&quot;)
-      .data(data)
-    .enter().append(&quot;rect&quot;)
-      .attr(&quot;class&quot;, &quot;bar&quot;)
-      .attr(&quot;x&quot;, function(d) { return x(d.Employee); })
-      .attr(&quot;width&quot;, x.rangeBand())
-      .attr(&quot;y&quot;, function(d) { return y(d.Salary); })
-      .attr(&quot;height&quot;, function(d) { return height - y(d.Salary); })
-      .on(&#39;mouseover&#39;, tip.show)
-      .on(&#39;mouseout&#39;, tip.hide);</code></pre>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="va">svg</span>.<span class="at">selectAll</span>(<span class="st">&quot;.bar&quot;</span>)
+      .<span class="at">data</span>(data)
+    .<span class="at">enter</span>().<span class="at">append</span>(<span class="st">&quot;rect&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;bar&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="at">x</span>(<span class="va">d</span>.<span class="at">Employee</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> <span class="va">x</span>.<span class="at">rangeBand</span>())
+      .<span class="at">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="at">y</span>(<span class="va">d</span>.<span class="at">Salary</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> height <span class="op">-</span> <span class="at">y</span>(<span class="va">d</span>.<span class="at">Salary</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">on</span>(<span class="st">&#39;mouseover&#39;</span><span class="op">,</span> <span class="va">tip</span>.<span class="at">show</span>)
+      .<span class="at">on</span>(<span class="st">&#39;mouseout&#39;</span><span class="op">,</span> <span class="va">tip</span>.<span class="at">hide</span>)<span class="op">;</span></code></pre></div>
 <p>Graham’s mistake:</p>
-<pre><code>  svg.selectAll(&quot;.bar&quot;)
-      .data(data)
-    .enter().append(&quot;rect&quot;)
-      .attr(&quot;class&quot;, &quot;bar&quot;)
-      .attr(&quot;x&quot;, function(d) { return x(d.PotteryType); })
-      .attr(&quot;width&quot;, x.rangeBand())
-      .attr(&quot;y&quot;, function(d) { return y(d.PotteryType); })
-      .attr(&quot;height&quot;, function(d) { return height - y(d.Count); })
-      .on(&#39;mouseover&#39;, tip.show)
-      .on(&#39;mouseout&#39;, tip.hide);</code></pre>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">  <span class="va">svg</span>.<span class="at">selectAll</span>(<span class="st">&quot;.bar&quot;</span>)
+      .<span class="at">data</span>(data)
+    .<span class="at">enter</span>().<span class="at">append</span>(<span class="st">&quot;rect&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;bar&quot;</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="at">x</span>(<span class="va">d</span>.<span class="at">PotteryType</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> <span class="va">x</span>.<span class="at">rangeBand</span>())
+      .<span class="at">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> <span class="at">y</span>(<span class="va">d</span>.<span class="at">PotteryType</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> <span class="kw">function</span>(d) <span class="op">{</span> <span class="cf">return</span> height <span class="op">-</span> <span class="at">y</span>(<span class="va">d</span>.<span class="at">Count</span>)<span class="op">;</span> <span class="op">}</span>)
+      .<span class="at">on</span>(<span class="st">&#39;mouseover&#39;</span><span class="op">,</span> <span class="va">tip</span>.<span class="at">show</span>)
+      .<span class="at">on</span>(<span class="st">&#39;mouseout&#39;</span><span class="op">,</span> <span class="va">tip</span>.<span class="at">hide</span>)<span class="op">;</span></code></pre></div>
 <p>It was very frustrating! It wasn’t until he took a break and looked at the code again with fresh eyes that he spotted it. Have you?</p>
 </div>
 <div id="exercises-14" class="section level3">
@@ -499,7 +499,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/03.2-d3-documents.rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf", "odate.epub"],
+"download": null,
 "toc": {
 "collapse": "section",
 "number_sections": null

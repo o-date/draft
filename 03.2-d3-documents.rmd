@@ -28,7 +28,7 @@ On your own webserver, you would have an `index.html` file, a `style.css` file, 
 
 Our pottery counts data is represented by the following .json file:
 
-```
+```JSON
 [
   {"PotteryType": "Terra Sig","Count": 58},
   {"PotteryType": "African Red Slip","Count": 81},
@@ -42,7 +42,7 @@ The next step is to create the style sheet. The one we're going to use can be in
 
 The final step is to create the html that will pull everything together. Because we're going to use the tools in the D3 package to control how this all works, we have to tell this to the html. The opening of our HTML looks like this - see how we're telling the brower where our css is, and where to find the D3? The D3 _could_ live in, for instance, a folder on our own server, but here we're going to use the most up-to-date version available at 3djs.org:
 
-```
+```html
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
@@ -58,7 +58,7 @@ Next, we're going to define a series of variables that will control or describe 
 
 In the definition of the variables below, any that begin with `d3` are referring to the D3 package which was loaded by the `<script>`. For more on the wide variety of things D3 can do, we invite you to check out [the D3 tutorials](https://github.com/d3/d3/wiki/Tutorials).
 
-```
+```js
 var margin = {top: 40, right: 20, bottom: 30, left: 70},
     width = 460 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -81,7 +81,7 @@ var yAxis = d3.svg.axis()
 
 This next variable contains the information telling the browser what to do if the user mouses-over one of the bars in our chart. When that happens, the browser is to turn the bar red and to display the value for that bar (which is held in d.Count - look at the JSON again. Do you see the 'Count' data? If you wanted to adapt this chart to show _weights_ of the pottery, what might you have to change?)
 
-```
+```js
 var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
@@ -99,7 +99,7 @@ svg.call(tip);
 
 Now we add the actual data:
 
-```
+```js
 d3.json("pottery.json", function(error, data) {
 
   if (error) throw error;
@@ -112,7 +112,7 @@ We just tell it that the json data is in the `pottery.json` file. If that json f
 
 We finish up by pulling it all together:
 
-```
+```js
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -155,7 +155,7 @@ This walkthrough has only barely skimmed the surface of what D3 can do. But now 
 Error messages are often inscrutable. Copying the error into a Google search usually finds _other_ people who have had the same error and who have posted their problem to sites like [Stack Overflow](http://stackoverflow.com), a coding question and answer site. Reading the responses, graham realized that when he repurposed the example from [this walkthrough](http://www.knowstack.com/different-ways-of-loading-a-d3js-data/) he made the following mistake. Can you spot it?
 
 Original code:
-```
+```js
 svg.selectAll(".bar")
       .data(data)
     .enter().append("rect")
@@ -169,7 +169,7 @@ svg.selectAll(".bar")
 ```
 
 Graham's mistake:
-```
+```js
   svg.selectAll(".bar")
       .data(data)
     .enter().append("rect")

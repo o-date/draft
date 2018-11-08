@@ -116,7 +116,7 @@ disclaimer: MY modelling strategy is highly focused in theory-building (general,
 
 ![andros-first-diagram](images/andros-diagram.png)
 
-```
+```r
 library(DiagrammeR)
 grViz("diagrams/boxes.dot")
 ```
@@ -146,7 +146,7 @@ Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
 - Simulations and experiment design
 - Analysis and display of results (R example)
 
-```
+```r
 plot(1:10, 1:10)
 ```
 ![andros-second-diagram](images/andros-2.png)

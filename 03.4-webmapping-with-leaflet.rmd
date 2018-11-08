@@ -16,7 +16,7 @@ Tile map services such as [TillMill Project](http://tilemill-project.github.io/t
 
 Each tile is an image on the Web, which means that you can link to it. For example, the following URL points to a specific tile on the Web:
 
-```
+```html
  https://tile.openstreetmap.org/7/63/42.png
 ```
 
@@ -54,7 +54,7 @@ For this exercise, we'll use [Prepros](https://prepros.io/ "target="_blank), a t
 
 Go ahead and change the title
 
-```
+```html
 <title>title when you hover over tab</title>
 ```
 
@@ -73,7 +73,7 @@ The CSS gives us pre-defined styles and elements to format the content of a webp
 
 5. Next, in the `<body>` section of our web page, we add a `<div>` element that will contain a thing called `map`.
 
-```
+```html
 <div id="map"></div>
 ```
 
@@ -81,7 +81,7 @@ We then call the `<script>` and initialize our map using `L.map`.
 
 Examine the code
 
-```
+```html
 <script>
 var map = L.map('map').setView([40.5931,-75.5265], 12);
 ```
@@ -90,7 +90,7 @@ var map = L.map('map').setView([40.5931,-75.5265], 12);
 
 6. We now want to load a tile server for our base map, using `L.tileLayer`
 
-```
+```html
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -118,7 +118,7 @@ In this exercise, we will work with a GeoJSON, a small file (point-data.geojson)
 
 Locate the `<head>` tag, and the script for loading Leaflet. Below it, add a script called jQuery. This Javascript library is widely used to enable interactivity, animations, plug-ins and widgets. We load jQuery on our web page using the following code after Leaflet.js :
 
-```
+```html
   <!-- loads Leaflet.js -->
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <!-- loads jQuery -->
@@ -127,7 +127,7 @@ Locate the `<head>` tag, and the script for loading Leaflet. Below it, add a scr
 
 3. We are now ready to add a few lines to get our GeoJSON (point-data.geojson). In the `<body>` section, let's add the following code below your tile layer:
 
-```
+```html
 // load a tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
@@ -140,7 +140,7 @@ Locate the `<head>` tag, and the script for loading Leaflet. Below it, add a scr
 
 followed by :
 
-```
+```html
 // adds GeoJSON objects to layer
    data = L.geoJson(data  ,{
 
@@ -158,7 +158,7 @@ followed by :
 
 Locate `pointToLayer` which we called passed a function. We will create a variable called marker and bind a pop-up to each marker:
 
-```
+```html
 // creates a variable called marker
 pointToLayer: function(feature,latlng){
 var marker = L.marker(latlng);

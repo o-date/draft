@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
   <meta name="twitter:image" content="images/brandon-green-321795-unsplash.jpg" />
 
-<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, &amp; Beth Compton">
+<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
 
 
-<meta name="date" content="2018-10-26">
+<meta name="date" content="2018-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,7 @@
 
 
 <script src="https://hypothes.is/embed.js" async></script>
+<link rel="stylesheet" href="css/custom.css">
 
 
 <style type="text/css">
@@ -311,21 +312,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>create a new project in RStudio (we typically create a new project in a brand new folder)</li>
 <li>run the following script to install Bookdown:</li>
 </ol>
-<pre><code>install.packages(&quot;devtools&quot;)
-devtools::install_github(&quot;rstudio/bookdown&quot;)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;rstudio/bookdown&quot;</span>)</code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>create a new textfile with <code>metadata</code> that describe how the book will be built. The metadata is in a format called <code>YAML</code> (‘yet another markup language’) that uses keys and values that get passed into other parts of Bookdown:</li>
 </ol>
-<pre><code>title: &quot;The archaeology of spoons&quot;
-author: &quot;Graham, Gupta, Carter, &amp; Compton&quot;
-date: &quot;July 1 2017&quot;
-description: &quot;A book about cocleararchaeology.&quot;
-github-repo: &quot;my-github-account/my-project&quot;
-cover-image: &quot;images/cover.png&quot;
-url: &#39;https\://my-domain-ex/my-project/&#39;
-bibliography: myproject.bib
-biblio-style: apa-like
-link-citations: yes</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">title</span>: <span class="st">&quot;The archaeology of spoons&quot;</span>
+<span class="ex">author</span>: <span class="st">&quot;Graham, Gupta, Carter, &amp; Compton&quot;</span>
+<span class="ex">date</span>: <span class="st">&quot;July 1 2017&quot;</span>
+<span class="ex">description</span>: <span class="st">&quot;A book about cocleararchaeology.&quot;</span>
+<span class="ex">github-repo</span>: <span class="st">&quot;my-github-account/my-project&quot;</span>
+<span class="ex">cover-image</span>: <span class="st">&quot;images/cover.png&quot;</span>
+<span class="ex">url</span>: <span class="st">&#39;https\://my-domain-ex/my-project/&#39;</span>
+<span class="ex">bibliography</span>: myproject.bib
+<span class="ex">biblio-style</span>: apa-like
+<span class="ex">link-citations</span>: yes</code></pre></div>
 <p>This is the only thing you need to have in this file, which is saved in the project folder as <code>index.Rmd</code>.</p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Write! We write the content of this book as text files, saving the parts in order. Each file should be numbered <code>01-introduction.Rmd</code>, <code>02-a-history-of-spoons.Rmd</code>, <code>03-the-spoons-of-site-x.Rmd</code> and so on.</p></li>
@@ -373,7 +374,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/0.00-about-the-authors.rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf", "odate.epub"],
+"download": null,
 "toc": {
 "collapse": "section",
 "number_sections": null
