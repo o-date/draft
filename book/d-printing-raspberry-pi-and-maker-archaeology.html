@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
 
 
-<meta name="date" content="2018-11-07">
+<meta name="date" content="2018-11-08">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -405,20 +405,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p class="caption">format</p>
 </div>
 <p>There are a couple other things that we need to do to ensure that we can interface with the Raspberry Pi headless. First we need to create a file in the OS that enables SSH interface. Open terminal (/Applications/Utilities/Terminal.app, or by hitting <code>Command+Space</code> and then typing Terminal.app) and type the following command, then hit enter:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">touch</span> /Volumes/boot/ssh</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">touch</span> /Volumes/boot/ssh</code></pre></div>
 <p>This command (<code>touch</code>) creates an empty text file in a location specified after the space. In this case, we are creating a text file called ‘ssh’ in the main directory of the boot volume. What this file does, in simple terms, is <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/README.md#3-enable-ssh-on-a-headless-raspberry-pi-add-file-to-sd-card-on-another-machine">specify that it’s okay to allow other computers to interface with the Raspberry Pi over the network.</a></p>
 <p>So now that we’ve specified that it’s okay to enable SSH connections over a network, we need to enable the Raspberry Pi to connect to the network in the first place. If we were using a graphical user interface, we would go to a menubar, select the network and input the password. Only then would we be able to connect to the Raspberry Pi headless. However because we are not using a graphical user interface, we need to devise a way to make the Raspberry Pi connect to the network automatically, without prior intervention on our part. We can do this by creating another file, <code>wpa_supplicant.conf</code>, similarly to how we made the <code>ssh</code> file above. However we want to edit this file to include our network’s login credentials. We’ll use a terminal-based text editor called <code>nano</code> instead of <code>touch</code> to simultaneously create and edit the file.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> /Volumes/boot
-<span class="fu">nano</span> wpa_supplicant.conf</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cd</span> /Volumes/boot
+<span class="kw">nano</span> wpa_supplicant.conf</code></pre></div>
 <p>The <code>cd</code> command moves you around directories. Check what files and sub-directories are in your current directory with <code>ls</code>. See the cheatsheet provided by the Raspberry Pi Foundation that lists some common terminal command and explains how to use them: <a href="https://www.raspberrypi.org/documentation/linux/usage/commands.md" class="uri">https://www.raspberrypi.org/documentation/linux/usage/commands.md</a></p>
 <p>After the <code>nano</code> command you should see a blank file. Type the following into <code>wpa_supplicant.conf</code>. Remember to change the generic country code, network SSID and network password, including the &lt;&gt; characters, to suit your setup. The quotes should remain in place.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="va">country=</span><span class="op">&lt;</span><span class="ex">XX</span><span class="op">&gt;</span>
-<span class="va">ctrl_interface=</span>DIR=<span class="ex">/var/run/wpa_supplicant</span> GROUP=netdev
-<span class="va">update_config=</span>1
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ot">country=</span><span class="kw">&lt;XX&gt;</span>
+<span class="ot">ctrl_interface=</span>DIR=<span class="kw">/var/run/wpa_supplicant</span> GROUP=netdev
+<span class="ot">update_config=</span>1
 
-<span class="va">network=</span><span class="kw">{</span>
-    <span class="va">ssid=</span><span class="st">&quot;&lt;network name&gt;&quot;</span>
-    <span class="va">psk=</span><span class="st">&quot;&lt;network password&gt;&quot;</span>
+<span class="ot">network=</span><span class="kw">{</span>
+    <span class="ot">ssid=</span><span class="st">&quot;&lt;network name&gt;&quot;</span>
+    <span class="ot">psk=</span><span class="st">&quot;&lt;network password&gt;&quot;</span>
 <span class="kw">}</span></code></pre></div>
 <div class="figure">
 <img src="images/wpasupp.png" alt="wpasupp" />
@@ -429,7 +429,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Now eject the microSD card, place it in the Raspberry Pi and boot it up. Wait a couple minutes for it to finish booting up. The red LED light specifies power consumption (solid means power is flowing, flickering means inadequate power supply, i.e. needs a supply with better ampage), and the green LED light specifies data processing. The operating system will be finished installing once the green LED calms down.</p>
 <p>Now that we’ve installed the OS and enabled network-based control of it, let’s go ahead and establish such a connection. <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/">This is called SSH, or Secure SHell connection</a>. To establish an SSH connection we will need to know the location of the target computer on the network. We can do this by going into the router’s settings and checking all connected computers’ IP addresses.</p>
 <p>Once you determine the target computer’s ip address, we can type the following command, replacing the generic placeholder (including the &lt;&gt; characters) with the actual address:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">ssh</span> pi@<span class="op">&lt;</span>ip address<span class="op">&gt;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">ssh</span> pi@<span class="kw">&lt;</span>ip address<span class="kw">&gt;</span></code></pre></div>
 <p>You will be prompted for a password. The default password on fresh installations of Raspbian is ‘raspberry’. No astericks will be visible as you type it, just hit enter when you are finished. Your window should look something like this:</p>
 <div class="figure">
 <img src="images/ssh.png" alt="ssh" />
@@ -439,24 +439,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>In the command we just ran, ‘pi’ and ‘raspberry’ specify the default username and password on the host computer, and the host computer itself is specified by the IP address that locates it on the network.</p>
 <p>This terminal window should now be considered a remote client to the raspberry pi. More specifically, everything that you do run that follows <code>pi@raspberrypi:</code> in the terminal window is being implemented on the Raspberry Pi. If you were to close the terminal window, you will be prompted to end the session - this is fine, but the Raspberry Pi will still be running, without any SSH connections still active. You will need to re-establish a new SSH connection to get back in control of the host computer, and to shut it down.</p>
 <p>You may also get the following warning when trying to establish an initial connection via SSHL:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
-<span class="ex">@</span>    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-<span class="ex">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
-<span class="ex">IT</span> IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-<span class="ex">Someone</span> could be eavesdropping on you right now (man-in-the-middle attack)!
-<span class="ex">It</span> is also possible that a host key has just been changed.
-<span class="ex">The</span> fingerprint for the ECDSA key sent by the remote host is
-<span class="ex">SHA256</span>:/1AS9um/kBFfaIf0vny7UX8YyDP3nTCZhd2H5FAv2VY.
-<span class="ex">Please</span> contact your system administrator.
-<span class="ex">Add</span> correct host key in /root/.ssh/known_hosts to get rid of this message.
-<span class="ex">Offending</span> ECDSA key in /root/.ssh/known_hosts:1
-  <span class="ex">remove</span> with:
-  <span class="fu">ssh-keygen</span> -f <span class="st">&quot;/root/.ssh/known_hosts&quot;</span> -R 192.168.1.234
-<span class="ex">ECDSA</span> host key for 192.168.1.234 has changed and you have requested strict checking.
-<span class="ex">Host</span> key verification failed.</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+<span class="kw">@</span>    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+<span class="kw">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+<span class="kw">IT</span> IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+<span class="kw">Someone</span> could be eavesdropping on you right now (man-in-the-middle attack)!
+<span class="kw">It</span> is also possible that a host key has just been changed.
+<span class="kw">The</span> fingerprint for the ECDSA key sent by the remote host is
+<span class="kw">SHA256</span>:/1AS9um/kBFfaIf0vny7UX8YyDP3nTCZhd2H5FAv2VY.
+<span class="kw">Please</span> contact your system administrator.
+<span class="kw">Add</span> correct host key in /root/.ssh/known_hosts to get rid of this message.
+<span class="kw">Offending</span> ECDSA key in /root/.ssh/known_hosts:1
+  <span class="kw">remove</span> with:
+  <span class="kw">ssh-keygen</span> -f <span class="st">&quot;/root/.ssh/known_hosts&quot;</span> -R 192.168.1.234
+<span class="kw">ECDSA</span> host key for 192.168.1.234 has changed and you have requested strict checking.
+<span class="kw">Host</span> key verification failed.</code></pre></div>
 <p>This is triggered because each remote computer that establishes an SSH connection with a specific target is identified using a cryptographic key, for security reasons. When you re-install Raspbian on the same microSD card, the old key slot is removed and replaced with a new one. However, when your remote laptop tries to enter the computer located on the same location on the network it reaches for the old key that works with the lock that has since been removed. We therefore need to delete the old key and replace it with a new one that fits the new lock.</p>
 <p>To do this, navigate to the file where the keys are stored, and edit the file to delete the corresponding keys:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> nano ~/.ssh/known_hosts</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> nano ~/.ssh/known_hosts</code></pre></div>
 <p>Remove all the data stored in this file by going to the end and holding backspace, then save and exit with <code>control + x</code> and then <code>y</code>. See <a href="https://www.raspberrypi.org/forums/viewtopic.php?t=40037" class="uri">https://www.raspberrypi.org/forums/viewtopic.php?t=40037</a> for more info.</p>
 <div class="figure">
 <img src="images/knownhosts.png" alt="known hosts" />
@@ -467,13 +467,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><strong>Note:</strong> This will not work if the wireless network is secured by a 802.1x firewall, which are commonly implemented by most university, hospital and government networks.</p>
 <p>For more information, visit: * <a href="https://medium.com/@tzhenghao/how-to-ssh-into-your-raspberry-pi-with-a-mac-and-ethernet-cable-636a197d055" class="uri">https://medium.com/@tzhenghao/how-to-ssh-into-your-raspberry-pi-with-a-mac-and-ethernet-cable-636a197d055</a> * <a href="https://www.jeffgeerling.com/blog/2016/ssh-raspberry-pi-only-network-cable-using-os-xs-internet-sharing" class="uri">https://www.jeffgeerling.com/blog/2016/ssh-raspberry-pi-only-network-cable-using-os-xs-internet-sharing</a></p>
 <p>Now that we are in the remote host, let’s install updates. This requires that the local network be connected to the internet.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get update -y
-<span class="fu">sudo</span> apt-get upgrade -y</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get update -y
+<span class="kw">sudo</span> apt-get upgrade -y</code></pre></div>
 <p>Linux software is installed and managed through the use of package managers, in this case one called apt. <code>apt-get update</code> updates the listing of software (along with version numbers and compatibility info) that is managed on a trusted and audited series of servers out on the internet. <code>apt-get upgrade</code> installs updates to outdated software on your device based on comparisons of the local version numbers with those on the external listing. Including the <code>-y</code> flag is optional, and specifies that any prompt to confirm an update with a yes/no response should always respond with ‘yes’.</p>
 <p>For the purpose of this tutorial it is not necessary to update the kernel or firmware. The most up-to-date versions are included in the raspbian disk images. Using <code>sudo rpi-update</code> may install bleeding-edge updates or untested firmware that might break our intended setup.</p>
 <p><strong>Note:</strong> There is no power switch on the Raspberry Pi, and power-supply can therefore be a bit finicky. <strong>You will have to shut down the computer by running a specific command. DO NOT JUST UNPLUG THE POWER CORD! That can corrupt the SD card and you’ll have to re-image it and re-install the OS, and all data will be lost in the process!</strong></p>
 <p>To shut down the Raspberry Pi, use the following command:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> shutdown -h now</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> shutdown -h now</code></pre></div>
 <p>To restart the Raspberry Pi, simply re-connect the power source.</p>
 </div>
 <div id="setting-up-static-ip-addresses" class="section level4">
@@ -481,33 +481,33 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>To make our lives a little easier, especially when working on a network that many other devices will be connected to, it will be helpful to configure a static IP address for the Raspberry Pi on the network. Each device connected to the network is assigned a unique IP address, typically as a sequence following the order in which they connected. So the router might have IP address <code>192.168.0.100</code>, and subsequently connected computers will have <code>192.168.0.101</code>, <code>192.168.0.102</code>, <code>192.168.0.103</code>, etc. Most routers enable up to 200 connections by default, distributing IP addresses up to <code>192.168.0.199</code>. In order to maintain consistency when connecting to the Raspberry Pi (which may be necessary when writing instructions for others to follow, or when pre-configuring connections to the Raspberry Pi on others’ computers), we can reserve an IP address from the upper end of the range, such as <code>192.168.0.198</code>. You will no longer have to lookup the target computer’s IP address in the router options or via the terminal - you could simply run <code>ssh pi@192.168.0.198</code> to establish a connection to the Raspberry Pi from any remote computer on the network.</p>
 <p>In order to do this we will have to find some information about the network configuration. Start by SSH-ing into the Raspberry Pi.</p>
 <p>We first need to get the Raspberry Pi’s IP address on the network, on both wifi and ethernet interfaces.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">ip</span> -4 addr show <span class="kw">|</span> <span class="fu">grep</span> global</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">ip</span> -4 addr show <span class="kw">|</span> <span class="kw">grep</span> global</code></pre></div>
 <p>The output should look something like this:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">inet</span> 169.254.39.157/16 brd 169.254.255.255 scope global eth0
-<span class="ex">inet</span> 192.168.0.102/24 brd 192.168.0.255 scope global wlan0</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">inet</span> 169.254.39.157/16 brd 169.254.255.255 scope global eth0
+<span class="kw">inet</span> 192.168.0.102/24 brd 192.168.0.255 scope global wlan0</code></pre></div>
 <p><code>eth0</code> refers to the ethernet interface, and <code>wlan0</code> refers to the wireless interface. Information pertaining to the ethernet interface will not appear if the Raspberry Pi is not currently connected to the router via an ethernet cable.</p>
 <p>Next we need to determine the router’s gateway:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">ip</span> route <span class="kw">|</span> <span class="fu">grep</span> default <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{print $3}&#39;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">ip</span> route <span class="kw">|</span> <span class="kw">grep</span> default <span class="kw">|</span> <span class="kw">awk</span> <span class="st">&#39;{print $3}&#39;</span></code></pre></div>
 <p>The result should look something like this:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">192.168.0.1</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">192.168.0.1</span></code></pre></div>
 <p>Then we need to determine the DNS server or namespace, which is often the same as the router’s gateway:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">cat</span> /etc/resolv.conf</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cat</span> /etc/resolv.conf</code></pre></div>
 <p>The result should look something like this:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Generated by resolvconf</span>
-<span class="ex">nameserver</span> 192.168.0.1</code></pre></div>
+<span class="kw">nameserver</span> 192.168.0.1</code></pre></div>
 <p>Finally, we have to add this retrieved information to the file located at <code>/etc/dhcpcd.conf</code>:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> nano /etc/dhcpcd.conf</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> nano /etc/dhcpcd.conf</code></pre></div>
 <p><strong>ProTip:</strong> when editing system files or doing anything that reconfigures the computer setup in a serious way, you will have to include the <code>sudo</code> before the command. This grants ‘super user’ privileges, which are required for system adminstration.</p>
 <p>Add the following, substituting the <code>static routers</code> and <code>static domain_name_servers</code> values with the one’s that were just determined above. The values for <code>static ip_address</code> should be our new consistent IP address. For the numbers following the <code>/</code>, use the values from the IP addresses we identified above.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">interface</span> eth0
-<span class="ex">static</span> ip_address = 192.168.0.197/16
-<span class="ex">static</span> routers = 192.168.0.1
-<span class="ex">static</span> domain_name_servers = 192.168.0.1
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">interface</span> eth0
+<span class="kw">static</span> ip_address = 192.168.0.197/16
+<span class="kw">static</span> routers = 192.168.0.1
+<span class="kw">static</span> domain_name_servers = 192.168.0.1
 
-<span class="ex">interface</span> wlan0
-<span class="ex">static</span> ip_address = 192.168.0.198/24
-<span class="ex">static</span> routers = 192.168.0.1
-<span class="ex">static</span> domain_name_servers = 192.168.0.1</code></pre></div>
+<span class="kw">interface</span> wlan0
+<span class="kw">static</span> ip_address = 192.168.0.198/24
+<span class="kw">static</span> routers = 192.168.0.1
+<span class="kw">static</span> domain_name_servers = 192.168.0.1</code></pre></div>
 <p>Save and close the file, and you should be good to go! You might have to re-establish the connection, however, since the host may now be situated at a different location on the network. Further information: <a href="http://raspberrypi.stackexchange.com/a/37921/8697" class="uri">http://raspberrypi.stackexchange.com/a/37921/8697</a></p>
 <p><strong>ProTip:</strong> You may need to make a direct connection with your computer to download updates (When in the field, I tend to tether my cullular connection to my laptop and share the connection over ethernet). In such cases, you will need to edit <code>dhcpcd.conf</code> and comment out the <code>eth0</code> specifications to enable an alternative ethernet interface with your laptop that is not specific to the router that it is normally connected to. You may not even need an <code>eth0</code> static IP, but it helps to have that direct ethernet connection in place if you are using the Pi as a network attached storage (NAS) device, i.e. sharing files over the network, as this gives a significant speed boost to file transfers.</p>
 </div>
@@ -516,26 +516,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Now that we have the Raspberry Pi set up, let’s set up a database management system (DBMS for short). We’re going to be using MariaDB, which is for all intents and purposes identical to MySQL (<a href="https://www.tecmint.com/the-story-behind-acquisition-of-mysql-and-the-rise-of-mariadb/">MariaDB is a fork of MySQL that is more committed to open source principles</a>). In fact, <a href="https://mariadb.com/kb/en/library/mariadb-vs-mysql-compatibility/">all MySQL commands work in MariaDB</a>, and the community of users cross-polinate and use the terms synonymously in their documentation and troubleshooting. We will be using many commands that were designed for use in MySQL and which were ported over to MariaDB when it was forked.</p>
 <p>In our current application, we will be installing a database server on the Raspberry Pi, which hosts one or more databases. The database, and all information stored within it, resides on the SD card slotted into the Raspberry Pi, which users connect to over the network as clients. The fact that the database exists in one centralized place ensures that the information accessed by clients is constantly up to date and consistent. In order to connect to the database as a client, users will have to know the server’s IP address, the port that is used by MariaDB on the server, the name of the database to be accessed, and the users’ login credentials to access the database.</p>
 <p>To install MariaDB Server, first SSH into the Raspberry Pi and then use <code>apt-get</code> to install <code>mariadb-server</code> from the package manager:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install mariadb-server</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get install mariadb-server</code></pre></div>
 <p>Once it is installed, you will have to re-configure a configuration file to enable access to the database across the network. First access the config file:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> nano /etc/mysql/mariadb.conf.d/50-server.cnf</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> nano /etc/mysql/mariadb.conf.d/50-server.cnf</code></pre></div>
 <p>Find the line that configures <code>bind-address</code> to <code>127.0.0.1</code> and change its value to <code>0.0.0.0</code>. <a href="https://mariadb.com/kb/en/library/server-system-variables/#bind_address">This changes the addresses that the MariaDB server will listen to for connections</a>. If we had left it at <code>127.0.0.1</code>, which is typically synonymous with <code>localhost</code>, only modifications made by the Raspberry Pi’s local users would be able to access any of the databases managed by the MariaDB server. By changing the value to <code>0.0.0.0</code> we enable the server to accept connections from any computer on the network, if they have valid credentials. You can also configure specific IP addresses in order to allow only computers with those locations on the network to access the database server.</p>
 <p>Once your changes are made, save the file using <code>control + x</code> and then restart the MariaDB service:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> service mysql restart</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> service mysql restart</code></pre></div>
 <p><strong>Installing and running MariaDB locally on MacOS:</strong> It is possible to install the MariaDB DBMS locally on your laptop, which means that your laptop would serve as both the server and the client at the same time. This is useful if you want to create and manage a database locally before migrating it to a server, or if you don’t have a Raspberry Pi on hand but want to learn more about database adminstration.</p>
 <p>To onstall MariaDB on a mac, we need to first install a paclage manager called homebrew, similar to apt, that is designed specifically for MacOS. To install homebrew, open terminal and then run the following command to download the installation files and build the program:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">/usr/bin/ruby</span> -e <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="va">)</span><span class="st">&quot;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">/usr/bin/ruby</span> -e <span class="st">&quot;</span><span class="ot">$(</span><span class="kw">curl</span> -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="ot">)</span><span class="st">&quot;</span></code></pre></div>
 <p>Then update the index of retrievable packages and upgrade any installed packages:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">brew</span> update
-<span class="ex">brew</span> upgrade</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">brew</span> update
+<span class="kw">brew</span> upgrade</code></pre></div>
 <p>Nowe install MariaDB via homebrew:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">brew</span> install mariadb</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">brew</span> install mariadb</code></pre></div>
 <p>Once installed, to start the MariaDB server use the following:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">mysql.server</span> start</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mysql.server</span> start</code></pre></div>
 <p>It is also important to stop the server when you are finished using it in order to ensure that your computer is not constantly using up resources when they are not needed:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">mysql.server</span> stop</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mysql.server</span> stop</code></pre></div>
 <p>Once the database server is installed and running up, let’s login to the server so that we can create a database. By default there is only one user named ‘root’, whose password is blank. Root has the broadest set of privileges, and can create or drop databases and users freely. You can only log in as root on the machine on which the MariaDB server resides; you can not log in as root from a remote connection. After establishing a SSH connection to the Raspberry Pi, initiate the server and login as root:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> mysql</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> mysql</code></pre></div>
 <p>You’ll notice that the terminal window looks a little different. We are now in the MariaDB server environment, and we will have to escape it in order to run commands outside of it. The command to escape is <code>control + c</code>. You can also establish another SSH connection in a new terminal window so that you can use one window for database management tasks, and the other for working with other aspects of the operating system.</p>
 <p>MariaDB commands are SQL, or Structured Query Language. They are generally written using upper case letters, and every command must end with a semicolon. The semicolon essentially indicates the boundaries of a SQL statement, which is essentially a self-contained logical statement. If you do hit enter after an incomplete statement is input then any further input will be tacked on to the end of the incomplete statement. The semicolon indicates that the statement is finished and ready to be executed.</p>
 <p>Now let’s create a database called <code>odate1</code>:</p>
@@ -549,7 +549,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">FLUSH</span> <span class="kw">PRIVILEGES</span>;</code></pre></div>
 <p>We could also restrict lara’s permissions to specific tables on the database by replacing the <code>*</code>, which means ‘any’ or ‘wild card’ in logical or boolean terms, with the name of a specific table contained within the database.</p>
 <p>Now let’s close the MariaDB service (using <code>control + c</code>) and try logging in as lara:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">mysql</span> -u lara -p</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mysql</span> -u lara -p</code></pre></div>
 <p>The -p flag indicates that the terminal should prompt us for a password. As lara, if we try creating a database we will get an error because lara does not have permission to do so.</p>
 <p>Creating or dropping tables, columns, indexes and relationships, as well as selecting, inserting, updating and deleting rows, is done via SQL. More comprehensive guides on SQL can be found at <a href="https://www.w3schools.com/sql/sql_intro.asp">w3schools</a> (among other great learning resources that they offer) and the <a href="https://mariadb.com/kb/en/library/mariadb-basics/">MariaDB Knowledge Base</a>, but here are a few useful snippets that you can try out.</p>
 <p>To create a table:</p>
@@ -604,39 +604,39 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h4><span class="header-section-number">4.2.3.6</span> Scheduling automatic backups</h4>
 <p>It is wise to backup your databases regularly, but this is often overlooked. Thankfully we can automate this process! We accomplish this by running a basic script that wraps the database as a single file and copies it over to a specified directory that corresponds with a folder on a mounted USB storage drive.</p>
 <p>First we will have to configure the system so that the USB storage device is mounted consistently and automatically each time the device is connected. While Raspberry Pi does support auto USB mounting when starting the machine, it can be a bit flaky. Therefore we will use the device ID (referred to as UUID in the linux system) to ensure that there is more certainty of a proper mount. So we need to determine the UUID of the USB device by first inserting it in the Raspberry Pi and then cross-checking the outputs of the following commands:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">ls</span> -al /dev/disk/by-uuid
-<span class="ex">lsblk</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">ls</span> -al /dev/disk/by-uuid
+<span class="kw">lsblk</span></code></pre></div>
 <p>Infer the correct UUID based on the drive’s capacity and through elimination of other possibilities, and note it down somewhere.</p>
 <p>Now create the directory where we want to mount the drive:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> mkdir /media/backup</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> mkdir /media/backup</code></pre></div>
 <p>Give the directory adequate permissions:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> chmod -R 777 /media/backup</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> chmod -R 777 /media/backup</code></pre></div>
 <p><strong>Note:</strong> This command gives unrestricted read, write and execute permissions to all users! Configure your permissions to suit your needs! Further information: <a href="https://www.guru99.com/file-permissions.html" class="uri">https://www.guru99.com/file-permissions.html</a>, <a href="https://chmod-calculator.com/" class="uri">https://chmod-calculator.com/</a></p>
 <p>Next open the <code>fstab</code> file, which is a system file that handles the way Raspbian mounts USB devices:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> nano /etc/fstab</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> nano /etc/fstab</code></pre></div>
 <p>At the end of that file, add the following command, replacing the UUID with the one pertaining to the specific device and the directory with the intended mount point:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="va">UUID=</span>783A-120B <span class="ex">/media/backup</span> auto noatime,nofail,umask=000 0 0</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ot">UUID=</span>783A-120B <span class="kw">/media/backup</span> auto noatime,nofail,umask=000 0 0</code></pre></div>
 <p>Further information: (<a href="https://www.raspberrypi.org/documentation/configuration/external-storage.md" class="uri">https://www.raspberrypi.org/documentation/configuration/external-storage.md</a>)[<a href="https://www.raspberrypi.org/documentation/configuration/external-storage.md" class="uri">https://www.raspberrypi.org/documentation/configuration/external-storage.md</a>]</p>
 <p><strong>Note:</strong> This is the correct code for FAT32/exFAT formatted drives only. FAT32/exFAT handles permissions is a slightly different way than NTFS and linux-based filesystems (i.e. ext4) and you will need to configure them accordingly. However, I recommend the use of FAT32/exFAT in general, since it is interoperable between virtually all operating systems, whereas others are not, and zipped archaeological databases probably won’t be more than 4GB each, which is the file size limit for FAT32/exFAT-formatted devices.</p>
 <p>Now the USB drive will be auto mounted and ready to use. Don’t forget to restart your Raspberry Pi to test it out:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> shutdown -h now</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> shutdown -h now</code></pre></div>
 <p>After you have gotten the USB drive to mount automatically, we need to create a script called <code>dbbackup.sh</code> in the home directory:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> ~
-<span class="fu">sudo</span> nano dbbackup.sh</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cd</span> ~
+<span class="kw">sudo</span> nano dbbackup.sh</code></pre></div>
 <p>In that file, enter the following:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#!/bin/bash</span>
-<span class="va">$OUTPUT_FILE</span> = <span class="ex">/media/backup/mysqldump/odate1_</span><span class="va">$(</span><span class="fu">date</span> +<span class="st">&quot;%Y%m%d_%H%M%S&quot;</span><span class="va">)</span><span class="ex">.gzip</span>
-<span class="va">$USERNAME</span> = <span class="ex">lara</span>
-<span class="va">$PASSWORD</span> = <span class="ex">croft</span>
-<span class="va">$DATABASE_NAME</span> = <span class="ex">odate1</span>
+<span class="ot">$OUTPUT_FILE</span> = <span class="kw">/media/backup/mysqldump/odate1_</span><span class="ot">$(</span><span class="kw">date</span> +<span class="st">&quot;%Y%m%d_%H%M%S&quot;</span><span class="ot">)</span><span class="kw">.gzip</span>
+<span class="ot">$USERNAME</span> = <span class="kw">lara</span>
+<span class="ot">$PASSWORD</span> = <span class="kw">croft</span>
+<span class="ot">$DATABASE_NAME</span> = <span class="kw">odate1</span>
 
-<span class="fu">sudo</span> mysqldump -u<span class="va">$USERNAME</span> -p<span class="va">$PASSWORD</span> <span class="va">$DATABASE_NAME</span> <span class="kw">|</span> <span class="fu">gzip</span> <span class="op">&gt;</span> <span class="va">$OUTPUT_FILE</span></code></pre></div>
+<span class="kw">sudo</span> mysqldump -u<span class="ot">$USERNAME</span> -p<span class="ot">$PASSWORD</span> <span class="ot">$DATABASE_NAME</span> <span class="kw">|</span> <span class="kw">gzip</span> <span class="kw">&gt;</span> <span class="ot">$OUTPUT_FILE</span></code></pre></div>
 <p>The username, password, database name and file path can also be modified to suit your unique situation. Ensure that the permissions are properly set to allow you to write to the specified directory.</p>
 <p>Then we need to set the script to be executable:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> chmod 755 dbbackup.sh</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> chmod 755 dbbackup.sh</code></pre></div>
 <p>Now we need to automate the execution of this script using <code>cron</code>. <code>cron</code> is a time-based scheduling utility in Unix/Linux operating systems such as Raspbian. It reads a configuration file, commonly referred to as <code>crontab</code> where jobs are scheduled using a special syntax. To access and edit the crontab simply enter <code>sudo crontab -e</code> and add a line at the end of the file to schedule a job.</p>
 <p>To run dbbackup.sh every 30 minutes, add the following line at the end of the crontab:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">*/30</span> * * * * /home/pi/dbbackup.sh</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">*/30</span> * * * * /home/pi/dbbackup.sh</code></pre></div>
 <p><strong>ProTip:</strong> <a href="https://crontab.guru/">crontab.guru</a> is a great resource for determining the correct syntax for cron schedules.</p>
 <p>For more information, please refer to the following link: <a href="https://www.codingepiphany.com/2013/06/12/raspberry-pi-lamp-server-tuning-and-automated-db-backup/" class="uri">https://www.codingepiphany.com/2013/06/12/raspberry-pi-lamp-server-tuning-and-automated-db-backup/</a></p>
 </div>
@@ -645,20 +645,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>It may be useful for participants on a project to assemmble photos, spreadsheets, reports or various other digital files with minimal hassle. Luckily, the Raspberry Pi can also be used to set up a network attached storage (NAS) device. In simpler terms, network-connected users can transfer files between their own computers and a USB storage device connected to the Raspberry Pi. This effectively renders a USB storage drive as a wireless drive.</p>
 <p>To begin, the system must be confured to automount the USB drive. Instructions on how to do this have been provided in section 4.2.2.5. I recommend that you use a separate USB drive than the one used for backups. For the purpose of this tutorial, I will assume that the file sharing drive is mounted at <code>/media/FileShare</code>.</p>
 <p>We will be using a software package called Samba to enable the primary NAS functions. Install Samba using the following command:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install samba samba-common-bin</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get install samba samba-common-bin</code></pre></div>
 <p>Next, edit the Samba configuration file:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> nano /etc/samba/smb.conf</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> nano /etc/samba/smb.conf</code></pre></div>
 <p>Add the following at the end of the file:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">[<span class="ex">FileShare</span>]
-<span class="ex">Comment</span> = Pi shared folder
-<span class="ex">Path</span> = /media/FileShare
-<span class="ex">Browseable</span> = yes
-<span class="ex">Writeable</span> = Yes
-<span class="ex">only</span> guest = no
-<span class="ex">create</span> mask = 0777
-<span class="ex">directory</span> mask = 0777
-<span class="ex">Public</span> = yes
-<span class="ex">Guest</span> ok = yes</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">[<span class="kw">FileShare</span>]
+<span class="kw">Comment</span> = Pi shared folder
+<span class="kw">Path</span> = /media/FileShare
+<span class="kw">Browseable</span> = yes
+<span class="kw">Writeable</span> = Yes
+<span class="kw">only</span> guest = no
+<span class="kw">create</span> mask = 0777
+<span class="kw">directory</span> mask = 0777
+<span class="kw">Public</span> = yes
+<span class="kw">Guest</span> ok = yes</code></pre></div>
 <p>Ensure that <code>Path =</code> the directory you want to share, such as the mount point of an external drive.</p>
 <p>This configuration allows anyone to read, write, and execute files in a volume named share, either by logging in as a Samba user or as a guest. If you do not want to allow guest users, omit the <code>guest ok = yes</code> line.</p>
 <p>Please refer to <a href="https://www.raspberrypi.org/magpi/samba-file-server/">this resource</a> for further information, as well as the <a href="https://www.samba.org/samba/docs/">Samba documentation</a> in order to set up usernames and passwords. The method just described allows free-for-all access, and it should be communicated to users that they can add, delete or modify any file in the shared directory, for better or worse. You may feel inclined to schedule automated backups of your shared drive to yet another connected drive, though this may congest the network and occupy lots of disk space, depending on the size of the shared directory. You may wish to schedule such backups during off-hours, when volumes of traffic across the network are expected to be low.</p>
@@ -713,7 +713,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/04.2-3d-printing.rmd",
 "text": "Edit"
 },
-"download": null,
+"download": ["odate.pdf"],
 "toc": {
 "collapse": "section",
 "number_sections": null

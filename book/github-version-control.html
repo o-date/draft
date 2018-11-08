@@ -25,7 +25,7 @@
 <meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
 
 
-<meta name="date" content="2018-11-07">
+<meta name="date" content="2018-11-08">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -329,12 +329,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p class="caption">A visualization of the history of commits</p>
 </div>
 <p>Each one of those circles represents a point in time when you the writer made a commit; Git compared the state of the file to the earlier state, and saved a snapshot of the <code>differences</code>. What is particularly useful about making a commit is that Git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about <em>why</em> the commit is being made. In our hypothetical situation, your first commit message might look like this:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">Fixed</span> conclusion
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">Fixed</span> conclusion
 
-<span class="ex">Julie</span> pointed out that I had missed 
-<span class="ex">the</span> critical bit in the assignment 
-<span class="ex">regarding</span> stratigraphy. This was 
-<span class="ex">added</span> in the concluding section.</code></pre></div>
+<span class="kw">Julie</span> pointed out that I had missed 
+<span class="kw">the</span> critical bit in the assignment 
+<span class="kw">regarding</span> stratigraphy. This was 
+<span class="kw">added</span> in the concluding section.</code></pre></div>
 <p>This information is stored in the history of the commits. In this way, you can see exactly how the project evolved and why. Each one of these commits has what is called a <code>hash</code>. This is a unique fingerprint that you can use to ‘time travel’ (in Bartlett’s felicitous phrasing). If you want to see what your project looked like a few months ago, you <code>checkout</code> that commit. This has the effect of ‘rewinding’ the project. Once you’ve checked out a commit, don’t be alarmed when you look at the folder: your folder (your repository) looks like how it once did all those weeks ago! Any files written after that commit seem as if they’ve disappeared. Don’t worry: they still exist!</p>
 <p>What would happen if you wanted to experiment or take your project in a new direction from that point forward? Git lets you do this. What you will do is create a new <code>branch</code> of your project from that point. You can think of a branch as like the branch of a tree, or perhaps better, a branch of a river that eventually merges back to the source. (Another way of thinking about branches is that it is a label that sticks with these particular commits.) It is generally considered ‘best practice’ to leave your <code>master</code> branch alone, in the sense that it represents the best version of your project. When you want to experiment or do something new, you create a <code>branch</code> and work there. If the work on the branch ultimately proves fruitless, you can discard it. <em>But</em>, if you decide that you like how it’s going, you can <code>merge</code> that branch back into your master. A merge is a commit that folds all of the commits from the branch with the commits from the master.</p>
 <p>Git is also a powerful tool for backing up your work. You can work quite happily with Git on your own machine, but when you store those files and the history of commits somewhere remote, you open up the possibility of collaboration <em>and</em> a safe place where your materials can be recalled if -perish the thought- something happened to your computer. In Git-speak, the remote location is, well, the <code>remote</code>. There are many different places on the web that can function as a remote for Git repositories. You can even set one up on your own server, if you want. One of the most popular (and the one that we use for ODATE) is <a href="http://github.com">Github</a>. There are many useful repositories shared via Github of interest to archaeologists - <a href="http://opencontext.org">OpenContext</a> for instance shares a lot of material that way. To get material <em>out</em> of Github and onto your own computer, you <code>clone</code> it. If that hypothetical paper you were writing was part of a group project, your partners could clone it from your Github space, and work on it as well!</p>
@@ -388,11 +388,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Let’s check our git status again: type <code>$ git status</code></li>
 <li>You should see something like this:</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">On</span> branch master
-<span class="ex">Initial</span> commit
-<span class="ex">Changes</span> to be committed:
-  <span class="kw">(</span><span class="ex">use</span> <span class="st">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage<span class="kw">)</span>
-        <span class="ex">new</span> file:   exercise1.md<span class="kw">```</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">On</span> branch master
+<span class="kw">Initial</span> commit
+<span class="kw">Changes</span> to be committed:
+  <span class="kw">(use</span> <span class="st">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage<span class="kw">)</span>
+        <span class="kw">new</span> file:   exercise1.md<span class="kw">```</span></code></pre></div>
 <ol start="5" style="list-style-type: lower-alpha">
 <li>Let’s take a snapshot: type <code>$ git commit -m &quot;My first commit&quot;</code>. Nothing much seems to have happened; a new <code>$</code> is displayed. In this kind of environment, no news is good news. It’s only often when something goes wrong that you’ll see the terminal print out information. For some users (especially if you are approaching these exercises via DHBox rather than our Binder environment) there could be an error at this point. Git keeps track not only of the changes, but <em>who</em> is making them. Git might ask you for your name and email. Helpfully, the Git error message tells you exactly what to do: type <code>$ git config --global user.email &quot;you\@example.com&quot;</code> and then type <code>$ git config --global user.name &quot;Your Name&quot;</code>. Now try making your first commit.</li>
 </ol>
@@ -400,11 +400,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ol start="3" style="list-style-type: decimal">
 <li>Go ahead and make some more changes to your repository. Add some new files. Commit your changes after each new file is created. Now we’re going to view the history of your commits. Type <code>$ git log</code>. What do you notice about this list of changes? Look at the time stamps. You’ll see that the entries are listed in reverse chronological order. Each entry has its own ‘hash’ or unique ID, the person who made the commit and time are listed, as well as the commit message eg:</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">commit</span> 253506bc23070753c123accbe7c495af0e8b5a43
-<span class="ex">Author</span>: Shawn Graham <span class="op">&lt;</span>shawn.graham@carleton.ca<span class="op">&gt;</span>
-<span class="ex">Date</span>:   Tue Feb 14 18:42:31 2017 +0000
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">commit</span> 253506bc23070753c123accbe7c495af0e8b5a43
+<span class="kw">Author</span>: Shawn Graham <span class="kw">&lt;</span>shawn.graham@carleton.ca<span class="kw">&gt;</span>
+<span class="kw">Date</span>:   Tue Feb 14 18:42:31 2017 +0000
 
-<span class="ex">Fixed</span> the headings that were broken in the about section of readme.md</code></pre></div>
+<span class="kw">Fixed</span> the headings that were broken in the about section of readme.md</code></pre></div>
 <ol style="list-style-type: lower-alpha">
 <li>We’re going to go back in time and create a new branch. You can escape the <code>git log</code> by typing <code>q</code>. Here’s how the command will look: <code>$ git checkout -b branchname &lt;commit&gt;</code> where <code>branch</code> is the name you want the branch to be called, and <code>&lt;commit&gt;</code> is that unique ID. Make a new branch from your second last commit (don’t use &lt; or &gt;).</li>
 <li>We typed <code>git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43</code> (<strong>Don’t</strong> copy <em>our</em> command, because our version includes a reference to a commit that doesn’t exist for you! Select a commit reference from your own commit history, which you can inspect with <code>git log</code>). The response: <code>Switched to a new branch 'experiment'</code> Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you’ve time travelled! Those files are not missing; but they <em>are</em> on a different branch (the master branch) and you can’t harm them now. Add a number of new files, making commits after each one. Check your git status, and check your git log as you go to make sure you’re getting everything. Make sure there are no unstaged changes - everything’s been committed.</li>
@@ -421,13 +421,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ol style="list-style-type: lower-alpha">
 <li>Now we push your work in the repository onto the version that lives at Github.com:</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> push -u origin master</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> push -u origin master</code></pre></div>
 <p><em>NB</em> If you wanted to push a <code>branch</code> to your repository on the web instead, do you see how you would do that? If your branch was called <code>experiment</code>, the command would look like this:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">git</span> push origin experiment</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> push origin experiment</code></pre></div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Because your repository is on the web at Github, it is possible that you might make changes to the repository directly there, or from your local machine. To get the updates to integrate into where you are currently working, you could type</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">git</span> pull origin master</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> pull origin master</code></pre></div>
 <p>and then begin working.</p>
 </div>
 <div id="warnings" class="section level3">
@@ -476,7 +476,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/01.3-githubandversioncontrol.Rmd",
 "text": "Edit"
 },
-"download": null,
+"download": ["odate.pdf"],
 "toc": {
 "collapse": "section",
 "number_sections": null
