@@ -2,7 +2,7 @@
 
 It's a familiar situation - you've been working on a paper. It's where you want it to be, and you're certain you're done. You save it as 'final.doc'. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as 'final-w-changes.doc'. Later that day it occurs to you that you don't like those changes, and you go back to the original 'final.doc', make some changes, and just overwrite the previous version. Soon, you have a folder like:
 
-```
+```fortran
 |-project
     |-'finalfinal.doc'
     |-'final-w-changes.doc'
@@ -18,7 +18,7 @@ Things can get messy quite quickly. Imagine that you also have several spreadshe
 
 At its heart, Git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, see Alice Bartlett's [presentation here](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In Git's lingo, a folder on your computer is known as a `repository`. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a Git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
 
-```
+```fortran
 |-project
     |-'final.doc'
 ```    
@@ -29,7 +29,7 @@ BUT its commit history could be visualized like this:
 
 Each one of those circles represents a point in time when you the writer made a commit; Git compared the state of the file to the earlier state, and saved a snapshot of the `differences`. What is particularly useful about making a commit is that Git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about *why* the commit is being made. In our hypothetical situation, your first commit message might look like this:
 
-```
+```bash
 Fixed conclusion
 
 Julie pointed out that I had missed 
@@ -89,7 +89,7 @@ Periodically, we tell Git to take a snapshot of the state of the files in the fo
   c. Let's check our git status again: type `$ git status`
   d. You should see something like this:
 
-```
+```bash
 On branch master
 Initial commit
 Changes to be committed:
@@ -102,7 +102,7 @@ Congratulations, you are now able to track your changes, and keep your materials
 
 3. Go ahead and make some more changes to your repository. Add some new files. Commit your changes after each new file is created. Now we're going to view the history of your commits. Type `$ git log`. What do you notice about this list of changes? Look at the time stamps. You'll see that the entries are listed in reverse chronological order. Each entry has its own 'hash' or unique ID, the person who made the commit and time are listed, as well as the commit message eg:
 
-```
+```bash
 commit 253506bc23070753c123accbe7c495af0e8b5a43
 Author: Shawn Graham <shawn.graham@carleton.ca>
 Date:   Tue Feb 14 18:42:31 2017 +0000
@@ -122,20 +122,20 @@ a. Now, we merge with `$ git merge experiment`. Remember, a merge is a special k
 
 a. Now we push your work in the repository onto the version that lives at Github.com:
 
-```
+```bash
 git push -u origin master
 ```
 
 *NB* If you wanted to push a `branch` to your repository on the web instead, do you see how you would do that? If your branch was called `experiment`, the command would look like this:
 
-```
+```bash
 $ git push origin experiment
 
 ```
 
 b. Because your repository is on the web at Github, it is possible that you might make changes to the repository directly there, or from your local machine. To get the updates to integrate into where you are currently working, you could type
 
-```
+```bash
 $ git pull origin master
 ```
 

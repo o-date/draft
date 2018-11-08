@@ -2,7 +2,7 @@
 
 ### Shawn Graham ### {-}
 
-Shawn Graham trained in Roman archaeology but has become over the years a digital archaeologist and digital humanist. He is currently an associate professor in the [Department of History at Carleton University in Ottawa Canada](http://carleton.ca). He keeps an open lab notebook of his research and experiments in digital history and archaeology at his research blog, [electricarchaeology](http://electricarchaeology.ca). He can be found on Twitter at [electricarchaeo](http://twitter.com/electricarchaeo).
+Shawn Graham trained in Roman archaeology but has become over the years a digital archaeologist and digital humanist. He is currently an associate professor in the [Department of History at Carleton University in Ottawa Canada](http://carleton.ca). He keeps an open lab notebook of his research and experiments in digital history and archaeology at his research blog, [electricarchaeology](http://electricarchaeology.ca). He can be found on Twitter at [&#64;electricarchaeo](http://twitter.com/electricarchaeo).
 
 ### Neha Gupta ### {-}
 
@@ -14,7 +14,7 @@ Michael Carter is an Assistant Professor in  the School of Creative Industries a
 
 ### Beth Compton ### {-}
 
-[Mary Elizabeth (Beth) Compton](https://www.ourpresentpast.org/) is a Trillium Scholar and Archaeology PhD candidate at the University of Western Ontario. She is also a Co-Founder of the MakerBus Collaborative (now [MakerBus Consulting](http://www.makerbus.ca/)). Her academic papers, conference presentations, doctoral dissertation, and collaborative projects beyond academia primarily explore various aspects of digital archaeology, ethics, and the social impact of 3D technologies. Through the MakerBus project, she has gained experience teaching at all age levels, using hands-on productive activities (building, inventing, creating, making) as a way of bridging physical and conceptual exploration. Her technological area of expertise is in archaeological object representation and replication with a focus on digital photography, 3D modelling, and 3D printing. Driven by the belief that archaeologists have an obligation to be actively engaged with the communities they serve, she also examines how they present information, represent people, and interpret a multifaceted past in the present. Connect with her on Twitter as [@Beth_Compton](https://twitter.com/Beth_Compton) and on [Academia.edu](https://westernu.academia.edu/MaryElizabethBethCompton).
+[Mary Elizabeth (Beth) Compton](https://www.ourpresentpast.org/) is a Trillium Scholar and Archaeology PhD candidate at the University of Western Ontario. She is also a Co-Founder of the MakerBus Collaborative (now [MakerBus Consulting](http://www.makerbus.ca/)). Her academic papers, conference presentations, doctoral dissertation, and collaborative projects beyond academia primarily explore various aspects of digital archaeology, ethics, and the social impact of 3D technologies. Through the MakerBus project, she has gained experience teaching at all age levels, using hands-on productive activities (building, inventing, creating, making) as a way of bridging physical and conceptual exploration. Her technological area of expertise is in archaeological object representation and replication with a focus on digital photography, 3D modelling, and 3D printing. Driven by the belief that archaeologists have an obligation to be actively engaged with the communities they serve, she also examines how they present information, represent people, and interpret a multifaceted past in the present. Connect with her on Twitter as [&#64;Beth_Compton](https://twitter.com/Beth_Compton) and on [Academia.edu](https://westernu.academia.edu/MaryElizabethBethCompton).
 
 ### Jolene Smith ### {-}
 
@@ -22,7 +22,7 @@ Michael Carter is an Assistant Professor in  the School of Creative Industries a
 
 ### Andreas Angourakis {-}
 
-Andreas Angourakis is a PhD student at the Department of History and Archaeology, University of Barcelona. He is a generalist that underwent training in humanistic disciplines, social sciences, and biology. He is self-taught in software and programming languages, including R and NetLogo. His research in archaeology has been focused on the development of simulation models of socio-ecological dynamics in the past, mainly using agent-based modeling, and assembling multivariate statistical protocols for analyzing and interpreting archaeological data. As digital archaeology's bones of the trade, he believes that creativity and science are unmistakably intertwined. He can be found on Twitter as [AndrosSpica](https://twitter.com/AndrosSpica), GitHub as [Andros-Spica](https://github.com/Andros-Spica), and is present on both [Research Gate](https://www.researchgate.net/profile/Andreas_Angourakis) and [Academia](https://ub.academia.edu/AndreasAngourakis).
+Andreas Angourakis is a PhD student at the Department of History and Archaeology, University of Barcelona. He is a generalist that underwent training in humanistic disciplines, social sciences, and biology. He is self-taught in software and programming languages, including R and NetLogo. His research in archaeology has been focused on the development of simulation models of socio-ecological dynamics in the past, mainly using agent-based modeling, and assembling multivariate statistical protocols for analyzing and interpreting archaeological data. As digital archaeology's bones of the trade, he believes that creativity and science are unmistakably intertwined. He can be found on Twitter as [&#64;AndrosSpica](https://twitter.com/AndrosSpica), GitHub as [Andros-Spica](https://github.com/Andros-Spica), and is present on both [Research Gate](https://www.researchgate.net/profile/Andreas_Angourakis) and [Academia](https://ub.academia.edu/AndreasAngourakis).
 
 ### Andrew Reinhard {-}
 
@@ -120,14 +120,14 @@ The sequence of steps to produce a Bookdown-powered site looks like this:
 1. create a new project in RStudio (we typically create a new project in a brand new folder)
 2. run the following script to install Bookdown:
 
-```
+```r
 install.packages("devtools")
 devtools::install_github("rstudio/bookdown")
 ```
 
 3. create a new textfile with `metadata` that describe how the book will be built. The metadata is in a format called `YAML` ('yet another markup language') that uses keys and values that get passed into other parts of Bookdown:
 
-```
+```bash
 title: "The archaeology of spoons"
 author: "Graham, Gupta, Carter, & Compton"
 date: "July 1 2017"

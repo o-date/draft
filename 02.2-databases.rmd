@@ -48,7 +48,7 @@ However, it can be challenging to convey how data fit together if they are conta
 While you likely won't (and shouldn't) input your research data directly into these formats from the beginning, many web resources rely on [JSON (JavaScript Object Notation)](https://en.wikipedia.org/wiki/JSON) or [XML (Extensible Markup Language)](https://en.wikipedia.org/wiki/XML) documents to store data. JSON and XML are formats for writing plain text documents in ways that allow computers (and people) to understand hierarchy and relationships between data.
 
 JSON looks like this ([source](https://en.wikipedia.org/wiki/JSON)):
-```
+```JSON
 {
   "firstName": "John",
   "lastName": "Smith",
@@ -81,7 +81,7 @@ JSON looks like this ([source](https://en.wikipedia.org/wiki/JSON)):
 
 
 XML looks like this ([source](https://www.xmlfiles.com/examples/plant-catalog/)):
-```
+```xml
 <?xml version="1.0" encoding="ISO8859-1" ?>
 <CATALOG>
  <PLANT>

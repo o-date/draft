@@ -6,7 +6,7 @@ In this gray area we find the techniques of web scraping. Every web page you vis
 
 Other times, we wish to reuse or incorporate the published data from an archaeological study in order to complement or contrast with our own work. For instance, in Lane, K., Pomeroy, E. & Davila, M. (2018). Over Rock and Under Stone: Carved Rocks and Subterranean Burials at Kipia, Ancash, AD 1000 – 1532. Open Archaeology, 4(1), pp. 299-321. [doi:10.1515/opar-2018-0018](https://www.degruyter.com/downloadpdf/j/opar.2018.4.issue-1/opar-2018-0018/opar-2018-0018.pdf) there are a number of tables of data. Their Table 1 for instance is a list of calibrated dates. How can we integrate these into our own studies? In many journal pdfs, there is a hidden text layer over top of the image of the laid out and typeset page (pdfs made from journal articles from the mid 1990s or earlier are typically merely images and do not contain this hidden layer). If you can highlight the text, and copy and paste it, then you've grabbed this hidden layer. But let's do that with table one - this is what we end up with:
 
-```
+```fortran
 Lab Nō.MAMSSample Nō.SectorPitStratigraphic Unit[Cut]C14 Date±13C Cal 1 Sigmacal ADCal 2 Sigmacal AD15861Ca-8B234 [22]48922-21,31421-14381412-144415862Ca-21A32846923-24,21428-14441416-144915863Ca-22A328 [48]97622-18,71021-11461016-115315864Ca-23A33439423-20,21448-16071442-161815865Ca-25B272 [71]80222-19,01222-12561193-127215866Ca-27B41335818-17,11472-16181459-163015867Ca-28B6 (RF4)20 [19]48219-27,91424-14391415-144415868Ca-29B41335920-17,91470-16191456-1631T
 ```
 Not entirely useful. If you paste directly into a spreadsheet, you end up with something even worse:
