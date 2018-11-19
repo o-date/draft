@@ -23,10 +23,10 @@ So much information swamps us every day. 'Fact checking' does not defeat lies be
 
 In the excellent open-access book, ["Web Literacy for Student Fact Checkers"](https://webliteracy.pressbooks.com/), Michael A. Caulfield lays out what he calls the 'four moves' or 'things they can do to get closer to the truth'. The four moves are:
 
-+ Check for previous work: Look around to see if someone else has already fact-checked the claim or provided a synthesis of research.
-+ Go upstream to the source: Go “upstream” to the source of the claim. Most web content is not original. Get to the original source to understand the trustworthiness of the information.
-+ Read laterally: Read laterally.[1] Once you get to the source of a claim, read what other people say about the source (publication, author, etc.). The truth is in the network.
-+ Circle back: If you get lost, hit dead ends, or find yourself going down an increasingly confusing rabbit hole, back up and start over knowing what you know now. You’re likely to take a more informed path with different search terms and better decisions.
+> + Check for previous work: Look around to see if someone else has already fact-checked the claim or provided a synthesis of research.
+> + Go upstream to the source: Go “upstream” to the source of the claim. Most web content is not original. Get to the original source to understand the trustworthiness of the information.
+> + Read laterally: Read laterally.[1] Once you get to the source of a claim, read what other people say about the source (publication, author, etc.). The truth is in the network.
+> + Circle back: If you get lost, hit dead ends, or find yourself going down an increasingly confusing rabbit hole, back up and start over knowing what you know now. You’re likely to take a more informed path with different search terms and better decisions.
 
 [Caulfield 2017](https://webliteracy.pressbooks.com/chapter/four-strategies/)
 
