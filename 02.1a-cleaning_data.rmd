@@ -2,15 +2,147 @@
 
 <div class = rmdcaution> _This section is under development_. </div>
 
+Defining "clean" and "mesy
+
+-- this is straight from dhainp --
+We may characterize data as being "raw" or completely unprocessed, but that is hardly the case. Decisions at every step of the way about what kinds of information we're going to collect, what units of measurement we're using, which terms we choose to describe our observations all embed assumptions and additional information. Data are never truly "raw" if we've collected them (Gitelman 2013). For an example familiar to field archaeologists, consider field the act of recording information about an archaeological feature on paper. The archaeologist may choose to measure and draw all artifacts and inclusions in a soil layer, or only some (leaving out exhaustive detail about "rubble" or similar). The archaeologist may record dimensions of objects visually with a ruler to the centimeter, or to the half centimeter, or with precision instrumentation to fragments of millimeters. So, even at this early state of capture, the measurements are representations of reality, derived from observation combined with our own assumptions, viewed through frameworks. It's critical to consider the existence of these assumptions when working with legacy data. What were the analytical goals of the original data creator? What *didn't* the original creator attempt to capture?
+
+The way you choose to clean your data will be informed by the structure you want to take. Have a look at the following section on [arranging and storing data](LINK) before you settle on a methodology for data cleaning. And note that a key element here, as in the prior sections on useful data, preservation, and data collection, is *planning*.
+
+### Tools
+
+You can clean data using [regular expressions](LINK TO PROGHIST TUTORIAL), or in Microsoft Excel using built in functionality. Or you could use a programming language like Python or R to text operations. But one of the most accessible and powerful, free tools for cleaning up messy data is [OpenRefine](http://openrefine.org/).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B70J_H_zAWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Before you go any further, take a few moments to watch the OpenRefine videos, download the program, and learn how it works. You won't be sorry, but you may shed a tear for time wasted manually cleaning up spreadsheet data in the past.
+
+### Cleaning Tasks
+
 Gathering from many datasets
 
+Don't transform "original" data. Any cleanup should happen on derivative copies.
+
+Building on ideas discussed in the previous section on [Designing Data Collection](LINK), documentation and transparency are key concepts. Where did you get your datasets? Write that down. Did you do anything (like transcription) to make them computer-readable? Write that down too, describing your methods.
+
+Are you bringing data from multiple places together? Will they fit nicely, or will they need to be massaged a bit in order to be unified?
+
+Examine your dataset(s) closely. Does each row describe one thing? What is that thing? Sometimes articulating the structure of data is more difficult than it seems. For example, take this dataset describing National Register of Historic Places listings in Virginia.
+
+``5 row example of Register data``
+
+On first glance, each row in the dataset might appear to be describing a building, historic district, or archaeological site. But on closer examination, it becomes clear that each row is describing a *document* which then itself describes a historic property. Whether you created a dataset or you're working with inherited data,  
+
+Define your metadata. Create a document that explains each column heading.
+
+Preparing data
+Desired qualities:
+
 Define well-formed data
+-- take from dhiandp
+Each row is an observation and each column is a variable. Watch out for many kinds of information in one column or field. Splitting these data into multiple columns will make things much easier to work with.
 
-Watch out for many kinds of information in one field
-  Splitting them up
 
-Housekeeping- dates, special characters, encoding, leading/trailing spaces
 
-### discussion
+1) Identify the messiness
+Before doing any real cleaning or reshaping of your data, take some time to explore. Are there leading or spaces in any of your values? Are there typos or nonstandard formatting? Do dates and numbers look the way they are supposed to? Don't make any changes immediately, but note what you'd like to do. After a bit of exploration, the best order of operations will become more clear. Handling spaces and formatting issues at the outset is usually good advise, however.
 
-### exercises
+````
+NAME                                `BIRTH (date, location)`     DEATH       `SPOUSE(S)`                                                      
+<chr>                               <chr>                        <chr>       <chr>                                                            
+1 Bacchus, Ellen P.                   abt 1863 (Richmond)          9 May 1916  n/a                                                              
+2 Ballard (Reese), Bessie E.          Abt 1879 (Richmond)          29 Dec 1928 John L. Ballard Sr. (√) (m. 18 Sep 1898, in Manhattan)           
+3 Ballard, Dora Maude [went by Maude] 16 Mar 1898 (North Carolina) 31 Oct 1973 John L. Ballard Sr. (√)                                          
+4 Ballard, John Lee, Sr.              15 Jun 1877                  9 Sep 1949  Dora M. — (√); Bessie E. Reese (√) (m. 18 Sep 1898, in Manhattan)
+````
+
+In the example above, notice that we've got multiple types of data stored in individual columns. In the BIRTH column we have information about both the date, and birth place within parenthesis, but we've also got "abt" indicating an approximate date. Some dates include the day, month, and year, but others only include a year. The SPOUSE(S) column includes not only one or more names, but a "√" symbol to indicate something, and potentially a marriage date and location. Each of those elements of information deserve their own column or row. Even the name can be separated into First, Middle, Last, Maiden, Other, Honorific, Suffix, etc. The lengths to which you need to go depend on the end goals of your project.
+
+````
+cf_ppl_surname cf_ppl_first_name cf_ppl_middle_name cf_ppl_other_name cf_ppl_honorif cf_ppl_birth_month cf_ppl_birth_year cf_ppl_birth_day
+  <chr>          <chr>             <chr>              <chr>             <chr>          <chr>                          <int>            <int>
+1 Ballard        Dora              Maude              NA                NA             NA                              1898               16
+2 Ballard        Bessie            E.                 Reese             NA             NA                              1879               NA
+3 Bacchus        Ellen             P.                 NA                NA             NA                              1850               NA
+4 Ballard        John              Lee                NA                NA             June                            1877               15
+````
+
+
+
+2) Consider multiple related tables.
+
+The data below come from a project to create a finding aid for a large collection of archaeological field notes. Notice that the "Associated Site Numbers" column contains a mix of individual site numbers, ranges, and multiple values separated by commas. This was a practical choice when data was collected, since multiple people were entering data via a simple [KoboToolbox](https://www.kobotoolbox.org/) form on a mobile device. But to move these data into a relational database or perform any analysis, we'll need to split up those values into a table about the recordsets and one about the sites.
+
+```
+`Box ID` `Recordset ID` `Recordset Name`                        Year `Associated Site Numbers`
+<chr>    <chr>          <chr>                                  <int> <chr>                                       
+1 FN097    RS 57214       Dulles International Airport Live Fir…  1991 44LD0500                                    
+2 FN097    RS 90948       Dulles International Airport Satellit…  1992 44LD0423                                    
+3 FN097    RS 22491       Fall HIll Avenue Bridge Replacement     2010 44SP0637                                    
+4 FN097    RS 40525       Bluestone Ph I                          2007 44TZ0157-44TZ0168                           
+5 FN097    RS 25592       Bluestone Ph II                         2008 44TZ0160-44TZ0162, 44TZ0165                 
+6 FN097    RS 1583       Route 5 Improvements                    2007 44HE0057, 44HE1079, 44HE1080, 44HE1081
+```
+
+Again, there are lots of methods to parse those data, but in this case we used OpenRefine.
+
+After processing, we end up with two tables,
+
+field_notes_info:
+````
+`Box ID` `Recordset ID` `Recordset Name`                                        Year
+<chr>    <chr>          <chr>                                                  <int>
+1 FN097    RS 57214       Dulles International Airport Live Fire and Police/Fire  1991
+2 FN097    RS 90948       Dulles International Airport Satellite Parking          1992
+3 FN097    RS 22491       Fall HIll Avenue Bridge Replacement                     2010
+4 FN097    RS 40525       Bluestone Ph I                                          2007
+5 FN097    RS 25592       Bluestone Ph II                                         2008
+6 FN097    RS 1583       Route 5 Improvements                                    2007
+````
+and field_notes_sites
+````
+`Recordset ID` Split_Site_Nums
+<chr>          <chr>          
+1 RS 57214       44LD0500       
+2 RS 90948       44LD0423       
+3 RS 22491       44SP0637       
+4 RS 40525       44TZ0157       
+5 RS 40525       44TZ0158       
+6 RS 40525       44TZ0159       
+7 RS 40525       44TZ0160       
+8 RS 40525       44TZ0161       
+9 RS 40525       44TZ0162       
+10 RS 40525       44TZ0163       
+11 RS 40525       44TZ0164       
+12 RS 40525       44TZ0165       
+13 RS 40525       44TZ0166       
+14 RS 40525       44TZ0167       
+15 RS 40525       44TZ0168       
+16 RS 25592       44TZ0160       
+17 RS 25592       44TZ0161       
+18 RS 25592       44TZ0162       
+19 RS 25592       44TZ0165       
+20 RS 1583       44HE0057       
+21 RS 1583       44HE1079       
+22 RS 1583       44HE1080       
+23 RS 1583       44HE1081
+````
+
+We can now join those two tables on the "Recordset ID" column appearing in both tables. You can find more about data structure and joining in the [Databases](LINK) section
+
+
+
+### Takeaways
++ Don't clean or transform your original data. Always work on copies and keep track of your methods.
++ Take time to explore your data to develop a cleaning strategy. Ask a lot of questions of your data.
++ Don't do cleanup manually if you don't have to. Learning tools/languages like OpenRefine, Python, and R will pay off in time saved and mistakes avoided.
+
+
+### Further Reading
+[Cleaning Data with OpenRefine, from The Programming Historian](https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine)  
+
+[Formatting Problems, from Data Carpentry](file:///home/jolene/Zotero/storage/W5XR4PVV/02-common-mistakes.html)
+
+@broman_data_2018
+
+@wilson_good_2017

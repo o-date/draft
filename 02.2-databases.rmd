@@ -131,17 +131,17 @@ Although SQL databases are made from tables, most of them are stored as binary f
 
 <a name="foot2">2</a>: Excel, again. If you have dates in your CSV or TSV file and you save using Excel, it may still try to monkey around with the formatting. Make sure your date columns are formatted to Text.
 
-### discussion
+### Takeaways
 
-### exercises
-A Gentle Introduction to SQL https://mybinder.org/v2/gh/o-date/sqlite/master?filepath=intro%20to%20sql.ipynb
+### Further Reading
+[Data Organization in Spreadsheets for Social Scientists, from Data Carpentry](http://www.datacarpentry.org/spreadsheets-socialsci/)  
+
+[Data Organization in Spreadsheets for Ecologists, from Data Carpentry](file:///home/jolene/Zotero/storage/TJSS5VHF/spreadsheet-ecology-lesson.html)
+
+[SQL for Social Science Data, from Data Carpentry](http://www.datacarpentry.org/sql-socialsci/)
+
+[Thinking about Data, from SSRC labs](https://labs.ssrc.org/dds/articles/6-thinking-about-data/)
 
 
-Data Organization in Spreadsheets for Social Scientists
-
-http://www.datacarpentry.org/spreadsheets-socialsci/
-
-SQL for Social Science Data
-http://www.datacarpentry.org/sql-socialsci/
-
-Cleaning Data with Open Refine
+### Exercises
+[A Gentle Introduction to SQL](https://mybinder.org/v2/gh/o-date/sqlite/master?filepath=intro%20to%20sql.ipynb)

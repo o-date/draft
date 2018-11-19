@@ -67,6 +67,6 @@ State or local government archives and libraries
 
 
 <a name="myfootnote1">1</a>: If you find yourself engineering a complicated spreadsheet with dependent picklists and formulas for relationships, this may be a sign that you're using the wrong tool.
-### discussion
+### Takeaways
 
-### exercises
+### Further Reading

@@ -57,10 +57,7 @@ With forethought directed at topics like format, structure, and descriptions, yo
     Geospatial- GeoJSON is text-based and human readable
     3D- a new frontier in digital preservation (we don’t know how to do it) -->
 
-For advice on specific types of archaeological, data consult  [*Guides to Good Practice* published by the Archaeology Data Service and Digital Antiquity](http://guides.archaeologydataservice.ac.uk/g2gp/Main), 2011.
 
-For a deeper dive into digital preservation, see
-Trevor Owens, *The Theory and Craft of Digital Preservation,* Johns Hopkins University Press, 2018 ([full open access preprint available](https://osf.io/preprints/lissa/5cpjt/)).
 
 ![An archival box full of legacy media in the section author's workspace, waiting to be transferred to stable formats.](images/legacy_formats.jpg)
 
@@ -95,3 +92,11 @@ DH projects:
 “Preservation for the (Digital) Ages: Digital Archivists from Collaborate with Classicists to Improve Database Preservation Methods.” ScienceDaily, https://www.sciencedaily.com/releases/2017/10/171017124345.htm. Accessed 7 Feb. 2018.
 
 Xu, Weijia, et al. A Portable Strategy for Preserving Web Applications Functionality. IEEE, 2017, pp. 1–4. CrossRef, doi:10.1109/JCDL.2017.7991578.
+
+### Takeaways
+
+### Further Reading
+
+For advice on creating and preserving specific types of archaeological, data consult  [*Guides to Good Practice* published by the Archaeology Data Service and Digital Antiquity](http://guides.archaeologydataservice.ac.uk/g2gp/Main), 2011.
+
+For a deeper dive into digital preservation, see Trevor Owens, *The Theory and Craft of Digital Preservation,* Johns Hopkins University Press, 2018 ([full open access preprint available](https://osf.io/preprints/lissa/5cpjt/)).
