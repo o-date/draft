@@ -1,0 +1,147 @@
+## Arranging and Storing Data for the Long Haul (Databases!)
+
+<div class = rmdcaution> _This section is under development_. </div>
+
+Once you’ve collected data according to your plan and structure, you’ll need a way to connect it all together in a way that allows you and other researchers to use it, hopefully for some time to come. Since this textbook is about "digital archaeology," the nature of your digital data might be highly variable. You could be working with information from a physical excavation, or you might be a few degrees removed from the dig and working to aggregate existing research data. Consider the different framework possibilities as you continue reading.
+
+So what *is* a database and which one should you use?
+
+Choosing a format:
+A lot of people have a lot of opinions on good database platforms, horrible ones, and everything in between. But there is no universally right answer and a lot depends on technical resources and level of experience. That is to say, in many cases, a relational database is the strongest option, but handling information well in spreadsheets may met your needs and the needs of other researchers if implemented well. Our organizations may dictate software platforms we're permitted to use, and often that's Microsoft Access or Excel.
+
+You might make your decision based on the complexity of your data. Are you working with field data with lots of nested information about excavation units, features, and artifacts? Or are you storing a simpler list of values you've collected through research?
+
+There's no perfect format choice that applies to every project, but there are some trade offs to keep in mind. Your choices may take into account things like number of collaborators, internet connectivity, availability of hardware like field tablets, and software compatibility.
+
+### Flat tables ### {-}
+The first stop for many people creating digital data is to put collected values into a spreadsheet. Spreadsheets are quick and easy tools to arrange text and numerical values in meaningful ways.
+
+**Excel**  
+In field archaeology, it's incredibly common to see excavation data and artifact catalogs stored in Excel spreadsheets. Microsoft Excel comes standard on most PCs and is ubiquitous in many office settings. There's a lot of power in Excel, but watch out for pitfalls.  
+
+*Pros*  
+The appeal of Excel and similar spreadsheet applications lies in their expedience. With a very small amount of technical know-how it's possible to create collections of structured data and perform sometimes complex analytical operations through formulas and charts right in a workbook.  
+
+*Cons*  
+Excel tries to be clever, and sometimes it goes overboard. A prime example is the tendency for Excel to try to auto-format dates. Excel's way of handling dates is to convert something like 8/1/2018 (August 1 since this author is American) into a serial number, 43311. Weird, right? It gets weirder. Excel uses the 1900 date system to assign those numbers. That serial number represents the number of days between January 1, 1900 and the date entered. This is not only tricky for those of us who work with dates prior to 1900, but it can also cause problems for number values that *look* like those date serial numbers, transforming things that *are not* dates into date values. In fact, Excel looks for all kinds of patterns that might be dates and converts them. This has become a significant problem with data about genetics. See @ziemann_gene_2016. A safeguard against this type of error is to manually format any column that might contain values that look like dates to excel to be formatted as text. Or just don't use Excel for anything that important.
+
+Constraining/standardizing data entry
+Storing information in formatting
+Hard to version control
+
+**Comma or Tab-separated text files (.csv, .tsv, .txt)**  
+
+*Pros*  
+These kinds of text files are some of the simplest ways to store data, and thus also some of the most durable. You can open them as tables in a spreadsheet program like Excel or Google Sheets, but all the information is still readable in a plain text editor. Since there's not much complicated underlying structure, these types of plain text files are very easy to *version control,* or retain and view information about changes to a file over its life span. In most cases, if you need to work in and save spreadsheet data, choose one of these formats over Excel or other formats.[2](#foot2)</sup>
+
+*Cons*  
+To some degree, you might have less control of formatting when using plain text files (but this may be a feature and not a bug.)
+
+For great advice on using spreadsheets to organize data, see this helpful piece in *The American Statistician* by Karl Broman and Kara Woo @broman_data_2018.
+
+Putting your collected data straight into flat tables can be quite easy and efficient. It's quite easy for a human to open a spreadsheet and read it. These are probably the biggest advantages for storing data this way.
+
+However, it can be challenging to convey how data fit together if they are contained in flat files-- metadata explaining each field must be stored in some other file. Data entry can be inefficient and error-prone if there are no checks in place to eliminate inconsistencies. And it's very easy to introduce errors and typos. Note: while you *can* relate values in Excel with functions like VLOOKUP and set constraints with input masks, it doesn't mean you *should* due to the instability of these types of enhancements. If you find yourself embedding a lot of this kind of behavior, it's a good signal to take a look at other types of databases.
+
+
+**JSON and XML**  
+While you likely won't (and shouldn't) input your research data directly into these formats from the beginning, many web resources rely on [JSON (JavaScript Object Notation)](https://en.wikipedia.org/wiki/JSON) or [XML (Extensible Markup Language)](https://en.wikipedia.org/wiki/XML) documents to store data. JSON and XML are formats for writing plain text documents in ways that allow computers (and people) to understand hierarchy and relationships between data.
+
+JSON looks like this ([source](https://en.wikipedia.org/wiki/JSON)):
+```JSON
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 27,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    },
+    {
+      "type": "mobile",
+      "number": "123 456-7890"
+    }
+  ],
+  "children": [],
+  "spouse": null
+}
+```
+
+
+XML looks like this ([source](https://www.xmlfiles.com/examples/plant-catalog/)):
+```xml
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<CATALOG>
+ <PLANT>
+ <COMMON>Bloodroot</COMMON>
+ <BOTANICAL>Sanguinaria canadensis</BOTANICAL>
+ <ZONE>4</ZONE>
+ <LIGHT>Mostly Shady</LIGHT>
+ <PRICE>$2.44</PRICE>
+ <AVAILABILITY>031599</AVAILABILITY>
+ </PLANT>
+
+ <PLANT>
+ <COMMON>Columbine</COMMON>
+ <BOTANICAL>Aquilegia canadensis</BOTANICAL>
+ <ZONE>3</ZONE>
+ <LIGHT>Mostly Shady</LIGHT>
+ <PRICE>$9.37</PRICE>
+ <AVAILABILITY>030699</AVAILABILITY>
+ </PLANT>
+</CATALOG>
+```
+<!-- Make those archaeological examples -->
+Note that you can see some code-like formatting, but you can still read the contents and get a feel for organization.
+
+**Relational databases**
+A relational database consists of many different tables connected together with *relationships* that tell computers how things fit together. Most relational databases rely on SQL, or Structured Query Language, to run the show.
+
+Desktop products
+Desktop SQL office database products like MS Access come with a graphical user interface (GUI) to help set up relationships and form queries. Even so, it's worthwhile to learn the basics of SQL.
+
+Microsoft Access
+FileMaker Pro
+Open Office Base
+
+These consumer grade database applications can be a great entry point into SQL databases, they can be incredibly frustrating, and usually they're both. Using these types of applications it's relatively easy to create databases with complex relationships. This type of database is also a great choice because of the ability to set constraints on data entry. You can create "authority tables" to populate drop-down lists and set input masks to control for necessary patterning in special ID numbers, dates, etc.  
+
+MS Access is notoriously fragile. Collaboration by multiple users on a single database can be a challenge. Conversion between old and newer software versions can cause unexpected errors.
+
+Server-based SQL Databases
+If your application for storing or serving up data runs on the web, your SQL back end is likely something like MySOL, PosgreSQL
+  <!--figure out how to describe the difference. Desktop- the database engine is included in the software application, etc.-->
+
+Although SQL databases are made from tables, most of them are stored as binary files. If you try to open them without the correct program to read the data, you get something like this:
+```
+
+```
+
+<a name="foot2">2</a>: Excel, again. If you have dates in your CSV or TSV file and you save using Excel, it may still try to monkey around with the formatting. Make sure your date columns are formatted to Text.
+
+### discussion
+
+### exercises
+A Gentle Introduction to SQL https://mybinder.org/v2/gh/o-date/sqlite/master?filepath=intro%20to%20sql.ipynb
+
+
+Data Organization in Spreadsheets for Social Scientists
+
+http://www.datacarpentry.org/spreadsheets-socialsci/
+
+SQL for Social Science Data
+http://www.datacarpentry.org/sql-socialsci/
+
+Cleaning Data with Open Refine

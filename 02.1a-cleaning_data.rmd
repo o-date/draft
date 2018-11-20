@@ -1,0 +1,16 @@
+## Cleaning Data
+
+<div class = rmdcaution> _This section is under development_. </div>
+
+Gathering from many datasets
+
+Define well-formed data
+
+Watch out for many kinds of information in one field
+  Splitting them up
+
+Housekeeping- dates, special characters, encoding, leading/trailing spaces
+
+### discussion
+
+### exercises

@@ -5,27 +5,27 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>The Open Digital Archaeology Textbook Environment</title>
-  <meta name="description" content="The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory">
-  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+  <title>The Open Digital Archaeology Textbook</title>
+  <meta name="description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="The Open Digital Archaeology Textbook Environment" />
+  <meta property="og:title" content="The Open Digital Archaeology Textbook" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:image" content="images/word-cloud-proposal.jpg" />
-  <meta property="og:description" content="The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory" />
+  <meta property="og:image" content="images/brandon-green-321795-unsplash.jpg" />
+  <meta property="og:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
   <meta name="github-repo" content="o-date/draft" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="The Open Digital Archaeology Textbook Environment" />
+  <meta name="twitter:title" content="The Open Digital Archaeology Textbook" />
   
-  <meta name="twitter:description" content="The Open Digital Archaeology Textbook Environment combines instructive text with a computational DA laboratory" />
-  <meta name="twitter:image" content="images/word-cloud-proposal.jpg" />
+  <meta name="twitter:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
+  <meta name="twitter:image" content="images/brandon-green-321795-unsplash.jpg" />
 
-<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Michael Carter, &amp; Beth Compton">
+<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
 
 
-<meta name="date" content="2018-02-16">
+<meta name="date" content="2018-11-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="archaeogaming.html">
-<link rel="next" href="eliding-the-digital-and-the-physical.html">
+<link rel="next" href="computational-creativity.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,8 +48,46 @@
 
 
 <script src="https://hypothes.is/embed.js" async></script>
+<link rel="stylesheet" href="css/custom.css">
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -73,15 +111,22 @@
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#neha-gupta"><i class="fa fa-check"></i>Neha Gupta</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#michael-carter"><i class="fa fa-check"></i>Michael Carter</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#beth-compton"><i class="fa fa-check"></i>Beth Compton</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#jolene-smith"><i class="fa fa-check"></i>Jolene Smith</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#andreas-angourakis"><i class="fa fa-check"></i>Andreas Angourakis</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#andrew-reinhard"><i class="fa fa-check"></i>Andrew Reinhard</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#lorna-richardson"><i class="fa fa-check"></i>Lorna Richardson</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#kate-ellenberger"><i class="fa fa-check"></i>Kate Ellenberger</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#zack-batist"><i class="fa fa-check"></i>Zack Batist</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#joel-rivard"><i class="fa fa-check"></i>Joel Rivard</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#ben-marwick"><i class="fa fa-check"></i>Ben Marwick</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#editorial-board"><i class="fa fa-check"></i>Editorial Board</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i>Getting Started</a><ul>
-<li class="chapter" data-level="" data-path="how-to-use-this-text.html"><a href="how-to-use-this-text.html"><i class="fa fa-check"></i>How to use this text</a></li>
+<li class="chapter" data-level="" data-path="instructors-how-to-use-this-text.html"><a href="instructors-how-to-use-this-text.html"><i class="fa fa-check"></i>Instructors: How to use this text</a></li>
+<li class="chapter" data-level="" data-path="students-how-to-use-this-text.html"><a href="students-how-to-use-this-text.html"><i class="fa fa-check"></i>Students: How to use this text</a></li>
 <li class="chapter" data-level="" data-path="how-to-contribute-changes-or-make-your-own-version.html"><a href="how-to-contribute-changes-or-make-your-own-version.html"><i class="fa fa-check"></i>How to contribute changes, or make your own version</a></li>
 <li class="chapter" data-level="" data-path="how-to-access-and-use-the-computational-environment.html"><a href="how-to-access-and-use-the-computational-environment.html"><i class="fa fa-check"></i>How to access and use the computational environment</a></li>
-<li class="chapter" data-level="" data-path="colophon.html"><a href="colophon.html"><i class="fa fa-check"></i>Colophon</a><ul>
-<li class="chapter" data-level="" data-path="colophon.html"><a href="colophon.html#the-computational-environment"><i class="fa fa-check"></i>The computational environment</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="colophon.html"><a href="colophon.html"><i class="fa fa-check"></i>Colophon</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i>Welcome!</a></li>
 <li class="chapter" data-level="1" data-path="going-digital.html"><a href="going-digital.html"><i class="fa fa-check"></i><b>1</b> Going Digital</a><ul>
@@ -118,92 +163,127 @@
 <li class="chapter" data-level="1.5.2" data-path="failing-productively.html"><a href="failing-productively.html#exercises-4"><i class="fa fa-check"></i><b>1.5.2</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="1.6" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html"><i class="fa fa-check"></i><b>1.6</b> The Ethics of Big Data in Archaeology</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#discussion-1"><i class="fa fa-check"></i><b>1.6.1</b> discussion</a></li>
-<li class="chapter" data-level="1.6.2" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#exercises-5"><i class="fa fa-check"></i><b>1.6.2</b> exercises</a></li>
+<li class="chapter" data-level="1.6.1" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#exercises-5"><i class="fa fa-check"></i><b>1.6.1</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="the-human-problem.html"><a href="the-human-problem.html"><i class="fa fa-check"></i><b>1.7</b> The Human Problem</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="the-human-problem.html"><a href="the-human-problem.html#the-two-sentence-pitch"><i class="fa fa-check"></i><b>1.7.1</b> The Two-Sentence Pitch</a></li>
+<li class="chapter" data-level="1.7.2" data-path="the-human-problem.html"><a href="the-human-problem.html#consulting-colleagues-and-stakeholders"><i class="fa fa-check"></i><b>1.7.2</b> Consulting Colleagues and Stakeholders</a></li>
+<li class="chapter" data-level="1.7.3" data-path="the-human-problem.html"><a href="the-human-problem.html#making-a-plan"><i class="fa fa-check"></i><b>1.7.3</b> Making a Plan</a></li>
+<li class="chapter" data-level="1.7.4" data-path="the-human-problem.html"><a href="the-human-problem.html#persisting-and-adapting-your-plan"><i class="fa fa-check"></i><b>1.7.4</b> Persisting and Adapting your Plan</a></li>
+<li class="chapter" data-level="1.7.5" data-path="the-human-problem.html"><a href="the-human-problem.html#exercises-6"><i class="fa fa-check"></i><b>1.7.5</b> Exercises</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="making-data-durable.html"><a href="making-data-durable.html"><i class="fa fa-check"></i><b>2</b> Making Data Durable</a><ul>
-<li class="chapter" data-level="2.1" data-path="designing-data-collection.html"><a href="designing-data-collection.html"><i class="fa fa-check"></i><b>2.1</b> Designing Data Collection</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="designing-data-collection.html"><a href="designing-data-collection.html#discussion-2"><i class="fa fa-check"></i><b>2.1.1</b> discussion</a></li>
-<li class="chapter" data-level="2.1.2" data-path="designing-data-collection.html"><a href="designing-data-collection.html#exercises-6"><i class="fa fa-check"></i><b>2.1.2</b> exercises</a></li>
+<li class="chapter" data-level="2" data-path="making-data-useful.html"><a href="making-data-useful.html"><i class="fa fa-check"></i><b>2</b> Making Data Useful</a><ul>
+<li class="chapter" data-level="2.1" data-path="designing-data-collection-and-curation.html"><a href="designing-data-collection-and-curation.html"><i class="fa fa-check"></i><b>2.1</b> Designing Data Collection and Curation</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="designing-data-collection-and-curation.html"><a href="designing-data-collection-and-curation.html#exercises-7"><i class="fa fa-check"></i><b>2.1.1</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="cleaning-data-with-open-refine.html"><a href="cleaning-data-with-open-refine.html"><i class="fa fa-check"></i><b>2.2</b> Cleaning Data with Open Refine</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="cleaning-data-with-open-refine.html"><a href="cleaning-data-with-open-refine.html#discussion-3"><i class="fa fa-check"></i><b>2.2.1</b> discussion</a></li>
-<li class="chapter" data-level="2.2.2" data-path="cleaning-data-with-open-refine.html"><a href="cleaning-data-with-open-refine.html#exercises-7"><i class="fa fa-check"></i><b>2.2.2</b> exercises</a></li>
+<li class="chapter" data-level="2.2" data-path="cleaning-data.html"><a href="cleaning-data.html"><i class="fa fa-check"></i><b>2.2</b> Cleaning Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="cleaning-data.html"><a href="cleaning-data.html#discussion-1"><i class="fa fa-check"></i><b>2.2.1</b> discussion</a></li>
+<li class="chapter" data-level="2.2.2" data-path="cleaning-data.html"><a href="cleaning-data.html#exercises-8"><i class="fa fa-check"></i><b>2.2.2</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html"><i class="fa fa-check"></i><b>2.3</b> Linked Open Data and Data Publishing</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html#discussion-4"><i class="fa fa-check"></i><b>2.3.1</b> discussion</a></li>
-<li class="chapter" data-level="2.3.2" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html#exercises-8"><i class="fa fa-check"></i><b>2.3.2</b> exercises</a></li>
+<li class="chapter" data-level="2.3" data-path="arranging-and-storing-data-for-the-long-haul-databases.html"><a href="arranging-and-storing-data-for-the-long-haul-databases.html"><i class="fa fa-check"></i><b>2.3</b> Arranging and Storing Data for the Long Haul (Databases!)</a><ul>
+<li class="chapter" data-level="" data-path="arranging-and-storing-data-for-the-long-haul-databases.html"><a href="arranging-and-storing-data-for-the-long-haul-databases.html#flat-tables"><i class="fa fa-check"></i>Flat tables</a></li>
+<li class="chapter" data-level="2.3.1" data-path="arranging-and-storing-data-for-the-long-haul-databases.html"><a href="arranging-and-storing-data-for-the-long-haul-databases.html#discussion-2"><i class="fa fa-check"></i><b>2.3.1</b> discussion</a></li>
+<li class="chapter" data-level="2.3.2" data-path="arranging-and-storing-data-for-the-long-haul-databases.html"><a href="arranging-and-storing-data-for-the-long-haul-databases.html#exercises-9"><i class="fa fa-check"></i><b>2.3.2</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="introduction-to-digital-libraries-archives-repositories.html"><a href="introduction-to-digital-libraries-archives-repositories.html"><i class="fa fa-check"></i><b>2.4</b> Introduction to Digital Libraries, Archives &amp; Repositories</a></li>
-<li class="chapter" data-level="2.5" data-path="command-line-methods-for-working-with-apis.html"><a href="command-line-methods-for-working-with-apis.html"><i class="fa fa-check"></i><b>2.5</b> Command Line Methods for Working with APIs</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="command-line-methods-for-working-with-apis.html"><a href="command-line-methods-for-working-with-apis.html#working-with-omeka"><i class="fa fa-check"></i><b>2.5.1</b> Working with Omeka</a></li>
-<li class="chapter" data-level="2.5.2" data-path="command-line-methods-for-working-with-apis.html"><a href="command-line-methods-for-working-with-apis.html#working-with-tdar"><i class="fa fa-check"></i><b>2.5.2</b> Working with tDAR</a></li>
-<li class="chapter" data-level="2.5.3" data-path="command-line-methods-for-working-with-apis.html"><a href="command-line-methods-for-working-with-apis.html#working-with-ads"><i class="fa fa-check"></i><b>2.5.3</b> Working with ADS</a></li>
-<li class="chapter" data-level="2.5.4" data-path="command-line-methods-for-working-with-apis.html"><a href="command-line-methods-for-working-with-apis.html#exercises-9"><i class="fa fa-check"></i><b>2.5.4</b> Exercises</a></li>
+<li class="chapter" data-level="2.4" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html"><i class="fa fa-check"></i><b>2.4</b> Linked Open Data and Data Publishing</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html#discussion-3"><i class="fa fa-check"></i><b>2.4.1</b> discussion</a></li>
+<li class="chapter" data-level="2.4.2" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html#exercises-10"><i class="fa fa-check"></i><b>2.4.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="using-application-programming-interfaces-apis-to-retrieve-data.html"><a href="using-application-programming-interfaces-apis-to-retrieve-data.html"><i class="fa fa-check"></i><b>2.5</b> Using Application Programming Interfaces (APIS) to Retrieve Data</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="using-application-programming-interfaces-apis-to-retrieve-data.html"><a href="using-application-programming-interfaces-apis-to-retrieve-data.html#exercises-11"><i class="fa fa-check"></i><b>2.5.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="scraping-data.html"><a href="scraping-data.html"><i class="fa fa-check"></i><b>2.6</b> Scraping Data</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="scraping-data.html"><a href="scraping-data.html#exercises-12"><i class="fa fa-check"></i><b>2.6.1</b> Exercises</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="finding-and-communicating-the-compelling-story.html"><a href="finding-and-communicating-the-compelling-story.html"><i class="fa fa-check"></i><b>3</b> Finding and Communicating the Compelling Story</a><ul>
 <li class="chapter" data-level="3.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Computing with R and Python Notebooks; Reproducible code</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-5"><i class="fa fa-check"></i><b>3.1.1</b> discussion</a></li>
-<li class="chapter" data-level="3.1.2" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-10"><i class="fa fa-check"></i><b>3.1.2</b> exercises</a></li>
+<li class="chapter" data-level="3.1.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-4"><i class="fa fa-check"></i><b>3.1.1</b> discussion</a></li>
+<li class="chapter" data-level="3.1.2" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-13"><i class="fa fa-check"></i><b>3.1.2</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="d3-processing-and-data-driven-documents.html"><a href="d3-processing-and-data-driven-documents.html"><i class="fa fa-check"></i><b>3.2</b> D3, Processing, and Data Driven Documents</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="d3-processing-and-data-driven-documents.html"><a href="d3-processing-and-data-driven-documents.html#discussion-6"><i class="fa fa-check"></i><b>3.2.1</b> discussion</a></li>
-<li class="chapter" data-level="3.2.2" data-path="d3-processing-and-data-driven-documents.html"><a href="d3-processing-and-data-driven-documents.html#exercises-11"><i class="fa fa-check"></i><b>3.2.2</b> exercises</a></li>
+<li class="chapter" data-level="3.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html"><i class="fa fa-check"></i><b>3.2</b> Data Driven Documents</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-driven-documents.html"><a href="data-driven-documents.html#d3"><i class="fa fa-check"></i><b>3.2.1</b> D3</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html#discussion-5"><i class="fa fa-check"></i><b>3.2.2</b> discussion</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-driven-documents.html"><a href="data-driven-documents.html#exercises-14"><i class="fa fa-check"></i><b>3.2.3</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora</a></li>
+<li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.3.1</b> The Content Management System</a></li>
+<li class="chapter" data-level="3.3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.3.2</b> Omeka</a></li>
+<li class="chapter" data-level="3.3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.3.3</b> Kora</a></li>
+<li class="chapter" data-level="3.3.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.3.4</b> Mukurtu</a></li>
+<li class="chapter" data-level="3.3.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-15"><i class="fa fa-check"></i><b>3.3.5</b> Exercises</a></li>
+</ul></li>
 <li class="chapter" data-level="3.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.4</b> What is Web Mapping?</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.4.1</b> Overview of Map Services</a></li>
 <li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a web map with Leaflet</a></li>
-<li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-12"><i class="fa fa-check"></i><b>3.4.3</b> exercises</a></li>
+<li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-16"><i class="fa fa-check"></i><b>3.4.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.4.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#resources"><i class="fa fa-check"></i><b>3.4.4</b> Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>3.5</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#discussion-7"><i class="fa fa-check"></i><b>3.5.1</b> discussion</a></li>
-<li class="chapter" data-level="3.5.2" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#exercises-13"><i class="fa fa-check"></i><b>3.5.2</b> exercises</a></li>
+<li class="chapter" data-level="3.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.5</b> Virtual Archaeology</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#basic-principles"><i class="fa fa-check"></i><b>3.5.1</b> Basic principles</a></li>
+<li class="chapter" data-level="3.5.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#main-challenge"><i class="fa fa-check"></i><b>3.5.2</b> Main Challenge</a></li>
+<li class="chapter" data-level="3.5.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#the-archaeological-narrative"><i class="fa fa-check"></i><b>3.5.3</b> The Archaeological Narrative</a></li>
+<li class="chapter" data-level="3.5.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theoretical-pragmatism"><i class="fa fa-check"></i><b>3.5.4</b> Theoretical Pragmatism</a></li>
+<li class="chapter" data-level="3.5.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#phenomenology-and-virtual-archaeology"><i class="fa fa-check"></i><b>3.5.5</b> Phenomenology and Virtual Archaeology</a></li>
+<li class="chapter" data-level="3.5.6" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#lasting-considerations"><i class="fa fa-check"></i><b>3.5.6</b> Lasting Considerations</a></li>
+<li class="chapter" data-level="3.5.7" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-17"><i class="fa fa-check"></i><b>3.5.7</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.6</b> Virtual Archaeology</a></li>
-<li class="chapter" data-level="3.7" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.7</b> Archaeogaming</a><ul>
-<li class="chapter" data-level="3.7.1" data-path="archaeogaming.html"><a href="archaeogaming.html#discussion-8"><i class="fa fa-check"></i><b>3.7.1</b> Discussion</a></li>
+<li class="chapter" data-level="3.6" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.6</b> Archaeogaming</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.6.1</b> Archaeological Reception</a></li>
+<li class="chapter" data-level="3.6.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.6.2</b> Games as Archaeology</a></li>
+<li class="chapter" data-level="3.6.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.6.3</b> Archaeogaming Projects Past and Present</a></li>
+<li class="chapter" data-level="3.6.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.6.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
+<li class="chapter" data-level="3.6.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-18"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.6.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.6.6</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3.8" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.8</b> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
-<li class="chapter" data-level="3.8.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#discussion-9"><i class="fa fa-check"></i><b>3.8.1</b> discussion</a></li>
-<li class="chapter" data-level="3.8.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-14"><i class="fa fa-check"></i><b>3.8.2</b> exercises</a></li>
+<li class="chapter" data-level="3.7" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.7</b> Social Media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#social-media-as-outreach"><i class="fa fa-check"></i><b>3.7.1</b> Social Media as Outreach</a></li>
+<li class="chapter" data-level="3.7.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#social-media-to-keep-current-on-research"><i class="fa fa-check"></i><b>3.7.2</b> Social Media to Keep Current on Research</a></li>
+<li class="chapter" data-level="3.7.3" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#four-moves-or-getting-at-the-truth"><i class="fa fa-check"></i><b>3.7.3</b> Four Moves, or, Getting at the Truth</a></li>
+<li class="chapter" data-level="3.7.4" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-19"><i class="fa fa-check"></i><b>3.7.4</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.8</b> Computational Creativity</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.8.1</b> Twitterbots with Tracery</a></li>
+<li class="chapter" data-level="3.8.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.8.2</b> Chatbots</a></li>
+<li class="chapter" data-level="3.8.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.8.3</b> Sonification</a></li>
+<li class="chapter" data-level="3.8.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.8.4</b> Worldbuilding</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="eliding-the-digital-and-the-physical.html"><a href="eliding-the-digital-and-the-physical.html"><i class="fa fa-check"></i><b>4</b> Eliding the Digital and the Physical</a><ul>
-<li class="chapter" data-level="4.1" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html"><i class="fa fa-check"></i><b>4.1</b> 3D Photogrammetry &amp; Structure from Motion</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#discussion-10"><i class="fa fa-check"></i><b>4.1.1</b> discussion</a></li>
-<li class="chapter" data-level="4.1.2" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#exercises-15"><i class="fa fa-check"></i><b>4.1.2</b> exercises</a></li>
-<li class="chapter" data-level="4.1.3" data-path="d-photogrammetry-structure-from-motion.html"><a href="d-photogrammetry-structure-from-motion.html#nuts-and-bolts"><i class="fa fa-check"></i><b>4.1.3</b> nuts and bolts</a></li>
+<li class="chapter" data-level="4.1" data-path="d-photogrammetry.html"><a href="d-photogrammetry.html"><i class="fa fa-check"></i><b>4.1</b> 3D Photogrammetry</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="d-photogrammetry.html"><a href="d-photogrammetry.html#basic-principles-1"><i class="fa fa-check"></i><b>4.1.1</b> Basic principles</a></li>
+<li class="chapter" data-level="4.1.2" data-path="d-photogrammetry.html"><a href="d-photogrammetry.html#further-readings"><i class="fa fa-check"></i><b>4.1.2</b> Further Readings</a></li>
+<li class="chapter" data-level="4.1.3" data-path="d-photogrammetry.html"><a href="d-photogrammetry.html#exercises-21"><i class="fa fa-check"></i><b>4.1.3</b> exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html"><i class="fa fa-check"></i><b>4.2</b> 3D Printing, the Internet of Things and “Maker” Archaeology</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#discussion-11"><i class="fa fa-check"></i><b>4.2.1</b> discussion</a></li>
-<li class="chapter" data-level="4.2.2" data-path="d-printing-the-internet-of-things-and-maker-archaeology.html"><a href="d-printing-the-internet-of-things-and-maker-archaeology.html#exercises-16"><i class="fa fa-check"></i><b>4.2.2</b> exercises</a></li>
+<li class="chapter" data-level="4.2" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html"><i class="fa fa-check"></i><b>4.2</b> 3D Printing, Raspberry Pi and “Maker” Archaeology</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#overview"><i class="fa fa-check"></i><b>4.2.1</b> Overview</a></li>
+<li class="chapter" data-level="4.2.2" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#d-printing---a-workflow"><i class="fa fa-check"></i><b>4.2.2</b> 3d Printing - a Workflow</a></li>
+<li class="chapter" data-level="4.2.3" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#using-raspberry-pi-in-the-field"><i class="fa fa-check"></i><b>4.2.3</b> Using Raspberry Pi in the Field</a></li>
+<li class="chapter" data-level="4.2.4" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>4.2.4</b> Discussion</a></li>
+<li class="chapter" data-level="4.2.5" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#further-reading-3"><i class="fa fa-check"></i><b>4.2.5</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html"><i class="fa fa-check"></i><b>4.3</b> Artificial Intelligence in Digital Archaeology</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html#agent-based-modeling-abm"><i class="fa fa-check"></i><b>4.3.1</b> Agent-based modeling (ABM)</a></li>
-<li class="chapter" data-level="4.3.2" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html#discussion-12"><i class="fa fa-check"></i><b>4.3.2</b> discussion</a></li>
-<li class="chapter" data-level="4.3.3" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html#exercises-17"><i class="fa fa-check"></i><b>4.3.3</b> exercises</a></li>
-<li class="chapter" data-level="4.3.4" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html#machine-learning-for-image-captioning-and-other-classificatory-tasks"><i class="fa fa-check"></i><b>4.3.4</b> Machine learning for image captioning and other classificatory tasks</a></li>
-<li class="chapter" data-level="4.3.5" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html#discussion-13"><i class="fa fa-check"></i><b>4.3.5</b> discussion</a></li>
-<li class="chapter" data-level="4.3.6" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html#exercises-18"><i class="fa fa-check"></i><b>4.3.6</b> exercises</a></li>
+<li class="chapter" data-level="4.3" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>4.3</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#projection-mapping"><i class="fa fa-check"></i><b>4.3.1</b> Projection Mapping</a></li>
+<li class="chapter" data-level="4.3.2" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#exercises-22"><i class="fa fa-check"></i><b>4.3.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html"><i class="fa fa-check"></i><b>4.4</b> Artificial Intelligence in Digital Archaeology</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html#agent-based-modeling-abm"><i class="fa fa-check"></i><b>4.4.1</b> Agent-based modeling (ABM)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="computer-vision-and-archaeology.html"><a href="computer-vision-and-archaeology.html"><i class="fa fa-check"></i><b>4.5</b> Computer Vision and Archaeology</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="computer-vision-and-archaeology.html"><a href="computer-vision-and-archaeology.html#convolutional-neural-networks"><i class="fa fa-check"></i><b>4.5.1</b> Convolutional Neural Networks</a></li>
+<li class="chapter" data-level="4.5.2" data-path="computer-vision-and-archaeology.html"><a href="computer-vision-and-archaeology.html#applications"><i class="fa fa-check"></i><b>4.5.2</b> Applications</a></li>
+<li class="chapter" data-level="4.5.3" data-path="computer-vision-and-archaeology.html"><a href="computer-vision-and-archaeology.html#exercises-23"><i class="fa fa-check"></i><b>4.5.3</b> Exercises</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="digital-archaeologys-place-in-the-world.html"><a href="digital-archaeologys-place-in-the-world.html"><i class="fa fa-check"></i><b>5</b> Digital Archaeology’s Place in the World</a><ul>
-<li class="chapter" data-level="5.1" data-path="marketing-digital-archaeology.html"><a href="marketing-digital-archaeology.html"><i class="fa fa-check"></i><b>5.1</b> Marketing Digital Archaeology</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="marketing-digital-archaeology.html"><a href="marketing-digital-archaeology.html#discussion-14"><i class="fa fa-check"></i><b>5.1.1</b> discussion</a></li>
-<li class="chapter" data-level="5.1.2" data-path="marketing-digital-archaeology.html"><a href="marketing-digital-archaeology.html#exercises-19"><i class="fa fa-check"></i><b>5.1.2</b> exercises</a></li>
-</ul></li>
+<li class="chapter" data-level="5.1" data-path="marketing-digital-archaeology.html"><a href="marketing-digital-archaeology.html"><i class="fa fa-check"></i><b>5.1</b> Marketing Digital Archaeology</a></li>
 <li class="chapter" data-level="5.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html"><i class="fa fa-check"></i><b>5.2</b> Sustainability &amp; Power in Digital Archaeology</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#discussion-15"><i class="fa fa-check"></i><b>5.2.1</b> discussion</a></li>
-<li class="chapter" data-level="5.2.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#exercises-20"><i class="fa fa-check"></i><b>5.2.2</b> exercises</a></li>
+<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>5.2.1</b> discussion</a></li>
+<li class="chapter" data-level="5.2.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#exercises-24"><i class="fa fa-check"></i><b>5.2.2</b> exercises</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="on-the-horizons-where-digital-archaeology-might-go-next.html"><a href="on-the-horizons-where-digital-archaeology-might-go-next.html"><i class="fa fa-check"></i><b>6</b> On the Horizons: Where Digital Archaeology Might Go Next</a></li>
-<li class="chapter" data-level="7" data-path="open.html"><a href="open.html"><i class="fa fa-check"></i><b>7</b> Open Review</a><ul>
-<li class="chapter" data-level="7.1" data-path="contribute.html"><a href="contribute.html"><i class="fa fa-check"></i><b>7.1</b> Contribute</a></li>
-</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://creativecommons.org/licenses/by/4.0/" target="blank">CC-BY 4.0</a></li>
@@ -218,7 +298,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Open Digital Archaeology Textbook Environment</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Open Digital Archaeology Textbook</a>
           </h1>
         </div>
 
@@ -227,24 +307,161 @@
 
             <section class="normal" id="section-">
 <div id="social-media-as-public-engagement-scholarly-communication-in-archaeology" class="section level2">
-<h2><span class="header-section-number">3.8</span> Social media as Public Engagement &amp; Scholarly Communication in Archaeology</h2>
-<p>boo socmed</p>
-<div id="discussion-9" class="section level3">
-<h3><span class="header-section-number">3.8.1</span> discussion</h3>
+<h2><span class="header-section-number">3.7</span> Social Media as Public Engagement &amp; Scholarly Communication in Archaeology</h2>
+<div class="rmdcaution">
+<em>This section is under development</em>.
 </div>
-<div id="exercises-14" class="section level3">
-<h3><span class="header-section-number">3.8.2</span> exercises</h3>
+<p>Social media - that is to say, websites that facilitate quick posts that are pushed into other users’ feeds (and so we can continue to include ‘blogs’) - are nominally thought of in archaeology as a vector for disseminating information <em>about</em> archaeology. However, creative use of social media can make social media a location for <em>doing</em> archaeology. On some platforms, autonomous agents impersonate humans or are in other ways implicated in <em>shaping</em> opinions or fostering/promoting points of view, and so their code and actions are entirely appropriate objects for archaeological study. Indeed, one can make the argument that the affordances of the platform naturally distance us from our humanity, and make us perform more bot-like interactions (which one of us argued in the first <a href="https://shawngraham.github.io/talk/bots-of-archaeology/">Public Archaeology Twitter Conference</a>, an act of meta-archaeology.)</p>
+<p>In this section we’ll discuss how to make effective use of social media as an outreach strategy; ways of using social media to keep you up to date on research; and how to determine the likely truth content of a post. In the next section on <a href="computational-creativity.html">computational creativity</a> we will show you a way of creating your own automated social media bots.</p>
+<div id="social-media-as-outreach" class="section level3">
+<h3><span class="header-section-number">3.7.1</span> Social Media as Outreach</h3>
+<p>day of archaeology article; lorna richardson body of work; mapping the blogosphere; IA special issue on blogging in archaeology from a few years back</p>
+<ul>
+<li>how to be professional on social media</li>
+<li>sara perry article</li>
+</ul>
+</div>
+<div id="social-media-to-keep-current-on-research" class="section level3">
+<h3><span class="header-section-number">3.7.2</span> Social Media to Keep Current on Research</h3>
+</div>
+<div id="four-moves-or-getting-at-the-truth" class="section level3">
+<h3><span class="header-section-number">3.7.3</span> Four Moves, or, Getting at the Truth</h3>
+<p>So much information swamps us every day. ‘Fact checking’ does not defeat lies because the act of debunking simply draws more attention to the lie, thus pushing it deeper into public consciousness. The more it is repeated, the more it is seen as having some sort of truth. What then can we do, when confronted by a new piece of information on social media? Then, having determined for ourselves the veracity of a claim, what can we do to counter disinformation or falsehoods on social media?</p>
+<p>In the excellent open-access book, <a href="https://webliteracy.pressbooks.com/">“Web Literacy for Student Fact Checkers”</a>, Michael A. Caulfield lays out what he calls the ‘four moves’ or ‘things they can do to get closer to the truth’. The four moves are:</p>
+<blockquote>
+<ul>
+<li>Check for previous work: Look around to see if someone else has already fact-checked the claim or provided a synthesis of research.</li>
+<li>Go upstream to the source: Go “upstream” to the source of the claim. Most web content is not original. Get to the original source to understand the trustworthiness of the information.</li>
+<li>Read laterally: Read laterally.[1] Once you get to the source of a claim, read what other people say about the source (publication, author, etc.). The truth is in the network.</li>
+<li>Circle back: If you get lost, hit dead ends, or find yourself going down an increasingly confusing rabbit hole, back up and start over knowing what you know now. You’re likely to take a more informed path with different search terms and better decisions.</li>
+</ul>
+</blockquote>
+<p><a href="https://webliteracy.pressbooks.com/chapter/four-strategies/">Caulfield 2017</a></p>
+<p>One of the most critical pieces of advice that Caulfield shares is to ‘check your emotions’, to develop a habit of <strong>stopping</strong> when you encounter a piece of social media that triggers a strong emotional response. As he points out, there is ample evidence that online propagandists understand that material that hits us emotionally is less likely to be questioned. It hits our buzzers, it slips through our defenses. If you find yourself having a strong emotional reaction to material, that is the time when the four moves are most necessary: “Use your emotions as a reminder. Strong emotions should become a trigger for your new fact-checking habit. Every time content you want to share makes you feel rage, laughter, ridicule, or even a heartwarming buzz, spend 30 seconds fact-checking. It will do you well.” <span class="citation">(Caulfield <a href="#ref-caulfield_2017">2017</a>, Chp 3)</span></p>
+<p>Caulfield’s book has sections for each of the four moves, with detailed advice and places to go to, tools to use, in order to work out the veracity of a claim. We strongly recommend spending time reading through that book. Then, take a look at the <a href="https://fourmoves.blog/">Four Moves Blog</a>. Each post contains a screenshot of a tweet, Facebook post, meme, or other piece of digital ephemera. These are collected together to enable you to practice your four moves, paying particular attention to one or more moves in particular. Try to fact-check some of them.</p>
+<p>At this point, you will encounter the problem of how to communicate what you have found. Merely debunking a falsehood does not rob the falsehood of its power; it can in fact increase it. There is no good answer or method yet developed (and until that happens, we are all of us in danger), but one approach is the <a href="https://www.washingtonpost.com/lifestyle/style/instead-of-trumps-propaganda-how-about-a-nice-truth-sandwich/2018/06/15/80df8c36-70af-11e8-bf86-a2351b5ece99_story.html">‘truth sandwich’</a> which works be denying oxygen to the falsehood. Begin by stating the truth; discuss the falsehood; conclude by restating the truth. Do not repeat the lie in a post title or tweet or headline.</p>
+<p>Archaeology is not immune to the wave of ‘big lies’ currently at work in the world; lies about race continue to use imagery from Greco-Roman antiquity to support odious claims. Do not repeat the lies, but use the four moves to work out the truth and counter them with a truth sandwich.</p>
+</div>
+<div id="exercises-19" class="section level3">
+<h3><span class="header-section-number">3.7.4</span> exercises</h3>
+<p>We’re going to mine Twitter for tweets, photos, etc, connected to digital archaeology.</p>
+<p>This requires two things:</p>
+<ol style="list-style-type: decimal">
+<li>a twitter account</li>
+<li>python installed on your machine</li>
+</ol>
+<p>But - we’ll use a virtual computer that already has Python and the <code>Twarc</code> (TWitter ARChiver) package already installed. Twarc was created by Ed Summers, who is heading a project called <a href="https://www.docnow.io/">Documenting the Now</a> to create the tools necessary to keep track of all the ways our media are disseminating (and distorting!) the truth. It’s a rapid-response suite of tools to capture events as they happen.</p>
+<p>What we’re going to do is set up some credentials with Twitter that give you access to the underlying data of the tweets. Then, the Twarc packages has a bunch of functions built in that lets you search and archive tweets.</p>
+<div id="part-one-instructors-setting-up-your-twitter-credentials" class="section level4">
+<h4><span class="header-section-number">3.7.4.1</span> Part One: Instructors: Setting up your Twitter Credentials</h4>
+<p>:::warning <strong>update oct 12</strong> Your professor or instructor will need to set themselves up as a developer with Twitter for education first. :::</p>
+<p><strong>READ THROUGH FIRST, THEN START</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>First of all, you need to set up a Twitter account, if you haven’t already got one (Go to <a href="http://twitter.com">twitter.com</a>. Do so, but make sure to minimize any personal information that is exposed. For instance, don’t make your handle the same as your real name.</p>
+<ul>
+<li><p>Turn off geolocation. Do not give your actual location in the profile.</p></li>
+<li><p>View the settings, and make sure all of the privacy settings are dialed down. For the time being, you do have to associate a cell phone number with your account. You can delete that once you’ve done the next step.</p></li>
+</ul></li>
+<li><p>Your professor will need to set themselves up as a ‘developer’ on Twitter. They should go to the <a href="https://developer.twitter.com/">Twitter apps page - https://developer.twitter.com/</a> and apply. This process will involve giving information about <em>why</em> they wish to be a developer. Twitter has guidance on the <a href="https://developer.twitter.com/en/docs/basics/developer-portal/guides/twitter-for-education.html">Twitter for Education</a> about how to do this. It will take about 24 hrs for a new developer account to get processed and set up.</p></li>
+<li><p>Go to the new application page to create a new ‘app’. Give the app a name like <code>my-twarc</code> or similar. For website, use a website domain that you control.</p></li>
+<li><p>Continue on to the next page (tick off the box saying you’ve read the developer code of behaviour). This next page shows you all the details about your new application.</p></li>
+<li><p>Click on the ‘Keys and Access Tokens’ tab.</p></li>
+<li><p>Copy the consumer key, the consumer secret to a text file.</p></li>
+<li><p>Click on the ‘create access tokens’ button at the bottom of the page. This generates an access token and an access secret.</p></li>
+<li><p>Copy those to your text file, save it. <strong>Do not put this file in your repo or leave it online anywhere</strong>. Otherwise, a person can impersonate you!</p></li>
+</ol>
+<div class="figure">
+<img src="images/mM4hZNN.png" />
+
+</div>
+<p>Share the consumer key and the consumer secret with your students in class.</p>
+<hr />
+</div>
+<div id="part-two-for-students-firing-up-your-virtual-computer" class="section level4">
+<h4><span class="header-section-number">3.7.4.2</span> Part Two for Students: Firing Up Your Virtual Computer</h4>
+<ol style="list-style-type: decimal">
+<li><p><em>Right-click</em> and select ‘open in new tab’ this: <a href="https://mybinder.org/v2/gh/o-date/social-media-work/master"><img src="images/badge.png" alt="Binder" /></a></p></li>
+<li><p>Wait. It is setting up your new virtual computer. When it’s loaded up, it will look like this: <img src="images/1539304640402-48607.png" /></p></li>
+<li><p>Click the ‘New’ button, and select ‘Terminal’. You should see this: <img src="images/1539304810966-61987.png" /></p></li>
+</ol>
+<p><strong>WARNING. You have to interact with the virtual computer - type a command, click on something - within ten minutes or it shuts down and you lose everything</strong>.</p>
+<p><strong>Pro tip</strong> you can always type <code>pwd</code> into the terminal as a way of keeping the thing alive. This command Prints the Working Directory, eg, tells you what folder you’re in.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Type the command: <code>twarc configure</code></li>
+</ol>
+<div class="figure">
+<img src="images/1539304902569-2152.png" />
+
+</div>
+<p>And in the next screenshot, read the annotations from top to bottom:</p>
+<div class="figure">
+<img src="images/1539305146992-49673.png" />
+
+</div>
+<p>But where is this ‘displayed pin’? It’s in the window in your browser where the ‘authenticate twitter?’ dialogue was displayed. Instead of the twitter page, the URL the professor entered for the app in part one step 3 has now been loaded and the information you need is indicated with <code>oauth_token=</code>. <strong>You need the bit after the <code>=</code> sign</strong>.</p>
+<div class="figure">
+<img src="images/1539305692926-702.png" />
+
+</div>
+<p>It’ll look something like this: <code>-bBafl42aabB...</code> etc, a long string of numbers and letters. Copy that.</p>
+<p>Then paste it in: <img src="images/1539305848359-8369.png" /></p>
+<p>And you’re ready to data mine twitter!</p>
+</div>
+<div id="part-three-find-some-data" class="section level4">
+<h4><span class="header-section-number">3.7.4.3</span> Part Three: Find some data</h4>
+<p>On the <a href="https://github.com/DocNow/twarc">Twarc readme page</a> there are examples of how to use twarc to search for information.</p>
+<p>If you typed in <code>twarc search digiarch</code> and hit return, the terminal window would fill with tweet metadata and data (Here’s <a href="https://screencast-o-matic.com/watch/cF6lVjY05K">a video of this in action searching for user ‘electricarchaeo’</a>). But <em>this is only the last week or so of information!</em>. You can save this information to a file instead of your terminal window like so:</p>
+<p><code>twarc search digiarch &gt; digiarch.jsonl</code> (that’s an ‘el’ at the end of .json, meaing ‘javascript object notation lines’ format.)</p>
+<p>If you then right-click on the ‘jupyter’ logo at the top of the screen and open the link in a new window, you’ll be back at the file explorer. One of the files listed will be the new <code>digiarch.jsonl</code> file you made:</p>
+<div class="figure">
+<img src="images/1539306896907-33928.png" />
+
+</div>
+<p>So what can we do with this information? Quite a lot, but for now, let’s make a basic wordcloud of the text of the tweets.</p>
+<p>We’re going to need some utilities that Ed Summer has written, some extra python programs that can work with this information. Back in the terminal window, type the following:</p>
+<p><code>git clone https://github.com/DocNow/twarc</code></p>
+<p>This tells the <code>git</code> program that’s already installed to go to github and get the source code for Twarc. One of the folders it is going to grab is called <code>utils</code> and that has the utility program for making a word cloud that we will use.</p>
+<p>So we’ll type in the location and name of the program we want to use, followed by the data to operate on, followed by the name of the output file we want to create, like so:</p>
+<p><code>twarc/utils/wordcloud.py digiarch.jsonl &gt; wordcloud.html</code></p>
+<p>And when you press enter, nothing seems to happen. But go back to the list of files (right-click the jupyter logo, open in new tab) and one of the files listed will be <code>wordcloud.html</code>. Click on it…</p>
+<div class="figure">
+<img src="images/1539307355837-46159.png" />
+
+</div>
+<p>(If you reload the page, the word-cloud will regenerate, with different colours, and the words in positions.)</p>
+</div>
+<div id="download-the-data-you-collected." class="section level4">
+<h4><span class="header-section-number">3.7.4.4</span> Download the data you collected.</h4>
+<p>Once this virtual computer shuts down, all of that data you collected will be lost. Click on the jupyter logo, select the files you want to keep, and hit download:</p>
+<div class="figure">
+<img src="images/1539307991802-92070.png" />
+
+</div>
+<p>Depending on your browser, you might get a warning, asking if you’re sure you want to download. Say yes.</p>
+</div>
+<div id="other-things-you-could-do" class="section level4">
+<h4><span class="header-section-number">3.7.4.5</span> Other things you could do</h4>
+<p>Descriptions of what the other utilities do can be found on the <a href="https://github.com/DocNow/twarc">twarc page</a>.</p>
+<p>Go, play! Once you’ve got that jsonl file, you could convert it to csv and then import it into a spreadsheet file. This <a href="https://json-csv.com/">website</a> can do that for you. Warning: there’s a 1 mb limit for using that tool. If your data is too big, you’ll need to find something - a bit of code, a utility- that you can use on the command line (maybe <a href="https://medium.com/@gabrielpires/how-to-convert-a-json-file-to-csv-python-script-a9ff0a3f906e">this</a>). With a bit of effort, you can make a network graph of who responds to who. Or explore tweeting by gender. Or map tweets. Or… or… or.</p>
+<p>Probably the easiest thing you could do, once you’ve converted to csv (again, <a href="https://json-csv.com/">this site can do that</a>), is to copy the column of tweet text itself into say <a href="http://voyant-tools.org">Voyant</a>. Why not give that a try?</p>
+<p>What you do really depends on what kinds of questions you’re hoping to answer. Now that you have access to the firehose of data that is Twitter, what kinds of things might you like to know? How do people talk about archaeology?</p>
 
 </div>
 </div>
-<!-- </div> -->
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-caulfield_2017">
+<p>Caulfield, Michael A. 2017. <em>Web Literacy for Student Fact-Checkers</em>. Pressbooks. <a href="https://webliteracy.pressbooks.com/" class="uri">https://webliteracy.pressbooks.com/</a>.</p>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
 <a href="archaeogaming.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="eliding-the-digital-and-the-physical.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="computational-creativity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -262,10 +479,11 @@ gitbook.start({
 "facebook": true,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -276,7 +494,7 @@ gitbook.start({
 "link": "https://github.com/o-date/draft/edit/gh-pages/03.7-social-media.rmd",
 "text": "Edit"
 },
-"download": ["odate.pdf", "odate.epub"],
+"download": ["odate.pdf"],
 "toc": {
 "collapse": "section",
 "number_sections": null

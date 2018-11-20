@@ -47,6 +47,7 @@ That's how much time you have for your project. It's not an awful lot, which mea
 
 ### exercises
 
-1. (to be refined) Open a new textfile in the Archaebox. Call it 'initial-project-idea.md'. Using `#` to indicate headings, sketch out a question, problem, or provocation of your own that occurs to you as you browse the Kenen Tepe materials housed at [OpenContext.org](https://opencontext.org/projects/3DE4CD9C-259E-4C14-9B03-8B10454BA66E). Save that file.
-2. create a project management plan. (to be fleshed out in more detail) - maybe provide a link or copy of an actual project-management document and direct the students to annotate (read others' annotations), reflect on what the document does and where the trouble points are going to be?
+1. Create a new markdown file in your `scratchpad` repository. Call it 'initial-project-idea.md'. Using `#` to indicate headings, sketch out a question, problem, or provocation of your own that occurs to you as you browse the Kenen Tepe materials housed at [OpenContext.org](https://opencontext.org/projects/3DE4CD9C-259E-4C14-9B03-8B10454BA66E). Save that file.
+2. Read [this piece by Ben Marwick](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html) What kind of project management plan did he have in terms of the digital work? Reflect on his case study and identify where the trouble points were in the light of what you've read in this section. Can you find a project management plan for *any* archaeological project generating digital data?
+
 
