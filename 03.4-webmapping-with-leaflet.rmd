@@ -186,7 +186,7 @@ var marker = L.marker(latlng);
 
 At this stage, your html will look similar to this:
 
-![Added points and pop-ups](images/web-map.points.png)
+![Added points and pop-ups](images/web-map-points.png)
 
 6. That's it! We've created a web map with our own point data, and we have markers with pop-ups to click on.
 
