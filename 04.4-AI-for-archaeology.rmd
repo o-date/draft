@@ -19,15 +19,11 @@ The value of agent-based modeling: it forces us to think carefully about what it
 
 This section is an overview of agent-based modeling (**_ABM_**), as it is used within archaeology, anthropology, and behavioral sciences. Before tackling the "agent-based", we start with a brief introduction to what "modeling" means. To place ABM in a bigger picture, we introduce the reader to several dimensions of the variability of simulation models. We describe the necessary and optional parts of ABM models, including their characteristic type of element, i.e. the agent. At this point, the student must be aware that _**simulation models**_ in our context involve computer code (they are *digital*) and the iteration of processes (they are *dynamic*).
 
-Following the definition of ABM, we describe the process of creating a model or *formalizing* an informal model. Although the reality is messier, this process can be divided into *definition* of research question and phenomenon, *design*, *implementation*, and *verification*. *Validation*, which is considered a fifth step by most of the modeling literature, is regarded here as an extra, lengthy process, often separable from the tasks involved in creating and exploring a model. Furthermore, we introduce two additional steps that are not normally acknowledged: *understanding* and *documenting* the model. In explaining all modeling steps, we keep instructions general enough for them to be valid when dealing with any platform or programming language.
+Following the definition of ABM, we describe the process of creating a model or *formalizing* an informal model. This process can be divided into seven phases: *definition*, *design*, *implementation*, *verification*, *validation*, *understanding* and *documentation*. In explaining all modeling tasks, we aim to keep instructions general enough for them to be valid for most approaches, theoretical backgrounds, and platforms or programming languages.<!--<TO BE DONE.>Next, we cover the *why* and *how* of the application of ABM in archaeology, history, and social sciences. We discuss some key foundational works, including models that predate the development of ABM as it defined today. Specifically regarding archaeological applications, we illustrate the diversity of ABM approaches by presenting several examples of models with varying goals, spatial and temporal scales, and theoretical backgrounds.-->Last, we present a set of exercises to introduce the practical aspects involved in creating and using ABM models. 
 
-Next, we cover the *why* and *how* of the application of ABM in archaeology, history, and social sciences. We discuss some key foundational works, including models that predate the development of ABM as it defined today. Specifically regarding archaeological applications, we illustrate the diversity of ABM approaches by presenting several examples of models with varying goals, spatial and temporal scales, and theoretical backgrounds.
+Throughout this section, several concepts will probably sound *alien* for most history and archaeology students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers don't go through formal introductions nor are well-versed in algebra and calculus. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results, though proposals do exist [e.g., the **_ODD_** document, see @Grimm2006; @Grimm2010; @Muller2013]. In this sense, the content of this section should NOT be considered the standard among the ABM-archaeology community.
 
-Last, we walkthrough the steps involved creating an ABM model. Inspired in the theme of emergence and collapse of territorial integration, we designed a model, the _**Pond Trade model**_, showcasing many elements that are common in ABM models in archaeology. The coupled process of design and programming was intentionally broken down into smaller, progressive steps to illustrate an organized pace of code development, from simple to increasingly complex algorithms. The Pond Trade model is implemented in _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/), which is free, easy to install and use, and widely used in academia. The exercise assumes no previous programming knowledge, though practice with NetLogo is required to fully undertand the later versions of the model. (A Jupyter Notebook that uses an agent based model written in Python as the basis for an exploration of computational creativity can be found [in the 'Worldbuilding' subfolder here](https://github.com/o-date/creativity2); please also see Ben Davis' [Agent-based modelling prehistoric landscape use with R and NetLogo](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/agent-based-modelling-prehistoric-landscape-use-with-r-and-netlogo.html)). 
-
-Throughout this section, several concepts will probably sound *alien* for most history and archaeology students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers don't go through formal introductions nor are well-versed in algebra and calculus. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results, though proposals do exist (**REF ODD**). In this sense, the content of this section should NOT be considered the standard among the ABM-archaeology community.
-
-To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or their interests and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings; certainly, a greater mastery in programming. Despite the rarity of ABM in history and archaeology mainstream curricula, there are many publications that offer introductions to ABM in archaeology, writen by authors with different backgrounds and perspectives (e.g., @Breitenecker2015, @Cegielski2016, @Romanowska2015; also visit [_The ABM in Archaeology Bibliography_](https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography), for an extensive and constantly updated list of references).
+To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or trying to develop their interests, research questions, and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings; certainly, a greater mastery in programming. Despite the rarity of ABM in history and archaeology mainstream curricula, there are many publications that offer introductions to ABM in archaeology, writen by authors with different backgrounds and perspectives (e.g., @Breitenecker2015, @Cegielski2016, @Romanowska2015; also visit [_The ABM in Archaeology Bibliography_](https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography), for an extensive and constantly updated list of references).
 
 #### What is ABM?
 
@@ -37,7 +33,7 @@ To the date, there is no easy way to begin doing ABM. We encourage students to e
 
 The first thing to consider is that ABM is about models. A model is a representation of a phenomenon as a set of elements and their relationships; the key term being *representation*. It is a generalization/abstraction/simplification of what we consider as *THE* phenomenon. Think about a pineapple. The mental representation of the phenomenon, "the pineapple", is already a model. It consists of a set of traits or visual cues, and their relative positions (e.g., crown of spicky leafs on top, thorns covering the oval body). Empirically, every pineapple has different visual properties, but we still are able to identify any pineapple we encounter by using this model.
 
-![Pineapples and their (visual) models](images/andros_pineapple.png)
+![Pineapples and their (visual) models](images/4-4-abm-andros_pineapple.png)
 
 Another important statement about models is that they are--as any mental process--a phenomenon in its own right. That puts us in the realm of epistemology and cognitive sciences. It follows that one's model is *a* model and that there are many models representing a phenomenon as there are minds that recognise this phenomenon. Observe the diversity of pineapple drawings. Adding further complexity to this picture, minds are constantly changing with the integration of new experiences--creating, modifying, merging, and forgetting models--and we often exchange and contrast alternative models through expressing them to ourselves and others. As the last straw of confusion, the ability for communicating models give them the status of *'material objects'*, with a *existence* of their own, reproduced through learning, checked by the clash of new experiences, and in perpetual change through innovation and creativity. For example, a child with little or no experience with the 'real pineapple' is able to learn--and graciously modify--a model of pineapple.
 
@@ -83,38 +79,98 @@ Epstein goes on to note that modeling can sometimes be seen as implying predicti
 > Educate the general public
 > Reveal the apparently simple (complex) to be complex (simple)
 
-Not everything on that list may apply to archaeology, but nevertheless, the list opens up the possibility space for archaeological simulation. See for instance Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/), which implements Schelling's 1971 Segragation Model which showed how even minor expressions of preference could lead to segregated neighborhoods. Hart and Case's 'playable post' implements the model interactively in the browser, and uses engaging graphics to communicate the dynamic to the public. An archaeological agent based model similarly deployed could be an excellent public archaeology intervention.
+Not everything on that list may apply to archaeology, but nevertheless, the list opens up the possibility space for archaeological simulation. See for instance Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/), which implements Schelling's 1971 Segragation Model [@schelling1971, see also Exercise 2 in this section] which showed how even minor expressions of preference could lead to segregated neighborhoods. Hart and Case's 'playable post' implements the model interactively in the browser, and uses engaging graphics to communicate the dynamic to the public. An archaeological agent based model similarly deployed could be an excellent public archaeology intervention.
 
 #### How do we model with ABM?
+
+Although the reality is messier, this process can be divided into *definition* of research question and phenomenon, *design*, *implementation*, and *verification*. *Validation*, which is considered a fifth step by most of the modeling literature, is regarded here as an extra, lengthy process, often separable from the tasks involved in creating and exploring a model. Furthermore, we introduce two additional steps that are not normally acknowledged: *understanding* and *documenting* the model. In explaining all modeling steps, we keep instructions general enough for them to be valid when dealing with any platform or programming language.
 
 In simple terms, building a model involves the following steps.
 - Define hypotheses, questions or simply the phenomenon of interest (identify the system)
 - Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam's razor vs. emergence
 - Express the chosen elements and processes as computer code (implement the model)
 - Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step.  The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new  modeling effort (and that is actually the main usefulness of models in the long run).
-- ABM in python, Java, C#, or C++? in R? in NetLogo? (Any language can do it, really). Pros and cons, talk in terms of higher/lower level programming languages (still, they are all quite high-level).
-- remember to talk about https://www.openabm.org/
+
 
 #### ABM in Archaeology and Social Sciences
 
-- Emergence... Life game, deterministic chaos
+- Emergence... Life game, deterministic chaos [@Epstein1996; @Epstein1999]
 - Saving the gap between atomism and holism, or individual and social structure
 - Virtual laboratory for social sciences
-- Examples
+- Examples [@Axtell2002]
 - Mention the cycles of enthusiasm and skepticism, and the tendency to develop closed circles
 - Challenges and pitfalls
 
-#### ABM tutorial: the Pond Trade model
+#### Exercises
 
-brief overview
+We propose a set of exercises for introducing the practicalities of ABM. One of the objectives of these exercises is to train the student on the flexibility regarding platforms and programming languages, therefore they include references to code files expressed in Python 3<!--, R,--> and [NetLogo](https://ccl.northwestern.edu/netlogo/) [@Wilensky1999]. Exercises are neither exhaustive nor exclusive and we encourage the search for other materials that may delve deeper on students' interests. There are many sources of modelling examples available online, such as [OpenABM by CoMSES network](https://www.comses.net/), NetLogo's [Official](http://ccl.northwestern.edu/netlogo/models/) and [Community](http://ccl.northwestern.edu/netlogo/models/community/) Models Libraries, and [Modeling Commons](http://modelingcommons.org). We also recommend visiting a Jupyter Notebook by Shawn Graham that uses an agent based model written in Python as the basis for an exploration of computational creativity (see the 'Worldbuilding' subfolder in [this repository](https://github.com/o-date/creativity2)). Ben Davis' [Agent-based modelling prehistoric landscape use with R and NetLogo](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/agent-based-modelling-prehistoric-landscape-use-with-r-and-netlogo.html) gives a well-documented example of ABM applications for archaeology that goes beyond representing social dynamics.
+
+Exercises 1-3 present classical examples of ABM (**_Forest Fire_**, **_Schelling's Segregation_**, and **_Epstein's Civil Violence_** models) referring to their implementations using [mesa](https://github.com/projectmesa/mesa), a Python-based framework (mesa-Python, from now on). These implementations can be executed using the online Jupyter Notebook offered in [ODATE main web page](https://o-date.github.io/support/notebooks-toc/). These exercises are not complex, but require a minimal knowledge of Python (or similar programming languages) to be fully understood.
+
+Exercise 4 presents the **_Pond Trade_** model, designed specifically to showcase many elements common in ABM applications in archaeology. This model is inspired by the theme of emergence and collapse of territorial cultural integration by means of material exchange. The tasks of designing and programming was intentionally broken down into smaller, progressive steps to illustrate an organized pace of code development, from simple to increasingly complex algorithms. The Pond Trade model and all its versions are in [this repository](https://github.com/Andros-Spica/PondTrade) and can be downloaded and executed using a local instalation of _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/). The exercise assumes no previous programming knowledge, though practice with NetLogo's language and interface is required to fully understand the code of the advanced versions of the model.
+
+##### Exercise 1: Forest Fire Model
+
+Forest Fire is a model representing the spread of a fire in a forest, depending particularly on the density of trees. It is one of the models that illustrate the concepts behind the [percolation theory](https://en.wikipedia.org/wiki/Percolation_theory) in physics. This model is one of the curricular models for ABM and it holds the core mechanism of most diffusion models in both natural and social sciences.
+
+The mesa-Python version used in our Jupyter Notebook is available in [ODATE repository](https://github.com/o-date/abm/tree/master/forest_fire) (see also original in [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/forest_fire)). You may also consult the NetLogo version called 'Fire' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1624) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Fire), where there are also more complex version of this model.
+
+![The visualization of a simulation run of the *Fire* model using NetLogo (tree density: 57%; random seed: 746823835)](images/4-4-abm-Fire-par57-seed746823835.gif)
+
+This model represents a set of trees (*agents*) distributed among positions in a 2D grid. Trees have three possible states: **"Fine"**, **"On Fire"**, and **"Burned Out"**. Every time step trees check if they are "On Fire", in which case they will set on fire all adjacent trees that are "Fine" and update their state as "Burned Out".
+
+```python
+def step(self):
+  """
+  If the tree is on fire, spread it to fine trees nearby.
+  """
+  if self.condition == "On Fire":
+    for neighbor in self.model.grid.neighbor_iter(self.pos):
+      if neighbor.condition == "Fine":
+        neighbor.condition = "On Fire"
+    self.condition = "Burned Out"
+```
+
+The cycle of the model involves solely on messaging agents to run their own cycle in a random order (i.e., *schedule*):
+
+```python
+def __init__(self, height=100, width=100, density=0.65):
+  ### <skiped code>
+  self.schedule = RandomActivation(self) ### this line initialize the class object that randomizes the order of agents steps
+  ### <skiped code>
+        
+def step(self):
+  ### <skiped code>
+  self.schedule.step() ### this line orders agents to execute their own "step"
+  ### <skiped code>
+
+```
+
+Note that this design assumes that burning and spreading take the same amount of time (i.e., a "step" of the model). Possible ways of further developing this model could be by extending the duration of burning relative to spreading. As a challange, try to modify the model so it takes five times more to burn out a tree than for fire to spread. Hints: (1) you should modify at least the class **TreeCell** (agent); (2) declaring a new parameter inside the class **ForestFire** would be the best practice here; (3) this challenge can be done by adding only **_four_** lines of code.
+
+Although this model is agent-based, it is a derivation of another type of formal model, technically less developed, called [*cellular automaton*](https://en.wikipedia.org/wiki/Cellular_automaton) system. In cellular automata, the 'agents' are cells, entities that are fixed to a certain position on a 2D grid. Typically, such systems are expressable in relatively simple rules that regulate the state of an agent depending on the states of its 'neighborhood' of agents. One relatively famous (and playful) example is [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), which demostrates how few and simple local rules can generate an immense richness of diversity of system behaviour (i.e., *emergence*). As a conceptual challenge, think on how the Forest Fire model could be designed as a cellular automata. HINTS: (1) the ABM version involves less computation than an hypothetical cellular automaton version - Why?.
+
+##### Exercise 2: Schelling's Segregation Model
+
+[@schelling1971]
+
+https://github.com/o-date/abm/tree/master/Schelling
+
+##### Exercise 3: Epstein's Civil Violence Model
+
+https://github.com/o-date/abm/tree/master/epstein_civil_violence
+
+##### Exercise 4: the Pond Trade model
+
+**_brief overview_**
 disclaimer: MY modelling strategy is highly focused in theory-building (general, explorative), not hypothesis-testing and prediction (specific, data-driven).
 
-##### Phenomena of interest and conceptual model
+**_Phenomena of interest and conceptual model_**
 
 - phenomena: cycles of growth and collapse, i.e. flutuations in the scale of site occupation, out of phase with environmental change. Focus on coastal settlements around a water body (e.g., lake, bay, sea).
 - Belief or main assumption: topography, transport technology, trade, settlement size and wealth, and cultural exchange are intertwined.
 
-![andros-first-diagram](images/andros-diagram.png)
+![andros-first-diagram](images/4-4-abm-andros-diagram.png)
 
 ```r
 library(DiagrammeR)
@@ -132,16 +188,16 @@ grViz("diagrams/boxes.dot")
   - the economic value produced in a settlement depends on its size.
   - the number of ships per settlement depends on its size.
 
-##### Implementation
+**_Implementation_**
 
 - Implement the model based on general definition (agents, variables, parameters)
 - Walk-through the implementation in NetLogo
 
 Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
 
-![The model interface in step 13](images/interface-andros.png)
+![The model interface in step 13](images/4-4-abm-interface-andros.png)
 
-##### Simulation experiments and analysis
+**_Simulation experiments and analysis_**
 
 - Simulations and experiment design
 - Analysis and display of results (R example)
@@ -149,7 +205,7 @@ Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
 ```r
 plot(1:10, 1:10)
 ```
-![andros-second-diagram](images/andros-2.png)
+![andros-second-diagram](images/4-4-abm-andros-2.png)
 
 SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
 
