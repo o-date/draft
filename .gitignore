@@ -4,7 +4,7 @@
 .Ruserdata
 .Rproj.user/shared/notebooks/paths
 
-/css/*
+#/css/*
 
 # Compiled source #
 ###################

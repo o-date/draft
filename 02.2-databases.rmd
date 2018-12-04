@@ -41,14 +41,14 @@ For great advice on using spreadsheets to organize data, see this helpful piece 
 
 Putting your collected data straight into flat tables can be quite easy and efficient. It's quite easy for a human to open a spreadsheet and read it. These are probably the biggest advantages for storing data this way.
 
-However, it can be challenging to convey how data fit together if they are contained in flat files-- metadata explaining each field must be stored in some other file. Data entry can be inefficient and error-prone if there are no checks in place to eliminate inconsistencies. And it's very easy to introduce errors and typos. Note: while you *can* relate values in Excel with functions like VLOOKUP and set constraints with input masks, it doesn't mean you *should* due to the instability of these types of enhancements. If you find yourself embedding a lot of this kind of behavior, it's a good signal to take a look at other types of databases.
+However, it can be challenging to convey how data fit together if they are contained in flat files-- metadata explaining each field must be stored in some other file. Data entry can be inefficient and error-prone if there are no checks in place to eliminate inconsistencies. And it's very easy to introduce errors and typos. Note: while you *can* relate values in Excel with functions like VLOOKUP and set constraints with input masks, it doesn't mean you *should*; because of the instability of these types of enhancements. If you find yourself embedding a lot of this kind of behavior, it's a good signal to take a look at other types of databases.
 
 
 **JSON and XML**  
 While you likely won't (and shouldn't) input your research data directly into these formats from the beginning, many web resources rely on [JSON (JavaScript Object Notation)](https://en.wikipedia.org/wiki/JSON) or [XML (Extensible Markup Language)](https://en.wikipedia.org/wiki/XML) documents to store data. JSON and XML are formats for writing plain text documents in ways that allow computers (and people) to understand hierarchy and relationships between data.
 
 JSON looks like this ([source](https://en.wikipedia.org/wiki/JSON)):
-```
+```JSON
 {
   "firstName": "John",
   "lastName": "Smith",
@@ -81,7 +81,7 @@ JSON looks like this ([source](https://en.wikipedia.org/wiki/JSON)):
 
 
 XML looks like this ([source](https://www.xmlfiles.com/examples/plant-catalog/)):
-```
+```xml
 <?xml version="1.0" encoding="ISO8859-1" ?>
 <CATALOG>
  <PLANT>

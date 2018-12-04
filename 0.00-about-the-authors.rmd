@@ -2,11 +2,11 @@
 
 ### Shawn Graham ### {-}
 
-Shawn Graham trained in Roman archaeology but has become over the years a digital archaeologist and digital humanist. He is currently an associate professor in the [Department of History at Carleton University in Ottawa Canada](http://carleton.ca). He keeps an open lab notebook of his research and experiments in digital history and archaeology at his research blog, [electricarchaeology](http://electricarchaeology.ca). He can be found on Twitter at [electricarchaeo](http://twitter.com/electricarchaeo).
+Shawn Graham trained in Roman archaeology but has become over the years a digital archaeologist and digital humanist. He is currently an associate professor in the [Department of History at Carleton University in Ottawa Canada](http://carleton.ca). He keeps an open lab notebook of his research and experiments in digital history and archaeology at his research blog, [electricarchaeology](http://electricarchaeology.ca). He can be found on Twitter at [&#64;electricarchaeo](http://twitter.com/electricarchaeo).
 
 ### Neha Gupta ### {-}
 
-[Neha Gupta](https://dngupta.github.io/) is a broadly trained archaeologist and recent postdoctoral fellow at Memorial University. Her research programme addresses geospatial and digital methods in post-colonial and Indigenous archaeology. Her specialties include geovisualization and GIS, landscape and settlement archaeology and the archaeology of India and Canada (Ontario). She recently launched [MINA | Map Indian Archaeology](https://mapindianarch.wordpress.com/), a public digital project to promote the archaeology of India and to encourage collaboration in the development of digital tools and technologies appropriate for archaeology. Recent scholarship centers on themes of colonial practices, web maps, Indigenous peoples and archaeology’s relationship with society.
+[Neha Gupta](https://dngupta.github.io/) is a broadly trained archaeologist and a postdoctoral fellow at the University of New Brunswick. Her research programme addresses geospatial and digital methods in post-colonial and Indigenous archaeology. Her specialties include geovisualization and GIS, landscape and settlement archaeology and the archaeology of India and Canada. She recently launched [MINA | Map Indian Archaeology](https://mapindianarch.wordpress.com/), a public digital project to promote the archaeology of India and to encourage collaboration in the development of digital tools and technologies appropriate for archaeology. Recent scholarship centers on themes of colonial practices, web maps, Indigenous peoples and archaeology’s relationship with society.
 
 ### Michael Carter ### {-}
 
@@ -14,15 +14,15 @@ Michael Carter is an Assistant Professor in  the School of Creative Industries a
 
 ### Beth Compton ### {-}
 
-Beth Compton is a PhD student at the University of Western Ontario's Department of Anthropology. Her research examines critically the implications and assumptions of digital approaches to repatriation, and uses archaeological ethnographic approaches to evaluate artifact sharing policies. She study archaeological representation and replication, particularly the use of digital photography, 3D modeling, and 3D printing. She is interested in all aspects of meaning-making and knowledge sharing in digital archaeological heritage practice. She is a Co-Founder of the [DH Maker Bus project](http://www.makerbus.ca/) and is an Ontario Trillium Scholar.
+[Mary Elizabeth (Beth) Compton](https://www.ourpresentpast.org/) is a Trillium Scholar and Archaeology PhD candidate at the University of Western Ontario. She is also a Co-Founder of the MakerBus Collaborative (now [MakerBus Consulting](http://www.makerbus.ca/)). Her academic papers, conference presentations, doctoral dissertation, and collaborative projects beyond academia primarily explore various aspects of digital archaeology, ethics, and the social impact of 3D technologies. Through the MakerBus project, she has gained experience teaching at all age levels, using hands-on productive activities (building, inventing, creating, making) as a way of bridging physical and conceptual exploration. Her technological area of expertise is in archaeological object representation and replication with a focus on digital photography, 3D modelling, and 3D printing. Driven by the belief that archaeologists have an obligation to be actively engaged with the communities they serve, she also examines how they present information, represent people, and interpret a multifaceted past in the present. Connect with her on Twitter as [&#64;Beth_Compton](https://twitter.com/Beth_Compton) and on [Academia.edu](https://westernu.academia.edu/MaryElizabethBethCompton).
 
 ### Jolene Smith ### {-}
 
-[Jolene Smith](https://www.jolenesmith.net) is an archaeologist who manages statewide digital archives and archaeological data at the Virginia Department of Historic Resources. She is interested in open data, preservation, and developing easy-to-use tools to help small organizations create, use, and manage archaeological data. 
+[Jolene Smith](https://www.jolenesmith.net) is an archaeologist who manages statewide digital archives and archaeological data at the Virginia Department of Historic Resources. She is interested in open data, preservation, and developing easy-to-use tools to help small organizations create, use, and manage archaeological data.
 
 ### Andreas Angourakis {-}
 
-Andreas Angourakis is a PhD student at the Department of History and Archaeology, University of Barcelona. He is a generalist that underwent training in humanistic disciplines, social sciences, and biology. He is self-taught in software and programming languages, including R and NetLogo. His research in archaeology has been focused on the development of simulation models of socio-ecological dynamics in the past, mainly using agent-based modeling, and assembling multivariate statistical protocols for analyzing and interpreting archaeological data. As digital archaeology's bones of the trade, he believes that creativity and science are unmistakably intertwined. He can be found on Twitter as [AndrosSpica](https://twitter.com/AndrosSpica), GitHub as [Andros-Spica](https://github.com/Andros-Spica), and is present on both [Research Gate](https://www.researchgate.net/profile/Andreas_Angourakis) and [Academia](https://ub.academia.edu/AndreasAngourakis).
+Andreas Angourakis is a PhD student at the Department of History and Archaeology, University of Barcelona. He is a generalist that underwent training in humanistic disciplines, social sciences, and biology. He is self-taught in software and programming languages, including R and NetLogo. His research in archaeology has been focused on the development of simulation models of socio-ecological dynamics in the past, mainly using agent-based modeling, and assembling multivariate statistical protocols for analyzing and interpreting archaeological data. As digital archaeology's bones of the trade, he believes that creativity and science are unmistakably intertwined. He can be found on Twitter as [&#64;AndrosSpica](https://twitter.com/AndrosSpica), GitHub as [Andros-Spica](https://github.com/Andros-Spica), and is present on both [Research Gate](https://www.researchgate.net/profile/Andreas_Angourakis) and [Academia](https://ub.academia.edu/AndreasAngourakis).
 
 ### Andrew Reinhard {-}
 
@@ -34,7 +34,8 @@ Andrew Reinhard literally wrote the book on video game archaeology: Archaeogamin
 
 ### Kate Ellenberger {-}
 
-[Kate Ellenberger](http://kateellenberger.com/) has just completed her PhD at Binghamton University, State University of New York, on community based archaeologies. Her background is in public outreach, museum work, archaeological mapping and databases, and she actively consults on public and field projects. 
+[Kate Ellenberger](http://kateellenberger.com/) is a consulting public and digital archaeologist. She received her PhD in Anthropology from Binghamton University in 2018 for her dissertation examining the community and institutional stakeholders that have influenced public archaeology practice in the United States. Her current work focuses on the theory and practice of self-evaluation in public archaeology.
+
 
 ### Zack Batist {-}
 [Zack Batist](https://www.zackbatist.github.io) is a PhD student at the University of Toronto's Faculty of Information, where his research focuses on the ways in which archaeological practices – in their immense variety and scope – are implemented as part of a broad continuum of work that is inherently interdisciplinary and cooperative in nature. He is also interested in the critical evaluation of open data initiatives and the development of information infrastructures across and among disciplines, as well as public perceptions of archaeology and the representation of archaeology in science fiction, popular media, professional politics and public policy. He also actively tinkers with various computational tools and methods, ranging across the general domains of database management, GIS, statistical computing, network analysis, web development and server administration. Some ramblings and code can be found on [github](https://www.github.com/zackbatist) and [twitter](https://www.twitter.com/mtl_zack).
@@ -45,7 +46,7 @@ Joël Rivard is the replacement GIS and Geography Librarian at the University of
 
 ### Ben Marwick {-}
 
-[Ben Marwick](https://anthropology.washington.edu/people/ben-marwick) is an Associate Professor in the department of Anthropology at the University of Washington. He is a leading figure in computational archaeology and reproducible methods in digital archaeology. His research uses models from evolutionary ecology to analyse past human behaviour in mainland Southeast Asia and Australia. My technical specialisations in stone artefact technology and geoarchaeology provides me with wide scope in time periods and geography. My specific interests include the hominin colonisation of mainland Southeast Asia, forager technologies and ecology in Australia and mainland Southeast Asia, and transitions to agriculture in mainland Southeast Asia.
+[Ben Marwick](https://anthropology.washington.edu/people/ben-marwick) is an Associate Professor in the department of Anthropology at the University of Washington. He is a leading figure in computational archaeology and reproducible methods in digital archaeology. His research uses models from evolutionary ecology to analyse past human behaviour in mainland Southeast Asia and Australia. His technical specialisations in stone artefact technology and geoarchaeology provides him with wide scope in time periods and geography. Ben's specific interests include the hominin colonisation of mainland Southeast Asia, forager technologies and ecology in Australia and mainland Southeast Asia, and transitions to agriculture in mainland Southeast Asia.
 
 ### Editorial Board {-}
 
@@ -68,19 +69,19 @@ It'll be ok.
 
 We take a pedagogical perspective that focuses on the learning that happens when we make things, when we experiment or otherwise play around with materials and computing, and especially, when/if things break. It's a perspective that finds value in 'failing gloriously', in trying to push ourselves beyond our comfort level. The only thing that you will need therefore to be successful in learning some of the basic issues around digital archaeology is a willingness to consider why things didn't work the way they ought to have, and a web browser. We built this textbook with its very own digital archaeology computer built right in! There's nothing you can break on your own machine, nor does your machine have to be very powerful.
 
-Our hope for this volume is that it will provide you with the ability to work out what you need to know, what you don't know, and how to creatively use the computational power of the devices available to you, to do better archaeology. Once you've outgrown this text, we strongly recommend that you visit the peer-reviewed collection of tutorials at [The Programming Historian](https://programminghistorian.org/) (which are available in English and Spanish and soon other languages). If you are more interested in the statistical side of digital archaeology, then you should consult Ben Marwick et al [How to Do Archaeological Science Using R](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/). 
+Our hope for this volume is that it will provide you with the ability to work out what you need to know, what you don't know, and how to creatively use the computational power of the devices available to you, to do better archaeology. Once you've outgrown this text, we strongly recommend that you visit the peer-reviewed collection of tutorials at [The Programming Historian](https://programminghistorian.org/) (which are available in English and Spanish and soon other languages). If you are more interested in the statistical side of digital archaeology, then you should consult Ben Marwick et al [How to Do Archaeological Science Using R](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/).
 
 ## Instructors: How to use this text {-}
 
-There is a logic to how this text is organized that means one _could_ use it in its entirety for developing a course around digital archaeology. It does not assume much digital fluency on the part of students, but builds towards progressively more complex topics. Exercises and further readings are suggested in each section. The text can be used in conjunction with the notebooks, or without them. Alternatively, one can pick from the various notebooks (and their integral texts) and build a course around their use. The source text files for this text are available in [this repository](https://github.com/o-date/source-markdown-files) and they may be cut-and-pasted into your own coursepacks as appropriate. 
+There is a logic to how this text is organized that means one _could_ use it in its entirety for developing a course around digital archaeology. It does not assume much digital fluency on the part of students, but builds towards progressively more complex topics. Exercises and further readings are suggested in each section. The text can be used in conjunction with the notebooks, or without them. Alternatively, one can pick from the various notebooks (and their integral texts) and build a course around their use. The source text files for this text are available in [this repository](https://github.com/o-date/source-markdown-files) and they may be cut-and-pasted into your own coursepacks as appropriate.
 
 Because the source text and code are all open, one could assign students the task of improving, adding to, or altering the text to suit local circumstances. Feel free to fork (take a copy) of the entire project for your own pedagogical needs (but note that any resulting work has to be shared under similar terms). Any changes that get folded back into this source material will be reflected with authorship credentials.
 
 ## Students: How to use this text {-}
 
-Each section in this book is broken down into an overview or discussion of the main concepts, and then followed up with skill-building exercises. The computational environment - provided via a Jupyter notebook- is running on someone else's servers. When you close the browser, it shuts down. 
+Each section in this book is broken down into an overview or discussion of the main concepts, and then followed up with skill-building exercises. The computational environment - provided via a Jupyter notebook- is running on someone else's servers. When you close the browser, it shuts down.
 
-**Warning!** The computational notebooks that we provide are running in the [binder](http://mybinder.org) environment and _will time out_ after **ten** minutes' inactivity. 
+**Warning!** The computational notebooks that we provide are running in the [binder](http://mybinder.org) environment and _will time out_ after **ten** minutes' inactivity.
 
 Your work can be saved to your own machine and reloaded into the environment later, or you can 'push' your changes to your own online repository of work (to learn how to push work to a Github repository, see the sections on [Github & Version Control] and [Open Notebook Research & Scholarly Communication] so you'll be able to get your work and data out of the Jupyter Notebooks and onto space that you control). The best way to use this book is to make sure you have at least one hour blocked out to read through a section, and then two hours to go through the section again if you're working on the exercises. We find that the work goes better if those blocks are interspersed with breaks every twenty minutes or so.
 
@@ -92,7 +93,7 @@ Please note that any public annotations can be read by any other reader. These c
 
 Over time, the parts of the text that are heavily annotated will look as if someone has gone over them with a yellow highlighter. You can use this to help guide your reading - perhaps that's a part where many people had problems, or perhaps it's a part that sparked a really interesting discussion! Group annotation like this promotes 'active reading', which means that you're more likely to retain the discussion.
 
-Finally, if you'd rather not read this as a web page, you can grab a pdf copy by pressing the download button above (the downwards-facing arrow icon) and printing out just the bits you want or need. If you'd rather read this text via an e-reader or iBooks or similar, the download link will also give you an ePub version. Individuals who use a screenreader or other assistive device might prefer to work with the pdf or epub versions. Please do let us know if there is any way we can make this text more accessible for users with particular needs. Since this text is fundamentally a series of plain-text files that we then manipulate to create these different outputs, it should be straightforward for us to adapt accordingly!
+Finally, if you'd rather not read this as a web page, you can grab a pdf copy by pressing the download button above (the downwards-facing arrow icon) and printing out just the bits you want or need (warning; some of the layout might not translate well as pdf). If you'd rather read this text via an e-reader or iBooks or similar, the download link will also give you an ePub version. Individuals who use a screenreader or other assisted device might prefer to work with the pdf or epub versions. Please do let us know if there is any way we can make this text more accessible for users with particular needs. Since this text is fundamentally a series of plain-text files that we then manipulate to create these different outputs, it should be straightforward for us to adapt accordingly!
 
 
 ## How to contribute changes, or make your own version {-}
@@ -119,14 +120,14 @@ The sequence of steps to produce a Bookdown-powered site looks like this:
 1. create a new project in RStudio (we typically create a new project in a brand new folder)
 2. run the following script to install Bookdown:
 
-```
+```r
 install.packages("devtools")
 devtools::install_github("rstudio/bookdown")
 ```
 
 3. create a new textfile with `metadata` that describe how the book will be built. The metadata is in a format called `YAML` ('yet another markup language') that uses keys and values that get passed into other parts of Bookdown:
 
-```
+```bash
 title: "The archaeology of spoons"
 author: "Graham, Gupta, Carter, & Compton"
 date: "July 1 2017"

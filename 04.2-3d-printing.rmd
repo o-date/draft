@@ -1,8 +1,11 @@
-## 3D Printing, the Internet of Things and “Maker” Archaeology
+## 3D Printing, Raspberry Pi and “Maker” Archaeology
 
 <div class = rmdcaution> _This section is under development_. </div>
 
-@heckadon_et_al2018
+### Overview
+A 'maker' approach, in general terms, is a creative process of on-the-fly craftwork that involves learning and contributing towards the development of neat things. It's an inclusive, community driven movement that recognizes the capabilities for anyone to learn or do anything (but never everything!). Makers share their tools and experiences through direct dialogue and by making alongside others, by posting code and resources online in accessible formats, and by nurturing open and supportive ecosystems of information exchange. Failing is considered to be part of making by providing unique opportunities to learn from.
+
+Although making often involves digital technology, it's incredibly open-ended. Crafts like pottery, needlework, mushroom foraging, birdwatching, woodworking, improv entertainment and even archaeological excavation subscribe to similar tenets, and sometimes cross-pollinate with computer tech in fun and functional ways. In this chapter we guide the reader through the use of 3D printing and Raspberry Pi microcomputers in an open-ended way, enabling you to continue on with this work on your own and apply what you learn in various circumstances.
 
 ### 3d Printing - a Workflow
 
@@ -59,11 +62,6 @@ For 3D printing, users must have specific file formats. An .obj or .stl are some
 
 This will export an stl file that is rather large in file size. This stl file can be used to print a 3D representation of the model or can be used to view the model as an augmented reality object.
 
-#### discussion
-
-#### exercises
-
-
 ### Using Raspberry Pi in the Field
 Archaeology is an inherently collaborative process that happens in various places simulataneously. It is therefore often challening to ensure that archaeological databases, which serve to store and organize inter-related information obtained through various methods and practices, are kept up to date and syncronized across research environments. In order to deal with these challenges it might be necessary to set up a database hosted on a network, which would enable multiple users to simultaneously engage with the database while ensuring that the data remains orderly and complete.
 
@@ -84,7 +82,7 @@ The system that we're going to build may be suitable for some, but not for other
 **Some Notes on Hardware:**
 This is meant to be a very portable, low energy use and inexpensive setup. While I recommend that you use a dedicated server - a computer that is configured to run the database server, and only the database server - you can actually host the database on a regular laptop that you also serves as the client. I will be including notes on how to configure this to work all on one device, but I recommend that you use this kind of setup for educational and testing purposes only, and not in a production environment.
 
-Raspberry Pi is available online for around 45$ CAD at https://www.raspberrypi.org/products/, but your local makerspace will likely be happy to lend you one to play with. You will also need a SD card with a capacity of at least 8GB and with adequate read/write speeds (see https://www.raspberrypi.org/documentation/installation/sd-cards.md for more info), a wireless router (this one is 40$ and tiny - perfect for portability! https://amzn.to/2HoOM6W), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: https://amzn.to/2Ht8quv) and a couple USB flash drives with varying storage capacities that suit your needs.
+Raspberry Pi is available online for around 45$ CAD at https://www.raspberrypi.org/products/, but your local library or makerspace will likely be happy to lend you one to play with. You will also need a SD card with a capacity of at least 8GB and with adequate read/write speeds (see https://www.raspberrypi.org/documentation/installation/sd-cards.md for more info), a wireless router (this one is 40$ and tiny - perfect for portability! https://amzn.to/2HoOM6W), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: https://amzn.to/2Ht8quv) and a couple USB flash drives with varying storage capacities that suit your needs.
 
 This guide is designed with unix-users in mind - so those who use MacOS or Linux. Sorry Windows users :(
 
@@ -95,7 +93,7 @@ The internet is one kind of network that relies on immense cabling infrastructur
 
 ![computer networks](images/networks.png)
 
-Other kinds of specialized buildings might exist in the town as well. You might do all sorts of things in your home, such as cook, water the garden, wash the dog, or host a party, which each consume varying degrees of food and water (including some waste) but services like grocery store or water reclamation plants need to be streamlined and focused in order to keep up with the inflow and outflow of material that they need to process, which is immense because they engage with each and every household in town. These represent specialized computers on a network called servers (also referred to as hosts, clusters or 'the cloud'). **Servers are centralized computers that manage and distribute information to and from clients across the network. They are designed to be as lightweight and efficient as possible,** such as by minimizing flare in user interfaces to enable more effective use of computing resources directed towards the task at hand, or by keeping the temperature cool to prevent shutdowns and slowdowns due to overheating. The hardware places hard limits on how efficient a computer may operate, but configuring the software can go a long way in stretching a computer's capabilities.
+Other kinds of specialized buildings might exist in the town as well. You might do all sorts of things in your home, such as cook, water the garden, wash the dog, or host a party, which each consume varying degrees of food and water (including some waste) but services like grocery store or water reclamation plants need to be streamlined and focused in order to keep up with the inflow and outflow of material that they need to process, which is immense because they engage with each and every household in town. These represent specialized computers on a network called servers (also referred to as hosts, clusters or 'the cloud'). **Servers are centralized computers that manage and distribute information to and from clients across the network. They are designed to be as lightweight and efficient as possible,** such as by minimizing flair in user interfaces to enable more effective use of computing resources directed towards the task at hand, or by keeping the temperature cool to prevent shutdowns and slowdowns due to overheating. The hardware places hard limits on how efficient a computer may operate, but configuring the software can go a long way in stretching a computer's capabilities.
 
 Finally, **a user (also referred to as a client, terminal or workstation) is any other computer on the network that is served information or passes along information to be served to others.** The things that they do on their own computer are local relative to other computers on the network. The terms 'local' and 'remote' are therefore commonly used to designate things that occur close to home base, and things that occur further away, respectively.
 
@@ -104,7 +102,7 @@ Raspberry Pi is an open source, inexpensive and low-power mini-computer that inc
 
 While you _could_ connect a display, keyboard and mouse to the Raspberry Pi and interface with it directly, **it's actually very common to run it 'headless' - by running commands via the command line or terminal over a network, without the use of a visual user interface**. We do this by establishing a SSH connection, by typing commands in a terminal window on a remote computer that are actually implemented on the local computer. The network setup enables all of this to happen.
 
-It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone inevitably does) you'll be back up and running in a matter of minutes!
+It may seem a little intimidating, but using the terminal is actually quite easy and systematic once you get the hang of it - it just takes some getting used to! Moreover, experimenting with a Raspberry Pi is arguably the best way to learn how to do this, since the operating system can be wiped and reinstalled very easily. So if you mess up (as everyone does at some time or another) you'll be back up and running in a matter of minutes!
 
 So let's get started by installing Raspbian on a SD card. Start by inserting the SD card into your computer using an adapter (these tend to come with the microSD card if you just bought a new one, but makerspaces and photographers may have one lying around for you to borrow). Once it's in it will mount automatically and you should see it pop up on your finder or file explorer. It might have a different name, but be sure you are able to identify it and associate it with what you just inserted into your laptop or desktop computer.
 
@@ -118,7 +116,7 @@ Once the microSD card is wiped and formatted, we want to etch the Raspbian opera
 
 There are a couple other things that we need to do to ensure that we can interface with the Raspberry Pi headless. First we need to create a file in the OS that enables SSH interface. Open terminal (/Applications/Utilities/Terminal.app, or by hitting `Command+Space` and then typing Terminal.app) and type the following command, then hit enter:
 
-```
+```bash
 touch /Volumes/boot/ssh
 ```
 
@@ -126,7 +124,7 @@ This command (`touch`) creates an empty text file in a location specified after 
 
 So now that we've specified that it's okay to enable SSH connections over a network, we need to enable the Raspberry Pi to connect to the network in the first place. If we were using a graphical user interface, we would go to a menubar, select the network and input the password. Only then would we be able to  connect to the Raspberry Pi headless. However because we are not using a graphical user interface, we need to devise a way to make the Raspberry Pi connect to the network automatically, without prior intervention on our part. We can do this by creating another file, `wpa_supplicant.conf`, similarly to how we made the `ssh` file above. However we want to edit this file to include our network's login credentials. We'll use a terminal-based text editor called `nano` instead of `touch` to simultaneously create and edit the file.
 
-```
+```bash
 cd /Volumes/boot
 nano wpa_supplicant.conf
 ```
@@ -134,7 +132,7 @@ nano wpa_supplicant.conf
 The `cd` command moves you around directories. Check what files and sub-directories are in your current directory with `ls`. See the cheatsheet provided by the Raspberry Pi Foundation that lists some common terminal command and explains how to use them: https://www.raspberrypi.org/documentation/linux/usage/commands.md
 
 After the `nano` command you should see a blank file. Type the following into ```wpa_supplicant.conf```. Remember to change the generic country code, network SSID and network password, including the <> characters, to suit your setup. The quotes should remain in place.
-```
+```bash
 country=<XX>
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
@@ -157,7 +155,7 @@ Now that we've installed the OS and enabled network-based control of it, let's g
 
 Once you determine the target computer's ip address, we can type the following command, replacing the generic placeholder (including the <> characters) with the actual address:
 
-```
+```bash
 ssh pi@<ip address>
 ```
 
@@ -173,7 +171,7 @@ This terminal window should now be considered a remote client to the raspberry p
 
 You may also get the following warning when trying to establish an initial connection via SSHL:
 
-```
+```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -194,7 +192,7 @@ Host key verification failed.
 This is triggered because each remote computer that establishes an SSH connection with a specific target is identified using a cryptographic key, for security reasons. When you re-install Raspbian on the same microSD card, the old key slot is removed and replaced with a new one. However, when your remote laptop tries to enter the computer located on the same location on the network it reaches for the old key that works with the lock that has since been removed. We therefore need to delete the old key and replace it with a new one that fits the new lock.
 
 To do this, navigate to the file where the keys are stored, and edit the file to delete the corresponding keys:
-```
+```bash
 sudo nano ~/.ssh/known_hosts
 ```
 Remove all the data stored in this file by going to the end and holding backspace, then save and exit with `control + x` and then `y`. See [https://www.raspberrypi.org/forums/viewtopic.php?t=40037](https://www.raspberrypi.org/forums/viewtopic.php?t=40037) for more info.
@@ -214,7 +212,7 @@ For more information, visit:
 
 Now that we are in the remote host, let's install updates. This requires that the local network be connected to the internet.
 
-```
+```bash
 sudo apt-get update -y
 sudo apt-get upgrade -y
 ```
@@ -227,7 +225,7 @@ For the purpose of this tutorial it is not necessary to update the kernel or fir
 
 To shut down the Raspberry Pi, use the following command:
 
-```
+```bash
 sudo shutdown -h now
 ```
 
@@ -240,12 +238,12 @@ In order to do this we will have to find some information about the network conf
 
 We first need to get the Raspberry Pi's IP address on the network, on both wifi and ethernet interfaces.
 
-```
+```bash
 ip -4 addr show | grep global
 ```
 
 The output should look something like this:
-```
+```bash
 inet 169.254.39.157/16 brd 169.254.255.255 scope global eth0
 inet 192.168.0.102/24 brd 192.168.0.255 scope global wlan0
 ```
@@ -253,28 +251,28 @@ inet 192.168.0.102/24 brd 192.168.0.255 scope global wlan0
 `eth0` refers to the ethernet interface, and `wlan0` refers to the wireless interface. Information pertaining to the ethernet interface will not appear if the Raspberry Pi is not currently connected to the router via an ethernet cable.
 
 Next we need to determine the router's gateway:
-```
+```bash
 ip route | grep default | awk '{print $3}'
 ```
 
 The result should look something like this:
-```
+```bash
 192.168.0.1
 ```
 
 Then we need to determine the DNS server or namespace, which is often the same as the router's gateway:
-```
+```bash
 cat /etc/resolv.conf
 ```
 
 The result should look something like this:
-```
+```bash
 # Generated by resolvconf
 nameserver 192.168.0.1
 ```
 
 Finally, we have to add this retrieved information to the file located at `/etc/dhcpcd.conf`:
-```
+```bash
 sudo nano /etc/dhcpcd.conf
 ```
 
@@ -282,7 +280,7 @@ sudo nano /etc/dhcpcd.conf
 
 Add the following, substituting the `static routers` and `static domain_name_servers` values with the one's that were just determined above. The values for `static ip_address` should be our new consistent IP address. For the numbers following the `/`, use the values from the IP addresses we identified above.
 
-```
+```bash
 interface eth0
 static ip_address = 192.168.0.197/16
 static routers = 192.168.0.1
@@ -305,13 +303,13 @@ In our current application, we will be installing a database server on the Raspb
 
 To install MariaDB Server, first SSH into the Raspberry Pi and then use `apt-get` to install `mariadb-server` from the package manager:
 
-```
+```bash
 sudo apt-get install mariadb-server
 ```
 
 Once it is installed, you will have to re-configure a configuration file to enable access to the database across the network. First access the config file:
 
-```
+```bash
 sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
 ```
 
@@ -319,7 +317,7 @@ Find the line that configures `bind-address` to `127.0.0.1` and change its value
 
 Once your changes are made, save the file using `control + x` and then restart the MariaDB service:
 
-```
+```bash
 sudo service mysql restart
 ```
 
@@ -327,34 +325,34 @@ sudo service mysql restart
 It is possible to install the MariaDB DBMS locally on your laptop, which means that your laptop would serve as both the server and the client at the same time. This is useful if you want to create and manage a database locally before migrating it to a server, or if you don't have a Raspberry Pi on hand but want to learn more about database adminstration.
 
 To onstall MariaDB on a mac, we need to first install a paclage manager called homebrew, similar to apt, that is designed specifically for MacOS. To install homebrew, open terminal and then run the following command to download the installation files and build the program:
-```
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Then update the index of retrievable packages and upgrade any installed packages:
-```
+```bash
 brew update
 brew upgrade
 ```
 
 Nowe install MariaDB via homebrew:
-```
+```bash
 brew install mariadb
 ```
 
 Once installed, to start the MariaDB server use the following:
-```
+```bash
 mysql.server start
 ```
 
 It is also important to stop the server when you are finished using it in order to ensure that your computer is not constantly using up resources when they are not needed:
-```
+```bash
 mysql.server stop
 ```
 
 Once the database server is installed and running up, let's login to the server so that we can create a database. By default there is only one user named 'root', whose password is blank. Root has the broadest set of privileges, and can create or drop databases and users freely. You can only log in as root on the machine on which the MariaDB server resides; you can not log in as root from a remote connection. After establishing a SSH connection to the Raspberry Pi, initiate the server and login as root:
 
-```
+```bash
 sudo mysql
 ```
 
@@ -364,25 +362,25 @@ MariaDB commands are SQL, or Structured Query Language. They are generally writt
 
 Now let's create a database called `odate1`:
 
-```
+```sql
 CREATE DATABASE odate1;
 ```
 
 Next create a new user named `lara` with password `croft`:
 
-```
+```sql
 CREATE USER 'lara'@'localhost' IDENTIFIED BY 'croft';
 ```
 
 We can also make a restriction that would only recognize a user named lara if she attempts to access the server from a specific IP address by replacing `localhost` with the IP address that you are expecting her to connect from:
 
-```
+```sql
 CREATE USER 'lara'@'12.34.56.78' IDENTIFIED BY 'croft';
 ```
 
 Different users can have different [permissions](https://mariadb.com/kb/en/library/grant/) granted to them. Groups of specific permissions can be lumped together and labelled as [roles](https://mariadb.com/kb/en/library/roles_overview/), which can also be assigned to users, which may make database management slightly easier. In this tutorial we will not fret too much with permissions or roles (see [https://mariadb.com/kb/en/library/grant/](https://mariadb.com/kb/en/library/grant/) for more information), and we will simply assign all permissions to our user lara:
 
-```
+```sql
 GRANT ALL PRIVILEGES ON odate1.* TO 'lara'@'%' IDENTIFIED BY 'croft';
 FLUSH PRIVILEGES;
 ```
@@ -391,7 +389,7 @@ We could also restrict lara's permissions to specific tables on the database by 
 
 Now let's close the MariaDB service (using `control + c`) and try logging in as lara:
 
-```
+```bash
 mysql -u lara -p
 ```
 
@@ -400,7 +398,7 @@ The -p flag indicates that the terminal should prompt us for a password. As lara
 Creating or dropping tables, columns, indexes and relationships, as well as selecting, inserting, updating and deleting rows, is done via SQL. More comprehensive guides on SQL can be found at [w3schools](https://www.w3schools.com/sql/sql_intro.asp) (among other great learning resources that they offer) and the [MariaDB Knowledge Base](https://mariadb.com/kb/en/library/mariadb-basics/), but here are a few useful snippets that you can try out.
 
 To create a table:
-```
+```sql
 CREATE TABLE `odate1`.`contexts` (
 `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `Context` VARCHAR(255) DEFAULT '',
@@ -414,17 +412,17 @@ PRIMARY KEY (`id`)
 ```
 
 To insert data into the table:
-```
+```sql
 INSERT INTO `odate1`.`contexts` (Context, Trench, ContextDescription, Munsell, SedimentColour, NumberOfBuckets) VALUES (0001, 001, "The first context of the season. Loamy sand, very herbaceous, characteristic of a typical surface layer.","5YR 3/3",NULL,3);
 ```
 
 to select data from the table:
-```
+```sql
 SELECT `Context`, `Munsell`, `SedimentColour` FROM `contexts` WHERE `contexts`.`Trench` = 001;
 ```
 
 To update data in the table (https://www.w3schools.com/sql/sql_update.asp):
-```
+```sql
 UPDATE `odate1`.`contexts` SET `SedimentColour` = "Dark Brown" WHERE `Munsell` = "5YR 3/3";
 UPDATE `odate1`.`contexts` SET `SedimentColour` = "Brown" WHERE `Munsell` = "5YR 4/3";
 UPDATE `odate1`.`contexts` SET `SedimentColour` = "Brown" WHERE `Munsell` = "5YR 5/4";
@@ -432,12 +430,12 @@ UPDATE `odate1`.`contexts` SET `SedimentColour` = "Reddish Yellow" WHERE `Munsel
 ```
 
 To delete data from the table (https://www.w3schools.com/sql/sql_delete.asp):
-```
+```sql
 DELETE FROM `contexts` WHERE `Context` = "0005";
 ```
 
 To make a relationship between two tables:
-```
+```sql
 CREATE TABLE `odate1`.`trenches` (
 `id` INT(11) SIGNED NOT NULL AUTO_INCREMENT,
 `Trench` VARCHAR(255) DEFAULT '',
@@ -451,7 +449,7 @@ ALTER TABLE `odate1`.`contexts` ADD CONSTRAINT `FK_contexts_Trench` FOREIGN KEY 
 ```
 
 To run a join query (https://www.w3schools.com/sql/sql_join.asp):
-```
+```sql
 SELECT `contexts`.Context, `contexts`.`Trench`, `contexts`.`NumberOfBuckets`, `Trench`.`Reason` FROM `contexts` INNER JOIN `trenches` ON `contexts`.`Trench` = `trenches`.`Trench`;
 ```
 
@@ -475,8 +473,6 @@ Assuming that the Raspberry Pi has the static IP we assigned to it earlier, we c
 
 Everything that happens in this interface can be expressed as a logical SQL statement, which is passed on to the server and executed there as if it were done in the terminal, as demonstrated above. In MySQL Workbench this is explicitly shown to the user so that they may verify the actions that they take.
 
-[screenshot]
-
 It is also possible to generate your own interfaces and data entry forms using Microsoft Access, PHP or R. In broad terms, a connection to the database is established using the same information just listed above, and buttons next to text fields or table renderers are used to execute SQL statements that insert, update, select delete or otherwise query the database accordingly.
 
 For more information on how create data entry forms using Microsoft Access, PHP and R Shiny, please refer to the following links:
@@ -488,7 +484,7 @@ For more information on how create data entry forms using Microsoft Access, PHP 
 It is wise to backup your databases regularly, but this is often overlooked. Thankfully we can automate this process! We accomplish this by running a basic script that wraps the database as a single file and copies it over to a specified directory that corresponds with a folder on a mounted USB storage drive.
 
 First we will have to configure the system so that the USB storage device is mounted consistently and automatically each time the device is connected. While Raspberry Pi does support auto USB mounting when starting the machine, it can be a bit flaky. Therefore we will use the device ID (referred to as UUID in the linux system) to ensure that there is more certainty of a proper mount. So we need to determine the UUID of the USB device by first inserting it in the Raspberry Pi and then cross-checking the outputs of the following commands:
-```
+```bash
 ls -al /dev/disk/by-uuid
 lsblk
 ```
@@ -496,24 +492,24 @@ lsblk
 Infer the correct UUID based on the drive's capacity and through elimination of other possibilities, and note it down somewhere.
 
 Now create the directory where we want to mount the drive:
-```
+```bash
 sudo mkdir /media/backup
 ```
 
 Give the directory adequate permissions:
-```
+```bash
 sudo chmod -R 777 /media/backup
 ```
 
 **Note:** This command gives unrestricted read, write and execute permissions to all users! Configure your permissions to suit your needs! Further information: [https://www.guru99.com/file-permissions.html](https://www.guru99.com/file-permissions.html), [https://chmod-calculator.com/](https://chmod-calculator.com/)
 
 Next open the `fstab` file, which is a system file that handles the way Raspbian mounts USB devices:
-```
+```bash
 sudo nano /etc/fstab
 ```
 
 At the end of that file, add the following command, replacing the UUID with the one pertaining to the specific device and the directory with the intended mount point:
-```
+```bash
 UUID=783A-120B /media/backup auto noatime,nofail,umask=000 0 0
 ```
 
@@ -522,18 +518,18 @@ Further information: (https://www.raspberrypi.org/documentation/configuration/ex
 **Note:** This is the correct code for FAT32/exFAT formatted drives only. FAT32/exFAT handles permissions is a slightly different way than NTFS and linux-based filesystems (i.e. ext4) and you will need to configure them accordingly. However, I recommend the use of FAT32/exFAT in general, since it is interoperable between virtually all operating systems, whereas others are not, and zipped archaeological databases probably won't be more than 4GB each, which is the file size limit for FAT32/exFAT-formatted devices.
 
 Now the USB drive will be auto mounted and ready to use. Don’t forget to restart your Raspberry Pi to test it out:
-```
+```bash
 sudo shutdown -h now
 ```
 
 After you have gotten the USB drive to mount automatically, we need to create a script called `dbbackup.sh` in the home directory:
-```
+```bash
 cd ~
 sudo nano dbbackup.sh
 ```
 
 In that file, enter the following:
-```
+```bash
 #!/bin/bash
 $OUTPUT_FILE = /media/backup/mysqldump/odate1_$(date +"%Y%m%d_%H%M%S").gzip
 $USERNAME = lara
@@ -546,14 +542,14 @@ sudo mysqldump -u$USERNAME -p$PASSWORD $DATABASE_NAME | gzip > $OUTPUT_FILE
 The username, password, database name and file path can also be modified to suit your unique situation. Ensure that the permissions are properly set to allow you to write to the specified directory.
 
 Then we need to set the script to be executable:
-```
+```bash
 sudo chmod 755 dbbackup.sh
 ```
 
 Now we need to automate the execution of this script using `cron`. `cron` is a time-based scheduling utility in Unix/Linux operating systems such as Raspbian. It reads a configuration file, commonly referred to as `crontab` where jobs are scheduled using a special syntax. To access and edit the crontab simply enter `sudo crontab -e` and add a line at the end of the file to schedule a job.
 
 To run dbbackup.sh every 30 minutes, add the following line at the end of the crontab:
-```
+```bash
 */30 * * * * /home/pi/dbbackup.sh
 ```
 
@@ -569,17 +565,17 @@ It may be useful for participants on a project to assemmble photos, spreadsheets
 To begin, the system must be confured to automount the USB drive. Instructions on how to do this have been provided in section 4.2.2.5. I recommend that you use a separate USB drive than the one used for backups. For the purpose of this tutorial, I will assume that the file sharing drive is mounted at `/media/FileShare`.
 
 We will be using a software package called Samba to enable the primary NAS functions. Install Samba using the following command:
-```
+```bash
 sudo apt-get install samba samba-common-bin
 ```
 
 Next, edit the Samba configuration file:
-```
+```bash
 sudo nano /etc/samba/smb.conf
 ```
 
 Add the following at the end of the file:
-```
+```bash
 [FileShare]
 Comment = Pi shared folder
 Path = /media/FileShare
@@ -598,7 +594,9 @@ This configuration allows anyone to read, write, and execute files in a volume n
 
 Please refer to [this resource](https://www.raspberrypi.org/magpi/samba-file-server/) for further information, as well as the [Samba documentation](https://www.samba.org/samba/docs/) in order to set up usernames and passwords. The method just described allows free-for-all access, and it should be communicated to users that they can add, delete or modify any file in the shared directory, for better or worse. You may feel inclined to schedule automated backups of your shared drive to yet another connected drive, though this may congest the network and occupy lots of disk space, depending on the size of the shared directory. You may wish to schedule such backups during off-hours, when volumes of traffic across the network are expected to be low.
 
-#### Further Reading
-https://www.raspberrypi.org/documentation/linux/usage/commands.md
+### Discussion
+These guides and workflows are meant to emphasize the open-ended opportunities that 3D printing and low-power portable computing afford. They are not definitive instructions to be copied and pasted to obtain the same result, but instead should be considered as ideas to tinker with. To meet the expectations of stakeholders involved in a project, it will be necessary to read the room and get others involved in the making process, in ways that meet their needs and capabilities. The maker community is generally very friendly supportive; help is only a google search away.
 
+### Further Reading
+[bibliography / reading list goes here]
 

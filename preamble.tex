@@ -1,3 +1,15 @@
 \usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{babel}
+\usepackage{booktabs}
+
+\usepackage{fancyvrb,newverbs,xcolor}
+
+\definecolor{Light}{HTML}{f7f7f7}
+
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{
+  \colorbox{Light}{\oldtexttt{#1}}
+}
 \usepackage{babel}
 \usepackage{booktabs}

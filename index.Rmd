@@ -1,10 +1,17 @@
 ---
 title: "The Open Digital Archaeology Textbook"
-author: "Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, & Beth Compton"
+author: "Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, & Rob Blades"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
+colorlinks: true
+urlcolor: blue
+linkcolor: blue
+filecolor: blue
+citecolor: blue
+toccolor: blue
+fontsize: 16
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
