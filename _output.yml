@@ -1,7 +1,8 @@
-bookdown::pdf_book: default
-bookdown::epub_book:
-  dev: svglite
-  stylesheet: css/style.css
+bookdown::pdf_book: 
+    includes:
+      in_header: preamble.tex
+    latex_engine: xelatex
+
 bookdown::gitbook:
   sharing:
       github: yes

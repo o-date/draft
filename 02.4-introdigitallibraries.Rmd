@@ -1,5 +1,0 @@
-## Introduction to Digital Libraries, Archives & Repositories
-
-yadda linked open data in here?
-
-- there should be a discussion here on the shape of data; not everything comes in flat files (explain what that means); also json, geojson, 

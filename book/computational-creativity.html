@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Open Digital Archaeology Textbook</title>
+  <meta name="description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="The Open Digital Archaeology Textbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/brandon-green-321795-unsplash.jpg" />
+  <meta property="og:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
+  <meta name="github-repo" content="o-date/draft" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The Open Digital Archaeology Textbook" />
+  
+  <meta name="twitter:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
+  <meta name="twitter:image" content="images/brandon-green-321795-unsplash.jpg" />
+
+<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
+
+
+<meta name="date" content="2018-11-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html">
+<link rel="next" href="eliding-the-digital-and-the-physical.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://hypothes.is/embed.js" async></script>
+<link rel="stylesheet" href="css/custom.css">
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ODATE</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>notice</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a><ul>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#shawn-graham"><i class="fa fa-check"></i>Shawn Graham</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#neha-gupta"><i class="fa fa-check"></i>Neha Gupta</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#michael-carter"><i class="fa fa-check"></i>Michael Carter</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#beth-compton"><i class="fa fa-check"></i>Beth Compton</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#jolene-smith"><i class="fa fa-check"></i>Jolene Smith</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#andreas-angourakis"><i class="fa fa-check"></i>Andreas Angourakis</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#andrew-reinhard"><i class="fa fa-check"></i>Andrew Reinhard</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#lorna-richardson"><i class="fa fa-check"></i>Lorna Richardson</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#kate-ellenberger"><i class="fa fa-check"></i>Kate Ellenberger</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#zack-batist"><i class="fa fa-check"></i>Zack Batist</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#joel-rivard"><i class="fa fa-check"></i>Joel Rivard</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#ben-marwick"><i class="fa fa-check"></i>Ben Marwick</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#editorial-board"><i class="fa fa-check"></i>Editorial Board</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i>Getting Started</a><ul>
+<li class="chapter" data-level="" data-path="instructors-how-to-use-this-text.html"><a href="instructors-how-to-use-this-text.html"><i class="fa fa-check"></i>Instructors: How to use this text</a></li>
+<li class="chapter" data-level="" data-path="students-how-to-use-this-text.html"><a href="students-how-to-use-this-text.html"><i class="fa fa-check"></i>Students: How to use this text</a></li>
+<li class="chapter" data-level="" data-path="how-to-contribute-changes-or-make-your-own-version.html"><a href="how-to-contribute-changes-or-make-your-own-version.html"><i class="fa fa-check"></i>How to contribute changes, or make your own version</a></li>
+<li class="chapter" data-level="" data-path="how-to-access-and-use-the-computational-environment.html"><a href="how-to-access-and-use-the-computational-environment.html"><i class="fa fa-check"></i>How to access and use the computational environment</a></li>
+<li class="chapter" data-level="" data-path="colophon.html"><a href="colophon.html"><i class="fa fa-check"></i>Colophon</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i>Welcome!</a></li>
+<li class="chapter" data-level="1" data-path="going-digital.html"><a href="going-digital.html"><i class="fa fa-check"></i><b>1</b> Going Digital</a><ul>
+<li class="chapter" data-level="1.1" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html"><i class="fa fa-check"></i><b>1.1</b> So what is Digital Archaeology?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#a-distant-view"><i class="fa fa-check"></i><b>1.1.1</b> A distant view</a></li>
+<li class="chapter" data-level="1.1.2" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#is-digital-archaeology-part-of-the-digital-humanities"><i class="fa fa-check"></i><b>1.1.2</b> Is digital archaeology part of the digital humanities?</a></li>
+<li class="chapter" data-level="1.1.3" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#archaeological-glitch-art"><i class="fa fa-check"></i><b>1.1.3</b> Archaeological Glitch Art</a></li>
+<li class="chapter" data-level="1.1.4" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#the-cool-factor-and-the-tensions-of-cool"><i class="fa fa-check"></i><b>1.1.4</b> The ‘cool’ factor and the tensions of cool</a></li>
+<li class="chapter" data-level="1.1.5" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#takeaways"><i class="fa fa-check"></i><b>1.1.5</b> Takeaways</a></li>
+<li class="chapter" data-level="1.1.6" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#exercises"><i class="fa fa-check"></i><b>1.1.6</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="project-management-basics.html"><a href="project-management-basics.html"><i class="fa fa-check"></i><b>1.2</b> Project Management Basics</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="project-management-basics.html"><a href="project-management-basics.html#take-aways"><i class="fa fa-check"></i><b>1.2.1</b> Take-aways</a></li>
+<li class="chapter" data-level="1.2.2" data-path="project-management-basics.html"><a href="project-management-basics.html#exercises-1"><i class="fa fa-check"></i><b>1.2.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="github-version-control.html"><a href="github-version-control.html"><i class="fa fa-check"></i><b>1.3</b> Github &amp; Version Control</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="github-version-control.html"><a href="github-version-control.html#the-core-functions-of-git"><i class="fa fa-check"></i><b>1.3.1</b> The core functions of Git</a></li>
+<li class="chapter" data-level="1.3.2" data-path="github-version-control.html"><a href="github-version-control.html#key-terms"><i class="fa fa-check"></i><b>1.3.2</b> Key Terms</a></li>
+<li class="chapter" data-level="1.3.3" data-path="github-version-control.html"><a href="github-version-control.html#take-aways-1"><i class="fa fa-check"></i><b>1.3.3</b> Take-aways</a></li>
+<li class="chapter" data-level="1.3.4" data-path="github-version-control.html"><a href="github-version-control.html#further-reading"><i class="fa fa-check"></i><b>1.3.4</b> Further Reading</a></li>
+<li class="chapter" data-level="1.3.5" data-path="github-version-control.html"><a href="github-version-control.html#exercises-2"><i class="fa fa-check"></i><b>1.3.5</b> Exercises</a></li>
+<li class="chapter" data-level="1.3.6" data-path="github-version-control.html"><a href="github-version-control.html#warnings"><i class="fa fa-check"></i><b>1.3.6</b> Warnings</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html"><i class="fa fa-check"></i><b>1.4</b> Open Notebook Research &amp; Scholarly Communication</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html#how-to-ask-questions"><i class="fa fa-check"></i><b>1.4.1</b> How to Ask Questions</a></li>
+<li class="chapter" data-level="1.4.2" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html#discussion"><i class="fa fa-check"></i><b>1.4.2</b> discussion</a></li>
+<li class="chapter" data-level="1.4.3" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html#take-aways-2"><i class="fa fa-check"></i><b>1.4.3</b> Take-aways</a></li>
+<li class="chapter" data-level="1.4.4" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html#further-reading-1"><i class="fa fa-check"></i><b>1.4.4</b> Further Reading</a></li>
+<li class="chapter" data-level="1.4.5" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html#on-privilege-and-open-notebooks"><i class="fa fa-check"></i><b>1.4.5</b> On Privilege and Open Notebooks</a></li>
+<li class="chapter" data-level="1.4.6" data-path="open-notebook-research-scholarly-communication.html"><a href="open-notebook-research-scholarly-communication.html#exercises-3"><i class="fa fa-check"></i><b>1.4.6</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="failing-productively.html"><a href="failing-productively.html"><i class="fa fa-check"></i><b>1.5</b> Failing Productively</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="failing-productively.html"><a href="failing-productively.html#a-taxonomy-of-fails"><i class="fa fa-check"></i><b>1.5.1</b> A taxonomy of fails</a></li>
+<li class="chapter" data-level="1.5.2" data-path="failing-productively.html"><a href="failing-productively.html#exercises-4"><i class="fa fa-check"></i><b>1.5.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html"><i class="fa fa-check"></i><b>1.6</b> The Ethics of Big Data in Archaeology</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="the-ethics-of-big-data-in-archaeology.html"><a href="the-ethics-of-big-data-in-archaeology.html#exercises-5"><i class="fa fa-check"></i><b>1.6.1</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="the-human-problem.html"><a href="the-human-problem.html"><i class="fa fa-check"></i><b>1.7</b> The Human Problem</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="the-human-problem.html"><a href="the-human-problem.html#the-two-sentence-pitch"><i class="fa fa-check"></i><b>1.7.1</b> The Two-Sentence Pitch</a></li>
+<li class="chapter" data-level="1.7.2" data-path="the-human-problem.html"><a href="the-human-problem.html#consulting-colleagues-and-stakeholders"><i class="fa fa-check"></i><b>1.7.2</b> Consulting Colleagues and Stakeholders</a></li>
+<li class="chapter" data-level="1.7.3" data-path="the-human-problem.html"><a href="the-human-problem.html#making-a-plan"><i class="fa fa-check"></i><b>1.7.3</b> Making a Plan</a></li>
+<li class="chapter" data-level="1.7.4" data-path="the-human-problem.html"><a href="the-human-problem.html#persisting-and-adapting-your-plan"><i class="fa fa-check"></i><b>1.7.4</b> Persisting and Adapting your Plan</a></li>
+<li class="chapter" data-level="1.7.5" data-path="the-human-problem.html"><a href="the-human-problem.html#exercises-6"><i class="fa fa-check"></i><b>1.7.5</b> Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="making-data-useful.html"><a href="making-data-useful.html"><i class="fa fa-check"></i><b>2</b> Making Data Useful</a><ul>
+<li class="chapter" data-level="2.1" data-path="designing-data-collection-and-curation.html"><a href="designing-data-collection-and-curation.html"><i class="fa fa-check"></i><b>2.1</b> Designing Data Collection and Curation</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="designing-data-collection-and-curation.html"><a href="designing-data-collection-and-curation.html#exercises-7"><i class="fa fa-check"></i><b>2.1.1</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="cleaning-data.html"><a href="cleaning-data.html"><i class="fa fa-check"></i><b>2.2</b> Cleaning Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="cleaning-data.html"><a href="cleaning-data.html#discussion-1"><i class="fa fa-check"></i><b>2.2.1</b> discussion</a></li>
+<li class="chapter" data-level="2.2.2" data-path="cleaning-data.html"><a href="cleaning-data.html#exercises-8"><i class="fa fa-check"></i><b>2.2.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="arranging-and-storing-data-for-the-long-haul-databases.html"><a href="arranging-and-storing-data-for-the-long-haul-databases.html"><i class="fa fa-check"></i><b>2.3</b> Arranging and Storing Data for the Long Haul (Databases!)</a><ul>
+<li class="chapter" data-level="" data-path="arranging-and-storing-data-for-the-long-haul-databases.html"><a href="arranging-and-storing-data-for-the-long-haul-databases.html#flat-tables"><i class="fa fa-check"></i>Flat tables</a></li>
+<li class="chapter" data-level="2.3.1" data-path="arranging-and-storing-data-for-the-long-haul-databases.html"><a href="arranging-and-storing-data-for-the-long-haul-databases.html#discussion-2"><i class="fa fa-check"></i><b>2.3.1</b> discussion</a></li>
+<li class="chapter" data-level="2.3.2" data-path="arranging-and-storing-data-for-the-long-haul-databases.html"><a href="arranging-and-storing-data-for-the-long-haul-databases.html#exercises-9"><i class="fa fa-check"></i><b>2.3.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html"><i class="fa fa-check"></i><b>2.4</b> Linked Open Data and Data Publishing</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html#discussion-3"><i class="fa fa-check"></i><b>2.4.1</b> discussion</a></li>
+<li class="chapter" data-level="2.4.2" data-path="linked-open-data-and-data-publishing.html"><a href="linked-open-data-and-data-publishing.html#exercises-10"><i class="fa fa-check"></i><b>2.4.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="using-application-programming-interfaces-apis-to-retrieve-data.html"><a href="using-application-programming-interfaces-apis-to-retrieve-data.html"><i class="fa fa-check"></i><b>2.5</b> Using Application Programming Interfaces (APIS) to Retrieve Data</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="using-application-programming-interfaces-apis-to-retrieve-data.html"><a href="using-application-programming-interfaces-apis-to-retrieve-data.html#exercises-11"><i class="fa fa-check"></i><b>2.5.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="scraping-data.html"><a href="scraping-data.html"><i class="fa fa-check"></i><b>2.6</b> Scraping Data</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="scraping-data.html"><a href="scraping-data.html#exercises-12"><i class="fa fa-check"></i><b>2.6.1</b> Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="finding-and-communicating-the-compelling-story.html"><a href="finding-and-communicating-the-compelling-story.html"><i class="fa fa-check"></i><b>3</b> Finding and Communicating the Compelling Story</a><ul>
+<li class="chapter" data-level="3.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Computing with R and Python Notebooks; Reproducible code</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#discussion-4"><i class="fa fa-check"></i><b>3.1.1</b> discussion</a></li>
+<li class="chapter" data-level="3.1.2" data-path="statistical-computing-with-r-and-python-notebooks-reproducible-code.html"><a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html#exercises-13"><i class="fa fa-check"></i><b>3.1.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html"><i class="fa fa-check"></i><b>3.2</b> Data Driven Documents</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-driven-documents.html"><a href="data-driven-documents.html#d3"><i class="fa fa-check"></i><b>3.2.1</b> D3</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-driven-documents.html"><a href="data-driven-documents.html#discussion-5"><i class="fa fa-check"></i><b>3.2.2</b> discussion</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-driven-documents.html"><a href="data-driven-documents.html#exercises-14"><i class="fa fa-check"></i><b>3.2.3</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><i class="fa fa-check"></i><b>3.3</b> Storytelling and the Archaeological CMS: Omeka, Kora, and Mukurtu</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#the-content-management-system"><i class="fa fa-check"></i><b>3.3.1</b> The Content Management System</a></li>
+<li class="chapter" data-level="3.3.2" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#omeka"><i class="fa fa-check"></i><b>3.3.2</b> Omeka</a></li>
+<li class="chapter" data-level="3.3.3" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#kora"><i class="fa fa-check"></i><b>3.3.3</b> Kora</a></li>
+<li class="chapter" data-level="3.3.4" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#mukurtu"><i class="fa fa-check"></i><b>3.3.4</b> Mukurtu</a></li>
+<li class="chapter" data-level="3.3.5" data-path="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html"><a href="storytelling-and-the-archaeological-cms-omeka-kora-and-mukurtu.html#exercises-15"><i class="fa fa-check"></i><b>3.3.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html"><i class="fa fa-check"></i><b>3.4</b> What is Web Mapping?</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#overview-of-map-services"><i class="fa fa-check"></i><b>3.4.1</b> Overview of Map Services</a></li>
+<li class="chapter" data-level="3.4.2" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#making-a-web-map-with-leaflet"><i class="fa fa-check"></i><b>3.4.2</b> Making a web map with Leaflet</a></li>
+<li class="chapter" data-level="3.4.3" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#exercises-16"><i class="fa fa-check"></i><b>3.4.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.4.4" data-path="what-is-web-mapping.html"><a href="what-is-web-mapping.html#resources"><i class="fa fa-check"></i><b>3.4.4</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html"><i class="fa fa-check"></i><b>3.5</b> Virtual Archaeology</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#basic-principles"><i class="fa fa-check"></i><b>3.5.1</b> Basic principles</a></li>
+<li class="chapter" data-level="3.5.2" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#main-challenge"><i class="fa fa-check"></i><b>3.5.2</b> Main Challenge</a></li>
+<li class="chapter" data-level="3.5.3" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#the-archaeological-narrative"><i class="fa fa-check"></i><b>3.5.3</b> The Archaeological Narrative</a></li>
+<li class="chapter" data-level="3.5.4" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#theoretical-pragmatism"><i class="fa fa-check"></i><b>3.5.4</b> Theoretical Pragmatism</a></li>
+<li class="chapter" data-level="3.5.5" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#phenomenology-and-virtual-archaeology"><i class="fa fa-check"></i><b>3.5.5</b> Phenomenology and Virtual Archaeology</a></li>
+<li class="chapter" data-level="3.5.6" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#lasting-considerations"><i class="fa fa-check"></i><b>3.5.6</b> Lasting Considerations</a></li>
+<li class="chapter" data-level="3.5.7" data-path="virtual-archaeology.html"><a href="virtual-archaeology.html#exercises-17"><i class="fa fa-check"></i><b>3.5.7</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="archaeogaming.html"><a href="archaeogaming.html"><i class="fa fa-check"></i><b>3.6</b> Archaeogaming</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeological-reception"><i class="fa fa-check"></i><b>3.6.1</b> Archaeological Reception</a></li>
+<li class="chapter" data-level="3.6.2" data-path="archaeogaming.html"><a href="archaeogaming.html#games-as-archaeology"><i class="fa fa-check"></i><b>3.6.2</b> Games as Archaeology</a></li>
+<li class="chapter" data-level="3.6.3" data-path="archaeogaming.html"><a href="archaeogaming.html#archaeogaming-projects-past-and-present"><i class="fa fa-check"></i><b>3.6.3</b> Archaeogaming Projects Past and Present</a></li>
+<li class="chapter" data-level="3.6.4" data-path="archaeogaming.html"><a href="archaeogaming.html#is-archaeogaming-archaeology-a-future-of-the-discipline."><i class="fa fa-check"></i><b>3.6.4</b> Is Archaeogaming Archaeology? A Future of the Discipline.</a></li>
+<li class="chapter" data-level="3.6.5" data-path="archaeogaming.html"><a href="archaeogaming.html#exercises-18"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
+<li class="chapter" data-level="3.6.6" data-path="archaeogaming.html"><a href="archaeogaming.html#further-reading-2"><i class="fa fa-check"></i><b>3.6.6</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><i class="fa fa-check"></i><b>3.7</b> Social Media as Public Engagement &amp; Scholarly Communication in Archaeology</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#social-media-as-outreach"><i class="fa fa-check"></i><b>3.7.1</b> Social Media as Outreach</a></li>
+<li class="chapter" data-level="3.7.2" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#social-media-to-keep-current-on-research"><i class="fa fa-check"></i><b>3.7.2</b> Social Media to Keep Current on Research</a></li>
+<li class="chapter" data-level="3.7.3" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#four-moves-or-getting-at-the-truth"><i class="fa fa-check"></i><b>3.7.3</b> Four Moves, or, Getting at the Truth</a></li>
+<li class="chapter" data-level="3.7.4" data-path="social-media-as-public-engagement-scholarly-communication-in-archaeology.html"><a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html#exercises-19"><i class="fa fa-check"></i><b>3.7.4</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="computational-creativity.html"><a href="computational-creativity.html"><i class="fa fa-check"></i><b>3.8</b> Computational Creativity</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="computational-creativity.html"><a href="computational-creativity.html#twitterbots-with-tracery"><i class="fa fa-check"></i><b>3.8.1</b> Twitterbots with Tracery</a></li>
+<li class="chapter" data-level="3.8.2" data-path="computational-creativity.html"><a href="computational-creativity.html#chatbots"><i class="fa fa-check"></i><b>3.8.2</b> Chatbots</a></li>
+<li class="chapter" data-level="3.8.3" data-path="computational-creativity.html"><a href="computational-creativity.html#sonification"><i class="fa fa-check"></i><b>3.8.3</b> Sonification</a></li>
+<li class="chapter" data-level="3.8.4" data-path="computational-creativity.html"><a href="computational-creativity.html#worldbuilding"><i class="fa fa-check"></i><b>3.8.4</b> Worldbuilding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="eliding-the-digital-and-the-physical.html"><a href="eliding-the-digital-and-the-physical.html"><i class="fa fa-check"></i><b>4</b> Eliding the Digital and the Physical</a><ul>
+<li class="chapter" data-level="4.1" data-path="d-photogrammetry.html"><a href="d-photogrammetry.html"><i class="fa fa-check"></i><b>4.1</b> 3D Photogrammetry</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="d-photogrammetry.html"><a href="d-photogrammetry.html#basic-principles-1"><i class="fa fa-check"></i><b>4.1.1</b> Basic principles</a></li>
+<li class="chapter" data-level="4.1.2" data-path="d-photogrammetry.html"><a href="d-photogrammetry.html#further-readings"><i class="fa fa-check"></i><b>4.1.2</b> Further Readings</a></li>
+<li class="chapter" data-level="4.1.3" data-path="d-photogrammetry.html"><a href="d-photogrammetry.html#exercises-21"><i class="fa fa-check"></i><b>4.1.3</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html"><i class="fa fa-check"></i><b>4.2</b> 3D Printing, Raspberry Pi and “Maker” Archaeology</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#overview"><i class="fa fa-check"></i><b>4.2.1</b> Overview</a></li>
+<li class="chapter" data-level="4.2.2" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#d-printing---a-workflow"><i class="fa fa-check"></i><b>4.2.2</b> 3d Printing - a Workflow</a></li>
+<li class="chapter" data-level="4.2.3" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#using-raspberry-pi-in-the-field"><i class="fa fa-check"></i><b>4.2.3</b> Using Raspberry Pi in the Field</a></li>
+<li class="chapter" data-level="4.2.4" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#discussion-6"><i class="fa fa-check"></i><b>4.2.4</b> Discussion</a></li>
+<li class="chapter" data-level="4.2.5" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#further-reading-3"><i class="fa fa-check"></i><b>4.2.5</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>4.3</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#projection-mapping"><i class="fa fa-check"></i><b>4.3.1</b> Projection Mapping</a></li>
+<li class="chapter" data-level="4.3.2" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#exercises-22"><i class="fa fa-check"></i><b>4.3.2</b> exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html"><i class="fa fa-check"></i><b>4.4</b> Artificial Intelligence in Digital Archaeology</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="artificial-intelligence-in-digital-archaeology.html"><a href="artificial-intelligence-in-digital-archaeology.html#agent-based-modeling-abm"><i class="fa fa-check"></i><b>4.4.1</b> Agent-based modeling (ABM)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="computer-vision-and-archaeology.html"><a href="computer-vision-and-archaeology.html"><i class="fa fa-check"></i><b>4.5</b> Computer Vision and Archaeology</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="computer-vision-and-archaeology.html"><a href="computer-vision-and-archaeology.html#convolutional-neural-networks"><i class="fa fa-check"></i><b>4.5.1</b> Convolutional Neural Networks</a></li>
+<li class="chapter" data-level="4.5.2" data-path="computer-vision-and-archaeology.html"><a href="computer-vision-and-archaeology.html#applications"><i class="fa fa-check"></i><b>4.5.2</b> Applications</a></li>
+<li class="chapter" data-level="4.5.3" data-path="computer-vision-and-archaeology.html"><a href="computer-vision-and-archaeology.html#exercises-23"><i class="fa fa-check"></i><b>4.5.3</b> Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="digital-archaeologys-place-in-the-world.html"><a href="digital-archaeologys-place-in-the-world.html"><i class="fa fa-check"></i><b>5</b> Digital Archaeology’s Place in the World</a><ul>
+<li class="chapter" data-level="5.1" data-path="marketing-digital-archaeology.html"><a href="marketing-digital-archaeology.html"><i class="fa fa-check"></i><b>5.1</b> Marketing Digital Archaeology</a></li>
+<li class="chapter" data-level="5.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html"><i class="fa fa-check"></i><b>5.2</b> Sustainability &amp; Power in Digital Archaeology</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#discussion-7"><i class="fa fa-check"></i><b>5.2.1</b> discussion</a></li>
+<li class="chapter" data-level="5.2.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#exercises-24"><i class="fa fa-check"></i><b>5.2.2</b> exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="on-the-horizons-where-digital-archaeology-might-go-next.html"><a href="on-the-horizons-where-digital-archaeology-might-go-next.html"><i class="fa fa-check"></i><b>6</b> On the Horizons: Where Digital Archaeology Might Go Next</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://creativecommons.org/licenses/by/4.0/" target="blank">CC-BY 4.0</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Made with bookdown</a></li>
+<li><a href="https://www.ecampusontario.ca/" target="blank">Funded by EcampusOntario</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Open Digital Archaeology Textbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="computational-creativity" class="section level2">
+<h2><span class="header-section-number">3.8</span> Computational Creativity</h2>
+<p>Once archaeological data becomes digital, it can escape the narrow purview of scholarly, academic engagement. Should it? Once it’s out in the world, we lose our academic authority over it because it can be remixed, re-assembled, and taken to pieces for various ends - not all of them politically, ethically, or morally valid. But given that so much of archaeology is publicly funded, we have to recognize that these things will happen, and that we <em>should</em> be equipping our readers, our publics, to engage with these materials in ways that do justice to the peoples of the past, and also, the needs of the future. One way that this can be accomplished is to provide data and tools so that this archaeology can become fodder for art or activist inspired work.</p>
+<p>This is part of the rationale for the open access journal <a href="https://epoiesen.library.carleton.ca/about/"><em>Epoiesen: A Journal for Creative Engagement in History and Archaeology</em></a>. From its <em>about</em> page, we learn:</p>
+<blockquote>
+<p>There is a perception that archaeology is for the archaeologists, history for the historians. On our side, there is perhaps a perception that speaking to non-expert audiences is a lesser calling, that people who write/create things that do not look like what we have always done, are not really ‘serious’. In these vacuums of perception, we fail at communicating the complexities of the past, allowing the past to be used, abused, or ignored, especially for populist political ends. The ‘know-nothings‘ are on the march. We must not stand by.</p>
+</blockquote>
+<blockquote>
+<p>In such a vacuum, there is a need for critical creative engagement with the past. In <em>Succinct Research</em>, Bill White reminds us why society allows archaeologists to exist in the first place: ‘it is to amplify the whispers of the past in our own unique way so they can still be heard today’. We have been failing in this by limiting the ways we might accomplish that task.</p>
+</blockquote>
+<p>In this section, we explore ways of using generative computational approaches to remix archaeological data in a variety of ways - from a whimsical archaeological Twitterbot, to sonification, to glitch photograph, to world building.</p>
+<p>To close this introduction to creative engagement, we shall leave the final word to James Ryan. Ryan is a PhD student at the University of California Santa Cruz who is using similar methods to generate a podcast that tells the story of a fictitious town in ‘Sheldon County’. A good discussion of his project can be found on <a href="https://www.eurogamer.net/articles/2018-07-14-the-us-town-ruled-by-an-ai-storyteller">eurogamer.net</a>. Ryan says,</p>
+<blockquote>
+<p>I view coding as a kind of literacy that works a lot like regular literacy: just as writing enables modes of human expression that span from the boring, mundane, functional to the creative, poetic, profound, coding does as well. So, to me, creative coding is to coding as creative writing is to writing. I try to make sure that each day I spend working on a simulation leads to interesting new possibilities being generable by the time I stop working that day. Again, the whole process feels kind of like sculpting to me, as opposed to writing, for instance, where the work is more linear. The artist is simply working in a different material context. Working with oil paints is a lot different than working with clay which is a lot different than working on a typewriter, and all of these are different than working with code. But these are all tools of expression.&quot;</p>
+</blockquote>
+<p>What could creative engagement and expressive use of coding with digital archaeological data, in terms of the ways the public learns about archaeology? Or how to view the world through an archaeological lense?</p>
+<div id="twitterbots-with-tracery" class="section level3">
+<h3><span class="header-section-number">3.8.1</span> Twitterbots with Tracery</h3>
+<p><em>this section reuses, adopts and modifies portions of Graham’s <a href="https://programminghistorian.org/en/lessons/intro-to-twitterbots">Programming Historian lesson on Tracery</a></em></p>
+<p>Strictly speaking, a twitter bot is a piece of software for automated controlling a Twitter account. When thousands of these are created and are tweeting more or less the same message, they have the ability to shape discourse on Twitter which then can influence other media discourses. Bots of this kind <a href="http://www.sciencedirect.com/science/article/pii/S0747563213003129">can even be seen as credible sources of information</a>. Projects such as <a href="http://www.docnow.io/">Documenting the Now</a> are creating tools to allow researchers to create and query archives of social media around current events - and which will naturally contain many bot-generated posts. Here we demonstrate how one can build a simple twitterbot using the <a href="http://tracery.io">tracery.io generative grammar</a> and the <a href="http://cheapbotsdonequick.com/">Cheap Bots Done Quick</a> service. Tracery exists in multiple languages and can be integrated into websites, games, bots. You may fork it <a href="https://github.com/galaxykate/tracery/tree/tracery2">on github here</a>.</p>
+<p>The impetus for building a Twitterbot (or any social media automation) in this way is to use the affordances of digital media to create <em>things</em> that could not otherwise exist to move us, to inspire us, to challenge us. Archaeologist Sara Perry for instance is leading the ‘<a href="https://www.emotiveproject.eu/">Emotive: Storytelling for cultural heritage</a>’ project that makes use of bots to such ends. In the uses of such automatons, there is room for satire; there is room for comment. With Mark Sample, we believe that there is a need for ‘<a href="https://medium.com/@samplereality/a-protest-bot-is-a-bot-so-specific-you-cant-mistake-it-for-bullshit-90fe10b7fbaa">bots of conviction</a>’.</p>
+<p>These are protest bots, bots so topical and on-point that they can’t be mistaken for anything else. Per Sample, such bots should be</p>
+<p><strong>topical</strong> – “They are about the morning new - and the daily horrors that fail to make it into the news.”</p>
+<p><strong>data-based</strong> – “They draw from research, statistics, spreadsheets, databases. Bots have no subconscious, so any imagery they use should be taken literally”</p>
+<p><strong>cumulative</strong> – “The repetition builds on itself, the bot relentlessly riffing on its theme, unyielding and overwhelming, a pile-up of wreckage on our screens.”</p>
+<p><strong>oppositional</strong> – “protest bots take a stand. Society being what it is, this stance will likely be unpopular, perhaps even unnerving”</p>
+<p><strong>uncanny</strong> – “The appearance of that which we had sought to keep hidden.”</p>
+<p>What would such protest bots look like, from an archaeological perspective? Historian Caleb McDaniel’s <a href="https://twitter.com/Every3Minutes"><em>every 3 minutes</em></a> bot shames us with its unrelenting reminder that every three minutes, a human being was sold into slavery in the Antebellum South.</p>
+<p>Individuals on Twitter who responded to a query about what the bots of conviction for archaeology might look like suggested some ideas:</p>
+<blockquote>
+<p>@electricarchaeo a bot tweeting full-resolution images of cultural heritage locked behind tile viewers and fraudulent copyright claims by their holding inst? — Ryan Baumann (@ryanfb) April 22, 2017</p>
+</blockquote>
+<blockquote>
+<p>@electricarchaeo A bot tweeting pictures of Native American sacred places that have been desecrated in the name of corporate greed. — Cory Taylor (@CoryTaylor_) April 22, 2017</p>
+</blockquote>
+<blockquote>
+<p>@electricarchaeo A bot tweeting the identities of historical assets given inheritance #tax exemption because they are “available” to public view — Sarah Saunders (@Tick_Tax) April 22, 2017</p>
+</blockquote>
+<blockquote>
+<p>@electricarchaeo Every time someone says “since the beginning of time, humans have” automatically responding BULLSHIT — Colleen Morgan (@clmorgan) April 22, 2017</p>
+</blockquote>
+<p>Given that so much historical or archaeological data is expressed on the web as <a href="http://json.org/">JSON</a>, a bit of digging should find you data that you can actually fold into your <em>own</em> bot. Graham has built several bots powered by different services. He writes,</p>
+<blockquote>
+<p>My most successful bot has been <a href="http://twitter.com/tinyarchae">@tinyarchae</a>, a bot that tweets scenes from a horrible dsyfunctional archaeological excavation project. Every archaeological project deals with problems of sexism, abuse, and bad faith; @tinyarchae pushes the stuff of conference whispers to a ridiculous extreme. It is a caricature that contains a kernel of uncomfortable truth. Other bots I have built glitch <a href="https://twitter.com/archaeoglitch">archaeological photography</a>; one is actually useful, in that it is <a href="https://twitter.com/botarchaeo">tweeting out new journal articles in archaeology</a> and so serves as a research assistant. (For more thoughts on the role bots play in public archaeology, see this <a href="https://electricarchaeology.ca/2017/04/27/bots-of-archaeology-machines-writing-public-archaeology/">keynote</a> from the <a href="https://publicarchaeologyconference.wordpress.com/">Public Archaeology Twitter Conference</a>).</p>
+</blockquote>
+<div id="planning-what-will-your-bot-do" class="section level4">
+<h4><span class="header-section-number">3.8.1.1</span> Planning: What will your bot do?</h4>
+<p>We begin with pad and paper. As a child in elementary school, one activity we often did to learn the basics of English grammar was called ‘mad-libs’ (as in, ‘silly - mad - ad libs’). The teacher performing this activity would ask the class to, say, list a noun, then and adverb, then a verb, and then another adverb. Then on the other side of the sheet there would be a story with blank spaces like this:</p>
+<p>“Susie the _noun_ was _adverb_ _verb_ the _noun_.”</p>
+<p>and students would fill in the blanks appropriately. It was silly; and it was fun. Twitterbots are to madlibs what sports cars are to horse and wagons. The blanks that we might fill in could be values in svg vector graphics. They could be numbers in numeric file names (and thus tweet random links to an open database, say). They could be, yes, even nouns and adverbs. Since Twitterbots live on the web, the building blocks that we put together can be more than text (although, for the time being, text will be easiest to work with).</p>
+<p>We are going to start by sketching out a <em>replacement grammar</em>. The conventions of this grammar were developed by Kate Compton (<a href="https://twitter.com/galaxykate">@galaxykate</a> on Twitter); it’s called <a href="http://tracery.io">Tracery.io</a>. It can be used as a javascript library in webpages, in games, and in bots. A replacement grammar works rather similarly to the madlibs you might remember as a child.</p>
+<p><em>In order to make it clear what the <em>grammar</em> is doing, we are going to <em>not</em> create a working bot for the time being. We are making clear first what the grammar does, and so we will build something surreal to surface how that grammar works.</em></p>
+<p>Let’s imagine that you would like to create a bot that speaks with the voice of a potted plant - call it, <em>plantpotbot</em>. What kinds of things might <em>plantpotbot</em> say? Jot down some ideas-</p>
+<ul>
+<li>I am a plant in a pot. How boring it is!</li>
+<li>Please water me. I’m begging you.</li>
+<li>This pot. It’s so small. My roots, so cramped!</li>
+<li>I turned towards the sun. But it was just a lightbulb</li>
+<li>I’m so lonely. Where are all the bees?</li>
+</ul>
+<p>Now, let’s look at how these sentences have been constructed. We are going to replace words and phrases with <em>symbols</em> so that we can regenerate the original sentences. There are a number of sentences that being with ‘I’. We can begin to think of an ‘being’ <em>symbol</em>:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="st">&quot;being&quot;</span>: <span class="st">&quot;am a plant&quot;</span>,<span class="st">&quot;am begging you&quot;</span>,<span class="st">&quot;am so lonely&quot;</span>,<span class="st">&quot;turned towards the sun&quot;</span></code></pre></div>
+<p>This notation is saying to us that the symbol “being” can be replaced by (or is equivalent to) the phrases “am a plant”, “am begging you” and so on.</p>
+<p>We can mix symbols and text, in our bot. If we tell the bot to start with the word “I”, we can insert the <em>symbol</em> ‘being’ after it and complete the phrase with “am a plant” or “turned towards the sun” and the sentence will make <em>grammatical</em> sense. Let’s build another symbol; perhaps we call it ‘placewhere’:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="st">&quot;placewhere&quot;</span>: <span class="st">&quot;in a pot&quot;</span>,<span class="st">&quot;on the windowsill&quot;</span>,<span class="st">&quot;fallen over&quot;</span></code></pre></div>
+<p>(“placewhere” is the <em>symbol</em> and “in a pot” and so on are the <em>rules</em> that replace it)</p>
+<p>Now, in our sentences from our brainstorm, we never used the phrase, ‘on the windowsill’, but once we identified ‘in a pot’, other potential equivalent ideas jump out. Our bot will eventually use these <em>symbols</em> to make sentences. The symbols - ‘being’, ‘placewhere’ - are like our madlibs when they asked for a list of nouns, adverbs and so on. Imagine then we pass the following to our bot:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="st">&quot;I #being# #placewhere#&quot;</span></code></pre></div>
+<p>Possible outcomes will be:</p>
+<ul>
+<li>I am so lonely on the windowsill</li>
+<li>I am so lonely in a pot</li>
+<li>I turned toward the sun fallen over</li>
+</ul>
+<p>With tweaking, and breaking the units of expression into smaller symbols, we can fix any expressive infelicities (or indeed, decide to leave them in to make the voice more ‘authentic’.)</p>
+</div>
+<div id="prototyping-with-a-tracery-editor" class="section level4">
+<h4><span class="header-section-number">3.8.1.2</span> Prototyping with a Tracery editor</h4>
+<p>There is a Tracery editor at <a href="http://www.brightspiral.com/tracery">www.brightspiral.com/tracery/</a>. We will use that to work out the kinks in <em>plantpotbot</em>. The editor visualizes the way the symbols and rules of the grammar interact (how they are nested, and the kinds of output your grammar will generate). Open the editor in a new window.</p>
+<p>The dropdown menu at the top-left, marked ‘tinygrammar’, has some other example grammars that one can explore; they show just how complicated Tracery can become. For the time being, remain with ‘tinygrammar’. One of the nice things about this editor is that you can press the ‘show colors’ button, which will color code each symbol and its rules, color-coding the generated text so that you can see which element belongs to what symbol.</p>
+<p>If you double-click on a symbol in the default grammar (<code>name</code> or <code>occupation</code>) and hit your delete key, you will remove the symbol from the grammar. Do so for ‘name’ and ‘occupation’, leaving only ‘origin’. Now, add a new symbol by clicking on the ‘new symbol’ button. Click on the name (<code>symbol1</code>) and rename it <code>being</code>. Click the <code>+</code> sign and add some of our rules above. Repeat for a new symbol called <code>placewhere</code>.</p>
+<p>As you do that, the editor will flash an error message at the top right, ‘ERROR: symbol ’name’ not found in tinygrammar’. This is because we deleted <code>name</code>, but the symbol <code>origin</code> has as one of its rules the symbol <code>name</code>! This is interesting: it shows us that we can <em>nest</em> symbols within rules. Right? We could have a symbol called ‘character’, and character could have sub-symbols called ‘first name’, ‘last name’ and ‘occupation’ (and each of these containing an appropriate list of first names and last names and occupations). Each time the grammar was run, you’d get e.g. ‘Shawn Graham Archaeologist’ and stored in the ‘character’ symbol</p>
+<p>The other interesting thing here is that <code>origin</code> is a special symbol. It’s the one from which the text is ultimately generated (the grammar is <em>flattened</em> here). So let’s change the <code>origin</code> symbol’s rule so that <em>plantpotbot</em> may speak. (When you reference another symbol within a rule, you wrap it with <code>#</code> marks, so this should read: <code>#being# #placewhere#</code>).</p>
+<p>It still is missing something - the word ‘I’. You can mix ordinary text into the rules. Go ahead and do that now - press the <code>+</code> beside the rule for the <code>origin</code> symbol, and add the word ‘I’ so that the origin now reads <code>I #being# #placewhere#</code>. Perhaps your plantbot speaks with a poetic diction by reversing <code>#placewhere# #being#</code>.</p>
+<p>If you press ‘save’ in the editor, your grammar will be timestamped and will appear in the dropdown list of grammars. It’s being saved to your browser’s cache; if you clear the cache, you will lose it.</p>
+<p>Before we move on, there is one last thing to examine. Press the JSON button in the editor. You should see something like this:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+    <span class="dt">&quot;origin&quot;</span><span class="fu">:</span> <span class="ot">[</span>
+        <span class="st">&quot;I #being# #placewhere#&quot;</span>
+    <span class="ot">]</span><span class="fu">,</span>
+    <span class="dt">&quot;being&quot;</span><span class="fu">:</span> <span class="ot">[</span>
+        <span class="st">&quot;am so lonely&quot;</span><span class="ot">,</span>
+        <span class="st">&quot;am so lonely&quot;</span><span class="ot">,</span>
+        <span class="st">&quot;am begging you&quot;</span><span class="ot">,</span>
+        <span class="st">&quot;am turned towards the sun&quot;</span>
+    <span class="ot">]</span><span class="fu">,</span>
+    <span class="dt">&quot;placewhere&quot;</span><span class="fu">:</span> <span class="ot">[</span>
+        <span class="st">&quot;in a pot&quot;</span><span class="ot">,</span>
+        <span class="st">&quot;in a windowsill&quot;</span><span class="ot">,</span>
+        <span class="st">&quot;fallen over&quot;</span>
+    <span class="ot">]</span>
+<span class="fu">}</span></code></pre></div>
+<p>Every Tracery grammar is actually a JSON object consisting of key/value pairs, which is what Tracery calls symbols and rules. (For more on manipulation JSON, please see <a href="/lessons/json-and-jq">this tutorial by Matthew Lincoln</a>). This is the format we will be using when we actually set our bot up to start tweeting. JSON is finicky. Note how the symbols are wrapped in <code>&quot;</code> as are the rules, but the rules are also listed with commas inside <code>[</code> and <code>]</code>. Remember:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;symbol&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;rule&quot;</span><span class="ot">,</span><span class="st">&quot;rule&quot;</span><span class="ot">,</span><span class="st">&quot;rule&quot;</span><span class="ot">]</span><span class="fu">,</span>
+  <span class="dt">&quot;anothersymbol&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;rule,&quot;</span><span class="ot">,</span><span class="st">&quot;rule&quot;</span><span class="ot">,</span><span class="st">&quot;rule&quot;</span><span class="ot">]</span>
+<span class="fu">}</span></code></pre></div>
+<p>(of course, the number of symbols and rules is immaterial, but make sure the commas are right!)</p>
+<p>It is good practice to copy that JSON to a text editor and save another copy somewhere safe.</p>
+</div>
+<div id="exercise" class="section level4">
+<h4><span class="header-section-number">3.8.1.3</span> Exercise</h4>
+<ol style="list-style-type: decimal">
+<li><p>Build a grammar for your bot, following the sequence above. Save the .json file that expresses your bot. Remember that some of the power of Twitterbots comes from their serendipitous placement with other tweets in <em>your</em> timeline, <em>and others’</em>. The potential for juxtaposition of your bot’s message(s) against other people’s tweets will also influence the relative success of the bot. How can you plan for these collisions?</p></li>
+<li><p>Get a twitter account for your bot and connect it to Cheap Bots Done Quick</p></li>
+</ol>
+<p>You can plumb a bot into your own, current, account, but you probably don’t want a bot tweeting <em>as</em> you or <em>for</em> you. In which case, you need to set up a new Twitter account. When you set up a new Twitter account, Twitter will want an email address. You can use a brand new email address, or, if you have a Gmail account, you can use the <code>+tag</code> trick, ie instead of ‘johndoe’ at gmail, you use <code>johndoe+twitterbot</code> at gmail. Twitter will accept that as a distinct email from your usual email.</p>
+<p>Normally, when one is building a Twitterbot, one has to create an app on twitter (at <a href="http://apps.twitter.com">apps.twitter.com</a>), obtain the consumer secret and key, and the access token and key. Then you have to program in authentication so that Twitter knows that the program trying to access the platform is permitted.</p>
+<p>Fortunately, we do not have to do that, since George Buckenham created the bot hosting site ‘<a href="http://cheapbotsdonequick.com/">Cheap Bots Done Quick</a>’. (That website also shows the JSON source grammar for a number of different bots, which can serve as inspiration). Once you’ve created your bot’s Twitter account - and you are logged in to Twitter as the bot account- go to Cheap Bots Done Quick and hit the ‘sign in with Twitter’ button. The site will redirect you to Twitter to approve authorization, and then bring you back to Cheap Bots Done Quick.</p>
+<p>The JSON that describes your bot can be written or pasted into the main white box. Take the JSON from the editor and paste it into the main white box. If there are any errors in your JSON, the output box at the bottom will turn red and the site will try to give you an indication of where things have gone wrong. In most cases, this will be because of an errant comma or quotation mark. If you hit the refresh button to the right of the output box (NOT the browser refresh button!), the site will generate new text from your grammar.</p>
+<p>Underneath the JSON box are some settings governing how often your bot will tweet, whether your source grammar will be visible to others, and whether or not your bot will reply to messages or mentions:</p>
+<p>Decide how often you want your bot to tweet, and whether you want the source grammar visible. Then… the moment of truth. Hit the ‘tweet’ button, then go check your bot’s twitter feed. Click ‘save’.</p>
+<p>Congratulations, you have built a Twitterbot!</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Tracery can power more than bots. This site: <a href="https://lovecraftian-archaeology.glitch.me/" class="uri">https://lovecraftian-archaeology.glitch.me/</a> uses Tracery to generate archaeological site reports to lovecraftian effect. The source code is at <a href="https://glitch.com/edit/#!/lovecraftian-archaeology" class="uri">https://glitch.com/edit/#!/lovecraftian-archaeology</a>. Here, the grammar is in the file <code>grammar.js</code>. In this grammar, we are generating site names and other names that we want to reuse across the generated story. Beginning with the <code>origin</code>, diagram out how the elements interrelate to create the site report. Then, once you see how the grammar is working, adapt the code to create your own work of fiction-meets-archaeology.</li>
+</ol>
+</div>
+<div id="good-bot-citizenship" class="section level4">
+<h4><span class="header-section-number">3.8.1.4</span> Good bot citizenship</h4>
+<p>As Cheap Bots Done Quick is a service provided by George Buckenham out of a spirit of goodwill, do not use the service to create bots that are offensive or abusive or that otherwise will spoil the service for everyone else. As he writes,</p>
+<blockquote>
+<p>If you create a bot I deem abusive or otherwise unpleasant (for example, @mentioning people who have not consented, posting insults or using slurs) I will take it down</p>
+</blockquote>
+<p>Other pointers for good bot citizenship are provided by Darius Kazemi, one of the great bot artists, are discussed <a href="http://tinysubversions.com/2013/03/basic-twitter-bot-etiquette/">here</a>.</p>
+</div>
+</div>
+<div id="chatbots" class="section level3">
+<h3><span class="header-section-number">3.8.2</span> Chatbots</h3>
+<p>Chatbots are conversational robots designed to mimic human interaction - with varying degrees of success.The <a href="https://www.emotiveproject.eu/">EMOTIVE</a> project at York University is exploring such chatbots for the purposes of storytelling and cultural heritage. The poet and programmer Allison Parish, of New York University, designs and builds various algorithmic explorations of language including such chatbots. In the <a href="https://github.com/o-date/creativity">creativity binder</a> there is a notebook by Parrish (“semantic_similarity_chatbot”) that walks you through programming such a chatbot by training it on a database of movie dialogue. It works by calculating the ‘semantic similarity’ between what you type and what exists in its database of similar responses.</p>
+<p>The notebook is very well commented out and takes you through the concepts in some detail. At the end of the notebook, Parrish makes some suggestions on where to take it next-</p>
+<blockquote>
+<p>Use the metadata file that comes with the Cornell corpus to make a chatbot that only uses lines from a particular genre of movie. (How is a comedy chatbot different from an action chatbot?) Use a different corpus of conversation altogether. Your own chat logs? Conversational exchanges from a novel? Transcripts of interviews on news programs?</p>
+</blockquote>
+<div id="exercise-1" class="section level4">
+<h4><span class="header-section-number">3.8.2.1</span> Exercise</h4>
+<ol style="list-style-type: decimal">
+<li>Train the chatbot on ‘archaeological’ movies. What does this say about the public consciousness of archaeology?</li>
+<li>Train the chatbot on a corpus of writing by a particular archaeologist. Explore the responses - what does your virtual archaeologist reveal about their practice?</li>
+</ol>
+</div>
+</div>
+<div id="sonification" class="section level3">
+<h3><span class="header-section-number">3.8.3</span> Sonification</h3>
+<p><em>this section resuses, adopts and modifies portions of Graham’s <a href="https://programminghistorian.org/en/lessons/sonification">Programming Historian lesson on the sound of data</a></em></p>
+<p>While there is a lot of research into archaeo-acoustics (much of which involves digital manipulation of the sound files), in this section we want to take the opposite tack - of <em>creating</em> aural representations of our data.</p>
+<p>Pleasing or discordant sound from data can be used to signal many different things - from warning tones that something is wrong, to artistic interventions meant to draw attention to <a href="https://datadrivendj.com/tracks/louisiana/">environmental degradation</a>, to <a href="https://datadrivendj.com/tracks/subway/">economic inequality over space</a>. Sonifying archaeological materials could be an effective strategy in a work of public archaeology or advocacy.</p>
+<p>To begin with, sonification is a useful exploratory technique to make your data unfamiliar again. By translating it, transcoding it, <a href="http://blog.taracopplestone.co.uk/making-things-photobashing-as-archaeological-remediation/">remediating</a> it, we begin to see elements of the data that our familiarity with visual modes of expression have blinded us to. This deformation, this deformance, is in keeping with arguments made by for instance Mark Sample on <a href="http://www.samplereality.com/2012/05/02/notes-towards-a-deformed-humanities/">breaking things</a>, or Bethany Nowviskie on the ‘<a href="http://nowviskie.org/2013/resistance-in-the-materials/">resistance in the materials</a>’. Sonification moves us along the continuum from data to capta, social science to art, <a href="http://nooart.org/post/73353953758/temkin-glitchhumancomputerinteraction">glitch to aesthetic</a>. So let’s see what this all sounds like.</p>
+<p>Sonification is the practice of mapping aspects of the data to produce sound signals. In general, a technique can be called ‘sonification’ if it meets certain conditions. These include reproducibility (the same data can be transformed the same ways by other researchers and produce the same results) and what might be called intelligibility - that the ‘objective’ elements of the original data are reflected systematically in the resulting sound (see <a href="#Hermann">Hermann</a> <a href="http://www.icad.org/Proceedings/2008/Hermann2008.pdf">2008</a> for a taxonomy of sonification). <a href="#Last">Last and Usyskin</a> <a href="https://www.researchgate.net/publication/282504359_Listen_to_the_Sound_of_Data">(2015)</a> designed a series of experiments to determine what kinds of data-analytic tasks could be performed when the data were sonified. Their experimental results (Last and Usyskin 2015) have shown that even untrained listeners (listeners with no formal training in music) can make useful distinctions in the data. They found listeners could discriminate in the sonified data common data exploration tasks such as classification and clustering. (Their sonified outputs mapped the underlying data to the Western musical scale.)</p>
+<p>Last and Usyskin focused on time-series data. They argue that time-series data are particularly well suited to sonification because there are natural parallels with musical sound. Music is sequential, it has duration, and it evolves over time; so too with time-series data <a href="https://www.researchgate.net/publication/282504359_Listen_to_the_Sound_of_Data">(Last and Usyskin 2015: 424)</a>. It becomes a problem of matching the data to the appropriate sonic outputs. In many applications of sonification, a technique called ‘parameter mapping’ is used to marry aspects of the data along various auditory dimensions such as <a href="#pitch">pitch</a>, variation, brilliance, and onset. The problem with this approach is that where there is no temporal relationship (or rather, no non-linear relationship) between the original data points, the resulting sound can be ‘confusing’ (2015: 422).</p>
+<p>In the <a href="https://mybinder.org/v2/gh/o-date/sonification/master">notebook</a> on sonification, we walk through the process of mapping time-series data against the 88 key keyboard. In the code, you will see a number of different methods that can be used.</p>
+<p>The data are represented in json:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="er">my_data</span> <span class="er">=</span> <span class="ot">[</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1792</span><span class="fu">,</span><span class="er">6</span><span class="fu">,</span><span class="er">8)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="fl">3.4</span><span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1800</span><span class="fu">,</span><span class="er">3</span><span class="fu">,</span><span class="er">4)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="fl">3.2</span><span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1810</span><span class="fu">,</span><span class="er">1</span><span class="fu">,</span><span class="er">16)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="fl">3.6</span><span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1812</span><span class="fu">,</span><span class="er">8</span><span class="fu">,</span><span class="er">23)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="fl">3.0</span><span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1813</span><span class="fu">,</span><span class="er">10</span><span class="fu">,</span><span class="er">10)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="fl">5.6</span><span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1824</span><span class="fu">,</span><span class="er">1</span><span class="fu">,</span><span class="er">5)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="fl">4.0</span><span class="fu">}</span>
+<span class="ot">]</span></code></pre></div>
+<p>The name of the second value here is ‘magnitude’, but it could be anything - counts, percentage, averages. The first value, in the sample code, uses python’s <code>datetime</code> format and so has to be written as in the example. Unfortunately, <code>datetime</code> only works for dates from 1 CE onwards. This means that for any dates of interest to many archaeologists, this approach would either seem to be not useful, or require too much bother in order to get the dates correctly expressed.</p>
+<p>This is not as big a problem as it first may appear. The actual calendar date is not important; it’s the internal relationship that matters. That is to say, we’re interested in the evolution over time as represented by the evolution of the sonification as we listen to it. In which case, say we had the following data we wanted to sonify:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="er">Phase</span> <span class="er">1:</span> <span class="er">234</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">A</span>
+<span class="er">Phase</span> <span class="er">2a:</span> <span class="er">120</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">A</span>
+<span class="er">Phase</span> <span class="er">2b:</span> <span class="er">45</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">A</span>
+<span class="er">Phase</span> <span class="er">3:</span> <span class="er">47</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">A</span>
+<span class="er">Phase</span> <span class="er">1:</span> <span class="er">120</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">B</span>
+<span class="er">Phase</span> <span class="er">1:</span> <span class="er">34</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">B</span>
+<span class="er">Phase</span> <span class="er">2a:</span> <span class="er">200</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">B</span>
+<span class="er">Phase</span> <span class="er">2b:</span> <span class="er">180</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">B</span>
+<span class="er">Phase</span> <span class="er">3:</span> <span class="er">87</span> <span class="er">sherds</span> <span class="er">of</span> <span class="er">pottery</span> <span class="er">B</span></code></pre></div>
+<p>and we know that there are approximately 20 years between Phases 1 and 3, for pottery A we could express this like so:</p>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="er">my_data</span> <span class="er">=</span> <span class="ot">[</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1010</span><span class="fu">,</span><span class="er">1</span><span class="fu">,</span><span class="er">1)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="dv">234</span><span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1020</span><span class="fu">,</span><span class="er">1</span><span class="fu">,</span><span class="er">1)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="dv">120</span><span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1025</span><span class="fu">,</span><span class="er">1</span><span class="fu">,</span><span class="er">1)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="dv">45</span><span class="fu">}</span><span class="ot">,</span>
+    <span class="fu">{</span><span class="er">&#39;event_date&#39;</span><span class="fu">:</span> <span class="er">datetime(</span><span class="dv">1030</span><span class="fu">,</span><span class="er">1</span><span class="fu">,</span><span class="er">1)</span><span class="fu">,</span> <span class="er">&#39;magnitude&#39;</span><span class="fu">:</span> <span class="dv">47</span><span class="fu">}</span>
+<span class="ot">]</span></code></pre></div>
+<p>…run the code, save the output, and then do the same thing again for pottery B.</p>
+<div id="exercise-2" class="section level4">
+<h4><span class="header-section-number">3.8.3.1</span> Exercise</h4>
+<ol style="list-style-type: decimal">
+<li>Collect some data that you would like to sonify. Construct an array as above to express each potential ‘voice’ in your final composition. What do you think you might ‘hear’?</li>
+<li>Try the <a href="https://programminghistorian.org/en/lessons/sonification#musicalgorithms">Programming Historian sonification tutorial using Musicalgorithms</a> to represent that data. What is the key difference between that approach, and the approach detailed here using miditime? How does it differ, and what does that <em>sound</em> like? Try sketching out how you could use these differences to explain key concepts in archaeology to a public audience.</li>
+<li>Launch the <a href="https://mybinder.org/v2/gh/o-date/sonification/master">jupyter notebook</a> to explore miditime’s approach to sonifying time-series data. Build mutliple voices, and mix them together using Garageband or <a href="https://www.audacityteam.org/">Audacity</a>. What creative decisions do you have to take in order to make this work? How do they change the data, or what you are able to hear? What <em>do</em> you hear - and <em>what</em> might it mean?</li>
+</ol>
+</div>
+</div>
+<div id="worldbuilding" class="section level3">
+<h3><span class="header-section-number">3.8.4</span> Worldbuilding</h3>
+<p>There is an approach to video games called ‘procedural content generation’ to create the world of the game so that it is always unique when you play it. <em>Minecraft</em> is one game that uses procedural content generation; <em>No Man’s Sky</em> is another. In the <a href="https://github.com/o-date/creativity2">creativity2 binder</a> there is a subfolder called ‘WorldBuilding’ that contains a notebook, ‘model demo’. This notebook builds a world by simulating certain environmental processes, where the terrain is modeled as a series of Voronoi polygons with elevation and simulated water erosion along the edges, after <a href="https://twitter.com/mewo2">Martin O’Leary</a>‘s tutorial on <a href="http://mewo2.com/notes/terrain/">Creating Fantasy Maps</a>. Nomads move into this terrain and travel around it, from which movement trails and cities emerge. These cities then interact following the well known <a href="http://www-personal.umich.edu/~axe/research/Building.pdf">Axelrod Tribute Model</a>. The final elements of this demonstration generate a kind of chronicle that tells the ’history’ of this world.</p>
+<p>Another kind of procedural history generator can be found in the same binder in the ‘history generator’ folder, which also permits the visualization of the ‘history’, like so:</p>
+<div class="figure">
+<img src="images/prochist.png" alt="Output of the script" />
+<p class="caption">Output of the script</p>
+</div>
+<p>This script contains a very simple model of state formation, fusion and fision. It also incorporates a Tracery grammar to ‘liven up’ the resulting chronicle. As a final feature, it uses the graphviz library to visualization the relationships through time.</p>
+<div id="exercises-20" class="section level4">
+<h4><span class="header-section-number">3.8.4.1</span> Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Examine the underlying models for interaction. What are their theoretical underpinnings? What would have to be modified to make these generative worlds/histories more ‘real’?</li>
+<li>How could such generative histories be used for public archaeology?</li>
+</ol>
+
+</div>
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="social-media-as-public-engagement-scholarly-communication-in-archaeology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="eliding-the-digital-and-the-physical.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/o-date/draft/edit/gh-pages/03.8-creative-engagement.Rmd",
+"text": "Edit"
+},
+"download": ["odate.pdf"],
+"toc": {
+"collapse": "section",
+"number_sections": null
+}
+});
+});
+</script>
+
+</body>
+
+</html>
