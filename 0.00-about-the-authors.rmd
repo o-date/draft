@@ -28,10 +28,6 @@ Andreas Angourakis is a PhD student at the Department of History and Archaeology
 
 Andrew Reinhard literally wrote the book on video game archaeology: Archaeogaming: An Introduction to Archaeology in and of Video Games (Berghahn Books 2018). He led the team of archaeologists that excavated the Atari Burial ground in Alamogordo, New Mexico (April 2014) as well as the first in-game archaeological expedition via No Man’s Sky (Hello Games 2016). He is a PhD candidate at the University of York’s (UK) Department of Archaeology where his thesis focuses on evaluating tools and methods for archaeological investigation of digital spaces.
 
-### Lorna Richardson {-}
-
-[Lorna Richardson](https://twitter.com/lornarichardson) is Lecturer in Digital Humanities at the University of East Anglia.
-
 ### Kate Ellenberger {-}
 
 [Kate Ellenberger](http://kateellenberger.com/) is a consulting public and digital archaeologist. She received her PhD in Anthropology from Binghamton University in 2018 for her dissertation examining the community and institutional stakeholders that have influenced public archaeology practice in the United States. Her current work focuses on the theory and practice of self-evaluation in public archaeology.

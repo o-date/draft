@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="how-to-contribute-changes-or-make-your-own-version.html">
-<link rel="next" href="colophon.html">
+<link rel="prev" href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html">
+<link rel="next" href="data-driven-documents.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -305,19 +305,46 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="how-to-access-and-use-the-computational-environment" class="section level2 unnumbered">
-<h2>How to access and use the computational environment</h2>
-<p>There are two options. We created a set of <a href="https://jupyter.org/">Jupyter Notebooks</a> coupled with the <a href="https://mybinder.org/">Binder</a> service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the <a href="https://o-date.github.io/support/notebooks-toc/">our list of notebooks</a> and hit the <code>launch binder</code> button (after reading the information there). Students can use the built in file manager to download or upload notebooks into the environment.</p>
-<p>Alternatively, instructors might want to use the <a href="http://dhbox.org">DHBox</a>, which is a linux based computer accessible through a browser. The DHBox has a bit more flexibility, and includes Jupyter notebooks and RStudio by default. The DHBox perists for as long as a month, and so students don’t have to be as mindful of saving their work to their <em>own</em> machines, as perhaps they do with the Binder service. At the DHBox site, students create a new user account. They should select the maximum amount of time available for the box. Each time a person logins, the box will tell them how much time remains for the account. Students can use the built-in file manager to download their work from the box to their own machine.</p>
-<p>It is worth noting that any jupyter notebook can be read within either environment (and of course, students can install Jupyter onto their own machines if they so desire). Jupyter notebooks can be written in both python or R. Jupyter notebooks are quickly becoming a standard for ‘literate programming’, where the reflective text and the code are interwoven for the purposes of reproducibility and replicability.</p>
+<div id="reproducible-methods" class="section level2">
+<h2><span class="header-section-number">3.2</span> Reproducible Methods</h2>
+<p>To enable reproducible methods, we need to ‘script’ our analyses. That means we write a sequence of commands in a language like R or Python so that other people can examine our code, and can run the code on our data (to reproduce our research) or on their own data (to reproduce our method). We also should include comments in our code explaining what each subsequent chunk is meant to achieve. This is the heart of ‘literate programming’, where the code is also annotated with the results. This is the philosophy behind the <a href="https://o-date.github.io/support/notebooks-toc/">Jupyter Notebooks</a> that we built to support this textbook. A Jupyter notebook is a step up from having your script annotated with comments. Each code section in a Jupyter notebook can be run (if you have Jupyter installed or are running a notebook within a <a href="http://mybinder.org">binder</a> instance) on its own, from top to bottom. Blocks of text that discuss the results or the code can be inserted before or after code-blocks. In this way you can walk your reader through your analyses. Such notebooks can be shared via Github and archived with the <a href="http://zenodo.org">Zenodo</a> service or the <a href="https://osf.io/">Open Science Foundation</a>, both of which provide a ‘digital object identifier’ or DOI. A DOI enables your code and analyses to be cited, separate from your discussion (which you might explore in an article or book chapter). The Open Science Foundation also enables multiple collaborators to work on a project. Jupyter notebooks can be used with a variety of languages. ‘Jupyter’ itself is an amalgam of ‘julia - python - R’, which are the three standard languages, although more language ‘kernels’ can be added (see <a href="https://jupyter.org/">the Jupyter Project</a>).</p>
+<p>Good practice therefore is to set up a ‘research compendium’ for your project, with a sensible arrangement of folders that keep your source data separate from the data you actually analyze, and keeps your scripts in a single place. It might be set up like this:</p>
+<pre><code>|
+|-xrf-analysis-roman-bricks
+  |
+  |-raw-data
+  |  |-original-data.csv
+  |-cleaned-data
+  |  |-copy-original-data.csv
+  |  |-cleaned-data.csv
+  |-results
+  |  |-descriptive-stats.csv
+  |  |-pca-roman-bricks.png
+  |-scripts
+  |  |-cleaning.R
+  |  |-descriptive-statistics.R
+  |  |-exploratory-visualizations.R
+  |-article
+     |-draft-for-jas
+     |-public-discussion-of-research-for-blog.ipynb</code></pre>
+<p>Never, ever, do your analysis on the original data that you have collected. Always keep a copy of that separate from everything else, and do your cleaning and analyses on the copy. When writing analytical scripts, try to have one script doing one job. Document what works, and what fails. Note that last file in the ‘article’ folder above, that ends with .ipynb. That’s a jupyter notebook file; these can be deposited in a Github repository (for instance) and Github will understand how to display it. This is but one way you might keep an open notebook of your research.</p>
+<p>At this point, you or your instructor might wish to explore some of the ways the R language can be used for archaeological research. Rather than re-invent the wheel, we will suggest that you explore t <a href="https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/">How to Do Archaeological Science Using R, Marwick (ed)</a> as you try your hand at building a research compendium.</p>
+<div id="exercises-13" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> exercises</h3>
+<ol style="list-style-type: decimal">
+<li>Use our notebook containing the <a href="https://github.com/o-date/notebooks-archdata">‘archdata’ package for R - a collection of archaeological datasets</a>, set up your own research compendium within that environment. Build it around one of the demo datasets. Try to incorporate some of the techniques from the <a href="https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/"><em>How to Do Archaeological Science</em></a> book. Download your compendium when you are finished.</li>
+<li>Explore <a href="https://github.com/o-date/blank-research-compendium">our version of Marwick’s research compendium package</a>, and note the ways it is different from what you produced. What would be the effect of consistently using Marwick’s package on archaeological research?</li>
+</ol>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="how-to-contribute-changes-or-make-your-own-version.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="colophon.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="statistical-computing-with-r-and-python-notebooks-reproducible-code.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-driven-documents.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +374,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/o-date/draft/edit/gh-pages/0.00-about-the-authors.rmd",
+"link": "https://github.com/o-date/draft/edit/gh-pages/03.1-literate-programming.rmd",
 "text": "Edit"
 },
 "download": ["odate.pdf"],
