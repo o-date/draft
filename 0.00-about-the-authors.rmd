@@ -6,7 +6,7 @@ Shawn Graham trained in Roman archaeology but has become over the years a digita
 
 ### Neha Gupta ### {-}
 
-[Neha Gupta](https://dngupta.github.io/) is a broadly trained archaeologist and recent postdoctoral fellow at Memorial University. Her research programme addresses geospatial and digital methods in post-colonial and Indigenous archaeology. Her specialties include geovisualization and GIS, landscape and settlement archaeology and the archaeology of India and Canada (Ontario). She recently launched [MINA | Map Indian Archaeology](https://mapindianarch.wordpress.com/), a public digital project to promote the archaeology of India and to encourage collaboration in the development of digital tools and technologies appropriate for archaeology. Recent scholarship centers on themes of colonial practices, web maps, Indigenous peoples and archaeology’s relationship with society.
+[Neha Gupta](https://dngupta.github.io/) is a broadly trained archaeologist and a postdoctoral fellow at the University of New Brunswick. Her research programme addresses geospatial and digital methods in post-colonial and Indigenous archaeology. Her specialties include geovisualization and GIS, landscape and settlement archaeology and the archaeology of India and Canada. She recently launched [MINA | Map Indian Archaeology](https://mapindianarch.wordpress.com/), a public digital project to promote the archaeology of India and to encourage collaboration in the development of digital tools and technologies appropriate for archaeology. Recent scholarship centers on themes of colonial practices, web maps, Indigenous peoples and archaeology’s relationship with society.
 
 ### Michael Carter ### {-}
 
@@ -18,7 +18,7 @@ Michael Carter is an Assistant Professor in  the School of Creative Industries a
 
 ### Jolene Smith ### {-}
 
-[Jolene Smith](https://www.jolenesmith.net) is an archaeologist who manages statewide digital archives and archaeological data at the Virginia Department of Historic Resources. She is interested in open data, preservation, and developing easy-to-use tools to help small organizations create, use, and manage archaeological data. 
+[Jolene Smith](https://www.jolenesmith.net) is an archaeologist who manages statewide digital archives and archaeological data at the Virginia Department of Historic Resources. She is interested in open data, preservation, and developing easy-to-use tools to help small organizations create, use, and manage archaeological data.
 
 ### Andreas Angourakis {-}
 
@@ -27,10 +27,6 @@ Andreas Angourakis is a PhD student at the Department of History and Archaeology
 ### Andrew Reinhard {-}
 
 Andrew Reinhard literally wrote the book on video game archaeology: Archaeogaming: An Introduction to Archaeology in and of Video Games (Berghahn Books 2018). He led the team of archaeologists that excavated the Atari Burial ground in Alamogordo, New Mexico (April 2014) as well as the first in-game archaeological expedition via No Man’s Sky (Hello Games 2016). He is a PhD candidate at the University of York’s (UK) Department of Archaeology where his thesis focuses on evaluating tools and methods for archaeological investigation of digital spaces.
-
-### Lorna Richardson {-}
-
-[Lorna Richardson](https://twitter.com/lornarichardson) is Lecturer in Digital Humanities at the University of East Anglia.
 
 ### Kate Ellenberger {-}
 
@@ -46,7 +42,7 @@ Joël Rivard is the replacement GIS and Geography Librarian at the University of
 
 ### Ben Marwick {-}
 
-[Ben Marwick](https://anthropology.washington.edu/people/ben-marwick) is an Associate Professor in the department of Anthropology at the University of Washington. He is a leading figure in computational archaeology and reproducible methods in digital archaeology. His research uses models from evolutionary ecology to analyse past human behaviour in mainland Southeast Asia and Australia. My technical specialisations in stone artefact technology and geoarchaeology provides me with wide scope in time periods and geography. My specific interests include the hominin colonisation of mainland Southeast Asia, forager technologies and ecology in Australia and mainland Southeast Asia, and transitions to agriculture in mainland Southeast Asia.
+[Ben Marwick](https://anthropology.washington.edu/people/ben-marwick) is an Associate Professor in the department of Anthropology at the University of Washington. He is a leading figure in computational archaeology and reproducible methods in digital archaeology. His research uses models from evolutionary ecology to analyse past human behaviour in mainland Southeast Asia and Australia. His technical specialisations in stone artefact technology and geoarchaeology provides him with wide scope in time periods and geography. Ben's specific interests include the hominin colonisation of mainland Southeast Asia, forager technologies and ecology in Australia and mainland Southeast Asia, and transitions to agriculture in mainland Southeast Asia.
 
 ### Editorial Board {-}
 
@@ -69,19 +65,19 @@ It'll be ok.
 
 We take a pedagogical perspective that focuses on the learning that happens when we make things, when we experiment or otherwise play around with materials and computing, and especially, when/if things break. It's a perspective that finds value in 'failing gloriously', in trying to push ourselves beyond our comfort level. The only thing that you will need therefore to be successful in learning some of the basic issues around digital archaeology is a willingness to consider why things didn't work the way they ought to have, and a web browser. We built this textbook with its very own digital archaeology computer built right in! There's nothing you can break on your own machine, nor does your machine have to be very powerful.
 
-Our hope for this volume is that it will provide you with the ability to work out what you need to know, what you don't know, and how to creatively use the computational power of the devices available to you, to do better archaeology. Once you've outgrown this text, we strongly recommend that you visit the peer-reviewed collection of tutorials at [The Programming Historian](https://programminghistorian.org/) (which are available in English and Spanish and soon other languages). If you are more interested in the statistical side of digital archaeology, then you should consult Ben Marwick et al [How to Do Archaeological Science Using R](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/). 
+Our hope for this volume is that it will provide you with the ability to work out what you need to know, what you don't know, and how to creatively use the computational power of the devices available to you, to do better archaeology. Once you've outgrown this text, we strongly recommend that you visit the peer-reviewed collection of tutorials at [The Programming Historian](https://programminghistorian.org/) (which are available in English and Spanish and soon other languages). If you are more interested in the statistical side of digital archaeology, then you should consult Ben Marwick et al [How to Do Archaeological Science Using R](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/).
 
 ## Instructors: How to use this text {-}
 
-There is a logic to how this text is organized that means one _could_ use it in its entirety for developing a course around digital archaeology. It does not assume much digital fluency on the part of students, but builds towards progressively more complex topics. Exercises and further readings are suggested in each section. The text can be used in conjunction with the notebooks, or without them. Alternatively, one can pick from the various notebooks (and their integral texts) and build a course around their use. The source text files for this text are available in [this repository](https://github.com/o-date/source-markdown-files) and they may be cut-and-pasted into your own coursepacks as appropriate. 
+There is a logic to how this text is organized that means one _could_ use it in its entirety for developing a course around digital archaeology. It does not assume much digital fluency on the part of students, but builds towards progressively more complex topics. Exercises and further readings are suggested in each section. The text can be used in conjunction with the notebooks, or without them. Alternatively, one can pick from the various notebooks (and their integral texts) and build a course around their use. The source text files for this text are available in [this repository](https://github.com/o-date/source-markdown-files) and they may be cut-and-pasted into your own coursepacks as appropriate.
 
 Because the source text and code are all open, one could assign students the task of improving, adding to, or altering the text to suit local circumstances. Feel free to fork (take a copy) of the entire project for your own pedagogical needs (but note that any resulting work has to be shared under similar terms). Any changes that get folded back into this source material will be reflected with authorship credentials.
 
 ## Students: How to use this text {-}
 
-Each section in this book is broken down into an overview or discussion of the main concepts, and then followed up with skill-building exercises. The computational environment - provided via a Jupyter notebook- is running on someone else's servers. When you close the browser, it shuts down. 
+Each section in this book is broken down into an overview or discussion of the main concepts, and then followed up with skill-building exercises. The computational environment - provided via a Jupyter notebook- is running on someone else's servers. When you close the browser, it shuts down.
 
-**Warning!** The computational notebooks that we provide are running in the [binder](http://mybinder.org) environment and _will time out_ after **ten** minutes' inactivity. 
+**Warning!** The computational notebooks that we provide are running in the [binder](http://mybinder.org) environment and _will time out_ after **ten** minutes' inactivity.
 
 Your work can be saved to your own machine and reloaded into the environment later, or you can 'push' your changes to your own online repository of work (to learn how to push work to a Github repository, see the sections on [Github & Version Control] and [Open Notebook Research & Scholarly Communication] so you'll be able to get your work and data out of the Jupyter Notebooks and onto space that you control). The best way to use this book is to make sure you have at least one hour blocked out to read through a section, and then two hours to go through the section again if you're working on the exercises. We find that the work goes better if those blocks are interspersed with breaks every twenty minutes or so.
 
@@ -93,7 +89,7 @@ Please note that any public annotations can be read by any other reader. These c
 
 Over time, the parts of the text that are heavily annotated will look as if someone has gone over them with a yellow highlighter. You can use this to help guide your reading - perhaps that's a part where many people had problems, or perhaps it's a part that sparked a really interesting discussion! Group annotation like this promotes 'active reading', which means that you're more likely to retain the discussion.
 
-Finally, if you'd rather not read this as a web page, you can grab a pdf copy by pressing the download button above (the downwards-facing arrow icon) and printing out just the bits you want or need (warning; some of the layout might not translate well as pdf). If you'd rather read this text via an e-reader or iBooks or similar, the download link will also give you an ePub version. Individuals who use a screenreader or other assistive device might prefer to work with the pdf or epub versions. Please do let us know if there is any way we can make this text more accessible for users with particular needs. Since this text is fundamentally a series of plain-text files that we then manipulate to create these different outputs, it should be straightforward for us to adapt accordingly!
+Finally, if you'd rather not read this as a web page, you can grab a pdf copy by pressing the download button above (the downwards-facing arrow icon) and printing out just the bits you want or need (warning; some of the layout might not translate well as pdf). If you'd rather read this text via an e-reader or iBooks or similar, the download link will also give you an ePub version. Individuals who use a screenreader or other assisted device might prefer to work with the pdf or epub versions. Please do let us know if there is any way we can make this text more accessible for users with particular needs. Since this text is fundamentally a series of plain-text files that we then manipulate to create these different outputs, it should be straightforward for us to adapt accordingly!
 
 
 ## How to contribute changes, or make your own version {-}
