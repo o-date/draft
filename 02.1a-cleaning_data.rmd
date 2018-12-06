@@ -1,17 +1,15 @@
 ## Cleaning Data
 
-<div class = rmdcaution> _This section is under development_. </div>
+We often talk about data as being "clean", "messy," "raw,"
+"processed," or some combination of all of those adjectives. Clean data is easy to understand, manipulate, and distill. Messy data can take a lot of work to refine into something more useful. "Raw" data is a little more complicated. We make consequential decisions at every step of the way about what kinds of information we're going to collect, what units of measurement we're using, which terms we choose to describe our observations and they each transform the data. With those facts in mind, data can't ever truly be "raw"[@gitelman_raw_2013]. For a field archaeology example, we make a choice to measure and draw all artefacts and inclusions in a soil layer, or only some (leaving out exhaustive detail about categories like "rubble"). We make a choice to record dimensions of artefacts and stratigraphy visually with a ruler to the centimeter, or to the half centimeter, or with precision instrumentation to fragments of millimeters. We might excavate natural soil layers or by arbitrary levels. Each of these decisions influences the resulting data.
 
-Defining "clean" and "mesy
+When we're working with someone else's pre-existing, or "legacy" data, it's important to think about what kinds of choices and assumptions may have been made by the original investigator. What were the original project's goals? What *didn't* the original creator attempt to capture?
 
--- this is straight from dhainp --
-We may characterize data as being "raw" or completely unprocessed, but that is hardly the case. Decisions at every step of the way about what kinds of information we're going to collect, what units of measurement we're using, which terms we choose to describe our observations all embed assumptions and additional information. Data are never truly "raw" if we've collected them (Gitelman 2013). For an example familiar to field archaeologists, consider field the act of recording information about an archaeological feature on paper. The archaeologist may choose to measure and draw all artifacts and inclusions in a soil layer, or only some (leaving out exhaustive detail about "rubble" or similar). The archaeologist may record dimensions of objects visually with a ruler to the centimeter, or to the half centimeter, or with precision instrumentation to fragments of millimeters. So, even at this early state of capture, the measurements are representations of reality, derived from observation combined with our own assumptions, viewed through frameworks. It's critical to consider the existence of these assumptions when working with legacy data. What were the analytical goals of the original data creator? What *didn't* the original creator attempt to capture?
-
-The way you choose to clean your data will be informed by the structure you want to take. Have a look at the following section on [arranging and storing data](LINK) before you settle on a methodology for data cleaning. And note that a key element here, as in the prior sections on useful data, preservation, and data collection, is *planning*.
+The way you choose to clean your data will be informed by the structure you want the dataset to take. Have a look at the following section on [arranging and storing data](/book/arranging-and-storing-data-for-the-long-haul-databases.html) before you settle on a methodology for data cleaning. And note that a key element here, as in the prior sections on useful data, preservation, and data collection, is *planning*.
 
 ### Tools
 
-You can clean data using [regular expressions](LINK TO PROGHIST TUTORIAL), or in Microsoft Excel using built in functionality. Or you could use a programming language like Python or R to text operations. But one of the most accessible and powerful, free tools for cleaning up messy data is [OpenRefine](http://openrefine.org/).
+You can clean data using [regular expressions](https://programminghistorian.org/en/lessons/understanding-regular-expressions), or in Microsoft Excel using built in functionality. Or you could use a programming language like Python or R to text operations. But one of the most accessible and powerful, free tools for cleaning up messy data is [OpenRefine](http://openrefine.org/).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B70J_H_zAWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -19,34 +17,37 @@ Before you go any further, take a few moments to watch the OpenRefine videos, do
 
 ### Cleaning Tasks
 
-Gathering from many datasets
+**Gathering from many datasets**  
+When working with legacy data, or even on your own large projects, you'll need to begin by gathering many datasets into a harmonious collection. Don't transform "original" data. Any cleanup should happen on derivative copies. Make copies of everything at the very beginning and store them somewhere safe.
 
-Don't transform "original" data. Any cleanup should happen on derivative copies.
-
-Building on ideas discussed in the previous section on [Designing Data Collection](LINK), documentation and transparency are key concepts. Where did you get your datasets? Write that down. Did you do anything (like transcription) to make them computer-readable? Write that down too, describing your methods.
+Building on ideas discussed in the previous section on [Designing Data Collection](/book/designing-data-collection-and-curation.html), documentation and transparency are key concepts. Where did you get your datasets? Write that down. Did you do anything (like transcription) to make them computer-readable? Write that down too, describing your methods.
 
 Are you bringing data from multiple places together? Will they fit nicely, or will they need to be massaged a bit in order to be unified?
 
 Examine your dataset(s) closely. Does each row describe one thing? What is that thing? Sometimes articulating the structure of data is more difficult than it seems. For example, take this dataset describing National Register of Historic Places listings in Virginia.
 
-``5 row example of Register data``
+````
+Name                                                      Listing_Date ID      
+<chr>                                                     <chr>        <chr>   
+1 Fifth Street Historic District                            2/8/2012     118-5318
+2 Armstrong School                                          8/22/2012    118-5320
+3 Pierce Street Historic District                           8/25/2014    118-5238
+4 Doyle Florist Inc./ H. R. Schenkel Inc. Greenhouse Range  11/19/2014   118-5294
+5 Lynchburg Hosiery Mill #1                                 2/21/2017    118-0126
+````
 
-On first glance, each row in the dataset might appear to be describing a building, historic district, or archaeological site. But on closer examination, it becomes clear that each row is describing a *document* which then itself describes a historic property. Whether you created a dataset or you're working with inherited data,  
+On first glance, each row in the dataset might appear to be describing a building, historic district, or archaeological site. But on closer examination, it becomes clear that each row is describing a *document* which then itself describes a historic property. Whether you created a dataset or you're working with inherited data, it is worthwhile to ensure that your data are describing what you think they are.
 
-Define your metadata. Create a document that explains each column heading.
+Define your metadata. Create a document that explains each column heading. Avoid calculated values inside your datasets themselves; leave that bit for the analysis.
 
-Preparing data
-Desired qualities:
+Normalization refers to each fact being expressed in one place. The objective is to divide up your information into as many standard subsets as is practical. However, atomic specificity and perfection are impossible and not going to help anyone. Getting to granular may make a huge, unwieldy dataset. Ultimately, analysis will likely require recombining data together again, but that task will be straightforward if your data is normal. Whether you're working in a relational database or performing analyses on derived tables, appropriate normalization may vary. But considering normalization of data from the start can keep things clean. A spreadsheet that mixes variables between rows and columns may be useful at a glance for visual interpretation, but the same data may not work very easily for analysis. A collection of over-normalized tables might be quite challenging to simply read and interpret (and have a computing performance cost later on if you're working with large amounts of information).
 
-Define well-formed data
--- take from dhiandp
-Each row is an observation and each column is a variable. Watch out for many kinds of information in one column or field. Splitting these data into multiple columns will make things much easier to work with.
+Generally, each row should represent an observation and each column should contain a variable.<sup>[1](foot_2_1a_1)</sup> Watch out for many kinds of information in one column or field. Splitting these data into multiple columns will make things much easier to work with.
 
+Following are several steps to prepare data for analysis and reuse, using examples from several different kinds of messy datasets.
 
-
-1) Identify the messiness
-Before doing any real cleaning or reshaping of your data, take some time to explore. Are there leading or spaces in any of your values? Are there typos or nonstandard formatting? Do dates and numbers look the way they are supposed to? Don't make any changes immediately, but note what you'd like to do. After a bit of exploration, the best order of operations will become more clear. Handling spaces and formatting issues at the outset is usually good advise, however.
-
+1. **Characterize the messiness**  
+Before doing any real cleaning or reshaping of your data, take some time to explore. Are there leading or spaces in any of your values? Are there typos or nonstandard formatting? Do dates and numbers look the way they are supposed to? Don't make any changes immediately, but note what you'd like to do. After a bit of exploration, the best order of operations will become more clear. Handling spaces and formatting issues at the outset is usually good advise, however.  
 ````
 NAME                                `BIRTH (date, location)`     DEATH       `SPOUSE(S)`                                                      
 <chr>                               <chr>                        <chr>       <chr>                                                            
@@ -54,10 +55,8 @@ NAME                                `BIRTH (date, location)`     DEATH       `SP
 2 Ballard (Reese), Bessie E.          Abt 1879 (Richmond)          29 Dec 1928 John L. Ballard Sr. (√) (m. 18 Sep 1898, in Manhattan)           
 3 Ballard, Dora Maude [went by Maude] 16 Mar 1898 (North Carolina) 31 Oct 1973 John L. Ballard Sr. (√)                                          
 4 Ballard, John Lee, Sr.              15 Jun 1877                  9 Sep 1949  Dora M. — (√); Bessie E. Reese (√) (m. 18 Sep 1898, in Manhattan)
-````
-
-In the example above, notice that we've got multiple types of data stored in individual columns. In the BIRTH column we have information about both the date, and birth place within parenthesis, but we've also got "abt" indicating an approximate date. Some dates include the day, month, and year, but others only include a year. The SPOUSE(S) column includes not only one or more names, but a "√" symbol to indicate something, and potentially a marriage date and location. Each of those elements of information deserve their own column or row. Even the name can be separated into First, Middle, Last, Maiden, Other, Honorific, Suffix, etc. The lengths to which you need to go depend on the end goals of your project.
-
+````  
+In the example above, notice that we've got multiple types of data stored in individual columns. In the BIRTH column we have information about both the date, and birth place within parenthesis, but we've also got "abt" indicating an approximate date. Some dates include the day, month, and year, but others only include a year. The SPOUSE(S) column includes not only one or more names, but a "√" symbol to indicate something, and potentially a marriage date and location. Each of those elements of information deserve their own column or row. Even the name can be separated into First, Middle, Last, Maiden, Other, Honorific, Suffix, etc. The lengths to which you need to go depend on the end goals of your project.  
 ````
 cf_ppl_surname cf_ppl_first_name cf_ppl_middle_name cf_ppl_other_name cf_ppl_honorif cf_ppl_birth_month cf_ppl_birth_year cf_ppl_birth_day
   <chr>          <chr>             <chr>              <chr>             <chr>          <chr>                          <int>            <int>
@@ -65,14 +64,10 @@ cf_ppl_surname cf_ppl_first_name cf_ppl_middle_name cf_ppl_other_name cf_ppl_hon
 2 Ballard        Bessie            E.                 Reese             NA             NA                              1879               NA
 3 Bacchus        Ellen             P.                 NA                NA             NA                              1850               NA
 4 Ballard        John              Lee                NA                NA             June                            1877               15
-````
+````  
 
-
-
-2) Consider multiple related tables.
-
-The data below come from a project to create a finding aid for a large collection of archaeological field notes. Notice that the "Associated Site Numbers" column contains a mix of individual site numbers, ranges, and multiple values separated by commas. This was a practical choice when data was collected, since multiple people were entering data via a simple [KoboToolbox](https://www.kobotoolbox.org/) form on a mobile device. But to move these data into a relational database or perform any analysis, we'll need to split up those values into a table about the recordsets and one about the sites.
-
+2. **Consider multiple related tables.**  
+The data below come from a project to create a finding aid for a large collection of archaeological field notes. Notice that the "Associated Site Numbers" column contains a mix of individual site numbers, ranges, and multiple values separated by commas. This was a practical choice when data was collected, since multiple people were entering data via a simple [KoboToolbox](https://www.kobotoolbox.org/) form on a mobile device. But to move these data into a relational database or perform any analysis, we'll need to split up those values into a table about the recordsets and one about the sites.  
 ```
 `Box ID` `Recordset ID` `Recordset Name`                        Year `Associated Site Numbers`
 <chr>    <chr>          <chr>                                  <int> <chr>                                       
@@ -82,13 +77,8 @@ The data below come from a project to create a finding aid for a large collectio
 4 FN097    RS 40525       Bluestone Ph I                          2007 44TZ0157-44TZ0168                           
 5 FN097    RS 25592       Bluestone Ph II                         2008 44TZ0160-44TZ0162, 44TZ0165                 
 6 FN097    RS 1583       Route 5 Improvements                    2007 44HE0057, 44HE1079, 44HE1080, 44HE1081
-```
-
-Again, there are lots of methods to parse those data, but in this case we used OpenRefine.
-
-After processing, we end up with two tables,
-
-field_notes_info:
+```  
+Again, there are lots of methods to parse those data, but in this case we used OpenRefine. After processing, we end up with two tables, field_notes_info and field_notes_sites:
 ````
 `Box ID` `Recordset ID` `Recordset Name`                                        Year
 <chr>    <chr>          <chr>                                                  <int>
@@ -99,7 +89,7 @@ field_notes_info:
 5 FN097    RS 25592       Bluestone Ph II                                         2008
 6 FN097    RS 1583       Route 5 Improvements                                    2007
 ````
-and field_notes_sites
+*Table 2.1.x, field_notes_info*  
 ````
 `Recordset ID` Split_Site_Nums
 <chr>          <chr>          
@@ -126,8 +116,9 @@ and field_notes_sites
 21 RS 1583       44HE1079       
 22 RS 1583       44HE1080       
 23 RS 1583       44HE1081
-````
-
+````  
+*Table 2.1.x, field_notes_sites*  
+3. **Bring them together**  
 We can now join those two tables on the "Recordset ID" column appearing in both tables. You can find more about data structure and joining in the [Databases](LINK) section
 
 
@@ -139,10 +130,16 @@ We can now join those two tables on the "Recordset ID" column appearing in both 
 
 
 ### Further Reading
-[Cleaning Data with OpenRefine, from The Programming Historian](https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine)  
+[Cleaning Data with OpenRefine](https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine), from The Programming Historian  
 
-[Formatting Problems, from Data Carpentry](file:///home/jolene/Zotero/storage/W5XR4PVV/02-common-mistakes.html)
+[Formatting Problems](file:///home/jolene/Zotero/storage/W5XR4PVV/02-common-mistakes.html), from Data Carpentry
 
-@broman_data_2018
+Broman, Karl W., and Kara H. Woo
+2018  
+Data Organization in Spreadsheets. *The American Statistician* 72(1):2–10. DOI:[10.1080/00031305.2017.1375989](https://doi.org/10.1080/00031305.2017.1375989).
 
-@wilson_good_2017
+Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal 2017  
+Good enough practices in scientific computing. *PLOS Computational Biology* 13(6):e1005510. DOI:[10.1371/journal.pcbi.1005510](https://doi.org/10.1371/journal.pcbi.1005510).
+
+
+<a name="foot_2_1a_1">1</a>: These are generally reflective of Hadley Wickham's principles of "tidy data" for use in R. See [@hadley_wickham_tidy_2014]
