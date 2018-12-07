@@ -45,9 +45,11 @@ However, it can be challenging to convey how data fit together if they are conta
 
 
 **JSON and XML**  
+
 While you likely won't (and shouldn't) input your research data directly into these formats from the beginning, many web resources rely on [JSON (JavaScript Object Notation)](https://en.wikipedia.org/wiki/JSON) or [XML (Extensible Markup Language)](https://en.wikipedia.org/wiki/XML) documents to store data. JSON and XML are formats for writing plain text documents in ways that allow computers (and people) to understand hierarchy and relationships between data.
 
 JSON looks like this ([source](https://en.wikipedia.org/wiki/JSON)):
+
 ```JSON
 {
   "firstName": "John",
@@ -81,6 +83,7 @@ JSON looks like this ([source](https://en.wikipedia.org/wiki/JSON)):
 
 
 XML looks like this:
+
 ```xml
 <?xml version="1.0" encoding="ISO8859-1" ?>
 <CATALOG>
@@ -103,11 +106,13 @@ XML looks like this:
 Note that you can see some code-like formatting, but you can still read the contents and get a feel for organization.
 
 **Relational databases**  
+
 A relational database consists of many different tables connected together with *relationships* that tell computers how things fit together. Most relational databases rely on SQL, or Structured Query Language, to run the show.
 
 Desktop SQL office database products like MS Access come with a graphical user interface (GUI) to help set up relationships and form queries. Even so, it's worthwhile to learn the basics of SQL.
 
 Common desktop application options:  
+
 + Microsoft Access
 + FileMaker Pro
 + Open Office Base
@@ -122,18 +127,16 @@ If your application for storing or serving up data runs on the web, your SQL bac
 
 Although SQL databases are made from tables, most of them are stored as binary files. If you try to open them without the correct program to read the data, you get something like this:
 
-```
-   Standard Jet DB    µnb`	ÂUé©gr@? œ~Ÿÿ…š1Åyºí0¼ßÌcÙäÃŸFûŠ¼N×_ì7àœú—ú(æBŠ`0{6¤Öß±&PCž±3eÅy[Ã|*×|™˜ý¨SÖÁ\´„f_•øÐ‰$…gÆ'DÒîÏeíÿÇF¡xíé-bÔT  4.0   
-```
-*Table 2.2.1. Opening a binary database file as text. Not good!*
-
+![Opening a binary database file as text. Not good!](images/binarygarbage.png)
 
 ### Takeaways
+
 + Take time to understand the pros and cons of relational databases and flat data structures.
 + Beware of Excel and spreadsheet software. Sometimes it's appropriate, but risks abound.
 + Lean toward plain text formats like CSV when possible.
 
 ### Further Reading
+
 [Data Organization in Spreadsheets for Social Scientists](http://www.datacarpentry.org/spreadsheets-socialsci/), from Data Carpentry
 
 [Data Organization in Spreadsheets for Ecologists](file:///home/jolene/Zotero/storage/TJSS5VHF/spreadsheet-ecology-lesson.html), from Data Carpentry
@@ -144,6 +147,7 @@ Although SQL databases are made from tables, most of them are stored as binary f
 
 
 ### Exercises
+
 [A Gentle Introduction to SQL](https://mybinder.org/v2/gh/o-date/sqlite/master?filepath=intro%20to%20sql.ipynb)
 
 
