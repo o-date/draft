@@ -22,11 +22,12 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   background-image: url("../images/important.png");
 }
 .rmdnote {
-  background-image: url("../images/note.png");
+  background-image: url("../images/tools.png");
 }
 .rmdtip {
   background-image: url("../images/tip.png");
 }
+
 .rmdwarning {
   background-image: url("../images/warning.png");
 }

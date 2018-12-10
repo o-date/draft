@@ -1,5 +1,7 @@
 ## Github & Version Control
 
+<div class = rmdnote> _[Launch a simple notebook](https://github.com/o-date/notebooks/)._  </div>
+
 It's a familiar situation - you've been working on a paper. It's where you want it to be, and you're certain you're done. You save it as 'final.doc'. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as 'final-w-changes.doc'. Later that day it occurs to you that you don't like those changes, and you go back to the original 'final.doc', make some changes, and just overwrite the previous version. Soon, you have a folder like:
 
 ```fortran
@@ -13,8 +15,6 @@ It's a familiar situation - you've been working on a paper. It's where you want 
 Things can get messy quite quickly. Imagine that you also have several spreadsheets in there as well, images, snippets of code... we don't want this. What we want is a way of managing the evolution of your files. We do this with a program called [Git](https://git-scm.com/). Git is not a user-friendly piece of software, and it takes some work to get your head around. Git is also very powerful, but fortunately, the basic uses to which most of us put it to are more or less straightforward. There are many other programs that make use of Git for version control; these programs weld a graphical user interface on top of the main Git program. It is better however to become familiar with the basic uses of git from the command line *first* before learning the idiosyncrasies of these helper programs. The exercises in this section will take you through the basics of using Git from the command line.
 
 ### The core functions of Git
-
-![Alice Bartlett's summary of what Git does](images/what-git-does.png)
 
 At its heart, Git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots or versions in sequence. For an excellent brief presentation on Git, see Alice Bartlett's [presentation here](https://speakerdeck.com/alicebartlett/git-for-humans). In Git's lingo, a folder on your computer is known as a `repository`. This sequence of versions in total lets you see how your project unfolded over time. Each time you wish to take a version, you make a `commit`. A commit is a Git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
 

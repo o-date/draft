@@ -1,7 +1,8 @@
 # Making Data Useful  
 
-Elsewhere in this text we have covered approaches to creating digital archaeology data. Section 1.1 discusses three habits to maintain while working digitally ref back to “The first steps in going digital are quite easy. They are fundamentally a question of maintaining some basic good habits. Everything else flows from these three habits:” section 1.1.6. These principles will help you and future researchers use your data, reproduce your conclusions and “future-proof” your digital work.
+The single hardest part of making data useful involves disciplining yourself to make your data 'future-proof'. By planning for the long-term at the outset, you also achieve the happy accident of making your data amenable to _re-use_ and distributed collaboration. In this section we walk you through the relevant steps and issues.
 
+## Proper Prior Planning
 Prepare yourself for a little journey. In a dreamlike state, you find yourself in a time machine, noticing that you have traveled to a point in the far or not-so-distant future. You arrive in your own lab to find a group of researchers puzzling over the information you created in the time before, trying to reconstruct your conclusions and make some kind of sense of it all.
 
     "What are these strange codes?"
