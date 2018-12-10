@@ -2,6 +2,9 @@
 
 <div class = rmdcaution> _This section is under development_. </div>
 
+<div class = rmdnote> _[Launch the TWARC Binder](https://mybinder.org/v2/gh/o-date/social-media-work/master)_. </div>
+
+
 Social media - that is to say, websites that facilitate quick posts that are pushed into other users' feeds (and so we can continue to include 'blogs') - are nominally thought of in archaeology as a vector for disseminating information _about_ archaeology. However, creative use of social media can make social media a location for _doing_ archaeology. On some platforms, autonomous agents impersonate humans or are in other ways implicated in _shaping_ opinions or fostering/promoting points of view, and so their code and actions are entirely appropriate objects for archaeological study. Indeed, one can make the argument that the affordances of the platform naturally distance us from our humanity, and make us perform more bot-like interactions (which one of us argued in the first [Public Archaeology Twitter Conference](https://shawngraham.github.io/talk/bots-of-archaeology/), an act of meta-archaeology.)
 
 In this section we'll discuss how to make effective use of social media as an outreach strategy; ways of using social media to keep you up to date on research; and how to determine the likely truth content of a post. In the next section on [computational creativity](computational-creativity.html) we will show you a way of creating your own automated social media bots.

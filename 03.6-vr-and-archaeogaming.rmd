@@ -85,6 +85,8 @@ Although this exercise may sound ridiculous, it gives you a quick and easy way t
 
 ## Archaeogaming
 
+<div class = rmdnote> _See also the [Binder on World-Building](https://mybinder.org/v2/gh/o-date/creativity2/master)_. </div>
+
 “Archaeogaming” is the study of archaeology both in and of games, largely focused on digital games (arcade cabinets, computer games, console games, etc.) but also including analog games (tabletop, pen-and-paper, cards, dice, etc.). Two major branches comprise archaeogaming: 1) representations of archaeology and archaeologists in games, and 2) treating games as archaeology themselves. 
 
 ### Archaeological Reception

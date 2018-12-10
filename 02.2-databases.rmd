@@ -1,5 +1,7 @@
 ## Arranging and Storing Data for the Long Haul (Databases!)
 
+<div class = rmdnote> _[Launch the Databases Binder](https://mybinder.org/v2/gh/o-date/sqlite/master?filepath=intro%20to%20sql.ipynb)_. </div>
+
 Once you’ve collected data according to your plan and structure, you’ll need a way to connect it all together in a way that allows you and other researchers to use it, hopefully for some time to come. Since this textbook is about "digital archaeology," the nature of your digital data might be highly variable. You could be working with information from a physical excavation, or you might be a few degrees removed from the dig and working to aggregate existing research data. Consider the different framework possibilities as you continue reading.
 
 **So what *is* a database and which kind should you use?**
