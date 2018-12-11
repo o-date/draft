@@ -1,7 +1,7 @@
 ---
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 ## Artificial Intelligence in Digital Archaeology
 
@@ -28,7 +28,9 @@ Following the definition of ABM, we describe the process of creating a model or 
 
 Throughout this section, several concepts will probably sound *alien* for most history and archaeology students; and some may remain obscure long after completing this lesson. Beyond any practical application, ABM has strong roots in mathematics and logic. _**Don't panic!**_ Most ABM modelers don't go through formal introductions nor are well-versed in algebra and calculus. As in most digital approaches in humanities and social sciences, ABM is mostly done by self-taught experts with hybrid and tortuous academic profiles. Also, because ABM modellers in archaeology are not often computer scientists, the community lacks conventions about how to communicate models and simulation results, though proposals do exist [e.g., the **_ODD_** document, see @Grimm2006; @Grimm2010; @Muller2013]. Disclaimer: the modelling strategy explained here is highly focused in theory-building (general, explorative), not hypothesis-testing and prediction (specific, data-driven). In this sense, the content of this section should NOT be considered the standard among the ABM-archaeology community.
 
-To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or trying to develop their interests, research questions, and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings; certainly, a greater mastery in programming. Despite the rarity of ABM in history and archaeology mainstream curricula, there are many publications that offer introductions to ABM in archaeology, writen by authors with different backgrounds and perspectives (e.g., @Breitenecker2015, @Cegielski2016, @Romanowska2015; also visit [_The ABM in Archaeology Bibliography_](https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography), for an extensive and constantly updated list of references).
+To the date, there is no easy way to begin doing ABM. We encourage students to engage in modelling the sooner, the better, by following our exercises, other tutorials, or trying to develop their interests, research questions, and creative anxieties. The full comprehension of ABM will require years of practice and transdisciplinary readings; certainly, a greater mastery in programming.
+
+Despite the rarity of ABM in history and archaeology mainstream curricula, there are many publications that offer introductions to ABM in archaeology, writen by authors with different backgrounds and perspectives (e.g., @Breitenecker2015, @Cegielski2016, @Romanowska2015; also visit [_The ABM in Archaeology Bibliography_](https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography), for an extensive and constantly updated list of references). As a source of examples and former experiences, the student can find a variety of archaeology/ABM-related articles in academic journals such as [Journal of Archaeological Method and Theory](https://link.springer.com/journal/10816), [Ecological Modelling](https://www.journals.elsevier.com/ecological-modelling), [Journal of Artificial Societies and Social Simulation](http://jasss.soc.surrey.ac.uk/JASSS.html) (OPEN), [Proceedings of the National Academy of Sciences](https://www.pnas.org/) (OPEN), [Journal of Archaeological Science](https://www.journals.elsevier.com/journal-of-archaeological-science), [Journal of Anthropological Archaeology](https://www.journals.elsevier.com/journal-of-anthropological-archaeology), [Structure and Dynamics](https://escholarship.org/uc/imbs_socdyn_sdeas), [Human Biology](https://digitalcommons.wayne.edu/humbiol/).
 
 #### What is ABM?
 
@@ -96,7 +98,7 @@ In simple terms, building a model involves the following steps.
 - Express the chosen elements and processes as computer code (implement the model)
 - Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step.  The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new  modeling effort (and that is actually the main usefulness of models in the long run).
 
-
+<!--
 #### ABM in Archaeology and Social Sciences
 
 - Emergence... Life game, deterministic chaos [@Epstein1996; @Epstein1999]
@@ -105,29 +107,43 @@ In simple terms, building a model involves the following steps.
 - Examples [@Axtell2002]
 - Mention the cycles of enthusiasm and skepticism, and the tendency to develop closed circles
 - Challenges and pitfalls
-
+-->
 #### Exercises
 
-We propose a set of exercises for introducing the practicalities of ABM. One of the objectives of these exercises is to train the student on the flexibility regarding platforms and programming languages, therefore they include references to code files expressed in [Python 3](https://www.python.org/)<!--, R,--> and [NetLogo](https://ccl.northwestern.edu/netlogo/) [@Wilensky1999]. Exercises are neither exhaustive nor exclusive and we encourage the search for other materials that may delve deeper on students' interests. There are many sources of modelling examples available online, such as [OpenABM by CoMSES network](https://www.comses.net/), NetLogo's [Official](http://ccl.northwestern.edu/netlogo/models/) and [Community](http://ccl.northwestern.edu/netlogo/models/community/) Models Libraries, and [Modeling Commons](http://modelingcommons.org). We also recommend visiting a Jupyter Notebook by Shawn Graham that uses an agent based model written in Python as the basis for an exploration of computational creativity (see the 'Worldbuilding' subfolder in [this repository](https://github.com/o-date/creativity2)). Ben Davis' [Agent-based modelling prehistoric landscape use with R and NetLogo](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/agent-based-modelling-prehistoric-landscape-use-with-r-and-netlogo.html) gives a well-documented example of ABM applications for archaeology that goes beyond representing social dynamics.
+We propose a set of exercises for introducing the practicalities of ABM. As to enable the student to understand model implementations in multiple platforms and programming languages, these exercises include references to code in [Python 3](https://www.python.org/)<!--, R,--> and [NetLogo](https://ccl.northwestern.edu/netlogo/) [@Wilensky1999].
+
+Exercises are neither exhaustive nor exclusive and we encourage the search for other materials that may delve deeper on students' interests. There are many sources of modelling examples available online, such as [OpenABM by CoMSES network](https://www.comses.net/), NetLogo's [Official](http://ccl.northwestern.edu/netlogo/models/) and [Community](http://ccl.northwestern.edu/netlogo/models/community/) Models Libraries, and [Modeling Commons](http://modelingcommons.org). We also recommend visiting the Jupyter Notebook by Shawn Graham that uses an agent-based model written in Python as the basis for an exploration of computational creativity (see the 'Worldbuilding' subfolder in [this repository](https://github.com/o-date/creativity2)). Ben Davis' [Agent-based modelling of prehistoric landscape use with R and NetLogo](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/agent-based-modelling-prehistoric-landscape-use-with-r-and-netlogo.html) gives a well-documented example of ABM applications for archaeology that goes beyond representing social dynamics.
 
 Exercises 1-3 present classical examples of ABM (**_Forest Fire_**, **_Schelling's Segregation_**, and **_Epstein's Civil Violence_** models) referring to their implementations using [mesa](https://github.com/projectmesa/mesa), a Python-based framework (mesa-Python, from now on). These implementations can be executed using the online Jupyter Notebook offered in [ODATE main web page](https://o-date.github.io/support/notebooks-toc/). These exercises are not complex, but require a minimal knowledge of Python (or similar [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) languages) to be fully understood.
 
-Exercise 4 presents the **_Pond Trade_** model, designed specifically to showcase many elements common in ABM applications in archaeology. This model is inspired by the theme of emergence and collapse of territorial cultural integration by means of material exchange. The tasks of designing and programming was intentionally broken down into smaller, progressive steps to illustrate an organized pace of code development, from simple to increasingly complex algorithms. The Pond Trade model and all its versions are in [this repository](https://github.com/Andros-Spica/PondTrade) and can be downloaded and executed using a local instalation of _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/). The exercise assumes no previous programming knowledge, though practice with NetLogo's language and interface is required to fully understand the code of the advanced versions of the model.
+Exercise 4 presents the **_Pond Trade_** model, designed specifically to showcase many elements common in ABM applications in archaeology. This model is inspired by the theme of emergence and collapse of territorial cultural integration by means of material exchange. The tasks of designing and programming was intentionally broken down into smaller, progressive steps to illustrate an organized pace of code development, from simple to increasingly complex algorithms. The Pond Trade model and all its versions are in [this repository](https://github.com/Andros-Spica/PondTrade) and can be downloaded and executed using a local installation of _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/). The exercise assumes no previous programming knowledge, but practice with NetLogo's language and interface is required to fully understand the code of the advanced versions of the model.
 
 Notes for all exercises:
 - 'Random' ('randomized', etc.) refers to drawing values within a predefined range, using a uniform probability distribution, when not specified otherwise.
-- 'Neighborhood' refers to cells around a reference cell in the context of a 2D orthogonal grid. It is often refering specifically to the eight cells including diagonals ([Moore neighborhood](https://en.wikipedia.org/wiki/Moore_neighborhood)).
-<!--- If you choose to modify models code directly with Binder in your Internet browser, watch out the active user timeout. A possible work around is to copy the entire code to a local editor (save it in a local file) and then paste it back. NEED TO TEST HOW SAVING WORKS IN BINDER-->
+- 'Neighborhood' refers to cells around a reference cell in the context of a 2D orthogonal grid. It is used often to refer specifically to the eight cells including diagonals ([Moore neighborhood](https://en.wikipedia.org/wiki/Moore_neighborhood)).
+<!--
+SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
+
+AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
+
+TO DO CHALLENGE: get R code for plots/diagrams to compile in the server instead of using image files
+```{r, echo = FALSE}
+library(DiagrammeR)
+grViz("diagrams/4-4-abm-pondTradeConcept-start.dot")
+```
+
+If you choose to modify models code directly with Binder in your Internet browser, watch out the active user timeout. A possible work around is to copy the entire code to a local editor (save it in a local file) and then paste it back. NEED TO TEST HOW SAVING WORKS IN BINDER
+-->
 
 ##### Exercise 1: Forest Fire Model
 
-Forest Fire is a model representing the spread of a fire in a forest, depending particularly on the density of trees. It is one of the models that illustrate the concepts behind the [percolation theory](https://en.wikipedia.org/wiki/Percolation_theory) in physics. This model is one of the curricular models for ABM and it holds the core mechanism of most diffusion models in both natural and social sciences.
+Forest Fire is a model representing the spread of a fire in a forest, depending particularly on the density of trees. It is one of the models that illustrate the concepts behind the [percolation theory](https://en.wikipedia.org/wiki/Percolation_theory) in physics. This model is one of the curricular models for ABM, and it holds the core mechanism of most diffusion models in both natural and social sciences.
 
-The mesa-Python version used in our Jupyter Notebook is available in [ODATE repository](https://github.com/o-date/abm/tree/master/forest_fire) (see also original in [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/forest_fire)). You may also consult the NetLogo version called 'Fire' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1624) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Fire), where there are also more complex version of this model.
+The mesa-Python version used in our Jupyter Notebook is available in [ODATE repository](https://github.com/o-date/abm/tree/master/forest_fire) (see also original in [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/forest_fire)). The student can also consult the NetLogo version called 'Fire' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1624) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Fire), where there is also a more complex version of this model.
 
 ![The visualization of a simulation run of the *Fire* model using NetLogo (tree density: 57%; random seed: 746823835)](images/4-4-abm-Fire-par57-seed746823835.gif)
-<!--TO DO: include new ipynb file that runs the model once and shows state of grid graphically. Instead of showing the NetLogo version-->
-This model represents a set of trees (*agents*) distributed among positions in a 2D grid. Trees have three possible states: `"Fine"`, `"On Fire"`, and `"Burned Out"`. Every time step trees check if they are `On Fire`, in which case they will set on fire all adjacent trees that are `Fine` and update their state as `Burned Out`. This model considers the eight adjacent grid cells surronding the agent ([Moore neighborhood](https://en.wikipedia.org/wiki/Moore_neighborhood)).
+<!--TO DO: include new ipynb file that runs the model once and shows the state of grid graphically. Instead of showing the NetLogo version-->
+This model represents a set of trees (*agents*) distributed among positions in a 2D grid. Trees have three possible states: `"Fine"`, `"On Fire"`, and `"Burned Out"`. Every time step trees check if they are `On Fire`, in which case they will set on fire all adjacent trees that are `Fine` and update their state as `Burned Out`. This model considers the eight adjacent grid cells surrounding the agent ([Moore neighborhood](https://en.wikipedia.org/wiki/Moore_neighborhood)).
 
 In "`forest_fire/agent.py`", lines 27-35:
 
@@ -143,7 +159,7 @@ def step(self):
     self.condition = "Burned Out"
 ```
 
-The cycle of the model involves solely on messaging agents to run their own cycle in a random order (i.e., *schedule*). In "`forest_fire/model.py`", lines 15-61:
+The cycle of the model involves solely on messaging agents to run their cycle in a random order (i.e., *schedule*). In "`forest_fire/model.py`", lines 15-61:
 
 ```{python, eval=FALSE, python.reticulate = FALSE}
 def __init__(self, height=100, width=100, density=0.65):
@@ -158,17 +174,17 @@ def step(self):
 
 ```
 
-Note that this design assumes that burning and spreading take the same amount of time (i.e., a "step" of the model). Possible ways of further developing this model could be by extending the duration of burning relative to spreading. As a challange, try to modify the model so it takes five times more to burn out a tree than for fire to spread. Hints: (1) you should modify at least the class `TreeCell` (agent); (2) declaring a new parameter inside the class `ForestFire` would be the best practice here; (3) this challenge can be done by adding only **_four_** lines of code.
+Note that this design assumes that burning and spreading take the same amount of time (i.e., a "step" of the model). Possible ways of further developing this model could be by extending the duration of burning relative to spreading. As a challenge, try to modify the model, so it takes five times more to burn out a tree than for fire to spread. Hints: (1) you should modify at least the class `TreeCell` (agent); (2) declaring a new parameter inside the class `ForestFire` would be the best practice here; (3) this challenge can be done by adding only **_four_** lines of code.
 
-Although this model is agent-based, it is a derivation of another type of formal model, technically less developed, called [*cellular automaton*](https://en.wikipedia.org/wiki/Cellular_automaton) system. In cellular automata, the 'agents' are cells, entities that are fixed to a certain position on a 2D grid. Typically, such systems are expressable in relatively simple rules that regulate the state of an agent depending on the states of its 'neighborhood' of agents. One relatively famous (and playful) example is [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) (see [mesa-Python version](https://github.com/projectmesa/mesa/tree/master/examples/conways_game_of_life)), which demostrates how few and simple local rules can generate an immense richness of diversity of system behaviour (i.e., *emergence*). As a conceptual challenge, think on how the Forest Fire model could be designed as a cellular automata. HINTS: (1) the ABM version involves less computation than an hypothetical cellular automaton version - Why?.
+Although this model is agent-based, it is a derivation of another type of formal model, technically less developed, called [*cellular automaton*](https://en.wikipedia.org/wiki/Cellular_automaton) system. In cellular automata, the 'agents' are cells, entities that are fixed to a certain position on a 2D grid. Typically, such systems are expressable in relatively simple rules that regulate the state of an agent depending on the states of its 'neighborhood' of agents. One relatively famous (and playful) example is [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) (see [mesa-Python version](https://github.com/projectmesa/mesa/tree/master/examples/conways_game_of_life)), which demonstrates how few and simple local rules can generate an immense richness of diversity of system behavior (i.e., *emergence*). As a conceptual challenge, think on how the Forest Fire model could be designed as a cellular automaton. HINTS: (1) the ABM version involves less computation than a cellular automaton version - Why?.
 
 ##### Exercise 2: Schelling's Segregation Model
 
-The Segregation model represents the dynamics of segregation in a very abstract but compelling manner. It was created by [Thomas C. Schelling](https://en.wikipedia.org/wiki/Thomas_Schelling), Nobel prize economist, in 1969 aiming to unreavel the formation of racially mixed versus segregated neighborhoods in the United States [@schelling1971]. For this exercise, we recommend consulting the mesa-Python version ([ODATE repository](https://github.com/o-date/abm/tree/master/Schelling) or the original [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/Schelling)) and the NetLogo version ('Segregation' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1466) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Segregation); see also other versions included in this library).
+The Segregation model represents the dynamics of segregation in a very abstract but compelling manner. It was created by [Thomas C. Schelling](https://en.wikipedia.org/wiki/Thomas_Schelling), Nobel prize economist, in 1969 aiming to unravel the formation of racially mixed versus segregated neighborhoods in the United States [@schelling1971]. For this exercise, we recommend consulting the mesa-Python version ([ODATE repository](https://github.com/o-date/abm/tree/master/Schelling) or the original [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/Schelling)) and the NetLogo version ('Segregation' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1466) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Segregation); see also other versions included in this library).
 
-The model consist of individuals or households (*agents*) of two types ("races") occupying a position in a finite space and being able to move away if they are not satisfied with their neighborhood. Their satisfaction is given by the ratio of neigbors of the same type, in respect to the level found acceptable (`homophily`), which is defined as a global parameter.
+The model consists of individuals or households (*agents*) of two types ("races") occupying a position in a finite space and being able to move away if they are not satisfied with their neighborhood. Their satisfaction is given by the ratio of neighbors of the same type, concerning the level found acceptable (`homophily`), which is defined as a global parameter.
 
-As in Forest Fire, the model cycle is essentialy to order agents to execute their cycle in a random order. The agent cycle comprises two processes: (1) count how many agents of the same type are present in the neighborhood ([Moore neighborhood](https://en.wikipedia.org/wiki/Moore_neighborhood)); (2) move to an empty cell if there are less similar neighbors than required by homophily.
+As in Forest Fire, the model cycle is to order agents to execute their cycle in a random order. The agent cycle comprises two processes: (1) count how many agents of the same type are present in the neighborhood ([Moore neighborhood](https://en.wikipedia.org/wiki/Moore_neighborhood)); (2) move to an empty cell if there are less similar neighbors than required by homophily.
 
 In "`Sechilling/agent.py`", lines 26-36:
 
@@ -189,26 +205,26 @@ def step(self):
     self.model.happy += 1
 ```
 
-The Segregation model is one of the oldest and most influencial references in the ABM community. However, as the antecedents of the Forest Fire model, the original version of this model is a cellular automaton, where cells are habitat units (e.g., houses, apartments) with three states: empty and two types of inhabitant. Schelling [-@schelling1971] started with a even simpler model, analysing the mechanisms first in one dimension to then run simulations using 2D grids.
+The Segregation model is one of the oldest and most influential references in the ABM community. However, as the antecedents of the Forest Fire model, the original version of this model is a cellular automaton, where cells are habitat units (e.g., houses, apartments) with three states: empty and two types of inhabitants. Schelling [-@schelling1971] started with an even simpler model, analyzing the mechanisms first in one dimension to then run simulations using 2D grids.
 
 ![Comparison of Schelling's original model (1971, p. 157, Fig. 10) and its implementation in NetLogo](images/4-4-abm-schelling.png)
-<!--TO DO: include new ipynb file that runs the model once and shows state of grid graphically. Instead of showing the NetLogo version-->
+<!--TO DO: include new ipynb file that runs the model once and shows the state of grid graphically. Instead of showing the NetLogo version-->
 The ABM implementations, though mostly equivalent, represent inhabitants explicitly as agents, which are conceptually more sound. The fully developed agent-based approach also allows for more flexibility; for instance, inhabitants can be placed in a continuous space instead of a 2D grid (e.g., see another Python implementation in ['Quantitative Economics with Julia'](https://lectures.quantecon.org/jl/schelling.html)).
 
-The model was able to produce insight in accord with other contemporary ideas within the general fields of [system dynamics](https://en.wikipedia.org/wiki/System_dynamics), [chaos theory](https://en.wikipedia.org/wiki/Chaos_theory) and [cybernetics](https://en.wikipedia.org/wiki/Cybernetics): (1) complex behaviour can come from simple rules [*emergence*; see @Schelling1978] and (2) very small differences at the individual level can resonate as great differences at the aggregated or collective level (*tipping point*). Specifically, Schelling found that, within this model, high segregation levels emerge even when individual preferences are quite tolerant to diversity in their neighborhood. The model also demonstrate that levels of segregation do not respond linearly to the level of tolerance of individuals. We recommend Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/) as a playful discussion on the logic and implications of this model.
+The model was able to produce insight in accord with other contemporary ideas within the general fields of [system dynamics](https://en.wikipedia.org/wiki/System_dynamics), [chaos theory](https://en.wikipedia.org/wiki/Chaos_theory) and [cybernetics](https://en.wikipedia.org/wiki/Cybernetics): (1) complex behavior can come from simple rules [*emergence*; see @Schelling1978] and (2) minimal differences at the individual level can resonate as great differences at the aggregated or collective level (*tipping point*). Specifically, Schelling found that, within this model, high segregation levels emerge even when individual preferences are quite tolerant of diversity in their neighborhood. Additionally, the model demonstrates that levels of segregation do not respond linearly to the level of tolerance of individuals. We recommend Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/) as a playful discussion on the logic and implications of this model.
 
-In `Schelling/analysis.ipynb`, modify the parameters values in chunk 3, re-run chunks 3 to 7, and observe the effects in chunk 7 plot. This practice cannot be a systematic exploration of parameters. It is however a useful way of getting familiar with the model behaviour. 
+In `Schelling/analysis.ipynb`, modify the parameters values in chunk 3, re-run chunks 3 to 7, and observe the effects in chunk 7 plot. This practice cannot be a systematic exploration of parameters. However, it is a useful way of getting familiar with the model behavior. 
 
-As a programming exercise, try to expand the model by modyfing "Schelling/model.py" in the Jupyter Notebook (NOTE: check the result by re-runing `Schelling/analysis.ipynb`). Although we encourage the exploration of new ideas, start by conceptually simple additions, such as adding a third type of agent, changing the 'happiness' criterion to considering the number of neighbors of different type, or having different homophily parameters for each type of agent. A further challenge is to replace the 'type' approach and differentiate agents using a continuos variable (e.g., height).
+As a programming exercise, try to expand the model by modifying "Schelling/model.py" in the Jupyter Notebook (NOTE: check the result by re-running `Schelling/analysis.ipynb`). Although we encourage the exploration of new ideas, start by conceptually simple additions, such as adding a third type of agent, changing the 'happiness' criterion to considering the number of neighbors of a different type, or having different homophily parameters for each type of agent. A further challenge is to replace the 'type' approach and differentiate agents using a continuous variable (e.g., height).
 
 ##### Exercise 3: Epstein's Civil Violence Model
 
-The Civil Violence model represents the dynamics of civil rebelion towards a central power acting through agents of policing and repression. It was created by [Joshua M. Epstein](https://en.wikipedia.org/wiki/Joshua_M._Epstein) [-@Epstein2002], one of the most influential authors in the ABM community. This model has also a mesa-Python version ([ODATE repository](https://github.com/o-date/abm/tree/master/epstein_civil_violence) or the original [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/epstein_civil_violence)), to which we refer throughout this exercise. However, you may also consult the equivalent NetLogo version ('Rebellion' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1472) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Rebellion); see also other versions included in this library).
+The Civil Violence model represents the dynamics of civil rebellion towards a central power acting through agents of policing and repression. It was created by [Joshua M. Epstein](https://en.wikipedia.org/wiki/Joshua_M._Epstein) [-@Epstein2002], one of the most influential authors in the ABM community. This model also has a mesa-Python version ([ODATE repository](https://github.com/o-date/abm/tree/master/epstein_civil_violence) or the original [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/epstein_civil_violence)), to which we refer throughout this exercise. However, you may also consult the equivalent NetLogo version ('Rebellion' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1472) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Rebellion); see also other versions included in this library).
 
 Unlike the Segregation model, the Civil Violence model defines two types of agents that have qualitatively different properties and rules of behavior, `Citizen` and `Cop` agents. The `Citizen` agents, members of the general population, can be either rebellious (`"Active"`) or not (`"Quiescent"`). The `Cop` agents pursue and arrest rebel citizens. All agents occupy space and move in a 2D grid.
 
-![Interface of the Rebelion model in NetLogo, aproximation of Epstein's Civil Violence model](images/4-4-abm-Rebellion-interface.png)
-<!--TO DO: include new ipynb file that runs the model once and shows state of grid graphically. Instead of showing the NetLogo version-->
+![Interface of the Rebellion model in NetLogo, an approximation of Epstein's Civil Violence model](images/4-4-abm-Rebellion-interface.png)
+<!--TO DO: include new ipynb file that runs the model once and shows the state of grid graphically. Instead of showing the NetLogo version-->
 The probability of a citizen to become rebellious depend on their current `grievance` ($G$), which increase with the level of `hardship` ($H$) they suffered and decrease with the `legitimacy` ($L$) they attribute to the central power.
 
 $G=H(1-L)$
@@ -237,7 +253,7 @@ self.arrest_probability = 1 - math.exp(
 
 The parameter `arrest_prob_constant` ($k$) expresses the probability of a cop arresting a rebel citizen when there is only one of each ($C=1, A=1$).  
 
-However, the model also considers that citizens may have different *intrinsic* inclination towards rebellion or taking risks (`risk_aversion` or $R$), which is represented as a randomized property fixed at the start of the simulation. This property weights on citizens' perceived risk or 'net' risk ($N$ or `net_risk`) by modulating the arrest probability.
+However, the model also considers that citizens may have different *intrinsic* inclination towards rebellion or taking risks (`risk_aversion` or $R$), which is a randomized property fixed at the start of the simulation. This property weights on citizens' perceived risk or 'net' risk ($N$ or `net_risk`) by modulating the arrest probability.
 
 $N=RP$
 
@@ -247,7 +263,7 @@ in "`civil_violence/agent.py`", lines 72:
 net_risk = self.risk_aversion * self.arrest_probability
 ```
 
-Citizens become rebellious only if their grievance, discounted the risk of being arrested, is greater than an arbitraty general threshold ($T$ or `active_threshold` in "model.py" and `threshold` in "agent.py").
+Citizens become rebellious only if their grievance, discounted the risk of being arrested, is greater than an arbitrary general threshold ($T$ or `active_threshold` in "model.py" and `threshold` in "agent.py").
 
 *if* $G-N>T$ *be active; otherwise be quiet*
 
@@ -297,63 +313,123 @@ class Cop(Agent):
   ### <skiped code>
 ```
 
-Read carefully the code in `model.py`and `agent.py`. As a first exercise for both practicing and critical discussion, find an aspect of the mesa-Python implementation that have no effect, although it was considered by Epstein[-@2002]. This is probably because this version was left incomplete. HINTS: (1) the *find* tool of your Internet browser can be a powerful ally here; (2) do all parameters have an impact on the model dynamics? Use "`Epstein civil violence.ipynb`" to change parameter values and re-run simulations.
+Read the code in `model.py`and `agent.py` carefully. As the first exercise for both practicing and critical discussion, find an aspect of the mesa-Python implementation does not affect simulations, although it was considered by Epstein[-@2002]. This 'phantom code' is probably because this version was left incomplete. HINTS: (1) the *find* tool of your Internet browser can be a powerful ally here; (2) do all parameters have an impact on the model dynamics? Use "`Epstein civil violence.ipynb`" to change parameter values and re-run simulations.
 
-Within ABM, we refer to finding and correcting errors in a model as *verification* or *internal validation*. Unfortunately, its importance is greatly underrated outside Computer Science, where the focus bends towards the *validation* of simulation results in respect to empirical datasets. However, incomplete, deceiving or even buggy code are not rare in ABM. In fact, a modeler will be lucky if the model has a bug in the code, instead of a conceptual error that do not prevent simulations to produce plausible results (and publish them!). Put in perspective with Forest Fire and Schelling's Segregation, you can appretiate how difficult it is to spot errors in agent-based models that are slightly more complex than a cellular automaton system. This is one of the main reason why it is paramount to "hold your horses" when creating your own model. Even though we may be conscious about our modeling decisions, the whole of the model will often overwhelm our human understanding. This is why we need computers to handle simulations! The general advice is: do not overcomplicate your design and test the code at every small, seemingly-trivial step.
+Within ABM, we refer to finding and correcting errors in a model as *verification* or *internal validation*. Unfortunately, its importance is greatly underrated outside Computer Science, where the focus bends towards the *validation* of simulation results in respect to empirical datasets. However, incomplete, deceiving or even 'buggy' code is not rare in ABM. A modeler will be lucky if the model has a bug in the code, instead of a conceptual error that does not prevent simulations to produce plausible results (and publish them!). Put in perspective with Forest Fire and Schelling's Segregation, one can appreciate how difficult it is to spot errors in agent-based models that are slightly more complex than a cellular automaton system. This is one of the main reason why it is paramount to "hold your horses" when creating a model. Even though we may be conscious of our modeling decisions, the whole of the model will often overwhelm our human understanding. This is why we need computers to handle simulations! The general advice is: do not overcomplicate the design and test the code at every small, seemingly-trivial step.
 
-As a second more advanced challenge, try to implement the second model presented by Epstein [-@2002]. The second model, refered by Epstein as **_Inter-group violence_**, is an extension where the central authority seeks to supress communal violence between two civil groups.
+As a second more advanced challenge, try to implement the second model presented by Epstein [-@2002]. The second model, referred by Epstein as **_Inter-group violence_**, is an extension where the central authority seeks to suppress communal violence between two groups of citizens.
 
 ##### Exercise 4: the Pond Trade model
 
-This exercise introduces the student to the process of desiging and implementing an original model. We ilustrate some of the practical aspects of how to generate the behaviors envisaged when defining a conceptual model. Our particular concern is to offer an example of a more systematic, progressive, and test-driven workflow that can help preventing the modeler from losing herself/himself (and the model!) during the implementation process.
+This exercise introduces the student to the process of designing and implementing an original model. We illustrate some of the practical aspects of how to generate the behaviors envisaged when defining a conceptual model. Our particular concern is to offer an example of a systematic, progressive, and test-driven workflow that can help prevent getting lost during the implementation process.
 
-The **_Pond Trade_** model was designed by A. Angourakis in NetLogo to facilitate the learning process regarding ABM for archaeology and history. This model represents a mechanisms that links *cultural integration* and *economic cycles* caused by the *exchange of materials* ("trade") between settlements placed in an hetereogeneos space ("pond"). The model implementation intentionally includes several aspects that are commonly used in ABM in archaeology and social sciences, such as multiple types of agents, vectors as agent properties (i.e., "cultural vector"), parametric maps (i.e., "procedurally generated"), least path cost calculation<!-- and GIS data-->, and networks.
+The **_Pond Trade_** model was designed by A. Angourakis in NetLogo to facilitate the learning process regarding ABM for archaeology and history. This model represents mechanisms that links *cultural integration* and *economic cycles* caused by the *exchange of materials* ("trade") between settlements placed in a heterogeneous space ("pond"). The model implementation intentionally includes several aspects that are commonly used in ABM in archaeology and social sciences, such as multiple types of agents, vectors as agent properties (i.e., "cultural vector"), parametric maps (i.e., "procedurally generated")<!-- and interaction with GIS data-->, networks, and the recycling of submodels and algorithms.
 
-The Pond Trade model and all its versions are in available for download in [this repository](https://github.com/Andros-Spica/PondTrade). The same repository contains a detailed tutorial walkingthrough all steps ("`README.md`", visible at the main page; *STILL UNDER DEVELOPMENT*). The ".nlogo" files can be executed using a local instalation of _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/), which is free and require no registration.
+The Pond Trade model and all its versions are available for download in [this repository](https://github.com/Andros-Spica/PondTrade). The same repository contains a detailed tutorial explaining all steps ("`README.md`", visible at the main page; **UNDER DEVELOPMENT**). The ".nlogo" files can be executed using a local installation of _**NetLogo**_ (https://ccl.northwestern.edu/netlogo/), which is free and require no registration.
 
-**_Conceptual model_**
+**_Steps_**
 
-- *Phenomena* or *what we want to represent*: cycles of growth and collapse (i.e., flutuations in the scale of site occupation) not explained by climate change. Focus on coastal settlements around a water body (e.g., lake, bay, sea) to grasp the constrast between land and maritme costs of transportation.
-- *Belief* or *main assumption*: topography, transport technology, exchange network, settlement size, wealth, and cultural diversity are intertwined.
+- Step 0: drawing a blue circle
+- Step 1: replacing "magic numbers"
+- Step 2: refactoring
+- Step 3: adding noise
+- Step 4: design alternatives and printing to the console
+- Step 5: refactoring and organizing
+- Step 6: agent types
+- Step 7: agent AI
+- Step 8: adding feedback loops I 
+- Step 9: adding feedback loops II
+- Step 10: cultural vectors
+- Step 11: trait selection
+- Step 12: interface statistics
+- Step 13: output statistics
 
-![andros-first-diagram](images/4-4-abm-pondTradeConcept.png)
-<!--TO DO CHALLENGE: get R code for plots/diagrams to compile in the server instead of using image files
-```{r, echo = FALSE}
-library(DiagrammeR)
-grViz("diagrams/4-4-abm-pondTradeConcept.dot")
-```
--->
-- Elements: "pond" or water body, settlements, ships, routes, goods.
-- Rules:
-  - coastal settlements of variable size around a pond.
-  - each settlement has a "cultural vector".
+**_Defining initial ideas (conceptual model v.0.1)_**
+
+- **Phenomena** or *what we want to represent*: cycles of growth and collapse (i.e., fluctuations in the scale of site occupation) not explained by climate change. Focus on coastal settlements around a water body (e.g., lake, bay, sea) to grasp the contrast between land and maritime costs of transportation.
+- **Main assumption**: topography, transport technology, exchange network, settlement size, wealth, and cultural diversity are intertwined.
+- **Elements**: "pond" or water body, settlements, ships, routes, goods.
+- **Rules**:
+  - coastal settlements of variable size around a rounded water body ("pond").
   - trade ships travel between the settlements.
   - once in their base settlement, ships evaluate all possible trips and choose the one with the greater cost-benefit ratio.
   - ships carry economic value and cultural traits between the base and destination settlements.
-  - settlements size depends on the economic value they receive from trade.
+  - settlement size depends on the economic value received from trading.
   - the economic value produced in a settlement depends on its size.
   - the number of ships per settlement depends on its size.
 
 **_Implementation_**
 
-- Implement the model based on general definition (agents, variables, parameters)
-- Walk-through the implementation in NetLogo
+Follow steps in the [tutorial](https://github.com/Andros-Spica/PondTrade/blob/master/README.md).
 
-![The model interface in step 13](images/4-4-abm-interface-andros.png)
+1. Initial **conceptual model** (step 0 to step 7).
 
+![andros-first-diagram](images/4-4-abm-PondTrade-concept-start.png)
+
+- agents: `settlements` and `ships`
+- variables:
+  - `settlement`: `sizeLevel`
+  - `ship`: `base`, `route`, `destination`, `direction`, `lastPosition`
+  - `patch`: `isLand`, `pathCost`
+- parameters:
+  - `numberOfSettlements`
+  - `relativePathCostInLand`, `relativePathCostInPort`
+  - Map parameters: `pondSize`, `noiseType`, `coastalNoiseLevel`, `costLineSmoothThreshold`, `smoothIterations`
+
+![The model interface in step 9](images/4-4-abm-PondTrade-interface-step07-AStar.png)
+
+2. After including **feedback loops** (steps 8 and 9)
+
+![Pond Trade conceptual model in step 9](images/4-4-abm-PondTrade-concept-step09.png)
+
+- variables:
+  - `settlement`: `sizeLevel`, `currentNumberOfShips`, `potentialNumberOfShips`, `stock`, `frequencyOverQuality` (fixed at set up)
+  - `ship`: `base`, `route`, `destination`, `direction`, `lastPosition`, `cargoValue`, `isActivated` (helper)
+  - `patch`: `isLand`, `pathCost`
+- parameters:
+  - `numberOfSettlements`
+  - `relativePathCostInLand`, `relativePathCostInPort`
+  - `settlementSizeDecayRate`, `stockDecayRate`, `productionRate`
+  - Map parameters: `pondSize`, `noiseType`, `coastalNoiseLevel`, `costLineSmoothThreshold`, `smoothIterations`
+
+![The model interface in step 9](images/4-4-abm-PondTrade-interface-step09.png)
+
+3. After including a settlement cultural vector and trait dynamics
+
+![Pond Trade conceptual model in step 13](images/4-4-abm-PondTrade-concept-step13.png)
+
+- variables:
+  - `settlement`: `sizeLevel`, `currentNumberOfShips`, `potentialNumberOfShips`, `stock`, `culturalVector` (including: three neutral traits, `relativePathCostInLand`, `relativePathCostInPort`, `settlementSizeDecayRate`, `stockDecayRate`, `productionRate`, `frequencyOverQuality`, `traitTransmissionRate`, `mutationRate`)
+  - `ship`: `base`, `route`, `destination`, `direction`, `lastPosition`, `cargoValue`, `culturalSample`, `isActivated` (helper)
+  - `patch`: `isLand`, `pathCost`
+- parameters:
+  - `numberOfSettlements`
+  - `relativePathCostInLand`, `relativePathCostInPort`
+  - `maxSettlementSizeDecayRate`, `maxStockDecayRate`, `maxProductionRate`
+  - `maxTraitTransmissionRate`, `maxMutationRate`
+  - Map parameters: `pondSize`, `noiseType`, `coastalNoiseLevel`, `costLineSmoothThreshold`, `smoothIterations`
+
+![The model interface in step 13](images/4-4-abm-PondTrade-interface-step13.png)
+
+<!--
+4. After combining the model with GIS data (DEM, archaeological sites)
+...
+-->
+
+<!--
 **_Simulation experiments and analysis_**
 
 - Simulations and experiment design
 - Analysis and display of results (R example)
 
+TO DO: include examples of preparing experiments (ways of exploring parameter space) and ploting/analyzing results 
 ```r
 plot(1:10, 1:10)
 ```
 ![andros-second-diagram](images/4-4-abm-andros-2.png)
+-->
 
-SG: code chunks didn't render correctly through the bookdown generation process, which is baffling. check the original bookdown book for how to sort this out. removed the executable code chunk, put it into a different script, ran it, copied the output here. this is not optimal.
-
-AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
+After finishing the tutorial, we encourage to modify/extend/simplify the PondTrade model following other directions and interests. Another, more technical, exercise is to implement all steps in mesa-Python or any other ABM platform.
 
 ## Computer Vision and Archaeology
 
