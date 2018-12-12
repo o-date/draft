@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
   <meta name="twitter:image" content="images/brandon-green-321795-unsplash.jpg" />
 
-<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, &amp; Rob Blades">
+<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, Rob Blades, &amp; Cristina Wood">
 
 
-<meta name="date" content="2018-12-10">
+<meta name="date" content="2018-12-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -285,8 +285,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5" data-path="digital-archaeologys-place-in-the-world.html"><a href="digital-archaeologys-place-in-the-world.html"><i class="fa fa-check"></i><b>5</b> Digital Archaeology’s Place in the World</a><ul>
 <li class="chapter" data-level="5.1" data-path="marketing-digital-archaeology.html"><a href="marketing-digital-archaeology.html"><i class="fa fa-check"></i><b>5.1</b> Marketing Digital Archaeology</a></li>
 <li class="chapter" data-level="5.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html"><i class="fa fa-check"></i><b>5.2</b> Sustainability &amp; Power in Digital Archaeology</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#discussion-3"><i class="fa fa-check"></i><b>5.2.1</b> discussion</a></li>
-<li class="chapter" data-level="5.2.2" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#exercises-21"><i class="fa fa-check"></i><b>5.2.2</b> exercises</a></li>
+<li class="chapter" data-level="5.2.1" data-path="sustainability-power-in-digital-archaeology.html"><a href="sustainability-power-in-digital-archaeology.html#exercises-21"><i class="fa fa-check"></i><b>5.2.1</b> exercises</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="on-the-horizons-where-digital-archaeology-might-go-next.html"><a href="on-the-horizons-where-digital-archaeology-might-go-next.html"><i class="fa fa-check"></i><b>6</b> On the Horizons: Where Digital Archaeology Might Go Next</a></li>
@@ -393,23 +392,35 @@ To some degree, you might have less control of formatting when using plain text 
 <span class="kw">&lt;/CATALOG&gt;</span></code></pre></div>
 <p>Note that you can see some code-like formatting, but you can still read the contents and get a feel for organization.</p>
 <p><strong>Relational databases</strong></p>
-<p>A relational database consists of many different tables connected together with <em>relationships</em> that tell computers how things fit together. Most relational databases rely on SQL, or Structured Query Language, to run the show.</p>
-<p>Desktop SQL office database products like MS Access come with a graphical user interface (GUI) to help set up relationships and form queries. Even so, it’s worthwhile to learn the basics of SQL.</p>
+<p>A relational database consists of many different tables connected together with <em>relationships</em> that tell computers how things fit together. Generally, each table represents one ‘entity type’ (i.e. contexts, artefacts, OSL samples, etc) and consists of rows and columns. Rows represent instances of that type of entity (i.e. context 0321, AR009876, S112), and columns represent values attributed to that instance (i.e. soil texture, date closed, raw material, weathering index, etc). Rows are also called records, and columns are sometimes called variables or attributes.</p>
+<p>Most relational databases rely on SQL, or Structured Query Language, to run the show. Each SQL command is essentially a self-contained logical statement that includes all parameters needed to do a particular action. If something doesn’t add up, an error will be reported and nothing will happen.</p>
+<p>For example, the following command would retrieve the contents of the two named columns from the specified table:</p>
+<pre><code>SELECT column1, column2, ...
+FROM table_name;</code></pre>
+<p>Desktop SQL office database products like MS Access come with a graphical user interface (GUI) to help set up relationships and form queries. In fact, every task that can be accomplished using the GUI actually masks the implementation of SQL commands hidden from the users’ view. As such, it’s worthwhile to learn the basics of SQL to better understand how your data is being transformed under the hood. While different database management systems use slight dialects of SQL, they generally apply the same fundamental principles.</p>
 <p>Common desktop application options:</p>
 <ul>
 <li>Microsoft Access</li>
 <li>FileMaker Pro</li>
 <li>Open Office Base</li>
 </ul>
-<p>These consumer grade database applications can be a great entry point into SQL databases, they can be incredibly frustrating, and usually they’re both. Using these types of applications it’s relatively easy to create databases with complex relationships. This type of database is also a great choice because of the ability to set constraints on data entry. You can create “authority tables” to populate drop-down lists and set input masks to control for necessary patterning in special ID numbers, dates, etc.</p>
+<p>These consumer grade database applications can be a great entry point into SQL databases, they can be incredibly frustrating, and usually they’re both. Using these types of applications it’s relatively easy to create databases with complex relationships. This type of database is also a great choice because of the ability to create integrated forms that can be used to set constraints on data entry. You can create “authority tables” to populate drop-down lists and set input masks to control for necessary patterning in special ID numbers, dates, etc.</p>
 <p>MS Access is notoriously fragile. Collaboration by multiple users on a single database can be a challenge. Conversion between old and newer software versions can cause unexpected errors.</p>
 <p><em>Server-based SQL Databases</em></p>
-<p>If your application for storing or serving up data runs on the web, your SQL back end is likely something like MySOL or PosgreSQL.</p>
+<p>If your application for storing or serving up data runs on the web, your SQL back end is likely something like MySQL, MariaDB or PosgreSQL. The database resides on a server that multiple users can access simultaneously. Data is centralized and unified, and is therefore also consistent among users.</p>
 <p>Although SQL databases are made from tables, most of them are stored as binary files. If you try to open them without the correct program to read the data, you get something like this:</p>
 <div class="figure">
 <img src="images/binarygarbage.png" alt="Opening a binary database file as text. Not good!" />
 <p class="caption">Opening a binary database file as text. Not good!</p>
 </div>
+<p>They must therefore be opened using software that can parse that information. Users read a database by connecting with the server where the database is stored using a <em>client</em>. Users typically enter login credentials granted by the server adminstrator, which are used to manage or restrict access to certain sensitive data, or limit the abilities of unauthorized individuals to edit or modify data. Data entry forms or automatically generated visualizations or reports are generally custom-made to reflect the specific aspects of the databases that they serve.</p>
+<p>Some popular open source database clients:</p>
+<ul>
+<li>MySQL Workbench</li>
+<li>Sequel Pro</li>
+<li>Table Plus</li>
+<li>DBeaver</li>
+</ul>
 </div>
 <div id="takeaways-4" class="section level3">
 <h3><span class="header-section-number">2.4.1</span> Takeaways</h3>
