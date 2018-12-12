@@ -109,9 +109,17 @@ Note that you can see some code-like formatting, but you can still read the cont
 
 **Relational databases**  
 
-A relational database consists of many different tables connected together with *relationships* that tell computers how things fit together. Most relational databases rely on SQL, or Structured Query Language, to run the show.
+A relational database consists of many different tables connected together with *relationships* that tell computers how things fit together. Generally, each table represents one 'entity type' (i.e. contexts, artefacts, OSL samples, etc) and consists of rows and columns. Rows represent instances of that type of entity (i.e. context 0321, AR009876, S112), and columns represent values attributed to that instance (i.e. soil texture, date closed, raw material, weathering index, etc). Rows are also called records, and columns are sometimes called variables or attributes.
 
-Desktop SQL office database products like MS Access come with a graphical user interface (GUI) to help set up relationships and form queries. Even so, it's worthwhile to learn the basics of SQL.
+Most relational databases rely on SQL, or Structured Query Language, to run the show. Each SQL command is essentially a self-contained logical statement that includes all parameters needed to do a particular action. If something doesn’t add up, an error will be reported and nothing will happen.
+
+For example, the following command would retrieve the contents of the two named columns from the specified table:
+```
+SELECT column1, column2, ...
+FROM table_name;
+```
+
+Desktop SQL office database products like MS Access come with a graphical user interface (GUI) to help set up relationships and form queries. In fact, every task that can be accomplished using the GUI actually masks the implementation of SQL commands hidden from the users' view. As such, it's worthwhile to learn the basics of SQL to better understand how your data is being transformed under the hood. While different database management systems use slight dialects of SQL, they generally apply the same fundamental principles.
 
 Common desktop application options:  
 
@@ -119,17 +127,26 @@ Common desktop application options:
 + FileMaker Pro
 + Open Office Base
 
-These consumer grade database applications can be a great entry point into SQL databases, they can be incredibly frustrating, and usually they're both. Using these types of applications it's relatively easy to create databases with complex relationships. This type of database is also a great choice because of the ability to set constraints on data entry. You can create "authority tables" to populate drop-down lists and set input masks to control for necessary patterning in special ID numbers, dates, etc.  
+These consumer grade database applications can be a great entry point into SQL databases, they can be incredibly frustrating, and usually they're both. Using these types of applications it's relatively easy to create databases with complex relationships. This type of database is also a great choice because of the ability to create integrated forms that can be used to set constraints on data entry. You can create "authority tables" to populate drop-down lists and set input masks to control for necessary patterning in special ID numbers, dates, etc.  
 
 MS Access is notoriously fragile. Collaboration by multiple users on a single database can be a challenge. Conversion between old and newer software versions can cause unexpected errors.
 
 *Server-based SQL Databases*  
 
-If your application for storing or serving up data runs on the web, your SQL back end is likely something like MySOL or PosgreSQL.
+If your application for storing or serving up data runs on the web, your SQL back end is likely something like MySQL, MariaDB or PosgreSQL. The database resides on a server that multiple users can access simultaneously. Data is centralized and unified, and is therefore also consistent among users.
 
 Although SQL databases are made from tables, most of them are stored as binary files. If you try to open them without the correct program to read the data, you get something like this:
 
 ![Opening a binary database file as text. Not good!](images/binarygarbage.png)
+
+They must therefore be opened using software that can parse that information. Users read a database by connecting with the server where the database is stored using a *client*. Users typically enter login credentials granted by the server adminstrator, which are used to manage or restrict access to certain sensitive data, or limit the abilities of unauthorized individuals to edit or modify data. Data entry forms or automatically generated visualizations or reports are generally custom-made to reflect the specific aspects of the databases that they serve.
+
+Some popular open source database clients:
+
++ MySQL Workbench
++ Sequel Pro
++ Table Plus
++ DBeaver
 
 ### Takeaways
 
