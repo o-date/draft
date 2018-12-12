@@ -16,6 +16,10 @@ That's just the cost of taking a photograph. Imagine then the costs involved wit
 
 To not recognize this work, this _labour_ is an exercise of privilege and power. That is to say, the power to erase the contributions of those whose work underpins our own. Therefore, in this final section of ODATE, we invite you to reflect on what underpins your own digital archaeological work, and to wonder at what should be done in order to ensure its sustainability. Is your code open? Your data? Has it been future-proofed? Have all contributors been acknowledged publically, appropriately?
 
+In a public lecture at Carleton University in November 2018, Katherine Cook of the Université de Montréal discussed these and other issues. Her talk was called ["There is no ‘net neutrality’ in digital archaeology""](https://youtu.be/vDqle5mNiZE) and it is worth considering in full.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vDqle5mNiZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### exercises
 
 1. Consider the different services you have used in ODATE. Can you work out the costs to operate/host/develop those services?
