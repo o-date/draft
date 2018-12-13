@@ -55,4 +55,4 @@ What are the issues with your chosen site? What ought its maintainers do to impr
 
 ### Further Reading
 
-An introduction to Universal Design in the context of the Digital Humanities is provided by @williams_2012_design. For more on inclusive archaeology in general, see the [Enabled Archaeology Foundation](https://enabledarchaeologyfoundation.org/). For a particular case study, see @omahoney-2016.
+An introduction to Universal Design in the context of the Digital Humanities is provided by @williams_2012_design. For more on inclusive archaeology in general, see the [Enabled Archaeology Foundation](https://enabledarchaeologyfoundation.org/). For a particular case study, see @omahoney-2016 (which may be downloaded from [Figshare](https://figshare.com/articles/Empowering_Archaeology_What_model_of_disability_do_people_with_dyslexia_in_university_archaeology_courses_experience_/5394382/1).
