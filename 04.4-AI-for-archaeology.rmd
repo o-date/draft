@@ -374,13 +374,13 @@ The Pond Trade model and all its versions are available for download in [this re
 - **Main assumption**: topography, transport technology, exchange network, settlement size, wealth, and cultural diversity are intertwined.
 - **Elements**: "pond" or water body, settlements, ships, routes, goods.
 - **Rules**:
-  - coastal settlements of variable size around a rounded water body ("pond").
-  - trade ships travel between the settlements.
-  - once in their base settlement, ships evaluate all possible trips and choose the one with the greater cost-benefit ratio.
-  - ships carry economic value and cultural traits between the base and destination settlements.
-  - settlement size depends on the economic value received from trading.
-  - the economic value produced in a settlement depends on its size.
-  - the number of ships per settlement depends on its size.
+  - Coastal settlements of variable size around a rounded water body ("pond").
+  - Trade ships travel between the settlements.
+  - Once in their base settlement, ships evaluate all possible trips and choose the one with the greater cost-benefit ratio.
+  - Ships carry economic value and cultural traits between the base and destination settlements.
+  - Settlement size depends on the economic value received from trading.
+  - The economic value produced in a settlement depends on its size.
+  - The number of ships per settlement depends on its size.
 
 **_Implementation_**
 
@@ -388,24 +388,25 @@ Follow steps in the [tutorial](https://github.com/Andros-Spica/PondTrade/blob/ma
 
 I. Initial **conceptual model** (step 0 to step 7).
 
-At this stage, we are aiming to set up (*what we think will be*) the core mechanism of our model. We recommend to start with the first intuition that comes to mind. Although its logic structure may be oversimplified, incomplete, or falty after later scrutiny, it would most likely be representative of an informal model that we share with other scholars, given previous contact with the subject. Using an informed guess as a starting strategy helps to avoid the 'blank page panic' while also overthinking and overworking a model version which usufulness lies on its preliminary nature.
+At this stage, we are aiming to set up (*what we think will be*) the core mechanism of our model. We recommend starting with the first intuition that comes to mind. Although its logic structure may be oversimplified, incomplete, or faulty after later scrutiny, it would most likely be representative of an informal model that we share with other scholars, given the previous contact with the subject. Using an informed guess as a starting strategy helps to avoid the 'blank page panic' while also overthinking and overworking a model version which usefulness lies on its preliminary nature.
 
-The Pond Trade model main idea was inspired on the premisse that the size of the economy asociated with a settlement (as a gross measure of, *e.g.*, population size, volume of material production, built surface) is dependent on the volume of materials exchanged between settlements for economic reasons (named as 'trade'), specifically concerning maritime and fluvial routes as opportunities for transportation. The guiding suggestion was that, because of the schifting nature of trade routes, economy size displays a chaotic behavior as described by [chaos theory](https://en.wikipedia.org/wiki/Chaos_theory) (aparently 'random' oscilations).
+The Pond Trade model main idea was inspired on the premise that the size of the economy associated with a settlement (as a gross measure of, *e.g.*, population size, volume of material production, built surface) is dependent on the volume of materials exchanged between settlements for economic reasons (named as 'trade'), specifically concerning maritime and fluvial routes as opportunities for transportation. The guiding suggestion was that, because of the shifting nature of trade routes, economy size displays a chaotic behavior as described by [chaos theory](https://en.wikipedia.org/wiki/Chaos_theory) (apparently 'random' oscillations).
 
 ![One of the simplest examples of chaotic behavior: double compound pendulum. SOURCE: Catslash (Public domain), from Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Double-compound-pendulum.gif)
 
-Even though the initial inspiration may be theoretically profound, empirically-based, or well-connected to discussion in the academic literature, the initial core mechanism must narrow down to a very simple and inteligible process. In this case, the focus is to represent a positive feedback between economic size and trade volume coming in and out, which can be described as follows:
-1. ships stakeholders choose their destination trying to maximize the value of their cargo by considering settlement size and distance from their base settlement;
-2. an active trade route will increase the economic size of settlements at both ends;
-3. an increase in size will increase trade by: 
-  3a. making a settlement more attractive to ship stakeholders from other settlements;
-  3b. allowing the settlement to host more ships;
+Even though the initial inspiration may be theoretically profound, empirically-based, or well-connected to discussions in the academic literature, the primary core mechanism must narrow down to a straightforward, intelligible process. In this case, the focus is to represent a positive feedback loop between economic size and trade volume coming in and out, which can be described as follows:
 
-Added to the core mechanisms, we may add a few complementary aspects as we see fit to sufficiently represent the phenomenon. For instance, the first implementation steps in the Pond Trade tutorial addresses the setting of a 'geography' of settlements implicit in the concept of route.
+1. Ships stakeholders choose their destination trying to maximize the value of their cargo by considering settlement size and distance from their base settlement;
+2. An active trade route will increase the economic size of settlements at both ends;
+3. An increase in size will increase trade by: 
+  3a. Making a settlement more attractive to ship stakeholders from other settlements;
+  3b. Allowing the settlement to host more ships;
 
-![andros-first-diagram](images/4-4-abm-PondTrade-concept-start.png)
+In addition to the core mechanism, we may consider other aspects to represent the phenomenon better. For instance, the first implementation steps in the Pond Trade tutorial addresses the setting of a 'geography' of settlements implicit in the concept of *route*, which is not a trivial task from the programming perspective.
 
-Once a minimum conceptual model is defined, we should use caution when attempting our first implementation. As seen in the previous exercise, a relatively simple model may still correspond to code that can be very difficult to control and understand. Simulation models are very sensitive to the presence of feedback loops. Notice in the tutorial that the positive feedback loops present in the conceptual model are avoided in implementation until the most basic and predictable aspects are properly defined and their behavios verified.
+![Pond Trade initial conceptual model. Ellipse nodes: global parameters; grey nodes: external variables in respect to a given settlement.](images/4-4-abm-PondTrade-concept-start.png)
+
+Once a minimum conceptual model is defined, we should use caution when attempting our first implementation. As seen in the previous exercise, a relatively simple model may still correspond to code that can be very difficult to control and understand. Simulation models are very sensitive to the presence of feedback loops. Notice in the tutorial that the positive feedback loops present in the conceptual model are not included until the most basic and predictable aspects are properly defined and their behaviors verified.
 
 Elements included in the model up to step 7:
 
@@ -425,11 +426,11 @@ Elements included in the model up to step 7:
 
 II. After including **feedback loops** (steps 8 and 9)
 
-When trying to express our initial conceptual model in code, we may encounter several unforseen complications that require fuerther modeling decisions. The emergence of new issues and questions is often due to the 'undefined' or 'informal' nature of the initial approach. For example, if settlement size increase with trade movement, should we consider that it also decreases for other reasons? If not, we would end up having a model of growing settlements racing towards infinity.
+When trying to express the initial conceptual model in code, we may encounter several unforeseen complications that require further modeling decisions. The emergence of new issues and questions is often due to the 'undefined' or 'informal' nature of the initial approach. For example, if settlement size increases with trade, should we consider that it also decreases for other reasons? If not, we would end up having a model of growing settlements racing towards infinity.
 
-At this intermediate stage, we should detect the potential indeterminations affecting the core mechanisms and explicitly include them as parameters or subprocesses according to how important we deem them to be. In respect to modeling details, 'sky is the limit'; however, all additional complexity comes with costs: higher mistake risk, more demanding computational requirements, and greater challanges to validate, document, and comunicate the model.
+At this stage, we should detect the factors potentially affecting the core mechanisms and include them as parameters or subprocesses. In respect to modeling details, 'sky is the limit'; however, all additional complexity comes with costs: higher mistake risk, more demanding computational requirements, and greater challenges to validate, document, and communicate the model.
 
-![Pond Trade conceptual model in step 9](images/4-4-abm-PondTrade-concept-step09.png)
+![Pond Trade conceptual model in step 9. Ellipse nodes: global parameters; grey nodes: external variables in respect to a given settlement; yellow nodes: variables representing settlement trait](images/4-4-abm-PondTrade-concept-step09.png)
 
 Elements included in the model up to step 9:
 
@@ -444,21 +445,29 @@ Elements included in the model up to step 9:
   - `settlementSizeDecayRate`, `stockDecayRate`, `productionRate`
   - Map parameters: `pondSize`, `noiseType`, `coastalNoiseLevel`, `costLineSmoothThreshold`, `smoothIterations`
 
-![The model interface in step 9](images/4-4-abm-PondTrade-interface-step09.png)
+The version of the Pond Trade model accomplished by step 9 in the tutorial is a working implementation of the initial conceptual model. In this sense, this version already displays the system behavior we wanted to represent: boom-and-bust unpredictable cycles of settlement size. Furthermore, we can observe the periodic alternation between the centrality of settlements within the trade network and the emergence of 'central regions' without any intrinsic advantage (see in 'Settlement centrality change' plot of the model interface: 'green' and 'violet' settlements alternate as the larger economies while located close to each other).
+
+![The model interface in step 9.](images/4-4-abm-PondTrade-interface-step09.png)
 
 III. After including a settlement cultural vector and trait dynamics
 
-![Pond Trade conceptual model in step 13](images/4-4-abm-PondTrade-concept-step13.png)
+As a humanist or social scientist, you will hardly be satisfied with representing only those aspects accounted by the initial conceptual model. It is very much possible that, while implementing the model, you find the opportunity for exploring other factors/processes/consequences that you believe are also connected to the phenomena of interest. Should you do it? Among ABM practitioners, there are strong arguments both in favor and against expanding the complexity of models to pursue goals beyond their initial intent. Even though limiting the complexity of a model is generally good practice, ultimately, the modeler should follow her/his own judgment.
+
+Steps 10 and 11 illustrate one kind of model expansion, where a global parameter in previous versions (*e.g.*, `productionRate`) is broken down into a new global parameter (*e.g.*, `maxProductionRate`) and an agent variable (*e.g.*, a value between 0 and `maxProductionRate`, at the seventh position in the `culturalVector` of every `settlement`). A similar example would be to have a model of a population with a  parameter called 'averageHeight', and then expand it by defining the 'height' of every individual by drawing a number between two new parameters, 'minHeight' and 'maxHeight'.
+
+In this case, we decided to expand the initial conceptual model to represent how the system behavior caused by trade could influence **cultural diversity**. In the version of step 11, settlements have a cultural vector of length 12 representing cultural traits of two types: 'neutral', those that are of no consequence to the mechanisms defined in the model, and 'functional', which affect the outcome of settlement processes. We assume that settlements are intrinsically different from each other (*traits vary and 'mutate'*), and that the transport of materials between settlements reduce such differences (*traits are transmitted*). Functional traits potentially activate additional feedback loops of various nature. For instance, a settlement with higher production rate (trait) sends more cargo value to active trade partners, reinforcing their size and increasing the probability that the route will remain active, while also transmitting their particular traits. Neutral traits are useful to observe the process of drift or divergence when there are competing trading 'provinces', and convergence when most settlements are connected through one or two 'hubs' (note how the settlement colors change in the interface during a simulation).
+
+![Pond Trade conceptual model in step 13. Ellipse nodes: global parameters; grey nodes: external variables in respect to a given settlement; yellow nodes: variables representing settlement trait.](images/4-4-abm-PondTrade-concept-step13.png)
 
 Elements included in the model up to step 13:
 
 - variables:
-  - `settlement`: `sizeLevel`, `currentNumberOfShips`, `potentialNumberOfShips`, `stock`, `culturalVector` (including: three neutral traits, `relativePathCostInLand`, `relativePathCostInPort`, `settlementSizeDecayRate`, `stockDecayRate`, `productionRate`, `frequencyOverQuality`, `traitTransmissionRate`, `mutationRate`)
+  - `settlement`: `sizeLevel`, `currentNumberOfShips`, `potentialNumberOfShips`, `stock`, `culturalVector`, which includes: three neutral traits (1, 2, 3), the deviations from `relativePathCostInLand` (4) and `relativePathCostInPort` (5), `settlementSizeDecayRate` (6), `stockDecayRate` (7), `productionRate` (8), `frequencyOverQuality` (9), `traitTransmissionRate` (10), `mutationRate` (11)
   - `ship`: `base`, `route`, `destination`, `direction`, `lastPosition`, `cargoValue`, `culturalSample`, `isActivated` (helper)
   - `patch`: `isLand`, `pathCost`
 - parameters:
   - `numberOfSettlements`
-  - `relativePathCostInLand`, `relativePathCostInPort`
+  - `relativePathCostInLand`, `relativePathCostInPort`, `landTechVariation`, `portTechVariation` 
   - `maxSettlementSizeDecayRate`, `maxStockDecayRate`, `maxProductionRate`
   - `maxTraitTransmissionRate`, `maxMutationRate`
   - Map parameters: `pondSize`, `noiseType`, `coastalNoiseLevel`, `costLineSmoothThreshold`, `smoothIterations`
@@ -483,7 +492,7 @@ plot(1:10, 1:10)
 ![andros-second-diagram](images/4-4-abm-andros-2.png)
 -->
 
-After finishing the tutorial, we encourage to modify/extend/simplify the Pond Trade model following other directions and interests. Another, more technical, exercise is to implement all steps in mesa-Python or any other ABM platform.
+After finishing the tutorial, we encourage to modify/extend/simplify the Pond Trade model following other directions and interests. A simple exercise to get started is to modify the map generation procedures to test the same model in other scenarios, such as regions with two or more adjacent lakes or a network of navigable rivers. Another, more exhaustive, exercise is to implement all steps done in mesa-Python or any other ABM platform.
 
 ## Computer Vision and Archaeology
 
