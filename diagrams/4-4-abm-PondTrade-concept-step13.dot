@@ -34,6 +34,7 @@ digraph pondTradeDiagram2 {
   "frequency\nover\nquality";
   "transmission\nrate";
   "mutation\nrate";
+  "neutral\ntraits";
   
   node [shape = box,
   fontname = Helvetica,
@@ -82,4 +83,5 @@ digraph pondTradeDiagram2 {
   "cultural\nsimilarity" -> "size\ndecay\nrate" [ label="?" ];
   "cultural\nsimilarity" -> "path cost\n(land)" [ label="?" ];
   "cultural\nsimilarity" -> "path cost\n(port)" [ label="?" ];
+  "cultural\nsimilarity" -> "neutral\ntraits" [ label="?" ];
 }
