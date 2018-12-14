@@ -32,7 +32,7 @@ To the date, there is no easy way to begin doing ABM. We encourage students to e
 
 Despite the rarity of ABM in history and archaeology mainstream curricula, there are many publications that offer introductions to ABM in archaeology, writen by authors with different backgrounds and perspectives [*e.g.*, @Breitenecker2015; @Cegielski2016; @Romanowska2015]; also visit [_The ABM in Archaeology Bibliography_](https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography), for an extensive and constantly updated list of references. As a source of examples and former experiences, the student can find a variety of archaeology/ABM-related articles in academic journals such as [Journal of Archaeological Method and Theory](https://link.springer.com/journal/10816), [Ecological Modelling](https://www.journals.elsevier.com/ecological-modelling), [Journal of Artificial Societies and Social Simulation](http://jasss.soc.surrey.ac.uk/JASSS.html) (OPEN), [Proceedings of the National Academy of Sciences](https://www.pnas.org/) (OPEN), [Journal of Archaeological Science](https://www.journals.elsevier.com/journal-of-archaeological-science), [Journal of Anthropological Archaeology](https://www.journals.elsevier.com/journal-of-anthropological-archaeology), [Structure and Dynamics](https://escholarship.org/uc/imbs_socdyn_sdeas), [Human Biology](https://digitalcommons.wayne.edu/humbiol/).
 
-#### What is ABM?
+#### ABM as modeling and simulation
 
 >"Essentially, all models are wrong, but some are useful"  
 >George Box, 1987  
@@ -72,16 +72,18 @@ For example, we may write a book on how we believe, given known evidence, that k
 
 Formal models, or rather *formalizing* informal models, reduce ambiguity, setting aside part of the risk of being misunderstood. In a formal model everything must be defined, even when the elements of our model are still abstract and general. Our imaginary book about ancient Armenians could be complemented with one or several formal models that crystalize the main features of our informal model(s). For instance, if our informal model about property inheritance includes the nuclear patriarchal family as the main kinship structure, we must define it in *null* terms, explaining to ourselves and to others what "family", "nuclear", and "patriarchal" means, at least in the context of our model. _Does a model assume that family implies co-habitation? Does our model consider adopted members? What happens if a spouse dies?_ As it is often the case, we may end up changing our informal model through the effort of formalization; by realizing, for example, that we can replace "patriarchal" with "patrilineal" because our model does not assume a particular power structure within families.
 
-Formalization often demands the use of formal logic and to some extent, quantification. Seen from the perspective of the human natural language, mathematics and logic contain lots of repetitions, fixed vocabulary, and no nuances. Nevertheless, computational systems function strictly with this kind of language, and they are both empowered and limited by it.  A formal definition is a disclaimer saying: *"This is what X means in this model, no more, no less. You can now criticize it at will."* Whitout the formal definition, we would probably spend a chapter reviewing everything we read and thought about "nuclear patriarchal family" and still would not be "at the same page" with all our readers.  The terms of this definition are assumptions of the model. At any point, new evidence or insight can suggest us that an assumption is unjustified or unnecessary, and we may change it or remove it from the model. It is in the elaboration and exploration of the unintended consequences of these rigorous definitions that the power of simulation emerges.
+Formalization often demands the use of formal logic and to some extent, quantification. Seen from the perspective of the human natural language, mathematics and logic contain lots of repetitions, fixed vocabulary, and no nuances. Nevertheless, computational systems function strictly with this kind of language, and they are both empowered and limited by it.
 
-@Epstein2008 perhaps put it best:
+A formal definition is a disclaimer saying: *"This is what X means in this model, no more, no less. You can now criticize it at will."* Without the formal definition, we would probably spend a chapter reviewing everything we read and thought about "nuclear patriarchal family" and still would not "be at the same page" as all our readers. The terms on which we define a model are its *assumptions*. At any point, new evidence or insight can suggest us that an assumption is unjustified or unnecessary, and we may change it or remove it altogether.
+
+The power of simulation emerges from the elaboration and exploration of the consequences of these rigorous formal definitions. @Epstein2008 perhaps put it best:
 
 > The first question that arises frequently—sometimes innocently and sometimes not—is simply, "Why model?" Imagining a rhetorical (non-innocent) inquisitor, my favorite retort is, "You are a modeler." Anyone who ventures a projection, or imagines how a social dynamic—an epidemic, war, or migration—would unfold is running some model.
 > But typically, it is an implicit model in which the assumptions are hidden, their internal consistency is untested, their logical consequences are unknown, and their relation to data is unknown. But, when you close your eyes and imagine an epidemic spreading, or any other social dynamic, you are running some model or other. It is just an implicit model that you haven't written down...
 > This being the case, I am always amused when these same people challenge me with the question, "Can you validate your model?" The appropriate retort, of course, is, "Can you validate yours?" At least I can write mine down so that it can, in principle, be calibrated to data, if that is what you mean by "validate," a term I assiduously avoid (good Popperian that I am). 
 >The choice, then, is not whether to build models; it's whether to build explicit ones. In explicit models, assumptions are laid out in detail, so we can study exactly what they entail. On these assumptions, this sort of thing happens. When you alter the assumptions that is what happens. By writing explicit models, you let others replicate your results.
 
-Epstein goes on to note that modeling can sometimes be seen as implying prediction; for archaeology, prediction might very well be the least useful thing that a formalized model might do. Instead, as Epstein lists, there are many reasons to model:
+Modeling, including ABM, can sometimes be seen as implying prediction; for archaeology, prediction might very well be the least useful thing that a formalized model might do. Instead, as @Epstein2008 lists, there are many reasons to model:
 
 > Explain (very distinct from predict)
 > Guide data collection
@@ -101,6 +103,23 @@ Epstein goes on to note that modeling can sometimes be seen as implying predicti
 > Reveal the apparently simple (complex) to be complex (simple)
 
 Not everything on that list may apply to archaeology, but nevertheless, the list opens up the possibility space for archaeological simulation. See for instance Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/), which implements Schelling's 1971 Segragation Model [@schelling1971, see also Exercise 2 in this section] which showed how even minor expressions of preference could lead to segregated neighborhoods. Hart and Case's 'playable post' implements the model interactively in the browser, and uses engaging graphics to communicate the dynamic to the public. An archaeological agent based model similarly deployed could be an excellent public archaeology intervention.
+
+#### Agent-based models and their key elements
+
+ABM can be broadly understood as a way of modeling a phenomenon by modeling its constituents parts. Therefore, ABM involves the expectation that the phenomenon at the macro-level is an *emergency* of the dynamics at the micro-level. Moreover, ABM implies that the parts, the agents, constitute 'populations', *i.e.* they share common properties and behavioral rules. 'Agent' also implies a certain autonomy with respect to other agents and the environment, which justifies simulating their behavior at an individual level.
+
+In practice, 'autonomy' often translates as the agents' ability to take action, to move, to decide, or even think and remember. Nevertheless, agent-based models also include entities that are *technically* agents (on the terms of [multi-agent systems](https://en.wikipedia.org/wiki/Multi-agent_system)), but lack those abilities or are not considered real discrete entities. The most common case is to represent sectors of space as agents fixed to unique positions in a grid to facilitate the implementation of distributed spatial processes (*e.g.*, the growth of vegetation dependent on local factors). In NetLogo, this type of agent is pre-defined as `patches` and is extensively used in models in ecology and geography.
+
+Compared to other modeling and simulation approaches, ABM is more intuitive but also more complex. For example, the [Lotka-Volterra predator-prey model](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) in ecology is a pair of differential equations that are relatively simple and conceptually straightforward.
+
+>more prey -> more predators will survive and reproduce
+>more predators -> less prey will survive and reproduce
+>less prey -> fewer predators will survive and reproduce
+>fewer predator -> more prey will survive and reproduce
+
+The same model can also be implemented with ABM (see the comparison in [NetLogo's Model Library Wolf-Sheep Predation (Docked Hybrid)](http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation(DockedHybrid))). The ABM implementation requires many additional specifications on how predator and prey agents should behave individually. These specifications both help the model to be more 'intuitive' or 'realistic' and complicate the model design and implementation significantly, even though generating the same aggregate dynamics of the equation-based version (*i.e.*, oscillations).
+
+Another important and distinctive aspect of agent-based models is that they are unavoidably *stochastic*. By definition, the order in which agents of a type perform their processes should not be predefined and, overall, should not be the same followed every iteration of the model. The only unbiased way of *scheduling* agents processes is to randomize all sequences using a [pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator). This technique is also used to create variation within a population of agents, *i.e.* drawing the value of an individual property from a probability distribution.
 
 #### How do we model with ABM?
 
