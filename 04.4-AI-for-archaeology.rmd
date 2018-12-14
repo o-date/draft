@@ -17,7 +17,7 @@ The value of agent-based modeling: it forces us to think carefully about what it
 
 <div class = rmdcaution> _This section is under development_. </div>
 
-<div class = rmdnote> _Launch the [Binder on Agent-Based Modeling with Python..](https://mybinder.org/v2/gh/o-date/abm/master)_. </div>
+<div class = rmdnote> _Launch the [Binder on Agent-Based Modeling with Python](https://mybinder.org/v2/gh/o-date/abm/master)_. </div>
 
 <div class = rmdnote> _Launch the [Binder for Agent-Based Modeling with Netlogo without the Netlogo GUI](https://mybinder.org/v2/gh/o-date/abm3/master)_. </div>
 
@@ -89,73 +89,9 @@ Epstein goes on to note that modeling can sometimes be seen as implying predicti
 
 Not everything on that list may apply to archaeology, but nevertheless, the list opens up the possibility space for archaeological simulation. See for instance Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/), which implements Schelling's 1971 Segragation Model which showed how even minor expressions of preference could lead to segregated neighborhoods. Hart and Case's 'playable post' implements the model interactively in the browser, and uses engaging graphics to communicate the dynamic to the public. An archaeological agent based model similarly deployed could be an excellent public archaeology intervention.
 
-#### How do we model with ABM?
+#### Pond Trade Model
 
-In simple terms, building a model involves the following steps.
-- Define hypotheses, questions or simply the phenomenon of interest (identify the system)
-- Define the elements and processes (you believe are) required to address the system (model the system). mention paradox Occam's razor vs. emergence
-- Express the chosen elements and processes as computer code (implement the model)
-- Modeling is a process of constant iteration. Each stage is an iteration loop that is often repeated several times before jumping into the next step.  The end result of development and exploration of a model may be relatively stable, often in the form of publications. However, this product potentially feeds a new  modeling effort (and that is actually the main usefulness of models in the long run).
-- ABM in python, Java, C#, or C++? in R? in NetLogo? (Any language can do it, really). Pros and cons, talk in terms of higher/lower level programming languages (still, they are all quite high-level).
-- remember to talk about https://www.openabm.org/
-
-#### ABM in Archaeology and Social Sciences
-
-- Emergence... Life game, deterministic chaos
-- Saving the gap between atomism and holism, or individual and social structure
-- Virtual laboratory for social sciences
-- Examples
-- Mention the cycles of enthusiasm and skepticism, and the tendency to develop closed circles
-- Challenges and pitfalls
-
-#### ABM tutorial: the Pond Trade model
-
-brief overview
-disclaimer: MY modelling strategy is highly focused in theory-building (general, explorative), not hypothesis-testing and prediction (specific, data-driven).
-
-##### Phenomena of interest and conceptual model
-
-- phenomena: cycles of growth and collapse, i.e. flutuations in the scale of site occupation, out of phase with environmental change. Focus on coastal settlements around a water body (e.g., lake, bay, sea).
-- Belief or main assumption: topography, transport technology, trade, settlement size and wealth, and cultural exchange are intertwined.
-
-![andros-first-diagram](images/andros-diagram.png)
-
-```r
-library(DiagrammeR)
-grViz("diagrams/boxes.dot")
-```
-
-- Elements: "pond" or water body, settlements, ships, routes, goods.
-- Rules:
-  - coastal settlements of variable size around a pond.
-  - each settlement has a "cultural vector".
-  - trade ships travel between the settlements.
-  - once in their base settlement, ships evaluate all possible trips and choose the one with the greater cost-benefit ratio.
-  - ships carry economic value and cultural traits between the base and destination settlements.
-  - settlements size depends on the economic value they receive from trade.
-  - the economic value produced in a settlement depends on its size.
-  - the number of ships per settlement depends on its size.
-
-##### Implementation
-
-- Implement the model based on general definition (agents, variables, parameters)
-- Walk-through the implementation in NetLogo
-
-Pond Trade model repository: https://github.com/Andros-Spica/PondTrade
-
-![The model interface in step 13](images/interface-andros.png)
-
-##### Simulation experiments and analysis
-
-- Simulations and experiment design
-- Analysis and display of results (R example)
-
-```r
-plot(1:10, 1:10)
-```
-![andros-second-diagram](images/andros-2.png)
-
-
+_The PondTrade Model is currently under development. In the mean time, please do consider the [binder on Agent-Based Modeling with Python](https://mybinder.org/v2/gh/o-date/abm/master) and the [binder for Agent-Based Modeling with Netlogo without the Netlogo GUI](https://mybinder.org/v2/gh/o-date/abm3/master)_.
 
 ## Computer Vision and Archaeology
 
