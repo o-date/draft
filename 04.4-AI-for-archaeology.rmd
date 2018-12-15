@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 ## Artificial Intelligence in Digital Archaeology
 
 To speak of 'artificial intelligence' in archaeology may be to speak too soon yet. We do have machine learning in the service of archaeology (neural networks for classificatory purposes, for instance), and there is a well-established body of work in terms of simulation that could fall under the rubric of 'artificial intelligence'.
@@ -54,11 +49,15 @@ Adding further complexity to this picture, minds are constantly changing with th
 
 Well, what do pineapple drawings have in common with doing models in archaeology? You may imagine that, if your mental representation of a pineapple is a model, human minds are bursting with models about everything, including *models of models*, *models within models*, and *models of ourselves*. If an archaeologist, there will be many archaeologically-sensitive models buried deep inside such mental apparatus. 
 
->*"Why did people in this site buried food remains in small pits?" 
->>"They wanted to avoid attracting critters."
->>"They did not stand the smell of decomposition."
->>"One person with high status started doing it and them the rest just followed."
->>"They were offering sustainance to the land spirit."* 
+>"Why did people in this site buried food remains in small pits?" 
+
+>"They wanted to avoid attracting critters."
+
+>"They did not stand the smell of decomposition."
+
+>"One person with high status started doing it and them the rest just followed."
+
+>"They were offering sustainance to the land spirit."
 
 These explanations derive directly from models of *why people behave as they do*. Often tagged as *social* or *behavioral*, this kind of model is as omnipresent in archaeology as it is neglected. Given that archaeological practice orbits around materials, archaeologists tend to relegate social models to a second plane, as if the goal is actually to understand the material remains of human behavior rather than the behavior itself. More importantly, many archaeologists are hardly cognizant that they are using social models even when being avowedly 'non-theoretical'.  
 
@@ -165,10 +164,10 @@ SG: code chunks didn't render correctly through the bookdown generation process,
 AA: didn't find anything useful about that...  Anyhow, I can continue by loading images and leaving r chunks as generic code
 
 TO DO CHALLENGE: get R code for plots/diagrams to compile in the server instead of using image files
-```{r, echo = FALSE}
+{r, echo = FALSE}
 library(DiagrammeR)
 grViz("diagrams/4-4-abm-pondTradeConcept-start.dot")
-```
+
 
 If you choose to modify models code directly with Binder in your Internet browser, watch out the active user timeout. A possible work around is to copy the entire code to a local editor (save it in a local file) and then paste it back. NEED TO TEST HOW SAVING WORKS IN BINDER
 -->
@@ -179,7 +178,7 @@ Forest Fire is a model representing the spread of a fire in a forest, depending 
 
 The mesa-Python version used in our Jupyter Notebook is available in [ODATE repository](https://github.com/o-date/abm/tree/master/forest_fire) (see also original in [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/forest_fire)). The student can also consult the [NetLogo](https://ccl.northwestern.edu/netlogo/) version called 'Fire' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1624) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Fire), where there is also a more complex version of this model.
 
-![The visualization of a simulation run of the *Fire* model using NetLogo (tree density: 57%; random seed: 746823835)](images/4-4-abm-Fire-par57-seed746823835.gif)
+[![The visualization of a simulation run of the *Fire* model using NetLogo (tree density: 57%; random seed: 746823835). Click through to view the animated version.](images/4-4-abm-fire-static.png)](images/4-4-abm-fire-par57-optimized.gif)
 <!--TO DO: include new ipynb file that runs the model once and shows the state of grid graphically. Instead of showing the NetLogo version-->
 This model represents a set of trees (*agents*) distributed among positions in a 2D grid. Trees have three possible states: `"Fine"`, `"On Fire"`, and `"Burned Out"`. Every time step trees check if they are `On Fire`, in which case they will set on fire all adjacent trees that are `Fine` and update their state as `Burned Out`. This model considers the eight adjacent grid cells surrounding the agent ([Moore neighborhood](https://en.wikipedia.org/wiki/Moore_neighborhood)).
 
@@ -243,10 +242,11 @@ def step(self):
     self.model.happy += 1
 ```
 
-The Segregation model is one of the oldest and most influential references in the ABM community. However, as the antecedents of the Forest Fire model, the original version of this model is a cellular automaton, where cells are habitat units (*e.g.*, houses, apartments) with three states: empty and two types of inhabitants. Schelling [-@schelling1971] started with an even simpler model, analyzing the mechanisms first in one dimension to then run simulations using 2D grids.
+The Segregation model is one of the oldest and most influential references in the ABM community. However, as the antecedents of the Forest Fire model, the original version of this model is a cellular automaton, where cells are habitat units (*e.g.*, houses, apartments) with three states: empty and two types of inhabitants. @schelling1971 started with an even simpler model, analyzing the mechanisms first in one dimension to then run simulations using 2D grids.
 
 ![Comparison of Schelling's original model (1971, p. 157, Fig. 10) and its implementation in NetLogo](images/4-4-abm-schelling.png)
 <!--TO DO: include new ipynb file that runs the model once and shows the state of grid graphically. Instead of showing the NetLogo version-->
+
 The ABM implementations, though mostly equivalent, represent inhabitants explicitly as agents, which are conceptually more sound. The fully developed agent-based approach also allows for more flexibility; for instance, inhabitants can be placed in a continuous space instead of a 2D grid (*e.g.*, see another Python implementation in ['Quantitative Economics with Julia'](https://lectures.quantecon.org/jl/schelling.html)).
 
 The model was able to produce insight in accord with other contemporary ideas within the general fields of [system dynamics](https://en.wikipedia.org/wiki/System_dynamics), [chaos theory](https://en.wikipedia.org/wiki/Chaos_theory) and [cybernetics](https://en.wikipedia.org/wiki/Cybernetics): (1) complex behavior can come from simple rules [*emergence*; see @Schelling1978] and (2) minimal differences at the individual level can resonate as great differences at the aggregated or collective level (*tipping point*). Specifically, Schelling found that, within this model, high segregation levels emerge even when individual preferences are quite tolerant of diversity in their neighborhood. Additionally, the model demonstrates that levels of segregation do not respond linearly to the level of tolerance of individuals. We recommend Vi Hart and Nicky Case's [Parable of the Polygons](https://ncase.me/polygons/) as a playful discussion on the logic and implications of this model.
@@ -257,7 +257,7 @@ As a programming exercise, try to expand the model by modifying "Schelling/model
 
 ##### Exercise 3: Epstein's Civil Violence Model
 
-The Civil Violence model represents the dynamics of civil rebellion towards a central power acting through agents of policing and repression. It was created by [Joshua M. Epstein](https://en.wikipedia.org/wiki/Joshua_M._Epstein) [-@Epstein2002], one of the most influential authors in the ABM community. This model also has a mesa-Python version ([ODATE repository](https://github.com/o-date/abm/tree/master/epstein_civil_violence) or the original [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/epstein_civil_violence)), to which we refer throughout this exercise. However, you may also consult the equivalent [NetLogo](https://ccl.northwestern.edu/netlogo/) version ('Rebellion' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1472) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Rebellion); see also other versions included in this library).
+The Civil Violence model represents the dynamics of civil rebellion towards a central power acting through agents of policing and repression. It was created by [Joshua M. Epstein](https://en.wikipedia.org/wiki/Joshua_M._Epstein) [@Epstein2002], one of the most influential authors in the ABM community. This model also has a mesa-Python version ([ODATE repository](https://github.com/o-date/abm/tree/master/epstein_civil_violence) or the original [mesa repository](https://github.com/projectmesa/mesa/tree/master/examples/epstein_civil_violence)), to which we refer throughout this exercise. However, you may also consult the equivalent [NetLogo](https://ccl.northwestern.edu/netlogo/) version ('Rebellion' in [Modeling Commons](http://modelingcommons.org/browse/one_model/1472) or [NetLogo Model Library](http://ccl.northwestern.edu/netlogo/models/Rebellion); see also other versions included in this library).
 
 Unlike the Segregation model, the Civil Violence model defines two types of agents that have qualitatively different properties and rules of behavior, `Citizen` and `Cop` agents. The `Citizen` agents, members of the general population, can be either rebellious (`"Active"`) or not (`"Quiescent"`). The `Cop` agents pursue and arrest rebel citizens. All agents occupy space and move in a 2D grid.
 
@@ -273,7 +273,7 @@ In "`civil_violence/agent.py`", line 60:
 self.grievance = self.hardship * (1 - self.regime_legitimacy)
 ```
 
-As explained by Epstein [-@Epstein2002]:
+As explained by @Epstein2002:
 
 >For example, the British government enjoyed unchallenged legitimacy ($L=1$) during World War II. Hence, the extreme hardship produced by the blitz of London did not produce grievance toward the government. By the same token, if people are suffering (high H), then the revelation of government corruption (low L) may be expected to produce increased levels of grievance.
 
@@ -351,7 +351,7 @@ class Cop(Agent):
   ### <skiped code>
 ```
 
-The Civil Violence model offers a good opportunity to understand how agent-based simulations may stimulate new insights and help us reason our expectations. Epstein [-@2002, p. 7245-48] comments on the outcomes of this model in light of four aspects:
+The Civil Violence model offers a good opportunity to understand how agent-based simulations may stimulate new insights and help us reason our expectations. @Epstein2002, p. 7245-48 comments on the outcomes of this model in light of four aspects:
 
 - **Deceiving agents**: "(...) privately aggrieved agents turn blue (as if they were nonrebellious) when cops are near, but then turn red (actively rebellious) when cops move away."
 - **Rebellion outburst as 'social breakdowns'**: "(...) high concentrations of actives arise endogenously in zones of low cop density."
@@ -360,11 +360,11 @@ The Civil Violence model offers a good opportunity to understand how agent-based
 
 This kind of 'reading' of simulation results are known within the ABM community as 'stylised facts', and it is a common practice either when dealing with models with a strong social component or when the main objective is to explain rather than predict.
 
-Read the code in `model.py`and `agent.py` carefully. As the first exercise for both practicing and critical discussion, find an aspect of the mesa-Python implementation does not affect simulations, although it was considered by Epstein[-@2002]. This 'phantom code' is probably because this version was left incomplete. HINTS: (1) the *find* tool of your Internet browser can be a powerful ally here; (2) do all parameters have an impact on the model dynamics? Use "`Epstein civil violence.ipynb`" to change parameter values and re-run simulations.
+Read the code in `model.py`and `agent.py` carefully. As the first exercise for both practicing and critical discussion, find an aspect of the mesa-Python implementation does not affect simulations, although it was considered by @Epstein2002. This 'phantom code' is probably because this version was left incomplete. HINTS: (1) the *find* tool of your Internet browser can be a powerful ally here; (2) do all parameters have an impact on the model dynamics? Use "`Epstein civil violence.ipynb`" to change parameter values and re-run simulations.
 
 Within ABM, we refer to finding and correcting errors in a model as *verification* or *internal validation*. Unfortunately, its importance is greatly underrated outside Computer Science, where the focus bends towards the *validation* of simulation results in respect to empirical datasets. However, incomplete, deceiving or even 'buggy' code is not rare in ABM. A modeler will be lucky if the model has a bug in the code, instead of a conceptual error that does not prevent simulations to produce plausible results (and publish them!). Put in perspective with Forest Fire and Schelling's Segregation, one can appreciate how difficult it is to spot errors in agent-based models that are slightly more complex than a cellular automaton system. This is one of the main reason why it is paramount to "hold your horses" when creating a model. Even though we may be conscious of our modeling decisions, the whole of the model will often overwhelm our human understanding. This is why we need computers to handle simulations! The general advice is: do not overcomplicate the design and test the code at every small, seemingly-trivial step.
 
-As a second more advanced challenge, try to implement the second model presented by Epstein [-@2002]. The second model, referred by Epstein as **_Inter-group violence_**, is an extension where the central authority seeks to suppress communal violence between two groups of citizens.
+As a second more advanced challenge, try to implement the second model presented by @Epstein2002. The second model, referred by Epstein as **_Inter-group violence_**, is an extension where the central authority seeks to suppress communal violence between two groups of citizens.
 
 ##### Exercise 4: the Pond Trade model
 
@@ -415,7 +415,7 @@ At this stage, we are aiming to set up (*what we think will be*) the core mechan
 
 The Pond Trade model main idea was inspired on the premise that the size of the economy associated with a settlement (as a gross measure of, *e.g.*, population size, volume of material production, built surface) is dependent on the volume of materials exchanged between settlements for economic reasons (named as 'trade'), specifically concerning maritime and fluvial routes as opportunities for transportation. The guiding suggestion was that, because of the shifting nature of trade routes, economy size displays a chaotic behavior as described by [chaos theory](https://en.wikipedia.org/wiki/Chaos_theory) (apparently 'random' oscillations).
 
-![One of the simplest examples of chaotic behavior: double compound pendulum. SOURCE: Catslash (Public domain), from Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Double-compound-pendulum.gif)
+![One of the simplest examples of chaotic behavior: double compound pendulum. SOURCE: Catslash (Public domain), from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Double-compound-pendulum.gif)](images/4-4-double-pendulum.png)
 
 Even though the initial inspiration may be theoretically profound, empirically-based, or well-connected to discussions in the academic literature, the primary core mechanism must narrow down to a straightforward, intelligible process. In this case, the focus is to represent a positive feedback loop between economic size and trade volume coming in and out, which can be described as follows:
 
