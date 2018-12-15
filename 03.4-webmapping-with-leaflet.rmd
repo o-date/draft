@@ -1,4 +1,9 @@
 ## What is Web Mapping?
+
+<div class = rmdnote> _See also the [Working with Spatial Data Binder](https://mybinder.org/v2/gh/shawngraham/spatialarchaeology/master)_. </div>
+
+<div class = rmdnote> _See also the [LiDAR Binder](https://mybinder.org/v2/gh/o-date/lidar/master)_. </div>
+
 A web map is a geographic visualization that is supported by computational infrastructures. This form of mapping is fundamentally *powered* by the Web [Axismap, 2018](http://www.axismaps.com/guide/web/what-is-a-web-map/). It should come as no surprise that the ubiquity of web maps correlates with the development of Web 2.0, a marked transformation in the way that that we engage with the Internet [@Aced2013].
 
 As Darcy DiNucci remarked in 1999, content loading into a browser as 'static screenfuls is only an embryo of the Web to come' [@DiNucci1999]. Web 2.0, thus is characterized by 'interactivity', 'two-way communication' often through devices that are 'Internet-enabled' and a greater awareness amongst developers of 'user experience' and 'interface'. These interests are correlated with the diversification of screen sizes on mobile hand-held devices such as smart phones, tablets and laptops, all of which require responsiveness, appropriate scaling for size and interaction primarily through touch and swipe. Whereas the first iteration of the Web required advanced training to create a website, Web 2.0 as is often claimed, requires little or no expert knowledge to make a Web-ready 'thing' such as a website, a blog, or a Wiki. This is the context in which web mapping, that is the Web-based visualization of geographic information became popularized.

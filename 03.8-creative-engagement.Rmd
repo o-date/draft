@@ -1,5 +1,9 @@
 ## Computational Creativity
 
+<div class = rmdnote> _[Launch the Creativity Binder](https://mybinder.org/v2/gh/o-date/creativity/master)._ </div>
+
+<div class = rmdnote> _[Laucn the Sonification Binder](https://mybinder.org/v2/gh/o-date/sonification/master)._ </div>
+
 Once archaeological data becomes digital, it can escape the narrow purview of scholarly, academic engagement. Should it? Once it's out in the world, we lose our academic authority over it because it can be remixed, re-assembled, and taken to pieces for various ends - not all of them politically, ethically, or morally valid. But given that so much of archaeology is publicly funded, we have to recognize that these things will happen, and that we *should* be equipping our readers, our publics, to engage with these materials in ways that do justice to the peoples of the past, and also, the needs of the future. One way that this can be accomplished is to provide data and tools so that this archaeology can become fodder for art or activist inspired work.
 
 This is part of the rationale for the open access journal [_Epoiesen: A Journal for Creative Engagement in History and Archaeology_](https://epoiesen.library.carleton.ca/about/). From its _about_ page, we learn:
@@ -267,6 +271,8 @@ my_data = [
 
 
 ### Worldbuilding
+
+<div class = rmdnote> _Launch the [Binder on World-Building](https://mybinder.org/v2/gh/o-date/creativity2/master)_. </div>
 
 There is an approach to video games called 'procedural content generation' to create the world of the game so that it is always unique when you play it. _Minecraft_ is one game that uses procedural content generation; _No Man's Sky_ is another. In the [creativity2 binder](https://github.com/o-date/creativity2) there is a subfolder called 'WorldBuilding' that contains a notebook, 'model demo'. This notebook builds a world by simulating certain environmental processes, where the terrain is modeled as a series of Voronoi polygons with elevation and simulated water erosion along the edges, after [Martin O'Leary](https://twitter.com/mewo2)'s tutorial on [Creating Fantasy Maps](http://mewo2.com/notes/terrain/). Nomads move into this terrain and travel around it, from which movement trails and cities emerge. These cities then interact following the well known [Axelrod Tribute Model](http://www-personal.umich.edu/~axe/research/Building.pdf). The final elements of this demonstration generate a kind of chronicle that tells the 'history' of this world. 
 

@@ -144,7 +144,7 @@ We finish up by pulling it all together:
 
 You can see our gist that contains our interactive bar chart at [https://gist.github.com/shawngraham/dc506c6be872625101a1163ad59e4d68](https://gist.github.com/shawngraham/dc506c6be872625101a1163ad59e4d68) (interestingly, all the files in our gist are listed alphabetically. Scroll down to see all of the files). Let's make this visualization live - pass the filepath to https://bl.ocks.org/ to see the finished result!
 
-(That is, copy the bit _after_ gist.github.com/ and paste it so that it's now after bl.ocks.org in your browser's address bar.)
+(That is, copy the bit _after_ gist.github.com/ and paste it so that it's now after https://bl.ocks.org/ in your browser's address bar.)
 
 ### discussion
 

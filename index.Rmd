@@ -1,6 +1,6 @@
 ---
 title: "The Open Digital Archaeology Textbook"
-author: "Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Lorna Richardson, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, & Rob Blades"
+author: "Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, Rob Blades, & Cristina Wood"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
@@ -23,9 +23,9 @@ lang: "en"
 ---
 # notice {-}
 
-This volume goes hand-in-glove with a computational environnent that uses [Jupyter Notebooks](https://jupyter.org/) coupled with the [Binder](https://mybinder.org/) service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the [list of notebooks](https://o-date.github.io/support/notebooks-toc/) and hit the `launch binder` button. To examine or download the code, click the `repository` links instead. 
+This volume goes hand-in-glove with a computational environnent that uses [Jupyter Notebooks](https://jupyter.org/) coupled with the [Binder](https://mybinder.org/) service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the [list of notebooks](https://o-date.github.io/support/notebooks-toc/) and hit the appropriate `launch binder` button. To examine or download the code, click the `repository` links instead. 
 
-THIS IS A DRAFT VERSION. The 'Live' version (or latest version) will always be at [https://o-date.github.io/live/](https://o-date.github.io/live/)
+THIS IS A BETA VERSION. The 'Release' version, when we get to that point, will be at [https://o-date.github.io/live/](https://o-date.github.io/live/)
 
 ![This book will, with time, have many branches and off-shoots. It is meant to be customized and expanded; there will never be a canonical version. Photo by Brandon Green, _unsplash.com_.](images/brandon-green-321795-unsplash.jpg)
 
