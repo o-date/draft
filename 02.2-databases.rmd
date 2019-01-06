@@ -117,7 +117,7 @@ For example, the following command would retrieve the contents of the two named 
 ```
 SELECT column1, column2, ...
 FROM table_name;
-```
+ ```
 
 Desktop SQL office database products like MS Access come with a graphical user interface (GUI) to help set up relationships and form queries. In fact, every task that can be accomplished using the GUI actually masks the implementation of SQL commands hidden from the users' view. As such, it's worthwhile to learn the basics of SQL to better understand how your data is being transformed under the hood. While different database management systems use slight dialects of SQL, they generally apply the same fundamental principles.
 
@@ -147,6 +147,7 @@ Some popular open source database clients:
 + Sequel Pro
 + Table Plus
 + DBeaver
++ PostgreSQL
 
 ### Takeaways
 
@@ -171,3 +172,40 @@ Some popular open source database clients:
 
 
 <a name="foot2">2</a>: Excel, again. If you have dates in your CSV or TSV file and you save using Excel, it may still try to monkey around with the formatting. Make sure your date columns are formatted to Text.
+
+**Graph Databases**
+
+A graph database is a relatively new development. Unlike relational databases the graph database records both the object of interest and its relationship to another object of interest. Typically this is demonstrated with reference to people, a person can be objectified as a single point (node), this person can be related to another person (another node). This relationship is modeled as a line (edge), the relationship can be anything you like, Dave is the brother of Sue, Dave is friends with Sue, Sue went to school with Dave.
+
+All three of these examples can be true, but there can also be directional relationships, for instance Dave can be Sue's brother but Sue cannot be Dave's Brother, this is therefore directional. To make it a two-way relationship: Dave is a sibling of Sue, Sue is a sibling of Dave. If Sue has gone to School with Dave then the opposite must also be true, and you would also expect friendships to be two way also. However if Dave liked Sue then the opposite may not be true.
+
+In what is refered to in mathmatics as graph theory, we have two nodes joined together by a single edge. The nodes can represent any object, the object can have attributes, for example: name, age, height, etc. For an archaeological example the object could be an artefact, the attributes should be specific to the artefact, in theory you could have a found by attribute, but it would be better to create a person node and then use a relationship, or edge, to state that the artefact was found by a specific person. If a person found many artefacts then they would be joined to many other artefact nodes.
+
+This is a similar concept that is found in Network Analysis and object orientated approaches which use an object-predicate-subject data structure.
+
+Graph databases have their own query language: cypher. In many ways it is similar to SQL but even simpler. Rather than using SELECT statements graph databases use pattern matching.
+
+``` cypher
+MATCH (n)
+RETURN n;
+```
+
+The simplest pattern is to match all the nodes, once matched they must be returned. This can be developed further to return all the related nodes.
+
+```cypher
+MATCH (n)-[r]-()
+RETURN n, r;
+```
+
+### Further Reading
+
+[cypher](https://neo4j.com/developer/cypher-query-language/) fron Neo4J
+
+Entry level graph databases
++ Neo4J
+
+Advanced level graph databases
++ Agensgraph
+
+
+
