@@ -25,7 +25,7 @@ lang: "en"
 
 This volume goes hand-in-glove with a computational environnent that uses [Jupyter Notebooks](https://jupyter.org/) coupled with the [Binder](https://mybinder.org/) service as a way of serving and running the notebooks online in a browser. This relieves both instructors and students of the problems of installing software in different environments and the troubleshooting that this entails. Instead, students and instructors can concentrate on the learning and writing literate code that explores archaeological issues. To launch the ODATE notebooks, please go to the [list of notebooks](https://o-date.github.io/support/notebooks-toc/) and hit the appropriate `launch binder` button. To examine or download the code, click the `repository` links instead. 
 
-THIS IS A BETA VERSION. The 'Release' version, when we get to that point, will be at [https://o-date.github.io/live/](https://o-date.github.io/live/)
+Digital archaeology is never finished; consider ODATE to be in 'perpetual beta'. This means that you will encounter rough edges from time to time, and as technology and archaeology evolve, some topics will need to be added. Some will need to be pruned. If you feel so moved, we invite you to join us, [and contribute corrections, additions, or deletions](https://o-date.github.io/support/contribute/). All contributors will be credited as authors. Feel free to annotate with the [Hypothesis toolbar at right](http://hypothes.is).
 
 ![This book will, with time, have many branches and off-shoots. It is meant to be customized and expanded; there will never be a canonical version. Photo by Brandon Green, _unsplash.com_.](images/brandon-green-321795-unsplash.jpg)
 

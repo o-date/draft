@@ -52,7 +52,7 @@ Rob is a digital historian and graduate of the Master of Public History program 
 
 Cristina Wood is a Master’s student in Public History and Digital Humanities at Carleton University. She is interested in environmental and place histories, and creative engagements with the past. Her major research project, Songs of the Ottawa, is a digital data sonification of the River’s history from 1880-1980.
 
-### Other Contributors
+### Other Contributors {-}
 
 Other contributors are individuals who have submitted pull requests, corrections, and additional materials subsequent to our original launch. We are grateful and pleased to acknowledge:
 
