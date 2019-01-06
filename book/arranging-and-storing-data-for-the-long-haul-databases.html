@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="The Open Digital Archaeology Textbook combines instructive text with a computational DA laboratory" />
   <meta name="twitter:image" content="images/brandon-green-321795-unsplash.jpg" />
 
-<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, Rob Blades, &amp; Cristina Wood">
+<meta name="author" content="Shawn Graham, Neha Gupta, Jolene Smith, Andreas Angourakis, Andrew Reinhard, Kate Ellenberger, Zack Batist, Joel Rivard, Ben Marwick, Michael Carter, Beth Compton, Rob Blades, Cristina Wood, &amp; Gary Nobles">
 
 
-<meta name="date" content="2018-12-15">
+<meta name="date" content="2019-01-06">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -120,6 +120,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#ben-marwick"><i class="fa fa-check"></i>Ben Marwick</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#rob-blades"><i class="fa fa-check"></i>Rob Blades</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#cristina-wood"><i class="fa fa-check"></i>Cristina Wood</a></li>
+<li class="chapter" data-level="0.0.1" data-path="about-the-authors.html"><a href="about-the-authors.html#other-contributors"><i class="fa fa-check"></i><b>0.0.1</b> Other Contributors</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html#editorial-board"><i class="fa fa-check"></i>Editorial Board</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i>Getting Started</a><ul>
@@ -406,8 +407,7 @@ To some degree, you might have less control of formatting when using plain text 
 <p>A relational database consists of many different tables connected together with <em>relationships</em> that tell computers how things fit together. Generally, each table represents one ‘entity type’ (i.e. contexts, artefacts, OSL samples, etc) and consists of rows and columns. Rows represent instances of that type of entity (i.e. context 0321, AR009876, S112), and columns represent values attributed to that instance (i.e. soil texture, date closed, raw material, weathering index, etc). Rows are also called records, and columns are sometimes called variables or attributes.</p>
 <p>Most relational databases rely on SQL, or Structured Query Language, to run the show. Each SQL command is essentially a self-contained logical statement that includes all parameters needed to do a particular action. If something doesn’t add up, an error will be reported and nothing will happen.</p>
 <p>For example, the following command would retrieve the contents of the two named columns from the specified table:</p>
-<pre><code>SELECT column1, column2, ...
-FROM table_name;</code></pre>
+<p><code>SELECT column1, column2, ... FROM table_name;</code></p>
 <p>Desktop SQL office database products like MS Access come with a graphical user interface (GUI) to help set up relationships and form queries. In fact, every task that can be accomplished using the GUI actually masks the implementation of SQL commands hidden from the users’ view. As such, it’s worthwhile to learn the basics of SQL to better understand how your data is being transformed under the hood. While different database management systems use slight dialects of SQL, they generally apply the same fundamental principles.</p>
 <p>Common desktop application options:</p>
 <ul>
@@ -431,7 +431,20 @@ FROM table_name;</code></pre>
 <li>Sequel Pro</li>
 <li>Table Plus</li>
 <li>DBeaver</li>
+<li>PostgreSQL</li>
 </ul>
+<p><strong>Graph Databases</strong></p>
+<p>A graph database is a relatively new development. Unlike relational databases the graph database records both the object of interest and its relationship to another object of interest. Typically this is demonstrated with reference to people, a person can be objectified as a single point (node), this person can be related to another person (another node). This relationship is modeled as a line (edge), the relationship can be anything you like, Dave is the brother of Sue, Dave is friends with Sue, Sue went to school with Dave.</p>
+<p>All three of these examples can be true, but there can also be directional relationships, for instance Dave can be Sue’s brother but Sue cannot be Dave’s Brother, this is therefore directional. To make it a two-way relationship: Dave is a sibling of Sue, Sue is a sibling of Dave. If Sue has gone to School with Dave then the opposite must also be true, and you would also expect friendships to be two way also. However if Dave liked Sue then the opposite may not be true.</p>
+<p>In what is refered to in mathmatics as graph theory, we have two nodes joined together by a single edge. The nodes can represent any object, the object can have attributes, for example: name, age, height, etc. For an archaeological example the object could be an artefact, the attributes should be specific to the artefact, in theory you could have a found by attribute, but it would be better to create a person node and then use a relationship, or edge, to state that the artefact was found by a specific person. If a person found many artefacts then they would be joined to many other artefact nodes.</p>
+<p>This is a similar concept that is found in Network Analysis and object orientated approaches which use an object-predicate-subject data structure.</p>
+<p>Graph databases have their own query language: cypher. In many ways it is similar to SQL but even simpler. Rather than using SELECT statements graph databases use pattern matching.</p>
+<pre class="cypher"><code>MATCH (n)
+RETURN n;</code></pre>
+<p>The simplest pattern is to match all the nodes, once matched they must be returned. This can be developed further to return all the related nodes.</p>
+<pre class="cypher"><code>MATCH (n)-[r]-()
+RETURN n, r;</code></pre>
+<p>An entry level graph database is <a href="http://neo4j.com">Neo4J</a>. An advanced level graph database is <a href="https://bitnine.net/agensgraph-2/">Agensgraph</a>. Both may be queried with the <a href="https://neo4j.com/developer/cypher-query-language/">cypher query language</a>.</p>
 </div>
 <div id="takeaways-4" class="section level3">
 <h3><span class="header-section-number">2.4.1</span> Takeaways</h3>

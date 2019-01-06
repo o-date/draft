@@ -114,6 +114,7 @@ A relational database consists of many different tables connected together with 
 Most relational databases rely on SQL, or Structured Query Language, to run the show. Each SQL command is essentially a self-contained logical statement that includes all parameters needed to do a particular action. If something doesn’t add up, an error will be reported and nothing will happen.
 
 For example, the following command would retrieve the contents of the two named columns from the specified table:
+
 ```
 SELECT column1, column2, ...
 FROM table_name;
@@ -149,30 +150,6 @@ Some popular open source database clients:
 + DBeaver
 + PostgreSQL
 
-### Takeaways
-
-+ Take time to understand the pros and cons of relational databases and flat data structures.
-+ Beware of Excel and spreadsheet software. Sometimes it's appropriate, but risks abound.
-+ Lean toward plain text formats like CSV when possible.
-
-### Further Reading
-
-[Data Organization in Spreadsheets for Social Scientists](http://www.datacarpentry.org/spreadsheets-socialsci/), from Data Carpentry
-
-[Data Organization in Spreadsheets for Ecologists](file:///home/jolene/Zotero/storage/TJSS5VHF/spreadsheet-ecology-lesson.html), from Data Carpentry
-
-[SQL for Social Science Data](http://www.datacarpentry.org/sql-socialsci/), from Data Carpentry
-
-[Thinking about Data](https://labs.ssrc.org/dds/articles/6-thinking-about-data/), from SSRC labs
-
-
-### Exercises
-
-[A Gentle Introduction to SQL](https://mybinder.org/v2/gh/o-date/sqlite/master?filepath=intro%20to%20sql.ipynb)
-
-
-<a name="foot2">2</a>: Excel, again. If you have dates in your CSV or TSV file and you save using Excel, it may still try to monkey around with the formatting. Make sure your date columns are formatted to Text.
-
 **Graph Databases**
 
 A graph database is a relatively new development. Unlike relational databases the graph database records both the object of interest and its relationship to another object of interest. Typically this is demonstrated with reference to people, a person can be objectified as a single point (node), this person can be related to another person (another node). This relationship is modeled as a line (edge), the relationship can be anything you like, Dave is the brother of Sue, Dave is friends with Sue, Sue went to school with Dave.
@@ -197,15 +174,33 @@ MATCH (n)-[r]-()
 RETURN n, r;
 ```
 
+An entry level graph database is [Neo4J](http://neo4j.com). An advanced level graph database is [Agensgraph](https://bitnine.net/agensgraph-2/). Both may be queried with the [cypher query language](https://neo4j.com/developer/cypher-query-language/).
+
+### Takeaways
+
++ Take time to understand the pros and cons of relational databases and flat data structures.
++ Beware of Excel and spreadsheet software. Sometimes it's appropriate, but risks abound.
++ Lean toward plain text formats like CSV when possible.
+
 ### Further Reading
 
-[cypher](https://neo4j.com/developer/cypher-query-language/) fron Neo4J
+[Data Organization in Spreadsheets for Social Scientists](http://www.datacarpentry.org/spreadsheets-socialsci/), from Data Carpentry
 
-Entry level graph databases
-+ Neo4J
+[Data Organization in Spreadsheets for Ecologists](file:///home/jolene/Zotero/storage/TJSS5VHF/spreadsheet-ecology-lesson.html), from Data Carpentry
 
-Advanced level graph databases
-+ Agensgraph
+[SQL for Social Science Data](http://www.datacarpentry.org/sql-socialsci/), from Data Carpentry
+
+[Thinking about Data](https://labs.ssrc.org/dds/articles/6-thinking-about-data/), from SSRC labs
+
+
+### Exercises
+
+[A Gentle Introduction to SQL](https://mybinder.org/v2/gh/o-date/sqlite/master?filepath=intro%20to%20sql.ipynb)
+
+
+<a name="foot2">2</a>: Excel, again. If you have dates in your CSV or TSV file and you save using Excel, it may still try to monkey around with the formatting. Make sure your date columns are formatted to Text.
+
+
 
 
 
