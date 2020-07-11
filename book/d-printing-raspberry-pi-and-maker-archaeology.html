@@ -133,7 +133,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i>Welcome!</a></li>
 <li class="chapter" data-level="1" data-path="going-digital.html"><a href="going-digital.html"><i class="fa fa-check"></i><b>1</b> Going Digital</a><ul>
-<li class="chapter" data-level="1.0.1" data-path="going-digital.html"><a href="going-digital.html#further-reading"><i class="fa fa-check"></i><b>1.0.1</b> Further Reading</a></li>
+<li class="chapter" data-level="" data-path="going-digital.html"><a href="going-digital.html#further-reading"><i class="fa fa-check"></i>Further Reading</a></li>
 <li class="chapter" data-level="1.1" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html"><i class="fa fa-check"></i><b>1.1</b> So what is Digital Archaeology?</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#a-distant-view"><i class="fa fa-check"></i><b>1.1.1</b> A distant view</a></li>
 <li class="chapter" data-level="1.1.2" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#is-digital-archaeology-part-of-the-digital-humanities"><i class="fa fa-check"></i><b>1.1.2</b> Is digital archaeology part of the digital humanities?</a></li>
@@ -280,7 +280,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.2.2" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#d-printing---a-workflow"><i class="fa fa-check"></i><b>4.2.2</b> 3d Printing - a Workflow</a></li>
 <li class="chapter" data-level="4.2.3" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#using-raspberry-pi-in-the-field"><i class="fa fa-check"></i><b>4.2.3</b> Using Raspberry Pi in the Field</a></li>
 <li class="chapter" data-level="4.2.4" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#discussion-2"><i class="fa fa-check"></i><b>4.2.4</b> Discussion</a></li>
-<li class="chapter" data-level="4.2.5" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#further-reading-9"><i class="fa fa-check"></i><b>4.2.5</b> Further Reading</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>4.3</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#projection-mapping"><i class="fa fa-check"></i><b>4.3.1</b> Projection Mapping</a></li>
@@ -392,7 +391,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Archaeology is an inherently collaborative process that happens in various places simulataneously. It is therefore often challening to ensure that archaeological databases, which serve to store and organize inter-related information obtained through various methods and practices, are kept up to date and syncronized across research environments. In order to deal with these challenges it might be necessary to set up a database hosted on a network, which would enable multiple users to simultaneously engage with the database while ensuring that the data remains orderly and complete.</p>
 <p>In order to implement such a system we need to set up a network, set up a server, set up a database along with user-friendly interfaces, and ensure that the system is aligned with and contributes positively to the goals of the overall project.</p>
 <p>The system that we’re going to build will look something like this: <img src="images/DIYDatabaseDiagram.png" alt="DIY Fieldwork Database Diagram" /></p>
-<p>It consists of: - a local network generated and managed by a wireless router - a Raspberri Pi mini-computer upon which the database will reside and be served to other devices across the network - the software configured to host the database and ensure that the data is secured and backed up - user interfaces that talk to the database and that encourage desired user behaviour - other useful services such as a file sharing server and data visualization portal that may help encourage collaborative and informed research</p>
+<p>It consists of:</p>
+<ul>
+<li>a local network generated and managed by a wireless router</li>
+<li>a Raspberri Pi mini-computer upon which the database will reside and be served to other devices across the network</li>
+<li>the software configured to host the database and ensure that the data is secured and backed up</li>
+<li>user interfaces that talk to the database and that encourage desired user behaviour</li>
+<li>other useful services such as a file sharing server and data visualization portal that may help encourage collaborative and informed research</li>
+</ul>
 <p>The system that we’re going to build may be suitable for some, but not for others. It is therefore important to remember that this all requires some degree of flexibility so that what you make suits the overall goals of the project you’re contributing to. So you may copy these instructions directly or tinker around to suit your needs!</p>
 <p><strong>Some Notes on Hardware:</strong> This is meant to be a very portable, low energy use and inexpensive setup. While I recommend that you use a dedicated server - a computer that is configured to run the database server, and only the database server - you can actually host the database on a regular laptop that you also serves as the client. I will be including notes on how to configure this to work all on one device, but I recommend that you use this kind of setup for educational and testing purposes only, and not in a production environment.</p>
 <p>Raspberry Pi is available online for around 45$ CAD at <a href="https://www.raspberrypi.org/products/" class="uri">https://www.raspberrypi.org/products/</a>, but your local library or makerspace will likely be happy to lend you one to play with. You will also need a SD card with a capacity of at least 8GB and with adequate read/write speeds (see <a href="https://www.raspberrypi.org/documentation/installation/sd-cards.md" class="uri">https://www.raspberrypi.org/documentation/installation/sd-cards.md</a> for more info), a wireless router (this one is 40$ and tiny - perfect for portability! <a href="https://amzn.to/2HoOM6W" class="uri">https://amzn.to/2HoOM6W</a>), a power source that is capabale of high-ampage output of at least 2.4A (a wall socket will suffice, but in the field I recommend an external battery pack to be used, to allow for increased portability and as a safeguard against power failures - I use this one at 43$: <a href="https://amzn.to/2Ht8quv" class="uri">https://amzn.to/2Ht8quv</a>) and a couple USB flash drives with varying storage capacities that suit your needs.</p>
@@ -687,10 +693,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="discussion-2" class="section level3">
 <h3><span class="header-section-number">4.2.4</span> Discussion</h3>
 <p>These guides and workflows are meant to emphasize the open-ended opportunities that 3D printing and low-power portable computing afford. They are not definitive instructions to be copied and pasted to obtain the same result, but instead should be considered as ideas to tinker with. To meet the expectations of stakeholders involved in a project, it will be necessary to read the room and get others involved in the making process, in ways that meet their needs and capabilities. The maker community is generally very friendly supportive; help is only a google search away.</p>
-</div>
-<div id="further-reading-9" class="section level3">
-<h3><span class="header-section-number">4.2.5</span> Further Reading</h3>
-<p>[bibliography / reading list goes here]</p>
 
 </div>
 </div>

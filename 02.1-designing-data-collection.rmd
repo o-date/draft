@@ -9,6 +9,7 @@ In teaching, there is a concept called 'backwards design', where you design your
 And so, we will begin this section on data collection by thinking through where the _things_ are going to go.
 
 ![A circular flow diagram showing an image of a tablet (data collection) and a cylinder representing a database, between two arrows.](images/data_collection_to_structure.jpg)
+
 *The design of data collection informs the structure of the database, and the other way around.*
 
 Choices about which fields of data to collect and how to collect them will influence the "shape" of your database, and have consequences for how much cleaning and restructuring you might need to do later.
@@ -25,16 +26,18 @@ While this is, after all, the *Open* ***Digital*** *Archaeology Textbook Environ
 Much of the following discussion assumes that you are planning for archaeological field data collection. But in digital archaeology and heritage, that might not be the case.
 
 *Paper to digital*
+
 Sometimes the most straightforward way to collect data in the field is to write it on paper. Paper forms can't run out of batteries. Data loss and integrity issues are still real, but massive data loss may be less of a threat when working with paper, depending on backup mechanisms.
 
 It's usually a good choice to mirror the format of the destination database on the input form.
 
 *Born digital*
+
 Collecting your data digitally holds significant advantages. If you've settled on the structure of your destination database, digital data collection can seamlessly integrate information, eliminating extra steps and reducing opportunities for transcription errors.
 
 The landscape for mobile data collection in archaeology has flourished in recent years. Archaeologists now have access to a broad spectrum of data collection options, from off-the-shelf mobile data collection applications custom designed to meet to meet the needs of specific projects and organizations to assembling a suite of free, open source tools as needed.
 
-The trick in designing digital data collection is to set limits without over-constraining. Typing data into fields in an Excel spreadsheet is digital data collection, sure, but setting up controls to standardize data entry with spreadsheet functions can be complicated and fragile.<sup>[1](#myfootnote1)</sup>
+The trick in designing digital data collection is to set limits without over-constraining. Typing data into fields in an Excel spreadsheet is digital data collection, sure, but setting up controls to standardize data entry with spreadsheet functions can be complicated and fragile. (If you find yourself engineering a complicated spreadsheet with dependent picklists and formulas for relationships, this may be a sign that you're using the wrong tool.)
 
 Whether you're designing data collection on paper or on a device, give yourself time to test it out. A dry run with real (or close to real) data can illuminate pain points for data collection now and analysis later. You  might find that, for your project's specific needs, well-designed paper data collection will do the trick. Or you might combine paper and digital approaches. There's no right answer or perfect software for every project.
 
@@ -47,16 +50,17 @@ When we talk about data structure, we're often referring to *databases*, whether
 [Earlier in this section we briefly discussed digital preservation](/book/making-data-useful.html). We covered the basics of what it takes for stable, reusable data, but where will it live? Let's talk about *repositories.* A digital repository can be short-term or long-term.
 
 Questions to consider:
+
 + If you're planning to curate your own digital materials and hope to keep them safe for a long time, are you prepared to do regular checks and maintenance?
 + What do you want to save? It might not be *everything*.
 
 If you're looking toward an outside repository:
+
 + Does it have room for your data? Is your research or data within the scope of mission for that repository?
 + Does the repository have special requirements for format or preparation?
 + Does the repository charge a fee to deposit material? Have you built it into your budget?
 + Does the repository itself have a plan for long-term sustainability? What happens to the data if its host organization is dissolved?
 + Does the repository have plans for migrating and maintaining your files?
-
 
 **Some Existing Repositories for Archaeological Data and/or Digital Projects**  
 Each option below meets differing needs.  The world of digital repositories is vast and dynamic and this is just a sampling of possibilities.
@@ -93,5 +97,3 @@ It is important to understand that just because your information is archived saf
 ### Further Reading
 For a great workflow using KoBoToolbox, QGIS, PostGIS, and LibreOffice Base (all free and open source tools), see [this overview from Ben Carter](http://benjaminpcarter.com/digital-data-collection/tools/).
 <!-- add more please! -->
-
-<a name="myfootnote1">1</a>: If you find yourself engineering a complicated spreadsheet with dependent picklists and formulas for relationships, this may be a sign that you're using the wrong tool.

@@ -1,5 +1,7 @@
 ## 3D Photogrammetry
 
+<div class = rmdnote> _[Launch the Photogrammetry notebook in Google Collab](https://colab.research.google.com/github/o-date/photogrammetry/blob/master/Meshroom_%2B_GPU_for_Photogrammetry.ipynb) and follow the directions; this notebook can be connected to your Google Drive._ </div>
+
 In recent years, faster and more powerful computers have made it feasible to do complex 3d model building by extracting points of overlap in multiple photographs, then extrapolating from the camera metadata embedded in those images the distance from the points to the camera's image sensor.This information allows the reconstruction of where those points were _in space_ relative to the camera. Thus astonishingly good 3d models can be created at rather low cost. 
 
 Laser scanning, on the other hand, involves shooting rays of light onto an object (or space) and counting the time it takes for the light to return to the scanner. Laser scanners are able therefore to take detailed micro-millimetre scans of an object's surface and texture. For some archaeological purposes, laser scanning is to be preferred. For other purposes, 3d photogrammetry or 'structure from motion' (sfm) is entirely appropriate, and the level of resolution good enough
@@ -35,7 +37,7 @@ Verdiani, G. (2015). Bringing Impossible Places to the Public: Three Ideas for R
 
 ### exercises
 
-While there are command-line applications (like [VSFM](http://ccwu.me/vsfm/)) for photogrammetry, running such things from a Jupyter notebook does not work very well. VSFM *can* be installed in something like DHBox (but it's not for the faint-of-heart, see eg [this](http://www.10flow.com/2012/08/15/building-visualsfm-on-ubuntu-12-04-precise-pangolin-desktop-64-bit/)). Roman Hiestand built a graphical user interface around a series of open-source modules that, when combined in a workflow, enables you to experiment with photogrammetry. With a bit of hacking, we can also make it work with photographs taken from smartphone or tablet.
+While there are command-line applications (like [VSFM](http://ccwu.me/vsfm/)) for photogrammetry, installing is not for the faint of heart (see eg. [this for Ubuntu](http://www.10flow.com/2012/08/15/building-visualsfm-on-ubuntu-12-04-precise-pangolin-desktop-64-bit/)). The notebook linked at the start of this chapter uses [Meshroom from AliceVision](https://alicevision.org/) as a command-line interface to a Google-provided GPU, and is worth exploring. But if you would like to try something on your own machine, Roman Hiestand built a graphical user interface around a series of open-source modules that, when combined in a workflow, enables you to experiment with photogrammetry. With a bit of hacking, we can also make it work with photographs taken from smartphone or tablet.
 
 Download and install the relevant version of [Regard3d](http://www.regard3d.org/) for your operating system.
 

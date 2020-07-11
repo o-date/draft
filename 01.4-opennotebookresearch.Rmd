@@ -70,7 +70,7 @@ Your help query can also go into your open notebook. In this way, your open note
 
 ### Discussion
 
-Questions for discussion:
+Questions for Discussion:
 
 1. Search the archaeological literature (via [jstor](http://jstor.org) or [Google Scholar](https://scholar.google.ca/)) for examples of open notebook science 'in the wild'. Are you finding anything, and if so, where? Do there seem to be impediments *from the journals* regarding this practice?
 2. What excites you about the possibilities of open notebook archaeology? What are the advantages?

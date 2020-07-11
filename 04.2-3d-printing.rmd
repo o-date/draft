@@ -71,6 +71,7 @@ The system that we're going to build will look something like this:
 ![DIY Fieldwork Database Diagram](images/DIYDatabaseDiagram.png)
 
 It consists of:
+
 - a local network generated and managed by a wireless router
 - a Raspberri Pi mini-computer upon which the database will reside and be served to other devices across the network
 - the software configured to host the database and ensure that the data is secured and backed up
@@ -597,6 +598,5 @@ Please refer to [this resource](https://www.raspberrypi.org/magpi/samba-file-ser
 ### Discussion
 These guides and workflows are meant to emphasize the open-ended opportunities that 3D printing and low-power portable computing afford. They are not definitive instructions to be copied and pasted to obtain the same result, but instead should be considered as ideas to tinker with. To meet the expectations of stakeholders involved in a project, it will be necessary to read the room and get others involved in the making process, in ways that meet their needs and capabilities. The maker community is generally very friendly supportive; help is only a google search away.
 
-### Further Reading
-[bibliography / reading list goes here]
+
 

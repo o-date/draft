@@ -133,7 +133,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i>Welcome!</a></li>
 <li class="chapter" data-level="1" data-path="going-digital.html"><a href="going-digital.html"><i class="fa fa-check"></i><b>1</b> Going Digital</a><ul>
-<li class="chapter" data-level="1.0.1" data-path="going-digital.html"><a href="going-digital.html#further-reading"><i class="fa fa-check"></i><b>1.0.1</b> Further Reading</a></li>
+<li class="chapter" data-level="" data-path="going-digital.html"><a href="going-digital.html#further-reading"><i class="fa fa-check"></i>Further Reading</a></li>
 <li class="chapter" data-level="1.1" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html"><i class="fa fa-check"></i><b>1.1</b> So what is Digital Archaeology?</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#a-distant-view"><i class="fa fa-check"></i><b>1.1.1</b> A distant view</a></li>
 <li class="chapter" data-level="1.1.2" data-path="so-what-is-digital-archaeology.html"><a href="so-what-is-digital-archaeology.html#is-digital-archaeology-part-of-the-digital-humanities"><i class="fa fa-check"></i><b>1.1.2</b> Is digital archaeology part of the digital humanities?</a></li>
@@ -280,7 +280,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.2.2" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#d-printing---a-workflow"><i class="fa fa-check"></i><b>4.2.2</b> 3d Printing - a Workflow</a></li>
 <li class="chapter" data-level="4.2.3" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#using-raspberry-pi-in-the-field"><i class="fa fa-check"></i><b>4.2.3</b> Using Raspberry Pi in the Field</a></li>
 <li class="chapter" data-level="4.2.4" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#discussion-2"><i class="fa fa-check"></i><b>4.2.4</b> Discussion</a></li>
-<li class="chapter" data-level="4.2.5" data-path="d-printing-raspberry-pi-and-maker-archaeology.html"><a href="d-printing-raspberry-pi-and-maker-archaeology.html#further-reading-9"><i class="fa fa-check"></i><b>4.2.5</b> Further Reading</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html"><i class="fa fa-check"></i><b>4.3</b> Place-based Interpretation with Locative Augmented Reality</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="place-based-interpretation-with-locative-augmented-reality.html"><a href="place-based-interpretation-with-locative-augmented-reality.html#projection-mapping"><i class="fa fa-check"></i><b>4.3.1</b> Projection Mapping</a></li>
@@ -326,6 +325,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="d-photogrammetry" class="section level2">
 <h2><span class="header-section-number">4.1</span> 3D Photogrammetry</h2>
+<div class="rmdnote">
+<em><a href="https://colab.research.google.com/github/o-date/photogrammetry/blob/master/Meshroom_%2B_GPU_for_Photogrammetry.ipynb">Launch the Photogrammetry notebook in Google Collab</a> and follow the directions; this notebook can be connected to your Google Drive.</em>
+</div>
 <p>In recent years, faster and more powerful computers have made it feasible to do complex 3d model building by extracting points of overlap in multiple photographs, then extrapolating from the camera metadata embedded in those images the distance from the points to the camera’s image sensor.This information allows the reconstruction of where those points were <em>in space</em> relative to the camera. Thus astonishingly good 3d models can be created at rather low cost.</p>
 <p>Laser scanning, on the other hand, involves shooting rays of light onto an object (or space) and counting the time it takes for the light to return to the scanner. Laser scanners are able therefore to take detailed micro-millimetre scans of an object’s surface and texture. For some archaeological purposes, laser scanning is to be preferred. For other purposes, 3d photogrammetry or ‘structure from motion’ (sfm) is entirely appropriate, and the level of resolution good enough</p>
 <p>In this chapter, we’ll cover some of the basic principles of how sfm works while pointing you to more detailed discussions. We also provide links in the ‘further readings’ to some recent case studies using 3d photogrammetry in novel ways.</p>
@@ -352,7 +354,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="exercises-19" class="section level3">
 <h3><span class="header-section-number">4.1.3</span> exercises</h3>
-<p>While there are command-line applications (like <a href="http://ccwu.me/vsfm/">VSFM</a>) for photogrammetry, running such things from a Jupyter notebook does not work very well. VSFM <em>can</em> be installed in something like DHBox (but it’s not for the faint-of-heart, see eg <a href="http://www.10flow.com/2012/08/15/building-visualsfm-on-ubuntu-12-04-precise-pangolin-desktop-64-bit/">this</a>). Roman Hiestand built a graphical user interface around a series of open-source modules that, when combined in a workflow, enables you to experiment with photogrammetry. With a bit of hacking, we can also make it work with photographs taken from smartphone or tablet.</p>
+<p>While there are command-line applications (like <a href="http://ccwu.me/vsfm/">VSFM</a>) for photogrammetry, installing is not for the faint of heart (see eg. <a href="http://www.10flow.com/2012/08/15/building-visualsfm-on-ubuntu-12-04-precise-pangolin-desktop-64-bit/">this for Ubuntu</a>). The notebook linked at the start of this chapter uses <a href="https://alicevision.org/">Meshroom from AliceVision</a> as a command-line interface to a Google-provided GPU, and is worth exploring. But if you would like to try something on your own machine, Roman Hiestand built a graphical user interface around a series of open-source modules that, when combined in a workflow, enables you to experiment with photogrammetry. With a bit of hacking, we can also make it work with photographs taken from smartphone or tablet.</p>
 <p>Download and install the relevant version of <a href="http://www.regard3d.org/">Regard3d</a> for your operating system.</p>
 <ol style="list-style-type: decimal">
 <li><p>Try the Heistand’s <a href="http://www.regard3d.org/index.php/documentation/tutorial">tutorial</a> using the images of the <a href="http://sourceforge.net/projects/regard3d/files/Demo/OpenMVG/SceauxCastle.zip/download">Sceaux Castle</a>. This tutorial gives you a sense of the basic workflow for using Regard3d.</p></li>

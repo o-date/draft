@@ -34,7 +34,7 @@ Excel specifically is incredibly hard to version control, or to trace the histor
 **Comma or Tab-separated text files (.csv, .tsv, .txt)**  
 
 *Pros*  
-These kinds of text files are some of the simplest ways to store data, and thus also some of the most durable. You can open them as tables in a spreadsheet program like Excel or Google Sheets, but all the information is still readable in a plain text editor. Since there's not much complicated underlying structure, these types of plain text files are very easy to *version control,* or retain and view information about changes to a file over its life span. In most cases, if you need to work in and save spreadsheet data, choose one of these formats over Excel or other formats.[2](#foot2)</sup>
+These kinds of text files are some of the simplest ways to store data, and thus also some of the most durable. You can open them as tables in a spreadsheet program like Excel or Google Sheets, but all the information is still readable in a plain text editor. Since there's not much complicated underlying structure, these types of plain text files are very easy to *version control,* or retain and view information about changes to a file over its life span. In most cases, if you need to work in and save spreadsheet data, choose one of these formats over Excel or other formats. (If you have dates in your CSV or TSV file and you save using Excel, it may still try to monkey around with the formatting. Make sure your date columns are formatted to Text.)
 
 *Cons*  
 To some degree, you might have less control of formatting when using plain text files (but this may be a feature and not a bug.)
@@ -198,7 +198,6 @@ An entry level graph database is [Neo4J](http://neo4j.com). An advanced level gr
 [A Gentle Introduction to SQL](https://mybinder.org/v2/gh/o-date/sqlite/master?filepath=intro%20to%20sql.ipynb)
 
 
-<a name="foot2">2</a>: Excel, again. If you have dates in your CSV or TSV file and you save using Excel, it may still try to monkey around with the formatting. Make sure your date columns are formatted to Text.
 
 
 
