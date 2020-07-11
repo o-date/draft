@@ -68,7 +68,7 @@ With time, you will become better at describing the issue succinctly. You will a
 
 Your help query can also go into your open notebook. In this way, your open notebook becomes not just the record of your research, but also an invitation to others to join you.
 
-### discussion
+### Discussion
 
 Questions for discussion:
 
@@ -98,7 +98,7 @@ Baker, James. 'Preserving Your Research Data', _The Programming Historian_ [http
 
 ### On Privilege and Open Notebooks
 
-While we argue for open notebooks, there may be circumstances where this is not desirable or safe to do. Readers may also want to explore an Evernote alternative, [Laverna](https://laverna.cc/) which stores your notes in your web-browser's cache hence making them private, but also allows sync to services such as Dropbox (versioning and backup are still absolutely critical). If you work primarily on a Mac computer, [nvAlt by Brett Terpstra](http://brettterpstra.com/projects/nvalt/) is an excellent note-taking application that can sync remotely. Another possibility is [Classeur](http://classeur.io/) a web abb that integrates with various blogging platforms, allows for syncing and collaboration, the choice of what to make public and what to keep private, and includes the ability to sort notes into various notebooks. It does *not* save locally, so be warned that your information is on their servers. There is an API (application programming interface) that allows you to download your materials (for more on APIs, see [Introduction to Digital Libraries, Archives & Repositories]).
+While we argue for open notebooks, there may be circumstances where this is not desirable or safe to do. Readers may also want to explore an Evernote alternative, [Laverna](https://laverna.cc/) which stores your notes in your web-browser's cache hence making them private, but also allows sync to services such as Dropbox (versioning and backup are still absolutely critical). If you work primarily on a Mac computer, [nvAlt by Brett Terpstra](http://brettterpstra.com/projects/nvalt/) is a handy note-taking application that can sync remotely. Similar software exists for PCs.
 
 A final word on the privilege involved in keeping an open notebook is warranted. To make one's research available openly on the web, to discuss openly the things that worked, the things that haven't, the experiments tried and the dead ends explored, is at the current moment something that depends on the perceived race, class, and gender of the person doing it. What passes without comment when I (Shawn Graham, a white, tenured, professor) do something, could attract unwarranted, unwanted, and unfair attention if a woman of colour undergraduate tried. This is not to say this always happens; but disgracefully it happens far too often. It is important and necessary to fight back against the so-called 'internet culture' in these things, but it is not worth risking one's safety. To those who benefit from privilege, it is incumbent upon them to make things safe for others, to recognize that open science, open humanities, represents a net boon to our field. In which case, it is up to them to normalize such practices, to make it safe to try things out. We discuss more in the following section on what [Failing Productively] means, why it matters, and why it is integral not only to digital archaeology, but the culture of academic research, teaching, and outreach more generally.
 
